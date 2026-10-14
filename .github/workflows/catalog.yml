@@ -1,0 +1,25 @@
+name: Check project catalog
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Validate catalog and generated README
+        run: python scripts/project_catalog.py check
+      - name: Test numbering, previews, and catalog updates
+        run: python -m unittest discover -s tests -v
