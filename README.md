@@ -14,7 +14,7 @@
 
 | 编号 | 项目 | 摘要 | 状态 | 研究记录 | 原仓库 | Web 演示 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 014 | [赛博小雅：真人拟人化效果与模型依赖研究](projects/014-cyber-xiaoya-study/README.md) | 真人互动角色研究：识别、语言、声音与视觉模型提供听想说动，工程负责同步和打断；价值在在场感，扩展到陪练、讲解、直播与角色记忆。原作源码及完整闭环待核验。 | 研究中 | [研究笔记](projects/014-cyber-xiaoya-study/RESEARCH.md) | [GitHub](https://github.com/yydshly/1014_codex_project) | — |
+| 014 | [赛博小雅：真人拟人化效果与模型依赖研究](projects/014-cyber-xiaoya-study/README.md) | 真人互动角色研究：识别、语言、声音与视觉模型提供听想说动，工程负责同步和打断；价值在在场感，扩展到陪练、讲解、直播与角色记忆。原作源码及完整闭环待核验。 | 研究中 | [研究笔记](projects/014-cyber-xiaoya-study/RESEARCH.md) | [GitHub](https://github.com/yydshly/1014_codex_project) | [演示](https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/) |
 
 ### 项目配图
 

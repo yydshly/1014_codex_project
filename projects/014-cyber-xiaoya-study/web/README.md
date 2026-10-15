@@ -27,7 +27,7 @@ RESEARCH.md是正文来源。build.mjs将12章研究渲染成静态阅读页，�
 
 ## 部署
 
-dist为完整静态产物，使用相对资源路径，基础路径为/1014_codex_project/014-cyber-xiaoya-study/。可将dist复制到同一Pages站点的014-cyber-xiaoya-study/目录，遵守仓库docs/DEPLOYMENT.md。发布清单为根web/pages.json，根目录执行node scripts/build_pages.mjs会生成完整_site，再由.github/workflows/pages.yml发布。首次公网验证前demo_url保持为空。
+dist为完整静态产物，使用相对资源路径，基础路径为/1014_codex_project/014-cyber-xiaoya-study/。可将dist复制到同一Pages站点的014-cyber-xiaoya-study/目录，遵守仓库docs/DEPLOYMENT.md。发布清单为根web/pages.json，根目录执行node scripts/build_pages.mjs会生成完整_site，再由.github/workflows/pages.yml发布。2026-10-15已部署并验证公网入口，正式地址为https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/，demo_url已登记。
 
 桌面与手机阅读、目录跳转、图片资源、来源文件和构建检查的结果见../sources/verification.json。手机中的宽表格可在表格区域横向滑动，不应使整页横向溢出。
 

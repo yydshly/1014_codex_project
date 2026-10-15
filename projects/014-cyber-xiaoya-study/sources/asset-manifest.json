@@ -31,6 +31,12 @@
       "bytes": 41538,
       "sha256": "843c70859f897e577a45e36c8dbd4180130e218a3e660c5515bdc790de43806d",
       "kind": "local-research-page-screenshot"
+    },
+    {
+      "path": "assets/published.jpg",
+      "kind": "published-research-page-screenshot",
+      "bytes": 83593,
+      "sha256": "d931c631fb08706619c791114f35f47b644b407a21008de6830dbbbc9962168d"
     }
   ]
 }

@@ -92,5 +92,114 @@
     "result": "not verified; external source did not load during observation; source-link and local-poster fallback available"
   },
   "guide_image": "assets/overview.png; original generated infographic retained unchanged",
-  "publication": "pending first GitHub Pages deployment"
+  "publication": {
+    "date": "2026-10-15",
+    "base_url": "https://yydshly.github.io/1014_codex_project/",
+    "page_url": "https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/",
+    "source_commit": "1dd89b15be36059a035c1e7593e3a956b28cd912",
+    "workflow_run": "https://github.com/yydshly/1014_codex_project/actions/runs/38730532335",
+    "workflow_conclusion": "success",
+    "checks": [
+      {
+        "path": "./",
+        "status": 200,
+        "bytes": 30467,
+        "type": "text/html"
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "bytes": 30467,
+        "type": "text/html"
+      },
+      {
+        "path": "style.css",
+        "status": 200,
+        "bytes": 8747,
+        "type": "text/css"
+      },
+      {
+        "path": "app.js",
+        "status": 200,
+        "bytes": 1743,
+        "type": "application/javascript"
+      },
+      {
+        "path": "assets/overview.png",
+        "status": 200,
+        "bytes": 1312442,
+        "type": "image/png",
+        "sha256": "1cb2474c8991404f3b0d04b355762b045050b01ecd6be7aeb711edeb8ee67d69"
+      },
+      {
+        "path": "assets/overview.svg",
+        "status": 200,
+        "bytes": 148263,
+        "type": "image/svg+xml"
+      },
+      {
+        "path": "assets/original-video-poster.jpg",
+        "status": 200,
+        "bytes": 101276,
+        "type": "image/jpeg"
+      },
+      {
+        "path": "RESEARCH.md",
+        "status": 200,
+        "bytes": 18836,
+        "type": "text/markdown"
+      },
+      {
+        "path": "README.md",
+        "status": 200,
+        "bytes": 4000,
+        "type": "text/markdown"
+      },
+      {
+        "path": "sources/README.md",
+        "status": 200,
+        "bytes": 3931,
+        "type": "text/markdown"
+      },
+      {
+        "path": "sources/verification.json",
+        "status": 200,
+        "bytes": 2505,
+        "type": "application/json"
+      },
+      {
+        "path": "sources/component-references.json",
+        "status": 200,
+        "bytes": 1884,
+        "type": "application/json"
+      },
+      {
+        "path": "site-root",
+        "status": 200
+      },
+      {
+        "path": "site-catalog",
+        "status": 200,
+        "project_ids": [
+          "014"
+        ]
+      }
+    ],
+    "browser": {
+      "activeChapter": "11 可扩展方向与验证顺序",
+      "chapter": "11 可扩展方向与验证顺序",
+      "chapterTop": 100,
+      "chapters": 12,
+      "clientWidth": 1265,
+      "guideLoaded": true,
+      "guideSrc": "assets/overview.png",
+      "scrollWidth": 1265,
+      "summaryCards": 4,
+      "tables": 8,
+      "url": "https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/#section-11",
+      "rootCatalogAndNotes": true,
+      "console_errors": []
+    },
+    "scope": "Published static research archive only; original realtime digital-human application not reproduced."
+  }
 }

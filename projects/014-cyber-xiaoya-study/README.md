@@ -23,7 +23,7 @@
 | 研究日期 | 2026-10-15 |
 | 状态 | 效果、原理和价值整理完成；原作源码与真人实时闭环未验证 |
 | 本地阅读页 | 启动后访问 http://127.0.0.1:4186/1014_codex_project/014-cyber-xiaoya-study/ |
-| 线上阅读 | 首次部署验证中，demo_url暂为空 |
+| 线上阅读 | [GitHub Pages研究网页](https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/)，2026-10-15发布并验证 |
 
 ## 内容入口
 

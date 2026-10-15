@@ -221,4 +221,6 @@ TTS决定音色、发音、韵律、停顿和情绪表达。以CosyVoice2的公�
 
 原创部分包括能力分类、责任分析、实时验收、讨论修正、总览图布局和静态阅读页。引用人像仍归原权利人。没有导入或修改原作者代码，没有下载模型权重，没有把第三方调查清单作为原作确定事实。
 
+本研究网页于2026-10-15发布至[GitHub Pages](https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/)。公网总入口、引导图、12章正文、章节导航及来源文件已验证，记录见[sources/verification.json](sources/verification.json)。这只证明静态研究归档可读，不表示真人模型或原作实时系统已经部署。
+
 [返回项目简介](README.md)
