@@ -1,0 +1,12 @@
+{
+  "name": "research-014-cyber-xiaoya-study",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node server.mjs",
+    "check": "node --check build.mjs && node --check server.mjs && node --check app.js"
+  }
+}

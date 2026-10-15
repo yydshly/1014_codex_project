@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>项目首页 · GitHub 研究集</title><style>
+*{box-sizing:border-box}body{margin:0;background:#101920;color:#dde4d9;font-family:system-ui,'Microsoft YaHei',sans-serif}main{max-width:1060px;margin:auto;padding:50px 28px}small{letter-spacing:3px;color:#9aaf91}h1{font-weight:400;font-size:36px;letter-spacing:5px}p{color:#95a4ab;line-height:1.8}#projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:35px}article{border:1px solid #ffffff16;background:#1b272e;border-radius:15px;overflow:hidden}article img{width:100%;height:205px;object-fit:cover}article>a{display:block;padding:0;border:0;border-radius:0;background:transparent}.guide-image img{height:auto;object-fit:contain}article>div{padding:22px}h2{font-size:18px;font-weight:500;margin:12px 0}article span{color:#a7ba93;font-size:11px}nav{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}a,button{border:1px solid #8fa18442;border-radius:7px;padding:9px 13px;background:#27392c;color:#d4e0c7;text-decoration:none;font-size:12px;cursor:pointer}button{background:transparent}dialog{background:#17232c;color:#dae3d4;border:1px solid #435246;border-radius:14px;width:min(850px,90vw);max-height:85vh}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.8;font:13px system-ui}dialog::backdrop{background:#071017b0}@media(max-width:650px){#projects{grid-template-columns:1fr}main{padding:30px 18px}h1{font-size:28px}}
+</style></head><body><main><small>PROJECT COLLECTION / RESEARCH & PLAY</small><h1>每个项目，都在这里。</h1><p>按编号查看项目能力、底层原理、价值与扩展方向，进入完整研究并核对来源。公网入口只列出已纳入发布清单的项目。</p><section id="projects" aria-label="项目目录"></section><p id="notice" role="status"></p></main><dialog id="notes"><button id="close-notes">关闭记录</button><pre id="notes-body"></pre></dialog><script type="module">
+const container=document.querySelector('#projects');
+async function loadJson(path){const response=await fetch(path);if(!response.ok)throw new Error('Unable to load '+path);return response.json();}
+try{
+  const [data,manifest]=await Promise.all([
+    loadJson('./projects.json'),
+    loadJson('./entries.json').catch(()=>null)
+  ]);
+  for(const p of data.projects.sort((a,b)=>Number(a.id)-Number(b.id))){
+    const name=p.id+'-'+p.slug,card=document.createElement('article');
+    if(p.preview){const imageLink=document.createElement('a'),img=document.createElement('img');imageLink.className=p.id==='014'?'guide-image':'card-image';imageLink.href=p.demo_url||'./'+name+'/';img.src='./projects/'+name+'/'+p.preview;img.alt=p.preview_caption;imageLink.append(img);card.append(imageLink);}
+    const body=document.createElement('div'),label=document.createElement('span'),title=document.createElement('h2'),summary=document.createElement('p'),nav=document.createElement('nav');
+    label.textContent=p.id+' / '+p.status;title.textContent=p.title;summary.textContent=p.summary;
+    const addLink=(text,path)=>{const a=document.createElement('a');a.textContent=text;a.href=path;nav.append(a);};
+    const configured=manifest?.projects?.[p.id];
+    const entries=Array.isArray(configured)?configured.filter(entry=>entry&&typeof entry.label==='string'&&typeof entry.path==='string'&&entry.path.startsWith(name+'/')):[];
+    if(entries.length){
+      for(const entry of entries)addLink(entry.label,'./'+entry.path);
+    }else if(p.id==='003'){
+      addLink('夜半小屋 · 原房间','./'+name+'/?view=room');
+      addLink('Agent 工作室','./'+name+'/?view=workspace');
+    }else if(p.id==='013'){
+      addLink('研究网页','./'+name+'/index.html');
+      addLink('AI 探索工作台','./'+name+'/explore/index.html');
+    }else if(p.preview)addLink(p.status==='已归档'?'阅读归档':'打开演示',p.demo_url||'./'+name+'/');
+    const notes=document.createElement('button');notes.textContent='研究记录';
+    notes.addEventListener('click',async()=>{const response=await fetch('./projects/'+name+'/README.md');document.querySelector('#notes-body').textContent=await response.text();document.querySelector('#notes').showModal();});
+    nav.append(notes);addLink(p.id==='014'?'研究归档':'原仓库',p.repository);body.append(label,title,summary,nav);card.append(body);container.append(card);
+  }
+}catch{document.querySelector('#notice').textContent='目录暂未载入，请通过本地项目服务打开。';}
+document.querySelector('#close-notes').onclick=()=>document.querySelector('#notes').close();
+</script></body></html>

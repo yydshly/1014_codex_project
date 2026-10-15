@@ -1,0 +1,27 @@
+{
+  "source_url": "https://x.com/huoshan007/status/2109919568617484522",
+  "retrieved_at": "2026-10-15",
+  "post_id": "2109919568617484522",
+  "media_id": "2109814066734940160",
+  "posted_at_utc": "Tue Oct 13 08:10:00 +0000 2026",
+  "posted_by": "huoshan007",
+  "author_is_original_developer": "not_confirmed",
+  "upstream_repository": null,
+  "upstream_commit": null,
+  "original_project_license": null,
+  "video_duration_reported_seconds": 28.049,
+  "video_url": "https://video.twimg.com/amplify_video/2109814066734940160/vid/avc1/1440x1080/ix7EF4Hz2rDNqLPn.mp4?tag=29",
+  "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2109814066734940160/img/pQ61UIUdDlY9zC_G.jpg",
+  "poster_sha256": "ab51d441a72806f088bcc3cbb7d9c36d013045d3719288a462af9f95d4a26d3e",
+  "poster_visible_label": "vidu-s2数字人模型",
+  "claim_summary": [
+    "转帖声称语音链为Silero VAD、SenseVoice、llama.cpp/Qwen2.5-7B、CosyVoice2",
+    "转帖声称纯本地运行及约15GB显存，未提供可复核的视觉层部署证据",
+    "转帖称已直播并有商业收益暗示，未提供收入凭证或完整运行记录"
+  ],
+  "limitations": [
+    "X网页读取受限，正文和媒体元数据经FxTwitter镜像读取",
+    "封面为原视频引用，未伪装为本地复现",
+    "未保存完整转帖正文、原视频文件或下载任何模型权重"
+  ]
+}

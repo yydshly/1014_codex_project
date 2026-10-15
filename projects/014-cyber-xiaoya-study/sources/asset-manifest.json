@@ -1,0 +1,36 @@
+{
+  "retrieved_at": "2026-10-15",
+  "original_post": "https://x.com/huoshan007/status/2109919568617484522",
+  "files": [
+    {
+      "path": "assets/original-video-poster.jpg",
+      "bytes": 101276,
+      "sha256": "ab51d441a72806f088bcc3cbb7d9c36d013045d3719288a462af9f95d4a26d3e",
+      "kind": "original-reference"
+    },
+    {
+      "path": "assets/overview.svg",
+      "bytes": 148263,
+      "sha256": "6c65a19f14c96c9b58216bdeb4182def1776c985d36f835e56928cd4173a67d0",
+      "kind": "original-infographic-with-attributed-reference"
+    },
+    {
+      "path": "assets/overview.png",
+      "bytes": 1312442,
+      "sha256": "1cb2474c8991404f3b0d04b355762b045050b01ecd6be7aeb711edeb8ee67d69",
+      "kind": "original-infographic-with-attributed-reference"
+    },
+    {
+      "path": "assets/preview.jpg",
+      "bytes": 83593,
+      "sha256": "d931c631fb08706619c791114f35f47b644b407a21008de6830dbbbc9962168d",
+      "kind": "local-research-page-screenshot"
+    },
+    {
+      "path": "assets/mobile.jpg",
+      "bytes": 41538,
+      "sha256": "843c70859f897e577a45e36c8dbd4180130e218a3e660c5515bdc790de43806d",
+      "kind": "local-research-page-screenshot"
+    }
+  ]
+}

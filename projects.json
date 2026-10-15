@@ -1,4 +1,16 @@
 {
   "schema_version": 1,
-  "projects": []
+  "projects": [
+    {
+      "id": "014",
+      "slug": "cyber-xiaoya-study",
+      "title": "赛博小雅：真人拟人化效果与模型依赖研究",
+      "repository": "https://github.com/yydshly/1014_codex_project",
+      "summary": "真人互动角色研究：识别、语言、声音与视觉模型提供听想说动，工程负责同步和打断；价值在在场感，扩展到陪练、讲解、直播与角色记忆。原作源码及完整闭环待核验。",
+      "status": "研究中",
+      "preview": "assets/overview.png",
+      "preview_caption": "014 原创能力总览图：引用原视频画面，串起真人效果、听想说动模型、实时交互工程、产品价值与证据边界。",
+      "demo_url": null
+    }
+  ]
 }

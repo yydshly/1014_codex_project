@@ -1,6 +1,6 @@
 # Web 展示与部署
 
-本次初始化建立研究仓库与路径约定。实际 Web 技术栈、构建脚本和发布工作流在加入对应项目后确定。
+本仓库采用同一GitHub Pages站点与编号子路径。014已配置静态构建及发布工作流，详细操作见[发布与验证](PAGES.md)。
 
 ## 一个站点，多个子项目入口
 
@@ -12,7 +12,7 @@ https://yydshly.github.io/1014_codex_project/001-project-name/    # 子项目 00
 https://yydshly.github.io/1014_codex_project/002-another-project/ # 子项目 002
 ```
 
-这些是规划地址，当前尚未启用或发布。真正可访问后再将链接登记到 `projects.json`。
+这些路径用于统一发布；项目只有发布并验证后才在`projects.json`登记demo_url。
 
 ## 源码与构建结果
 
@@ -52,3 +52,7 @@ _site/
 若某个项目以后需要独立域名、独立发布周期或服务端能力，可以部署到单独仓库或其他平台；总索引继续使用 `demo_url` 指向它。
 
 [返回总入口](../README.md)
+
+## 014 真人拟人化研究的发布
+
+静态站点已配置GitHub Actions发布流程，入口和命令见[GitHub Pages发布与验证](PAGES.md)。发布清单为`web/pages.json`，每次构建其中全部项目；当前只包含014。引导图沿用原创能力总览，不把研究网页当作实时数字人部署。首次公网验证通过后再登记demo_url。

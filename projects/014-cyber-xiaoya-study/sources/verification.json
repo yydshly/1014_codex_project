@@ -1,0 +1,96 @@
+{
+  "checked_at": "2026-10-15",
+  "scope": "static research page and infographic; not original digital-human service",
+  "chapters": 12,
+  "tables": 8,
+  "source_entries": 19,
+  "poster_sha256_matches": true,
+  "local_assets_and_documents": [
+    {
+      "path": "README.md",
+      "status": 200,
+      "type": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "RESEARCH.md",
+      "status": 200,
+      "type": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "assets/README.md",
+      "status": 200,
+      "type": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "assets/original-video-poster.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "assets/overview.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "path": "assets/overview.svg",
+      "status": 200,
+      "type": "image/svg+xml"
+    },
+    {
+      "path": "sources/README.md",
+      "status": 200,
+      "type": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "sources/component-references.json",
+      "status": 200,
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "path": "sources/original-post.json",
+      "status": 200,
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    }
+  ],
+  "all_fragment_links_resolve": true,
+  "desktop": {
+    "client_width": 1265,
+    "scroll_width": 1265,
+    "horizontal_overflow": false
+  },
+  "mobile": {
+    "viewport_width": 390,
+    "viewport_height": 844,
+    "client_width": 375,
+    "scroll_width": 375,
+    "horizontal_overflow": false
+  },
+  "chapter_navigation": {
+    "target": "section-07",
+    "top_after_scroll_px": 100.14,
+    "active_title": "07 实时闭环的验收方法"
+  },
+  "default_remote_video_source": "empty; user action required",
+  "model_weights_downloaded": false,
+  "original_project_reproduced": false,
+  "cloud_model_calls_this_project": 0,
+  "external_video_playback": {
+    "attempted": true,
+    "decoded_frames_observed": false,
+    "ready_state": 0,
+    "browser_error_code": null,
+    "result": "not verified; external source did not load during observation; source-link and local-poster fallback available"
+  },
+  "guide_image": "assets/overview.png; original generated infographic retained unchanged",
+  "publication": "pending first GitHub Pages deployment"
+}

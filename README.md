@@ -4,13 +4,27 @@
 
 这里是总入口：按编号浏览项目摘要，进入各子项目查看研究笔记、运行方式、界面截图与演示。每个子项目独立保存代码和依赖，适合同时研究不同技术栈。
 
+网页入口：[研究总览](https://yydshly.github.io/1014_codex_project/) · [014 赛博小雅研究](https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/)。发布与验证见[部署说明](docs/PAGES.md)。
+
 ## 项目索引
 
 编号按收录顺序从 `001` 递增，目录采用 `projects/001-project-name/`。编号创建后保持不变，首页始终按编号升序展示。
 
 <!-- PROJECTS:START -->
 
-尚未收录研究项目。首个项目将从 **001** 开始，添加后会自动生成有序索引与配图区域。
+| 编号 | 项目 | 摘要 | 状态 | 研究记录 | 原仓库 | Web 演示 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 014 | [赛博小雅：真人拟人化效果与模型依赖研究](projects/014-cyber-xiaoya-study/README.md) | 真人互动角色研究：识别、语言、声音与视觉模型提供听想说动，工程负责同步和打断；价值在在场感，扩展到陪练、讲解、直播与角色记忆。原作源码及完整闭环待核验。 | 研究中 | [研究笔记](projects/014-cyber-xiaoya-study/RESEARCH.md) | [GitHub](https://github.com/yydshly/1014_codex_project) | — |
+
+### 项目配图
+
+#### 014 · 赛博小雅：真人拟人化效果与模型依赖研究
+
+![014 原创能力总览图：引用原视频画面，串起真人效果、听想说动模型、实时交互工程、产品价值与证据边界。](projects/014-cyber-xiaoya-study/assets/overview.png)
+
+014 原创能力总览图：引用原视频画面，串起真人效果、听想说动模型、实时交互工程、产品价值与证据边界。
+
+[查看项目](projects/014-cyber-xiaoya-study/README.md)
 
 <!-- PROJECTS:END -->
 

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "silero-vad",
+    "repository": "https://github.com/snakers4/silero-vad",
+    "commit": "1e261b036686cd0017d500ee96acd1c4ba572a9d",
+    "license": "MIT",
+    "license_url": "https://raw.githubusercontent.com/snakers4/silero-vad/1e261b036686cd0017d500ee96acd1c4ba572a9d/LICENSE",
+    "license_sha256": "2e63e9a38b6e8fc0c7bc37ce174caca1862870856c6daf5697cfb785e925520b",
+    "use": "documentation reference only; no source or model weights imported"
+  },
+  {
+    "name": "sensevoice",
+    "repository": "https://github.com/QwenAudio/SenseVoice",
+    "commit": "586bbdb2b052f4fe19322581825228b6810a9fb3",
+    "license": "MIT",
+    "license_url": "https://raw.githubusercontent.com/QwenAudio/SenseVoice/586bbdb2b052f4fe19322581825228b6810a9fb3/LICENSE",
+    "license_sha256": "4bc3bffe14ebe38cc67309991e04f92866835eac1c5e2e1abd37163f67c6de5f",
+    "use": "documentation reference only; no source or model weights imported"
+  },
+  {
+    "name": "llama-cpp",
+    "repository": "https://github.com/ggml-org/llama.cpp",
+    "commit": "fd55cb98fe29d3df0054d3f3e6e6f15958ea72ab",
+    "license": "MIT",
+    "license_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/fd55cb98fe29d3df0054d3f3e6e6f15958ea72ab/LICENSE",
+    "license_sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d",
+    "use": "documentation reference only; no source or model weights imported"
+  },
+  {
+    "name": "cosyvoice",
+    "repository": "https://github.com/QwenAudio/CosyVoice",
+    "commit": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+    "license": "Apache-2.0",
+    "license_url": "https://raw.githubusercontent.com/QwenAudio/CosyVoice/074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc/LICENSE",
+    "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "use": "documentation reference only; no source or model weights imported"
+  }
+]
