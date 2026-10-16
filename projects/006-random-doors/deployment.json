@@ -1,0 +1,140 @@
+{
+  "verified_on": "2026-10-16",
+  "verified_sha": "317a5fac43d3fbe57feaa82b1d875d5f23e11f2f",
+  "workflow": "https://github.com/yydshly/1014_codex_project/actions/runs/38897208126",
+  "base_url": "https://yydshly.github.io/1014_codex_project/",
+  "summary_url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html",
+  "checks": [
+    {
+      "path": "",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "projects.json",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "path": "entries.json",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "path": "006-random-doors/research.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "006-random-doors/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "006-random-doors/seaside.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "006-random-doors/research/four-seasons-reference.jpg",
+      "status": 200,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "006-random-doors/research/understanding-overview.png",
+      "status": 200,
+      "content_type": "image/png"
+    },
+    {
+      "path": "006-random-doors/research/understanding-overview.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "path": "006-random-doors/research/understanding-overview.sources.json",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "path": "006-random-doors/research/techartist-portal.mp4",
+      "status": 200,
+      "content_type": "video/mp4"
+    },
+    {
+      "path": "006-random-doors/licenses/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "014-cyber-xiaoya-study/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "006-random-doors/assets/research-CYEBobFU.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "006-random-doors/assets/modulepreload-polyfill-P2Xu9kJm.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "006-random-doors/assets/research-CgEoZozp.css",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8"
+    }
+  ],
+  "video_range": {
+    "status": 206,
+    "content_range": "bytes 0-1023/3298309",
+    "bytes": 1024
+  },
+  "entries": [
+    {
+      "label": "阅读研究总览",
+      "path": "006-random-doors/research.html"
+    },
+    {
+      "label": "体验连续开门",
+      "path": "006-random-doors/"
+    },
+    {
+      "label": "3D 候车亭",
+      "path": "006-random-doors/seaside.html"
+    }
+  ],
+  "scope": "006 research, interactive prototype and preserved 3D shelter; existing 014 retained",
+  "browser": {
+    "status": "passed",
+    "url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html",
+    "desktop": [
+      1280,
+      720
+    ],
+    "mobile": [
+      390,
+      844
+    ],
+    "page_no_horizontal_overflow": true,
+    "video": {
+      "readyState": 4,
+      "width": 1280,
+      "duration": 20.501333,
+      "observed_time": 5.650951
+    },
+    "route_tabs": "story and keyboard next to challenge passed",
+    "portfolio_draws": [
+      "002",
+      "008",
+      "007"
+    ],
+    "prototype_iframe": "current doorway loaded, journal count 0; legacy 3D shelter loaded; Escape unloads iframe",
+    "overview_image": [
+      3200,
+      5663
+    ],
+    "console_errors": []
+  }
+}

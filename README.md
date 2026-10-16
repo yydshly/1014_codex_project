@@ -14,16 +14,16 @@
 
 | 编号 | 项目 | 摘要 | 状态 | 研究记录 | 来源链接 | Web 演示 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 006 | [随机门：源库原理、偶遇体验与作品馆](projects/006-random-doors/README.md) | Four-Seasons 以固定种子和季节参数驱动三维场景；我们探索六场景随机遇见、参与与手记回访，让已有作品重新被发现，并延伸作品馆、故事回响等方向。 | 研究中 | [研究笔记](projects/006-random-doors/RESEARCH.md) | [原帖](https://x.com/techartist_/status/2109737086601556195) | — |
+| 006 | [随机门：源库原理、偶遇体验与作品馆](projects/006-random-doors/README.md) | Four-Seasons 以固定种子和季节参数驱动三维场景；我们探索六场景随机遇见、参与与手记回访，让已有作品重新被发现，并延伸作品馆、故事回响等方向。 | 研究中 | [研究笔记](projects/006-random-doors/RESEARCH.md) | [原帖](https://x.com/techartist_/status/2109737086601556195) | [演示](https://yydshly.github.io/1014_codex_project/006-random-doors/research.html) |
 | 014 | [赛博小雅：真人拟人化效果与模型依赖研究](projects/014-cyber-xiaoya-study/README.md) | 真人互动角色研究：识别、语言、声音与视觉模型提供听想说动，工程负责同步和打断；价值在在场感，扩展到陪练、讲解、直播与角色记忆。原作源码及完整闭环待核验。 | 研究中 | [研究笔记](projects/014-cyber-xiaoya-study/RESEARCH.md) | [原帖](https://x.com/huoshan007/status/2109919568617484522) | [演示](https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/) |
 
 ### 项目配图
 
 #### 006 · 随机门：源库原理、偶遇体验与作品馆
 
-![006 随机门网页研究总览：展示原作与本地原型，串起随机价值、三种体验、经历沉淀及随机接入作品的方向。](projects/006-random-doors/assets/research-summary.jpg)
+![006 随机门线上研究页：区分原作灵感、源库参数化原理与我们的随机遭遇，说明价值、记忆和作品馆方向。](projects/006-random-doors/assets/research-public-hero.jpg)
 
-006 随机门网页研究总览：展示原作与本地原型，串起随机价值、三种体验、经历沉淀及随机接入作品的方向。
+006 随机门线上研究页：区分原作灵感、源库参数化原理与我们的随机遭遇，说明价值、记忆和作品馆方向。
 
 [查看项目](projects/006-random-doors/README.md)
 

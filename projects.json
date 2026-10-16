@@ -8,9 +8,9 @@
       "repository": "https://github.com/yydshly/1014_codex_project",
       "summary": "Four-Seasons 以固定种子和季节参数驱动三维场景；我们探索六场景随机遇见、参与与手记回访，让已有作品重新被发现，并延伸作品馆、故事回响等方向。",
       "status": "研究中",
-      "preview": "assets/research-summary.jpg",
-      "preview_caption": "006 随机门网页研究总览：展示原作与本地原型，串起随机价值、三种体验、经历沉淀及随机接入作品的方向。",
-      "demo_url": null,
+      "preview": "assets/research-public-hero.jpg",
+      "preview_caption": "006 随机门线上研究页：区分原作灵感、源库参数化原理与我们的随机遭遇，说明价值、记忆和作品馆方向。",
+      "demo_url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html",
       "source_url": "https://x.com/techartist_/status/2109737086601556195"
     },
     {

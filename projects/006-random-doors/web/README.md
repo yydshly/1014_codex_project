@@ -2,6 +2,8 @@
 
 当前版本 `0.7.0` 包含网页研究总览与 `0.5` 连续开门原型。原型实现两层随机：开门选择地点，到达后遇见该地点中的一种处境、事件或布局。安静、故事、挑战各有两处地点，同一地点也会发生不同的事。入口与六处地点使用统一的原画场景，人物、雨、船灯、信件和机关通过独立图层与动作状态呈现。原画在制作时由内置 ImageGen 生成，运行时随页面从本地加载。
 
+线上地址：[研究总览](https://yydshly.github.io/1014_codex_project/006-random-doors/research.html) · [连续开门](https://yydshly.github.io/1014_codex_project/006-random-doors/) · [3D 候车亭](https://yydshly.github.io/1014_codex_project/006-random-doors/seaside.html)。2026-10-16 已验证，记录见 [deployment.json](../deployment.json)。
+
 ## 网页研究总览
 
 启动后打开 [研究总览](http://127.0.0.1:4178/1014_codex_project/006-random-doors/research.html)。页面首先说明源库能力、参数化原理、我们的独立探索及价值意义；随后包含 Four-Seasons 作者原图、原作视频和实际原型对照、0.2–0.5 四轮演进、三条两分钟体验路线、随机与记忆规则、内容生产方式、作品馆与其他扩展方向，以及本次讨论中的七个转折。阶段和体验标签可切换，支持方向键；可在弹窗内试玩当前原型或保留的 3D 候车亭，关闭时卸载 iframe。
