@@ -11,7 +11,7 @@ try{
   ]);
   for(const p of data.projects.sort((a,b)=>Number(a.id)-Number(b.id))){
     const name=p.id+'-'+p.slug,card=document.createElement('article');
-    if(p.preview){const imageLink=document.createElement('a'),img=document.createElement('img');imageLink.className=p.id==='014'?'guide-image':p.id==='006'?'guide-image guide-image-long':'card-image';imageLink.href=p.demo_url||'./'+name+'/';img.src='./projects/'+name+'/'+p.preview;img.alt=p.preview_caption;imageLink.append(img);card.append(imageLink);}
+    if(p.preview){const imageLink=document.createElement('a'),img=document.createElement('img');imageLink.className=p.id==='014'?'guide-image':['006','007'].includes(p.id)?'guide-image guide-image-long':'card-image';imageLink.href=p.demo_url||'./'+name+'/';img.src=p.id==='007'?'./'+name+'/assets/atlas-overview-preview.webp':'./projects/'+name+'/'+p.preview;img.alt=p.preview_caption;imageLink.append(img);card.append(imageLink);}
     const body=document.createElement('div'),label=document.createElement('span'),title=document.createElement('h2'),summary=document.createElement('p'),nav=document.createElement('nav');
     label.textContent=p.id+' / '+p.status;title.textContent=p.title;summary.textContent=p.summary;
     const addLink=(text,path)=>{const a=document.createElement('a');a.textContent=text;a.href=path;nav.append(a);};

@@ -6,6 +6,8 @@
 
 制作脚本为 `../../scripts/build_overview.py`、`../../scripts/render_overview.cjs`。汇总日期 2026-10-16，独立实验日期 2026-10-15。
 
+2026-10-17 起，本图作为 007 研究网页、项目首页卡片及 README 索引的统一引导图。网页显示同一图的 WebP 预览，保留完整纵向构图；原始 PNG / SVG 未改动。
+
 三张效果图依次来自：
 
 1. `../../original-scene/assets/concept.png`：本次用内置 Image Gen 从文字生成的原创参考图，未输入上游图片；提示词见 `../../original-scene/image-prompt.txt`。

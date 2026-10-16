@@ -30,9 +30,9 @@
 
 #### 007 · Atlas：模型驱动的资产工作流与月门水庭实证
 
-![007 月门水庭实际网页：同一 Blender 场景可拖动旋转、缩放与切换机位，支持线框和水面实时反射。](projects/007-autumn-courtyard-blender/web/screenshots/interactive-hero.jpg)
+![007 专门制作的 Atlas 研究总览图：能力、原理、月门水庭实际效果、价值与意义、应用、边界及扩展方向。](projects/007-autumn-courtyard-blender/web/assets/atlas-overview.png)
 
-007 月门水庭实际网页：同一 Blender 场景可拖动旋转、缩放与切换机位，支持线框和水面实时反射。
+007 专门制作的 Atlas 研究总览图：能力、原理、月门水庭实际效果、价值与意义、应用、边界及扩展方向。
 
 [查看项目](projects/007-autumn-courtyard-blender/README.md)
 

@@ -8,7 +8,7 @@ Atlas 以技能规范和辅助脚本组织 2D/3D 资产生成、质量验证和�
 
 核心价值是模型通过代码生成与修改三维场景的能力：模型负责理解与编写，Blender 负责执行与渲染。得到可编辑结构后，可以继续换机位、改布局和开发交互。本次没有调用直接输出网格的专用图生 3D 模型。
 
-![左：本次生成的原创概念图；右：按图编写脚本得到的实际 Blender 渲染](original-scene/assets/comparison.jpg)
+[![本项目专门制作的 Atlas 研究总览图：能力、原理、实际效果、价值、用途、边界与扩展方向](web/assets/atlas-overview.png)](https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/overview.html)
 
 当前主实验为 [月门水庭](original-scene/README.md)。前一轮参照他人画面的秋日庭院保留为 [历史实验](AUTUMN_EXPERIMENT.md)，目录、工程和图片未覆盖。
 
