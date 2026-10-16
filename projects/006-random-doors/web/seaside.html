@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#13272c" />
+    <meta name="description" content="推开一扇随机门，在海边候车亭坐一会儿。看天气，接住檐下的雨，等一盏船灯。" />
+    <title>海边候车亭 · 随机门</title>
+  </head>
+  <body>
+    <main id="experience" data-phase="outside" data-weather="" data-catching="false" data-seated="false" data-boat-visible="false" data-water-contact="false">
+      <canvas id="world" aria-label="实时海边候车亭，可拖动画面环顾" tabindex="0"></canvas>
+      <div class="vignette" aria-hidden="true"></div>
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="随机门首页"><span class="door-mark" aria-hidden="true"></span>随机门<span class="brand-divider"></span><span class="brand-caption">安静停留</span></a>
+        <nav aria-label="体验设置">
+          <button id="sound" class="text-button" aria-pressed="false">声音 关</button>
+          <button id="settings-toggle" class="text-button" aria-expanded="false" aria-controls="settings">风景与声音</button>
+        </nav>
+      </header>
+
+      <section id="invitation" class="invitation" aria-labelledby="title">
+        <p class="eyebrow">一次没有目的地的偶遇</p>
+        <h1 id="title">海边<br />候车亭<span class="title-dot">。</span></h1>
+        <p class="intro">门后的天气，交给偶然。<br />进去坐一会儿，等海给你一点回应。</p>
+        <button id="enter" class="primary-button" disabled>正在走近海边…</button>
+        <button id="return-favorite" class="return-link" hidden>回到收藏的那片海</button>
+        <p class="invitation-note">不必完成什么，也不用赶时间。</p>
+      </section>
+
+      <section id="inside-ui" class="inside-ui" hidden aria-label="候车亭内的互动">
+        <div class="place-caption">
+          <p class="eyebrow">这次，偶然把你带到这里</p>
+          <h2>海边候车亭</h2>
+          <p id="weather-description"></p>
+        </div>
+        <button id="rain-target" class="rain-target" aria-label="按住接住檐下的雨" tabindex="-1"><span class="target-ring" aria-hidden="true"></span><span>檐下还在滴水</span></button>
+        <div class="bottom-ui">
+          <div class="moment-copy"><span class="small-rule" aria-hidden="true"></span><p id="moment">这里，暂时不用赶路。</p></div>
+          <div class="controls" aria-label="场景动作">
+            <button id="sit" class="action-button" aria-pressed="false"><span>坐一会儿</span><kbd>空格</kbd></button>
+            <button id="catch" class="action-button catch-button" aria-pressed="false"><span>按住接雨</span><kbd>R</kbd></button>
+            <button id="favorite" class="action-button" aria-pressed="false">留住这次遇见</button>
+            <button id="next" class="action-button next-button">再开一扇门 <span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="gesture-hint">拖动画面环顾 · 松开手，雨会重新落回水盘</p>
+        </div>
+      </section>
+
+      <aside id="settings" class="settings" hidden aria-labelledby="settings-title">
+        <div class="settings-heading"><h2 id="settings-title">留一点偶然</h2><button id="settings-close" class="text-button">收起</button></div>
+        <p>天气在推门前选定，进来以后，就安心待在这一刻。</p>
+        <label for="weather-choice">下一扇门的天气</label>
+        <select id="weather-choice">
+          <option value="random">交给偶然</option>
+          <option value="dusk-rain">黄昏细雨</option>
+          <option value="night-rain">入夜微雨</option>
+          <option value="after-rain">雨歇薄雾</option>
+        </select>
+        <button id="settings-next" class="panel-button">去下一次遇见</button>
+        <div class="settings-section">
+          <h3>远处有一盏船灯</h3>
+          <p>进去静待大约一分钟，它会自己从海雾里出现。想先看看，也可以让它早一点来。</p>
+          <button id="boat-now" class="panel-button" disabled>让船灯早些出现</button>
+        </div>
+        <label class="volume-label" for="volume">海与雨的声音 <span id="volume-value">45%</span></label>
+        <input id="volume" type="range" min="0" max="100" value="45" />
+        <p class="settings-footnote">在触屏上按住接雨；使用键盘也可按 R。所有动作都可以随时停下。</p>
+      </aside>
+      <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+      <div id="transition" class="transition" aria-hidden="true"><span>下一次，海也许有不同的颜色。</span></div>
+      <div id="error" class="error" hidden><h2>暂时没能看见这片海</h2><p id="error-message"></p><button onclick="location.reload()">再试一次</button></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

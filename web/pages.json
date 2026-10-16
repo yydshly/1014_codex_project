@@ -1,4 +1,7 @@
 {
   "version": 1,
-  "projects": ["014-cyber-xiaoya-study"]
+  "projects": [
+    "006-random-doors",
+    "014-cyber-xiaoya-study"
+  ]
 }

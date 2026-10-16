@@ -7,6 +7,10 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const output = resolve(root, '_site');
 const catalog = JSON.parse(await readFile(resolve(root, 'projects.json'), 'utf8'));
 const manifest = JSON.parse(await readFile(resolve(root, 'web/pages.json'), 'utf8'));
+const entrances = await readFile(resolve(root, 'web/entries.json'), 'utf8').then(JSON.parse).catch(error => {
+  if (error.code === 'ENOENT') return { version: 1, projects: {} };
+  throw error;
+});
 if (manifest.version !== 1 || !Array.isArray(manifest.projects) || !manifest.projects.length) throw new Error('发布清单为空或版本无效。');
 if (new Set(manifest.projects).size !== manifest.projects.length) throw new Error('发布项目重复。');
 const published = manifest.projects.map(name => {
@@ -41,5 +45,16 @@ for (const {name, item} of published) {
 await cp(resolve(root, 'web/index.html'), resolve(output, 'index.html'));
 await writeFile(resolve(output, '.nojekyll'), '');
 await writeFile(resolve(output, 'projects.json'), JSON.stringify({ schema_version: 1, projects: published.map(p => p.item) }, null, 2) + '\n');
-await writeFile(resolve(output, 'entries.json'), JSON.stringify({ version: 1, projects: Object.fromEntries(published.map(p => [p.item.id, [{label: '阅读研究', path: `${p.name}/`}]])) }, null, 2) + '\n');
+const entries = {};
+for (const {name, item} of published) {
+  const configured = entrances.projects?.[item.id];
+  entries[item.id] = Array.isArray(configured) && configured.length ? configured : [{label: '阅读研究', path: `${name}/`}];
+  for (const entry of entries[item.id]) {
+    if (typeof entry.label !== 'string' || typeof entry.path !== 'string' || !entry.path.startsWith(`${name}/`) || entry.path.includes('..')) throw new Error(`无效项目入口：${name}`);
+    const file = entry.path.split(/[?#]/)[0];
+    const target = resolve(output, file.endsWith('/') ? `${file}index.html` : file);
+    if (!target.startsWith(output + sep) || !(await stat(target)).isFile()) throw new Error(`入口不存在：${entry.path}`);
+  }
+}
+await writeFile(resolve(output, 'entries.json'), JSON.stringify({ version: 1, projects: entries }, null, 2) + '\n');
 console.log(`Pages完整站点已生成：${published.map(p => p.name).join('、')}。仅发布清单中明确登记的静态项目。`);

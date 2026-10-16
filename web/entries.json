@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "projects": {
+    "006": [
+      {
+        "label": "阅读研究总览",
+        "path": "006-random-doors/research.html"
+      },
+      {
+        "label": "体验连续开门",
+        "path": "006-random-doors/"
+      },
+      {
+        "label": "3D 候车亭",
+        "path": "006-random-doors/seaside.html"
+      }
+    ]
+  }
+}

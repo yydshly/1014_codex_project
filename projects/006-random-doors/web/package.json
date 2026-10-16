@@ -1,0 +1,18 @@
+{
+  "name": "research-006-random-doors",
+  "version": "0.7.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "predev": "node prepare-assets.mjs",
+    "prebuild": "node prepare-assets.mjs",
+    "dev": "vite --host 127.0.0.1 --port 4178 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4178 --strictPort",
+    "check": "node --check src/research.js && node --check src/doors.js && node --check src/scene-art.js && node --check src/encounters.js && node --check src/variations.js && node --check src/encounter-views.js && node --check src/main.js && node --check src/scene.js && node --check src/shaders.js && node --check src/experience.js && node --check src/audio.js && node --check src/view.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": { "three": "0.186.1" },
+  "devDependencies": { "vite": "8.3.4" }
+}

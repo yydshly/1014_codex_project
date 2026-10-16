@@ -1,0 +1,21 @@
+{
+  "author": "Techartist (@techartist_)",
+  "post_id": "2109737086601556195",
+  "post_url": "https://x.com/techartist_/status/2109737086601556195",
+  "created_at_utc": "2026-10-12T20:04:53Z",
+  "verified_on": "2026-10-15",
+  "metadata_source": "https://cdn.syndication.twimg.com/tweet-result",
+  "duration_seconds": 20.45,
+  "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2109736669838766080/img/AlYfd4iAmrCi0-5a.jpg",
+  "video_url": "https://video.twimg.com/amplify_video/2109736669838766080/vid/avc1/1280x720/2F5wl5GvlkVORAj9.mp4",
+  "hosting": "用于研究对照的原始 MP4 与封面副本；发布保留作者署名、原帖与校验记录，原媒体来自作者 X CDN",
+  "observed": "原帖展示开发中的传送门立方体，首个世界为阳光下的珊瑚礁。",
+  "unknown": "原帖未说明每次进入是否随机、是否程序或 AI 实时生成。",
+  "page_fetch": "直接读取原帖返回 403；公开嵌入数据可读。具体页面阻断原因未确诊。",
+  "license": "原媒体版权归 Techartist；未发现独立媒体再许可声明。本记录不将原作归入本项目原创或依赖库 MIT 许可。",
+  "local_video": "techartist-portal.mp4",
+  "local_poster": "techartist-poster.jpg",
+  "modifications": "原 MP4 与封面文件未修改；如有兼容播放格式会另行登记。",
+  "video_sha256": "29800148e70dcbd6b1327ac89af07e3e5bfc1500be1a89321cb05d48eea7af94",
+  "poster_sha256": "e921de52dbe60dd365885c8c09d49cf1ecab8bb29e6e90793a9419b4d35cc16d"
+}

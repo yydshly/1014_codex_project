@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#182a2d">
+<meta name="description" content="推开未知的门，遇见一处风景、一个人，或一个小问题。同一处地点也会发生不同的事，每次经历都留在手记里。">
+<title>随机门 · 下一次，会遇见什么</title>
+</head>
+<body>
+<div id="app" data-phase="door">
+<header class="journey-header"><a class="journey-brand" href="./" aria-label="随机门首页"><span class="brand-door" aria-hidden="true"></span>随机门<span class="brand-note">偶遇练习</span></a><a class="research-entry" href="./research.html" target="_top">研究总览 ↗</a><button id="journal-toggle" class="plain-button" aria-expanded="false" aria-controls="journal">遇见手记 <span id="journal-count">0</span></button></header>
+<main id="journey"></main>
+<p id="announcement" class="visually-hidden" role="status" aria-live="polite"></p>
+<p id="storage-warning" class="storage-warning" hidden>这次没能把手记保存在本机。你仍可以继续体验。</p>
+<dialog id="journal" aria-labelledby="journal-title"><div class="journal-heading"><div><p class="small-label">每次遇见，都有自己的后来</p><h2 id="journal-title">遇见手记</h2></div><button id="journal-close" class="plain-button">收起手记</button></div><div id="journal-list"></div><p class="journal-footnote">只记下你去过的地方。回访保留选择和进度，不消耗下一次随机。手记仅保存在当前浏览器。</p></dialog>
+<div id="door-transition" class="door-transition" aria-hidden="true"><span>门后的事，等进去再知道。</span></div>
+</div>
+<script type="module" src="/src/doors.js"></script>
+</body>
+</html>
