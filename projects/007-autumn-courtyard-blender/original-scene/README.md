@@ -56,7 +56,7 @@ python .\projects\007-autumn-courtyard-blender\original-scene\scripts\make_media
 
 建模与渲染只需要 Blender 4.5 LTS 自带 Python；没有额外建模插件或在线模型服务依赖。生成器固定随机种子 151026，重复执行会更新本实验自己生成的工程和输出。未找到支持的 NVIDIA 设备时回退到 CPU。
 
-视频里的花朵和水面是静态几何，只移动相机，没有实现风场或流体模拟。相机环绕帧位于被 Git 忽略的 .cache 目录，最终视频保存在 assets。另已追加 [网页三维查看器](http://127.0.0.1:4175/1014_codex_project/007-autumn-courtyard-blender/#scene)，导出、构建与依赖见 [网页说明](../web/README.md)。
+视频里的花朵和水面是静态几何，只移动相机，没有实现风场或流体模拟。相机环绕帧位于被 Git 忽略的 .cache 目录，最终视频保存在 assets。另已追加 [网页三维查看器](https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/#scene)，导出、构建与依赖见 [网页说明](../web/README.md)。
 
 ## 结果边界
 

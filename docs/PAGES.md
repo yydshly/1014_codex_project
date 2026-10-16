@@ -4,6 +4,7 @@
 
 - 总入口：<https://yydshly.github.io/1014_codex_project/>
 - 006 研究页：<https://yydshly.github.io/1014_codex_project/006-random-doors/research.html>
+- 007 Atlas 研究页：<https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html>
 - 014 研究页：<https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/>
 - 工作流：`.github/workflows/pages.yml`。
 - 发布清单：`web/pages.json`。每次重新构建清单中的全部项目，避免发布单个项目时覆盖已有入口。
@@ -47,3 +48,5 @@ node scripts/build_pages.mjs
 发布 `007-autumn-courtyard-blender/research.html` 完整研究、`overview.html` 高清一图总览，以及 `index.html#scene` 真实三维。摘要先解释 Atlas 的源库能力、依赖模型与工具的工作原理、可编辑交付的价值，再说明非游戏用途、可扩展方向和证据范围。月门水庭为独立实验，没有完整执行 Atlas 技能包，不能据此宣称源库带来确定增益。
 
 项目 `web/build.mjs` 调用 `scripts/build_web.py` 与 `check_web.py`。Three.js 和 Draco 原文件、许可证与哈希随项目保存，网页不依赖 CDN。Python 构建使用已有图片、视频、Blender 工程与 GLB；不重新生成图像、三维或总览图。原始代码、来源、工程下载和检查记录一并发布。部署与公网验证记录见项目根的 `deployment.json`，验证后才登记 `demo_url`。
+
+2026-10-16 已通过 Actions 发布。浏览器实测五项研究摘要、14 个章节和真实三维旋转、缩放、机位切换、线框与全屏显示；总览网页改用约 0.75 MB WebP 预览，保留 4,000 × 9,001 PNG 与 SVG 高清下载。三页入口、本地资源、模型、工程与图片的公网核验详情见 [007 部署记录](../projects/007-autumn-courtyard-blender/deployment.json)。现有 006 与 014 保留在同一发布清单中。

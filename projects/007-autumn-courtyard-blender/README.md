@@ -14,9 +14,9 @@ Atlas 以技能规范和辅助脚本组织 2D/3D 资产生成、质量验证和�
 
 ## 本次结果
 
-- [能力与价值一图总览](http://127.0.0.1:4175/1014_codex_project/007-autumn-courtyard-blender/overview.html)：七部分涵盖 Atlas 能力、原理、三张实际效果、意义、用途、边界与扩展方向；[高清 PNG](web/assets/atlas-overview.png)、[可编辑 SVG](web/assets/atlas-overview.svg)、[来源说明](web/assets/README.md)。
-- [完整研究网页](http://127.0.0.1:4175/1014_codex_project/007-autumn-courtyard-blender/research.html)：14 个章节、18 个问答，整理 Atlas 与模型能力、各生成路线、实验来源、建模和网页实现、价值、非游戏用途、局限、后续验证与源码证据。
-- [真实 3D 交互网页](http://127.0.0.1:4175/1014_codex_project/007-autumn-courtyard-blender/#scene)：直接旋转、缩放、平移同一 Blender 场景，支持切换机位、线框与全屏，并保留图像对照、视频、原理和价值说明；[构建与运行说明](web/README.md)。
+- [能力与价值一图总览](https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/overview.html)：七部分涵盖 Atlas 能力、原理、三张实际效果、意义、用途、边界与扩展方向；[高清 PNG](web/assets/atlas-overview.png)、[可编辑 SVG](web/assets/atlas-overview.svg)、[来源说明](web/assets/README.md)。
+- [完整研究网页](https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html)：14 个章节、18 个问答，整理 Atlas 与模型能力、各生成路线、实验来源、建模和网页实现、价值、非游戏用途、局限、后续验证与源码证据。
+- [真实 3D 交互网页](https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/#scene)：直接旋转、缩放、平移同一 Blender 场景，支持切换机位、线框与全屏，并保留图像对照、视频、原理和价值说明；[构建与运行说明](web/README.md)。
 - [网页三维模型 GLB](original-scene/artifacts/moonwater-web.glb)：约 3.62 MB，保留实际几何与倒角；[导出记录](original-scene/assets/web-export.json)。
 - [五秒流程演示](original-scene/assets/demo.mp4)：先显示生成的参考图，再显示真实三维镜头移动，最后显示主视角。
 - [自行生成的参考图](original-scene/assets/concept.png)、[实际高清渲染](original-scene/assets/render.png)、[侧上方视角](original-scene/assets/overview.png)。
@@ -32,6 +32,6 @@ Atlas 以技能规范和辅助脚本组织 2D/3D 资产生成、质量验证和�
 
 主体布局、圆形石门、水面反射、天球仪和冷暖灯光已经建立。三维结果在自然树形、建筑雕刻、天空层次和细部材质上仍明显简化。它是参考图指导的近似场景，不是自动、准确的单图三维重建。
 
-本地环境：Windows、Blender 4.5.9 LTS、RTX 4070 Laptop GPU、Cycles / OptiX；实验日期 2026-10-15。网页按统一 GitHub Pages 子路径发布，线上验收后登记正式入口与部署记录。
+本地环境：Windows、Blender 4.5.9 LTS、RTX 4070 Laptop GPU、Cycles / OptiX；实验日期 2026-10-15。已按统一 GitHub Pages 子路径公开部署；完整研究、一图总览、真实 3D 与下载文件随站点发布。详见 [部署与公网核验记录](deployment.json)。
 
 [返回项目总索引](../../README.md)

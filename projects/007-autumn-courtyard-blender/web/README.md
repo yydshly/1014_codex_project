@@ -99,6 +99,10 @@ python -m http.server 4177 --bind 127.0.0.1 --directory projects/007-autumn-cour
 
 研究、总览、3D 演示三个入口随完整站点一起发布，保留 006 与 014。正式地址仅在线上验收后登记到 `projects.json`，具体结果记录在项目根 `deployment.json`。
 
+2026-10-16 已发布：[完整研究](https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html)、[一图总览](https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/overview.html)、[真实 3D](https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/#scene)。浏览器实拍见 [公网研究摘要](screenshots/published-research.jpg) 与 [公网三维](screenshots/published-scene.jpg)。网页首段与总索引均先说明源库能力、原理、价值和扩展，再解释独立实验的证据范围。
+
+再次进行公网核验时，在根目录执行 `python projects/007-autumn-courtyard-blender/scripts/check_deployment.py --commit <已部署提交> --run-url <成功工作流地址>`。脚本检查资源与摘要、下载文件哈希、依赖地址、视频分段响应及既有页面，全部成功后才写入部署记录。
+
 图片、视频和下载文件来自本项目的 `original-scene/`，来源与生成记录见 [素材说明](../original-scene/assets/README.md) 和 [实验记录](../original-scene/RESEARCH.md)。研究线索为 MIT 许可的 [xikhar/atlas 固定版本](https://github.com/xikhar/atlas/tree/b283a80dcb6db9068ba368fedfca783f5164ba06)，当前网页和三维场景为独立制作。
 
 [返回项目说明](../README.md)

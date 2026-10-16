@@ -1,0 +1,130 @@
+{
+  "verified_at": "2026-10-16T13:02:24.855951+00:00",
+  "deployed_commit": "877c83e0ce65793e8ec2e0447fb963634cc1f0bb",
+  "workflow_run": "https://github.com/yydshly/1014_codex_project/actions/runs/38904375230",
+  "site": "https://yydshly.github.io/1014_codex_project/",
+  "research_url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html",
+  "overview_url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/overview.html",
+  "scene_url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/#scene",
+  "summary": "Atlas 以技能规范和辅助脚本组织 2D/3D 资产生成、验证与引擎接入，底层依赖模型和建模工具；价值在可编辑资产与可重复交付。以月门水庭验证 Blender 脚本路线，探索展陈、教学、产品展示和游戏，流程增益仍待评测。",
+  "published_project_ids": [
+    "006",
+    "007",
+    "014"
+  ],
+  "asset_and_anchor_checks": {
+    "nodes": 31,
+    "triangles": 499936,
+    "source_objects_preserved": 1038,
+    "model_bytes": 3623960,
+    "external_images": 0,
+    "source_unchanged": true,
+    "dependencies_verified": 14,
+    "local_resources_verified": 43,
+    "overview_size": [
+      4000,
+      9001
+    ],
+    "unmodified_evidence_images": 3,
+    "html_anchors_verified": true,
+    "http_model_verified": true
+  },
+  "pages": [
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html",
+      "status": 200,
+      "content_type": "text/html"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/overview.html",
+      "status": 200,
+      "content_type": "text/html"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/index.html",
+      "status": 200,
+      "content_type": "text/html"
+    }
+  ],
+  "download_integrity": [
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/assets/atlas-overview.png",
+      "status": 200,
+      "content_type": "image/png",
+      "sha256": "b3269d610d8f6018b1954a1bc638cf9bb6b903ef372f61c06f65c5f62306e18d",
+      "bytes": 6429785
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/assets/atlas-overview.svg",
+      "status": 200,
+      "content_type": "image/svg+xml",
+      "sha256": "340fbde2d6e85f86f0c7d62bbb098b91e6cbd6e3b0bb207dbe07e1cbddbd5ad2",
+      "bytes": 7296559
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/downloads/moonwater.blend",
+      "status": 200,
+      "content_type": "application/x-blender",
+      "sha256": "4fd572c930249255f143bbdf545a58664ea4c9a08479e50c2248258e6d8e86bf",
+      "bytes": 7448262
+    }
+  ],
+  "vendor_resources_accessible": 14,
+  "video_range": {
+    "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/assets/demo.mp4",
+    "status": 206,
+    "content_type": "video/mp4",
+    "content_range": "bytes 0-63/1124647"
+  },
+  "existing_pages_preserved": [
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html",
+      "status": 200,
+      "content_type": "text/html"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/",
+      "status": 200,
+      "content_type": "text/html"
+    }
+  ],
+  "scope": "Public research and existing 3D artifact; no online model generation service.",
+  "browser_review": {
+    "research_summary_fields": [
+      "源库能力",
+      "实现原理",
+      "价值与意义",
+      "可扩展方向",
+      "本次实证与边界"
+    ],
+    "chapters": 14,
+    "scene_loaded": true,
+    "scene_controls_tested": [
+      "drag rotation",
+      "zoom button",
+      "camera preset",
+      "wireframe on/off",
+      "full-screen display on/off"
+    ],
+    "screenshots": [
+      "web/screenshots/published-research.jpg",
+      "web/screenshots/published-scene.jpg"
+    ],
+    "errors_observed": 0,
+    "warnings_observed": [
+      "WebGL shader compiler precision warning; scene rendered and controls worked."
+    ],
+    "overview_preview_browser_reload": "Automation reload timed out; WebP HTTP delivery and local raster appearance verified.",
+    "scope_limit": "No physical phone hardware or cross-device performance benchmark."
+  },
+  "overview_preview": {
+    "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/assets/atlas-overview-preview.webp",
+    "bytes": 754760,
+    "size": [
+      2000,
+      4501
+    ],
+    "http_status": 200,
+    "full_resolution_downloads_preserved": true
+  }
+}
