@@ -33,3 +33,8 @@
 ## 0.7 网页发布素材
 
 `four-seasons-reference.jpg` 由 `assets/references/four-seasons-readme.jpg` 原字节复制，来自固定版本 README 的作者原图。`understanding-overview.png`、`.svg` 和 `.sources.json` 由本项目 2026-10-16 图解复制，内含各画面的来源、SHA-256 与已实现边界。均由 `web/prepare-assets.mjs` 在开发和构建前自动准备。
+
+
+## 0.8 世界与身份实际画面
+
+`world-museum.jpg`、`world-train.jpg`、`world-genesis.jpg` 于 2026-10-16 使用浏览器截取新原型的实际页面，分别展示隐身任务、猫的失物线索和创世法则结果，随研究页发布。图中场景为本项目原创 HTML/CSS/SVG，门前沿用已登记的 ImageGen 原画；截图不代表 Three.js 源库已经提供这些玩法。保留完整页面截图，不以概念图冒充实际运行效果。

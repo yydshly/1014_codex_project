@@ -37,9 +37,9 @@ node scripts/build_pages.mjs
 
 ## 006 随机门研究与原型
 
-006 发布研究页 `006-random-doors/research.html`、连续开门主入口与 `seaside.html` 三维候车亭。研究页解释 Portal Cube 原作灵感、Four-Seasons 独立源码参考的能力与参数化原理，以及我们的随机遭遇、参与、手记回访、价值和扩展方向；不是把参考库当作现成故事或无限生成引擎。
+006 发布研究页 `006-random-doors/research.html`、连续开门主入口、`seaside.html` 三维候车亭与新增的 `worlds.html` 世界身份实验。研究页解释 Portal Cube 原作灵感、Four-Seasons 独立源码参考的能力与参数化原理，以及我们的随机遭遇、世界身份、相容任务、参与反馈、本地回访、价值和扩展方向；不是把参考库当作现成故事或无限生成引擎。
 
-在 `projects/006-random-doors/web/` 执行 `node build.mjs`，按锁文件安装缺失依赖，执行检查与 29 项行为测试，再构建三入口。`prepare-assets.mjs` 在构建前复制已登记的参考图和高清总览图。站点构建器完整发布清单中的所有项目，并按 `web/entries.json` 登记多个入口。原作视频与图片保留作者、出处和校验记录；页面不含后端、账号、密钥或运行时模型调用，手记保存在当前浏览器。
+在 `projects/006-random-doors/web/` 执行 `node build.mjs`，按锁文件安装缺失依赖，执行检查与 40 项行为测试，再构建四入口。`prepare-assets.mjs` 在构建前复制已登记的参考图和高清总览图。站点构建器完整发布清单中的所有项目，并按 `web/entries.json` 登记多个入口。原作视频与图片保留作者、出处和校验记录；页面不含后端、账号、密钥或运行时模型调用，手记保存在当前浏览器。
 
 006 于 2026-10-16 通过现有 Actions 成功部署，公网研究页、三处体验入口、参考图、高清 PNG/SVG、原作视频分段请求及现有 014 均验证成功。浏览器确认摘要与交互可用，手机无横向页面溢出。验证详情见 [006 部署记录](../projects/006-random-doors/deployment.json)。
 

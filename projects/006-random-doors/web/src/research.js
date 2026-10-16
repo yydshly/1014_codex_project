@@ -48,10 +48,12 @@ const review=import.meta.env.DEV&&new URL(location.href).searchParams.get('revie
 function openDemo(mode,opener) {
   $('source-video').pause();
   const legacy=mode==='legacy';
-  const href=legacy?'./seaside.html':`./${review?'?review=1':''}`;
-  $('prototype-title').textContent=legacy?'保留的 3D 海边候车亭':'连续随机开门';
+  const identity=mode.startsWith('worlds');
+  const world=mode.split('-')[1];
+  const href=identity?`./worlds.html?${world?`world=${world}&`:''}${review?'review=1':''}`:legacy?'./seaside.html':`./${review?'?review=1':''}`;
+  $('prototype-title').textContent=identity?'随机世界与身份实验':legacy?'保留的 3D 海边候车亭':'连续随机开门';
   $('prototype-external').href=href;
-  const iframe=document.createElement('iframe');iframe.title=legacy?'可互动的三维海边候车亭':'可互动的连续随机门原型';iframe.src=href;iframe.allow='fullscreen';
+  const iframe=document.createElement('iframe');iframe.title=identity?'可互动的随机世界与身份原型':legacy?'可互动的三维海边候车亭':'可互动的连续随机门原型';iframe.src=href;iframe.allow='fullscreen';
   $('prototype-frame-wrap').replaceChildren(iframe);
   dialog.showModal();$('close-prototype').focus();dialog.dataset.opener=opener.id||'';
 }

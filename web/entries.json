@@ -7,6 +7,10 @@
         "path": "006-random-doors/research.html"
       },
       {
+        "label": "随机世界与身份",
+        "path": "006-random-doors/worlds.html"
+      },
+      {
         "label": "体验连续开门",
         "path": "006-random-doors/"
       },

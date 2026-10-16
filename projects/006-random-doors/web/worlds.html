@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101b26">
+  <meta name="description" content="每次开门，随机进入不同世界、成为不同身份：隐身完成博物馆任务，附身列车上的猫或列车长，成为创世主改写一条法则。体验能力、限制与行动后果，并换个身份重看同一个世界。">
+  <title>随机门 · 借一个身份，去另一种世界</title>
+</head>
+<body>
+<a class="skip" href="#universe">跳到体验</a>
+<div id="world-app" data-phase="door">
+  <header class="world-header"><a class="world-brand" href="./worlds.html"><span aria-hidden="true">◈</span> 随机门 <small>异世界身份实验</small></a><nav aria-label="体验导航"><a href="./research.html#identity" target="_top">理解与原理 ↗</a><button id="open-atlas" aria-haspopup="dialog">身份见闻 <span id="atlas-count">0</span></button></nav></header>
+  <main id="universe" tabindex="-1"></main>
+  <p class="storage-warning" id="world-storage-warning" hidden>这次无法保存到浏览器。你仍可以继续体验。</p>
+  <p class="sr-only" id="world-announcement" role="status" aria-live="polite"></p>
+  <dialog id="atlas" aria-labelledby="atlas-title"><div class="atlas-head"><div><p class="eyebrow">PLACES I HAVE BEEN · PEOPLE I HAVE BEEN</p><h2 id="atlas-title">我曾是，另一个人。</h2></div><button id="close-atlas" aria-label="关闭身份见闻">关闭 ×</button></div><div id="atlas-list"></div><p class="atlas-note">保留最近 40 次身份、行动和世界状态，只存于当前浏览器。回访继续原来的那一次；换身份会创建新的经历。</p></dialog>
+  <div id="crossing" aria-hidden="true"><span>你正在成为，另一个人。</span></div>
+</div>
+<script type="module" src="/src/worlds.js"></script>
+</body>
+</html>

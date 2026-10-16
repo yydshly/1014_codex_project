@@ -4,9 +4,9 @@
     {
       "id": "006",
       "slug": "random-doors",
-      "title": "随机门：源库原理、偶遇体验与作品馆",
+      "title": "随机门：世界身份实验、源库原理与作品馆",
       "repository": "https://github.com/yydshly/1014_codex_project",
-      "summary": "Four-Seasons 以固定种子和季节参数驱动三维场景；我们探索六场景随机遇见、参与与手记回访，让已有作品重新被发现，并延伸作品馆、故事回响等方向。",
+      "summary": "Four-Seasons 以固定种子与参数联动三维场景；我们探索随机不同世界与身份：隐身完成任务、附身猫或列车长、成为创世主改写法则。已实现三世界八身份规则原型、六场景偶遇与本地回访，延伸猎奇冒险和随机作品馆。",
       "status": "研究中",
       "preview": "assets/understanding-overview-20261016.png",
       "preview_caption": "006 我们整理的完整理解总览图：原作与独立源码参考、能力原理、实际效果、三类体验、价值及扩展方向。",
