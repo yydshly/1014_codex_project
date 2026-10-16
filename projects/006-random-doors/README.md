@@ -85,3 +85,5 @@ Four-Seasons 用固定种子与季节、时段参数驱动三维场景共同变�
 2026-10-16 已通过现有 GitHub Pages 工作流部署并验证，研究页、原作视频、高清图与三处体验入口均可访问；[部署记录](deployment.json)保留 HTTP、视频分段请求与浏览器检查证据。
 
 0.8 世界身份实验已于 2026-10-16 部署并验证：[直接试玩](https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html)。三世界原型、研究摘要、12 项公网资源与现有 007/014 入口均可访问，详情见[本轮验收](verification/worlds-0.8-public.json)。
+
+0.9 列车第一人称附身已于 2026-10-17 发布并验证：[直接进入列车](https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html?world=train)。猫、列车长、旅客的视角、通路与动作分别实现，七张原画和交互资源与构建字节一致，三身份流程及 45 项测试通过。见 [本轮公网验收](verification/train-0.9-public.json)。

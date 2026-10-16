@@ -146,5 +146,15 @@
     "verification_record": "verification/worlds-0.8-public.json",
     "http_checks": 12,
     "tests": 40
+  },
+  "train_identity_v09": {
+    "verified_on": "2026-10-17",
+    "verified_sha": "4d42c2dd9297f869aa6bab779dc36396d78f95d8",
+    "workflow": "https://github.com/yydshly/1014_codex_project/actions/runs/38979447932",
+    "prototype_url": "https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html?world=train",
+    "summary_url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html#train-experience",
+    "verification_record": "verification/train-0.9-public.json",
+    "http_checks": 24,
+    "tests": 45
   }
 }
