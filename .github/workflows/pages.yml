@@ -25,6 +25,8 @@ jobs:
           python-version: '3.12'
       - name: Validate project catalog
         run: python scripts/project_catalog.py check
+      - name: Install image packaging dependency
+        run: python -m pip install --disable-pip-version-check -r projects/007-autumn-courtyard-blender/requirements-web.txt
       - name: Build all published static projects
         run: node scripts/build_pages.mjs
       - uses: actions/configure-pages@v5

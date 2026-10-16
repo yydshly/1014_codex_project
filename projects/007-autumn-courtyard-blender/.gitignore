@@ -1,0 +1,6 @@
+# Prepared Three.js distribution is part of the self-contained viewer.
+!web/vendor/build/
+!web/vendor/build/*.js
+*.blend1
+*.blend2
+.runtime/

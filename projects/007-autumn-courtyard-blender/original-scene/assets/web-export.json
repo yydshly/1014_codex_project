@@ -1,0 +1,22 @@
+{
+  "source": "artifacts/moonwater.blend",
+  "source_sha256": "4fd572c930249255f143bbdf545a58664ea4c9a08479e50c2248258e6d8e86bf",
+  "output": "artifacts/moonwater-web.glb",
+  "output_sha256": "be2da6220c284937f2b668417c35aed34e68d03cc0f08817622555800b99e917",
+  "output_bytes": 3623960,
+  "blender": "4.5.9 LTS",
+  "source_mesh_objects": 1039,
+  "batched_nodes": 31,
+  "evaluated_vertices": 354316,
+  "evaluated_triangles": 499936,
+  "materials": 24,
+  "omitted": [
+    "Distant valley atmosphere"
+  ],
+  "geometry_decimation": false,
+  "reference_image_used": false,
+  "compression": "KHR_draco_mesh_compression, position 16-bit, normals 10-bit",
+  "material_conversion": "Approximate PBR colors; Cycles procedural nodes and volume haze not transferred",
+  "source_unchanged": true,
+  "export_seconds": 8.49
+}

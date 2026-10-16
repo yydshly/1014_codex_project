@@ -1,0 +1,23 @@
+{
+  "saved_scene": "artifacts/moonwater.blend",
+  "blender": "4.5.9 LTS",
+  "external_image_dependencies": [],
+  "camera_background_images": 0,
+  "reference_sha256_matches": true,
+  "objects": 1052,
+  "non_finite_meshes": [],
+  "inverted_closed_stone_blocks": [],
+  "checks_passed": true,
+  "backend": "OPTIX",
+  "devices": [
+    "NVIDIA GeForce RTX 4070 Laptop GPU"
+  ],
+  "overview_render_seconds": 13.2,
+  "orbit_frames": 24,
+  "orbit_seconds": 113.45,
+  "orbit_resolution": [
+    960,
+    540
+  ],
+  "orbit_samples_max": 24
+}

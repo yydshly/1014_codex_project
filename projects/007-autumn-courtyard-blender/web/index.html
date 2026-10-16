@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Atlas 资产工作流研究与月门水庭实证：模型理解参考图并编写 Blender 脚本，工具构建可编辑场景。亲自旋转、缩放真实 3D，查看原理、价值、边界与扩展。">
+  <meta name="theme-color" content="#101c2b">
+  <title>模型，把想法变成三维空间 · 月门水庭研究</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="viewer.css">
+  <link rel="stylesheet" href="research.css">
+  <script type="importmap">{"imports":{"three":"./vendor/build/three.module.js"}}</script>
+  <script src="app.js" defer></script>
+  <script src="viewer.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="月门水庭，返回页首"><span class="brand-mark" aria-hidden="true">◒</span><span>月门水庭<small>模型的 3D 生成实验 · 007</small></span></a>
+    <nav aria-label="页面导航"><a href="research.html">完整研究</a><a href="#scene">3D 场景</a><a href="#effects">图像对照</a><a href="#files">文件与记录 <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/render.webp" width="1672" height="940" alt="实际 Blender 渲染：暮色水池、紫藤、圆形石门、黄铜天球仪与暖色灯笼" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">MODEL × 3D / A VISUAL EXPERIMENT</p>
+        <h1 id="hero-title">模型，把想法<br>变成三维空间。</h1>
+        <p class="hero-description">先生成一张原创参考图，再让模型理解画面、编写建模代码，交给 Blender 生成可编辑的三维场景。</p>
+        <div class="hero-actions"><a class="button button-light" href="#scene">进入真实 3D 场景 <span aria-hidden="true">↘</span></a><a class="hero-text-link" href="overview.html">能力与价值 · 一图总览 <span aria-hidden="true">↗</span></a><a class="hero-text-link" href="research.html">完整原理与研究 <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero-bottom"><span><i aria-hidden="true"></i> 此图为实际 Blender 渲染</span><span>原创参考图 · 可编辑工程 · 真实镜头环绕</span></div>
+      <span class="hero-index" aria-hidden="true">007</span>
+    </section>
+
+    <section class="section understanding" id="understanding" aria-labelledby="understanding-title">
+      <div class="section-meta"><span class="section-number">01 / 理解</span><span>结论先行</span></div>
+      <div class="understanding-layout">
+        <h2 id="understanding-title">核心价值，是模型<br><em>生成与修改 3D</em> 的能力。</h2>
+        <div class="body-copy"><p>这次验证的是：模型能够理解视觉目标，把物体、空间布局和材质要求转化为代码，并根据渲染反馈继续修改。</p><p>具体实现是<strong>模型通过代码使用 Blender</strong>。模型负责理解、规划和编写脚本；Blender 负责执行几何操作，计算材质、光照和最终图像。</p><p class="quiet">这里的“模型生成 3D”指通过代码构建场景。本次没有调用直接输出三维网格的专用图生 3D 模型。</p></div>
+      </div>
+      <div class="role-line" aria-label="各部分的分工">
+        <div><span class="role-label">模型</span><strong>理解画面 · 编写与修改代码</strong><p>决定做什么，以及如何搭建</p></div><span class="role-arrow" aria-hidden="true">→</span>
+        <div><span class="role-label">Blender</span><strong>建立几何 · 计算与渲染</strong><p>把代码落实为三维结构与画面</p></div><span class="role-arrow" aria-hidden="true">→</span>
+        <div><span class="role-label">最终产物</span><strong>可编辑的三维场景</strong><p>支持继续改布局、换机位和再渲染</p></div>
+      </div>
+    </section>
+
+    <div class="section" style="padding-top:0;padding-bottom:35px"><div class="research-entry"><div><strong>Atlas：组织模型与工具，让生成走向交付。</strong><p>源库覆盖 2D/3D 资产、验证与引擎接入；月门水庭独立验证脚本路线。完整研究说明能力、原理、价值、非游戏用途与扩展方向，并标明尚未证明的部分。</p></div><a href="research.html">阅读完整研究 ↗</a></div></div>
+
+    <section class="section workflow" id="workflow" aria-labelledby="workflow-title">
+      <div class="section-meta"><span class="section-number">02 / 过程</span><span>从图像到空间</span></div>
+      <div class="section-heading"><h2 id="workflow-title">一张图，经过四步落地。</h2><p>图片提供视觉目标，三维结构由脚本重新构建。</p></div>
+      <div class="workflow-layout">
+        <div class="steps" role="tablist" aria-label="制作过程" aria-orientation="vertical">
+          <button class="step is-active" id="step-0" role="tab" aria-selected="true" aria-controls="stage-0" tabindex="0"><span>01</span><div><strong>生成原创参考图</strong><small>图像模型 · 确定视觉目标</small></div><b aria-hidden="true">↗</b></button>
+          <button class="step" id="step-1" role="tab" aria-selected="false" aria-controls="stage-1" tabindex="-1"><span>02</span><div><strong>理解画面，编写脚本</strong><small>大模型 · 拆解物体与空间关系</small></div><b aria-hidden="true">↗</b></button>
+          <button class="step" id="step-2" role="tab" aria-selected="false" aria-controls="stage-2" tabindex="-1"><span>03</span><div><strong>建立真实三维结构</strong><small>Blender · 执行代码并渲染</small></div><b aria-hidden="true">↗</b></button>
+          <button class="step" id="step-3" role="tab" aria-selected="false" aria-controls="stage-3" tabindex="-1"><span>04</span><div><strong>看效果，再定向修改</strong><small>模型 + 反馈 · 多轮调整</small></div><b aria-hidden="true">↗</b></button>
+        </div>
+        <div class="stages">
+          <article id="stage-0" class="stage" role="tabpanel" aria-labelledby="step-0" tabindex="0"><img src="assets/concept.webp" width="1672" height="941" alt="本次通过内置图像生成创作的月门水庭参考图" loading="lazy"><div class="stage-caption"><span class="tag">本次新生成</span><h3>先有自己的视觉目标。</h3><p>创作紫藤、水池、月门和天球仪组成的暮色庭院。生成时没有传入前一轮作者的图片，完整提示词已保留。</p></div></article>
+          <article id="stage-1" class="stage" role="tabpanel" aria-labelledby="step-1" tabindex="0" hidden><div class="interpretation-image"><img src="assets/concept.webp" width="1672" height="941" alt="模型从参考图中识别月门、天球仪、水池和紫藤的形体与位置" loading="lazy"><span class="annotation gate-label">圆门 → 环形石块</span><span class="annotation orb-label">天球仪 → 交叉金属环</span><span class="annotation pool-label">池水 → 网格与反射材质</span></div><div class="stage-caption"><span class="tag">视觉理解 → 代码</span><h3>把“看起来是什么”，变成“怎样搭出来”。</h3><p>估计比例、坐标和机位，再编写普通 Python 建模代码。图中不可见的背面和连接结构由本实验补建。</p></div></article>
+          <article id="stage-2" class="stage" role="tabpanel" aria-labelledby="step-2" tabindex="0" hidden><img src="assets/overview.webp" width="1280" height="900" alt="已保存三维工程的侧上方渲染，能看到水池、桥、圆台、石门和树的纵深" loading="lazy"><div class="stage-caption"><span class="tag">真实三维</span><h3>换个角度，结构仍然成立。</h3><p>圆门、桥、树、金属环都有网格几何。工程重新打开后，从侧上方渲染；参考图没有作为背景或投影参与成像。</p></div></article>
+          <article id="stage-3" class="stage" role="tabpanel" aria-labelledby="step-3" tabindex="0" hidden><img src="assets/render.webp" width="1672" height="940" alt="经过构图、远山、光照、树皮和灯笼细节调整后的最终三维渲染" loading="lazy"><div class="stage-caption"><span class="tag">观察 → 调整 → 再渲染</span><h3>生成一次，还需要继续判断。</h3><p>修正相机高度、被裁切的灯笼、过暗的远山和拱廊结构，再改善树皮与材质。这是多轮定向调整的结果。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="live-section" id="scene" aria-labelledby="scene-title">
+      <div class="section">
+        <div class="section-meta"><span class="section-number">03 / 体验</span><span>把三维场景拿在手里看</span></div>
+        <div class="section-heading"><h2 id="scene-title">真实场景，就在网页里。</h2><p>拖动旋转、缩放和平移，从自己的视角探索月门水庭。</p></div>
+        <div class="scene-shell" id="scene-shell" data-state="loading">
+          <div class="scene-stage" id="scene-stage">
+            <canvas id="scene-canvas" tabindex="0" role="img" aria-label="月门水庭交互三维场景：拖动旋转、滚轮缩放，方向键平移，加减键缩放" aria-describedby="scene-instructions"></canvas>
+            <span class="scene-live-label"><i aria-hidden="true"></i> 可旋转的真实三维场景</span>
+            <div class="scene-loading" id="scene-loading"><span id="scene-load-message">正在准备三维场景…</span><progress id="scene-progress" max="1" aria-label="三维模型加载进度"></progress><button id="scene-retry" type="button" hidden>重新载入</button></div>
+          </div>
+          <div class="scene-view-controls">
+            <div class="scene-presets" role="group" aria-label="选择三维机位"><button type="button" data-scene="view" data-view="overview" aria-pressed="true" disabled>庭院全景</button><button type="button" data-scene="view" data-view="hero" aria-pressed="false" disabled>原图机位</button><button type="button" data-scene="view" data-view="gate" aria-pressed="false" disabled>月门近看</button><button type="button" data-scene="view" data-view="orb" aria-pressed="false" disabled>天球仪</button></div>
+            <div class="scene-actions" role="group" aria-label="三维查看操作"><button type="button" data-scene="in" aria-label="放大三维场景" disabled>＋</button><button type="button" data-scene="out" aria-label="缩小三维场景" disabled>−</button><button type="button" data-scene="reset" disabled>复位</button><button type="button" data-scene="orbit" aria-pressed="false" disabled>自动环绕</button><button type="button" data-scene="wireframe" aria-pressed="false" disabled>线框</button><button type="button" data-scene="fullscreen" aria-pressed="false" disabled>全屏</button></div>
+          </div>
+          <div class="scene-footer"><span id="scene-instructions">拖动旋转 · 滚轮缩放 · 右键平移 / 手机：单指旋转 · 双指缩放与平移</span><output id="scene-status" aria-live="polite">场景准备中</output></div>
+        </div>
+        <div class="scene-help"><span>可以切换原图机位，也可以用线框查看石门、桥、树与天球仪的几何结构。</span><a href="assets/moonwater-web.glb" download>下载网页三维模型 ↗</a></div>
+        <p class="scene-note">由同一份 Blender 工程导出，保留场景几何与倒角。网页使用实时光照和水面反射，材质细节与离线渲染略有差异。水与花没有物理模拟。</p>
+      </div>
+    </section>
+
+    <section class="effects-section" id="effects" aria-labelledby="effects-title">
+      <div class="section">
+        <div class="section-meta"><span class="section-number">04 / 效果</span><span>把结果放在一起看</span></div>
+        <div class="section-heading"><h2 id="effects-title">从生成图，到实际三维渲染。</h2><p>拖动分界线，比较构图、物体和光照的对应关系。</p></div>
+        <div class="comparison" style="--split:50%">
+          <div class="comparison-frame">
+            <img class="comparison-base" src="assets/render.webp" width="1672" height="940" alt="右侧：脚本构建场景后的实际 Blender 渲染" loading="lazy">
+            <div class="comparison-original"><img src="assets/concept.webp" width="1672" height="941" alt="左侧：本次自行生成的原创参考图" loading="lazy"></div>
+            <span class="image-label image-label-left">生成的参考图</span><span class="image-label image-label-right">实际 Blender 渲染</span>
+            <div class="comparison-divider" aria-hidden="true"><span>‹ ›</span></div>
+          </div>
+          <div class="comparison-controls"><div class="view-options" role="group" aria-label="选择对照方式"><button type="button" data-compare="50" aria-pressed="true">拖动对照</button><button type="button" data-compare="100" aria-pressed="false">只看参考图</button><button type="button" data-compare="0" aria-pressed="false">只看三维结果</button></div><label class="range-label" for="compare-range">参考图占比 <output id="compare-value" for="compare-range">50%</output></label><input id="compare-range" type="range" min="0" max="100" value="50" aria-label="调整参考图显示比例，左侧参考图，右侧三维渲染"></div>
+        </div>
+        <p class="comparison-note">主体布局、石门、水面反射和冷暖灯光已经建立。树形、天空、建筑装饰与材质细节，仍比参考图简化。</p>
+
+        <div class="motion-layout">
+          <div class="motion-player">
+            <div class="media-tabs" role="tablist" aria-label="查看三维证据"><button id="media-video-tab" role="tab" aria-selected="true" aria-controls="media-video" tabindex="0">五秒流程演示</button><button id="media-overview-tab" role="tab" aria-selected="false" aria-controls="media-overview" tabindex="-1">从另一角度看</button></div>
+            <div id="media-video" role="tabpanel" aria-labelledby="media-video-tab"><video id="demo-video" controls playsinline preload="metadata" poster="assets/render.webp" aria-label="五秒演示：两秒参考图、两秒真实三维相机环绕、一秒最终主视角"><source src="assets/demo.mp4" type="video/mp4">浏览器暂不支持视频，请<a href="assets/demo.mp4">下载演示</a>查看。</video><div class="video-caption"><span>2s 参考图 <i>→</i> 2s 三维环绕 <i>→</i> 1s 主视角</span><button type="button" id="play-orbit">直接看镜头环绕 <span aria-hidden="true">↗</span></button></div><p id="video-status" class="sr-only" role="status"></p></div>
+            <div id="media-overview" role="tabpanel" aria-labelledby="media-overview-tab" hidden><button class="image-zoom" type="button" data-zoom="assets/overview.webp" data-caption="从保存后的 Blender 工程重新打开，并从侧上方实际渲染。" aria-label="放大三维侧上方视角"><img src="assets/overview.webp" width="1280" height="900" alt="三维侧上方视角：水池边界、步桥、中央岛、圆门和拱廊的真实空间关系" loading="lazy"><span>放大查看 <span aria-hidden="true">↗</span></span></button></div>
+          </div>
+          <aside class="motion-explanation"><span class="eyebrow">A SPACE, FROM ANOTHER ANGLE</span><h3>视角改变，<br>空间依然存在。</h3><p>这段环绕由保存后的工程实际渲染 24 个相机位置得到，能够看到前后景的视差。</p><p>工程包含独立几何、材质、灯光与相机，可以继续编辑，再生成新的视角。</p><div class="small-note">演示只移动相机。水面与花朵为静态几何，当前没有风场或水流模拟。</div></aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section value-section" id="value" aria-labelledby="value-title">
+      <div class="section-meta"><span class="section-number">05 / 价值</span><span>从一张成图，走向可操作的结构</span></div>
+      <div class="section-heading"><h2 id="value-title">价值，在于后续还能怎么改。</h2><p>当目标需要新的机位、结构变化或交互，模型构建三维的能力才有更大的用处。</p></div>
+      <div class="value-grid">
+        <article class="value-item"><span class="value-icon" aria-hidden="true">↗</span><p class="value-kicker">换机位</p><h3>一个场景，多个镜头。</h3><p>重新安排相机与灯光，输出远景、近景、环绕或镜头预演，保留同一套空间关系。</p><span>可用于：内容制作、镜头预演</span></article>
+        <article class="value-item"><span class="value-icon" aria-hidden="true">↔</span><p class="value-kicker">改结构</p><h3>从改画面，到改物体。</h3><p>调整石门尺寸、移动树、改桥与水池的布局，再统一渲染比较不同方案。</p><span>可用于：空间原型、产品与结构展示</span></article>
+        <article class="value-item"><span class="value-icon" aria-hidden="true">◇</span><p class="value-kicker">接交互</p><h3>让空间承载操作。</h3><p>在后续工程中加入浏览、点击、状态切换或任务入口，让三维物体与真实功能关联。</p><span>可用于：虚拟展览、教学、工作空间、游戏</span></article>
+      </div>
+      <div class="value-takeaway"><span class="takeaway-mark" aria-hidden="true">“</span><p>这次研究的重点，是模型能够把视觉意图落实成<strong>可编辑、可继续修改的三维结构</strong>。<small>本页已支持真实三维查看；把场景接入教学、业务操作等功能仍需后续开发。如果最终只需要一张静态图片，直接使用生成图会更省事。</small></p></div>
+    </section>
+
+    <section class="boundaries-section" id="boundaries" aria-labelledby="boundaries-title"><div class="section">
+      <div class="section-meta"><span class="section-number">06 / 边界</span><span>让结论与证据对应</span></div>
+      <div class="section-heading"><h2 id="boundaries-title">能力已看到，完成度也要说清。</h2></div>
+      <div class="boundaries-grid">
+        <article class="boundary verified"><span class="status-label"><i></i> 本次已经验证</span><h3>脚本能落地成真实三维场景。</h3><ul><li>先自行生成参考图，再据图编写建模代码。</li><li>工程可保存、重新打开，并从不同角度渲染。</li><li>圆门、桥、树和天球仪都有实际几何。</li><li>参考图未作为贴图、相机背景或投影参与渲染。</li></ul></article>
+        <article class="boundary pending"><span class="status-label"><i></i> 仍有差距与待验证项</span><h3>接近主题，还没有准确复原画面。</h3><ul><li>自然树形、雕刻、材质与天空细节仍较简化。</li><li>尺寸、相机和不可见结构依靠视觉估计。</li><li>过程经过多轮观察与修改，不是无人值守的一步生成。</li><li>未验证成本优势、工程精度或实时应用性能。</li></ul></article>
+      </div>
+      <details class="evidence-details"><summary>查看实际运行记录 <span id="verification-status">读取检查记录…</span></summary><div class="evidence-body"><dl class="evidence-grid"><div><dt>渲染环境</dt><dd id="record-version">Blender 4.5.9 LTS / Cycles</dd></div><div><dt>最终分辨率</dt><dd id="record-resolution">1672 × 940</dd></div><div><dt>物体数量</dt><dd id="record-objects">1,052</dd></div><div><dt>真实环绕帧</dt><dd id="record-orbit">24</dd></div><div><dt>构建 / 单帧渲染</dt><dd id="record-time">23.84s / 22.57s</dd></div><div><dt>外部图片依赖</dt><dd id="record-images">0</dd></div></dl><p>耗时仅代表这台机器的一次脚本运行，不包含参考图生成、写代码和先前迭代；不能作为节省成本的证明。<a href="downloads/render-stats.json" download>原始运行数据 ↗</a> · <a href="downloads/scene-checks.json" download>工程检查记录 ↗</a></p></div></details>
+    </div></section>
+
+    <section class="section files-section" id="files" aria-labelledby="files-title">
+      <div class="section-meta"><span class="section-number">07 / 资料</span><span>完整过程，可以继续研究</span></div>
+      <div class="section-heading"><h2 id="files-title">从结果，走到可编辑的工程。</h2><p>图像、提示词、代码与实际记录均已保留。</p></div>
+      <div class="download-grid">
+        <a class="download-card" href="downloads/moonwater.blend" download><span class="file-type">BLEND · 7.45 MB</span><strong>可编辑三维工程 <span aria-hidden="true">↓</span></strong><p>在 Blender 中查看物体、材质、灯光和相机。</p></a>
+        <a class="download-card" href="downloads/build_moonwater.py" download><span class="file-type">PYTHON</span><strong>场景生成脚本 <span aria-hidden="true">↓</span></strong><p>查看参考图如何被转化为几何与材质代码。</p></a>
+        <a class="download-card" href="downloads/image-prompt.txt" download><span class="file-type">IMAGE GEN PROMPT</span><strong>参考图生成提示词 <span aria-hidden="true">↓</span></strong><p>本次创作月门水庭时使用的完整提示词。</p></a>
+        <a class="download-card" href="downloads/RESEARCH.md" download><span class="file-type">RESEARCH NOTES</span><strong>研究与复现记录 <span aria-hidden="true">↓</span></strong><p>过程、修改、验证方式和当前局限。</p></a>
+      </div>
+      <div class="more-files"><span>图片与配套代码</span><a href="downloads/concept.png" download>原创参考图 ↗</a><a href="downloads/render.png" download>高清三维渲染 ↗</a><a href="downloads/geometry.py" download>几何辅助函数 ↗</a><a href="downloads/README.md" download>本地运行说明 ↗</a><a href="assets/demo.mp4" download>五秒视频 ↗</a></div>
+      <div class="source-note"><span>研究线索与来源</span><p>起点来自 <a href="https://x.com/xikhar/status/2110143242591510835" target="_blank" rel="noreferrer">Shikhar 的公开视频 ↗</a> 与 <a href="https://github.com/xikhar/atlas/tree/b283a80dcb6db9068ba368fedfca783f5164ba06" target="_blank" rel="noreferrer">Atlas 工作流 ↗</a>。当前展示的参考图为本次新生成，三维场景与代码由本实验独立制作；基础网格函数复用本项目先前自己的代码。Atlas 固定版本为 b283a80，许可证 MIT。</p></div>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">◒</span><span>月门水庭<small>模型的 3D 生成实验</small></span></a><p>研究记录 007 · 2026.10.15<br>模型理解与编写，Blender 执行与渲染。</p><a href="#top">回到页首 ↑</a></footer>
+  <dialog id="image-dialog" aria-label="放大查看三维场景"><button type="button" class="dialog-close" aria-label="关闭放大图片">关闭 ×</button><img id="dialog-image" alt=""><p id="dialog-caption"></p></dialog>
+</body>
+</html>

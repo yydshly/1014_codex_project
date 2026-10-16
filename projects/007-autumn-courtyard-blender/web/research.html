@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN" class="research-document">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Atlas 用技能规范与辅助脚本组织 2D/3D 资产生成、验证和引擎接入；模型与工具提供生成能力，流程形成可编辑交付。含月门水庭实证、价值、应用与扩展方向。">
+  <meta name="theme-color" content="#f4f3ee">
+  <title>Atlas：能力、原理、价值与扩展 · 月门水庭实证</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="research.css">
+  <script src="research.js" defer></script>
+</head>
+<body class="research-page">
+  <a class="skip-link" href="#research-main">跳到研究正文</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="月门水庭项目入口"><span class="brand-mark" aria-hidden="true">◒</span><span>月门水庭<small>完整研究 · 007</small></span></a>
+    <nav aria-label="研究页面导航"><a href="index.html#scene">交互演示 ↗</a><a href="index.html#effects">效果对照 ↗</a></nav>
+  </header>
+  <main id="research-main">
+    <div class="research-hero">
+      <p class="eyebrow">MODEL × CODE × 3D / RESEARCH NOTES · 更新于 2026.10.16</p>
+      <h1>Atlas：把模型能力，<br>组织成资产制作流程。</h1>
+      <p class="research-intro">Atlas 是供代理使用的技能规范与辅助脚本，组织 2D/3D 资产生成、质量检查和引擎接入。底层能力来自模型与执行工具；它的工程意义，是让生成结果更容易成为可继续编辑、验证和交付的资产。月门水庭是我们独立验证 Blender 脚本路线的实验。</p>
+      <div class="research-links"><a href="overview.html">一图总览 ↗</a><a href="#conclusion">先看核心结论 ↓</a><a href="index.html#scene">直接操作真实 3D ↗</a><a href="#sources">来源与原始记录 ↓</a></div>
+      <dl class="research-abstract" aria-label="Atlas 研究摘要">
+        <div><dt>源库能力</dt><dd>覆盖场景图、精灵、动画、地形、界面图标、角色一致性，以及三维模型、PBR 材质、着色器和 Three.js 接入。</dd></div>
+        <div><dt>实现原理</dt><dd>先约定规格，再选择生成器、DCC 脚本或程序几何；模型调用工具执行，按检查与视觉反馈修正，最后导出并接入引擎。</dd></div>
+        <div><dt>价值与意义</dt><dd>模型负责理解、规划与生成，库组织工具、流程和验收。三维结构可复用机位、定向修改并承载交互；效率与质量增益仍需对照评测。</dd></div>
+        <div><dt>可扩展方向</dt><dd>可控参数编辑、多生成器适配、资产质量与设备性能、资料和任务交互；用途可探索展陈、教学、产品展示、镜头预演与游戏。</dd></div>
+        <div><dt>本次实证与边界</dt><dd>原创图 → 模型写 Blender 脚本 → 可编辑工程 → GLB → 网页真实 3D。未完整执行 Atlas 技能包，未调用专用图生 3D，也未证明准确重建、量产可用或商业收益。</dd></div>
+      </dl>
+      <figure class="research-cover"><img src="assets/overview.webp" width="1280" height="900" alt="从保存的 Blender 工程重新渲染的月门水庭侧上方视角"><figcaption>从视觉意图，<br>走到能继续修改的空间。<small>图为保存后的工程从另一机位实际渲染。网页还保留参考图、主视角、镜头环绕与可旋转的三维版本。</small></figcaption></figure>
+    </div>
+    <div class="research-layout">
+      <aside class="research-toc" aria-label="完整研究目录">
+        <details class="toc-panel" id="research-toc-panel" open><summary>阅读目录 · 14 个章节</summary><nav aria-label="章节导航">
+          <a href="#conclusion"><span>01</span>核心结论</a><a href="#atlas"><span>02</span>原帖与 Atlas</a><a href="#roles"><span>03</span>模型与工具的分工</a><a href="#routes"><span>04</span>生成路线的区别</a><a href="#history"><span>05</span>两轮实验的关系</a><a href="#construction"><span>06</span>月门水庭如何搭建</a><a href="#evidence"><span>07</span>结果与证据</a><a href="#web-pipeline"><span>08</span>如何变成网页 3D</a><a href="#value"><span>09</span>能力、流程与价值</a><a href="#applications"><span>10</span>游戏之外的用途</a><a href="#limits"><span>11</span>局限与误读</a><a href="#next"><span>12</span>接下来怎样验证</a><a href="#questions"><span>13</span>常见问题</a><a href="#sources"><span>14</span>来源、文件与复现</a>
+        </nav></details>
+        <a class="toc-return" href="index.html#scene">↗ 返回可交互场景</a>
+      </aside>
+      <article class="research-article" aria-label="月门水庭完整研究正文">
+        <section class="research-chapter" id="conclusion" aria-labelledby="conclusion-title">
+          <div class="chapter-number">01 / 核心结论</div><h2 id="conclusion-title">价值的核心，是模型构建和修改三维的能力。</h2>
+          <p class="lead">本次实际验证的是：模型理解一张参考图，规划场景，编写普通建模代码，再让 Blender 执行，得到可编辑、可重新渲染、可放进网页的三维结构。</p>
+          <p>“模型生成 3D”在这里描述一条完整的工具使用路线。模型通过代码表达物体的形状、位置、材质和灯光，建模软件把这些指令落实为网格与场景。生成完成后，工程可以独立保存，网页也可以直接载入它，继续换机位查看。</p>
+          <div class="research-callout"><p class="callout-title">把结论分成三个层次</p><p><strong>能力层：</strong>模型能否把视觉意图转成可执行的三维构建方案？本次有实际结果。</p><p><strong>流程层：</strong>工具、规范、检查与反馈是否能让结果更稳定、更容易交付？有工程意义，但本次没有做带 / 不带 Atlas 的对照实验。</p><p><strong>产品层：</strong>是否更省钱、更省时、更有用，能否进入实际业务？需要进一步测试，不能由一个成功场景直接推出。</p></div>
+          <p>因此，“价值就是模型生成 3D 的能力”抓住了技术核心。更完整的说法是：<strong>模型能力提供可能性，工具与流程把能力落实成资产，具体任务决定这种资产有没有使用价值。</strong></p>
+          <p class="small">这份记录描述可观察的行为与结果。仅凭演示，无法断言模型内部采用了何种三维表征，也不能据此推断它对所有场景都同样可靠。</p>
+        </section>
+
+        <section class="research-chapter" id="atlas" aria-labelledby="atlas-title">
+          <div class="chapter-number">02 / 原帖与 Atlas</div><h2 id="atlas-title">先分清：作者展示、公开工作流和本次实作。</h2>
+          <p>研究起点是 <a href="https://x.com/xikhar/status/2110143242591510835" target="_blank" rel="noreferrer">Shikhar 的场景演示</a>。我们取得了展示画面的参考线索，但没有取得原作者的场景工程、完整提示词、相机参数和逐步制作记录。<strong>原视频具体怎样做出来，仍有未确认部分。</strong></p>
+          <p>作者公开的 <a href="#source-atlas">Atlas</a>，在本次固定版本中是一组供代理使用的技能说明与辅助工具，覆盖图像、资产与引擎接入。README 将它描述为可移植的资产制作技能；它没有把工作流限定为某一个生成模型。</p>
+          <p><a href="#source-model3d">model3d-gen</a> 明确列出三类实现途径：调用三维生成工具、通过 Blender 等软件写脚本建模，以及程序几何。它还规定资产规格、清理、检查和视觉复核等步骤。<a href="#source-core">asset-core</a> 强调交付约定与验证；<a href="#source-pipeline">threejs-pipeline</a> 讨论在引擎中加载、布光、压缩和检查。</p>
+          <div class="research-table" tabindex="0" role="region" aria-label="原项目与本次实验的证据范围"><table><thead><tr><th>对象</th><th>能够确认</th><th>不能由此确认</th></tr></thead><tbody>
+            <tr><td>作者原视频</td><td>展示了一个场景效果，是本次研究的起点。</td><td>每个物体的生成方式、是否调用专用图生 3D、自动化程度与完整耗时。</td></tr>
+            <tr><td>Atlas 固定源码</td><td>提供工具选择、资产规范、清理、验证和展示的工作流。</td><td>原视频一定按这份固定版本制作，或只安装技能就能保证相同效果。</td></tr>
+            <tr><td>本次月门水庭</td><td>独立生成参考图、编写 Blender 脚本、实际渲染，再导出网页模型。</td><td>对 Atlas 原视频制作过程的完整复现，或对 Atlas 增益的独立评测。</td></tr>
+          </tbody></table></div>
+          <p>Atlas 的规范目标包含可用于引擎的资产，但<strong>规范中写了质量要求，并不等于所有结果都已达到该要求</strong>。本次也没有安装并完整执行 Atlas 技能包；我们研究其方法，再独立验证脚本路线。基础模型能力、技能说明、软件执行和视觉质量，应当分别评估。</p>
+          <p class="small">上游固定版本：b283a80dcb6db9068ba368fedfca783f5164ba06，记录许可证 MIT。这里引用的是其公开工作流，不把原帖的场景素材视为本次制作资产。</p>
+        </section>
+
+        <section class="research-chapter" id="roles" aria-labelledby="roles-title">
+          <div class="chapter-number">03 / 分工</div><h2 id="roles-title">模型负责理解和编写，Blender 负责构建和渲染。</h2>
+          <div class="research-steps" aria-label="从视觉意图到可交互场景的四层分工"><div><b>01 / 视觉目标</b><strong>图像模型</strong><small>先创作一张概念图</small></div><div><b>02 / 构建方案</b><strong>视觉理解与编程</strong><small>拆物体、估布局、写代码</small></div><div><b>03 / 三维资产</b><strong>Blender</strong><small>执行几何、材质与渲染</small></div><div><b>04 / 网页体验</b><strong>浏览器渲染器</strong><small>载入模型，响应操作</small></div></div>
+          <div class="research-table" tabindex="0" role="region" aria-label="各阶段的输入输出与职责"><table><thead><tr><th>环节</th><th>输入 → 输出</th><th>本次具体工作</th></tr></thead><tbody>
+            <tr><td>图像生成</td><td>文字描述 → 二维参考图</td><td>生成紫藤、水池、石门与天球仪的原创暮色庭院；没有传入作者的图片。</td></tr>
+            <tr><td>模型理解</td><td>参考图与目标 → 场景方案</td><td>识别元素、估计比例、坐标和机位，把复杂物体拆成可构建的部分。</td></tr>
+            <tr><td>模型编程</td><td>场景方案 → Python 脚本</td><td>编写网格、环带、枝干、批量叶片、程序材质和灯光代码，并按反馈修改。</td></tr>
+            <tr><td>Blender 执行</td><td>脚本 → 实际场景</td><td>创建网格、材质、灯光和相机，保存可编辑工程。</td></tr>
+            <tr><td>Cycles 离线渲染</td><td>场景与机位 → 像素图</td><td>计算遮挡、照明、反射等成像结果，输出主视角、侧视和环绕帧。</td></tr>
+            <tr><td>导出与网页</td><td>已保存工程 → GLB → 交互</td><td>合并网格、近似转换材质、压缩；Three.js 载入后允许旋转、缩放和平移。</td></tr>
+          </tbody></table></div>
+          <p>模型不需要在每一帧重新“想象”整个庭院。几何一旦生成，后续画面由同一套空间结构计算。浏览器里的拖动是相机操作，模型服务没有参与每次旋转与缩放。</p>
+          <p>本次由模型在对话中分析、编写、执行并观察结果；用户提供目标与方向。场景逐步形成于这些工具调用与定向修改中。我们没有把它封装为一次提交即可稳定完成的无人值守生成服务。</p>
+        </section>
+
+        <section class="research-chapter" id="routes" aria-labelledby="routes-title">
+          <div class="chapter-number">04 / 路线</div><h2 id="routes-title">“看图做 3D”可以指几种不同的过程。</h2>
+          <p>用户最初问的“分析图，再借助生成 3D 的能力”可以作为宽泛概括。具体实现必须再分：看图后写建模代码，与把图片输入专用三维生成器，走的是不同链路。</p>
+          <div class="research-table" tabindex="0" role="region" aria-label="四种图像到三维路线的区别"><table><thead><tr><th>路线</th><th>如何得到三维</th><th>需要注意</th><th>本次状态</th></tr></thead><tbody>
+            <tr><td>单图理解 → 脚本建模</td><td>模型从图中归纳物体、尺寸与关系，输出建模程序，由软件执行。</td><td>结构与参数方便定向修改；细腻形体、材质和不可见部分取决于建模方案。</td><td><span class="evidence-tag">已实际执行</span></td></tr>
+            <tr><td>单图 → 专用三维生成器</td><td>把图片交给专门输出三维表示或网格的模型 / 服务，再整理资产。</td><td>结果仍需检查比例、表面、拓扑、材质和可编辑性；质量取决于具体工具。</td><td><span class="evidence-tag unverified">本次未调用</span></td></tr>
+            <tr><td>实拍多视图 → 重建</td><td>利用同一真实物体的多个观测，约束相机、形状或外观。</td><td>需要对应关系、覆盖度、稳定主体与合适的成像条件；多几张图也不保证成功。</td><td><span class="evidence-tag unverified">本次未测试</span></td></tr>
+            <tr><td>生成多视图 → 再建三维</td><td>先让图像模型补出不同角度，再作为后续三维流程的输入或参考。</td><td>生成图之间可能在物体、尺度和遮挡上矛盾，必须检查视角一致性。</td><td><span class="evidence-tag unverified">本次未测试</span></td></tr>
+          </tbody></table></div>
+          <h3>这里还有两个容易混在一起的问题。</h3>
+          <p><strong>“生成新的结构”和“恢复真实结构”：</strong>给一张概念图做出相近主题的场景，可以在不确定处主动设计。要恢复某个真实场所的准确形状，则需要额外观测、尺度与检验。本次属于参考图指导的近似构建。</p>
+          <p><strong>“用了图像模型”和“用了图生 3D 模型”：</strong>本次确实先用了图像生成来做概念图，之后的建模由模型编写普通代码完成。这两步承担不同角色，参考图没有被当作贴图或相机背景塞进三维场景。</p>
+          <div class="research-callout pending"><p><strong>单图的背面没有唯一答案。</strong>一张正面图可能对应不同的墙厚、连接方式与背部结构。本次未做自动深度估计、相机标定或多视角匹配，相关尺寸与不可见部分由视觉估计和补建得到。</p></div>
+          <p class="small">上表后两种路线是方法区别与条件分析，本次没有运行其重建算法，也没有进行不同路线的质量、速度或成本排名。</p>
+        </section>
+
+        <section class="research-chapter" id="history" aria-labelledby="history-title">
+          <div class="chapter-number">05 / 实验关系</div><h2 id="history-title">先试复现，再换成自己生成的参考图。</h2>
+          <h3>第一轮：参考原帖展示画面的秋日庭院。</h3>
+          <p>最初取原帖视频的展示画面作为视觉参考，独立用 Blender 脚本搭建白石建筑、红叶树、台阶与远景。那张参考已经是渲染完成的画面，我们没有取得作者原始概念图与工程。第一轮主要证明：凭视觉理解和脚本，可以搭出具有相近主题与纵深的场景。</p>
+          <p>这轮经历了面朝向、光照、拱廊方向、后景雾和薄石块尺寸等修正，过程保留在 <a href="downloads/HISTORICAL_RESEARCH.md" download>历史研究记录</a>。它不是原作者场景代码的运行结果。</p>
+          <h3>第二轮：先生成原创“月门水庭”，再建立三维。</h3>
+          <p>用户随后要求先自己生成图片。我们新建了紫藤、水池、月门与天球仪的主题，生成时没有输入前一轮图片。然后重新分析、编写场景脚本、实际渲染和调整，并在后续把同一工程接入网页。</p>
+          <p>两轮只复用了本项目自己写的基础网格辅助函数。月门水庭的布局、植被、天球仪、石门、灯笼和程序材质属于本次独立制作，没有复制上游示例工程或场景脚本。</p>
+          <figure class="research-inline-image"><img src="assets/concept.webp" width="1672" height="941" loading="lazy" alt="本次全新生成的月门水庭概念参考图，包含紫藤、水池、石门和天球仪"><figcaption>第二轮原创参考图。完整生成提示词、图像哈希和输入图片为空的记录均已保留。</figcaption></figure>
+          <div class="research-callout"><p>换成原创参考图以后，实验链路更完整：我们同时掌握视觉目标、建模代码、实际工程、导出资产和网页表现，可以逐步检查每个环节，而不只对着作者的一张展示图讨论效果。</p></div>
+        </section>
+
+        <section class="research-chapter" id="construction" aria-labelledby="construction-title">
+          <div class="chapter-number">06 / 场景实现</div><h2 id="construction-title">把画面元素拆成能执行的构建规则。</h2>
+          <p>模型先判断“画面里有什么”和“它们怎样摆放”，再选择合适的几何表达。主体并非一个不可分的整体：圆门、桥面、圆台、花簇与灯笼都能拆开构建，最后组合成同一场景。</p>
+          <div class="research-table" tabindex="0" role="region" aria-label="月门水庭中各物体的实现方式"><table><thead><tr><th>元素</th><th>本次具体实现</th><th>当前简化</th></tr></thead><tbody>
+            <tr><td>圆形月门</td><td>56 块环形石块，保留接缝，加内外细边线与倒角。</td><td>雕刻、石材磨损与装饰细节有限。</td></tr>
+            <tr><td>天球仪</td><td>相互倾斜的金属带、黄道带、刻度小点、轴杆、底座与发光球体。</td><td>结构服务画面主题，没有验证真实仪器的机械功能。</td></tr>
+            <tr><td>水池、桥与圆岛</td><td>独立池底、池岸、带细小起伏的水面网格、铺石桥与分层圆柱台。</td><td>水面静态，没有流体模拟和行走碰撞。</td></tr>
+            <tr><td>紫藤树</td><td>管状主干、根系、分枝，批量叶片和成串花朵网格。</td><td>枝形仍有规则感；自然生长、树皮和叶簇层次较简化。</td></tr>
+            <tr><td>三孔拱廊</td><td>有厚度的石柱、拱券、拱上填墙与连续檐口。</td><td>复杂雕花与建筑构造细节未完全展开。</td></tr>
+            <tr><td>灯笼</td><td>台座、青铜框、装饰卷纹、灯芯、屋顶与局部点光源。</td><td>灯具细节与材质质感没有达到参考图丰富程度。</td></tr>
+            <tr><td>远山、湖、新月</td><td>程序山脊、远景湖面、新月轮廓网格与离线后景雾。</td><td>远山是舞台式景层，背面与任意远距离浏览的完整性有限。</td></tr>
+          </tbody></table></div>
+          <h3>完成一遍构建，还要看实际渲染。</h3>
+          <p>第一版视线偏高，前景灯笼被裁切，远山偏高偏暗，拱廊顶部还出现不应有的小洞。之后降低机位、调整圆门与拱廊、补齐石层、移动新月并改善树皮与灯光。最终图来自多轮定向修正。</p>
+          <div class="research-iterations"><figure><img src="assets/iteration-01.webp" width="1008" height="567" loading="lazy" alt="月门水庭第一轮实际 Blender 预览"><figcaption>第一轮：主体已成立，机位、裁切和拱廊结构仍需修正。</figcaption></figure><figure><img src="assets/iteration-02.webp" width="1008" height="567" loading="lazy" alt="月门水庭第二轮实际 Blender 预览"><figcaption>第二轮：调整构图与远景，补齐拱廊，继续检查光照。</figcaption></figure><figure><img src="assets/render.webp" width="1672" height="940" loading="lazy" alt="月门水庭最终实际 Blender 渲染"><figcaption>最终轮：完善树皮、材质和灯笼，保存工程并输出高清图。</figcaption></figure></div>
+          <p>这体现了模型的两类能力：<strong>把语义和形体拆成程序</strong>，以及<strong>根据实际输出定位问题并修改程序</strong>。本次没有建立自动相似度评分器，也没有证明仅靠一句提示词就能稳定达到目标效果。</p>
+          <details class="technical-note"><summary>展开技术细节：代码如何表达形体？</summary><p>完整代码见 <a href="downloads/build_moonwater.py" download>场景脚本</a> 与 <a href="downloads/geometry.py" download>基础网格函数</a>。例如月门使用中心坐标、内外半径、厚度和石块数量；枝干使用路径点与各点半径；花朵按固定随机种子在枝条周围批量布置。修改这些规则后，需要重新执行脚本并检查结果。</p><p>程序几何包含实际顶点、面、法线和材质引用。建模代码的可修改性与最终几何精细度是两回事：能调整参数，并不意味着自然树形、雕刻和纹理就足够好。</p></details>
+        </section>
+
+        <section class="research-chapter" id="evidence" aria-labelledby="evidence-title">
+          <div class="chapter-number">07 / 结果与证据</div><h2 id="evidence-title">我们交付了什么，分别证明了什么？</h2>
+          <div class="research-table" tabindex="0" role="region" aria-label="成果与可支持的结论"><table><thead><tr><th>成果</th><th>能够支持的判断</th><th>判断边界</th></tr></thead><tbody>
+            <tr><td>原创参考图与提示词</td><td>视觉目标可追溯，生成时没有输入作者图片。</td><td>二维图本身不提供准确尺寸与完整背面。</td></tr>
+            <tr><td>主视角实际渲染</td><td>脚本已经执行并产出对应主题的成像结果。</td><td>单张好看的图不能单独证明整个场景完整、准确。</td></tr>
+            <tr><td>保存的 .blend 工程</td><td>有可重新打开、可编辑的网格、材质、相机与灯光。</td><td>可编辑不代表工程精度、拓扑或组织达到量产要求。</td></tr>
+            <tr><td>侧视与 24 帧环绕</td><td>保存后仍能从不同机位渲染，前后景有实际视差。</td><td>只覆盖已检查角度，不构成完整场景验收。</td></tr>
+            <tr><td>网页 GLB 与交互</td><td>同一工程的几何已在浏览器内显示，可以自由操作相机。</td><td>载入成功不等于跨设备稳定运行或具备业务功能。</td></tr>
+            <tr><td>原始检查记录</td><td>检查过有限坐标、部分封闭石块、图片依赖、文件哈希和导出数量。</td><td>属于本实验检查，没有宣称完成全部通用 glTF、游戏或 CAD 认证。</td></tr>
+          </tbody></table></div>
+          <dl class="research-metrics"><div><dt>离线工程物体总数</dt><dd>1,052<small>含灯光、相机等</small></dd></div><div><dt>最终离线渲染</dt><dd>1672 × 940</dd></div><div><dt>真实三维环绕</dt><dd>24<small>源帧</small></dd></div><div><dt>导出时保留的实体网格</dt><dd>1,038</dd></div><div><dt>网页合并节点 / 三角形</dt><dd>31 / 499,936</dd></div><div><dt>网页模型文件</dt><dd>3.62<small>MB，十进制</small></dd></div></dl>
+          <p class="small">物体总数、网格数、节点数与三角形数统计对象不同，不能相互替换。1,039 个源网格中有一个是体积雾容器，网页省略该容器；其余实体按材质与集合合并为 31 个节点。三角形数量是应用倒角后的导出统计。</p>
+          <h3>耗时记录要连同范围一起读。</h3>
+          <p>在本次 Windows / RTX 4070 Laptop GPU / Cycles OptiX 环境中，最终一次脚本构建记录约 23.84 秒，单帧渲染约 22.57 秒；网页导出约 8.49 秒。这些是文件中的单次运行记录。</p>
+          <p><strong>它们没有包含参考图生成、分析、写代码、先前迭代、多视角渲染与人工验收等完整流程成本</strong>，因此不能用来声称“几十秒完成全部工作”或“已证明比人工便宜”。生成图与三维图也没有经过可靠相似度测评，本页不提供相似度百分比。</p>
+          <p class="small">核对：<a href="downloads/render-stats.json" download>渲染记录</a> · <a href="downloads/scene-checks.json" download>工程检查</a> · <a href="assets/web-export.json" download>网页导出记录</a> · <a href="downloads/media-info.json" download>视频记录</a>。</p>
+        </section>
+
+        <section class="research-chapter" id="web-pipeline" aria-labelledby="web-pipeline-title">
+          <div class="chapter-number">08 / 从工程到网页</div><h2 id="web-pipeline-title">同一份几何，换一种渲染与操作环境。</h2>
+          <ol><li><strong>读取已保存的 Blender 工程。</strong>导出脚本对源文件计算哈希，在内存中处理场景，结束时再次确认原文件未改写。</li><li><strong>取出实际求值后的几何。</strong>倒角等修改器的结果进入导出，按集合与材质合并物体，减少浏览器需要提交的绘制批次。</li><li><strong>转换适合网页的资产表达。</strong>程序材质转为近似 PBR 色值；几何以 Draco 压缩写入自包含 GLB。</li><li><strong>在浏览器中重建展示环境。</strong>加载模型，建立相机、天空、环境光、阴影、距离雾和水面反射，再接入操作控制。</li></ol>
+          <div class="research-table" tabindex="0" role="region" aria-label="网页版本保留与重建的内容"><table><thead><tr><th>内容</th><th>网页如何处理</th><th>实际影响</th></tr></thead><tbody>
+            <tr><td>场景几何、倒角</td><td>从源工程求值后导出；未做几何减面，采用量化压缩。</td><td>保留主体形状与空间关系，压缩会引入有限坐标 / 法线精度变化。</td></tr>
+            <tr><td>大量独立物体</td><td>合并为集合与材质批次。</td><td>更便于渲染，但网页 GLB 的逐物体编辑粒度下降；细改应回到原工程或脚本。</td></tr>
+            <tr><td>程序材质</td><td>转换为近似颜色、粗糙度、金属度与发光参数。</td><td>没有完整转移 Cycles 节点网络，石材、树皮等细节表现发生变化。</td></tr>
+            <tr><td>灯光、相机与色调</td><td>在 Three.js 中另外设置。</td><td>实时画面与离线图的明暗、色温、质感不完全相同。</td></tr>
+            <tr><td>水面</td><td>普通查看时用实时平面反射与静态扰动；线框时可检查原水面几何。</td><td>倒影随相机变化，但没有流体模拟，反射增加额外渲染工作。</td></tr>
+            <tr><td>远景体积雾</td><td>省略原雾容器，使用距离雾近似。</td><td>空气感与离线体积效果有所不同。</td></tr>
+          </tbody></table></div>
+          <p>网页提供旋转、滚轮与按钮缩放、平移、庭院全景 / 原图机位 / 月门 / 天球仪四个预设视角，以及自动环绕、线框和全屏。鼠标操作已在浏览器实际验证；手机宽度布局已检查，未用真实手机硬件完成触摸与性能验收。</p>
+          <p>这里的“压缩成 3.62 MB”指下载文件大小。它不等于运行时内存，也不保证帧率。实际负载还取决于可见几何、反射、阴影、像素数量和设备。<strong>本次已经做了合并与压缩，仍没有完成低端设备和多浏览器性能基准。</strong></p>
+          <p class="research-home-link"><a href="index.html#scene">打开三维场景，亲自换一个角度 ↗</a></p>
+        </section>
+
+        <section class="research-chapter" id="value" aria-labelledby="value-title">
+          <div class="chapter-number">09 / 价值判断</div><h2 id="value-title">技术能力的价值，要在任务里兑现。</h2>
+          <h3>第一层：降低表达三维方案的门槛。</h3>
+          <p>本次展示了把文字和参考图转成建模步骤的可行性。用户可以描述想要的物体与变化，模型编写工具能执行的代码，再根据结果继续修正。它把一部分“怎样操作软件”的工作转成了“怎样描述与检验目标”。</p>
+          <h3>第二层：生成的是可以继续工作的结构。</h3>
+          <p>保存后的场景允许换机位、换灯光、改尺寸、改布局和再渲染。相较只交一张成图，这种产物能承接更多后续变化。当前网页只暴露相机查看；改石门、移动树等操作仍通过原工程或脚本完成，需要重新检查和导出。</p>
+          <h3>第三层：工作流有自己的工程价值。</h3>
+          <p>选择工具、安排步骤、保存版本、处理导出、管理依赖、验证结果和记录局限，都会影响模型能力能否稳定交付。Atlas 这类工作流的价值可以放在这一层理解。是否显著提升成功率、质量或效率，需要用对照测试衡量，本次没有得出增益数字。</p>
+          <div class="research-callout"><p class="callout-title">什么时候三维更有意义？</p><p>当你需要<strong>同一空间的多个机位、明确的结构变化，或物体与操作之间的关系</strong>时，三维结构更值得继续投入。</p><p>如果需求只是交付一张静态氛围图，直接使用生成图往往流程更短；这次的建模步骤未必带来足够收益。</p></div>
+          <h3>仍没有证明的商业结论。</h3>
+          <p>我们没有完整记录模型调用成本、人工整理时间与失败率，也没有同传统建模或其他三维生成器做公平对照。因此，“已做出”可以成立，“更便宜、更快、可量产”仍需验证。最终价值取决于质量要求、修改频率、使用次数、目标设备和后续整理成本。</p>
+        </section>
+
+        <section class="research-chapter" id="applications" aria-labelledby="applications-title">
+          <div class="chapter-number">10 / 应用方向</div><h2 id="applications-title">游戏是一种用途，三维也能承载别的任务。</h2>
+          <p>“能构建的场景”可以理解为具有物体、空间关系、相机和状态的环境。下面是可探索的方向，不表示这些产品功能已经在月门水庭中完成。</p>
+          <div class="research-table" tabindex="0" role="region" aria-label="三维场景的应用方向与缺少的工作"><table><thead><tr><th>方向</th><th>三维可能带来的价值</th><th>真正落地还要补什么</th></tr></thead><tbody>
+            <tr><td>镜头预演与内容制作</td><td>复用一个场景比较构图、镜头路径与光照。</td><td>场景质量、镜头语言、输出稳定性与后期流程。</td></tr>
+            <tr><td>空间与展陈原型</td><td>比较物体摆放、动线和观赏角度。</td><td>真实尺寸、布局约束、可达性和实际场所核对。</td></tr>
+            <tr><td>产品与方案展示</td><td>允许用户转动物体、观察部件与不同配置。</td><td>准确产品数据、材质、交互与配置规则。</td></tr>
+            <tr><td>虚拟展览</td><td>让空间组织内容，物体成为信息入口。</td><td>导览、标签、检索、内容维护与无障碍访问。</td></tr>
+            <tr><td>教学与结构讲解</td><td>从多个角度解释组成、位置与遮挡关系。</td><td>知识准确性、标注、步骤与教学效果验证。</td></tr>
+            <tr><td>工作空间与任务界面</td><td>把对象和位置映射为任务、资料或状态。</td><td>真实业务接入、操作反馈、可用性与效率证明。</td></tr>
+            <tr><td>游戏关卡与互动原型</td><td>快速试空间氛围、路线和视觉主题。</td><td>碰撞、导航、角色、动画、逻辑、资产预算和引擎验收。</td></tr>
+          </tbody></table></div>
+          <p><strong>能旋转查看，是进入应用的起点。</strong>要让用户点击天球仪打开资料、在庭院行走、操作门或完成任务，还需要事件、状态、约束、反馈与数据。把一个静态场景放上网页，尚不能代表这些功能已经实现。</p>
+          <p>也不必为了三维而三维。如果一张图、一张表或普通二维页面已经更清楚、更快地完成任务，应当据此选形式。应用价值应当由任务完成情况和用户行为来证明。</p>
+        </section>
+
+        <section class="research-chapter" id="limits" aria-labelledby="limits-title">
+          <div class="chapter-number">11 / 边界</div><h2 id="limits-title">一次可运行的实验，仍有明确的能力边界。</h2>
+          <div class="research-table" tabindex="0" role="region" aria-label="当前能力边界与常见误读"><table><thead><tr><th>容易扩大理解的说法</th><th>本次证据支持到哪里</th><th>缺少的验证</th></tr></thead><tbody>
+            <tr><td>“从图准确恢复了 3D”</td><td>按视觉估计构建了相近主题的三维场景。</td><td>相机标定、尺度依据、完整观测与独立误差评估。</td></tr>
+            <tr><td>“原作者就是这样做的”</td><td>公开工作流允许此路线，本次独立路线可执行。</td><td>原视频工程与完整制作记录。</td></tr>
+            <tr><td>“安装技能就能达到示例质量”</td><td>技能说明可以组织工具、步骤和检查。</td><td>不同模型、输入、预算和执行环境下的成功率。</td></tr>
+            <tr><td>“所有形体都能同样做出来”</td><td>建筑和环带等规则结构能够落地，自然形态仍较粗糙。</td><td>角色、复杂雕塑、柔性结构等独立样本测试。</td></tr>
+            <tr><td>“模型能看，就能一次写对”</td><td>本次需要多轮渲染反馈与代码修正。</td><td>错误率、修复次数、任务难度与稳定性统计。</td></tr>
+            <tr><td>“网页显示成功，已能直接商用”</td><td>浏览器内可交互查看。</td><td>用途对应的质量、设备、可用性、内容和交付验收。</td></tr>
+            <tr><td>“静态水面意味着流体模拟完成”</td><td>有水面几何、材质与实时反射。</td><td>流动、碰撞、波动传播与物理参数。</td></tr>
+          </tbody></table></div>
+          <p>此外，这个项目没有建立工程精度、制造约束或实际结构安全验证。脚本中的尺度服务于画面布局，不能直接作为真实建筑、机械或生产图纸的依据。角色绑定、骨骼、复杂动画、游戏碰撞与导航也不在本次已完成范围内。</p>
+          <p>当前视觉差距主要来自造型、结构细节、材质与光照的选择。单纯提高渲染采样数，不能把规则分枝变成自然树形，也不能补出尚未建模的雕刻与云层。</p>
+          <p class="small">图像生成记录到了工具入口与输入输出，尚未形成用于跨模型评测的完整模型快照、全部提示历史和统一计费日志。本次可追溯的脚本、工程和输出，不能替代完整的模型能力基准。</p>
+        </section>
+
+        <section class="research-chapter" id="next" aria-labelledby="next-title">
+          <div class="chapter-number">12 / 后续验证</div><h2 id="next-title">下一步应增加证据，而不只增加展示效果。</h2>
+          <p>以下是待执行的实验方向，页面没有把它们记为已完成。</p>
+          <ol><li><strong>测试可控修改。</strong>提出“月门加大、桥改弧线、树向左移动”等明确要求，检查目标是否实现、其他结构是否受损，并保留修改前后机位一致的图像。</li><li><strong>换一组独立参考图。</strong>覆盖不同建筑、自然物体、尺度与风格，记录失败案例与迭代次数，避免只凭一个庭院判断通用性。</li><li><strong>对照不同生成路线。</strong>在同一输入、预算与验收规则下比较脚本建模、专用图生 3D 及传统制作；记录完整耗时、调用成本、整理时间和最终可用性。</li><li><strong>测量网页表现。</strong>在目标设备、浏览器、分辨率和典型机位上记录加载时间、帧时间、内存与反射成本，再决定减面、实例化、细节层级或贴图方案。</li><li><strong>加入一个有目的的交互。</strong>例如点击天球仪查看结构说明，或用庭院展示一组资料；用真实任务判断三维是否改善理解与操作。</li><li><strong>提高流程可重复性。</strong>把布局、尺寸和材质要求整理成明确参数，保存执行环境与版本，增加语义检查，观察能否降低修改与返工成本。</li></ol>
+          <div class="research-callout"><p>更有说服力的下一步，是验证一次需求变更、记录一次完整成本，或让一个真实任务在三维中完成。它们分别回答“可控吗”“划算吗”和“有用吗”。</p></div>
+        </section>
+
+        <section class="research-chapter" id="questions" aria-labelledby="questions-title">
+          <div class="chapter-number">13 / 常见问题</div><h2 id="questions-title">把讨论中的疑问逐个说清。</h2>
+          <div class="faq-toolbar"><p>18 个问题，可逐项阅读或全部展开。</p><button type="button" id="expand-questions" aria-expanded="false">展开全部问答</button></div>
+          <details class="research-faq"><summary>1. 本质是不是模型生成 3D 的能力？</summary><p>是技术核心的一部分。更准确地说，本次验证了模型通过视觉理解与编程使用三维软件的能力。保存、验证、导出与交互流程把它落实成可继续使用的资产；是否创造产品收益仍需另外证明。</p></details>
+          <details class="research-faq"><summary>2. 场景到底是模型做的，还是 Blender 做的？</summary><p>两者承担不同职责。模型规划并写建模代码，Blender 执行代码、建立三维结构并计算图像。描述创作与控制过程时，可以说模型通过 Blender 制作；描述几何与渲染执行时，Blender 是执行工具。</p></details>
+          <details class="research-faq"><summary>3. 这次是否调用了专门的图生 3D 服务？</summary><p>没有。本次先通过图像生成获得概念图，之后独立编写 Blender Python 来建模。没有把这张图提交给直接输出三维网格的专用模型。</p></details>
+          <details class="research-faq"><summary>4. Atlas 自己是不是训练出的三维生成模型？</summary><p>本次核对的公开内容是一套技能说明与辅助工具，其三维技能允许选择不同生成工具或代码路线。现有源码证据没有显示它本身提供三维生成权重，也不能用这一点反推原视频的全部制作过程。</p></details>
+          <details class="research-faq"><summary>5. 如果基础能力来自模型，Atlas 还有什么价值？</summary><p>把工具选择、资产规格、清理、验证和引擎接入写成可重复的工作流程，有工程价值。至于它能提升多少成功率或节省多少时间，本次没有对照实验，无法给出增益数字。</p></details>
+          <details class="research-faq"><summary>6. 当前用的是作者的示例工程吗？</summary><p>月门水庭由本次原创参考图出发独立构建。此前秋日庭院曾以原帖展示画面为参考，但也没有取得或执行作者的工程与脚本。两轮的来源和差别都保留在记录中。</p></details>
+          <details class="research-faq"><summary>7. 多角度图片会不会直接解决问题？</summary><p>多个一致的真实观测可以增加约束；由模型生成的多角度图还需要检查彼此一致性。两种情况不能混为一谈，几何、相机、遮挡与材质仍需处理。本次没有实施多视图重建。</p></details>
+          <details class="research-faq"><summary>8. 为什么从正面像，侧面可能仍有问题？</summary><p>参考图没有给出全部结构，本次的厚度、背面、连接和尺度有估计成分。真实几何保证这些部分可以从新机位计算，但不保证它们符合参考场景的真实结构或同等美术质量。</p></details>
+          <details class="research-faq"><summary>9. 网页里的旋转需要继续调用模型吗？</summary><p>不需要。模型已经导出为文件，浏览器载入后由相机和渲染器响应操作。当前查看器没有在每次拖动时调用语言模型、图像模型或三维生成服务。</p></details>
+          <details class="research-faq"><summary>10. 网页画面为什么与 Blender 渲染不同？</summary><p>几何来自同一工程，但程序材质、体积雾、灯光和成像设置没有原样搬到浏览器。网页以近似 PBR 材质、实时光照和反射进行展示，因此明暗、色温和细节存在差异。</p></details>
+          <details class="research-faq"><summary>11. 网页上能直接移动树、改桥或改门吗？</summary><p>当前界面提供相机查看与线框等操作，没有开放场景编辑。可以修改原 .blend 工程或建模脚本，再渲染和导出。网页模型已合并批次，逐物体编辑还需要额外组织与交互开发。</p></details>
+          <details class="research-faq"><summary>12. 这些水波、花朵和灯笼在动态模拟吗？</summary><p>没有物理模拟。水面反射会随相机变化，波纹是静态几何或着色扰动。花朵与灯笼保持静态，环绕视频只移动相机。</p></details>
+          <details class="research-faq"><summary>13. 能否直接放进游戏？</summary><p>GLB 可以作为继续集成的资产起点。当前没有完成特定游戏引擎的性能预算、碰撞、导航、角色动画和关卡逻辑验收，不能把网页载入成功直接等同于游戏量产完成。</p></details>
+          <details class="research-faq"><summary>14. 最终用途是否主要还是游戏？</summary><p>游戏适合使用三维场景，但镜头预演、空间方案、产品展示、教学、虚拟展览与任务界面也可探索。选择哪一种，应取决于三维是否帮助用户理解、选择或操作。</p></details>
+          <details class="research-faq"><summary>15. 已经证明比传统建模更快、更便宜了吗？</summary><p>没有。现有记录只覆盖部分单次脚本运行与渲染，没有完整的人力、模型调用、失败与整理成本，更没有同条件的人工制作对照。</p></details>
+          <details class="research-faq"><summary>16. 为什么不继续提高采样，让它更像参考图？</summary><p>采样主要改善渲染噪声。缺少自然枝形、雕刻、材质层次与合适构图时，需要修改场景和美术方案，单靠采样不能补足这些内容。</p></details>
+          <details class="research-faq"><summary>17. 保存后离开模型，结果还能继续使用吗？</summary><p>可以。Blender 工程可以重新打开并渲染，网页 GLB 可以继续载入查看。本次做过保存后重开与多视角渲染检查。后续编辑仍需要相应软件或新增界面。</p></details>
+          <details class="research-faq"><summary>18. 怎样才算这个研究真正更进一步？</summary><p>让一条新的明确修改要求稳定落地，记录完整过程成本，并在一个具体用途上验证收益。继续产出更漂亮的截图有展示意义，但不能代替可控性、稳定性与实际使用价值的证据。</p></details>
+        </section>
+
+        <section class="research-chapter" id="sources" aria-labelledby="sources-title">
+          <div class="chapter-number">14 / 来源与复现</div><h2 id="sources-title">结论可以回到源码、工程与检查记录。</h2>
+          <p>实验与交互实现完成于 2026-10-15；本页于 2026-10-16 汇总，并重新核对 Atlas 固定版本的公开说明。外部仓库的能力描述、我们的实际验证和后续推断，已在正文分别标明。</p>
+          <ol class="source-list">
+            <li id="source-post"><span class="source-id">UP-01</span><a href="https://x.com/xikhar/status/2110143242591510835" target="_blank" rel="noreferrer">Shikhar 原帖</a><small>研究起点；原视频工程、完整提示词和逐步制作链路未取得。</small></li>
+            <li id="source-atlas"><span class="source-id">UP-02</span><a href="https://github.com/xikhar/atlas/blob/b283a80dcb6db9068ba368fedfca783f5164ba06/README.md" target="_blank" rel="noreferrer">Atlas README · 固定版本</a><small>用途、技能构成与可替换生成工具的工作流定位。固定 commit：b283a80dcb6db9068ba368fedfca783f5164ba06。</small></li>
+            <li id="source-model3d"><span class="source-id">UP-03</span><a href="https://github.com/xikhar/atlas/blob/b283a80dcb6db9068ba368fedfca783f5164ba06/skills/3d/model3d-gen/SKILL.md" target="_blank" rel="noreferrer">model3d-gen · 三维资产流程</a><small>第 32—39 行列出生成工具、DCC 脚本与程序几何；其余章节描述规格、清理、检查和视觉复核。</small></li>
+            <li id="source-core"><span class="source-id">UP-04</span><a href="https://github.com/xikhar/atlas/blob/b283a80dcb6db9068ba368fedfca783f5164ba06/skills/core/asset-core/SKILL.md" target="_blank" rel="noreferrer">asset-core · 通用资产纪律</a><small>交付约定、机械检查、视觉验证与缺陷记录。</small></li>
+            <li id="source-pipeline"><span class="source-id">UP-05</span><a href="https://github.com/xikhar/atlas/blob/b283a80dcb6db9068ba368fedfca783f5164ba06/skills/engines/threejs-pipeline/SKILL.md" target="_blank" rel="noreferrer">threejs-pipeline · 引擎接入流程</a><small>加载、光照、压缩和运行场景中的检查。上游质量目标与本实验已经达到的程度分别理解。</small></li>
+            <li><span class="source-id">OUR-01</span><a href="downloads/image-prompt.txt" download>原创图像完整提示词</a> · <a href="downloads/provenance.json" download>生成与代码来源记录</a><small>原始图像没有图片输入；生成图像哈希与工程记录可核对。</small></li>
+            <li><span class="source-id">OUR-02</span><a href="downloads/build_moonwater.py" download>Blender 场景生成脚本</a> · <a href="downloads/geometry.py" download>基础几何函数</a> · <a href="downloads/moonwater.blend" download>可编辑工程</a><small>本项目独立编写，基础网格函数复用自己的前一轮代码。</small></li>
+            <li><span class="source-id">OUR-03</span><a href="downloads/render-stats.json" download>渲染记录</a> · <a href="downloads/scene-checks.json" download>工程检查</a> · <a href="downloads/review_and_animate.py" download>重开与环绕脚本</a><small>设备、分辨率、几何数量、图片依赖检查和实际环绕源帧。</small></li>
+            <li><span class="source-id">OUR-04</span><a href="downloads/export_web.py" download>网页导出脚本</a> · <a href="assets/web-export.json" download>导出记录</a> · <a href="assets/moonwater-web.glb" download>网页 GLB</a> · <a href="downloads/check_web.py" download>资产检查脚本</a><small>记录源工程与输出哈希、合并节点、三角形、压缩设置和省略项目。</small></li>
+            <li><span class="source-id">OUR-05</span><a href="viewer.js" download>网页实时查看器源码</a> · <a href="vendor/manifest.json" download>依赖固定版本与哈希</a> · <a href="vendor/LICENSE">Three.js MIT 许可证</a> · <a href="vendor/DRACO-LICENSE">Draco Apache-2.0 许可证</a><small>Three.js 0.186.1 与随包 Draco 文件均随项目保存，运行所需脚本与模型不依赖 CDN。</small></li>
+          </ol>
+          <details class="technical-note"><summary>展开复现步骤与文件哈希</summary><p>完整目录说明见 <a href="downloads/README.md" download>实验运行文档</a> 与 <a href="downloads/WEB_README.md" download>网页构建文档</a>。以下命令从仓库根目录执行，并按本机位置修改 Blender 路径；复制单个脚本时仍需保持配套目录与文件。</p><pre><code># 重新构建并渲染原场景（会更新本项目对应输出）
+&amp; 'D:\codex\tools\blender-4.5.9-windows-x64\blender.exe' --background --python projects/007-autumn-courtyard-blender/original-scene/scripts/build_moonwater.py -- --quality final
+
+# 从已有工程导出网页三维模型
+&amp; 'D:\codex\tools\blender-4.5.9-windows-x64\blender.exe' --background --python projects/007-autumn-courtyard-blender/original-scene/scripts/export_web.py
+
+# 打包研究网页与素材（需要 Pillow）
+python projects/007-autumn-courtyard-blender/scripts/build_web.py
+
+# 检查几何统计、来源、哈希与浏览器依赖
+python projects/007-autumn-courtyard-blender/scripts/check_web.py</code></pre><p class="small">参考图 SHA-256：<code>7ad1706413e605ba84424746347abceae494834c319566a4e419c7d3aef42188</code></p><p class="small">源工程 SHA-256：<code>4fd572c930249255f143bbdf545a58664ea4c9a08479e50c2248258e6d8e86bf</code></p><p class="small">网页 GLB SHA-256：<code>be2da6220c284937f2b668417c35aed34e68d03cc0f08817622555800b99e917</code></p><p>重新执行生成器或使用不同软件版本后，输出哈希可能变化。以上值对应本次已经保存并验证的资产，后续应按新的实际输出更新记录。</p></details>
+          <div class="research-ending"><p>我们已经看到：视觉意图能通过模型与代码落成三维结构。接下来要验证的，是它能否可控、稳定，并在具体任务里带来收益。</p><a href="index.html#scene">回到月门水庭，亲自旋转查看 ↗</a></div>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">◒</span><span>月门水庭<small>模型的 3D 生成实验</small></span></a><p>完整研究更新：2026.10.16<br>实验、网页交互与原始数据：2026.10.15</p><a href="#top">回到页首 ↑</a></footer>
+</body>
+</html>

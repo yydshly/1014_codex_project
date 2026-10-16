@@ -15,6 +15,7 @@
 | 编号 | 项目 | 摘要 | 状态 | 研究记录 | 来源链接 | Web 演示 |
 | --- | --- | --- | --- | --- | --- | --- |
 | 006 | [随机门：源库原理、偶遇体验与作品馆](projects/006-random-doors/README.md) | Four-Seasons 以固定种子和季节参数驱动三维场景；我们探索六场景随机遇见、参与与手记回访，让已有作品重新被发现，并延伸作品馆、故事回响等方向。 | 研究中 | [研究笔记](projects/006-random-doors/RESEARCH.md) | [原帖](https://x.com/techartist_/status/2109737086601556195) | [演示](https://yydshly.github.io/1014_codex_project/006-random-doors/research.html) |
+| 007 | [Atlas：模型驱动的资产工作流与月门水庭实证](projects/007-autumn-courtyard-blender/README.md) | Atlas 以技能规范和辅助脚本组织 2D/3D 资产生成、验证与引擎接入，底层依赖模型和建模工具；价值在可编辑资产与可重复交付。以月门水庭验证 Blender 脚本路线，探索展陈、教学、产品展示和游戏，流程增益仍待评测。 | 研究中 | [研究笔记](projects/007-autumn-courtyard-blender/RESEARCH.md) | [原帖](https://x.com/xikhar/status/2110143242591510835) | — |
 | 014 | [赛博小雅：真人拟人化效果与模型依赖研究](projects/014-cyber-xiaoya-study/README.md) | 真人互动角色研究：识别、语言、声音与视觉模型提供听想说动，工程负责同步和打断；价值在在场感，扩展到陪练、讲解、直播与角色记忆。原作源码及完整闭环待核验。 | 研究中 | [研究笔记](projects/014-cyber-xiaoya-study/RESEARCH.md) | [原帖](https://x.com/huoshan007/status/2109919568617484522) | [演示](https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/) |
 
 ### 项目配图
@@ -26,6 +27,14 @@
 006 我们整理的完整理解总览图：原作与独立源码参考、能力原理、实际效果、三类体验、价值及扩展方向。
 
 [查看项目](projects/006-random-doors/README.md)
+
+#### 007 · Atlas：模型驱动的资产工作流与月门水庭实证
+
+![007 月门水庭实际网页：同一 Blender 场景可拖动旋转、缩放与切换机位，支持线框和水面实时反射。](projects/007-autumn-courtyard-blender/web/screenshots/interactive-hero.jpg)
+
+007 月门水庭实际网页：同一 Blender 场景可拖动旋转、缩放与切换机位，支持线框和水面实时反射。
+
+[查看项目](projects/007-autumn-courtyard-blender/README.md)
 
 #### 014 · 赛博小雅：真人拟人化效果与模型依赖研究
 

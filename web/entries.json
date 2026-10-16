@@ -14,6 +14,20 @@
         "label": "3D 候车亭",
         "path": "006-random-doors/seaside.html"
       }
+    ],
+    "007": [
+      {
+        "label": "能力与价值一图总览",
+        "path": "007-autumn-courtyard-blender/overview.html"
+      },
+      {
+        "label": "完整研究",
+        "path": "007-autumn-courtyard-blender/research.html"
+      },
+      {
+        "label": "真实 3D 场景",
+        "path": "007-autumn-courtyard-blender/#scene"
+      }
     ]
   }
 }

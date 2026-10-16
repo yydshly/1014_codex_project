@@ -11,11 +11,12 @@
 
 ## 构建
 
-需要 Node.js 22 和 Python 3.12。014 不需要安装第三方包、配置密钥或下载模型；006 由项目构建器按锁文件安装 Vite 和 Three.js，页面不调用外部模型。
+需要 Node.js 22 和 Python 3.12。014 不需要安装第三方包、配置密钥或下载模型；006 由项目构建器按锁文件安装 Vite 和 Three.js；007 用 Pillow 11.3.0 打包已有媒体并校验源工程、GLB 与依赖，部署无需 Blender、GPU 或模型调用。
 
 ```sh
 python scripts/project_catalog.py sync
 python scripts/project_catalog.py check
+python -m pip install -r projects/007-autumn-courtyard-blender/requirements-web.txt
 node scripts/build_pages.mjs
 ```
 
@@ -40,3 +41,9 @@ node scripts/build_pages.mjs
 在 `projects/006-random-doors/web/` 执行 `node build.mjs`，按锁文件安装缺失依赖，执行检查与 29 项行为测试，再构建三入口。`prepare-assets.mjs` 在构建前复制已登记的参考图和高清总览图。站点构建器完整发布清单中的所有项目，并按 `web/entries.json` 登记多个入口。原作视频与图片保留作者、出处和校验记录；页面不含后端、账号、密钥或运行时模型调用，手记保存在当前浏览器。
 
 006 于 2026-10-16 通过现有 Actions 成功部署，公网研究页、三处体验入口、参考图、高清 PNG/SVG、原作视频分段请求及现有 014 均验证成功。浏览器确认摘要与交互可用，手机无横向页面溢出。验证详情见 [006 部署记录](../projects/006-random-doors/deployment.json)。
+
+## 007 Atlas 资产工作流研究与月门水庭实证
+
+发布 `007-autumn-courtyard-blender/research.html` 完整研究、`overview.html` 高清一图总览，以及 `index.html#scene` 真实三维。摘要先解释 Atlas 的源库能力、依赖模型与工具的工作原理、可编辑交付的价值，再说明非游戏用途、可扩展方向和证据范围。月门水庭为独立实验，没有完整执行 Atlas 技能包，不能据此宣称源库带来确定增益。
+
+项目 `web/build.mjs` 调用 `scripts/build_web.py` 与 `check_web.py`。Three.js 和 Draco 原文件、许可证与哈希随项目保存，网页不依赖 CDN。Python 构建使用已有图片、视频、Blender 工程与 GLB；不重新生成图像、三维或总览图。原始代码、来源、工程下载和检查记录一并发布。部署与公网验证记录见项目根的 `deployment.json`，验证后才登记 `demo_url`。

@@ -1,0 +1,26 @@
+{
+  "saved_blend": "artifacts\\autumn-courtyard.blend",
+  "blender": "4.5.9 LTS",
+  "objects": 1370,
+  "meshes": 1367,
+  "materials": 28,
+  "external_image_files": [],
+  "non_finite_meshes": [],
+  "inverted_cuboids": [],
+  "asset_counts": {
+    "tree_leaves": 64260,
+    "ground_leaves": 37955,
+    "drifting_leaves": 115
+  },
+  "camera_animation_frames": [
+    1,
+    120
+  ],
+  "reference_is_background_image": false,
+  "checks_passed": true,
+  "device": "OPTIX",
+  "devices": [
+    "NVIDIA GeForce RTX 4070 Laptop GPU"
+  ],
+  "overview_render_seconds": 10.79
+}

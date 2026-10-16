@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-15",
+  "platform": "Windows x64",
+  "blender_version": "4.5.9 LTS",
+  "blender_build_hash": "8bf95cbd38d1",
+  "blender_archive_url": "https://download.blender.org/release/Blender4.5/blender-4.5.9-windows-x64.zip",
+  "blender_checksum_url": "https://download.blender.org/release/Blender4.5/blender-4.5.9.sha256",
+  "blender_archive_sha256": "41da973b9bf95bb312cbeff4d1982feb13259b43c821686b9bafea4dfe5477cf",
+  "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "renderer": "Cycles",
+  "backend": "OPTIX",
+  "seed": 211014,
+  "external_scene_assets": [],
+  "workflow_reference": {
+    "repository": "https://github.com/xikhar/atlas",
+    "commit": "b283a80dcb6db9068ba368fedfca783f5164ba06",
+    "license": "MIT",
+    "code_copied": false
+  },
+  "visual_reference": {
+    "url": "https://x.com/xikhar/status/2110143242591510835",
+    "type": "Public video thumbnail, not the author's original concept image",
+    "license": "Unconfirmed",
+    "bundled": false
+  }
+}

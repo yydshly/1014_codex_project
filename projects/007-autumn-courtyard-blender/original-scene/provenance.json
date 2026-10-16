@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-15",
+  "experiment": "Original concept image to editable Blender scene",
+  "image_generation": {
+    "tool": "built-in image_gen",
+    "mode": "generate",
+    "input_images": [],
+    "prompt": "image-prompt.txt",
+    "output": "assets/concept.png",
+    "sha256": "7ad1706413e605ba84424746347abceae494834c319566a4e419c7d3aef42188"
+  },
+  "blender": {
+    "version": "4.5.9 LTS",
+    "build_hash": "8bf95cbd38d1",
+    "renderer": "Cycles",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "backend": "OPTIX",
+    "seed": 151026,
+    "script": "scripts/build_moonwater.py",
+    "saved_scene": "artifacts/moonwater.blend",
+    "external_meshes": [],
+    "external_textures": [],
+    "reference_projected_or_textured": false
+  },
+  "code_sources": {
+    "geometry_helpers": "Reused basic mesh functions from our own preceding experiment",
+    "scene_code": "Newly written for this generated concept",
+    "upstream_scene_or_assets_used": false
+  },
+  "demo": {
+    "camera_motion": "24 actual Blender-rendered orbit frames",
+    "water_and_flowers_animated": false
+  },
+  "web_viewer": {
+    "geometry": "artifacts/moonwater-web.glb",
+    "export_script": "scripts/export_web.py",
+    "export_record": "assets/web-export.json",
+    "source": "Same saved moonwater.blend, unchanged SHA-256",
+    "renderer": "Three.js 0.186.1, vendored MIT package; bundled Draco Apache-2.0",
+    "interaction": [
+      "orbit",
+      "zoom",
+      "pan",
+      "camera presets",
+      "wireframe",
+      "fullscreen"
+    ],
+    "reference_projected_or_textured": false,
+    "material_conversion": "Approximate PBR; real-time lighting and pool reflection, static ripple distortion"
+  }
+}

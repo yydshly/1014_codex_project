@@ -1,0 +1,15 @@
+{
+  "video": "demo.mp4",
+  "duration_seconds": 5.0,
+  "source_frames": 60,
+  "resolution": [
+    960,
+    540
+  ],
+  "encoded_fps": 24,
+  "encoded_frames": 120,
+  "duration_verified": true,
+  "motion_is_camera_orbit": true,
+  "water_and_flowers_are_static": true,
+  "comparison": "comparison.jpg"
+}

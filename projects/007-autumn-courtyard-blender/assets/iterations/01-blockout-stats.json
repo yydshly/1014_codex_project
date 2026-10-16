@@ -1,0 +1,30 @@
+{
+  "blender": "4.5.9 LTS",
+  "seed": 211014,
+  "quality": "preview",
+  "view": "hero",
+  "device": "OPTIX",
+  "devices": [
+    "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "NVIDIA GeForce RTX 4070 Laptop GPU"
+  ],
+  "objects": 1122,
+  "mesh_objects": 1119,
+  "mesh_vertices": 860773,
+  "mesh_polygons": 793087,
+  "counts": {
+    "tree_leaves": 29160,
+    "ground_leaves": 22932,
+    "drifting_leaves": 115
+  },
+  "resolution": [
+    960,
+    540
+  ],
+  "samples_max": 24,
+  "build_seconds": 6.46,
+  "external_assets": [],
+  "reference_rendered_as_background": false,
+  "render_seconds": 6.42,
+  "total_seconds": 12.89
+}

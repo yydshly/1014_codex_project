@@ -14,6 +14,18 @@
       "source_url": "https://x.com/techartist_/status/2109737086601556195"
     },
     {
+      "id": "007",
+      "slug": "autumn-courtyard-blender",
+      "title": "Atlas：模型驱动的资产工作流与月门水庭实证",
+      "repository": "https://github.com/xikhar/atlas",
+      "summary": "Atlas 以技能规范和辅助脚本组织 2D/3D 资产生成、验证与引擎接入，底层依赖模型和建模工具；价值在可编辑资产与可重复交付。以月门水庭验证 Blender 脚本路线，探索展陈、教学、产品展示和游戏，流程增益仍待评测。",
+      "status": "研究中",
+      "preview": "web/screenshots/interactive-hero.jpg",
+      "preview_caption": "007 月门水庭实际网页：同一 Blender 场景可拖动旋转、缩放与切换机位，支持线框和水面实时反射。",
+      "demo_url": null,
+      "source_url": "https://x.com/xikhar/status/2110143242591510835"
+    },
+    {
       "id": "014",
       "slug": "cyber-xiaoya-study",
       "title": "赛博小雅：真人拟人化效果与模型依赖研究",
