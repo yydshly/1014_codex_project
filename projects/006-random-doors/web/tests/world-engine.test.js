@@ -14,12 +14,12 @@ test('reentering one world keeps its seed, changes identity, and preserves the o
   assert.deepEqual(j.data.visits.find(v=>v.uid===old.uid),old);assert.notEqual(old.uid,b.uid);
 });
 test('refresh restores the active identity, exact progress and pending random door',()=>{
-  const j=new WorldJourney(null,seeded(5));j.prepare('train');j.enter();j.act({type:'car',car:3});
+  const j=new WorldJourney(null,seeded(5));j.prepare('train');j.enter();j.act({type:'awake'});j.act({type:'travel',route:'walk'});
   let restored=new WorldJourney(j.serialize(),()=>{throw new Error('should not redraw on refresh');});
   assert.equal(restored.data.phase,'inside');assert.deepEqual(restored.current,j.current);
   j.prepare('museum');const pending=structuredClone(j.data.pending);j.revisit(j.data.visits[0].uid);
   restored=new WorldJourney(j.serialize(),()=>{throw new Error('should keep pending door');});
-  assert.deepEqual(restored.data.pending,pending);assert.equal(restored.current.state.car,3);
+  assert.deepEqual(restored.data.pending,pending);assert.equal(restored.current.state.car,2);
 });
 test('all role/world combinations are compatible; malformed saves are sanitized',()=>{
   assert.throws(()=>createVisit('museum',1,'god'));
@@ -56,15 +56,6 @@ test('museum identity changes actual movement; blocked jumps do not consume a ch
 test('actions are deterministic; waiting advances a visible patrol without fresh randomness',()=>{
   const v=createVisit('museum',18,'hush');assert.deepEqual(reduceVisit(v,{type:'move',dx:1,dy:0}),reduceVisit(v,{type:'move',dx:1,dy:0}));
   const moved=reduceVisit(v,{type:'wait'});assert.equal(moved.state.turn,1);assert.equal(v.state.turn,0);
-});
-test('all train identities can find and return every variant, using different access points',()=>{
-  for(let seed=0;seed<35;seed++)for(const role of WORLDS.train.roles){
-    let v=createVisit('train',seed,role);const c=configFor(v),needed={cat:3,conductor:0,passenger:1}[role];
-    v=reduceVisit(v,{type:'car',car:(needed+1)%4});v=reduceVisit(v,{type:'inspect'});assert.equal(v.state.clue,false);
-    v=reduceVisit(v,{type:'car',car:needed});v=reduceVisit(v,{type:'inspect'});assert.ok(v.state.clue);
-    const wrong=(c.owner+1)%3;v=reduceVisit(v,{type:'car',car:c.order.indexOf(wrong)+1});v=reduceVisit(v,{type:'talk',person:PEOPLE[wrong].id});v=reduceVisit(v,{type:'deliver'});assert.equal(v.state.done,false);
-    v=reduceVisit(v,{type:'car',car:c.order.indexOf(c.owner)+1});v=reduceVisit(v,{type:'talk',person:PEOPLE[c.owner].id});v=reduceVisit(v,{type:'deliver'});assert.ok(missionComplete(v));
-  }
 });
 test('creator goals always match identity permissions; every goal has an observable solution',()=>{
   for(let seed=0;seed<35;seed++)for(const role of WORLDS.genesis.roles){

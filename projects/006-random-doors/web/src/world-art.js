@@ -1,4 +1,4 @@
-import { MUSEUM_BLOCKS, PEOPLE, guardAt, genesisOutcome, configFor } from './world-engine.js';
+import { MUSEUM_BLOCKS, guardAt, genesisOutcome, configFor } from './world-engine.js';
 const same=(a,b)=>a[0]===b[0]&&a[1]===b[1];
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const stars=(n=55)=>Array.from({length:n},(_,i)=>`<circle cx="${(i*137+33)%1000}" cy="${(i*71+17)%460}" r="${i%6===0?1.7:.8}" opacity="${.2+(i%5)/8}"/>`).join('');
@@ -19,19 +19,6 @@ export function museumArt(v){
     </button>`;
   }).join('');
   return `<div class="museum-room ${c.weather}" data-scene="museum"><div class="room-wall"><span>THE SEVENTH GALLERY</span><i></i><i></i><i></i></div><div class="museum-grid" aria-label="展厅地面，可点击相邻地砖移动">${tiles}</div><div class="map-legend"><span><i class="legend-dot mint"></i>你留下的轮廓</span><span><i class="legend-dot amber"></i>守卫</span><span>虚线格：守卫下一步</span></div></div>`;
-}
-export function trainArt(v){
-  const c=configFor(v),s=v.state,index=c.order[s.car-1],p=PEOPLE[index];
-  return `<div class="train-world" data-scene="train"><svg viewBox="0 0 1000 620" role="img" aria-label="星空中的夜行列车，当前位于${['驾驶室','休息车','观景车','行李车'][s.car]}">
-    <defs><linearGradient id="train-sky" x2="0" y2="1"><stop stop-color="#101d33"/><stop offset="1" stop-color="#344256"/></linearGradient><radialGradient id="window-light"><stop stop-color="#ebc68b" stop-opacity=".65"/><stop offset="1" stop-color="#e9c88f" stop-opacity="0"/></radialGradient><linearGradient id="car-body" x2="0" y2="1"><stop stop-color="#334b54"/><stop offset="1" stop-color="#152b36"/></linearGradient></defs>
-    <rect width="1000" height="620" fill="url(#train-sky)"/><g fill="#e4dbba">${stars()}</g><circle cx="800" cy="108" r="36" fill="#dfd7b2" opacity=".7"/><circle cx="813" cy="96" r="36" fill="#132239"/>
-    ${c.sky==='aurora'?'<path d="M0 190Q300 0 530 170T1000 130" fill="none" stroke="#7badac" stroke-width="65" opacity=".12"/>':c.sky==='meteor'?'<path d="M290 55L460 150" stroke="#d1d9c4" opacity=".5"/>':''}
-    <path d="M0 350L110 260 220 325 390 220 570 340 750 230 1000 340V620H0Z" fill="#12252e"/><path d="M0 405Q300 330 540 403T1000 375V620H0" fill="#0d2029"/>
-    <g transform="translate(64 330)"><path d="M0 170H875M0 185H875" stroke="#6b7978" stroke-width="3"/>
-      ${[0,1,2,3].map((car)=>`<g class="drawn-car ${car===s.car?'active':''}" transform="translate(${car*220} 0)"><rect x="3" y="10" width="204" height="137" rx="12" fill="url(#car-body)" stroke="${car===s.car?'#e5b77b':'#5c7477'}" stroke-width="${car===s.car?2:1}"/><path d="M9 111H200" stroke="#c6a66f" opacity=".7"/><rect x="20" y="33" width="164" height="62" rx="5" fill="#d2b680" opacity="${car===s.car?.85:.3}"/><path d="M72 33V95M130 33V95" stroke="#213e48" stroke-width="6"/><circle cx="43" cy="147" r="17" fill="#0c1b25" stroke="#5b6b6e" stroke-width="4"/><circle cx="167" cy="147" r="17" fill="#0c1b25" stroke="#5b6b6e" stroke-width="4"/><text x="103" y="-8" fill="${car===s.car?'#edd7ae':'#869c9c'}" text-anchor="middle" font-size="16">${['驾驶室','休息车','观景车','行李车'][car]}</text></g>`).join('')}
-    </g><ellipse cx="${165+s.car*220}" cy="420" rx="150" ry="130" fill="url(#window-light)"/>
-    <g fill="#c5bd9f" opacity=".16">${Array.from({length:18},(_,i)=>`<path d="M${i*65} 557h34" stroke="#c5bd9f" stroke-width="2"/>`).join('')}</g>
-  </svg><div class="car-vignette"><p>${['驾驶室 · 一册摊开的失物登记','休息车 · 镜子映着过去','观景车 · 下一站尚未到来','行李车 · 箱子里藏着气味'][s.car]}</p><span>${s.car===0?'⌘':p?.emblem==='灯塔'?'♜':p?.emblem==='鲸鱼'?'◒':'❧'}</span><h3>${s.car===0?'一盏灯，一本名册。':escape(p.name)}</h3><p>${s.car===0?'钥匙只回应列车长。':s.done?'窗边的人向你挥手。':v.role==='cat'?`你闻见了${p.scent}的味道。`:`衣襟上别着一枚${p.emblem}徽记。`}</p></div></div>`;
 }
 function island(x,y,scale,kind,outcome){
   const green=outcome.forest?'#86bfa3':'#738d91',light=outcome.water?'#edce8b':'#7f878d';

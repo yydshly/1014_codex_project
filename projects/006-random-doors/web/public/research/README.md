@@ -38,3 +38,8 @@
 ## 0.8 世界与身份实际画面
 
 `world-museum.jpg`、`world-train.jpg`、`world-genesis.jpg` 于 2026-10-16 使用浏览器截取新原型的实际页面，分别展示隐身任务、猫的失物线索和创世法则结果，随研究页发布。图中场景为本项目原创 HTML/CSS/SVG，门前沿用已登记的 ImageGen 原画；截图不代表 Three.js 源库已经提供这些玩法。保留完整页面截图，不以概念图冒充实际运行效果。
+
+
+## 0.9 列车第一人称实际画面
+
+`train-v09-cat.jpg`、`train-v09-conductor.jpg`、`train-v09-passenger.jpg` 为 2026-10-17 本地浏览器的实际互动截图，分别展示低机位与前爪、站姿制服钥匙、坐姿与车票。原画由内置 ImageGen 制作，场景触碰点、通路、权限与结果由本项目独立交互层实现；[最终提示词与来源登记](../../../assets/train-art-v09.json) 保留生成源文件、哈希与编辑参考关系。原 `world-train.jpg` 保留为 0.8 历史效果。

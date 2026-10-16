@@ -1,6 +1,6 @@
 {
   "name": "research-006-random-doors",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -12,7 +12,7 @@
     "dev": "vite --host 127.0.0.1 --port 4178 --strictPort",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1 --port 4178 --strictPort",
-    "check": "node --check src/research.js && node --check src/doors.js && node --check src/scene-art.js && node --check src/encounters.js && node --check src/variations.js && node --check src/encounter-views.js && node --check src/main.js && node --check src/scene.js && node --check src/shaders.js && node --check src/experience.js && node --check src/audio.js && node --check src/view.js && node --check src/world-engine.js && node --check src/world-art.js && node --check src/worlds.js",
+    "check": "node --check src/research.js && node --check src/doors.js && node --check src/scene-art.js && node --check src/encounters.js && node --check src/variations.js && node --check src/encounter-views.js && node --check src/main.js && node --check src/scene.js && node --check src/shaders.js && node --check src/experience.js && node --check src/audio.js && node --check src/view.js && node --check src/world-engine.js && node --check src/world-art.js && node --check src/worlds.js && node --check src/train-engine.js && node --check src/train-view.js && node --check src/train-audio.js",
     "test": "node --test tests/*.test.js"
   },
   "dependencies": {

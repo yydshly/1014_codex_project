@@ -1,0 +1,100 @@
+{
+  "version": "0.9.0",
+  "created_on": "2026-10-17",
+  "generator": "built-in ImageGen",
+  "use": "first-person night train scenes; images created at authoring time, runtime interactions separate",
+  "assets": [
+    {
+      "id": "cat-aisle",
+      "prompt": "Use case: immersive first-person exploration game background, one complete landscape image, 1536x1024. A single coherent 1930s night train: bottle-green leather seats, honey-coloured varnished walnut, aged brass fittings and warm small tungsten lamps; rain-streaked windows show a deep blue mountain night. High-end hand-painted cinematic realism, tactile material detail, quiet mysterious magical realism, warm amber versus midnight petrol-blue, delicate film grain, believable spatial perspective. This is game environment art, not a screenshot or interface: no text, letters, labels, numbers, logos, watermark, UI, panels, split screen or collage. Leave upper 15 percent and lower 18 percent comparatively calm for game UI overlay. Camera: actual cat eye level, 15 cm above wooden aisle floor, strong sense that seats and human legs tower overhead. First-person cat POV looking down the long passenger aisle, vanishing point at 56% width, seat cushions mostly above eye line. Two small ginger front paws enter the very bottom corners, unmistakably the player's own paws, no visible separate cat. Nearby green seat underside at left has a clearly open crawlable dark gap at 27% width, 62% height. Passengers visible only as trouser legs, shoes and draped coats; their faces outside the frame. Small suitcase and a brass latch near floor on right; one distant connecting door ahead. Pools of warm lamplight sweep the shiny floor. Intimate, small animal scale, never a standing adult view.",
+      "source": "D:\\codex\\home\\generated_images\\01a138cb-74d6-7cc1-a284-bfe1058d63f3\\exec-f450a035-3864-488d-bd44-92fb09cd7d27.png",
+      "file": "web/public/art/train-v09/cat-aisle.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 269230,
+      "sha256": "f7e259700c28e43f59c3e93483a673d7253e0113008efe11dfc8f1be1f7316bc",
+      "source_sha256": "34c363e09a5552f48bcc018f43a2f2c43c45789872f6322abe29b7ffe79403ac"
+    },
+    {
+      "id": "cat-nook",
+      "prompt": "Use case: immersive first-person exploration game background, one complete landscape image, 1536x1024. A single coherent 1930s night train: bottle-green leather seats, honey-coloured varnished walnut, aged brass fittings and warm small tungsten lamps; rain-streaked windows show a deep blue mountain night. High-end hand-painted cinematic realism, tactile material detail, quiet mysterious magical realism, warm amber versus midnight petrol-blue, delicate film grain, believable spatial perspective. This is game environment art, not a screenshot or interface: no text, letters, labels, numbers, logos, watermark, UI, panels, split screen or collage. Leave upper 15 percent and lower 18 percent comparatively calm for game UI overlay. Camera: first-person cat crouched INSIDE the cramped space beneath green train seats and beside old luggage, at 12 cm eye height. Two tiny ginger paws visible along bottom edge. The underside of a seat arches across upper half like a low ceiling; giant cast-iron chair legs left and right; leather suitcase close to right. A small unmarked blue envelope and a simple brass bell sit together in dusty floor lamplight at 52% width 62% height, object identity will be clarified by runtime overlays. A believable narrow ventilation/service passage leads onward at upper-right 78% width 40% height, sufficient for a cat only. A warm slice of light from public aisle behind left. Small-animal scale, lived-in secret place, dust, narrowness, tactile wood and leather. No other cat.",
+      "source": "D:\\codex\\home\\generated_images\\01a138cb-74d6-7cc1-a284-bfe1058d63f3\\exec-0fcb0b2a-8161-4b1e-81c8-67838f7e4b9a.png",
+      "file": "web/public/art/train-v09/cat-nook.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 214022,
+      "sha256": "2d891699d974aedb0debb14b823fcda1f21e0e71f0a8735afe42c378348c88a8",
+      "source_sha256": "44fde41a0950afa77c8a71671f9793ca2fd4de03e5b9d143600bb94c96504740"
+    },
+    {
+      "id": "conductor-aisle",
+      "prompt": "Use case: immersive first-person exploration game background, one complete landscape image, 1536x1024. A single coherent 1930s night train: bottle-green leather seats, honey-coloured varnished walnut, aged brass fittings and warm small tungsten lamps; rain-streaked windows show a deep blue mountain night. High-end hand-painted cinematic realism, tactile material detail, quiet mysterious magical realism, warm amber versus midnight petrol-blue, delicate film grain, believable spatial perspective. This is game environment art, not a screenshot or interface: no text, letters, labels, numbers, logos, watermark, UI, panels, split screen or collage. Leave upper 15 percent and lower 18 percent comparatively calm for game UI overlay. Camera: first-person adult conductor standing in the SAME passenger carriage at 168 cm eye level, looking straight along the aisle, architectural walnut framing and ceiling fully visible. Bottom-left foreground: player's own navy uniform sleeve with two subtle gold cuff bands, one natural adult hand loosely holding a small ring of brass keys. Human passengers sitting at sides seen from rear or in soft silhouette without detailed faces. A closed walnut-and-brass staff door is clearly visible ahead at 56% width 40% height, a keyhole at 61% width 55% height. Beautiful green leather seat backs, luggage racks up high, overhead lamps, large rain-streaked windows right. Sense of responsibility, authority, adult scale, warm reflection on brass. Keys remain unobtrusive lower foreground.",
+      "source": "D:\\codex\\home\\generated_images\\01a138cb-74d6-7cc1-a284-bfe1058d63f3\\exec-1576bada-cefe-4afe-84c8-43be42fd6aa6.png",
+      "file": "web/public/art/train-v09/conductor-aisle.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 318868,
+      "sha256": "3e64f5815b7273a8a7538ed9cf96a243bb9063c72e8bf8936b9468a5a090c32e",
+      "source_sha256": "f4d8ba814a115ba029a0940588d8ddb1f857a9be86a9f3a62c0b6aeda42ffe50"
+    },
+    {
+      "id": "conductor-cab",
+      "prompt": "Use case: immersive first-person exploration game background, one complete landscape image, 1536x1024. A single coherent 1930s night train: bottle-green leather seats, honey-coloured varnished walnut, aged brass fittings and warm small tungsten lamps; rain-streaked windows show a deep blue mountain night. High-end hand-painted cinematic realism, tactile material detail, quiet mysterious magical realism, warm amber versus midnight petrol-blue, delicate film grain, believable spatial perspective. This is game environment art, not a screenshot or interface: no text, letters, labels, numbers, logos, watermark, UI, panels, split screen or collage. Leave upper 15 percent and lower 18 percent comparatively calm for game UI overlay. Camera: first-person train conductor standing INSIDE an intimate wooden control cab at 168 cm eye level. Through a wide front windscreen, two rails vanish into misty blue midnight mountains; rainy glass and distant soft signal lights. A beautifully detailed old brass-and-dark-green control desk occupies lower half; analog round gauges with blank or illegible faces, a substantial brass door lever on lower right at 77% width 72% height, small glowing indicator lamps. On lower-left desk lies an open cream paper ledger with blank softly textured pages at 30% width 70% height. Player's own navy uniform sleeve and a single adult hand lightly resting near lever at bottom-right. One access doorframe at far left. Warm tungsten desk light versus cold outside. Real mechanism and tactile craft, no modern computer screens, no readable writing.",
+      "source": "D:\\codex\\home\\generated_images\\01a138cb-74d6-7cc1-a284-bfe1058d63f3\\exec-148a2fe4-77d2-4e42-b5be-3ef483625903.png",
+      "file": "web/public/art/train-v09/conductor-cab.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 264918,
+      "sha256": "a0168a63bf6ad9527e2e45b3374a63a506c29530eff1750227b05d5feb0332e4",
+      "source_sha256": "30fcd43a24cd0d2c90e7e0aa1f61962ec16acde47b156bb909a51fee86f01b09"
+    },
+    {
+      "id": "passenger-seat",
+      "prompt": "Use case: immersive first-person exploration game background, one complete landscape image, 1536x1024. A single coherent 1930s night train: bottle-green leather seats, honey-coloured varnished walnut, aged brass fittings and warm small tungsten lamps; rain-streaked windows show a deep blue mountain night. High-end hand-painted cinematic realism, tactile material detail, quiet mysterious magical realism, warm amber versus midnight petrol-blue, delicate film grain, believable spatial perspective. This is game environment art, not a screenshot or interface: no text, letters, labels, numbers, logos, watermark, UI, panels, split screen or collage. Leave upper 15 percent and lower 18 percent comparatively calm for game UI overlay. Camera: first-person ordinary traveller SEATED at 95 cm eye level beside the SAME train's large window. Close intimate view across one's own small walnut table, a green upholstered seat opposite, window filling right half and snowy blue night mountains beyond wet glass. Player's own two relaxed adult hands emerge from a plain oatmeal-coloured coat along bottom edge, holding a small blank cream train ticket on lap/table, no writing. On table at 48% width 70% height is a simple worn brass locket beside a warm cup and a very small framed old mirror angled toward window. The reflection suggests only diffuse room light, no distinct real person's face. The aisle opening and a walnut door visible left at 18% width 40% height. Feel like having a body, a seat and a private thought, vulnerable and human. Limited seated view, no uniform, no driver's controls, no overhead train overview.",
+      "source": "D:\\codex\\home\\generated_images\\01a138cb-74d6-7cc1-a284-bfe1058d63f3\\exec-54237281-612e-469a-8a58-b3a53e7c443d.png",
+      "file": "web/public/art/train-v09/passenger-seat.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 258826,
+      "sha256": "6095f006a32717f8720b7312c4f726c9c3425572ef20a571b0453ee6bfa4b3f5",
+      "source_sha256": "56f241aae3869715341d680484d6a336ed71c9f70bb01fd29aca4057f0b642e2"
+    },
+    {
+      "id": "passenger-window",
+      "prompt": "Use case: immersive first-person exploration game background, one complete landscape image, 1536x1024. A single coherent 1930s night train: bottle-green leather seats, honey-coloured varnished walnut, aged brass fittings and warm small tungsten lamps; rain-streaked windows show a deep blue mountain night. High-end hand-painted cinematic realism, tactile material detail, quiet mysterious magical realism, warm amber versus midnight petrol-blue, delicate film grain, believable spatial perspective. This is game environment art, not a screenshot or interface: no text, letters, labels, numbers, logos, watermark, UI, panels, split screen or collage. Leave upper 15 percent and lower 18 percent comparatively calm for game UI overlay. Camera: first-person ordinary traveller standing at a quiet observation-car window, eye height 155 cm. Player's plain oatmeal coat sleeves and two natural adult hands resting on a brass rail at bottom foreground. Large rain-streaked panoramic glass fills upper two-thirds, framing moonlit moving mountains and a few distant amber village lights, reflected train lamps and a subtle ghost of green carriage interior. A green leather seat and walnut connecting doorway at far left 10% width, foreground rail curves toward right, small old brass locket resting under one hand near 47% width 78% height. Poetic sense of remembering and being alone among strangers, warm interior edges cold outside. Grounded human scale, no conductor equipment, no other detailed faces, no text.",
+      "source": "D:\\codex\\home\\generated_images\\01a138cb-74d6-7cc1-a284-bfe1058d63f3\\exec-e6581c85-12a3-40d2-9e7b-14e9684dd806.png",
+      "file": "web/public/art/train-v09/passenger-window.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 290832,
+      "sha256": "adab5ef2feb4cbdfdcbd86f06b2f815682392cbe5321680a79c216d063d32499",
+      "source_sha256": "678f2ec2fca8b4775cf6388d70577a04daa16593f049a212b3db8aebb4bb508b"
+    },
+    {
+      "id": "cat-nook-empty",
+      "source": "D:\\codex\\home\\generated_images\\01a138cb-74d6-7cc1-a284-bfe1058d63f3\\exec-29287174-0eec-49f3-81e2-0f1cfc03928f.png",
+      "file": "web/public/art/train-v09/cat-nook-empty.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 206762,
+      "sha256": "f74e5aedde2e127f254482233cd329cd4f17e1a16654167e659e2048ef34d9e3",
+      "source_sha256": "3a20dce668df71373b04ecbf4f8f0d90372169d182838e5feac62e0e7e5f352d",
+      "edit_reference": "cat-nook",
+      "prompt": "Edit this first-person cat under-seat train environment. Remove only the small blue envelope and the brass desk bell on the floor in the middle-right foreground, filling their former places with the same believable dusty worn wooden floor. Preserve the entire train interior, composition, perspective, ginger cat paws, lighting, suitcase, service passage, all other objects, and exact image dimensions. No new objects, no text, no UI. This sibling game state represents the cache after the cat has collected the lost object. Do not crop or change the camera."
+    }
+  ]
+}

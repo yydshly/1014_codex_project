@@ -1,3 +1,4 @@
+import {TRAIN_PEOPLE,initialTrainState,reduceTrain,restoreTrainState} from './train-engine.js';
 // Randomness selects a compatible world at the threshold. Actions use stable rules.
 export const WORLD_STORAGE = 'random-doors:identity-worlds:v1';
 export const WORLD_IDS = ['museum', 'train', 'genesis'];
@@ -9,18 +10,14 @@ export const WORLDS = {
 export const ROLES = {
   hush: { name: '无声借影者', ability: '静步', detail: '身体不可见。启用静步后，下一步不会发出声音。', limit: '普通行走仍有脚步声；水洼会暴露轮廓。静步可用两次。', symbol: '◌' },
   shade: { name: '影隙行者', ability: '影跃', detail: '身体不可见。启用影跃后，下一步跨过两格，中途不留下脚步。', limit: '落点的水洼仍会显形。影跃可用两次；中间有展柜时无法穿越。', symbol: '◇' },
-  cat: { name: '一只夜行的猫', ability: '嗅闻行李', detail: '可以钻进行李车，闻出失物主人的气味。', limit: '你读不懂名册。先去行李车，再找带有相同气味的人。', symbol: '♧' },
-  conductor: { name: '新来的列车长', ability: '查阅名册', detail: '你的钥匙能打开驾驶室，查看失物登记。', limit: '乘客只认车票。先到驾驶室查册，再决定把失物还给谁。', symbol: '⌘' },
-  passenger: { name: '失忆的旅客', ability: '听见往事', detail: '休息车的一面旧镜子，可以让你听见失物留下的记忆。', limit: '你没有钥匙，也听不懂动物；只能从记忆和乘客的话里辨认。', symbol: '◎' },
+  cat: { name: '一只夜行的猫', ability: '贴地嗅闻', detail: '贴近地板，用气味辨认人；能钻座椅下的窄路。', limit: '够不到门把手，也读不懂名册。只有这副小身体能进入行李夹层。', symbol: '♧' },
+  conductor: { name: '新来的列车长', ability: '查阅名册', detail: '站在过道里，用钥匙进驾驶室，核对车票，照看乘客。', limit: '钻不进狭窄夹层。归还失物后，还要确认车门、送大家继续前行。', symbol: '⌘' },
+  passenger: { name: '失忆的旅客', ability: '拼回往事', detail: '坐在窗边，从旧挂坠与自己的倒影中拼回一段记忆。', limit: '只有车票，没有员工钥匙。你能走的是公共车厢，无法进入驾驶室或夹层。', symbol: '◎' },
   god: { name: '初生的创世主', ability: '改写一条法则', detail: '你可以选择重力、时间或生命，观察它们如何改变世界。', limit: '同一时刻只保留一条改动。改写另一条，会撤回上一条。', symbol: '✶' },
   weaver: { name: '重力编织者', ability: '编织重力', detail: '让重力变轻、加重或倒转，重新连接浮岛。', limit: '你只能修改重力。时间与生命不受你的直接控制。', symbol: '⋈' },
   keeper: { name: '时间保管者', ability: '拨动时间', detail: '让时间流动、停住或倒流，观察河流的方向。', limit: '你只能修改时间。重力与生命仍遵循原来的法则。', symbol: '◷' },
 };
-export const PEOPLE = [
-  { id: 'keeper', name: '灯塔看守人', emblem: '灯塔', scent: '海盐', memory: '海浪声和一束旋转的光', color: '#a4d8d5' },
-  { id: 'child', name: '抱着鲸鱼的孩子', emblem: '鲸鱼', scent: '橘子糖', memory: '剥开的橘子与蓝色玩偶', color: '#dfb48b' },
-  { id: 'gardener', name: '夜班园丁', emblem: '叶片', scent: '湿土', memory: '温室里刚浇过水的叶子', color: '#a5c794' },
-];
+export const PEOPLE = TRAIN_PEOPLE;
 export const LAWS = {
   gravity: { name: '重力', values: [{ id: 'light', label: '轻盈', hint: '浮岛靠近，石桥重新连通' }, { id: 'heavy', label: '沉重', hint: '岛屿下沉，桥面逐渐断开' }, { id: 'reverse', label: '倒转', hint: '树木向上漂离，居民失去落脚处' }] },
   time: { name: '时间', values: [{ id: 'flow', label: '流动', hint: '河流顺坡流向远海' }, { id: 'pause', label: '停住', hint: '河流与居民一起静止' }, { id: 'reverse', label: '倒流', hint: '水流逆坡，回到高处的村庄' }] },
@@ -51,14 +48,14 @@ export function configFor(v) {
   const axis=v.role==='keeper'?'time':v.role==='weaver'?'gravity':choose(['gravity','time','life'],rng);
   return { axis, goal:GOALS[axis], sky:choose(['violet','blue','amber'],rng) };
 }
-export function initialState(world) {
+export function initialState(world,role) {
   if(world==='museum')return {x:0,y:5,turn:0,alert:0,charges:2,armed:false,obtained:false,done:false,bumps:0,log:['你看不见自己的身体。点击相邻地砖，或用方向键移动。']};
-  if(world==='train')return {car:1,clue:false,claimed:false,talked:[],selected:null,done:false,log:['列车不会催你。可以先问问眼前的人，再使用你的身份能力。']};
+  if(world==='train')return initialTrainState(role);
   return {axis:null,value:null,epoch:0,observed:false,done:false,log:['世界正等待第一条改动。选择法则后，推进一刻，看看居民如何回应。']};
 }
 export function createVisit(world,seed,role,uid='visit') {
   if(!WORLD_IDS.includes(world)||!WORLDS[world].roles.includes(role))throw new Error('Incompatible world and identity');
-  return {uid,world,seed:positive(seed),role,state:initialState(world)};
+  return {uid,world,seed:positive(seed),role,state:initialState(world,role)};
 }
 const tell = (s,line) => {s.log=[line,...s.log].slice(0,6);};
 const same = (a,b) => a[0]===b[0]&&a[1]===b[1];
@@ -122,29 +119,7 @@ export function reduceVisit(visit,action) {
     if(s.alert===3){s.x=EXIT[0];s.y=EXIT[1];s.alert=0;s.bumps++;tell(s,'守卫的灯追上了你的轮廓。门把你接回入口；已完成的触碰和剩余能力仍然保留。');}
     return v;
   }
-  if(v.world==='train'){
-    if(action.type==='car'&&Number.isInteger(action.car)&&action.car>=0&&action.car<=3){s.car=action.car;tell(s,`你到了${['驾驶室','休息车','观景车','行李车'][s.car]}。`);return v;}
-    if(action.type==='inspect'){
-      const needed={cat:3,conductor:0,passenger:1}[v.role];
-      if(s.car!==needed){tell(s,`你的身份线索在${['驾驶室','休息车','观景车','行李车'][needed]}。可以点击车厢切换。`);return v;}
-      s.clue=true;s.claimed=true;
-      const p=PEOPLE[c.owner];
-      tell(s,v.role==='cat'?`失物上有${p.scent}的气味。你的鼻子记住了它。`:v.role==='conductor'?`登记册写着：“${c.item}属于佩戴${p.emblem}徽记的乘客。”`: `旧镜子里响起${p.memory}。你想起了这件失物的主人。`);return v;
-    }
-    if(action.type==='talk'&&PEOPLE.some(p=>p.id===action.person)){
-      const index=PEOPLE.findIndex(p=>p.id===action.person),car=c.order.indexOf(index)+1;
-      if(s.car!==car){tell(s,'先走到这位乘客所在的车厢。');return v;}
-      if(!s.talked.includes(action.person))s.talked.push(action.person);s.selected=action.person;
-      const p=PEOPLE[index];tell(s,v.role==='cat'?`${p.name}弯下身摸摸你。你闻到了${p.scent}的味道。`:`${p.name}：“我带着${p.emblem}徽记，正赶往下一站。”`);return v;
-    }
-    if(action.type==='deliver'){
-      if(!s.clue){tell(s,'先用身份能力找到失物与线索，再决定交给谁。');return v;}
-      if(!s.selected||!s.talked.includes(s.selected)||c.order.indexOf(PEOPLE.findIndex(p=>p.id===s.selected))+1!==s.car){tell(s,'先与当前车厢的乘客交谈。');return v;}
-      if(s.selected!==PEOPLE[c.owner].id){tell(s,`${PEOPLE.find(p=>p.id===s.selected).name}摇摇头：“这不是我的。还有人比我更需要它。”失物仍在你这里。`);return v;}
-      s.done=true;tell(s,`${PEOPLE[c.owner].name}接过${c.item}。${v.role==='cat'?'“原来是你找到了它。”他为你留了一盏窗边的灯。':'“谢谢你记得它属于谁。”下一站的灯亮了。'}`);return v;
-    }
-    return v;
-  }
+  if(v.world==='train')return reduceTrain(v,action,c);
   if(action.type==='law'&&availableAxes(v).includes(action.axis)&&LAWS[action.axis].values.some(x=>x.id===action.value)){
     s.axis=action.axis;s.value=action.value;s.observed=false;
     tell(s,`你改写了${LAWS[s.axis].name}：${LAWS[s.axis].values.find(x=>x.id===s.value).label}。推进一刻，让世界回应。`);return v;
@@ -174,10 +149,7 @@ function validVisit(raw){
     for(const [key,min,max]of[['turn',0,100000],['alert',0,2],['charges',0,2],['bumps',0,10000]])if(num(key,min,max))v.state[key]=s[key];
     for(const key of ['armed','obtained','done'])v.state[key]=s[key]===true;
   }else if(raw.world==='train'){
-    if(num('car',0,3))v.state.car=s.car;
-    v.state.talked=Array.isArray(s.talked)?[...new Set(s.talked.filter(id=>PEOPLE.some(p=>p.id===id)))]:[];
-    v.state.selected=PEOPLE.some(p=>p.id===s.selected)?s.selected:null;
-    for(const key of ['clue','claimed','done'])v.state[key]=s[key]===true;
+    v.state=restoreTrainState(s,raw.role);
   }else{
     if(availableAxes(v).includes(s.axis)&&LAWS[s.axis].values.some(x=>x.id===s.value)){v.state.axis=s.axis;v.state.value=s.value;}
     if(num('epoch',0,100000))v.state.epoch=s.epoch;
