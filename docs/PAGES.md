@@ -4,6 +4,7 @@
 
 - 总入口：<https://yydshly.github.io/1014_codex_project/>
 - 006 研究页：<https://yydshly.github.io/1014_codex_project/006-random-doors/research.html>
+- 006 世界与身份实验：<https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html>
 - 007 Atlas 研究页：<https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html>
 - 014 研究页：<https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/>
 - 工作流：`.github/workflows/pages.yml`。
@@ -42,6 +43,8 @@ node scripts/build_pages.mjs
 在 `projects/006-random-doors/web/` 执行 `node build.mjs`，按锁文件安装缺失依赖，执行检查与 40 项行为测试，再构建四入口。`prepare-assets.mjs` 在构建前复制已登记的参考图和高清总览图。站点构建器完整发布清单中的所有项目，并按 `web/entries.json` 登记多个入口。原作视频与图片保留作者、出处和校验记录；页面不含后端、账号、密钥或运行时模型调用，手记保存在当前浏览器。
 
 006 于 2026-10-16 通过现有 Actions 成功部署，公网研究页、三处体验入口、参考图、高清 PNG/SVG、原作视频分段请求及现有 014 均验证成功。浏览器确认摘要与交互可用，手机无横向页面溢出。验证详情见 [006 部署记录](../projects/006-random-doors/deployment.json)。
+
+0.8 世界与身份实验于 2026-10-16 发布并完成公网核验，三世界八身份与研究摘要可访问。原型资源与本地构建字节一致，保留旧体验与现有项目。见 [0.8 验收](../projects/006-random-doors/verification/worlds-0.8-public.json)。
 
 ## 007 Atlas 资产工作流研究与月门水庭实证
 

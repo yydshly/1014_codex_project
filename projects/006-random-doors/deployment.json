@@ -136,5 +136,15 @@
       5663
     ],
     "console_errors": []
+  },
+  "world_identity_v08": {
+    "verified_on": "2026-10-16",
+    "verified_sha": "1ee28178a207034bc17c809daddc17b5cd39120a",
+    "workflow": "https://github.com/yydshly/1014_codex_project/actions/runs/38908012877",
+    "prototype_url": "https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html",
+    "summary_url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html#identity",
+    "verification_record": "verification/worlds-0.8-public.json",
+    "http_checks": 12,
+    "tests": 40
   }
 }

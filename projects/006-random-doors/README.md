@@ -21,7 +21,7 @@ Four-Seasons 用固定种子与季节、时段参数驱动三维场景共同变�
 
 [一张图看完整理解](assets/understanding-overview-20261016.png)（2026-10-16）：区分 Portal Cube 原作灵感、Four-Seasons 独立源码参考与本项目，汇总能力、实现原理、真实效果、三类体验、对我们的价值、扩展方向和验证边界。提供 [可编辑 SVG](assets/understanding-overview-20261016.svg) 与 [素材来源记录](assets/understanding-overview-20261016.sources.json)。
 
-[随机世界与身份](web/worlds.html) · [体验连续开门](https://yydshly.github.io/1014_codex_project/006-random-doors/) · [体验 3D 候车亭](https://yydshly.github.io/1014_codex_project/006-random-doors/seaside.html)。本地开发方法见 [Web 启动说明](web/README.md)。
+[随机世界与身份](https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html) · [体验连续开门](https://yydshly.github.io/1014_codex_project/006-random-doors/) · [体验 3D 候车亭](https://yydshly.github.io/1014_codex_project/006-random-doors/seaside.html)。本地开发方法见 [Web 启动说明](web/README.md)。
 
 保持“全部交给偶然”连续开门，第一轮会遇见六个不同的遭遇。你可能坐在海边等灯、在天台留纸签、陪旅人寄信、替木鸟挑铃、转镜照亮花，或对齐一张星图。每次都可以提前离开，从手记回访时保留自己的回应与进度。
 
@@ -77,3 +77,5 @@ Four-Seasons 用固定种子与季节、时段参数驱动三维场景共同变�
 [返回项目总索引](../../README.md)
 
 2026-10-16 已通过现有 GitHub Pages 工作流部署并验证，研究页、原作视频、高清图与三处体验入口均可访问；[部署记录](deployment.json)保留 HTTP、视频分段请求与浏览器检查证据。
+
+0.8 世界身份实验已于 2026-10-16 部署并验证：[直接试玩](https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html)。三世界原型、研究摘要、12 项公网资源与现有 007/014 入口均可访问，详情见[本轮验收](verification/worlds-0.8-public.json)。

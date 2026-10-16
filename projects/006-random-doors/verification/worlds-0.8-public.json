@@ -1,0 +1,111 @@
+{
+  "verified_on": "2026-10-16",
+  "verified_sha": "1ee28178a207034bc17c809daddc17b5cd39120a",
+  "workflow": "https://github.com/yydshly/1014_codex_project/actions/runs/38908012877",
+  "prototype_url": "https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html",
+  "summary_url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html#identity",
+  "checks": [
+    {
+      "path": "006-random-doors/worlds.html",
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 2230,
+      "sha256": "7e799da87da42ef557c529e31c5f5a8d7e1bd8756b79904e6b009a6ff42bcb12"
+    },
+    {
+      "path": "006-random-doors/research.html",
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 37869,
+      "sha256": "866f47e90cb72bf2ffc8c5890e2b7fef44eb18b51c21b811e58bf3c653f7dc12"
+    },
+    {
+      "path": "006-random-doors/research/world-museum.jpg",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 69417,
+      "sha256": "d8593a0df5cdb00b7c69d68ac83cdd5ac9ce13f6e4e5e4c9add0ff633b532105"
+    },
+    {
+      "path": "006-random-doors/research/world-train.jpg",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 78746,
+      "sha256": "f96cb5923dacb57ae0bd3fe258d0253409f1e279ab720095560bcef6b58ef077"
+    },
+    {
+      "path": "006-random-doors/research/world-genesis.jpg",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 80977,
+      "sha256": "8ddb0c85ef128d6dfe96e348bf4b3fe691e923ebdecdd57efe0c18255cbbbfd1"
+    },
+    {
+      "path": "projects.json",
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 2765,
+      "sha256": "fb11e10294d3e4c6e2426145ff3a4e81bcdf130bc7fd04e1eac54008e8468b93"
+    },
+    {
+      "path": "entries.json",
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 934,
+      "sha256": "dabc9998376d82ba5854d0a6883a66f0aba718b8fdabd790edc081f5fd29dbc4"
+    },
+    {
+      "path": "007-autumn-courtyard-blender/research.html",
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 51059,
+      "sha256": "3875133d04690b3868269877462b9b554265d0afc2ee198960047971c86560d9"
+    },
+    {
+      "path": "014-cyber-xiaoya-study/",
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 30966,
+      "sha256": "f75f36b747b39b91a88631706f8ee6d3abe283492d23b4567fc26dd6e52f882d"
+    },
+    {
+      "path": "006-random-doors/assets/worlds-9XdJOhcF.js",
+      "status": 200,
+      "content_type": "application/javascript",
+      "bytes": 36044,
+      "sha256": "31f5de52cc88cc2984a6fdb4549a8faeabaad761fde4271cb47627b3729967da"
+    },
+    {
+      "path": "006-random-doors/assets/modulepreload-polyfill-P2Xu9kJm.js",
+      "status": 200,
+      "content_type": "application/javascript",
+      "bytes": 670,
+      "sha256": "418c206484b89b68ef5f067277831e583fc9193a62aadf4de269acaaeb12a85f"
+    },
+    {
+      "path": "006-random-doors/assets/worlds-BFuRBdcg.css",
+      "status": 200,
+      "content_type": "text/css",
+      "bytes": 21601,
+      "sha256": "f8660e17b1d053578ceae20e54d5a8371a7e3aad807b56c4817a26eb39072ef1"
+    }
+  ],
+  "local_checks": {
+    "syntax": "passed",
+    "tests": 40,
+    "complete_site_build": "passed",
+    "browser": "three worlds, identity changes, keyboard, completion, incorrect return, refresh and revisit passed",
+    "viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "console_errors": []
+  },
+  "limits": "Finite authored rules and compatible variation; turn-based stealth and discrete creator simulation; local browser storage only; no runtime AI or cross-world causality."
+}
