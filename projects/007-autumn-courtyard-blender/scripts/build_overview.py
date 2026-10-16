@@ -232,7 +232,7 @@ svg=f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox
 <rect width="{W}" height="{H}" fill="{COL['paper']}"/>
 {''.join(parts)}
 </svg>'''
-(OUT/"atlas-overview.svg").write_text(svg,encoding="utf-8")
+(OUT/"atlas-overview.svg").write_text(svg,encoding="utf-8",newline="\n")
 (OUT/"atlas-overview-provenance.json").write_text(json.dumps({
     "date":"2026-10-16", "type":"code-native infographic", "size":[W,H],
     "image_generation_used_for_summary":False, "evidence_images":images,

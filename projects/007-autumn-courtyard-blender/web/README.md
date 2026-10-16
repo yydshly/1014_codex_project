@@ -22,6 +22,8 @@
 
 原图、数据和上游固定版本来源见 [素材说明](assets/README.md) 与 [来源记录](assets/atlas-overview-provenance.json)。图中明确区分 Atlas 的公开能力、本次独立实验已验证的内容，以及待验证的流程与产品收益。没有执行完整 Atlas 技能包，不能把这张图当作 Atlas 增益评测。
 
+网页显示构建时从同一张总览图转换的 2,000 × 4,501 WebP 预览，约 0.75 MB，比原 PNG 减少约 88% 的下载体积。正文与构图相同，PNG / SVG 高清下载仍保留原文件。HTTP 资源检查并行读取独立地址，避免逐个建立连接拖慢上线验收。
+
 重新生成总览图，需要 Pillow 11.3.0、Windows Microsoft YaHei 字体和 Node.js / Sharp 0.35.5（librsvg 2.63.2）。在仓库根目录执行：
 
 ```powershell

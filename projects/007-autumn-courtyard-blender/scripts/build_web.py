@@ -19,6 +19,9 @@ for name in ("index.html","styles.css","app.js","favicon.svg","viewer.js","viewe
     shutil.copy2(SOURCE/name,DIST/name)
 for name in ("atlas-overview.png","atlas-overview.svg","atlas-overview-provenance.json"):
     shutil.copy2(SOURCE/"assets"/name,DIST/"assets"/name)
+with Image.open(SOURCE/"assets/atlas-overview.png") as image:
+    image.thumbnail((2000,4501),Image.Resampling.LANCZOS)
+    image.convert("RGB").save(DIST/"assets/atlas-overview-preview.webp","WEBP",quality=90,method=6)
 shutil.copytree(SOURCE/"vendor",DIST/"vendor",dirs_exist_ok=True)
 for name in ("concept","render","overview"):
     with Image.open(SCENE/"assets"/(name+".png")) as image:

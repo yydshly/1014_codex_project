@@ -5,6 +5,7 @@ import hashlib
 import json
 import struct
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -76,9 +77,11 @@ parser.add_argument("--url", help="Base URL ending at this numbered project")
 options = parser.parse_args()
 if options.url:
     from urllib.request import Request
-    for relative in sorted(resources):
+    def check_resource(relative):
         with urlopen(Request(options.url.rstrip("/") + "/" + relative, method="HEAD"), timeout=20) as response:
             assert response.status == 200, relative
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        list(pool.map(check_resource, sorted(resources)))
     with urlopen(options.url.rstrip("/") + "/assets/moonwater-web.glb", timeout=20) as response:
         assert response.status == 200
         assert hashlib.sha256(response.read()).hexdigest() == report["output_sha256"]
