@@ -20,6 +20,7 @@ FIELDS = {
     "id", "slug", "title", "repository", "summary", "status",
     "preview", "preview_caption", "demo_url",
 }
+OPTIONAL_FIELDS = {"source_url"}
 REQUIRED_FILES = ("README.md", "RESEARCH.md", "assets/README.md", "web/README.md")
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
 
@@ -42,6 +43,15 @@ def repository_url(value):
             "repository 必须是 https://github.com/owner/repository 格式。")
 
 
+def source_url(value):
+    single_line(value, "source_url")
+    parsed = urlsplit(value)
+    require(parsed.scheme == "https" and bool(parsed.hostname)
+            and parsed.username is None and parsed.password is None
+            and "\\" not in value and not any(char.isspace() for char in value),
+            "source_url 必须是有效的 HTTPS 来源链接，不能包含登录信息或空白。")
+
+
 def project_directory(project):
     return ROOT / "projects" / f"{project['id']}-{project['slug']}"
 
@@ -54,8 +64,8 @@ def validate(data, check_files=True):
     require(isinstance(data["projects"], list), "projects 必须是数组。")
     ids, slugs, directories = set(), set(), set()
     for project in data["projects"]:
-        require(isinstance(project, dict) and set(project) == FIELDS,
-                "每个项目必须包含文档中列出的全部九个字段。")
+        require(isinstance(project, dict) and FIELDS <= set(project) <= FIELDS | OPTIONAL_FIELDS,
+                "每个项目必须包含九个基础字段，可另含 source_url。")
         project_id = project["id"]
         require(isinstance(project_id, str) and re.fullmatch(r"[0-9]{3}", project_id)
                 and project_id != "000", "id 必须是 001 至 999 的三位编号。")
@@ -69,7 +79,12 @@ def validate(data, check_files=True):
         slugs.add(slug)
         for field in ("title", "summary"):
             single_line(project[field], f"{project_id}.{field}")
-        repository_url(project["repository"])
+        if project["repository"] is not None:
+            repository_url(project["repository"])
+        if project.get("source_url") is not None:
+            source_url(project["source_url"])
+        require(project["repository"] is not None or project.get("source_url") is not None,
+                f"{project_id} 必须提供原仓库 repository 或原始来源 source_url。")
         require(project["status"] in STATUSES, f"{project_id} 的 status 不在允许列表中。")
         single_line(project["preview_caption"], f"{project_id}.preview_caption", allow_empty=True)
         directory = project_directory(project)
@@ -125,16 +140,20 @@ def render_catalog(data):
     if not projects:
         return "尚未收录研究项目。首个项目将从 **001** 开始，添加后会自动生成有序索引与配图区域。\n"
     lines = [
-        "| 编号 | 项目 | 摘要 | 状态 | 研究记录 | 原仓库 | Web 演示 |",
+        "| 编号 | 项目 | 摘要 | 状态 | 研究记录 | 来源链接 | Web 演示 |",
         "| --- | --- | --- | --- | --- | --- | --- |",
     ]
     for project in projects:
         base = f"projects/{project_directory(project).name}"
         demo = link("演示", project["demo_url"]) if project["demo_url"] else "—"
+        origin = project.get("source_url") or project["repository"]
+        origin_label = "来源" if project.get("source_url") else "GitHub"
+        if urlsplit(origin).hostname in ("x.com", "twitter.com"):
+            origin_label = "原帖"
         cells = [
             project["id"], link(project["title"], f"{base}/README.md"),
             markdown_text(project["summary"]), project["status"],
-            link("研究笔记", f"{base}/RESEARCH.md"), link("GitHub", project["repository"]), demo,
+            link("研究笔记", f"{base}/RESEARCH.md"), link(origin_label, origin), demo,
         ]
         lines.append("| " + " | ".join(cells) + " |")
     lines.extend(["", "### 项目配图", ""])
@@ -179,10 +198,12 @@ def add_project(args):
     require(number <= 999, "三位编号已用尽；需要先升级编号约定。")
     project = {
         "id": f"{number:03d}", "slug": args.slug, "title": args.title.strip(),
-        "repository": args.repo.rstrip("/").removesuffix(".git"),
+        "repository": args.repo.rstrip("/").removesuffix(".git") if args.repo else None,
         "summary": args.summary.strip(), "status": "待研究",
         "preview": None, "preview_caption": "", "demo_url": None,
     }
+    if args.source is not None:
+        project["source_url"] = args.source
     data["projects"].append(project)
     validate(data, check_files=False)
     directory = project_directory(project)
@@ -198,7 +219,9 @@ def add_project(args):
         created = True
         values = {
             "id": project["id"], "title": markdown_text(project["title"]),
-            "repository": project["repository"], "summary": markdown_text(project["summary"]),
+            "repository": project["repository"] or "尚未确认",
+            "source_url": project.get("source_url") or project["repository"],
+            "summary": markdown_text(project["summary"]),
             "directory": directory.name,
         }
         for source in template.rglob("*"):
@@ -232,7 +255,8 @@ def main():
     add = commands.add_parser("add", help="创建下一个编号项目并更新索引")
     add.add_argument("--slug", required=True)
     add.add_argument("--title", required=True)
-    add.add_argument("--repo", required=True)
+    add.add_argument("--repo", help="已确认的原 GitHub 仓库；与 --source 至少提供一项")
+    add.add_argument("--source", help="原始网页、视频帖或项目介绍的 HTTPS 链接")
     add.add_argument("--summary", required=True)
     commands.add_parser("sync", help="从 projects.json 更新 README 索引")
     commands.add_parser("check", help="检查项目记录、目录、图片和 README 同步状态")

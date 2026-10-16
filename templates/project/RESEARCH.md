@@ -2,6 +2,7 @@
 
 ## 研究对象
 
+- 原始来源：{{source_url}}
 - 原仓库：{{repository}}
 - 收录摘要：{{summary}}
 - 研究日期：待填写

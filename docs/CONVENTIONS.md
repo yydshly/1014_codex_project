@@ -18,6 +18,14 @@ python scripts/project_catalog.py add --slug project-name --title "项目名称"
 
 命令自动分配编号、复制 `templates/project/`、登记 `projects.json` 并更新总 README。无需手动改编号或复制目录。
 
+研究入口也可以是视频帖、文章或产品页面。原仓库尚未确认时，用`--source`登记真实来源，不要拿本研究归档仓库充当原仓库：
+
+```sh
+python scripts/project_catalog.py add --slug video-study --title "原视频研究" --source "https://example.com/original-video" --summary "研究演示效果、原理与价值"
+```
+
+`--repo`与`--source`至少提供一项，也可同时提供。未确认的原仓库保持`repository: null`；来源帖不等于原作者源码。
+
 先完善项目 README，再记录 `RESEARCH.md`；源码和依赖按实际需要加入本项目目录。引用上游时保留仓库地址、许可证和固定 tag / commit，避免把研究结论与不断变化的默认分支混在一起。
 
 ## 索引数据
@@ -48,7 +56,8 @@ python scripts/project_catalog.py add --slug project-name --title "项目名称"
 | `id` | 固定编号，例如 `001` |
 | `slug` | 目录名的英文部分，与编号共同组成项目路径 |
 | `title` | 对外展示的项目名称 |
-| `repository` | 原 GitHub 仓库的 HTTPS 地址 |
+| `repository` | 已确认的原 GitHub 仓库 HTTPS 地址；未确认时为`null`，并填写`source_url` |
+| `source_url` | 可选，原视频帖、文章或项目页面的HTTPS来源链接；填写时优先用于总索引与网页的来源入口 |
 | `summary` | 一句话概述项目用途与研究重点 |
 | `status` | 待研究 / 研究中 / 已复现 / 已完成 / 已归档 |
 | `preview` | 实际图片相对于子项目的路径，例如 `assets/preview.png`；无图片时为 `null` |

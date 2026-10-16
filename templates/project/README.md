@@ -4,7 +4,8 @@
 
 | 信息 | 内容 |
 | --- | --- |
-| 原项目 | [{{repository}}]({{repository}}) |
+| 原始来源 | [{{source_url}}]({{source_url}}) |
+| 原仓库 | {{repository}} |
 | 固定编号 | `{{id}}` |
 | 研究版本 | 待记录 tag / commit |
 | 原项目许可证 | 待核实 |

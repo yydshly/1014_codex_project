@@ -28,7 +28,7 @@ try{
     }else if(p.preview)addLink(p.status==='已归档'?'阅读归档':'打开演示',p.demo_url||'./'+name+'/');
     const notes=document.createElement('button');notes.textContent='研究记录';
     notes.addEventListener('click',async()=>{const response=await fetch('./projects/'+name+'/README.md');document.querySelector('#notes-body').textContent=await response.text();document.querySelector('#notes').showModal();});
-    nav.append(notes);addLink(p.id==='014'?'研究归档':'原仓库',p.repository);body.append(label,title,summary,nav);card.append(body);container.append(card);
+    nav.append(notes);if(p.source_url)addLink('原始来源',p.source_url);else if(p.repository)addLink('原仓库',p.repository);body.append(label,title,summary,nav);card.append(body);container.append(card);
   }
 }catch{document.querySelector('#notice').textContent='目录暂未载入，请通过本地项目服务打开。';}
 document.querySelector('#close-notes').onclick=()=>document.querySelector('#notes').close();

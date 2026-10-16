@@ -124,6 +124,43 @@ class CatalogCommands(unittest.TestCase):
         (self.root / "projects" / "001-first" / "RESEARCH.md").unlink()
         self.run_command("check", success=False)
 
+    def test_source_only_project_keeps_unknown_repository_and_links_original_post(self):
+        origin = "https://x.com/huoshan007/status/2109919568617484522"
+        self.run_command("add", "--slug", "source-study", "--title", "原视频研究",
+                         "--source", origin, "--summary", "研究原片")
+        project = self.load()["projects"][0]
+        self.assertIsNone(project["repository"])
+        self.assertEqual(project["source_url"], origin)
+        self.assertIn(f"[原帖]({origin})", self.readme())
+        self.assertIn("| 来源链接 |", self.readme())
+        notes = (self.root / "projects/001-source-study/README.md").read_text(encoding="utf-8")
+        self.assertIn(f"[{origin}]({origin})", notes)
+        self.assertIn("| 原仓库 | 尚未确认 |", notes)
+        self.assertNotIn("{{", notes)
+        self.run_command("check")
+
+    def test_explicit_source_takes_priority_without_losing_repository(self):
+        self.add_project("first")
+        data = self.load()
+        data["projects"][0]["source_url"] = "https://example.com/original-video"
+        self.save(data)
+        self.run_command("sync")
+        self.assertIn("[来源](https://example.com/original-video)", self.readme())
+        self.assertNotIn("[GitHub](https://github.com/example/research)", self.readme())
+        self.assertEqual(self.load()["projects"][0]["repository"], "https://github.com/example/research")
+        self.run_command("check")
+
+    def test_missing_or_unsafe_source_does_not_create_project(self):
+        before = (self.root / "projects.json").read_bytes(), self.readme()
+        for origin in (None, "http://example.com/post", "javascript:alert(1)",
+                       "https://user:password@example.com/post", "https://example.com/a b"):
+            args = ["add", "--slug", "invalid", "--title", "无效来源", "--summary", "来源验证"]
+            if origin is not None:
+                args += ["--source", origin]
+            self.run_command(*args, success=False)
+        self.assertEqual(before, ((self.root / "projects.json").read_bytes(), self.readme()))
+        self.assertFalse((self.root / "projects/001-invalid").exists())
+
 
 if __name__ == "__main__":
     unittest.main()
