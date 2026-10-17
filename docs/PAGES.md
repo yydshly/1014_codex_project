@@ -13,7 +13,7 @@
 
 ## 构建
 
-需要 Node.js 22 和 Python 3.12。014 不需要安装第三方包、配置密钥或下载模型；006 由项目构建器按锁文件安装 Vite 和 Three.js；007 用 Pillow 11.3.0 打包已有媒体并校验源工程、GLB 与依赖，部署无需 Blender、GPU 或模型调用。
+需要 Node.js 22 和 Python 3.12。004 与 006 由项目构建器按锁文件安装依赖并执行检查；014 不需要第三方包、密钥或模型；007 用 Pillow 11.3.0 打包已有媒体并校验源工程、GLB 与依赖。静态部署无需 Blender、GPU 或模型调用。
 
 ```sh
 python scripts/project_catalog.py sync
@@ -55,3 +55,11 @@ node scripts/build_pages.mjs
 项目 `web/build.mjs` 调用 `scripts/build_web.py` 与 `check_web.py`。Three.js 和 Draco 原文件、许可证与哈希随项目保存，网页不依赖 CDN。Python 构建使用已有图片、视频、Blender 工程与 GLB；不重新生成图像、三维或总览图。原始代码、来源、工程下载和检查记录一并发布。部署与公网验证记录见项目根的 `deployment.json`，验证后才登记 `demo_url`。
 
 2026-10-16 已通过 Actions 发布。浏览器实测五项研究摘要、14 个章节和真实三维旋转、缩放、机位切换、线框与全屏显示；总览网页改用约 0.75 MB WebP 预览，保留 4,000 × 9,001 PNG 与 SVG 高清下载。三页入口、本地资源、模型、工程与图片的公网核验详情见 [007 部署记录](../projects/007-autumn-courtyard-blender/deployment.json)。现有 006 与 014 保留在同一发布清单中。
+
+## 004 问题驱动研究工作台
+
+新增 `004-jasonzhu-ai/research.html` 产品总览与 `index.html` 研究工作区。摘要说明公开来源检索、模型分析与程序检查的工作原理，面向个人开发者积累有出处的判断和下一步；区分已有能力、适用方向、产品目标与未来扩展。引导图使用已经生成的 `assets/product-overview.png`，保留 SVG 与 Mermaid 图源。
+
+发布清单同时保留 006、007 与 014。004 构建器执行语法检查与 39 项测试，校验本地资源和锚点，以静态模式发布；服务器、环境文件与运行缓存不进入站点。公开页支持导航、采集计划、发现保存与备份；自动研究需要本机服务与 Codex 登录，线上入口明确标注并禁用执行。公网与本地浏览器数据需通过 JSON 迁移。
+
+实际部署状态、工作流与公网检查见 [004 部署记录](../projects/004-jasonzhu-ai/deployment.json)。公网核验后再补充正式演示地址。

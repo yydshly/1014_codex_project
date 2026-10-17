@@ -1,0 +1,116 @@
+{
+  "updatedAt": "2026-10-15",
+  "note": "用途与检索式为本项目的研究建议。访问记录来自本次公开页面与官方说明核查，具体搜索结果仍需打开原文核实。",
+  "entries": [
+    {
+      "id": "reddit", "name": "Reddit", "mark": "R", "language": "en", "categories": ["community"], "tagline": "跨行业的求助与工作经历",
+      "url": "https://www.reddit.com/", "entryUrl": "https://www.reddit.com/r/smallbusiness/", "entryLabel": "从小企业社区开始",
+      "suitable": "客户跟进、排班、资料整理、内容制作等重复工作。先找到相关职业的社区，观察人们实际怎么做、哪一步卡住。",
+      "signals": ["反复手工处理", "寻找替代工具", "已经尝试过的办法"],
+      "method": "先用任务词定位社区，再搜索帖子和评论。站内可用 subreddit: 限定社区；小企业社区只是一个起点，可按人群更换。",
+      "queries": [{"label":"找具体求助","template":"site:reddit.com {task} \"how do you\""},{"label":"找手工补救","template":"site:reddit.com {task} (manual OR workaround)"},{"label":"找替代与反例","template":"site:reddit.com {task} (alternative OR solved)"}],
+      "check": "读正文、回复和楼主后续：谁在什么情境下遇到问题，现有建议是否有效。区分亲身求助与推广；赞数不能说明付费意愿。",
+      "accessLabel": "公开入口部分可读", "access": "本次读取了官方搜索帮助和小企业社区页、帖子片段；未逐条核实评论全文。不同社区的访问条件可能不同。",
+      "references": [{"label":"官方搜索功能说明","url":"https://support.reddithelp.com/hc/en-us/articles/19696541895316-Available-search-features"},{"label":"小企业社区","url":"https://www.reddit.com/r/smallbusiness/"}]
+    },
+    {
+      "id": "v2ex", "name": "V2EX", "mark": "V₂", "language": "zh", "categories": ["community"], "tagline": "中文工具使用与办公求助",
+      "url": "https://www.v2ex.com/", "entryUrl": "https://www.v2ex.com/go/qna", "entryLabel": "进入问与答",
+      "suitable": "文件管理、办公协作、设备协同、软件替换和生活服务。适合补充中文用户的使用经历，注意数字工具使用者的人群偏向。",
+      "signals": ["求推荐", "有没有办法", "自己拼凑的解决方法"],
+      "method": "先看「问与答」，再用任务词搭配「求助、麻烦、替代」搜索主题页。一次只加一个问题词，找到原帖后继续读回复。",
+      "queries": [{"label":"找求助","template":"site:v2ex.com/t/ {task} 求助"},{"label":"找麻烦的步骤","template":"site:v2ex.com/t/ {task} 麻烦"},{"label":"找替代工具","template":"site:v2ex.com/t/ {task} 替代"}],
+      "check": "核对发帖时间、实际使用环境、楼主追问与最终处理方法。近期节点仍有帖子，只能说明入口在更新，不能据此判断整个平台的兴衰。",
+      "accessLabel": "公开列表可读", "access": "本次匿名读取了问与答列表及平台介绍；未验证所有节点与回复分页。",
+      "references": [{"label":"问与答节点","url":"https://www.v2ex.com/go/qna"},{"label":"平台介绍","url":"https://www.v2ex.com/about"}]
+    },
+    {
+      "id": "zhihu", "name": "知乎", "mark": "知", "language": "zh", "categories": ["community"], "tagline": "了解陌生行业的任务背景",
+      "url": "https://www.zhihu.com/", "entryUrl": "https://www.zhihu.com/explore", "entryLabel": "进入知乎发现",
+      "suitable": "了解不同岗位怎样完成一项工作、有哪些限制，以及不同做法的优缺点。优先寻找有具体过程的从业者回答。",
+      "signals": ["从业者的实际步骤", "任务为什么难", "评论中的补充条件"],
+      "method": "用「任务 + 怎么做 / 麻烦 / 工具」搜索。可先用下方检索式定位问题，再进入原页；能登录时也可使用站内搜索。",
+      "queries": [{"label":"了解工作过程","template":"site:zhihu.com/question/ {task} 怎么"},{"label":"找困难","template":"site:zhihu.com/question/ {task} 麻烦"},{"label":"看现有办法","template":"site:zhihu.com/question/ {task} 工具"}],
+      "check": "看回答者是否亲历、工作规模和事件时间，区分实际经历、观点与产品推荐。搜索摘要只用于定位，读不到正文就记为待核实。",
+      "accessLabel": "搜索可能需登录或验证", "access": "本次发现页可读；问题搜索入口遇到安全验证，未核实普通答案全文和站内搜索结果。",
+      "references": [{"label":"知乎发现","url":"https://www.zhihu.com/explore"}]
+    },
+    {
+      "id": "xiaohongshu", "name": "小红书", "mark": "小", "language": "zh", "categories": ["community"], "tagline": "生活与工作细节、评论追问",
+      "url": "https://www.xiaohongshu.com/", "entryUrl": "https://www.xiaohongshu.com/explore", "entryLabel": "打开小红书探索",
+      "suitable": "探索内容创作、小店经营、学习整理和生活实践中的具体步骤。这是候选研究渠道，本轮尚未核实普通笔记样本。",
+      "signals": ["教程里没讲清的一步", "踩坑经历", "评论反复追问"],
+      "method": "优先在自己的 App 或已登录网页搜索「任务 + 求助 / 踩坑 / 太麻烦」，展开笔记和评论。下方网页搜索用于补充定位，覆盖可能有限。",
+      "queries": [{"label":"找求助","template":"site:xiaohongshu.com {task} 求助"},{"label":"找踩坑经历","template":"site:xiaohongshu.com {task} 踩坑"},{"label":"找繁琐步骤","template":"site:xiaohongshu.com {task} 太麻烦"}],
+      "check": "核对亲历过程、操作材料和推广关系。收藏量与「求链接」只能作为线索；进一步看评论里具体没完成的任务。",
+      "accessLabel": "本次读取受限", "access": "本次探索页读取超时；可读官方专题页提示登录。普通笔记和评论全文待在浏览器中实际核实。",
+      "references": [{"label":"官方探索入口（本次未读成功）","url":"https://www.xiaohongshu.com/explore"},{"label":"含登录提示的官方专题页","url":"https://www.xiaohongshu.com/worldcup26?wcup_source=market_lianmeng_3"}]
+    },
+    {
+      "id": "hacker-news", "name": "Hacker News", "mark": "HN", "language": "en", "categories": ["community", "solutions"], "tagline": "Ask HN 求助与 Show HN 试用反馈",
+      "url": "https://news.ycombinator.com/", "entryUrl": "https://news.ycombinator.com/ask", "entryLabel": "进入 Ask HN",
+      "suitable": "资料处理、知识管理、团队协作和专业工具选型。Ask HN 看问题，Show HN 看已有产品和试用反馈；注意技术人群偏向。",
+      "signals": ["具体工作条件", "现有工具的缺口", "实际试用后的限制"],
+      "method": "把任务词和 Ask HN 或 Show HN 一起搜索。前者找讨论问题，后者对照产品；阅读评论中的替代办法和作者回应。",
+      "queries": [{"label":"找任务求助","template":"site:news.ycombinator.com/item \"Ask HN\" {task}"},{"label":"找补救办法","template":"site:news.ycombinator.com/item {task} workaround"},{"label":"找产品和试用反馈","template":"site:news.ycombinator.com/item \"Show HN\" {task}"}],
+      "check": "分别记录作者宣称与使用者反馈。看问题发生条件、替代品为何不够用；分数和发布热度不能说明实际采用。",
+      "accessLabel": "公开列表与规则可读", "access": "本次读取了 Ask HN 列表与 Show HN 规则；未对检索结果逐条核实全文。HN Search 的交互查询本次未测试。",
+      "references": [{"label":"Ask HN","url":"https://news.ycombinator.com/ask"},{"label":"Show HN 规则","url":"https://news.ycombinator.com/showhn.html"},{"label":"HN Search","url":"https://hn.algolia.com/"}]
+    },
+    {
+      "id": "github", "name": "GitHub", "mark": "GH", "language": "en", "categories": ["feedback", "solutions"], "tagline": "工具的使用困难与开源方案",
+      "url": "https://github.com/", "entryUrl": "https://github.com/", "entryLabel": "进入 GitHub",
+      "suitable": "开源工具的集成、部署、导入导出、功能缺口和手工补救。适合有具体软件使用场景时查问题，再寻找可用项目。",
+      "signals": ["复现步骤", "维护者回应", "临时办法与修复状态"],
+      "method": "先定位与任务相关的仓库，读 Issues / Discussions；再读 README 比较已有方案。并非每个仓库都启用这两种讨论入口。",
+      "queries": [{"label":"找使用障碍","template":"site:github.com inurl:issues {task} workaround"},{"label":"找用户讨论","template":"site:github.com inurl:discussions {task}"},{"label":"找现有项目","template":"site:github.com {task} README"}],
+      "check": "查看最新状态、维护者回复与关联修复。关闭的 Issue 可能已解决，也可能不被支持；Stars 和功能请求数量不能直接证明商业需求。",
+      "accessLabel": "公开页面与文档可读", "access": "本次读取公开页面和官方搜索文档；只涉及公开仓库，具体问题仍需逐条核实。",
+      "references": [{"label":"Issues 搜索规则","url":"https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/filtering-and-searching-issues-and-pull-requests?tool=webui"},{"label":"Discussions 搜索","url":"https://docs.github.com/en/search-github/searching-on-github/searching-discussions"}]
+    },
+    {
+      "id": "g2", "name": "G2", "mark": "G2", "language": "en", "categories": ["feedback"], "tagline": "企业软件的真实使用取舍",
+      "url": "https://www.g2.com/", "entryUrl": "https://www.g2.com/", "entryLabel": "进入 G2 软件评价",
+      "suitable": "运营、销售、财务、营销和客服等岗位的软件使用障碍：上手成本、复杂流程、集成限制和权限问题。",
+      "signals": ["不喜欢什么", "解决了什么问题", "还要手工完成的部分"],
+      "method": "先按任务找到产品类别，再用产品名搜索评论。下方任务词可替换为产品名；同时阅读喜欢、不喜欢和解决的问题。",
+      "queries": [{"label":"找使用缺点","template":"site:g2.com/products {task} dislike"},{"label":"看解决的问题","template":"site:g2.com/products {task} problems"},{"label":"看替代选择","template":"site:g2.com/products {task} alternatives"}],
+      "check": "匹配行业、岗位、公司规模与评价时间。留意 Incentivized / Source 标签，比较正负反馈；激励评价和主动评价者存在样本偏差。",
+      "accessLabel": "评价检索可见，全文待核实", "access": "本次首页可读，评价样例经搜索可见正文与标签；直接读取样例超时，未验证登录后筛选与完整评论。",
+      "references": [{"label":"评价规则与标签","url":"https://legal.g2.com/community-guidelines"},{"label":"评价有效性说明","url":"https://sell.g2.com/review-validity"}]
+    },
+    {
+      "id": "capterra", "name": "Capterra", "mark": "C", "language": "en", "categories": ["feedback"], "tagline": "中小企业的软件更换原因",
+      "url": "https://www.capterra.com/", "entryUrl": "https://www.capterra.com/", "entryLabel": "进入 Capterra",
+      "suitable": "中小企业和个体经营者的软件选型：功能不匹配、学习负担、维护成本，以及从旧工具迁移的原因。",
+      "signals": ["Cons 缺点", "Switched from 更换来源", "Alternatives considered 备选方案"],
+      "method": "先找到任务对应的软件，再用产品名查评论。优先看使用时长、缺点、更换前的工具和选型理由，对照相似规模的用户。",
+      "queries": [{"label":"找使用缺点","template":"site:capterra.com/p/ {task} Cons"},{"label":"找更换原因","template":"site:capterra.com/p/ {task} \"Switched from\""},{"label":"看比较过的方案","template":"site:capterra.com/p/ {task} \"Alternatives considered\""}],
+      "check": "记录 Review Source 和激励标签，比较不同来源的评价。区分功能缺陷与场景不匹配；价格感受和更换意愿仍需实际行为佐证。",
+      "accessLabel": "评价检索可见，全文待核实", "access": "本次通过搜索读到评价样例及激励标签；直接读取受工具内容类型限制。不能据此判断网站不可用，完整站内搜索未验证。",
+      "references": [{"label":"评价收集与验证","url":"https://www.capterra.com/resources/how-we-verify-reviews/"},{"label":"评价与激励规则","url":"https://www.capterra.com/legal/community-guidelines/"}]
+    },
+    {
+      "id": "upwork", "name": "Upwork", "mark": "U", "language": "en", "categories": ["paid"], "tagline": "有交付要求与预算的任务",
+      "url": "https://www.upwork.com/", "entryUrl": "https://www.upwork.com/freelance-jobs/", "entryLabel": "查看公开任务目录",
+      "suitable": "自动化、资料整理、报表、内容处理、系统连接等外包工作。观察客户需要什么输入、结果和验收条件，以及是否重复发生。",
+      "signals": ["明确交付物", "ongoing 持续工作", "发布预算与截止时间"],
+      "method": "用具体任务搜索公开岗位，再看完整交付要求。加入 ongoing 或 weekly 找重复工作；记录发布时间和任务是否还开放。",
+      "queries": [{"label":"找公开任务","template":"site:upwork.com/freelance-jobs/ {task}"},{"label":"找有预算的描述","template":"site:upwork.com/freelance-jobs/ {task} \"Fixed Price\""},{"label":"找持续任务","template":"site:upwork.com/freelance-jobs/ {task} ongoing"}],
+      "check": "发布预算、商定价格和已付款分别记录。对照不同客户的输入、交付物和频率；一次外包不能直接推断持续订阅意愿。",
+      "accessLabel": "公开检索可见，目录读取受限", "access": "本次公开岗位通过搜索可见，目录直读返回 403；未验证账户内 Find work 搜索与筛选。",
+      "references": [{"label":"官方搜索与筛选说明","url":"https://support.upwork.com/hc/en-us/articles/211063078-How-to-search-for-jobs-on-Upwork"},{"label":"预算与岗位发布说明","url":"https://support.upwork.com/hc/en-us/articles/211063408-How-to-post-a-job"}]
+    },
+    {
+      "id": "product-hunt", "name": "Product Hunt", "mark": "PH", "language": "en", "categories": ["solutions"], "tagline": "对照已有产品与替代方案",
+      "url": "https://www.producthunt.com/", "entryUrl": "https://www.producthunt.com/", "entryLabel": "进入 Product Hunt",
+      "suitable": "已有一个任务或问题时，查看谁在解决、怎样定位、如何使用，以及用户提到的限制。主要用于方案发现。",
+      "signals": ["目标用户与使用方式", "具体试用反馈", "与替代品的比较"],
+      "method": "在首页搜索任务词或按类别浏览；从发布页进入官网核对功能、演示和价格。下方检索式也能定位产品和论坛讨论。",
+      "queries": [{"label":"找相关产品","template":"site:producthunt.com {task}"},{"label":"找替代方案","template":"site:producthunt.com {task} alternatives"},{"label":"找产品讨论","template":"site:producthunt.com/p/ {task}"}],
+      "check": "区分作者介绍、祝贺评论和实际试用。发布热度、投票和榜单不能说明持续使用或付费；回到原始用户问题核实。",
+      "accessLabel": "首页与帮助可读", "access": "本次首页和官方帮助可读，搜索与类别浏览有官方说明；未登录、投票或评论，具体产品尚未试用。",
+      "references": [{"label":"浏览与搜索说明","url":"https://help.producthunt.com/en/articles/2305333-getting-started"},{"label":"产品论坛说明","url":"https://help.producthunt.com/en/articles/11432379-maker-s-guide-to-product-forums"}]
+    }
+  ]
+}

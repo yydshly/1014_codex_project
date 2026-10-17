@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "82d9fd6d-f191-42b3-bb66-10d5605716b3",
+      "kind": "need",
+      "title": "客户反馈分散，难以判断哪些属于本轮修改",
+      "url": "https://www.reddit.com/r/webdesign/comments/1pr8cuc/how_do_you_get_clear_client_feedback_without/",
+      "source": "Reddit · r/webdesign；2026-10-17 由当前会话检索、读取并录入",
+      "evidence": "采集时间：2026-10-17（北京时间）。方式：当前会话联网检索并读取页面；不是004网页自动采集。以下为可读片段，未取得完整评论导出。\n\n主来源：How do you get clear client feedback without endless revisions?\nhttps://www.reddit.com/r/webdesign/comments/1pr8cuc/how_do_you_get_clear_client_feedback_without/\n作者：u/Quirky-Pollution-930。索引标注2025-12-20；读取页显示10mo ago，精确时间未独立复核。\n楼主后续回复原话：\n> feedback still comes in scattered and it’s hard to tell what counts as a revision vs just a comment.\n回复者timbredesign：\n> A revision round should be a set of changes that is delivered in one document.\n楼主、回复者的使用经历为自述，未取得项目记录。Filestage、Kreatli、BugHerd团队的推广回复不作为独立用户证明。\n\n交叉材料：How do you handle client feedback when building websites?\nhttps://www.reddit.com/r/SideProject/comments/1vriqsa/how_do_you_handle_client_feedback_when_building/\n作者：u/Business_Company_579。索引标注2026-08-18；读取页显示2mo ago，精确时间未独立复核。该楼主是询问流程，不直接视作本人遭遇；下列为评论者自述。\nahm_live评论：\n> then each item is url + what they see + what they expect.\nKind-Bathroom5159评论：\n> they drift back to whatsapp within a week regardless.\n\n已有方案核查：Filestage官方使用文档\nhttps://help.filestage.io/en/articles/9112521-how-to-share-content-with-reviewers-and-control-their-permissions\n官方功能小节原话：\n> Disable comments on approved files\n文档说明可通过免注册审阅链接收集反馈（仍需姓名和邮箱）、设截止日期和邮件提醒。只证明官方有此功能说明，未实测效果或价格。",
+      "understanding": "本次判断：继续补采，尚不足以决定做产品。\n\n已知：楼主自述设计意见模糊、反馈零散，即使约定修改次数，也难区分一次修改与普通评论。可见回复提出统一反馈文档、限定审阅时间、按轮次处理等办法；没有核实楼主采用后的效果。\n\n交叉观察：另一篇网站审阅讨论中，有评论者自述多人意见冲突、客户回到 WhatsApp；也有人用“URL＋现象＋预期＋一轮一份编号清单”应对。两篇不同帖子只构成小样本线索，不能据此估计需求规模。\n\n已有方案：Filestage 官方文档提供免注册审阅链接、截止日期提醒和按状态关闭评论；仅核查文档，未试用。集中收集和轮次管理已有方案，潜在缺口更可能在客户是否愿意遵守流程、旧渠道意见如何转为明确任务，需要验证。\n\n对我的价值：为网页项目的反馈流程提供参考；若探索 AI 功能，可先试“整理零散意见、保留原话、标出冲突和待确认项”，最终修改范围由人确认。\n\n未知：真实频率、耗时、使用工具的成本、改用后的效果、付费意愿。推广评论不计作独立用户证据。",
+      "nextStep": "取一份经许可的脱敏网页反馈记录，对比人工表格与 AI 整理：是否保留页面/版本、漏掉要求、误合并或遗漏冲突；再请实际使用者确认是否省时。先验证整理价值，再决定是否开发。",
+      "status": "researching",
+      "createdAt": "2026-10-16T22:57:02.762Z",
+      "updatedAt": "2026-10-16T22:57:02.762Z",
+      "trashedAt": null
+    }
+  ]
+}

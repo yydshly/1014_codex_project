@@ -1,0 +1,154 @@
+{
+  "id": "00d492ef-0e1e-431c-9a72-d48f0721e4e2",
+  "input": {
+    "direction": "继续核查个人开发者的反馈整理方案，只保留2个候选：GitHub项目 https://github.com/clearflask/clearflask 和AI产品 https://help.canny.io/en/articles/8202451-autopilot 。先实际搜索；每次打开只打开一个完整URL，逐一读取这两个主来源，再单独读 https://canny.io/pricing 。每条发现的主链接必须是实际打开过的上述对应链接。说明具体任务、对维护多个开源研究页和演示的个人开发者的价值、部署/价格门槛、现有替代办法和最小验证动作。资料只证明官方能力，未运行未试用；不要虚构用户效果。",
+    "focus": "all"
+  },
+  "status": "completed",
+  "message": "研究完成，得到 2 条可保存发现。",
+  "created_at": "2026-10-16T23:45:44.825Z",
+  "records": [
+    {
+      "id": "auto-00d492ef-0e1e-431c-9a72-d48f0721e4e2-9e8f094fb013",
+      "kind": "github",
+      "title": "ClearFlask：为多个研究页集中承接反馈",
+      "url": "https://github.com/clearflask/clearflask",
+      "source": "004 自动研究 · github.com",
+      "evidence": "clearflask/clearflask\nhttps://github.com/clearflask/clearflask\n> Open-source Feedback Management Tool.\n定位：README 开头；部署依据见 Self Hosting、Email、Self-managed behind reverse proxy\n日期依据：2026-10-17读取默认分支正文；未固定提交版本，页面未显示明确更新日期。\n读取状态：工具曾打开页面；AI摘录尚未独立逐字核验\n本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。\n\n研究方向：继续核查个人开发者的反馈整理方案，只保留2个候选：GitHub项目 https://github.com/clearflask/clearflask 和AI产品 https://help.canny.io/en/articles/8202451-autopilot 。先实际搜索；每次打开只打开一个完整URL，逐一读取这两个主来源，再单独读 https://canny.io/pricing 。每条发现的主链接必须是实际打开过的上述对应链接。说明具体任务、对维护多个开源研究页和演示的个人开发者的价值、部署/价格门槛、现有替代办法和最小验证动作。资料只证明官方能力，未运行未试用；不要虚构用户效果。\n采集：2026-10-16T23:46:42.203Z\n运行编号：00d492ef-0e1e-431c-9a72-d48f0721e4e2",
+      "understanding": "保留研究：仓库正文给出具体部署方法和子路径限制，足以保留为自托管候选；对个人工作流的收益仍待验证。\n\n任务是让维护多个开源研究页和演示的个人开发者，将读者建议集中到统一反馈服务。仓库将其定义为开源反馈管理工具、Canny/UserVoice替代品，采用Apache-2.0许可证；此处按普通软件评估。对个人研究者的潜在价值是减少反馈入口分散，但尚无实测证明。README提供Docker Compose和Helm部署，涉及数据库、邮件、域名及TLS配置；明确不面向子路径部署，因此不能直接照搬编号研究页的部署方式，需要另设域名或子域名服务。\n\n已有办法与边界：可先沿用GitHub Issues/Discussions配合项目标签，或用表格人工整理；这是待比较的低投入基线，跨页归并仍需人工。仓库也提供托管服务入口，但本次正文未给出具体价格。\n\n未知：未运行；最低服务器资源、月度托管成本、备份升级工时、多项目隔离和中文体验未知。未固定提交版本，也未验证维护响应速度、实际使用频率或付费意愿。",
+      "nextStep": "后续在隔离环境固定一个提交，按README部署本地实例，录入来自两个研究页的各3条测试反馈，验证项目区分、检索与状态整理流程，并记录部署耗时和资源占用。",
+      "status": "todo",
+      "createdAt": "2026-10-16T23:46:42.203Z",
+      "updatedAt": "2026-10-16T23:46:42.203Z",
+      "trashedAt": null
+    },
+    {
+      "id": "auto-00d492ef-0e1e-431c-9a72-d48f0721e4e2-e64a537cbfe6",
+      "kind": "ai",
+      "title": "Canny Autopilot：提取与归并分散反馈",
+      "url": "https://help.canny.io/en/articles/8202451-autopilot",
+      "source": "004 自动研究 · help.canny.io",
+      "evidence": "Autopilot | Canny Help Center\nhttps://help.canny.io/en/articles/8202451-autopilot\n> Autopilot is Canny's AI-powered suite of tools to automate the process of collecting, organizing, and refining feedback.\n定位：Canny 撰写，Overview；边界见 Sources、Things to note\n日期依据：正文标注 June 5, 2026；2026-10-17读取。\n读取状态：工具曾打开页面；AI摘录尚未独立逐字核验\n本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。\n\nPricing | Canny\nhttps://canny.io/pricing\n> A tracked user is any user associated with feedback.\n定位：What is a tracked user?；价格见 Free、Pro；超额规则见 FAQ\n日期依据：2026-10-17读取当前价格页；页面未标注价格生效日期。\n读取状态：工具曾打开页面；AI摘录尚未独立逐字核验\n本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。\n\n研究方向：继续核查个人开发者的反馈整理方案，只保留2个候选：GitHub项目 https://github.com/clearflask/clearflask 和AI产品 https://help.canny.io/en/articles/8202451-autopilot 。先实际搜索；每次打开只打开一个完整URL，逐一读取这两个主来源，再单独读 https://canny.io/pricing 。每条发现的主链接必须是实际打开过的上述对应链接。说明具体任务、对维护多个开源研究页和演示的个人开发者的价值、部署/价格门槛、现有替代办法和最小验证动作。资料只证明官方能力，未运行未试用；不要虚构用户效果。\n采集：2026-10-16T23:46:42.203Z\n运行编号：00d492ef-0e1e-431c-9a72-d48f0721e4e2",
+      "understanding": "保留研究：官方文档与价格页提供具体能力、审批边界和费用门槛，适合小样本验证；不能据此推断实际用户效果。\n\n任务是从研究页或演示的反馈渠道提取建议、识别重复项并供维护者复核。官方文档支持连接来源、手动审批建议或自动建帖与合并，也提供AI API入口。对个人开发者的潜在价值是辅助整理同一问题的不同表述；若主要反馈来自GitHub Issues，已读文档不足以证明能直接自动采集。托管服务无需自建服务器；价格页显示Free为0美元/月、25名tracked users，Pro按年付费起价79美元/月。tracked users包括被Autopilot发现反馈的用户，不是访问人数。\n\n已有办法与边界：可用人工标签与表格归并，或先使用Canny反馈门户并人工处理。Autopilot手动模式仍需审批；待处理项达到100条会暂停处理，表格导入的帖子不会被扫描。低反馈量下是否优于人工未知。\n\n未知：未试用；中文提取准确率、跨项目误合并率及节省时间未知。超额且未设支出上限可能自动升级；达到支出上限会停止跟踪新用户。旧版credits规则不适用于2025-05-08之后注册的新账户；具体来源接入权限仍需账户内核对。",
+      "nextStep": "后续用Free计划开启手动模式，让测试者通过门户提交不超过25名用户的10条中文样本，涵盖同项目重复项和跨项目相似项；对照人工标注记录漏检、误合并及复核耗时。",
+      "status": "todo",
+      "createdAt": "2026-10-16T23:46:42.203Z",
+      "updatedAt": "2026-10-16T23:46:42.203Z",
+      "trashedAt": null
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://github.com/clearflask/clearflask",
+      "title": "clearflask/clearflask",
+      "role": "official_repo",
+      "quote": "Open-source Feedback Management Tool.",
+      "location": "README 开头；部署依据见 Self Hosting、Email、Self-managed behind reverse proxy",
+      "date_basis": "2026-10-17读取默认分支正文；未固定提交版本，页面未显示明确更新日期。",
+      "access": "page_excerpt",
+      "opened_in_trace": true,
+      "verification": "tool_read_excerpt",
+      "collected_at": "2026-10-16T23:46:42.200Z",
+      "local_read": {
+        "status": "unavailable",
+        "http_status": null,
+        "at": "2026-10-16T23:46:42.203Z"
+      },
+      "verification_note": "本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。"
+    },
+    {
+      "url": "https://help.canny.io/en/articles/8202451-autopilot",
+      "title": "Autopilot | Canny Help Center",
+      "role": "official_product",
+      "quote": "Autopilot is Canny's AI-powered suite of tools to automate the process of collecting, organizing, and refining feedback.",
+      "location": "Canny 撰写，Overview；边界见 Sources、Things to note",
+      "date_basis": "正文标注 June 5, 2026；2026-10-17读取。",
+      "access": "page_excerpt",
+      "opened_in_trace": true,
+      "verification": "tool_read_excerpt",
+      "collected_at": "2026-10-16T23:46:42.200Z",
+      "local_read": {
+        "status": "unavailable",
+        "http_status": null,
+        "at": "2026-10-16T23:46:42.203Z"
+      },
+      "verification_note": "本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。"
+    },
+    {
+      "url": "https://canny.io/pricing",
+      "title": "Pricing | Canny",
+      "role": "official_product",
+      "quote": "A tracked user is any user associated with feedback.",
+      "location": "What is a tracked user?；价格见 Free、Pro；超额规则见 FAQ",
+      "date_basis": "2026-10-17读取当前价格页；页面未标注价格生效日期。",
+      "access": "page_excerpt",
+      "opened_in_trace": true,
+      "verification": "tool_read_excerpt",
+      "collected_at": "2026-10-16T23:46:42.200Z",
+      "local_read": {
+        "status": "unavailable",
+        "http_status": null,
+        "at": "2026-10-16T23:46:42.203Z"
+      },
+      "verification_note": "本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。"
+    }
+  ],
+  "actions": [
+    {
+      "id": "exec-df7349f4-7798-46dc-a927-b8a0ef59f921",
+      "type": "search",
+      "status": "completed",
+      "queries": [
+        "ClearFlask GitHub self hosted feedback roadmap Canny Autopilot feedback pricing",
+        "个人开发者 用户反馈 整理 ClearFlask Canny Autopilot"
+      ],
+      "urls": [],
+      "at": "2026-10-16T23:45:59.068Z"
+    },
+    {
+      "id": "exec-19de2c91-782b-4d69-9711-2785eeda7d56",
+      "type": "open_page",
+      "status": "completed",
+      "queries": [],
+      "urls": [
+        "https://github.com/clearflask/clearflask"
+      ],
+      "at": "2026-10-16T23:46:03.099Z"
+    },
+    {
+      "id": "exec-13d4bafd-06a2-4c28-b210-228487ec3f3b",
+      "type": "open_page",
+      "status": "completed",
+      "queries": [],
+      "urls": [
+        "https://help.canny.io/en/articles/8202451-autopilot"
+      ],
+      "at": "2026-10-16T23:46:06.973Z"
+    },
+    {
+      "id": "exec-ec3d3437-b807-4a71-9d3e-de38bdfc59b2",
+      "type": "open_page",
+      "status": "completed",
+      "queries": [],
+      "urls": [
+        "https://canny.io/pricing"
+      ],
+      "at": "2026-10-16T23:46:12.671Z"
+    }
+  ],
+  "excluded": [],
+  "limitations": [
+    "依据均为官方仓库或产品资料，未获得独立用户经历，不能推断需求规模、使用频率、付费意愿或实际收益。",
+    "未部署ClearFlask、未试用Canny，也未执行任何注册、接入或测试；最小验证动作均为后续建议。",
+    "价格和默认分支内容可能变化；Canny价格表的部分功能勾选未在文本中清晰呈现，未据此断言全部套餐权限。"
+  ],
+  "summary": "ClearFlask值得验证的是集中反馈入口与自托管能力，但独立服务的运维要求与研究页的子路径部署方式存在适配门槛。Canny Autopilot值得验证的是反馈提取与去重，但价值取决于实际反馈来源、人工复核负担和参与反馈的用户数。官方资料能证明功能声明，不能证明个人开发者使用后的收益。",
+  "usage": {
+    "input_tokens": 131288,
+    "cached_input_tokens": 93312,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1763,
+    "reasoning_output_tokens": 0
+  },
+  "finished_at": "2026-10-16T23:46:42.203Z"
+}

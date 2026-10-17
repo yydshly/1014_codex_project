@@ -1,6 +1,6 @@
 # Web 展示与部署
 
-本站通过 GitHub Actions 汇总并发布静态研究网页。当前发布清单为 006、007 与 014，其他项目保留各自本地环境；正式清单见 `web/pages.json`，上线验证记录见 [Pages 说明](PAGES.md)。
+本站通过 GitHub Actions 汇总并发布静态研究网页。当前发布清单为 004、006、007 与 014，其他项目保留各自本地环境；正式清单见 `web/pages.json`，上线验证记录见 [Pages 说明](PAGES.md)。
 
 ## 一个站点，多个子项目入口
 
@@ -64,3 +64,9 @@ _site/
 ### 007 Atlas 与月门水庭研究
 
 007 发布完整研究、高清一图总览与可旋转缩放的真实 3D 场景，分别使用 `research.html`、`overview.html` 与 `index.html#scene`。构建器 `web/build.mjs` 打包已有图片、视频、工程和 GLB，并检查资源、锚点、依赖与哈希；CI 仅新增 Pillow 11.3.0，无需运行 Blender 或模型服务。详细发布方式与验收见 [Pages 说明](PAGES.md#007-atlas-资产工作流研究与月门水庭实证)。
+
+### 004 问题驱动研究工作台
+
+004 发布 `research.html` 产品总览与 `index.html` 研究工作区，沿用 `assets/product-overview.png` 引导图。总览解释能力、原理、价值、产品目标、适用方向和十类扩展构想；工作区提供 10 个网站入口、历史样本、浏览器采集计划与发现库。
+
+`web/build.mjs` 执行依赖安装、检查与测试，再以静态模式构建。公开版本不请求本地研究 API，不包含服务器、环境文件或 `.runtime`；自动联网研究仍需本机 Node 服务和 Codex。发布与公网验证记录见 [004 部署记录](../projects/004-jasonzhu-ai/deployment.json)。

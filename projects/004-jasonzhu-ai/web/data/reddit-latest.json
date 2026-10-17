@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "id": "session-reddit-20261015",
+  "status": "completed",
+  "mode": "session_exploration",
+  "collected_at": "2026-10-15T00:08:59.392Z",
+  "analysed_at": "2026-10-15T00:13:18.113Z",
+  "query": "client feedback / extra revisions",
+  "community": "graphic_design",
+  "acquisition": "OpenAI 当前会话联网检索与页面读取",
+  "analysis_engine": "OpenAI 当前会话分析；不是网页独立 API 运行",
+  "limitations": [
+    "本次展示两条可读页面的片段与相关回复，不是完整评论导出",
+    "本地 Reddit JSON 直连返回 403；已有 MiniMax 搜索未取得 Reddit 原帖",
+    "OpenAI Responses API 搜索方案已按官方文档准备；当前未配置独立 API 凭据，未进行该 API 的实测",
+    "原文显示相对时间，未换算绝对发布日期；需求与付费意愿待核实"
+  ],
+  "records": [
+    {
+      "source": {
+        "id": "1psv1ma",
+        "channel": "Reddit",
+        "subreddit": "graphic_design",
+        "url": "https://www.reddit.com/r/graphic_design/comments/1psv1ma/manage_client_feedbacks/",
+        "title": "Manage client feedbacks",
+        "published_date": null,
+        "date_basis": "网页读取显示相对时间，未将相对时间换算成绝对发布日期",
+        "collected_at": "2026-10-15T00:08:59.392Z",
+        "access": "本次会话联网读取的页面文本，含可读取的相关回复；本地直连为403",
+        "retrieval_method": "research_tool_import",
+        "content": "# Manage client feedbacks\n\nAsking Question (Rule 4) Hello there,\nI am new to graphics designing client work and I recently got my first 3 clients. However I noticed one common behaviour in all 3 and that is asking for feedbacks infinitely - like it goes beyond what we agreed to and what the budget can handle. Even if they are small changes, it takes time to revert and payment is kept on hold till then. I just wanted to know is this how it usually is? Or am i doing something wrong? Is there a tool we can use to stop this?\n\nThanks in advance\n\nShare Sort by:\n\nBest\nOpen comment sort options\n\n* Best\n\n* Top\n\n* New\n\n* Controversial\n\n* Old\n\n* Q&A\n# Comments Section\n\nWarPopular8709 •\n\n10mo ago Ask for payment in advance, and a contract that states this and also your work flow, should be initial research and lots of drawings then refine some and have customers pick their favourite 3-5 and then refine them some more and have them pick their favourite and finally finish it up and send it.\n\nFeedback is good but you need to stay in control, they are paying you to create their vision but you must also keep it grounded.\n\nFantastic-Eye816 •\n10mo ago Thanks for your inputs. However what I’m trying to point out is how to make them aware that for each request, there is effort and time involved. Is there no way to track how much work was done. Also there is another thing that if they are not satisfied with the work but have to forcefully bind by the contract- they won’t return no?\n\nWarPopular8709 •\n\n10mo ago When you have feedback from a customer you would quote how many extra hours it would take to adjust your designs and add in how many hours. Usually it’s not best practice to say how many hours so it’s best to say I’ll get back to you in however many days with the feedback.\nIf they aren’t satisfied with the product without a contract they are just as likely to not come back but may take advantage of you and not pay, the contract just protects you and the customer from malpractice really. You can still requote them. You can take payment at the end which is why the contract is in place aswell.\n\nFantastic-Eye816 •\n\n10mo ago I see what you mean- makes sense. I’ll try to implement this from next time. Thanks\n\nmore reply Grouchy-Savings-3587 •\n\n10mo ago Set revision limits upfront - 2-3 rounds max. Define what a \"round\" means (all feedback at once, you make changes once). After that, bill separately at your hourly rate. Stops endless tweaking since they know it costs more.\n\nthrivefulxyz •\n\n10mo ago Try to make the feedback rounds sound official. Don't just be like, \"hey client here's the draft what do you think?\"\nBe more like \"here's the first draft, please provide consolidated feedback from all stakeholders by tomorrow morning. Next, I'll work on revisions and you'll have one last round of revisions. Please be thorough with your feedback so we can keep the project on schedule and not incrue extra costs for additional changes.\"\n\nThe more of big deal you make of it, the more of a big deal people think it is too. Frame the design process as something with reverence.",
+        "content_kind": "retrieved_page_excerpt",
+        "complete": false
+      },
+      "analysis": {
+        "problem": "客户持续追加修改，设计师难以说明额外工作与收费",
+        "audience": "刚开始承接客户项目的平面设计师",
+        "task": "在约定范围内收集反馈、完成修改并收款",
+        "obstacle": "修改不断追加；发帖者追问怎样说明每次修改涉及的工作量",
+        "impact": "发帖者提到修改超过约定和预算，付款被拖到修改完成之后；频率与实际耗时仍未知",
+        "evidence": [
+          {
+            "quote": "it goes beyond what we agreed to and what the budget can handle.",
+            "location": "发帖正文"
+          },
+          {
+            "quote": "payment is kept on hold till then.",
+            "location": "发帖正文"
+          },
+          {
+            "quote": "Is there no way to track how much work was done.",
+            "location": "发帖者后续回复"
+          }
+        ],
+        "existing_solutions": [
+          {
+            "name": "提前约定修改轮次",
+            "summary": "回复建议设定 2–3 轮上限，并约定超出部分的收费方式；未验证发帖者的使用结果",
+            "kind": "流程办法",
+            "quote": "Set revision limits upfront - 2-3 rounds max.",
+            "location": "Grouchy-Savings-3587 的回复"
+          },
+          {
+            "name": "把分散反馈合并为一轮",
+            "summary": "回复将一轮定义为一次汇总反馈后统一修改，减少零散追加；效果尚待回访",
+            "kind": "流程办法",
+            "quote": "Define what a \"round\" means (all feedback at once, you make changes once).",
+            "location": "Grouchy-Savings-3587 的回复"
+          }
+        ],
+        "unknowns": [
+          "每个项目实际追加多少次、耗时多少尚未知",
+          "合同、轮次约定与工作量追踪分别缺在哪里，需要进一步区分",
+          "已有流程能否解决、是否愿意购买软件，都没有证据"
+        ],
+        "next_step": "取得最近一次项目的脱敏反馈记录，确认追加修改如何被提出、计数、说明和批准。",
+        "interpretation": "优先核实工作量记录与收费沟通的实际缺口；先检查流程办法的效果。",
+        "grounding": "excerpt_checked"
+      }
+    },
+    {
+      "source": {
+        "id": "1wovm4l",
+        "channel": "Reddit",
+        "subreddit": "graphic_design",
+        "url": "https://www.reddit.com/r/graphic_design/comments/1wovm4l/how_do_you_handle_extra_revisions/",
+        "title": "How do you handle extra revisions?",
+        "published_date": null,
+        "date_basis": "网页读取显示相对时间，未将相对时间换算成绝对发布日期",
+        "collected_at": "2026-10-15T00:08:59.392Z",
+        "access": "本次会话联网读取的页面文本，含可读取的相关回复；本地直连为403",
+        "retrieval_method": "research_tool_import",
+        "content": "# How do you handle extra revisions?\n\nAsking Question (Rule 4) How do you handle extra revisions? Do you charge for more revisions?\n\nShare Sort by:\n\nBest\n\nOpen comment sort options\n\n* Best\n\n* Top\n\n* New\n\n* Controversial\n\n* Old\n\n* Q&A\n\nDesigner_Sea_6652 •\n\n2d ago Did you have a “contract” stating number of revisions included (usually about 3) and then state $ for each additional round of changes. Makes clients really check the work when they know they’re going to get charged more\nmetaphori •\n\n2d ago +1! And include the scope for the revisions! Dates/turnaround expectations as well.\n\nMore replies LouieValkhof •\n\n2d ago Agree with putting a number in the contract, but it only held up for us once we also wrote down what one round is. For a long time feedback came in over chat, email and comments in a shared folder, a bit at a time, and \"3 rounds\" meant nothing because nobody could say which round a message belonged to. Now a round is one batch of feedback, collected in one place and sent back together. Anything after that batch starts the next round.\nAnd every time we deliver, the mail says how many rounds are left, so when an extra one gets charged it's not news to anyone.\nWhether you charge per round or per hour after that probably depends on how big the changes usually are. Are your extra rounds mostly small tweaks, or do clients change direction halfway?\n\nrandomcourage •\n\n2d ago I have worked with few designer, some have 3 some have 4 revision, some have unlimited revision, but they all charge differently\n\nedit: I have never been charged extra before even if I ask for extra revision, so...\n\nMelodic-Excitement-9 •\n\n1d ago Image: Profile Badge for the Achievement Top 1% Commenter Top 1% Commenter\n\nI sure do. Three round revision max. Else pay more or go elsewhere.\n\nDiligent-Educator409 •\n\n2d ago I include 3 in the quote and also note that the quote will be revised if the scope of the project changes. Usually more than 3 rounds of revisions is either that they are communicating poorly, they're being indecisive, or the project has evolved / changed. At that point, I say that we're reaching the point where the project is developing beyond the original scope of the quote and I'll provide an updated quote based on the likely amount of work remaining before proceeding.\n\nemotionalthroatpunch •\n2d ago I usually include two rounds of revisions on projects where I charge a flat fee, with anything beyond that being billed at an hourly rate.\n\nGot a project on at the moment with about ~30 discrete deliverables, some of which are currently sitting at draft 10, as the client decided to suddenly involve a bunch of other stakeholders in the feedback process. It’s a punish for sure, but I’m gonna make about three times what I originally quoted on the job, so, there’s that. 🙃\n\nPatrickBatemansEgo •\n\n1d ago Bill for them.\n\nAppropriate-Two-447 •\n\n1d ago Just be honest with the client. Tell them you allocated a certain amount of time to the project and you need to bill for additional time for additional revisions. I find that if you just talk to the client directly and honestly, most of the time they're completely willing. If they're not, they're a shitty client and you don't want them anyway.\n\neeeeeewwwwwwwwwwwww •\n\n1d ago The number of allowed revisions should be in the contract. Anything outside of that is more\n\nOtherwiseCriticism50 •\n\n1d ago I use Revision Guard.\n\nTime-Minute1897 •\n\n1d ago Start with a contract and a specified number of revisions. More revisions than in the contract, more money.\n\nmsrivette •\n\n1d ago Image: Profile Badge for the Achievement Top 1% Commenter Top 1% Commenter\nAdditional revisions that are beyond the scope of the contract are charged hourly.\n\nPink-Witch- •\n\n17h ago By charging extra money",
+        "content_kind": "retrieved_page_excerpt",
+        "complete": false
+      },
+      "analysis": {
+        "problem": "额外修改怎样计数、提醒与收费，现有流程容易含糊",
+        "audience": "按项目收费、需要管理客户修改的设计师",
+        "task": "区分已包含和额外的修改，让双方理解还剩多少轮",
+        "obstacle": "一位回复者提到反馈分散在聊天、邮件和共享文件夹里，难以判断消息属于哪一轮",
+        "impact": "发帖正文在询问收费办法；具体代价主要来自回复者经验，不能全部归到发帖者身上",
+        "evidence": [
+          {
+            "quote": "How do you handle extra revisions? Do you charge for more revisions?",
+            "location": "发帖正文"
+          },
+          {
+            "quote": "For a long time feedback came in over chat, email and comments in a shared folder, a bit at a time, and \"3 rounds\" meant nothing",
+            "location": "LouieValkhof 的回复"
+          }
+        ],
+        "existing_solutions": [
+          {
+            "name": "统一收集一批反馈，并提示剩余轮次",
+            "summary": "回复者描述将一轮定义为集中收集的一批反馈，交付邮件中说明剩余轮次；属于个人经验",
+            "kind": "流程办法",
+            "quote": "Now a round is one batch of feedback, collected in one place and sent back together.",
+            "location": "LouieValkhof 的回复"
+          },
+          {
+            "name": "Revision Guard",
+            "summary": "一条回复提到使用该工具；功能、效果与推荐动机均未核实",
+            "kind": "工具提及 · 未验证",
+            "quote": "I use Revision Guard.",
+            "location": "OtherwiseCriticism50 的回复"
+          }
+        ],
+        "unknowns": [
+          "发帖者本人是否已遇到轮次失控及其影响未知",
+          "一条工具推荐不足以证明有效，可能包含推广动机",
+          "需要区分纯粹收费约定问题和需要新软件解决的缺口"
+        ],
+        "next_step": "核实一批真实修改记录，比较集中反馈、轮次提醒与已有工具之后，是否仍有重复的手工工作。",
+        "interpretation": "补充线索：已有明确流程办法和工具提及，产品缺口待验证。",
+        "grounding": "excerpt_checked"
+      }
+    }
+  ]
+}

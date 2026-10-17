@@ -32,6 +32,20 @@
         "label": "真实 3D 场景",
         "path": "007-autumn-courtyard-blender/#scene"
       }
+    ],
+    "004": [
+      {
+        "label": "产品能力与方向",
+        "path": "004-jasonzhu-ai/research.html"
+      },
+      {
+        "label": "研究入口与工作区",
+        "path": "004-jasonzhu-ai/index.html#directory"
+      },
+      {
+        "label": "我的发现",
+        "path": "004-jasonzhu-ai/index.html#discoveries"
+      }
     ]
   }
 }

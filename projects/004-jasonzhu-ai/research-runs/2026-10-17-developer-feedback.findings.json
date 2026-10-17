@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "82d9fd6d-f191-42b3-bb66-10d5605716b3",
+      "kind": "need",
+      "title": "客户反馈分散，难以判断哪些属于本轮修改",
+      "url": "https://www.reddit.com/r/webdesign/comments/1pr8cuc/how_do_you_get_clear_client_feedback_without/",
+      "source": "Reddit · r/webdesign；2026-10-17 由当前会话检索、读取并录入",
+      "evidence": "采集时间：2026-10-17（北京时间）。方式：当前会话联网检索并读取页面；不是004网页自动采集。以下为可读片段，未取得完整评论导出。\n\n主来源：How do you get clear client feedback without endless revisions?\nhttps://www.reddit.com/r/webdesign/comments/1pr8cuc/how_do_you_get_clear_client_feedback_without/\n作者：u/Quirky-Pollution-930。索引标注2025-12-20；读取页显示10mo ago，精确时间未独立复核。\n楼主后续回复原话：\n> feedback still comes in scattered and it’s hard to tell what counts as a revision vs just a comment.\n回复者timbredesign：\n> A revision round should be a set of changes that is delivered in one document.\n楼主、回复者的使用经历为自述，未取得项目记录。Filestage、Kreatli、BugHerd团队的推广回复不作为独立用户证明。\n\n交叉材料：How do you handle client feedback when building websites?\nhttps://www.reddit.com/r/SideProject/comments/1vriqsa/how_do_you_handle_client_feedback_when_building/\n作者：u/Business_Company_579。索引标注2026-08-18；读取页显示2mo ago，精确时间未独立复核。该楼主是询问流程，不直接视作本人遭遇；下列为评论者自述。\nahm_live评论：\n> then each item is url + what they see + what they expect.\nKind-Bathroom5159评论：\n> they drift back to whatsapp within a week regardless.\n\n已有方案核查：Filestage官方使用文档\nhttps://help.filestage.io/en/articles/9112521-how-to-share-content-with-reviewers-and-control-their-permissions\n官方功能小节原话：\n> Disable comments on approved files\n文档说明可通过免注册审阅链接收集反馈（仍需姓名和邮箱）、设截止日期和邮件提醒。只证明官方有此功能说明，未实测效果或价格。",
+      "understanding": "本次判断：继续补采，尚不足以决定做产品。\n\n已知：楼主自述设计意见模糊、反馈零散，即使约定修改次数，也难区分一次修改与普通评论。可见回复提出统一反馈文档、限定审阅时间、按轮次处理等办法；没有核实楼主采用后的效果。\n\n交叉观察：另一篇网站审阅讨论中，有评论者自述多人意见冲突、客户回到 WhatsApp；也有人用“URL＋现象＋预期＋一轮一份编号清单”应对。两篇不同帖子只构成小样本线索，不能据此估计需求规模。\n\n已有方案：Filestage 官方文档提供免注册审阅链接、截止日期提醒和按状态关闭评论；仅核查文档，未试用。集中收集和轮次管理已有方案，潜在缺口更可能在客户是否愿意遵守流程、旧渠道意见如何转为明确任务，需要验证。\n\n对我的价值：为网页项目的反馈流程提供参考；若探索 AI 功能，可先试“整理零散意见、保留原话、标出冲突和待确认项”，最终修改范围由人确认。\n\n未知：真实频率、耗时、使用工具的成本、改用后的效果、付费意愿。推广评论不计作独立用户证据。",
+      "nextStep": "取一份经许可的脱敏网页反馈记录，对比人工表格与 AI 整理：是否保留页面/版本、漏掉要求、误合并或遗漏冲突；再请实际使用者确认是否省时。先验证整理价值，再决定是否开发。",
+      "status": "researching",
+      "createdAt": "2026-10-16T22:57:02.762Z",
+      "updatedAt": "2026-10-16T22:57:02.762Z",
+      "trashedAt": null
+    },
+    {
+      "id": "auto-287dbc3c-6320-402a-a8a6-30ea89542668-f6d95b27a41f",
+      "kind": "need",
+      "title": "让客户继续使用原渠道，由设计师维护一份可追溯修改清单",
+      "url": "https://www.reddit.com/r/freelancing/comments/1tvzmep/how_do_you_collect_client_feedback_on_websites/",
+      "source": "004 自动研究 · www.reddit.com",
+      "evidence": "How do you collect client feedback on websites and designs?\nhttps://www.reddit.com/r/freelancing/comments/1tvzmep/how_do_you_collect_client_feedback_on_websites/\n> What helps me most is turning everything into one numbered change list before revisions start.\n定位：Upbeat_Opinion_3465回复，正文第76—77行；主帖是流程调研\n日期依据：搜索结果标注回复为2026-06-04；打开页显示4mo ago。\n读取状态：工具曾打开页面；AI摘录尚未独立逐字核验\n本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。\n\nManaging client feedback is harder than managing the actual work\nhttps://www.reddit.com/r/projectmanagement/comments/1x5ps2i/managing_client_feedback_is_harder_than_managing/\n> I tried forcing everything into one email thread, but clients kept replying on WhatsApp.\n定位：Olivia_Poarch主帖第21—24行；本人回复第62、77、107行\n日期依据：搜索结果标注主帖2026-10-14；打开页显示2d ago。回复主要显示相对时间。\n读取状态：只有搜索摘要，不能当作原文\n本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。\n\n研究方向：自由职业设计师如何整理客户零散的修改意见？核查真实用户经历、已有办法，以及 AI 整理仍需验证的缺口。\n采集：2026-10-16T23:11:11.159Z\n运行编号：287dbc3c-6320-402a-a8a6-30ea89542668",
+      "understanding": "保留研究：有具体手工流程及统一入口失败的自述，可形成明确的对照研究。\n\n一位回复者自述，在修改开始前将Figma、语音和消息中的请求汇总为编号清单，减少客户声称意见遗漏的混乱。另一位客户项目工作者尝试统一邮件入口却失败，周度汇总又晚于团队执行。对个人研究者有价值的切口是：不改变客户习惯，验证及时归并、原文追溯和确认状态是否能减少遗漏。第二个案例并未确认是自由职业设计师。\n\n已有办法与边界：手动编号清单、Figma评论、页面批注、邮件确认已经可用，且有主观有效反馈。统一入口也有失败案例；同日汇总和即时确认是回复建议，未见该发帖者实际验证。\n\n未知：整理耗时、漏项率、项目频率、付费意愿未知；语音与截图归并是否比手工更省事未知。",
+      "nextStep": "用一组获授权且脱敏的完整修改记录，对比手工清单与AI辅助清单的漏项、误合并和校对耗时。",
+      "status": "todo",
+      "createdAt": "2026-10-16T23:11:11.159Z",
+      "updatedAt": "2026-10-16T23:11:11.159Z",
+      "trashedAt": null
+    },
+    {
+      "id": "auto-7d9199d1-2429-44c4-a685-568390ca0513-9d400d5ee64b",
+      "kind": "github",
+      "title": "Fider：先验证统一反馈入口是否足够",
+      "url": "https://github.com/getfider/fider",
+      "source": "004 自动研究 · github.com",
+      "evidence": "getfider/fider\nhttps://github.com/getfider/fider\n> Fider is a feedback portal for feature requests and suggestions.\n定位：README 标题；Getting Started；仓库许可证标识\n日期依据：研究时读取默认分支页面，未固定提交版本。\n读取状态：工具曾打开页面；AI摘录尚未独立逐字核验\n本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。\n\nAnyone else feel overwhelmed by Feedback tools\nhttps://www.reddit.com/r/ProductManagement/comments/1tcdx0m/anyone_else_feel_overwhelmed_by_feedback_tools/\n> We're currently use canny in our teams\n定位：u/Kiddoklm 主帖；回复 aaronorjohnson 建议追问请求背后的用途\n日期依据：页面显示5mo ago，未取得绝对发布日期。\n读取状态：只有搜索摘要，不能当作原文\n本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。\n\n研究方向：个人开发者发布小工具后，如何收集分散的用户反馈、识别重复问题并决定下一步做什么？找最多3个值得研究的方案，尽量包括2个GitHub项目和1个AI产品。读仓库README、许可证和官方文档，说明它们解决的具体任务、对正在研究多个开源项目并做网页演示的个人开发者有什么价值、部署或费用门槛、现成替代办法和一个最小验证动作。优先功能明确、个人可尝试的方案；普通软件不要标成AI。项目未运行、产品未试用、需求仅来自官方描述时明确标注，不把宣传或热度当成真实用户效果。\n采集：2026-10-16T23:44:59.232Z\n运行编号：7d9199d1-2429-44c4-a685-568390ca0513\n\n当前会话补核来源（2026-10-17，读取可见正文；不改变上方网页运行的核验等级）：\nhttps://docs.fider.io/hosting-instance/ — Prerequisites：Docker、Compose、PostgreSQL 12+、E-mail Sender。\nhttps://www.fider.io/ — FAQ：免费入口、250条反馈公平使用限制。\nhttps://github.com/getfider/fider/issues/1298 — CodingPassionYT，2025-05-02，子路径部署诉求；可见页标记Open，仅作部署风险线索。",
+      "understanding": "继续核实：任务明确且可自托管，适合作为简单入口候选；许可证全文、部署细节与归并能力仍需补核。\n\nFider 是收集功能请求和建议的普通反馈门户，未发现足以将其标为AI产品的依据。对维护多个开源研究页和演示的个人开发者，可研究将各页反馈导向统一入口，并保存项目编号、演示地址与复现上下文。README明确提供云托管与免费自托管，后者由使用者承担维护。仓库标识AGPL-3.0；许可证全文尚未读取。项目未运行，自动跨渠道采集、重复归并和多项目隔离均未证实。用户讨论也提示：集中收集后仍需判断哪些问题值得处理。\n\n已有办法与边界：可先用表单加表格，或GitHub Issues记录项目、原文、重复组、影响与状态；这些是可执行替代方案，实际效果未测试。Fider的价值取决于门户能否降低反馈提交和整理负担。\n\n未知：自托管资源、邮件配置、云托管现价、多项目能力及去重操作未知；AGPL全文义务待核。没有独立用户效果或付费意愿证据。\n\n来源提醒：部分辅助材料只有搜索摘要，相关判断需要回读原文，不能当作已确认事实。\n\n2026-10-17 当前会话补核：官方 Docker 文档列出 Docker Compose、PostgreSQL 12+ 和邮件发送服务，邮件用于登录。官网提供免费云端入口（注明250条反馈公平使用限制）。因此对你最先值得研究的是简单的提交、投票、状态反馈流程，可先比较表单或 GitHub Issues，再决定是否自托管。当前读到的 Issue #1298 描述子路径部署需求且页面标记 Open，不能假设可直接塞进现有编号子路径网站；正式接入前需固定版本并单独验证。以上是文档核查，未安装、未注册试用。",
+      "nextStep": "优先研究：以一个网页演示为对象，用10条脱敏反馈比较“表单/Issues”与Fider的提交、查找、投票和状态回告流程。先看公开演示与源码；如要本地运行，固定提交，准备PostgreSQL和邮件服务，并先验证独立地址与编号子路径的部署差异。记录维护成本和是否真的减少整理时间。",
+      "status": "todo",
+      "createdAt": "2026-10-16T23:44:59.232Z",
+      "updatedAt": "2026-10-16T23:46:52.784Z",
+      "trashedAt": null
+    },
+    {
+      "id": "auto-00d492ef-0e1e-431c-9a72-d48f0721e4e2-9e8f094fb013",
+      "kind": "github",
+      "title": "ClearFlask：为多个研究页集中承接反馈",
+      "url": "https://github.com/clearflask/clearflask",
+      "source": "004 自动研究 · github.com",
+      "evidence": "clearflask/clearflask\nhttps://github.com/clearflask/clearflask\n> Open-source Feedback Management Tool.\n定位：README 开头；部署依据见 Self Hosting、Email、Self-managed behind reverse proxy\n日期依据：2026-10-17读取默认分支正文；未固定提交版本，页面未显示明确更新日期。\n读取状态：工具曾打开页面；AI摘录尚未独立逐字核验\n本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。\n\n研究方向：继续核查个人开发者的反馈整理方案，只保留2个候选：GitHub项目 https://github.com/clearflask/clearflask 和AI产品 https://help.canny.io/en/articles/8202451-autopilot 。先实际搜索；每次打开只打开一个完整URL，逐一读取这两个主来源，再单独读 https://canny.io/pricing 。每条发现的主链接必须是实际打开过的上述对应链接。说明具体任务、对维护多个开源研究页和演示的个人开发者的价值、部署/价格门槛、现有替代办法和最小验证动作。资料只证明官方能力，未运行未试用；不要虚构用户效果。\n采集：2026-10-16T23:46:42.203Z\n运行编号：00d492ef-0e1e-431c-9a72-d48f0721e4e2\n\n2026-10-17 当前会话补核：\nhttps://clearflask.com/product/analyze — Manage incoming feedback、Prioritize your roadmap、Export and analyze externally；官方功能说明，不是用户效果证据。",
+      "understanding": "保留研究：仓库正文给出具体部署方法和子路径限制，足以保留为自托管候选；对个人工作流的收益仍待验证。\n\n任务是让维护多个开源研究页和演示的个人开发者，将读者建议集中到统一反馈服务。仓库将其定义为开源反馈管理工具、Canny/UserVoice替代品，采用Apache-2.0许可证；此处按普通软件评估。对个人研究者的潜在价值是减少反馈入口分散，但尚无实测证明。README提供Docker Compose和Helm部署，涉及数据库、邮件、域名及TLS配置；明确不面向子路径部署，因此不能直接照搬编号研究页的部署方式，需要另设域名或子域名服务。\n\n已有办法与边界：可先沿用GitHub Issues/Discussions配合项目标签，或用表格人工整理；这是待比较的低投入基线，跨页归并仍需人工。仓库也提供托管服务入口，但本次正文未给出具体价格。\n\n未知：未运行；最低服务器资源、月度托管成本、备份升级工时、多项目隔离和中文体验未知。未固定提交版本，也未验证维护响应速度、实际使用频率或付费意愿。\n\n当前会话补核与优先级：官方 Analyze 页面还列出反馈转任务、合并重复、路线图看板、状态更新通知和导出。对你更直接的研究价值是理解“收集后怎样处理并回告”的流程，可作为004发现库下一阶段设计的参照。排在Fider之后，先看流程和代码，暂不因功能多而承担自托管维护。未实际验证这些功能。",
+      "nextStep": "后续在隔离环境固定一个提交，按README部署本地实例，录入来自两个研究页的各3条测试反馈，验证项目区分、检索与状态整理流程，并记录部署耗时和资源占用。",
+      "status": "todo",
+      "createdAt": "2026-10-16T23:46:42.203Z",
+      "updatedAt": "2026-10-16T23:48:06.588Z",
+      "trashedAt": null
+    },
+    {
+      "id": "auto-00d492ef-0e1e-431c-9a72-d48f0721e4e2-e64a537cbfe6",
+      "kind": "ai",
+      "title": "Canny Autopilot：提取与归并分散反馈",
+      "url": "https://help.canny.io/en/articles/8202451-autopilot",
+      "source": "004 自动研究 · help.canny.io",
+      "evidence": "Autopilot | Canny Help Center\nhttps://help.canny.io/en/articles/8202451-autopilot\n> Autopilot is Canny's AI-powered suite of tools to automate the process of collecting, organizing, and refining feedback.\n定位：Canny 撰写，Overview；边界见 Sources、Things to note\n日期依据：正文标注 June 5, 2026；2026-10-17读取。\n读取状态：工具曾打开页面；AI摘录尚未独立逐字核验\n本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。\n\nPricing | Canny\nhttps://canny.io/pricing\n> A tracked user is any user associated with feedback.\n定位：What is a tracked user?；价格见 Free、Pro；超额规则见 FAQ\n日期依据：2026-10-17读取当前价格页；页面未标注价格生效日期。\n读取状态：工具曾打开页面；AI摘录尚未独立逐字核验\n本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。\n\n研究方向：继续核查个人开发者的反馈整理方案，只保留2个候选：GitHub项目 https://github.com/clearflask/clearflask 和AI产品 https://help.canny.io/en/articles/8202451-autopilot 。先实际搜索；每次打开只打开一个完整URL，逐一读取这两个主来源，再单独读 https://canny.io/pricing 。每条发现的主链接必须是实际打开过的上述对应链接。说明具体任务、对维护多个开源研究页和演示的个人开发者的价值、部署/价格门槛、现有替代办法和最小验证动作。资料只证明官方能力，未运行未试用；不要虚构用户效果。\n采集：2026-10-16T23:46:42.203Z\n运行编号：00d492ef-0e1e-431c-9a72-d48f0721e4e2",
+      "understanding": "保留研究：官方文档与价格页提供具体能力、审批边界和费用门槛，适合小样本验证；不能据此推断实际用户效果。\n\n任务是从研究页或演示的反馈渠道提取建议、识别重复项并供维护者复核。官方文档支持连接来源、手动审批建议或自动建帖与合并，也提供AI API入口。对个人开发者的潜在价值是辅助整理同一问题的不同表述；若主要反馈来自GitHub Issues，已读文档不足以证明能直接自动采集。托管服务无需自建服务器；价格页显示Free为0美元/月、25名tracked users，Pro按年付费起价79美元/月。tracked users包括被Autopilot发现反馈的用户，不是访问人数。\n\n已有办法与边界：可用人工标签与表格归并，或先使用Canny反馈门户并人工处理。Autopilot手动模式仍需审批；待处理项达到100条会暂停处理，表格导入的帖子不会被扫描。低反馈量下是否优于人工未知。\n\n未知：未试用；中文提取准确率、跨项目误合并率及节省时间未知。超额且未设支出上限可能自动升级；达到支出上限会停止跟踪新用户。旧版credits规则不适用于2025-05-08之后注册的新账户；具体来源接入权限仍需账户内核对。\n\n当前会话补核与优先级：已回读官方Autopilot说明及当前价格页，上述提取、合并、人工审批和25名tracked users免费门槛有对应说明。对你的价值主要是参考004未来的“AI建议合并、保留原始证据、人工确认”流程。若目前反馈量少，先用人工归类建立基线，暂不急于付费；等持续积累反馈后再衡量AI是否省时。此判断是针对你当前研究阶段的建议，未注册或试用该产品。",
+      "nextStep": "后续用Free计划开启手动模式，让测试者通过门户提交不超过25名用户的10条中文样本，涵盖同项目重复项和跨项目相似项；对照人工标注记录漏检、误合并及复核耗时。",
+      "status": "todo",
+      "createdAt": "2026-10-16T23:46:42.203Z",
+      "updatedAt": "2026-10-16T23:48:15.761Z",
+      "trashedAt": null
+    }
+  ]
+}
