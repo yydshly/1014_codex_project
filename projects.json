@@ -4,13 +4,14 @@
     {
       "id": "004",
       "slug": "jasonzhu-ai",
-      "title": "问题驱动研究工作台：来源、发现与产品方向",
-      "repository": "https://github.com/zhuyansen/jasonzhu.ai",
-      "summary": "从问题出发，由本地 Codex 搜索、读取公开来源，结合模型分析与来源检查，保存需求、GitHub 项目和 AI 产品。面向个人开发者积累研究依据与下一步，可扩展为研究助手、工具评估、需求雷达和团队研究库；公开网页提供总览与浏览器工作区，自动研究需本地服务。",
+      "title": "从网站入口研究到 AI 研究工作台",
+      "repository": "https://github.com/yydshly/1014_codex_project",
+      "summary": "从 X 帖子中的网站链接出发，评估并补充寻找需求、GitHub 项目和 AI 产品的入口，逐步扩展为“问题 → 搜索原文 → 分析筛选 → 保存发现”的研究工作台。帮助个人开发者扩大观察范围、积累研究依据，可继续探索工具评估、需求雷达等产品；自动研究需本地 Codex。",
       "status": "研究中",
       "preview": "assets/product-overview.png",
       "preview_caption": "004 产品全景图：问题、来源、搜索读取、分析筛选、发现库、人工验证，以及适用方向、扩展产品与当前边界。",
-      "demo_url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html"
+      "demo_url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html",
+      "source_url": "https://x.com/shenxiankk/status/2107493081146691700"
     },
     {
       "id": "006",

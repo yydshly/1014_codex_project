@@ -14,14 +14,14 @@
 
 | 编号 | 项目 | 摘要 | 状态 | 研究记录 | 来源链接 | Web 演示 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 004 | [问题驱动研究工作台：来源、发现与产品方向](projects/004-jasonzhu-ai/README.md) | 从问题出发，由本地 Codex 搜索、读取公开来源，结合模型分析与来源检查，保存需求、GitHub 项目和 AI 产品。面向个人开发者积累研究依据与下一步，可扩展为研究助手、工具评估、需求雷达和团队研究库；公开网页提供总览与浏览器工作区，自动研究需本地服务。 | 研究中 | [研究笔记](projects/004-jasonzhu-ai/RESEARCH.md) | [GitHub](https://github.com/zhuyansen/jasonzhu.ai) | [演示](https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html) |
+| 004 | [从网站入口研究到 AI 研究工作台](projects/004-jasonzhu-ai/README.md) | 从 X 帖子中的网站链接出发，评估并补充寻找需求、GitHub 项目和 AI 产品的入口，逐步扩展为“问题 → 搜索原文 → 分析筛选 → 保存发现”的研究工作台。帮助个人开发者扩大观察范围、积累研究依据，可继续探索工具评估、需求雷达等产品；自动研究需本地 Codex。 | 研究中 | [研究笔记](projects/004-jasonzhu-ai/RESEARCH.md) | [原帖](https://x.com/shenxiankk/status/2107493081146691700) | [演示](https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html) |
 | 006 | [随机门：世界身份实验、源库原理与作品馆](projects/006-random-doors/README.md) | 阶段归档：Four-Seasons 以固定种子与参数联动三维场景；我们保留六地点偶遇、三世界八身份与列车第一人称样本，汇总随机价值、原画与人物深度的不足及完整游戏的投入边界。随机作品馆真实接入留待后续立项。 | 已归档 | [研究笔记](projects/006-random-doors/RESEARCH.md) | [原帖](https://x.com/techartist_/status/2109737086601556195) | [演示](https://yydshly.github.io/1014_codex_project/006-random-doors/research.html) |
 | 007 | [Atlas：模型驱动的资产工作流与月门水庭实证](projects/007-autumn-courtyard-blender/README.md) | Atlas 以技能规范和辅助脚本组织 2D/3D 资产生成、验证与引擎接入，底层依赖模型和建模工具；价值在可编辑资产与可重复交付。以月门水庭验证 Blender 脚本路线，探索展陈、教学、产品展示和游戏，流程增益仍待评测。 | 研究中 | [研究笔记](projects/007-autumn-courtyard-blender/RESEARCH.md) | [原帖](https://x.com/xikhar/status/2110143242591510835) | [演示](https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html) |
 | 014 | [赛博小雅：真人拟人化效果与模型依赖研究](projects/014-cyber-xiaoya-study/README.md) | 真人互动角色研究：识别、语言、声音与视觉模型提供听想说动，工程负责同步和打断；价值在在场感，扩展到陪练、讲解、直播与角色记忆。原作源码及完整闭环待核验。 | 研究中 | [研究笔记](projects/014-cyber-xiaoya-study/RESEARCH.md) | [原帖](https://x.com/huoshan007/status/2109919568617484522) | [演示](https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/) |
 
 ### 项目配图
 
-#### 004 · 问题驱动研究工作台：来源、发现与产品方向
+#### 004 · 从网站入口研究到 AI 研究工作台
 
 ![004 产品全景图：问题、来源、搜索读取、分析筛选、发现库、人工验证，以及适用方向、扩展产品与当前边界。](projects/004-jasonzhu-ai/assets/product-overview.png)
 
