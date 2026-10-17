@@ -3,6 +3,7 @@
 本站使用一个 GitHub Pages 站点和编号子路径，发布来源为 `main` 分支的 GitHub Actions 工作流。2026-10-15首次发布已成功，公网入口、正文、引导图、章节导航与来源文件均已验证，记录见[014验证文件](../projects/014-cyber-xiaoya-study/sources/verification.json)。
 
 - 总入口：<https://yydshly.github.io/1014_codex_project/>
+- 004 产品总览：<https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html>
 - 006 研究页：<https://yydshly.github.io/1014_codex_project/006-random-doors/research.html>
 - 006 世界与身份实验：<https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html>
 - 007 Atlas 研究页：<https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html>
@@ -62,4 +63,4 @@ node scripts/build_pages.mjs
 
 发布清单同时保留 006、007 与 014。004 构建器执行语法检查与 39 项测试，校验本地资源和锚点，以静态模式发布；服务器、环境文件与运行缓存不进入站点。公开页支持导航、采集计划、发现保存与备份；自动研究需要本机服务与 Codex 登录，线上入口明确标注并禁用执行。公网与本地浏览器数据需通过 JSON 迁移。
 
-实际部署状态、工作流与公网检查见 [004 部署记录](../projects/004-jasonzhu-ai/deployment.json)。公网核验后再补充正式演示地址。
+2026-10-17 已通过 Actions 发布并验证，产品总览、工作区、引导图、静态资源、文档与既有项目共 34 个公网地址全部通过检查；浏览器确认摘要、十类扩展、导航及静态模式。实际工作流与公网检查见 [004 部署记录](../projects/004-jasonzhu-ai/deployment.json)，正式演示地址已登记。

@@ -1,9 +1,15 @@
 {
   "project": "004-jasonzhu-ai",
-  "status": "prepared",
+  "status": "published_and_verified",
   "prepared_at": "2026-10-17",
   "platform": "GitHub Pages",
   "scope": "产品总览、来源导航、历史样本、浏览器内计划与发现库；自动联网研究仅在本地服务执行",
   "guide_image": "assets/product-overview.png",
-  "public_verification": null
+  "public_verification": "verification/publication-2026-10-17.json",
+  "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html",
+  "workspace_url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/index.html#directory",
+  "source_commit": "1494ce73a01b95d060a21eb4ce6f150d07a3eb91",
+  "workflow_url": "https://github.com/yydshly/1014_codex_project/actions/runs/38989406625",
+  "verified_at": "2026-10-17T01:07:57.210928+00:00",
+  "guide_sha256": "4a95c5ce18ad0f6d8c53c29a511ae739bd8eff712b365e12f462a96b32741555"
 }

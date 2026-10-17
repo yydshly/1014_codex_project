@@ -1,0 +1,235 @@
+{
+  "verified_at": "2026-10-17T01:07:57.210928+00:00",
+  "urls_checked": 34,
+  "results": [
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/",
+      "status": 200,
+      "bytes": 4939
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/app.js",
+      "status": 200,
+      "bytes": 26785,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/assets/product-overview.mmd",
+      "status": 200,
+      "bytes": 2068,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/assets/product-overview.png",
+      "status": 200,
+      "bytes": 167684,
+      "matches_clean_build": true,
+      "sha256": "4a95c5ce18ad0f6d8c53c29a511ae739bd8eff712b365e12f462a96b32741555"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/assets/product-overview.svg",
+      "status": 200,
+      "bytes": 18978,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/auto-research.css",
+      "status": 200,
+      "bytes": 4115,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/auto-research.js",
+      "status": 200,
+      "bytes": 9888,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/data/reddit-latest.json",
+      "status": 200,
+      "bytes": 14114,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/data/research-entries.json",
+      "status": 200,
+      "bytes": 16015,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/data/sources.json",
+      "status": 200,
+      "bytes": 13156,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/entries.css",
+      "status": 200,
+      "bytes": 13928,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/entries.js",
+      "status": 200,
+      "bytes": 17523,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/findings-model.js",
+      "status": 200,
+      "bytes": 6433,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/findings.css",
+      "status": 200,
+      "bytes": 8917,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/findings.js",
+      "status": 200,
+      "bytes": 16717,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/index.html",
+      "status": 200,
+      "bytes": 42338,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/mark.svg",
+      "status": 200,
+      "bytes": 249,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/notes/DEMAND_RESEARCH.md",
+      "status": 200,
+      "bytes": 17798,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/notes/PRODUCT_OVERVIEW.md",
+      "status": 200,
+      "bytes": 15547,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/notes/PROJECT.md",
+      "status": 200,
+      "bytes": 11394,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/notes/RESEARCH.md",
+      "status": 200,
+      "bytes": 10406,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/notes/RESEARCH_ENTRIES.md",
+      "status": 200,
+      "bytes": 21448,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/notes/RUNNING.md",
+      "status": 200,
+      "bytes": 21129,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/notes/SOLUTIONS.md",
+      "status": 200,
+      "bytes": 10709,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/overview.css",
+      "status": 200,
+      "bytes": 7591,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/plan-merge.js",
+      "status": 200,
+      "bytes": 1309,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/reddit.js",
+      "status": 200,
+      "bytes": 8325,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html",
+      "status": 200,
+      "bytes": 16586,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/styles.css",
+      "status": 200,
+      "bytes": 46083,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html",
+      "status": 200,
+      "bytes": 42204,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html",
+      "status": 200,
+      "bytes": 51457,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/",
+      "status": 200,
+      "bytes": 30966
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/entries.json",
+      "status": 200,
+      "bytes": 1284,
+      "matches_clean_build": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/projects.json",
+      "status": 200,
+      "bytes": 3615,
+      "matches_clean_build": true
+    }
+  ],
+  "failures": [],
+  "deployment_commit": "1494ce73a01b95d060a21eb4ce6f150d07a3eb91",
+  "workflow_url": "https://github.com/yydshly/1014_codex_project/actions/runs/38989406625",
+  "browser": {
+    "summary_fields": 5,
+    "extension_directions": 10,
+    "source_entries": 10,
+    "public_research_button_disabled": true,
+    "manual_finding_save_enabled": true,
+    "chapter_navigation_verified": true,
+    "console_errors": [],
+    "desktop_width": 1265,
+    "desktop_scroll_width": 1265,
+    "mobile_preview_frame_width": 390,
+    "mobile_content_width": 375,
+    "mobile_scroll_width": 375,
+    "real_mobile_device_tested": false
+  },
+  "checks": {
+    "tests_passed": 39,
+    "catalog_passed": true,
+    "clean_full_site_build_passed": true,
+    "local_resources_and_anchors_passed": true,
+    "model_called_for_deployment": false
+  },
+  "screenshot": "assets/product-public.png"
+}

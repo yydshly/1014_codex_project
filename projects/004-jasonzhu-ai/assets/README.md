@@ -2,6 +2,7 @@
 
 | 文件 | 说明 | 来源与日期 | 使用说明 |
 | --- | --- | --- | --- |
+| `product-public.png` | 已发布产品总览的实际页面截图，包含定位摘要与既有全景图 | 2026-10-17，`https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html` 的实际浏览器截图 | 未拼接或编辑；总索引引导图仍使用 `product-overview.png` |
 | `product-overview.mmd` | 产品全景图的可编辑 Mermaid 源文件，展示已有流程、适用方向、产品扩展与边界 | 2026-10-17，依据本项目当前实现、运行说明及已保存实测记录原创绘制 | 当前流程、人工推进与可扩展分别说明；概念图，非产品运行截图 |
 | `product-overview.png`、`product-overview.svg` | 上述全景图的图片版和矢量版 | 2026-10-17，使用 Mermaid 11.4.1 在本地校验页渲染；PNG 为完整图形截图，SVG 导出自同一已渲染图形 | 原创内容；PNG 未拼接或编辑，保留标题和日期；概念图，非产品运行截图；正文嵌入见 `../PRODUCT_OVERVIEW.md` |
 | `preview.png` | 004 原创实践网页首页：需求发现、原文采集与候选筛选的关系 | 2026-10-15，本地页面 `http://127.0.0.1:4176/1014_codex_project/004-jasonzhu-ai/` 的实际浏览器截图 | 页面与矢量图形由本项目原创；未复制上游图片；截图未经拼接或编辑 |
