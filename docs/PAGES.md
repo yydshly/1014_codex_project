@@ -7,6 +7,7 @@
 - 006 研究页：<https://yydshly.github.io/1014_codex_project/006-random-doors/research.html>
 - 006 世界与身份实验：<https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html>
 - 007 Atlas 研究页：<https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html>
+- 010 数据与需求调研：<https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/#synthesis>
 - 014 研究页：<https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/>
 - 工作流：`.github/workflows/pages.yml`。
 - 发布清单：`web/pages.json`。每次重新构建清单中的全部项目，避免发布单个项目时覆盖已有入口。
@@ -69,4 +70,4 @@ node scripts/build_pages.mjs
 
 010 用五项摘要说明源产品能力、使用场景、我们的 B/C 实践、引发的核心思考及可扩展方向，沿用原创 `assets/understanding-map.png` 引导图。公开页保留完整讨论、来源与合成试跑材料，主线是 Atypica 调研用途 → 模型、身份与流程 → 数据与证据 → 需求判断 → 产品验证 → 反馈沉淀。
 
-`web/build.mjs` 不安装第三方依赖或调用模型；执行语法检查、已有测试与公开产物检查。公开导航不指向读者的 localhost，不发布本地 API 或实验运行目录。发布清单保留已有四个项目，正式地址和公网哈希核验在部署成功后登记。
+`web/build.mjs` 不安装第三方依赖或调用模型；执行语法检查、已有测试与公开产物检查。公开导航不指向读者的 localhost，不发布本地 API 或实验运行目录。发布清单保留已有四个项目。2026-10-19 已通过 Actions 发布；13 个公网地址、94 个页内编号及原引导图哈希核对通过。正式入口为 [https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/#synthesis](https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/#synthesis)，详见 [010 发布记录](../projects/010-evidence-research-lab/deployment.json)。页面视觉和点击未自动复测，验证范围为实际 HTTP、字节和静态结构。

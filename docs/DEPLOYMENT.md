@@ -77,4 +77,4 @@ _site/
 
 引导图沿用已生成的 `assets/understanding-map.png`，同时发布 SVG 和结构化图源。`projects/010-evidence-research-lab/web/build.mjs` 执行检查、测试与公开构建，完整产物复制到 `_site/010-evidence-research-lab/`。公开版本仅提供研究阅读、搜索与导出，不包含本机 `/workbench/`、模型服务、环境文件或 `.runtime`。
 
-发布准备已加入 `web/pages.json`，与 004、006、007 和 014 一起构建。只有 Actions 发布及公网核验成功后登记正式 `demo_url`，验证记录保存在项目 `deployment.json`。
+已加入 `web/pages.json`，与 004、006、007 和 014 一起构建。2026-10-19 Actions 发布及公网核验成功后，已登记正式 `demo_url`；入口、工作流、原图哈希与验证范围见 [010 发布记录](../projects/010-evidence-research-lab/deployment.json)。

@@ -1,0 +1,130 @@
+{
+  "project": "010-evidence-research-lab",
+  "verified_at": "2026-10-19T04:45:41.909324+00:00",
+  "source_commit": "e42501c7a4ff23922759b06f115e1d120f3f35ee",
+  "workflow_url": "https://github.com/yydshly/1014_codex_project/actions/runs/39200988082",
+  "method": "actual_public_http_and_local_artifact_comparison",
+  "browser_visual_or_click_verification": "not_performed_due_to_browser_policy",
+  "guide_sha256": "4d7f57db3fc096ab398e38f643b7c49b544d42d244934c0a5f68507fe19f6a6b",
+  "html_sha256": "b308a90e5131ffb10a0356b9191ae476acd4e609dcf662b7a3fa5c2ef5fe513e",
+  "summary_sections": [
+    "源产品的能力",
+    "使用场景",
+    "我们做过什么",
+    "引发的思考",
+    "可扩展方向"
+  ],
+  "anchors_checked": 94,
+  "preserved_projects": [
+    "004",
+    "006",
+    "007",
+    "014"
+  ],
+  "checks": [
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/index.html",
+      "status": 200,
+      "bytes": 1537769,
+      "sha256": "b308a90e5131ffb10a0356b9191ae476acd4e609dcf662b7a3fa5c2ef5fe513e",
+      "content_type": "text/html; charset=utf-8",
+      "matches_local_artifact": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/assets/understanding-map.png",
+      "status": 200,
+      "bytes": 339741,
+      "sha256": "4d7f57db3fc096ab398e38f643b7c49b544d42d244934c0a5f68507fe19f6a6b",
+      "content_type": "image/png",
+      "matches_local_artifact": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/assets/understanding-map.svg",
+      "status": 200,
+      "bytes": 12909,
+      "sha256": "ca8d08ea20d8a84f98e266041843df7b8fdc4c63c9c43310be32d5ef54ec0c2c",
+      "content_type": "image/svg+xml",
+      "matches_local_artifact": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/sources.json",
+      "status": 200,
+      "bytes": 14092,
+      "sha256": "de3f52750635a3a3dc16f3852ad04284f03a5baa48d8d0276c73143a04ec2fe9",
+      "content_type": "application/json; charset=utf-8",
+      "matches_local_artifact": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/understanding-map.json",
+      "status": 200,
+      "bytes": 3940,
+      "sha256": "6bdfae25c625b758e7dcae16cbbe10ae1721fa198e82bdac6b603e510913b201",
+      "content_type": "application/json; charset=utf-8",
+      "matches_local_artifact": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/projects/010-evidence-research-lab/assets/understanding-map.png",
+      "status": 200,
+      "bytes": 339741,
+      "sha256": "4d7f57db3fc096ab398e38f643b7c49b544d42d244934c0a5f68507fe19f6a6b",
+      "content_type": "image/png",
+      "matches_local_artifact": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/index.html",
+      "status": 200,
+      "bytes": 4955,
+      "sha256": "613eef16fd1ba55b8e0b32b2f9c2b7bec6c61a7d3823de74fee6cbdefbf2c2ac",
+      "content_type": "text/html; charset=utf-8",
+      "matches_local_artifact": false
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/projects.json",
+      "status": 200,
+      "bytes": 4749,
+      "sha256": "870532265ac657acbf00e29592da2aad21df53d5211f9464cd3728b811c67cf8",
+      "content_type": "application/json; charset=utf-8",
+      "matches_local_artifact": false
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/entries.json",
+      "status": 200,
+      "bytes": 1651,
+      "sha256": "d458b66602f35392e3f35ae8bb6e6bd39174695381d9be9b552a4fdf97d53865",
+      "content_type": "application/json; charset=utf-8",
+      "matches_local_artifact": false
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html",
+      "status": 200,
+      "bytes": 17841,
+      "sha256": "d611401e5417e15e85b87b56c9be9e3708d8a128664c8b0b1286836f79bd2341",
+      "content_type": "text/html; charset=utf-8",
+      "matches_local_artifact": false
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html",
+      "status": 200,
+      "bytes": 42204,
+      "sha256": "8bb067d603f621f3b457f26e957521daabc3fc66c4117d8bf25f62267a909770",
+      "content_type": "text/html; charset=utf-8",
+      "matches_local_artifact": false
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html",
+      "status": 200,
+      "bytes": 51457,
+      "sha256": "b9c34c98be80add19d0df0725fa91b958ddf99a6b8efcc610852bfe603b5c30f",
+      "content_type": "text/html; charset=utf-8",
+      "matches_local_artifact": false
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/",
+      "status": 200,
+      "bytes": 30966,
+      "sha256": "f75f36b747b39b91a88631706f8ee6d3abe283492d23b4567fc26dd6e52f882d",
+      "content_type": "text/html; charset=utf-8",
+      "matches_local_artifact": false
+    }
+  ]
+}

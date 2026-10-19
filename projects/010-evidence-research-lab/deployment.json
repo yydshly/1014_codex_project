@@ -1,11 +1,16 @@
 {
   "project": "010-evidence-research-lab",
-  "status": "prepared",
+  "status": "published_and_verified",
   "platform": "GitHub Pages",
-  "scope": "五项研究摘要、原创理解总览、完整讨论与材料；不包含本机 B/C 服务或模型运行",
+  "scope": "五项研究摘要、原创理解总览、完整讨论与材料；本机 B/C 服务及模型运行不在静态发布范围",
   "guide_image": "assets/understanding-map.png",
-  "expected_url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/",
-  "url": null,
-  "public_verification": null,
+  "url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/#synthesis",
+  "source_commit": "e42501c7a4ff23922759b06f115e1d120f3f35ee",
+  "workflow_url": "https://github.com/yydshly/1014_codex_project/actions/runs/39200988082",
+  "verified_at": "2026-10-19T04:45:41.909324+00:00",
+  "guide_sha256": "4d7f57db3fc096ab398e38f643b7c49b544d42d244934c0a5f68507fe19f6a6b",
+  "html_sha256": "b308a90e5131ffb10a0356b9191ae476acd4e609dcf662b7a3fa5c2ef5fe513e",
+  "public_verification": "verification/publication-2026-10-19.json",
+  "verification_scope": "首发内容的实际 HTTP、原图字节、静态锚点、目录和既有项目入口；后续地址登记提交不改变010静态内容",
   "browser_visual_verification": "not_performed_due_to_browser_policy"
 }
