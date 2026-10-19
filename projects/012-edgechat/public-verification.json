@@ -1,0 +1,176 @@
+{
+  "verifiedAt": "2026-10-19T09:47:12.938321+00:00",
+  "base": "https://yydshly.github.io/1014_codex_project/012-edgechat/",
+  "resourcesChecked": 22,
+  "staticFiles": 10,
+  "pageIds": 61,
+  "pageAnchorLinks": 23,
+  "fixedSources": 18,
+  "publishedProjects": [
+    "004-jasonzhu-ai",
+    "006-random-doors",
+    "007-autumn-courtyard-blender",
+    "009-demand-discovery",
+    "010-evidence-research-lab",
+    "011-ancient-rap-battle",
+    "012-edgechat",
+    "013-crawl-hive",
+    "014-cyber-xiaoya-study"
+  ],
+  "svgOriginalBytesRequired": true,
+  "checks": [
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/012-edgechat/app.js",
+      "status": 200,
+      "bytes": 13945,
+      "sha256": "938b1605c7ad4e60031d6f7793314be0b0bbd7ad15a2f9eb4527e548fc6ff0e4",
+      "exactBytes": true,
+      "contentMatchesBuild": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/012-edgechat/data.js",
+      "status": 200,
+      "bytes": 25827,
+      "sha256": "ea83ae85b56a78fa97c08bae411c2d8459100247bcce6a96549222db4c72a2c7",
+      "exactBytes": true,
+      "contentMatchesBuild": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/012-edgechat/edgechat-summary.png",
+      "status": 200,
+      "bytes": 1676016,
+      "sha256": "4346cb622b0aeeb762f9c932373268b95a149247814bec19e128c7d8cf722133",
+      "exactBytes": true,
+      "contentMatchesBuild": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/012-edgechat/edgechat-summary.svg",
+      "status": 200,
+      "bytes": 46821,
+      "sha256": "4a1e9e08fae581be68cf0e5ecbff841bf71cdfc4dcfa7b03329271b081265e9b",
+      "exactBytes": true,
+      "contentMatchesBuild": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/012-edgechat/favicon.svg",
+      "status": 200,
+      "bytes": 315,
+      "sha256": "3a4e7c8fccb79012ec1c95953ba40afc32e061cec9e10ab7f289eee86854fc86",
+      "exactBytes": true,
+      "contentMatchesBuild": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/012-edgechat/index.html",
+      "status": 200,
+      "bytes": 27836,
+      "sha256": "d21c515fa7cacc33151bc4dbee299f5b0177a0eb324073547b8c02493f64c349",
+      "exactBytes": true,
+      "contentMatchesBuild": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/012-edgechat/research/upstream.json",
+      "status": 200,
+      "bytes": 9535,
+      "sha256": "413775c6dde6609a507fbc10bce76eabfef968f7d47f47af87d99329590fe9d8",
+      "exactBytes": true,
+      "contentMatchesBuild": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/012-edgechat/RESEARCH.md",
+      "status": 200,
+      "bytes": 15807,
+      "sha256": "9abfe375e99bb5d7f88998674f552a042c708f51326463459026b99e526484ed",
+      "exactBytes": true,
+      "contentMatchesBuild": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/012-edgechat/standalone.html",
+      "status": 200,
+      "bytes": 4648436,
+      "sha256": "74000ca809b1efa33963ce47039d48485642282e32670bb7eeac27e6ce6a3145",
+      "exactBytes": false,
+      "contentMatchesBuild": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/012-edgechat/styles.css",
+      "status": 200,
+      "bytes": 49342,
+      "sha256": "f1c95f28e009e9b5962b46dc8ff6d0f1a1cf2c09789de8570867175863e72b8b",
+      "exactBytes": false,
+      "contentMatchesBuild": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/",
+      "status": 200,
+      "bytes": 42338,
+      "sha256": "796a24b9d65afdfb75820d6acd2d4928164192a2d356102402c15138b5a38ab3"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/006-random-doors/",
+      "status": 200,
+      "bytes": 2227,
+      "sha256": "9aa372fe6b0ba7ea781f46f9217f0e5b5d644f0e5b111456fb304135609789eb"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/",
+      "status": 200,
+      "bytes": 23455,
+      "sha256": "d287cd225deee21c1500e7f155bcf56a32ab91575d98a37071804bace4e33247"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/",
+      "status": 200,
+      "bytes": 43002,
+      "sha256": "14af86967ba10e055848b72da304cf508ea11523fa8ff1654a85568f2a39e337"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/",
+      "status": 200,
+      "bytes": 1537769,
+      "sha256": "b308a90e5131ffb10a0356b9191ae476acd4e609dcf662b7a3fa5c2ef5fe513e"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/",
+      "status": 200,
+      "bytes": 65464,
+      "sha256": "0c3dc4aa5c65e7fced49741f48825d6b1c04ecd948a222768b27e048894c41f2"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/013-crawl-hive/",
+      "status": 200,
+      "bytes": 69828,
+      "sha256": "a913e3b0a0bcda63de4ad3764381ffd3df5008adc09907bcb567e5f571d17513"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/",
+      "status": 200,
+      "bytes": 30966,
+      "sha256": "f75f36b747b39b91a88631706f8ee6d3abe283492d23b4567fc26dd6e52f882d"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/",
+      "status": 200,
+      "bytes": 5129,
+      "sha256": "2e5c69e2811191fa1bcb6a4e82f72fe71e699f5243d9dad431bd1be47593cbd5"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/projects.json",
+      "status": 200,
+      "bytes": 8287,
+      "sha256": "666d405fc5f76d68198e1992b00af2a78ff21932e69dce9bd1afe51a252b5633"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/entries.json",
+      "status": 200,
+      "bytes": 3437,
+      "sha256": "ec02f61788d323b906a9e503d53e3ff8fccaad92c9c193b547f78fb54355f4d4"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/projects/012-edgechat/assets/edgechat-summary.png",
+      "status": 200,
+      "bytes": 1676016,
+      "sha256": "4346cb622b0aeeb762f9c932373268b95a149247814bec19e128c7d8cf722133"
+    }
+  ],
+  "limits": "HTTP/content/structure verification only. Upstream chat backend, calls, bridges, costs and product demand were not tested."
+}

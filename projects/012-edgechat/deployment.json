@@ -1,6 +1,6 @@
 {
   "project": "012-edgechat",
-  "status": "prepared-awaiting-public-verification",
+  "status": "published-and-verified",
   "preparedDate": "2026-10-19",
   "upstream": {
     "repository": "https://github.com/aozorae/Edgechat",
@@ -15,7 +15,10 @@
     "path": "assets/edgechat-summary.png",
     "unchangedOriginal": true,
     "width": 2400,
-    "height": 6642
+    "height": 6642,
+    "pngSha256": "4346cb622b0aeeb762f9c932373268b95a149247814bec19e128c7d8cf722133",
+    "svgSha256": "4a1e9e08fae581be68cf0e5ecbff841bf71cdfc4dcfa7b03329271b081265e9b",
+    "originalPngAndSvgVerifiedOnPublicSite": true
   },
   "localVerification": {
     "summaryCards": 6,
@@ -28,5 +31,77 @@
     "browserErrors": 0,
     "fullSiteBuild": "passed"
   },
-  "notVerified": ["上游后端部署", "真实多人消息", "Telegram与实例桥接", "真实语音通话", "性能及成本", "产品需求与付费意愿"]
+  "notVerified": [
+    "上游后端部署",
+    "真实多人消息",
+    "Telegram与实例桥接",
+    "真实语音通话",
+    "性能及成本",
+    "产品需求与付费意愿"
+  ],
+  "publishedDate": "2026-10-19",
+  "sourceCommit": "84139f54acce443edbc3e5a51448a5517250e3fc",
+  "workflow": {
+    "runId": 39232489217,
+    "url": "https://github.com/yydshly/1014_codex_project/actions/runs/39232489217",
+    "conclusion": "success"
+  },
+  "initialPublish": {
+    "sourceCommit": "a840e38911d894c9264f27812b5ea948f2951108",
+    "runId": 39232080573,
+    "conclusion": "success"
+  },
+  "urls": {
+    "summary": "https://yydshly.github.io/1014_codex_project/012-edgechat/#synthesis",
+    "guideImage": "https://yydshly.github.io/1014_codex_project/012-edgechat/#summary-overview",
+    "directions": "https://yydshly.github.io/1014_codex_project/012-edgechat/#understanding",
+    "site": "https://yydshly.github.io/1014_codex_project/"
+  },
+  "publicVerification": {
+    "report": "public-verification.json",
+    "verifiedAt": "2026-10-19T09:47:12.938321+00:00",
+    "resourcesChecked": 22,
+    "staticFiles": 10,
+    "pageIds": 61,
+    "pageAnchorLinks": 23,
+    "fixedSources": 18,
+    "publishedProjects": [
+      "004-jasonzhu-ai",
+      "006-random-doors",
+      "007-autumn-courtyard-blender",
+      "009-demand-discovery",
+      "010-evidence-research-lab",
+      "011-ancient-rap-battle",
+      "012-edgechat",
+      "013-crawl-hive",
+      "014-cyber-xiaoya-study"
+    ],
+    "svgOriginalBytesRequired": true,
+    "textComparison": "内容相同；普通文本允许跨平台换行差异；PNG与总结SVG要求原始字节相同。"
+  },
+  "browserVerification": {
+    "publicSummaryCards": 6,
+    "publicFixedSources": 18,
+    "publicGuideImageWidth": 2400,
+    "publicHorizontalOverflow": false,
+    "localFullGuideOpens": true,
+    "localOfflineGuideEmbedded": true,
+    "localMobileWidth": 390,
+    "localMobileHorizontalOverflow": false,
+    "screenshot": "verification/published-summary.jpg"
+  },
+  "summary": {
+    "originalEffect": "自部署完整聊天应用，包含文字、群聊、私信、文件、录音、网页一对一实时语音及限定群桥接。",
+    "reflection": "区分通信、使用入口、系统互联；能扩展不等于值得做产品。",
+    "valueAndMeaning": "学习实时通信与授权架构；保留候选自部署与工程复用方案，并据具体需求比较成熟服务。",
+    "productHypotheses": [
+      "客户交付协作室",
+      "页面反馈与问题处理",
+      "Telegram社区支持台",
+      "AI任务协作室",
+      "通用嵌入聊天SDK",
+      "多人音视频"
+    ],
+    "currentDecision": "保留研究，暂不主动开发通用聊天模块或新产品；有真实需求后重新评估。"
+  }
 }

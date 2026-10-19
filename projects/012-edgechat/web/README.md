@@ -23,7 +23,7 @@ npm run build
 
 页面前部新增“一张图看完我们的理解”。构建会从项目 `assets/` 复制 `edgechat-summary.png` / `.svg`，并把 PNG 及 SVG 下载链接内嵌到单文件版本，避免离线阅读丢图。图片以原始分辨率提供下载。
 
-原有 003 服务的通用 dist 映射也能读取此构建。静态发布按根部署约定汇总全部已登记项目，使用现有 GitHub Pages 子路径。上线与公网核验成功后登记 demo_url，具体状态见项目 deployment.json。
+原有 003 服务的通用 dist 映射也能读取此构建。静态发布按根部署约定汇总全部已登记项目，使用现有 GitHub Pages 子路径。2026-10-19 已发布并完成公网核验，正式入口为 [理解摘要](https://yydshly.github.io/1014_codex_project/012-edgechat/#synthesis)，具体范围见项目 deployment.json。
 
 ## 文件职责
 

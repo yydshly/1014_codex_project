@@ -26,7 +26,7 @@ npm run dev
 
 默认地址是 `http://127.0.0.1:4182/1014_codex_project/012-edgechat/`。同一服务的 `/1014_codex_project/` 提供项目总入口，读取根索引、配图和已构建的子项目。具体命令见 [Web 说明](web/README.md)。
 
-这是本地预览地址；尚未发布公网演示，`demo_url` 保持为空。
+公开入口：[理解摘要与研究网页](https://yydshly.github.io/1014_codex_project/012-edgechat/#synthesis) · [一张图总览](https://yydshly.github.io/1014_codex_project/012-edgechat/#summary-overview) · [产品方向与当前取舍](https://yydshly.github.io/1014_codex_project/012-edgechat/#understanding)。2026-10-19 经 GitHub Actions 发布并完成公网核验，记录见 [发布验收](deployment.json)。部署的是静态研究页，上游聊天后端仍未部署实测。
 
 也可直接打开构建后的 [离线单文件网页](web/dist/standalone.html)，无需启动服务即可阅读与操作演示。
 

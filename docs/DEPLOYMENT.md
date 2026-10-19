@@ -106,4 +106,4 @@ _site/
 
 沿用 GitHub Pages 编号子路径，发布六项理解摘要、九章图解与既有总结图。摘要明确区分源库原始效果、底层原理、我们的思考、复用与学习价值、六类产品假设及当前取舍。引导图使用已生成的 `assets/edgechat-summary.png`，保留 PNG / SVG 原始字节与离线下载；没有重新生成。
 
-`projects/012-edgechat/web/build.mjs` 统一执行语法、锚点、资源和静态白名单检查，构建产物复制到 `_site/012-edgechat/`，同时保留其他已发布项目。只部署研究展示页，不包含 EdgeChat 后端、云账号凭据或真实聊天数据。公网核验通过后登记正式 `demo_url`，精确范围见 [012 发布记录](../projects/012-edgechat/deployment.json)。
+`projects/012-edgechat/web/build.mjs` 统一执行语法、锚点、资源和静态白名单检查，构建产物复制到 `_site/012-edgechat/`，同时保留其他已发布项目。只部署研究展示页，不包含 EdgeChat 后端、云账号凭据或真实聊天数据。2026-10-19 已经 Actions 发布并完成公网核验，正式入口为 [理解摘要](https://yydshly.github.io/1014_codex_project/012-edgechat/#synthesis)，原图、资源和既有八个项目入口已检查；精确范围见 [012 发布记录](../projects/012-edgechat/deployment.json)。
