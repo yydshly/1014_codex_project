@@ -1,0 +1,46 @@
+{
+  "project": "008-specreel",
+  "status": "prepared-for-public-verification",
+  "url": "https://yydshly.github.io/1014_codex_project/008-specreel/#synthesis",
+  "preparedAt": "2026-10-19",
+  "sourceCommit": "0d3aa13241b3714f32f93fdc705100150e6c42af",
+  "experimentDate": "2026-10-15",
+  "mode": "static-research-and-existing-artifacts",
+  "runtimeModels": false,
+  "runtimeBrowserAutomation": false,
+  "scope": "Detailed Chinese understanding, one original PNG/SVG infographic, three original and three Chinese-adapted HTML/MP4 outputs; no new capture or model jobs.",
+  "localValidation": {
+    "date": "2026-10-19",
+    "catalogTests": 10,
+    "completeSiteBuild": true,
+    "researchProjects": 15,
+    "publishedApplications": 11,
+    "pageIds": 38,
+    "staticFiles": 33,
+    "posterPixels": [
+      2400,
+      6705
+    ],
+    "browser": {
+      "desktop": true,
+      "mobileViewport": [
+        390,
+        844
+      ],
+      "horizontalPageOverflow": false,
+      "videoDuration": 31.766667,
+      "videoSize": [
+        1280,
+        948
+      ],
+      "videoPlaybackAdvancedToSeconds": 9.49,
+      "flowSwitch": true,
+      "stepPlayerAdvanced": "2 / 15",
+      "agentPipelineSwitch": true,
+      "scenarioSwitch": true,
+      "keyboardTabs": true,
+      "posterLoaded": true
+    },
+    "scope": "Existing saved outputs only. No new capture, model, TTS, Cloud or autonomous Agent run."
+  }
+}

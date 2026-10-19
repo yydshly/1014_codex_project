@@ -39,7 +39,7 @@ try{
     const published=isPublished(p),hasLocalDemo=p.id!=='015',canOpenDemo=published||(!isStatic&&hasLocalDemo);
     if(p.preview){
       const imageLink=document.createElement('a'),img=document.createElement('img');
-      imageLink.className=['010','014'].includes(p.id)?'guide-image':['006','007','009','012'].includes(p.id)?'guide-image guide-image-long':'card-image';
+      imageLink.className=['010','014'].includes(p.id)?'guide-image':['006','007','008','009','012'].includes(p.id)?'guide-image guide-image-long':'card-image';
       imageLink.href=canOpenDemo?(p.demo_url||'./'+name+'/'):'./projects/'+name+'/README.md';
       if(!canOpenDemo)imageLink.addEventListener('click',event=>{event.preventDefault();openNotes(name,p.title);});
       imageLink.setAttribute('aria-label',p.title+'：'+(canOpenDemo?'打开网页':'阅读研究记录'));

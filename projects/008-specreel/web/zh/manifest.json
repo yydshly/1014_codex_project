@@ -1,0 +1,51 @@
+{
+  "title": "004 \u9700\u6c42\u53d1\u73b0\u4e0e\u91c7\u96c6 \u00b7 \u5b9e\u9645\u64cd\u4f5c\u6f14\u793a",
+  "repo": "yydshly/1014_codex_project",
+  "branch": "main",
+  "build": "90f0db6",
+  "showcase": false,
+  "flows": [
+    {
+      "slug": "01-reddit-evidence",
+      "title": "\u770b\u771f\u5b9e\u95ee\u9898\u3001\u539f\u8bdd\u548c\u5df2\u6709\u529e\u6cd5",
+      "public": true,
+      "steps": 11,
+      "actions": 5,
+      "checks": 6,
+      "duration": 13.75,
+      "failed": false,
+      "healed": true,
+      "sig": "dccd2213bb32",
+      "capture_ok": true,
+      "demo": "01-reddit-evidence/demo.html"
+    },
+    {
+      "slug": "02-search-plan",
+      "title": "\u4ece\u89c2\u5bdf\u5bf9\u8c61\u5230\u4e0b\u4e00\u8f6e\u91c7\u96c6\u6307\u4ee4",
+      "public": true,
+      "steps": 21,
+      "actions": 13,
+      "checks": 8,
+      "duration": 25.98,
+      "failed": false,
+      "healed": true,
+      "sig": "a625198727a3",
+      "capture_ok": true,
+      "demo": "02-search-plan/demo.html"
+    },
+    {
+      "slug": "03-source-filter",
+      "title": "\u7b5b\u9009\u5386\u53f2\u7ebf\u7d22\u5e76\u67e5\u770b\u6765\u6e90\u8be6\u60c5",
+      "public": true,
+      "steps": 15,
+      "actions": 8,
+      "checks": 7,
+      "duration": 18.42,
+      "failed": false,
+      "healed": true,
+      "sig": "0e97d64f23fe",
+      "capture_ok": true,
+      "demo": "03-source-filter/demo.html"
+    }
+  ]
+}

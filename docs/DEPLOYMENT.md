@@ -116,3 +116,9 @@ _site/
 
 
 002 于 2026-10-19 首次 Actions 发布及公网核验通过后，已登记 [理解摘要](https://yydshly.github.io/1014_codex_project/002-rainy-ghost/research.html#synthesis) 与 [雨夜体验](https://yydshly.github.io/1014_codex_project/002-rainy-ghost/)。13 份静态资源、原引导图哈希和既有九个项目入口均通过；15 项研究索引保留，静态应用共十项。见 [002 发布记录](../projects/002-rainy-ghost/deployment.json)。
+
+### 008 Specreel 理解汇总与实际成品
+
+沿用统一 GitHub Pages 流程，发布能力、原理、效果、场景、价值和自动化边界。主入口 `008-specreel/#synthesis`，实际回放与视频在 `#results`，原创总结图在 `#overview-map`。图文准确说明 Agent 可选组织、Playwright 实际控制浏览器、Specreel 加工记录；准备好的流程可以无人值守执行，并不据此承诺任意任务全过程零人工。
+
+构建入口为 `projects/008-specreel/web/build.mjs`，采用已有 HTML、MP4、PNG / SVG、固定引擎源码与许可的静态白名单，保留其他发布项目。页面不调用模型、不启动自动操作、不发布账号或原始 trace。部署状态与公网验证范围见 [008 部署记录](../projects/008-specreel/deployment.json)。

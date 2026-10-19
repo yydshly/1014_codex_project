@@ -1,0 +1,16 @@
+title: 004 需求发现与采集 · 实际操作演示
+product_name: 004 需求采集实践手记
+quality: high
+theme: dark
+bundle: true
+ai: false
+flows:
+  01-reddit-evidence:
+    title: 看真实问题、原话和已有办法
+    public: true
+  02-search-plan:
+    title: 从观察对象到下一轮采集指令
+    public: true
+  03-source-filter:
+    title: 筛选历史线索并查看来源详情
+    public: true

@@ -1,0 +1,58 @@
+{
+  "repository": "https://github.com/specreel/specreel",
+  "version": "0.2.0",
+  "commit": "0d3aa13241b3714f32f93fdc705100150e6c42af",
+  "sourceReviewDate": "2026-10-19",
+  "experimentDate": "2026-10-15",
+  "method": "Fixed source snapshot reviewed; source capabilities and runtime experiments are distinguished.",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://github.com/specreel/specreel/blob/0d3aa13241b3714f32f93fdc705100150e6c42af/README.md",
+      "bytes": 8018,
+      "sha256": "fb804ae43f0ac2ae3f66e9a01e051d1f20e9acbe4f5a8aa5f9dfcea0c7b91b44"
+    },
+    {
+      "path": "specreel.py",
+      "url": "https://github.com/specreel/specreel/blob/0d3aa13241b3714f32f93fdc705100150e6c42af/specreel.py",
+      "bytes": 262266,
+      "sha256": "fcc608617e413cf4e60a856b5d1f55d81e200e7651a7d16c748d07cacea488d5"
+    },
+    {
+      "path": "specreel_mcp.py",
+      "url": "https://github.com/specreel/specreel/blob/0d3aa13241b3714f32f93fdc705100150e6c42af/specreel_mcp.py",
+      "bytes": 3958,
+      "sha256": "cd0d1f48741f248f686a6f86935b0e3293e92e3196fdd94b911235cc5b5803de"
+    },
+    {
+      "path": "docs/agents-and-mcp.md",
+      "url": "https://github.com/specreel/specreel/blob/0d3aa13241b3714f32f93fdc705100150e6c42af/docs/agents-and-mcp.md",
+      "bytes": 1814,
+      "sha256": "996193998306ad2932d9d8f0084a35577a621bc39dca4d762629b7b4fe3b6f6e"
+    },
+    {
+      "path": "integrations/README.md",
+      "url": "https://github.com/specreel/specreel/blob/0d3aa13241b3714f32f93fdc705100150e6c42af/integrations/README.md",
+      "bytes": 1271,
+      "sha256": "93b1a1e59b4c9a32ca3349de486bd82e378d5abb0fb3d985cfb30a3d5c055bb3"
+    },
+    {
+      "path": "integrations/claude-code/specreel/SKILL.md",
+      "url": "https://github.com/specreel/specreel/blob/0d3aa13241b3714f32f93fdc705100150e6c42af/integrations/claude-code/specreel/SKILL.md",
+      "bytes": 2837,
+      "sha256": "e434c15883d2f744892f9af1bee437abb00bcb5b502c6ead2f89deab721fc4a3"
+    },
+    {
+      "path": "examples/github-workflows/specreel.yml",
+      "url": "https://github.com/specreel/specreel/blob/0d3aa13241b3714f32f93fdc705100150e6c42af/examples/github-workflows/specreel.yml",
+      "bytes": 5361,
+      "sha256": "4f2fa2b1dbb9a7b631aab01d63b271285ada0291607a32d68b14f64f755b4c71"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://github.com/specreel/specreel/blob/0d3aa13241b3714f32f93fdc705100150e6c42af/LICENSE",
+      "bytes": 34523,
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "upstream": "https://github.com/specreel/specreel",
+  "commit": "0d3aa13241b3714f32f93fdc705100150e6c42af",
+  "upstream_version": "0.2.0",
+  "license": "AGPL-3.0-or-later",
+  "source_modified": false,
+  "adapter": "scripts/build.py",
+  "changes": [
+    "Deterministic Chinese captions",
+    "Chinese single-player controls",
+    "CJK font for video export"
+  ],
+  "ai_narration": false,
+  "studio_voiceover": false,
+  "elapsed_seconds": 15.65
+}

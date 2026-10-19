@@ -114,3 +114,9 @@ node scripts/build_pages.mjs
 
 
 002 于 2026-10-19 首次 Actions 发布及公网核验通过后，已登记 [理解摘要](https://yydshly.github.io/1014_codex_project/002-rainy-ghost/research.html#synthesis) 与 [雨夜体验](https://yydshly.github.io/1014_codex_project/002-rainy-ghost/)。13 份静态资源、原引导图哈希和既有九个项目入口均通过；15 项研究索引保留，静态应用共十项。见 [002 发布记录](../projects/002-rainy-ghost/deployment.json)。
+
+## 008 Specreel：浏览器记录、演示与操作备忘
+
+008 新增完整理解汇总、交互原理链路、六类使用场景、无人值守边界及一张原创 PNG / SVG 总图；保留 2026-10-15 的三条原生与中文适配回放及 MP4。固定研究版本为 0.2.0 / `0d3aa13241b3714f32f93fdc705100150e6c42af`。源码支持的可选 Agent / MCP / 模型组织层与本轮实际验证的脚本、记录和成品分别说明。
+
+`projects/008-specreel/web/build.mjs` 仅检查并打包已有静态成果、来源和 AGPL 许可，不运行浏览器自动操作、模型或付费任务。新增 `008-specreel` 编号子路径，保留其他公开项目；正式部署、验证和入口登记以 [008 发布记录](../projects/008-specreel/deployment.json) 为准，公网核验后才填写 `demo_url`。

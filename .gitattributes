@@ -5,3 +5,4 @@
 *.gif binary
 *.webp binary
 projects/012-edgechat/assets/edgechat-summary.svg -text
+projects/008-specreel/assets/specreel-understanding.svg -text whitespace=cr-at-eol

@@ -1,0 +1,14 @@
+{
+  "name": "research-008-specreel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "capture": "node scripts/capture.mjs",
+    "build": "node web/build.mjs",
+    "serve": "node web/build.mjs && node scripts/serve.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
+  }
+}

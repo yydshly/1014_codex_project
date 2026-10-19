@@ -85,12 +85,12 @@
     {
       "id": "008",
       "slug": "specreel",
-      "title": "Specreel：004 需求采集页面演示生成实测",
+      "title": "Specreel：浏览器记录生成演示与操作备忘",
       "repository": "https://github.com/specreel/specreel",
-      "summary": "已用004真实操作生成三条原生与中文回放及MP4，验证更新标记；记录网址推荐、中文字体与播放节奏的限制。",
+      "summary": "Playwright记录网页动作和画面，Specreel生成分步回放与视频；支持可选Agent和模型编排，准备好流程后可无人值守。已实测004三流程，整理原理、录屏对比、教程与备忘场景及按需复用价值，未证明整体省时。",
       "status": "已复现",
-      "preview": "assets/preview.png",
-      "preview_caption": "008 实际回放：004 需求采集计划的截图、操作步骤与中文说明，可切换原生结果。",
+      "preview": "assets/specreel-understanding.png",
+      "preview_caption": "008原创理解总结图：脚本与可选Agent链路、浏览器记录与视频生成原理、自动执行边界、三条实际成品、录屏对比、指导与备忘场景、个人价值与取舍。",
       "demo_url": null
     },
     {

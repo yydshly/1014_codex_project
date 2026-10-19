@@ -10,7 +10,7 @@
 
 编号按收录顺序从 `001` 递增，目录采用 `projects/001-project-name/`。编号创建后保持不变，首页始终按编号升序展示。
 
-总索引收录全部研究，网页是否上线单独标记。目前包含 **001—015 共 15 项研究**，其中 9 项提供公开网页；其余可阅读研究记录，运行实验按子项目说明在本地进行。001、002、003、005、008 本次补交研究文档与证据配图，运行工程仍待单独归集；完整核对见 [研究收录核对](docs/CATALOG_AUDIT.md)。
+总索引收录 **001—015 共 15 项研究**，网页是否上线单独标记；当前公开数量和入口以[研究总览](https://yydshly.github.io/1014_codex_project/)为准。其余可阅读研究记录，运行实验按子项目说明在本地进行。最初的补交范围与编号核对保留在 [研究收录核对](docs/CATALOG_AUDIT.md)，各项目后续发布以部署记录为准。
 
 <!-- PROJECTS:START -->
 
@@ -23,7 +23,7 @@
 | 005 | [小汐：AI 虚拟角色互动实验](projects/005-cyber-companion/README.md) | 已跑通 Live2D 中文对话、语音、表情与打断；真人实时闭环仍缺数字人服务，尚未达到真人目标。保留本地原型、失败与边界记录。 | 研究中 | [研究笔记](projects/005-cyber-companion/RESEARCH.md) | [GitHub](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) | — |
 | 006 | [随机门：世界身份实验、源库原理与作品馆](projects/006-random-doors/README.md) | 阶段归档：Four-Seasons 以固定种子与参数联动三维场景；我们保留六地点偶遇、三世界八身份与列车第一人称样本，汇总随机价值、原画与人物深度的不足及完整游戏的投入边界。随机作品馆真实接入留待后续立项。 | 已归档 | [研究笔记](projects/006-random-doors/RESEARCH.md) | [原帖](https://x.com/techartist_/status/2109737086601556195) | [演示](https://yydshly.github.io/1014_codex_project/006-random-doors/research.html) |
 | 007 | [Atlas：模型驱动的资产工作流与月门水庭实证](projects/007-autumn-courtyard-blender/README.md) | Atlas 以技能规范和辅助脚本组织 2D/3D 资产生成、验证与引擎接入，底层依赖模型和建模工具；价值在可编辑资产与可重复交付。以月门水庭验证 Blender 脚本路线，探索展陈、教学、产品展示和游戏，流程增益仍待评测。 | 研究中 | [研究笔记](projects/007-autumn-courtyard-blender/RESEARCH.md) | [原帖](https://x.com/xikhar/status/2110143242591510835) | [演示](https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html) |
-| 008 | [Specreel：004 需求采集页面演示生成实测](projects/008-specreel/README.md) | 已用004真实操作生成三条原生与中文回放及MP4，验证更新标记；记录网址推荐、中文字体与播放节奏的限制。 | 已复现 | [研究笔记](projects/008-specreel/RESEARCH.md) | [GitHub](https://github.com/specreel/specreel) | — |
+| 008 | [Specreel：浏览器记录生成演示与操作备忘](projects/008-specreel/README.md) | Playwright记录网页动作和画面，Specreel生成分步回放与视频；支持可选Agent和模型编排，准备好流程后可无人值守。已实测004三流程，整理原理、录屏对比、教程与备忘场景及按需复用价值，未证明整体省时。 | 已复现 | [研究笔记](projects/008-specreel/RESEARCH.md) | [GitHub](https://github.com/specreel/specreel) | — |
 | 009 | [个人主页启发与需求发现产品探索](projects/009-demand-discovery/README.md) | JasonZhu.AI 以博客、工具、项目、订阅与服务构成个人主页，并用 AI 管线更新快讯。我们的收获是研究沉淀、入口引导与复习更新，形成“研究→实践→记录→展示→接触用户→获得反馈→更新研究”；再延伸到 AI 发现需求、证据追查、验证和产品化。009 已跑通三轮本地探索，公开页展示真实档案，持续使用与付费待验证。 | 研究中 | [研究笔记](projects/009-demand-discovery/RESEARCH.md) | [来源](https://jasonzhu.ai/) | [演示](https://yydshly.github.io/1014_codex_project/009-demand-discovery/#synthesis) |
 | 010 | [从 Atypica 到数据驱动的需求调研](projects/010-evidence-research-lab/README.md) | Atypica 以资料研究、用户视角模拟与报告辅助需求和市场调研。我们自建导入、证据与报告原型，同模型同合成资料 B/C 未证明额外流程增益；由此追问模型、身份和流程价值，收束为数据→证据→需求→产品验证→反馈沉淀。可扩展需求雷达、调研工作台和领域助手，效果与付费待验证。 | 已归档 | [研究笔记](projects/010-evidence-research-lab/RESEARCH.md) | [原帖](https://x.com/gkxspace/status/2109970698303373750) | [演示](https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/#synthesis) |
 | 011 | [古人说唱 Battle：AI 视频制作流程研究](projects/011-ancient-rap-battle/README.md) | 研究歌曲、人物图与远端逐句视频的编排机制；制作94.64秒《压轴人间》，记录原曲驱动修复、阶段验收、可复用资产与扩展方向。 | 研究中 | [研究笔记](projects/011-ancient-rap-battle/RESEARCH.md) | [GitHub](https://github.com/10291124jcjc-dotcom/ancient-rap-battle) | [演示](https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/) |
@@ -90,11 +90,11 @@
 
 [查看项目](projects/007-autumn-courtyard-blender/README.md)
 
-#### 008 · Specreel：004 需求采集页面演示生成实测
+#### 008 · Specreel：浏览器记录生成演示与操作备忘
 
-![008 实际回放：004 需求采集计划的截图、操作步骤与中文说明，可切换原生结果。](projects/008-specreel/assets/preview.png)
+![008原创理解总结图：脚本与可选Agent链路、浏览器记录与视频生成原理、自动执行边界、三条实际成品、录屏对比、指导与备忘场景、个人价值与取舍。](projects/008-specreel/assets/specreel-understanding.png)
 
-008 实际回放：004 需求采集计划的截图、操作步骤与中文说明，可切换原生结果。
+008原创理解总结图：脚本与可选Agent链路、浏览器记录与视频生成原理、自动执行边界、三条实际成品、录屏对比、指导与备忘场景、个人价值与取舍。
 
 [查看项目](projects/008-specreel/README.md)
 

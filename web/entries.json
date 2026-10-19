@@ -142,6 +142,20 @@
         "label": "我们的扩展与优化",
         "path": "002-rainy-ghost/research.html#extensions"
       }
+    ],
+    "008": [
+      {
+        "label": "能力、原理与使用价值",
+        "path": "008-specreel/#synthesis"
+      },
+      {
+        "label": "三条实际回放与视频",
+        "path": "008-specreel/#results"
+      },
+      {
+        "label": "一张图理解自动演示",
+        "path": "008-specreel/#overview-map"
+      }
     ]
   }
 }
