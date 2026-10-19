@@ -1,24 +1,737 @@
 {
-  "status": "local-checks-passed-awaiting-public-verification",
+  "status": "published-and-verified",
   "date": "2026-10-19",
   "before": {
     "localResearchProjects": 15,
     "remoteResearchProjects": 10,
     "publicIndexProjects": 9,
-    "missingUncommittedProjects": ["001", "002", "003", "005", "008"],
+    "missingUncommittedProjects": [
+      "001",
+      "002",
+      "003",
+      "005",
+      "008"
+    ],
     "committedButHiddenProject": "015"
   },
   "local": {
     "researchProjects": 15,
     "publishedApplications": 9,
     "recordsOnly": 6,
-    "ids": ["001", "002", "003", "004", "005", "006", "007", "008", "009", "010", "011", "012", "013", "014", "015"],
+    "ids": [
+      "001",
+      "002",
+      "003",
+      "004",
+      "005",
+      "006",
+      "007",
+      "008",
+      "009",
+      "010",
+      "011",
+      "012",
+      "013",
+      "014",
+      "015"
+    ],
     "fullSiteBuild": "passed",
     "catalogTests": 10,
-    "recordDialogsChecked": ["001", "015"],
+    "recordDialogsChecked": [
+      "001",
+      "015"
+    ],
     "mobileViewportWidth": 390,
     "horizontalOverflow": false,
-    "browserErrors": 0
+    "browserErrors": 0,
+    "preloadedRecordOpensImmediately": true
   },
-  "scope": "补齐全部研究索引，以及五项此前未提交的研究文档、来源和证据配图；保留九项已有应用发布。五项运行工程仍保存在本地，未声明已全量提交或上线。"
+  "scope": "补齐全部研究索引，以及五项此前未提交的研究文档、来源和证据配图；保留九项已有应用发布。五项运行工程仍保存在本地，未声明已全量提交或上线。",
+  "public": {
+    "verifiedAt": "2026-10-19T10:07:47.864718+00:00",
+    "url": "https://yydshly.github.io/1014_codex_project/",
+    "researchProjects": 15,
+    "publishedApplications": 9,
+    "recordsOnly": 6,
+    "ids": [
+      "001",
+      "002",
+      "003",
+      "004",
+      "005",
+      "006",
+      "007",
+      "008",
+      "009",
+      "010",
+      "011",
+      "012",
+      "013",
+      "014",
+      "015"
+    ],
+    "resourcesChecked": 95,
+    "checks": [
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/",
+        "status": 200,
+        "bytes": 7559,
+        "sha256": "ed2a8595865c7ce8b1e78cd3810de3c227098ab0f3e6570dd5e7fbea629baa32"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects.json",
+        "status": 200,
+        "bytes": 12231,
+        "sha256": "779584759dd01b0a56fd061d01a08d1f1a79a06a9ad5330192e77cfcf45a4021"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/entries.json",
+        "status": 200,
+        "bytes": 3732,
+        "sha256": "2bdc7e29b7ab5d90120939e83a98b7da8baf3e966d31d091a2b2129069035d3b"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/001-archify/README.md",
+        "status": 200,
+        "bytes": 4365,
+        "sha256": "3799d230765a19da1c2c12938761b6ea5e3b991d304a43ba69d4c4353345605d",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/001-archify/RESEARCH.md",
+        "status": 200,
+        "bytes": 8892,
+        "sha256": "5988ad6f8b438626cca60beddfc3f64abe901fe2fac2f48ee42109623be9aab6",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/001-archify/assets/README.md",
+        "status": 200,
+        "bytes": 1324,
+        "sha256": "204f6aa1f278f3471d45bf366aa61a3917efac70b1672cd4d9bda7946eff5648",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/001-archify/web/README.md",
+        "status": 200,
+        "bytes": 4283,
+        "sha256": "73114500382e388397070d515c2f977b228fe8061ac228674c67c9a5c906a6e5",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/001-archify/assets/preview.png",
+        "status": 200,
+        "bytes": 117687,
+        "sha256": "52da53a0319584ffb038d8b2f7757623190e19c36f5c9caa1b61867e4237c391",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/002-rainy-ghost/README.md",
+        "status": 200,
+        "bytes": 13484,
+        "sha256": "a629527259f3c40c945faa22794e6f491779aa2134a1fdfb9238bf4e3a351d41",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/002-rainy-ghost/RESEARCH.md",
+        "status": 200,
+        "bytes": 47644,
+        "sha256": "358a14473a6b2d5767af32092e503a4ff76b4f945496986ebb8c977aba47fbdf",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/002-rainy-ghost/assets/README.md",
+        "status": 200,
+        "bytes": 9975,
+        "sha256": "9fcc96988a61b4e6bc67a84276d9bae35f21e2c9c0e143b0d4ccc587b02ee85f",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/002-rainy-ghost/web/README.md",
+        "status": 200,
+        "bytes": 19905,
+        "sha256": "687da85b93f35420ac8e62fa23d59c97247fb0bbcccc87a838a8d43b60c3335e",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/002-rainy-ghost/assets/rain-impact.jpg",
+        "status": 200,
+        "bytes": 46390,
+        "sha256": "b3b42305062c4b8466e30dd582895478569eaacf3e2a1fb34de0cf333c9c86d0",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/003-lofi-room/README.md",
+        "status": 200,
+        "bytes": 9191,
+        "sha256": "0991ea057b71d0d43551e9e34efb38e49f10bf5454028bfbbebcded1dd84f106",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/003-lofi-room/RESEARCH.md",
+        "status": 200,
+        "bytes": 17947,
+        "sha256": "f1144b446674278af87c36413c5ce3f723e9959a698002bb8bc6c85e9027575d",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/003-lofi-room/assets/README.md",
+        "status": 200,
+        "bytes": 4784,
+        "sha256": "a1e5f3cc5ab4d5a2d3dd22f9114d02414dc37ba07ba317ed329f65ba2f0737e0",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/003-lofi-room/web/README.md",
+        "status": 200,
+        "bytes": 10327,
+        "sha256": "c97017e5107a69756cc675b3d0a59f28995565dfcf6e720254ef04bab3e32118",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/003-lofi-room/assets/workspace-actions-computer.png",
+        "status": 200,
+        "bytes": 81941,
+        "sha256": "46f512946c11822f7076ab2152f03ecca9575109a3289c838324b4666768e981",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/004-jasonzhu-ai/README.md",
+        "status": 200,
+        "bytes": 13984,
+        "sha256": "10668325440ccda39b9bc7e63b079d90b88521640db0f8a58f77490b0be0e0a4",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/004-jasonzhu-ai/RESEARCH.md",
+        "status": 200,
+        "bytes": 12369,
+        "sha256": "f5926b3b6e6fb3c6a0df82e26a58269a9f55b4a60f363ce77a9d2d82b6b9761a",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/004-jasonzhu-ai/assets/README.md",
+        "status": 200,
+        "bytes": 4376,
+        "sha256": "d70c13b5662f538f05570274df29c0e7f58ebb0b3f0b6c5747000dbee559c251",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/004-jasonzhu-ai/web/README.md",
+        "status": 200,
+        "bytes": 20816,
+        "sha256": "196db9130c0edaa49a6dce1fd4a9c5e4e2951f2e219cc4eef7158c4dbd195853",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/004-jasonzhu-ai/assets/product-overview.png",
+        "status": 200,
+        "bytes": 167684,
+        "sha256": "4a95c5ce18ad0f6d8c53c29a511ae739bd8eff712b365e12f462a96b32741555",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/005-cyber-companion/README.md",
+        "status": 200,
+        "bytes": 4739,
+        "sha256": "9936501845c0a845b8a433a6892f7cee164d0b03faf3954dd2ae824b8265cec4",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/005-cyber-companion/RESEARCH.md",
+        "status": 200,
+        "bytes": 7468,
+        "sha256": "7593c5993a0aa8be187fad255ea4e84ae2cb20a44493a60eb76d3cf1d2bc8d17",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/005-cyber-companion/assets/README.md",
+        "status": 200,
+        "bytes": 881,
+        "sha256": "61a498f722608e1640c9f4c9679bcb5e5ac8a21db1c47bbe3859c16f2544858f",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/005-cyber-companion/web/README.md",
+        "status": 200,
+        "bytes": 4379,
+        "sha256": "44bd344a7ee165bc5015a2ca90e42c11b1d7d1ff4bfe670ef8c95894628a4cb7",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/005-cyber-companion/assets/preview.jpg",
+        "status": 200,
+        "bytes": 68194,
+        "sha256": "d996931e720df9a35b14c490ac502c49a64e7d20c1c9006fe0f196f5d001c891",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/006-random-doors/README.md",
+        "status": 200,
+        "bytes": 12039,
+        "sha256": "8e4355ec71855cd64bbe7a9b52fc73be8e47a1cf310fa2e9d5d5517fdb8815a7",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/006-random-doors/RESEARCH.md",
+        "status": 200,
+        "bytes": 11345,
+        "sha256": "23101a65f79d2345590488393e4c64b16c631b88c9070f9f00db60c0784673a4",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/006-random-doors/assets/README.md",
+        "status": 200,
+        "bytes": 4917,
+        "sha256": "252809e6793ca01f4e9703a9eee5effbf2ddbfb79476420916b66b2f1564fe3f",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/006-random-doors/web/README.md",
+        "status": 200,
+        "bytes": 12309,
+        "sha256": "198fabc9051da528a3c60c6c3e558849f7b0d75f2a86bb5c43fc47424fc37219",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/006-random-doors/assets/understanding-overview-20261016.png",
+        "status": 200,
+        "bytes": 2831140,
+        "sha256": "b67412ba4689669fca923837971504bb3bd0a6e9f0201a90d62785d282ccfba8",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/007-autumn-courtyard-blender/README.md",
+        "status": 200,
+        "bytes": 4672,
+        "sha256": "06721756820df99b103f7add6a2e101e94666ce33b0c0571feea7cc13f84371d",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/007-autumn-courtyard-blender/RESEARCH.md",
+        "status": 200,
+        "bytes": 6310,
+        "sha256": "c4b33041061e49ee0398203a760435a6200315d44e17a26617152d2ac49db8f9",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/007-autumn-courtyard-blender/assets/README.md",
+        "status": 200,
+        "bytes": 1442,
+        "sha256": "86a83d2a792f0a25097232eef5296fd137b9e1d245a5c3aed2b119193d2321ca",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/007-autumn-courtyard-blender/web/README.md",
+        "status": 200,
+        "bytes": 10792,
+        "sha256": "5b11917dfbe11789b64cc7d2d5bb3ea53a1ce3d427f5c665bab9857a0ae9e8b4",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/007-autumn-courtyard-blender/web/assets/atlas-overview.png",
+        "status": 200,
+        "bytes": 6429785,
+        "sha256": "b3269d610d8f6018b1954a1bc638cf9bb6b903ef372f61c06f65c5f62306e18d",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/008-specreel/README.md",
+        "status": 200,
+        "bytes": 3037,
+        "sha256": "648ea4d1310d5c9bc63bac0dcd5f31983b21c1409660ed8472c1f6d4c3f0c172",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/008-specreel/RESEARCH.md",
+        "status": 200,
+        "bytes": 6159,
+        "sha256": "c3b6b5055b33c341a553f485675a7477402f407a232002f118cbce1a67ede576",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/008-specreel/assets/README.md",
+        "status": 200,
+        "bytes": 612,
+        "sha256": "71afecd91a041740b96f0f419ec1fd00314315bbbd363858724ea83163830f53",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/008-specreel/web/README.md",
+        "status": 200,
+        "bytes": 2206,
+        "sha256": "8c26d8d741309e727ceabd31db967dcc864a0e955aeaedc4a1c3159fa394a208",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/008-specreel/assets/preview.png",
+        "status": 200,
+        "bytes": 79769,
+        "sha256": "321e656ff5f8d626321ffaf337f7d6d278270b8ca3c8d055f68eb918fa50a2bf",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/009-demand-discovery/README.md",
+        "status": 200,
+        "bytes": 7483,
+        "sha256": "5c7cdf26758fd955358d392be3e44a09a7f6ff8365d3d7dec55889135de2b974",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/009-demand-discovery/RESEARCH.md",
+        "status": 200,
+        "bytes": 11407,
+        "sha256": "5dd3ebeb8571ea4fcc86e7cde46f8161f1b21ec3c49e529a5c272e045537879e",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/009-demand-discovery/assets/README.md",
+        "status": 200,
+        "bytes": 3848,
+        "sha256": "0c064075b453c34c6c53f6bd22e34b5d1658622739ab325cb6baa60fc2ab020d",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/009-demand-discovery/web/README.md",
+        "status": 200,
+        "bytes": 6523,
+        "sha256": "8bb379ff31fbe03564c79201682a6dede93c3496db203f5f088c930151f116f6",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/009-demand-discovery/assets/understanding-map.png",
+        "status": 200,
+        "bytes": 1261860,
+        "sha256": "8c357a33256081a8db04f244a60bb8cd1fbdaf6a5cb1ced0d55ceecea6ea6f21",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/010-evidence-research-lab/README.md",
+        "status": 200,
+        "bytes": 10778,
+        "sha256": "daf31b8da2cebb87b8a1d890078e89b94a865ec7758ba056adb678e035c5a68d",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/010-evidence-research-lab/RESEARCH.md",
+        "status": 200,
+        "bytes": 9456,
+        "sha256": "f7fe26bc071b6b76263df89f8795997d569c89eac62651f02ebb9cf2018bb37f",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/010-evidence-research-lab/assets/README.md",
+        "status": 200,
+        "bytes": 2218,
+        "sha256": "2333efa10608c15b60c115b873e02d2d7807259706fd575bf0da5382ffaca4ef",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/010-evidence-research-lab/web/README.md",
+        "status": 200,
+        "bytes": 7786,
+        "sha256": "99867c24861c72ed59f7b38f4dcc25cf1dd05b801c78b42ad201735734b8868b",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/010-evidence-research-lab/assets/understanding-map.png",
+        "status": 200,
+        "bytes": 339741,
+        "sha256": "4d7f57db3fc096ab398e38f643b7c49b544d42d244934c0a5f68507fe19f6a6b",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/011-ancient-rap-battle/README.md",
+        "status": 200,
+        "bytes": 20174,
+        "sha256": "8cf2fa802ef4e682facf4e110bcd715d374f171d339e43c1ba6de61468b28f98",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/011-ancient-rap-battle/RESEARCH.md",
+        "status": 200,
+        "bytes": 37559,
+        "sha256": "e00c19149d1011886fd859d637b671077549100d0e56b81ee5a22ed6dc67aee2",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/011-ancient-rap-battle/assets/README.md",
+        "status": 200,
+        "bytes": 14365,
+        "sha256": "61393b7e41b6ce154478adee60db158fbe7adcf4db8a44e07e73a502301ed6b9",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/011-ancient-rap-battle/web/README.md",
+        "status": 200,
+        "bytes": 15504,
+        "sha256": "9806b16d449c7721b94f514a6a153a6e7474e7b53cd281b72406e893aa7cec6a",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/011-ancient-rap-battle/assets/ancient-rap-battle-research-overview.png",
+        "status": 200,
+        "bytes": 6591274,
+        "sha256": "cbe55cde30b35917581c986454e7a86542ce4d3832711133cd421c2431a32990",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/012-edgechat/README.md",
+        "status": 200,
+        "bytes": 6840,
+        "sha256": "a1a6aaeb6c32d429aa91598f9f3daca0d550d45d54e62c2e7c104292589e8c4c",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/012-edgechat/RESEARCH.md",
+        "status": 200,
+        "bytes": 15807,
+        "sha256": "9abfe375e99bb5d7f88998674f552a042c708f51326463459026b99e526484ed",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/012-edgechat/assets/README.md",
+        "status": 200,
+        "bytes": 1688,
+        "sha256": "2363ee607183cf218e6244ec0dbc215f3ee4a8ef7d99158bdacc51a35467ac37",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/012-edgechat/web/README.md",
+        "status": 200,
+        "bytes": 3080,
+        "sha256": "f34627800aa5f76b927d0ae47e80026f263aa30cd86b5a16e348c3952e06c687",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/012-edgechat/assets/edgechat-summary.png",
+        "status": 200,
+        "bytes": 1676016,
+        "sha256": "4346cb622b0aeeb762f9c932373268b95a149247814bec19e128c7d8cf722133",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/013-crawl-hive/README.md",
+        "status": 200,
+        "bytes": 13129,
+        "sha256": "16d7966a67e4c99c3ce83099ab246468d221b9c7bdf9ec97f4d64d1d75aea218",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/013-crawl-hive/RESEARCH.md",
+        "status": 200,
+        "bytes": 62582,
+        "sha256": "37728bebcdf21a5c315de546ae8f3fd5895dda4ba0093ced919f398971e73dc5",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/013-crawl-hive/assets/README.md",
+        "status": 200,
+        "bytes": 4414,
+        "sha256": "466e6c88fcf357f2813e932118f985ef8e67e2697d87b366f8c42a18fe8d1530",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/013-crawl-hive/web/README.md",
+        "status": 200,
+        "bytes": 5262,
+        "sha256": "76bc23d27ef1306447d049efd4010ebbf12791e0e1e81ccb104064303a862426",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/013-crawl-hive/assets/understanding-overview.jpg",
+        "status": 200,
+        "bytes": 265955,
+        "sha256": "b0ae95f0330371b04ddca75fafa8cc4ea67ffb54123cbeebb32ea7d482d04323",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/014-cyber-xiaoya-study/README.md",
+        "status": 200,
+        "bytes": 4197,
+        "sha256": "5023e1eb9763f8f99820ae801625422459cdfde93a97e7dfe4d10e4af7dc4999",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/014-cyber-xiaoya-study/RESEARCH.md",
+        "status": 200,
+        "bytes": 19207,
+        "sha256": "6849a959b9b099eb70296567e1d7fbed1968734645d28c58d0eb887d8d276808",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/014-cyber-xiaoya-study/assets/README.md",
+        "status": 200,
+        "bytes": 1441,
+        "sha256": "ce97fab15e198df8550809030749878ca026174b2577fd652895df4665308428",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/014-cyber-xiaoya-study/web/README.md",
+        "status": 200,
+        "bytes": 2913,
+        "sha256": "23ee90c3d457e39a382ead0be46bc0ef4f1148a73884fcd40e74fcf94d6d25e0",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/014-cyber-xiaoya-study/assets/overview.png",
+        "status": 200,
+        "bytes": 1312442,
+        "sha256": "1cb2474c8991404f3b0d04b355762b045050b01ecd6be7aeb711edeb8ee67d69",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/015-fotor-agent/README.md",
+        "status": 200,
+        "bytes": 3934,
+        "sha256": "e9728dd2b67ab473b082a2a0a42d59916e84e40d0e1146ca293445a859d0729a",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/015-fotor-agent/RESEARCH.md",
+        "status": 200,
+        "bytes": 3091,
+        "sha256": "fa244f1b1051a4051d289ea382a985be4dd17f4117d87c329333ba20e7e531de",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/015-fotor-agent/assets/README.md",
+        "status": 200,
+        "bytes": 1320,
+        "sha256": "9a83f65d5f0aabc76ac572204c914e3e48550b2053b9c38930bebcac75511d2f",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/015-fotor-agent/web/README.md",
+        "status": 200,
+        "bytes": 433,
+        "sha256": "76761671baf82cd6ea1f960036effdf19b517f42dbcd6ac1f8904cb10bd15397",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/projects/015-fotor-agent/assets/understanding-overview.png",
+        "status": 200,
+        "bytes": 1450442,
+        "sha256": "d87f52b03ebecb10007be6b9f3b1d83a57850d385261f04d06a4df9387f8d99a",
+        "contentMatches": true
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html",
+        "status": 200,
+        "bytes": 17841,
+        "sha256": "d611401e5417e15e85b87b56c9be9e3708d8a128664c8b0b1286836f79bd2341"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/index.html",
+        "status": 200,
+        "bytes": 42338,
+        "sha256": "796a24b9d65afdfb75820d6acd2d4928164192a2d356102402c15138b5a38ab3"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html",
+        "status": 200,
+        "bytes": 42204,
+        "sha256": "8bb067d603f621f3b457f26e957521daabc3fc66c4117d8bf25f62267a909770"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html",
+        "status": 200,
+        "bytes": 2230,
+        "sha256": "e341a4a003fc9d2a58b1b42754d1dda953ea2ea0d3f8d612b6b85b7f898c1008"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/006-random-doors/",
+        "status": 200,
+        "bytes": 2227,
+        "sha256": "9aa372fe6b0ba7ea781f46f9217f0e5b5d644f0e5b111456fb304135609789eb"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/006-random-doors/seaside.html",
+        "status": 200,
+        "bytes": 5641,
+        "sha256": "4b054a61da4e60e06d58cf5a2bf0ed733cecee54b6462411b9a0847672884572"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/overview.html",
+        "status": 200,
+        "bytes": 3659,
+        "sha256": "c1f6469c511e4e5de6dc7ea35e7a3ee6ab7028bffa9cc8fd960a0a715c537e0c"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html",
+        "status": 200,
+        "bytes": 51457,
+        "sha256": "b9c34c98be80add19d0df0725fa91b958ddf99a6b8efcc610852bfe603b5c30f"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/",
+        "status": 200,
+        "bytes": 23455,
+        "sha256": "d287cd225deee21c1500e7f155bcf56a32ab91575d98a37071804bace4e33247"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/",
+        "status": 200,
+        "bytes": 43002,
+        "sha256": "14af86967ba10e055848b72da304cf508ea11523fa8ff1654a85568f2a39e337"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/understanding.html",
+        "status": 200,
+        "bytes": 1934,
+        "sha256": "9aba81a7f948180805542f5aab371ffb94f62248992c388c0286de19924d3667"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/",
+        "status": 200,
+        "bytes": 1537769,
+        "sha256": "b308a90e5131ffb10a0356b9191ae476acd4e609dcf662b7a3fa5c2ef5fe513e"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/",
+        "status": 200,
+        "bytes": 65464,
+        "sha256": "0c3dc4aa5c65e7fced49741f48825d6b1c04ecd948a222768b27e048894c41f2"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/012-edgechat/",
+        "status": 200,
+        "bytes": 27836,
+        "sha256": "d21c515fa7cacc33151bc4dbee299f5b0177a0eb324073547b8c02493f64c349"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/013-crawl-hive/index.html",
+        "status": 200,
+        "bytes": 69828,
+        "sha256": "a913e3b0a0bcda63de4ad3764381ffd3df5008adc09907bcb567e5f571d17513"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/013-crawl-hive/explore/index.html",
+        "status": 200,
+        "bytes": 13732,
+        "sha256": "8934144a7f63717bf8f89198cbb697a96ba7101fdee80125209afc674602c9f3"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/",
+        "status": 200,
+        "bytes": 30966,
+        "sha256": "f75f36b747b39b91a88631706f8ee6d3abe283492d23b4567fc26dd6e52f882d"
+      }
+    ],
+    "scope": "Actual HTTP content checks; application runtimes and unpublished local engineering were not deployed or re-tested.",
+    "browser": {
+      "cards": 15,
+      "idsOrdered": true,
+      "countText": "15项研究9项网页已发布6项仅研究记录",
+      "horizontalOverflow": false,
+      "screenshot": "verification/catalog-public.jpg"
+    }
+  },
+  "sourceCommit": "a3af21af1a7a04e6b8eb54733017efdf52669627",
+  "workflow": {
+    "runId": 39234830192,
+    "url": "https://github.com/yydshly/1014_codex_project/actions/runs/39234830192",
+    "conclusion": "success"
+  },
+  "recordLoadingFix": "公开构建预先提供15项README，避免打开记录时重复等待Markdown网络请求；本地已确认点击后立即显示。"
 }

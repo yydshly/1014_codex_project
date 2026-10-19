@@ -55,6 +55,11 @@ await cp(resolve(root, 'web/index.html'), resolve(output, 'index.html'));
 await writeFile(resolve(output, '.nojekyll'), '');
 await writeFile(resolve(output, 'projects.json'), JSON.stringify({ schema_version: 1, projects: allProjects }, null, 2) + '\n');
 const entries = {};
+const records = {};
+for (const item of allProjects) {
+  records[item.id] = await readFile(resolve(root, 'projects', `${item.id}-${item.slug}`, 'README.md'), 'utf8');
+}
+await writeFile(resolve(output, 'records.json'), JSON.stringify({ version: 1, projects: records }) + '\n');
 for (const {name, item} of published) {
   const configured = entrances.projects?.[item.id];
   entries[item.id] = Array.isArray(configured) && configured.length ? configured : [{label: '阅读研究', path: `${name}/`}];
