@@ -54,3 +54,5 @@ npm run build
 ## 公开构建
 
 `node build.mjs` 是 Pages 统一入口，依次执行检查、17项规则行为测试、静态构建与公开白名单检查。`dist/explore/deployment-mode.js` 明确启用公开快照模式，不探测本机或线上采集接口，不提供实时刷新。随站数据仍采集于2026-10-15；本地源码的模式保持可连接采集服务。
+
+公网验收命令：`node scripts/verify-public.mjs`。它比对静态产物哈希、正文锚点、入口和完整发布清单；加输出文件参数可保存HTTP记录。已发布状态和实际范围见父目录deployment.json。

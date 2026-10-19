@@ -1,0 +1,178 @@
+{
+  "checkedAt": "2026-10-19T08:47:11.951Z",
+  "base": "https://yydshly.github.io/1014_codex_project/",
+  "staticFiles": [
+    {
+      "path": "013-crawl-hive/app.js",
+      "status": 200,
+      "bytes": 15503,
+      "sha256": "62a724565be25faa098a2aa18590592a9362eaeaf7b9a8012d8f2f1f1fcf7340"
+    },
+    {
+      "path": "013-crawl-hive/data.js",
+      "status": 200,
+      "bytes": 22278,
+      "sha256": "7ddba5288f370764184b65be2bed5cdaa455230e9dc33861e4f83ea4f0299e57"
+    },
+    {
+      "path": "013-crawl-hive/explore/app.js",
+      "status": 200,
+      "bytes": 23305,
+      "sha256": "a8c049c695a3eefd42f34a5ef60ac1ba4d219f892cdc61c98078e50c0d828547"
+    },
+    {
+      "path": "013-crawl-hive/explore/deployment-mode.js",
+      "status": 200,
+      "bytes": 87,
+      "sha256": "bb810bc19c4084cb3a1c00a1c7540fb161de340a5affbc41567c112d9881acdf"
+    },
+    {
+      "path": "013-crawl-hive/explore/engine.js",
+      "status": 200,
+      "bytes": 5136,
+      "sha256": "a09ac16e1a20ee6a0da7875aeab55136f23a5be9554052b74a49b9c9ef25edc1"
+    },
+    {
+      "path": "013-crawl-hive/explore/index.html",
+      "status": 200,
+      "bytes": 13732,
+      "sha256": "8934144a7f63717bf8f89198cbb697a96ba7101fdee80125209afc674602c9f3"
+    },
+    {
+      "path": "013-crawl-hive/explore/mark.svg",
+      "status": 200,
+      "bytes": 370,
+      "sha256": "d8f80a1774c00de9fea4929190120da8ee3084df23d1bdee086e3e5f722420ba"
+    },
+    {
+      "path": "013-crawl-hive/explore/snapshot.json",
+      "status": 200,
+      "bytes": 69116,
+      "sha256": "75d6f1f06d75133a7a77bd84185ba0a9f8bd2db22b991177c65ec005e00e8ed3"
+    },
+    {
+      "path": "013-crawl-hive/explore/SOURCES.md",
+      "status": 200,
+      "bytes": 4053,
+      "sha256": "df2211a7c7a0bc3c8ec0866d68bff2ba8776c2c2c56321e66e1d8756b5a03c83"
+    },
+    {
+      "path": "013-crawl-hive/explore/styles.css",
+      "status": 200,
+      "bytes": 40981,
+      "sha256": "4afaa3dc970b7913f350129ffe7fcc2487406de32ac33f987c3d882789d4200d"
+    },
+    {
+      "path": "013-crawl-hive/favicon.svg",
+      "status": 200,
+      "bytes": 263,
+      "sha256": "d718446119de54623199f3d7bcfa9fa39e2891712b3bab9f7c5d6103ef473840"
+    },
+    {
+      "path": "013-crawl-hive/four-pillars.css",
+      "status": 200,
+      "bytes": 9545,
+      "sha256": "e8e76ddc0c4b079ba97073b46de205b50fd2dd14a07ed710c7d9c17ff1ec92aa"
+    },
+    {
+      "path": "013-crawl-hive/index.html",
+      "status": 200,
+      "bytes": 69655,
+      "sha256": "0a7a0bb3773bb6e87ab962ed903c2a63906bd16a2d35bcca2616cb708aee71f0"
+    },
+    {
+      "path": "013-crawl-hive/keyword-lab.js",
+      "status": 200,
+      "bytes": 5455,
+      "sha256": "8fddfbdee3cc8fd476ce5a6bc0c6bf457710415a56169d9ed9488e7b0ae28594"
+    },
+    {
+      "path": "013-crawl-hive/licenses/UPSTREAM-MIT.txt",
+      "status": 200,
+      "bytes": 1065,
+      "sha256": "5b89ef77caa484424a6d83b5e539dfc27e69de373b2f4664c94a1a4355b57bda"
+    },
+    {
+      "path": "013-crawl-hive/media/understanding-map.svg",
+      "status": 200,
+      "bytes": 15627,
+      "sha256": "01d30d65dd959816230966b026bf5f5f347a2a4a44f6bed41c4516f769c63390"
+    },
+    {
+      "path": "013-crawl-hive/media/upstream-home.png",
+      "status": 200,
+      "bytes": 470842,
+      "sha256": "c6959645ed167a5c04db0ce496265e9f5204ff1b5e2f6dc01352aefd04bc3af6"
+    },
+    {
+      "path": "013-crawl-hive/media/upstream-spec.png",
+      "status": 200,
+      "bytes": 394541,
+      "sha256": "b4eb1ca59f6ec3ba816d2ef66aa0495cf22898dc9a51464665252bcc3fccce4d"
+    },
+    {
+      "path": "013-crawl-hive/media/upstream-xray.png",
+      "status": 200,
+      "bytes": 419346,
+      "sha256": "6b1fbd9682e4e8283f1987bb5b3856f6a34b636d777ae75d5b2621ed851c9f7c"
+    },
+    {
+      "path": "013-crawl-hive/README.md",
+      "status": 200,
+      "bytes": 11740,
+      "sha256": "8758dbfcb2c8bcd01117bb1ab75d57eda2b83ced4c4f586eef8fd1b1e69898b7"
+    },
+    {
+      "path": "013-crawl-hive/RESEARCH.md",
+      "status": 200,
+      "bytes": 59906,
+      "sha256": "6670b1131bb00b264e89d3428f2bcbe2db576bf90af814d840554e5dcfddfbbb"
+    },
+    {
+      "path": "013-crawl-hive/source-catalog-ui.js",
+      "status": 200,
+      "bytes": 5840,
+      "sha256": "5178ca25532daf1c499cd85d95dd1a8a39025a42fa83d9ffc8115ba2f026e2ac"
+    },
+    {
+      "path": "013-crawl-hive/source-catalog.js",
+      "status": 200,
+      "bytes": 30514,
+      "sha256": "211d3985d24df6deed1fac0ac4003da39f0fe9d616d97466c68ff09c3ba8c937"
+    },
+    {
+      "path": "013-crawl-hive/styles.css",
+      "status": 200,
+      "bytes": 35946,
+      "sha256": "ccc30c16580780159741ac55810e1ac487d26355882732d677a0775a2e47bfe1"
+    },
+    {
+      "path": "013-crawl-hive/understanding.css",
+      "status": 200,
+      "bytes": 9944,
+      "sha256": "1bf7edd4753f7d1cbbfdd757530623f4d7731483a2549d23682bc847acaa6fa5"
+    },
+    {
+      "path": "013-crawl-hive/understanding.js",
+      "status": 200,
+      "bytes": 1382,
+      "sha256": "dab1f7311281bbe4b3bd6b70351879502dc6b2281c40c197922ae2b22e6a3d2c"
+    }
+  ],
+  "staticFileCount": 26,
+  "routeCount": 19,
+  "projectIds": [
+    "004",
+    "006",
+    "007",
+    "009",
+    "010",
+    "011",
+    "013",
+    "014"
+  ],
+  "uniquePageIds": 101,
+  "anchorsChecked": 44,
+  "publicSnapshotOnly": true,
+  "scope": "HTTP、静态字节、入口与锚点核验；浏览器交互结果单独记录"
+}

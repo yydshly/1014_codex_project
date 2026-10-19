@@ -1,0 +1,77 @@
+{
+  "project": "013-crawl-hive",
+  "status": "published-and-verified",
+  "publishedAt": "2026-10-19T08:45:35Z",
+  "sourceCommit": "3dcd257ce227700f92c2ef7d5fe6ea58d985ffe9",
+  "workflow": {
+    "runId": 39224930777,
+    "url": "https://github.com/yydshly/1014_codex_project/actions/runs/39224930777",
+    "conclusion": "success"
+  },
+  "urls": {
+    "summary": "https://yydshly.github.io/1014_codex_project/013-crawl-hive/#synthesis",
+    "map": "https://yydshly.github.io/1014_codex_project/013-crawl-hive/#understanding-map",
+    "sources": "https://yydshly.github.io/1014_codex_project/013-crawl-hive/#source-access-catalog",
+    "workbench": "https://yydshly.github.io/1014_codex_project/013-crawl-hive/explore/index.html",
+    "site": "https://yydshly.github.io/1014_codex_project/"
+  },
+  "summary": {
+    "upstream": "固定版本的币圈多来源监控应用；任务、增量、规则/可选AI、代币关联、去重、检查、保存与交付。未部署上游。",
+    "reflection": "可复用价值在来源接入与持续处理流程，独占数据或算法壁垒未证实。",
+    "exploration": "独立AI工作台，2026-10-15采集4来源51条；方向筛选、解释、收藏、导出、本地按需刷新。",
+    "sources": "原库4类、本仓库4个、候选13项；逐项登记入口、条件、覆盖、增量、限制与未执行示例。",
+    "processing": "固定RSS/GitHub topic获取、保留原文与日期、同URL去重，本地搜索与关键词规则筛选、排序、收藏导出。",
+    "scenarios": [
+      "AI信息跟进",
+      "产品发现与待试用清单",
+      "开源项目研究",
+      "后续扩展到指定对象或竞品监控"
+    ]
+  },
+  "publicMode": {
+    "snapshotDate": "2026-10-15",
+    "items": 51,
+    "sources": 4,
+    "modelsCalled": false,
+    "backgroundMonitoring": false,
+    "collectorApiIncluded": false,
+    "requestsLocalhost": false
+  },
+  "verification": {
+    "httpReport": "public-verification.json",
+    "staticFiles": 26,
+    "routes": 19,
+    "pageIds": 101,
+    "publishedProjectIds": [
+      "004",
+      "006",
+      "007",
+      "009",
+      "010",
+      "011",
+      "013",
+      "014"
+    ],
+    "browser": {
+      "summaryCards": 6,
+      "mapLoaded": true,
+      "sourceLayerFilter": true,
+      "workbenchKeywordFilters": true,
+      "snapshotLabelAndDisabledRefresh": true,
+      "desktopWidth": 1280,
+      "mobileWidth": 390,
+      "pageOverflow": false
+    },
+    "tests": 17,
+    "screenshots": [
+      "assets/public-summary.jpg",
+      "assets/public-summary-mobile.jpg"
+    ]
+  },
+  "limits": [
+    "候选来源未端到端接入",
+    "历史快照不是持续实时监控",
+    "没有模型摘要、事实核查或语义聚类",
+    "个人省时、覆盖和费用尚未评测"
+  ]
+}

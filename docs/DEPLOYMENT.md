@@ -99,4 +99,4 @@ _site/
 
 ### 013 CrawlHive理解摘要与独立AI探索
 
-沿用既有GitHub Pages发布流程，新增013理解摘要、总图、21项来源接法和工作台，保留已发布项目。统一构建入口为`projects/013-crawl-hive/web/build.mjs`；公开产物不包含采集服务或运行缓存，只读历史快照。提交后完成Actions及公网核验，再登记demo_url与验证记录。
+沿用既有GitHub Pages发布流程，新增013理解摘要、总图、21项来源接法和工作台，保留已发布项目。统一构建入口为`projects/013-crawl-hive/web/build.mjs`；公开产物不包含采集服务或运行缓存，只读历史快照。2026-10-19 已完成Actions及公网核验，正式入口为[理解摘要](https://yydshly.github.io/1014_codex_project/013-crawl-hive/#synthesis)，范围见[部署记录](../projects/013-crawl-hive/deployment.json)。

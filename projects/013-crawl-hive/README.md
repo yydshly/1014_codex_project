@@ -15,7 +15,7 @@ CrawlHive 将 X、Telegram 公开频道、指定网页和 DexScreener 行情接�
 | 本地网页 | 启动后访问 [013 中文研究网页](http://127.0.0.1:4183/1014_codex_project/013-crawl-hive/) |
 | 产品原型 | [知向 · AI 探索工作台](http://127.0.0.1:4183/1014_codex_project/013-crawl-hive/explore/index.html)，源码入口 [web/explore/index.html](web/explore/index.html) |
 | 主入口 | [项目总入口](http://127.0.0.1:4183/1014_codex_project/)，013 项下提供研究页和产品原型双入口 |
-| 线上地址 | 尚未部署；demo_url 保持为空 |
+| 线上地址 | [理解摘要](https://yydshly.github.io/1014_codex_project/013-crawl-hive/#synthesis)、[来源目录](https://yydshly.github.io/1014_codex_project/013-crawl-hive/#source-access-catalog)、[AI 工作台](https://yydshly.github.io/1014_codex_project/013-crawl-hive/explore/index.html)；2026-10-19 已发布并核验 |
 
 ## 先读六项摘要，再看完整总图
 
@@ -82,7 +82,11 @@ npm run refresh:data
 
 `refresh:data` 按需采集固定公开来源并更新本地快照，不需要 API key。浏览器中的“获取最新”通过本地 Node 服务后台执行；来源失败时保留上次条目并标记过期，最多保留 20 轮采集日志。
 
-构建结果位于 web/dist/，包含原研究页与 explore/ 产品页、静态资源和真实 snapshot.json，资源使用相对地址，可复制到总站点的 013-crawl-hive/。静态部署可基于内置快照浏览，实时刷新依赖本地 Node 服务；服务端采集模块和 .runtime/ 缓存不进入静态产物。尚未发布线上。
+构建结果位于 web/dist/，包含原研究页与 explore/ 产品页、静态资源和真实 snapshot.json，资源使用相对地址，可复制到总站点的 013-crawl-hive/。静态部署可基于内置快照浏览，实时刷新依赖本地 Node 服务；服务端采集模块和 .runtime/ 缓存不进入静态产物。2026-10-19 已发布并核验。
+
+## 公开部署与验证
+
+已通过既有GitHub Actions发布，完整站点保留原七个项目。26份首发静态文件、19个入口与资料地址、101个唯一页面编号已核对；浏览器确认摘要、来源筛选、工作台快照与桌面／手机布局。公开构建不请求采集API或本机地址，不含服务端和运行缓存。完整记录见[部署记录](deployment.json)与[HTTP验收](public-verification.json)。
 
 ## 网页预览
 

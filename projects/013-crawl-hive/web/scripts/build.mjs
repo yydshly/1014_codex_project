@@ -1,4 +1,4 @@
-import { mkdir, copyFile, cp, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, copyFile, cp, readFile, writeFile, readdir, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -18,6 +18,23 @@ await cp(path.join(root, '..', 'licenses'), path.join(out, 'licenses'), { recurs
 for (const name of ['README.md', 'RESEARCH.md']) {
   await copyFile(path.join(root, '..', name), path.join(out, name));
 }
+for(const name of ['deployment.json','public-verification.json']) {
+  const source=path.join(root,'..',name);
+  try{await access(source);}catch(error){if(error.code==='ENOENT')continue;throw error;}
+  await copyFile(source,path.join(out,name));
+}
+// Match the repository's LF checkout on Linux and Windows for repeatable bytes.
+async function normalizeText(folder) {
+  for (const entry of await readdir(folder,{withFileTypes:true})) {
+    const file=path.join(folder,entry.name);
+    if(entry.isDirectory())await normalizeText(file);
+    else if(/\.(?:html|css|js|json|svg|md|txt)$/.test(entry.name)) {
+      const text=await readFile(file,'utf8');
+      if(text.includes('\r\n'))await writeFile(file,text.replaceAll('\r\n','\n'));
+    }
+  }
+}
+await normalizeText(out);
 const html = await readFile(path.join(out, 'index.html'), 'utf8');
 if (html.includes('TODO') || !html.includes('CrawlHive')) throw new Error('静态页面内容不完整');
 console.log('已构建 dist/；可部署至 /1014_codex_project/013-crawl-hive/。');
