@@ -1,0 +1,19 @@
+{
+  "name": "research-002-rainy-ghost",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "^20.19.0 || >=22.12.0" },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4174 --strictPort",
+    "prebuild": "node scripts/prepare-research.mjs",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4174 --strictPort",
+    "check": "node --check src/main.js && node --check src/scene.js && node --check src/shaders.js && node --check src/audio.js && node --check src/ghost-voice.js && node --check src/sound-ui.js && node --check src/rain-reaction.js && node --check src/wet-cloth.js && node --check src/hem-drips.js && node --check src/adaptive-quality.js && node --check src/focus-session.js && node --check src/focus-ui.js && node --check src/focus-lights.js && node --check src/companion-memory.js && node --check src/companion-motion.js && node --check src/companion-ui.js && node --check src/cheek-blush.js && node --check src/head-stroke.js && node --check scripts/smoke.mjs && node --check scripts/voice-preview.mjs",
+    "voice-preview": "node scripts/voice-preview.mjs",
+    "test": "node --test scripts/*.test.mjs",
+    "check:publish": "node --check build.mjs && node --check scripts/prepare-research.mjs && node --check scripts/validate-static.mjs"
+  },
+  "dependencies": { "three": "0.186.1" },
+  "devDependencies": { "vite": "8.3.4" }
+}

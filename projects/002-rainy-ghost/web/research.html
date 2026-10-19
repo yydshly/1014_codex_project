@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="从雨夜提灯的视觉演示，到可轻抚、会目送的非语言陪伴：区分原帖效果、Three.js 技术上游、我们的交互扩展、性能优化与当前边界。" />
+  <title>雨夜提灯小幽灵 · 我们的理解与实践</title>
+  <link rel="icon" type="image/svg+xml" href="./ghost.svg" />
+  <link rel="stylesheet" href="./src/research.css" />
+</head>
+<body>
+  <a class="skip" href="#synthesis">跳至理解摘要</a>
+  <header><a class="wordmark" href="./">夜航 <span>002 / THE LIGHTKEEPER</span></a><div><a href="../">项目目录</a><a class="pill" href="./">进入雨夜 ↗</a></div></header>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <div><p class="eyebrow">理解归档 · 2026.10.19</p><h1 id="title">一盏小灯，<br />一会儿陪伴。</h1><p class="lead">从一个雨夜提灯的视觉演示出发，我们用 Three.js 独立做出了可交互的场景，再把重点放到小幽灵的回应：轻抚时靠过来，停手后看你一眼，安静时一起听雨。</p><p class="boundary">原帖是视觉参考，Three.js 是图形技术上游。未取得原作者的场景源码；下面的陪伴、声音和性能改进是我们新增的实现。</p><div class="actions"><a class="pill primary" href="./">和它待一会儿</a><a href="#synthesis">先看理解摘要 ↓</a></div></div>
+      <figure><a href="./research/final-effect.jpg" target="_blank" rel="noopener"><img src="./research/final-effect.jpg" width="797" height="871" alt="最终版本的实际运行截图：白布小幽灵轻轻眯眼，提着暖灯，雨丝落在有真实倒影的水面上。" fetchpriority="high" /></a><figcaption>沿用最终效果截图，没有重新生成引导图。图中为短暂摸头反应，不能用静态图证明完整目送时序。<a href="./research/final-effect.jpg">查看原图</a></figcaption></figure>
+    </section>
+    <nav class="chapters" aria-label="研究章节"><a href="#synthesis">理解摘要</a><a href="#sources">来源与效果</a><a href="#implementation">实现原理</a><a href="#extensions">扩展与优化</a><a href="#meaning">价值与方向</a><a href="#limits">边界与取舍</a></nav>
+
+    <section id="synthesis"><p class="eyebrow">01 / SYNTHESIS</p><h2>我们最终理解了什么</h2><div class="cards">
+      <article><h3>原演示打动人的地方</h3><p>白布小幽灵、暖色提灯、冷色雨夜与水面倒影共同构成情绪。画面有生命感，才会让人愿意停留；我们没有验证原作完整视频、源码或交互全集。</p></article>
+      <article><h3>我们做的扩展</h3><p>把视觉场景做成可旋转、拖动、淋湿和滴水的实时体验，再加入非语言叫声、轻抚、害羞脸红、安心眯眼、歪头轻蹭与停手后的无声目送。</p></article>
+      <article><h3>最后保留的产品重心</h3><p>最大的价值是陪伴。任务计时与点灯仍可用，但放在可选的小记入口；停留不需要完成任务，也不依靠频繁叫声和不断弹出的奖励。</p></article>
+      <article><h3>这次实践的意义</h3><p>用原有图形、指针输入、音频与本地记忆，研究轻量角色的回应。不是对话模型，也没有证明情感疗效或商业需求；重点是可亲手体验的反馈。</p></article>
+    </div></section>
+
+    <section id="sources"><p class="eyebrow">02 / SOURCES</p><h2>原帖、源库和我们的工作</h2><div class="table-wrap"><table><thead><tr><th scope="col">来源</th><th scope="col">能力与效果</th><th scope="col">我们如何使用</th></tr></thead><tbody>
+      <tr><th scope="row"><a href="https://x.com/chetanankola/status/2110225806849122363" target="_blank" rel="noopener">Chetan Ankola 原帖</a></th><td>雨夜、白布幽灵、提灯和水面表现。2026-10-14 的研究记录保存了文字与预览观察，作者文字提到 Three.js、布料着色器和复用水面效果。</td><td>作为视觉参考独立编写。没有取得作者场景源码、模型或资源许可证，没有下载再分发其图片、视频和音频。本次重新访问原帖返回 403，不把未核实的算法写成作者做法。</td></tr>
+      <tr><th scope="row"><a href="https://github.com/mrdoob/three.js/tree/9b4a2ac29c63ccb43fd51c5661f2f873ac2c39b8" target="_blank" rel="noopener">Three.js 0.186.1</a></th><td>场景、相机、灯光、材质、几何与渲染；OrbitControls、Reflector 和后期处理提供相机、水面倒影与柔光的基础。</td><td>固定提交 9b4a2ac29c63ccb43fd51c5661f2f873ac2c39b8，MIT；没有改上游文件。源库不自带这个小幽灵、陪伴记录、轻抚情绪或叫声，这些由本项目新增。</td></tr>
+      <tr><th scope="row">本项目「夜航」</th><td>程序化造型、雨滴碰撞、湿布与滴水、交互水面、陪伴动作、合成声音、可选计时与自动画质。</td><td>运行资源在本地打包，不依赖 CDN、外部录音、对话模型或后端；截图均来自我们实际运行的场景。Vite 8.3.4 只用于开发和构建。</td></tr>
+    </tbody></table></div><p class="fine">版本、来源与声明：<a href="./research/THIRD_PARTY_NOTICES.md">第三方说明</a> · <a href="./licenses/THREE-LICENSE.txt">Three.js MIT 许可证</a> · <a href="./research/RESEARCH.md">完整研究记录</a></p></section>
+
+    <section id="implementation"><p class="eyebrow">03 / HOW IT WORKS</p><h2>画面与回应如何连接</h2><ol class="mechanisms">
+      <li><h3>几何、布料与相机</h3><p>参数化布罩生成圆顶、褶皱与衣摆，连续波动和局部权重表现布料；拾取与弹簧控制拖动和回弹。OrbitControls 提供环绕缩放，身体拖动与镜头手势分开处理。</p></li>
+      <li><h3>降雨、水面与湿布</h3><p>批量雨丝在着色器中运动，CPU 同步轨迹并检测当前布料网格。命中处积累 UV 湿润、扩散和下流，汇水从当前衣摆脱落，再在 Reflector 水面形成小涟漪。</p></li>
+      <li><h3>轻抚、情绪与无声目送</h3><p>真实指针位移区分轻抚、拖动和点击。动作缓动先害羞、再跟随手势轻蹭，持续有效抚摸后眯眼；停手后沿离开方向看一下，再回到待机。它是有限规则与动画，不在理解人的情绪。</p></li>
+      <li><h3>声音、记忆与帧率</h3><p>Web Audio 本地合成圆润、没有语言的小叫声；角色声和雨声独立开关。localStorage 保存相处与计时记录。自动画质按实际帧时间调整像素、倒影、雨丝和更新频率。</p></li>
+    </ol></section>
+
+    <section id="extensions"><p class="eyebrow">04 / OUR EXTENSIONS</p><h2>从复现到我们自己的扩展</h2><div class="cards">
+      <article><h3>让环境真的影响角色</h3><p>雨滴被布面截住，命中处有短暂振动、水珠和局部湿斑；湿润沿布面下流，从衣摆滴入水面。白布主体的颜色、光照和雨夜氛围沿用同一套设置。</p></article>
+      <article><h3>让轻触获得轻回应</h3><p>头顶轻抚、身体拖动、衣角拉扯和提灯点击各有区域与光标。保留淡脸红、轻蹭、安心眯眼及约两三秒的无声目送，按钮和 H 键作为摸头的补充入口。</p></article>
+      <article><h3>让声音属于它</h3><p>开心、害羞和安心使用同一家族的非语言叫声，没有人声、TTS 或采样台词。连续轻抚只在开始尝试轻叫，重新轻抚的叫声至少间隔 12 秒；安心与目送阶段不另发声。</p></article>
+      <article><h3>让陪伴不被任务绑住</h3><p>只记录页面可见时的自然相处，保留熟悉招呼和安静偏好。专注功能收进可选入口：任务计时可恢复，中途停下保留时间，完成后点亮远处一盏灯。</p></article>
+      <article><h3>修好基础体验</h3><p>暂停冻结雨、湿斑、滴水和情绪动作；停止连续绘制后仍可调整镜头。7 px 阈值减少拖动与点击误触，手机构图依据可用区域调整，控制按钮提供触摸与键盘入口。</p></article>
+      <article><h3>性能让位于流畅</h3><p>手机从均衡画质开始，持续掉帧时逐步降档，流畅后再缓慢恢复。保留提灯暖光、雨丝、倒影与湿布，不通过改变白色材质来“假装”提高性能。</p></article>
+    </div></section>
+
+    <section id="meaning"><p class="eyebrow">05 / VALUE & DIRECTIONS</p><h2>陪伴是我们保留的中心</h2><blockquote>雨还在下。什么也不做，也可以待一会儿。</blockquote><p>最初尝试了“任务、计时、完成点灯”的工具路线，讨论后发现小幽灵更适合安静陪伴。我们保留计时，但不把完成量作为主体验；互动也逐步从按钮触发，转向手势、眼神和轻声回应。</p><p>可以探索的方向包括网页小伙伴、桌面环境、专注场景皮肤、睡前雨景和角色周边。这些仍是产品假设，需要验证用户是否会长期停留、是否愿意反复回来，以及各方向的制作与运行成本。</p><p class="callout">当前决定：保留这一版，够用就停。不继续细化动作或增加功能。2026-10-19 的工作只整理理解、沿用最终效果图并发布现有成果。</p></section>
+
+    <section id="limits"><p class="eyebrow">06 / LIMITS</p><h2>已经做到什么，仍有哪些边界</h2><ul>
+      <li><strong>验证范围：</strong>已有 65 项自动化测试，历史浏览器检查覆盖场景、暂停、拖动、脸红、声音接线及多种视口；连续轻抚与目送的完整时序主要由场景方法和指针轨迹测试验证。手机实机手感、温升和长期功耗尚未测量。</li>
+      <li><strong>已知限制：</strong>慢速轻抚的间隔阈值较紧。约 3–4 秒往返一次的模拟中，会话会重启，无法累计安心；遵循“够用就停”的决定，本次保留并记录这个问题。</li>
+      <li><strong>视觉近似：</strong>布料没有自碰撞或真实纤维吸水，水面没有体积流体；雨滴命中、湿布、回弹和轻蹭属于受控的风格化实现。</li>
+      <li><strong>声音与保存：</strong>默认静音，声音由你开启；暂停和后台收起尾音。记录只在当前站点和浏览器保存，公网与 localhost 不共享，清除网站数据会丢失；没有账号、云同步或后台通知。</li>
+      <li><strong>发布内容：</strong>本次公开现有场景、理解摘要、最终截图、源码与来源记录，不上传任何浏览器里的任务、相处记录或音量偏好。</li>
+    </ul><div class="actions"><a class="pill primary" href="./">回到雨夜</a><a href="./research/README.md">项目运行说明</a><a href="https://github.com/yydshly/1014_codex_project/tree/main/projects/002-rainy-ghost" target="_blank" rel="noopener">查看源码 ↗</a></div></section>
+  </main><footer>002 · 夜航 / 源库能力、原作灵感与我们的扩展分别说明。引导图来自现有最终效果，未重新生成。</footer>
+</body></html>

@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict';
+
+const base = process.argv[2] || 'http://127.0.0.1:4174/1014_codex_project/002-rainy-ghost/';
+const response = await fetch(base);
+assert.equal(response.status, 200, '子路径入口必须可以访问');
+const html = await response.text();
+assert.match(html, /夜航 · 雨夜提灯小幽灵/);
+assert.match(html, /<canvas[^>]+id="scene"/);
+assert.match(html, /id="focus-toggle"/);
+assert.match(html, /id="focus-form"/);
+assert.match(html, /id="focus-history"/);
+assert.match(html, /id="companion-toggle"/);
+assert.match(html, /id="companion-bubble"/);
+assert.match(html, /id="pet-head"/);
+assert.match(html, /id="gesture-hint"/);
+assert.match(html, /id="companion-quiet"/);
+assert.match(html, /id="sound-panel"/);
+assert.match(html, /id="ghost-audio-toggle"/);
+assert.match(html, /id="voice-volume"/);
+for (const emotion of ['happy', 'shy', 'settled']) assert.match(html, new RegExp(`data-voice-preview="${emotion}"`));
+const assets = [...html.matchAll(/(?:src|href)="([^"]+\.(?:js|css|svg))"/g)].map(match => match[1]);
+assert.ok(assets.some(asset => asset.endsWith('.js')), '构建结果必须包含程序入口');
+assert.ok(assets.some(asset => asset.endsWith('.css')), '构建结果必须包含样式');
+for (const asset of assets) {
+  const url = new URL(asset, base);
+  assert.equal(url.origin, new URL(base).origin, '运行资源应来自本站，无 CDN 依赖');
+  assert.ok(url.pathname.startsWith('/1014_codex_project/002-rainy-ghost/'), `资源必须保留 Pages 子路径：${url}`);
+  const result = await fetch(url);
+  assert.equal(result.status, 200, `资源加载失败：${url}`);
+  const content = await result.text();
+  assert.ok(content.length > 0);
+  if (url.pathname.endsWith('.js')) assert.match(result.headers.get('content-type'), /javascript/);
+  if (url.pathname.endsWith('.css')) assert.match(result.headers.get('content-type'), /css/);
+}
+const license = await fetch(new URL('licenses/THREE-LICENSE.txt', base));
+const hand = await fetch(new URL('pet-hand.svg', base));
+assert.equal(hand.status, 200, '轻抚手形光标需要随子路径发布');
+assert.match(await hand.text(), /<svg/);
+assert.equal(license.status, 200, '发布产物需要包含 Three.js 许可证');
+assert.match(await license.text(), /MIT License/);
+console.log(`通过：子路径入口、${assets.length} 个本地资源和 Three.js 许可证均可访问。`);

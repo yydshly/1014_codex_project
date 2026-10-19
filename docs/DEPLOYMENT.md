@@ -1,6 +1,6 @@
 # Web 展示与部署
 
-本站通过 GitHub Actions 汇总并发布静态研究网页。首页列出全部 001—015 研究，应用发布清单包含 004、006、007、009、010、011、012、013 与 014；其余项目提供研究记录并注明本地运行或归档状态。正式应用清单见 `web/pages.json`，上线验证记录见 [Pages 说明](PAGES.md)。
+本站通过 GitHub Actions 汇总并发布静态研究网页。首页列出全部 001—015 研究，应用发布清单包含 002、004、006、007、009、010、011、012、013 与 014；其余项目提供研究记录并注明本地运行或归档状态。正式应用清单见 `web/pages.json`，上线验证记录见 [Pages 说明](PAGES.md)。
 
 ## 一个站点，多个子项目入口
 
@@ -107,3 +107,9 @@ _site/
 沿用 GitHub Pages 编号子路径，发布六项理解摘要、九章图解与既有总结图。摘要明确区分源库原始效果、底层原理、我们的思考、复用与学习价值、六类产品假设及当前取舍。引导图使用已生成的 `assets/edgechat-summary.png`，保留 PNG / SVG 原始字节与离线下载；没有重新生成。
 
 `projects/012-edgechat/web/build.mjs` 统一执行语法、锚点、资源和静态白名单检查，构建产物复制到 `_site/012-edgechat/`，同时保留其他已发布项目。只部署研究展示页，不包含 EdgeChat 后端、云账号凭据或真实聊天数据。2026-10-19 已经 Actions 发布并完成公网核验，正式入口为 [理解摘要](https://yydshly.github.io/1014_codex_project/012-edgechat/#synthesis)，原图、资源和既有八个项目入口已检查；精确范围见 [012 发布记录](../projects/012-edgechat/deployment.json)。
+
+## 002 夜航：雨夜小幽灵与非语言陪伴
+
+发布现有 `index.html` 雨夜体验与 `research.html` 理解摘要，明确区分原帖效果、Three.js 技术上游、我们的环境反应/陪伴/声音/计时扩展，以及暂停、手势、手机与自动画质优化。引导图直接沿用 `assets/pet/farewell/desktop.jpg` 的原始字节，不重新生成；角色已按用户决定保留当前版本。
+
+`projects/002-rainy-ghost/web/build.mjs` 执行语法、现有测试、双入口构建、资源和章节检查、静态白名单与截图 SHA-256 核对。加入 `web/pages.json`，每次重建既有九个项目和 002，不覆盖其他入口。默认静音，记录保留在当前浏览器，不上传个人任务、相处数据或偏好。正式发布与公网验收记录见 [002 部署记录](../projects/002-rainy-ghost/deployment.json)，验证后才登记 `demo_url`。

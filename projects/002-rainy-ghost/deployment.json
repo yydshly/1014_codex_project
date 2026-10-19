@@ -1,0 +1,51 @@
+{
+  "project": "002-rainy-ghost",
+  "status": "prepared",
+  "preparedDate": "2026-10-19",
+  "scope": "发布现有交互场景与新增理解摘要，不继续细化角色，不发布用户浏览器记录。",
+  "visualReference": {
+    "url": "https://x.com/chetanankola/status/2110225806849122363",
+    "originalSceneSourceObtained": false,
+    "fullOriginalVideoVerified": false,
+    "currentFetch": "403；源作描述依照2026-10-14研究记录"
+  },
+  "upstream": {
+    "repository": "https://github.com/mrdoob/three.js",
+    "version": "0.186.1",
+    "commit": "9b4a2ac29c63ccb43fd51c5661f2f873ac2c39b8",
+    "license": "MIT",
+    "upstreamFilesModified": false
+  },
+  "guideImage": {
+    "path": "assets/pet/farewell/desktop.jpg",
+    "publishedPath": "research/final-effect.jpg",
+    "sha256": "cbe8858dd2388956b77b3215ad581386764db5be7ee43cbda3feb37a2ee86b5d",
+    "unchangedOriginal": true,
+    "regenerated": false
+  },
+  "localVerification": {
+    "tests": 65,
+    "result": "passed",
+    "dualEntryBuild": "passed",
+    "staticWhitelistFiles": 13,
+    "guideImageHash": "passed",
+    "fullSiteBuild": "passed; 002与原有九个项目全部构建",
+    "browserSummaryAndImage": "passed",
+    "chapterNavigation": "passed",
+    "sceneWebGLReady": true,
+    "mobileViewportWidth": 390,
+    "mobileBodyWidth": 375,
+    "mobileHorizontalOverflow": false,
+    "browserScope": "本轮只验收新摘要、导航、引导图和场景加载，不重测全部旧手势与听感"
+  },
+  "knownLimitations": [
+    "慢速轻抚间隔较紧，3–4秒往返模拟会重启会话，未继续细化",
+    "手机实机手感、温升和长期功耗未验证",
+    "完整连续手势与目送主要由指针轨迹和动作测试验证",
+    "公网与本地浏览器的localStorage不共享"
+  ],
+  "plannedUrls": {
+    "summary": "https://yydshly.github.io/1014_codex_project/002-rainy-ghost/research.html#synthesis",
+    "scene": "https://yydshly.github.io/1014_codex_project/002-rainy-ghost/"
+  }
+}

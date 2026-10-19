@@ -128,6 +128,20 @@
         "label": "产品方向与当前取舍",
         "path": "012-edgechat/#understanding"
       }
+    ],
+    "002": [
+      {
+        "label": "理解摘要与最终效果",
+        "path": "002-rainy-ghost/research.html#synthesis"
+      },
+      {
+        "label": "进入雨夜陪伴",
+        "path": "002-rainy-ghost/"
+      },
+      {
+        "label": "我们的扩展与优化",
+        "path": "002-rainy-ghost/research.html#extensions"
+      }
     ]
   }
 }

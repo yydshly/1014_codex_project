@@ -17,7 +17,7 @@
 | 编号 | 项目 | 摘要 | 状态 | 研究记录 | 来源链接 | Web 演示 |
 | --- | --- | --- | --- | --- | --- | --- |
 | 001 | [Archify：交互式代码库图解](projects/001-archify/README.md) | 已本地复现中英文交互式代码库导览，展示 Archify 的生成链路、组件讲解和固定版本源码证据。 | 已复现 | [研究笔记](projects/001-archify/RESEARCH.md) | [GitHub](https://github.com/tt-a1i/archify) | — |
-| 002 | [雨夜提灯小幽灵：Three.js 交互场景](projects/002-rainy-ghost/README.md) | 已本地复现雨夜提灯小幽灵，支持雨滴碰撞与渐湿、镜头环绕、拖拽回弹和水面提灯交互。 | 已复现 | [研究笔记](projects/002-rainy-ghost/RESEARCH.md) | [GitHub](https://github.com/mrdoob/three.js) | — |
+| 002 | [夜航：雨夜小幽灵与非语言陪伴](projects/002-rainy-ghost/README.md) | 原帖以白布幽灵、暖灯和雨夜水面营造氛围；我们用 Three.js 独立复现，扩展雨滴命中、局部湿布与滴水、非语言叫声、轻抚脸红/安心/目送、本地陪伴与可选计时，并优化暂停、手势、手机布局和自动画质。当前保留这一版，不再细化。 | 已完成 | [研究笔记](projects/002-rainy-ghost/RESEARCH.md) | [原帖](https://x.com/chetanankola/status/2110225806849122363) | — |
 | 003 | [夜半小屋与 Agent 工作室：3D 协作空间](projects/003-lofi-room/README.md) | 人物随目标到白板讨论、电脑入座、桌边检查与当面交接；MiniMax 驱动真实角色、语音与交付，保留原房间及目标验收。 | 已完成 | [研究笔记](projects/003-lofi-room/RESEARCH.md) | [GitHub](https://github.com/mrdoob/three.js) | — |
 | 004 | [从网站入口研究到 AI 研究工作台](projects/004-jasonzhu-ai/README.md) | 从 X 帖子中的网站链接出发，评估并补充寻找需求、GitHub 项目和 AI 产品的入口，逐步扩展为“问题 → 搜索原文 → 分析筛选 → 保存发现”的研究工作台。帮助个人开发者扩大观察范围、积累研究依据，可继续探索工具评估、需求雷达等产品；自动研究需本地 Codex。 | 研究中 | [研究笔记](projects/004-jasonzhu-ai/RESEARCH.md) | [原帖](https://x.com/shenxiankk/status/2107493081146691700) | [演示](https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html) |
 | 005 | [小汐：AI 虚拟角色互动实验](projects/005-cyber-companion/README.md) | 已跑通 Live2D 中文对话、语音、表情与打断；真人实时闭环仍缺数字人服务，尚未达到真人目标。保留本地原型、失败与边界记录。 | 研究中 | [研究笔记](projects/005-cyber-companion/RESEARCH.md) | [GitHub](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) | — |
@@ -42,11 +42,11 @@
 
 [查看项目](projects/001-archify/README.md)
 
-#### 002 · 雨夜提灯小幽灵：Three.js 交互场景
+#### 002 · 夜航：雨夜小幽灵与非语言陪伴
 
-![002 雨夜小幽灵实际运行截图：雨滴命中斗篷、湿润材质、暖色提灯与水面倒影。](projects/002-rainy-ghost/assets/rain-impact.jpg)
+![002 最终版本实际效果：摸头眯眼、白布小幽灵、暖色提灯与雨夜水面；沿用现有截图，不重新制图。](projects/002-rainy-ghost/assets/pet/farewell/desktop.jpg)
 
-002 雨夜小幽灵实际运行截图：雨滴命中斗篷、湿润材质、暖色提灯与水面倒影。
+002 最终版本实际效果：摸头眯眼、白布小幽灵、暖色提灯与雨夜水面；沿用现有截图，不重新制图。
 
 [查看项目](projects/002-rainy-ghost/README.md)
 

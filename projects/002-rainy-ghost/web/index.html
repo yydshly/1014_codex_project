@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071019" />
+    <meta name="description" content="走进一场不会淋湿你的雨。拖动提灯小幽灵，轻扯衣角，在水面留下涟漪。Three.js 实时交互场景。" />
+    <link rel="icon" type="image/svg+xml" href="/ghost.svg" />
+    <title>夜航 · 雨夜提灯小幽灵</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#controls">跳至场景控制</a>
+    <main id="experience" aria-label="雨夜提灯小幽灵交互场景">
+      <canvas id="scene" tabindex="0" aria-label="交互画布：鼠标在头顶来回滑动或单指轻抚头顶，拖动身体移动角色，拖动衣角拉扯布料；拖动背景旋转视角，滚轮或双指缩放，点击水面制造涟漪。方向键移动，H 摸摸头，L 切换提灯，空格暂停，R 重置视角与场景。"></canvas>
+      <div class="vignette" aria-hidden="true"></div>
+      <header class="masthead">
+        <a class="brand" href="./" aria-label="夜航首页">
+          <svg viewBox="0 0 32 36" aria-hidden="true"><path d="M5 29V15a11 11 0 0 1 22 0v14l-5-3-6 5-6-5-5 3Z"/><path d="M12 15v3m8-3v3"/></svg>
+          <span>夜航<small>THE LIGHTKEEPER</small></span>
+        </a>
+        <div class="edition"><span class="live-dot"></span>一场不会淋湿你的雨<span class="edition-number">NO. 002</span></div>
+        <button class="focus-entry companion-entry" id="companion-toggle" aria-expanded="false" aria-controls="companion-panel" aria-label="打开听雨小记"><span class="focus-entry-light" aria-hidden="true"></span><span>听雨小记</span></button>
+        <button class="icon-button help-button" id="help-toggle" aria-label="查看交互说明" aria-expanded="false" aria-controls="help-panel">?</button>
+      </header>
+
+      <section class="intro" aria-label="夜航">
+        <p class="eyebrow"><span></span> A LITTLE LIGHT IN THE RAIN</p>
+        <h1>总有一盏灯，<br />为你<span>亮着。</span></h1>
+        <p class="intro-copy">雨还在下。<br />什么也不做，也可以待一会儿。</p>
+        <div class="companion-actions"><button class="text-button" id="greet">轻轻叫它一声 <span aria-hidden="true">↗</span></button><button class="text-button" id="pet-head" title="也可以在头顶轻轻来回滑动，或在画布上按 H" aria-label="摸摸小幽灵的头">摸摸头</button></div>
+        <p class="companionship-label" id="companionship-label">这一会儿，什么也不用完成。</p>
+        <p class="touch-guide" aria-hidden="true">头顶轻抚 · 身体拖动</p>
+      </section>
+
+      <div class="scene-note" id="scene-note" aria-hidden="true"><span class="note-dot"></span>头顶轻轻来回抚摸 · 身体可以拖动</div>
+      <div id="gesture-hint" class="gesture-hint" aria-hidden="true" hidden></div>
+      <p id="rain-feel" class="rain-feel">雨点轻敲斗篷</p>
+      <div class="companion-bubble" id="companion-bubble" aria-hidden="true" hidden></div>
+      <button id="focus-toast" class="focus-toast" aria-label="专注已完成，查看陪伴记录" hidden></button>
+      <div id="loading" class="loading"><span></span>正在点亮这盏灯…</div>
+      <div id="error" class="error-panel" hidden>
+        <p>这盏灯暂时没能亮起来</p><span id="error-detail"></span><button id="retry">重新加载</button>
+      </div>
+      <div id="announcement" role="status" aria-live="polite" class="sr-only"></div>
+
+      <aside class="companion-panel focus-panel" id="companion-panel" aria-labelledby="companion-heading" hidden>
+        <div class="panel-heading"><span id="companion-heading">听雨小记</span><button class="icon-button" id="companion-close" aria-label="收起听雨小记">×</button></div>
+        <p class="companion-lead" id="companion-whisper">什么也不做，也算一起待过。</p>
+        <p class="companion-time-label">这一会儿，一起听雨</p>
+        <p class="companion-time" id="companion-session">不到 1 分钟</p>
+        <p class="companion-total">到现在，已一起待了 <span id="companion-total">不到 1 分钟</span></p>
+        <p class="companion-familiar" id="companion-familiar">初次见面，慢慢熟悉就好。</p>
+        <button class="companion-stay" id="companion-stay">收起，继续听雨 <span aria-hidden="true">↗</span></button>
+        <button class="companion-quiet" id="companion-quiet" aria-pressed="false"><span>安静陪伴<small>靠近和回来时，只用动作回应</small></span><span id="companion-quiet-state">关</span></button>
+        <details class="companion-days"><summary>最近一起听雨的日子</summary><ol id="companion-days"></ol></details>
+        <p class="focus-storage" id="companion-storage">只记页面可见时的相处。小记保存在此浏览器。</p>
+        <div class="companion-optional"><span>偶尔想做一点事，也可以。</span><button class="companion-focus-link" id="focus-toggle" aria-expanded="false" aria-controls="focus-panel" aria-label="打开可选专注计时"><span id="focus-entry-label">开一小会儿专注 ↗</span></button></div>
+      </aside>
+
+      <aside class="focus-panel" id="focus-panel" aria-labelledby="focus-heading" hidden>
+        <div class="panel-heading"><span id="focus-heading">陪你专注一会儿</span><button class="icon-button" id="focus-close" aria-label="收起专注面板">×</button></div>
+        <p class="focus-subtitle">把眼前的一小件事，交给这一盏灯。</p>
+        <p class="focus-message" id="focus-message">每完成一程，远处就多亮起一盏灯。</p>
+        <form id="focus-form">
+          <label class="focus-label" for="focus-task">这一会儿，想做什么？</label>
+          <input id="focus-task" name="task" maxlength="80" autocomplete="off" placeholder="读几页书，或写下一点想法" />
+          <div class="focus-duration-heading"><label class="focus-label" for="focus-minutes">留给自己</label><span>1–180 分钟</span></div>
+          <div class="focus-duration-row">
+            <div class="focus-presets" role="group" aria-label="选择专注时长">
+              <button type="button" data-focus-minutes="5" aria-pressed="false">5 分</button>
+              <button type="button" data-focus-minutes="15" aria-pressed="false">15 分</button>
+              <button type="button" data-focus-minutes="25" aria-pressed="true">25 分</button>
+            </div>
+            <label class="focus-custom"><input id="focus-minutes" name="minutes" type="number" min="1" max="180" step="1" value="25" required aria-label="自定义专注分钟数" /><span>分钟</span></label>
+          </div>
+          <button class="focus-primary" id="focus-start" type="submit">点起提灯，开始这一程 <span aria-hidden="true">↗</span></button>
+        </form>
+        <section id="focus-active" aria-label="当前专注" hidden>
+          <p class="focus-phase" id="focus-phase">这一程，慢慢完成</p>
+          <h2 id="focus-active-task"></h2>
+          <p class="focus-clock" id="focus-clock" role="timer" aria-label="剩余专注时间">25:00</p>
+          <progress id="focus-progress" max="1" value="0" aria-label="本次专注进度"></progress>
+          <p class="focus-elapsed" id="focus-elapsed">已陪伴 0 秒</p>
+          <div class="focus-session-actions"><button class="focus-primary" id="focus-pause" aria-pressed="false">暂停计时</button><button class="focus-secondary" id="focus-stop">先到这里，保存</button></div>
+        </section>
+        <p class="focus-note">收起面板或切到后台，计时会继续。<br />雨景暂停不影响计时；需要休息时，点“暂停计时”。</p>
+        <div class="focus-summary"><span><strong id="focus-lights">0</strong> 盏灯已点亮</span><span>累计陪伴 <strong id="focus-total">0 秒</strong></span></div>
+        <details class="focus-records" id="focus-records">
+          <summary id="focus-history-count">陪伴记录 · 0</summary>
+          <p class="focus-empty" id="focus-empty">走过的每一小段，都会留在这里。<br />中途停下也会留下已经陪伴的时间。</p>
+          <ol id="focus-history"></ol>
+          <button class="focus-secondary focus-more" id="focus-more" hidden>再看 20 条</button>
+        </details>
+        <p class="focus-storage" id="focus-storage">记录只保存在此浏览器。刷新后可继续；清除网站数据会丢失记录。</p>
+      </aside>
+
+      <aside class="help-panel" id="help-panel" aria-label="交互说明" hidden>
+        <div class="panel-heading"><span>在雨里，慢一点。</span><button class="icon-button" id="help-close" aria-label="关闭说明">×</button></div>
+        <dl>
+          <div><dt>拖动背景</dt><dd>环绕视角，看见另一面的雨夜</dd></div>
+          <div><dt>滚轮 / 双指</dt><dd>拉近或拉远，重置按钮恢复视角</dd></div>
+          <div><dt>拖动身体</dt><dd>带小幽灵四处走走</dd></div>
+          <div><dt>轻抚头顶</dt><dd>轻蹭、安心眯眼，停手后轻轻目送</dd></div>
+          <div><dt>拉扯衣角</dt><dd>松开，看布料轻轻回弹</dd></div>
+          <div><dt>轻点水面</dt><dd>留下一圈属于你的涟漪</dd></div>
+          <div><dt>轻点提灯</dt><dd>调暗或重新点亮灯光</dd></div>
+          <div><dt>雨落身上</dt><dd>湿斑慢慢晕开，衣摆滴水泛起涟漪</dd></div>
+          <div><dt>靠近小幽灵</dt><dd>停留片刻，它会看向你、轻轻抬灯</dd></div>
+          <div><dt>听雨小记</dt><dd>自然记下相处；也可开启安静陪伴</dd></div>
+          <div><dt>专注一会儿</dt><dd>写下任务，完成计时，为远处点一盏灯</dd></div>
+        </dl>
+        <p class="keyboard-hint">键盘：<kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd> 移动 · <kbd>H</kbd> 摸头 · <kbd>L</kbd> 提灯 · <kbd>空格</kbd> 暂停 · <kbd>R</kbd> 重置</p>
+        <p class="quality-hint">画质会随运行表现自动调整，优先保持流畅。</p>
+        <p class="source-note">灵感来自 Chetan Ankola 的雨夜提灯场景。<a href="https://x.com/chetanankola/status/2110225806849122363" target="_blank" rel="noopener noreferrer">查看原帖 ↗</a> · <a href="./research.html#synthesis">理解摘要与我们的扩展</a></p>
+      </aside>
+
+      <aside class="sound-panel focus-panel" id="sound-panel" aria-labelledby="sound-heading" hidden>
+        <div class="panel-heading"><span id="sound-heading">灯里，有一点声音。</span><button class="icon-button" id="sound-close" aria-label="收起声音设置">×</button></div>
+        <p class="sound-description">开心就轻轻弹两下，害羞就小小声，<br />安心时，连叫声也慢慢软下来。</p>
+        <div class="sound-channel"><span>小幽灵的声音<small>没有语言，只有它自己的小动静。</small></span><button class="sound-switch" id="ghost-audio-toggle" aria-label="打开小幽灵的声音" aria-pressed="false"><span id="ghost-audio-state">关</span></button></div>
+        <div class="sound-volume"><label for="voice-volume">回应音量</label><input type="range" id="voice-volume" min="0" max="100" step="1" value="45" /><output id="voice-volume-value" for="voice-volume">45%</output></div>
+        <div class="voice-previews" role="group" aria-label="试听小幽灵的声音"><button data-voice-preview="happy">开心</button><button data-voice-preview="shy">害羞</button><button data-voice-preview="settled">安心</button></div>
+        <p class="sound-hint" id="sound-hint">招呼时开心回应，摸头时小小声；安静待着只用动作陪你。</p>
+        <div class="sound-channel rain-channel"><span>雨声<small>和它的声音可以分别打开。</small></span><button class="sound-switch" id="audio-toggle" aria-label="打开雨声" aria-pressed="false"><span id="audio-state">关</span></button></div>
+        <div class="sound-volume"><label for="rain-volume">雨声音量</label><input type="range" id="rain-volume" min="0" max="100" step="1" value="50" /><output id="rain-volume-value" for="rain-volume">50%</output></div>
+        <p id="sound-feedback" class="sound-feedback" role="status"></p>
+        <p class="focus-storage" id="sound-storage">音量会记住。每次进入，声音都由你开启；切到后台会安静下来。</p>
+      </aside>
+
+      <footer class="toolbar" id="controls" aria-label="场景控制">
+        <div class="weather-control" role="group" aria-label="选择雨势">
+          <span class="control-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14a5 5 0 0 1 0-10 6 6 0 0 1 11 3 3.5 3.5 0 1 1 0 7M7 17l-1 3m6-3-1 3m6-3-1 3"/></svg>雨势</span>
+          <button class="weather-option" data-rain="0.38" aria-pressed="false">轻雨</button>
+          <button class="weather-option selected" data-rain="0.72" aria-pressed="true">夜雨</button>
+          <button class="weather-option" data-rain="1" aria-pressed="false">大雨</button>
+        </div>
+        <p class="footer-hint"><span></span>拖背景转视角 · 滚轮缩放 · 点点水面</p>
+        <div class="actions">
+          <button class="action-button" id="sound-toggle" aria-label="打开声音设置" aria-expanded="false" aria-controls="sound-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m11 5-6 4H2v6h3l6 4V5Zm5 3a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg><span>声音</span><span class="button-state" id="sound-state">关</span></button>
+          <button class="action-button" id="pause-toggle" aria-label="暂停场景" aria-pressed="false"><svg id="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><span id="pause-label">暂停</span></button>
+          <button class="icon-button reset-button" id="reset" aria-label="重置场景"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 2 8M4 4v6h6"/></svg></button>
+        </div>
+      </footer>
+    </main>
+    <noscript>请启用 JavaScript，进入 Three.js 雨夜交互场景。</noscript>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

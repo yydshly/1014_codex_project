@@ -3,6 +3,7 @@
 本站使用一个 GitHub Pages 站点和编号子路径，发布来源为 `main` 分支的 GitHub Actions 工作流。2026-10-15首次发布已成功，公网入口、正文、引导图、章节导航与来源文件均已验证，记录见[014验证文件](../projects/014-cyber-xiaoya-study/sources/verification.json)。
 
 - 总入口：<https://yydshly.github.io/1014_codex_project/>
+- 002 雨夜小幽灵：理解摘要与原交互场景，发布记录见项目 deployment.json。
 - 004 产品总览：<https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html>
 - 006 研究页：<https://yydshly.github.io/1014_codex_project/006-random-doors/research.html>
 - 006 世界与身份实验：<https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html>
@@ -104,3 +105,9 @@ node scripts/build_pages.mjs
 012 通过既有工作流发布能力、效果、原理、引发的思考、对我们的意义与六类可扩展产品。首屏沿用已经生成的总结 PNG，点击展开完整长图，保留 SVG；固定研究版本仍是 2.16.6 / `5a69f11`。源码存在与运行实测分开说明，工程复用与商业价值分开判断，当前保留研究、暂不开发通用聊天产品。
 
 新增发布清单中的 `012-edgechat`，统一入口 `web/build.mjs` 检查并生成静态文件。页面和离线单文件没有聊天后台、模型服务或凭据；部署不改变上游仍待实测的状态。2026-10-19 已发布并核验。正式入口为 [理解摘要](https://yydshly.github.io/1014_codex_project/012-edgechat/#synthesis)，原引导图字节、完整长图展开、摘要导航、18 处来源、离线版及已有项目入口检查通过；公网验收见 [012 发布记录](../projects/012-edgechat/deployment.json)。
+
+## 002 夜航：雨夜小幽灵与非语言陪伴
+
+发布现有 `index.html` 雨夜体验与 `research.html` 理解摘要，明确区分原帖效果、Three.js 技术上游、我们的环境反应/陪伴/声音/计时扩展，以及暂停、手势、手机与自动画质优化。引导图直接沿用 `assets/pet/farewell/desktop.jpg` 的原始字节，不重新生成；角色已按用户决定保留当前版本。
+
+`projects/002-rainy-ghost/web/build.mjs` 执行语法、现有测试、双入口构建、资源和章节检查、静态白名单与截图 SHA-256 核对。加入 `web/pages.json`，每次重建既有九个项目和 002，不覆盖其他入口。默认静音，记录保留在当前浏览器，不上传个人任务、相处数据或偏好。正式发布与公网验收记录见 [002 部署记录](../projects/002-rainy-ghost/deployment.json)，验证后才登记 `demo_url`。
