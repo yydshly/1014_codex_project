@@ -1,0 +1,146 @@
+{
+  "initial": {
+    "buffers": "0",
+    "context": "locked",
+    "hidden": "false",
+    "kind": "",
+    "paused": "false",
+    "plays": "0",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "false",
+    "voiceVolume": "0.45",
+    "voices": "0"
+  },
+  "focusBefore": {
+    "elapsedMs": "0",
+    "lights": "2",
+    "records": "4",
+    "remainingMs": "0",
+    "saved": "true",
+    "state": "idle"
+  },
+  "happy": {
+    "buffers": "1",
+    "context": "running",
+    "hidden": "false",
+    "kind": "happy",
+    "paused": "false",
+    "plays": "1",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.45",
+    "voices": "1"
+  },
+  "happyGesture": "greet",
+  "shy": {
+    "buffers": "2",
+    "context": "running",
+    "hidden": "false",
+    "kind": "shy",
+    "paused": "false",
+    "plays": "2",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.45",
+    "voices": "1"
+  },
+  "shyGesture": "nod",
+  "settled": {
+    "buffers": "3",
+    "context": "running",
+    "hidden": "false",
+    "kind": "settled",
+    "paused": "false",
+    "plays": "3",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.45",
+    "voices": "1"
+  },
+  "settledGesture": "settled",
+  "paused": {
+    "buffers": "3",
+    "context": "suspended",
+    "hidden": "false",
+    "kind": "settled",
+    "paused": "true",
+    "plays": "3",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.45",
+    "voices": "0"
+  },
+  "resumed": {
+    "buffers": "3",
+    "context": "running",
+    "hidden": "false",
+    "kind": "settled",
+    "paused": "false",
+    "plays": "3",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.45",
+    "voices": "0"
+  },
+  "mobile": {
+    "buttons": [
+      {
+        "disabled": false,
+        "height": 44,
+        "name": "开心",
+        "width": 94.55208587646484
+      },
+      {
+        "disabled": false,
+        "height": 44,
+        "name": "害羞",
+        "width": 94.5625
+      },
+      {
+        "disabled": false,
+        "height": 44,
+        "name": "安心",
+        "width": 94.55208587646484
+      }
+    ],
+    "height": 359,
+    "scrollHeight": 518,
+    "scrollWidth": 340,
+    "width": 340
+  },
+  "final": {
+    "buffers": "3",
+    "context": "running",
+    "hidden": "false",
+    "kind": "settled",
+    "paused": "false",
+    "plays": "3",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.45",
+    "voices": "0"
+  },
+  "focusAfter": {
+    "elapsedMs": "0",
+    "lights": "2",
+    "records": "4",
+    "remainingMs": "0",
+    "saved": "true",
+    "state": "idle"
+  },
+  "errors": []
+}

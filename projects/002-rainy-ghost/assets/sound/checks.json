@@ -1,0 +1,201 @@
+{
+  "existingFocus": {
+    "elapsedMs": "0",
+    "lights": "2",
+    "records": "4",
+    "remainingMs": "0",
+    "saved": "true",
+    "state": "idle"
+  },
+  "initial": {
+    "buffers": "0",
+    "context": "locked",
+    "hidden": "false",
+    "kind": "",
+    "paused": "false",
+    "plays": "0",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.5",
+    "voice": "false",
+    "voiceVolume": "0.45",
+    "voices": "0"
+  },
+  "enabled": {
+    "buffers": "1",
+    "context": "running",
+    "hidden": "false",
+    "kind": "greet",
+    "paused": "false",
+    "plays": "1",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.5",
+    "voice": "true",
+    "voiceVolume": "0.45",
+    "voices": "1"
+  },
+  "liveResponse": {
+    "buffers": "3",
+    "context": "running",
+    "hidden": "false",
+    "kind": "nod",
+    "paused": "false",
+    "plays": "3",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.5",
+    "voice": "true",
+    "voiceVolume": "0.45",
+    "voices": "0"
+  },
+  "mixed": {
+    "buffers": "4",
+    "context": "running",
+    "hidden": "false",
+    "kind": "nod",
+    "paused": "false",
+    "plays": "4",
+    "quiet": "false",
+    "rain": "true",
+    "rainVolume": "0.5",
+    "voice": "true",
+    "voiceVolume": "0.45",
+    "voices": "1"
+  },
+  "paused": {
+    "sound": {
+      "buffers": "5",
+      "context": "suspended",
+      "hidden": "false",
+      "kind": "settled",
+      "paused": "true",
+      "plays": "5",
+      "quiet": "false",
+      "rain": "true",
+      "rainVolume": "0.2",
+      "voice": "true",
+      "voiceVolume": "0.45",
+      "voices": "0"
+    },
+    "scene": {
+      "cloth": "9515",
+      "renders": "30751",
+      "time": "159.639"
+    },
+    "previewEnabled": false
+  },
+  "volumes": {
+    "buffers": "5",
+    "context": "suspended",
+    "hidden": "false",
+    "kind": "settled",
+    "paused": "true",
+    "plays": "5",
+    "quiet": "false",
+    "rain": "true",
+    "rainVolume": "0.2",
+    "voice": "true",
+    "voiceVolume": "0.3",
+    "voices": "0"
+  },
+  "pausedStable": {
+    "cloth": "9515",
+    "renders": "30751",
+    "time": "159.639"
+  },
+  "resumed": {
+    "buffers": "5",
+    "context": "running",
+    "hidden": "false",
+    "kind": "settled",
+    "paused": "false",
+    "plays": "5",
+    "quiet": "false",
+    "rain": "true",
+    "rainVolume": "0.2",
+    "voice": "true",
+    "voiceVolume": "0.45",
+    "voices": "0"
+  },
+  "beforeRefresh": {
+    "buffers": "5",
+    "context": "running",
+    "hidden": "false",
+    "kind": "settled",
+    "paused": "false",
+    "plays": "5",
+    "quiet": "false",
+    "rain": "true",
+    "rainVolume": "0.2",
+    "voice": "true",
+    "voiceVolume": "0.45",
+    "voices": "0"
+  },
+  "afterRefresh": {
+    "buffers": "0",
+    "context": "locked",
+    "hidden": "false",
+    "kind": "",
+    "paused": "false",
+    "plays": "0",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.2",
+    "voice": "false",
+    "voiceVolume": "0.45",
+    "voices": "0"
+  },
+  "quietManual": {
+    "buffers": "2",
+    "context": "running",
+    "hidden": "false",
+    "kind": "nod",
+    "paused": "false",
+    "plays": "2",
+    "quiet": "true",
+    "rain": "true",
+    "rainVolume": "0.2",
+    "voice": "true",
+    "voiceVolume": "0.45",
+    "voices": "1"
+  },
+  "mobileShort": {
+    "bottom": 436,
+    "height": 359,
+    "previews": [
+      44,
+      44,
+      44
+    ],
+    "scrollHeight": 491,
+    "scrollWidth": 340,
+    "top": 76,
+    "width": 340
+  },
+  "final": {
+    "sound": {
+      "buffers": "2",
+      "context": "running",
+      "hidden": "false",
+      "kind": "nod",
+      "paused": "false",
+      "plays": "2",
+      "quiet": "false",
+      "rain": "true",
+      "rainVolume": "0.2",
+      "voice": "true",
+      "voiceVolume": "0.45",
+      "voices": "0"
+    },
+    "focus": {
+      "elapsedMs": "0",
+      "lights": "2",
+      "records": "4",
+      "remainingMs": "0",
+      "saved": "true",
+      "state": "idle"
+    },
+    "errors": []
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "beforeSound": {
+    "buffers": "4",
+    "context": "running",
+    "hidden": "false",
+    "kind": "pet",
+    "paused": "false",
+    "plays": "4",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.62",
+    "voices": "0"
+  },
+  "focusBefore": {
+    "elapsedMs": "0",
+    "lights": "2",
+    "records": "4",
+    "remainingMs": "0",
+    "saved": "true",
+    "state": "idle"
+  },
+  "rest": {
+    "blush": "0.000",
+    "gesture": "greet",
+    "pets": "0"
+  },
+  "directTap": {
+    "scene": {
+      "blush": "0.299",
+      "gesture": "pet",
+      "interaction": "head",
+      "pets": "1",
+      "tuck": "0.991"
+    },
+    "sound": {
+      "buffers": "2",
+      "context": "running",
+      "hidden": "false",
+      "kind": "pet",
+      "paused": "false",
+      "plays": "2",
+      "quiet": "false",
+      "rain": "false",
+      "rainVolume": "0.28",
+      "voice": "true",
+      "voiceVolume": "0.62",
+      "voices": "1"
+    }
+  },
+  "faded": {
+    "blush": "0.000",
+    "tuck": "0.000"
+  },
+  "pauseBefore": {
+    "blush": "0.276",
+    "cloth": "2151",
+    "pets": "1",
+    "renders": "5920",
+    "time": "36.882",
+    "tuck": "0.794"
+  },
+  "pauseAfter": {
+    "blush": "0.276",
+    "cloth": "2151",
+    "pets": "1",
+    "renders": "5920",
+    "time": "36.882",
+    "tuck": "0.794"
+  },
+  "orbit": {
+    "angle": "0.538",
+    "blush": "0.276",
+    "interaction": "camera",
+    "pets": "1"
+  },
+  "mobileTap": {
+    "scene": {
+      "blush": "0.299",
+      "gesture": "pet",
+      "interaction": "head",
+      "pets": "2",
+      "tuck": "1.000"
+    },
+    "sound": {
+      "buffers": "3",
+      "context": "running",
+      "hidden": "false",
+      "kind": "pet",
+      "paused": "false",
+      "plays": "3",
+      "quiet": "false",
+      "rain": "false",
+      "rainVolume": "0.28",
+      "voice": "true",
+      "voiceVolume": "0.62",
+      "voices": "1"
+    }
+  },
+  "focusAfter": {
+    "elapsedMs": "0",
+    "lights": "2",
+    "records": "4",
+    "remainingMs": "0",
+    "saved": "true",
+    "state": "idle"
+  },
+  "finalSound": {
+    "buffers": "3",
+    "context": "running",
+    "hidden": "false",
+    "kind": "pet",
+    "paused": "false",
+    "plays": "3",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.62",
+    "voices": "0"
+  },
+  "errors": []
+}

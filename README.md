@@ -10,13 +10,20 @@
 
 编号按收录顺序从 `001` 递增，目录采用 `projects/001-project-name/`。编号创建后保持不变，首页始终按编号升序展示。
 
+总索引收录全部研究，网页是否上线单独标记。目前包含 **001—015 共 15 项研究**，其中 9 项提供公开网页；其余可阅读研究记录，运行实验按子项目说明在本地进行。001、002、003、005、008 本次补交研究文档与证据配图，运行工程仍待单独归集；完整核对见 [研究收录核对](docs/CATALOG_AUDIT.md)。
+
 <!-- PROJECTS:START -->
 
 | 编号 | 项目 | 摘要 | 状态 | 研究记录 | 来源链接 | Web 演示 |
 | --- | --- | --- | --- | --- | --- | --- |
+| 001 | [Archify：交互式代码库图解](projects/001-archify/README.md) | 已本地复现中英文交互式代码库导览，展示 Archify 的生成链路、组件讲解和固定版本源码证据。 | 已复现 | [研究笔记](projects/001-archify/RESEARCH.md) | [GitHub](https://github.com/tt-a1i/archify) | — |
+| 002 | [雨夜提灯小幽灵：Three.js 交互场景](projects/002-rainy-ghost/README.md) | 已本地复现雨夜提灯小幽灵，支持雨滴碰撞与渐湿、镜头环绕、拖拽回弹和水面提灯交互。 | 已复现 | [研究笔记](projects/002-rainy-ghost/RESEARCH.md) | [GitHub](https://github.com/mrdoob/three.js) | — |
+| 003 | [夜半小屋与 Agent 工作室：3D 协作空间](projects/003-lofi-room/README.md) | 人物随目标到白板讨论、电脑入座、桌边检查与当面交接；MiniMax 驱动真实角色、语音与交付，保留原房间及目标验收。 | 已完成 | [研究笔记](projects/003-lofi-room/RESEARCH.md) | [GitHub](https://github.com/mrdoob/three.js) | — |
 | 004 | [从网站入口研究到 AI 研究工作台](projects/004-jasonzhu-ai/README.md) | 从 X 帖子中的网站链接出发，评估并补充寻找需求、GitHub 项目和 AI 产品的入口，逐步扩展为“问题 → 搜索原文 → 分析筛选 → 保存发现”的研究工作台。帮助个人开发者扩大观察范围、积累研究依据，可继续探索工具评估、需求雷达等产品；自动研究需本地 Codex。 | 研究中 | [研究笔记](projects/004-jasonzhu-ai/RESEARCH.md) | [原帖](https://x.com/shenxiankk/status/2107493081146691700) | [演示](https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html) |
+| 005 | [小汐：AI 虚拟角色互动实验](projects/005-cyber-companion/README.md) | 已跑通 Live2D 中文对话、语音、表情与打断；真人实时闭环仍缺数字人服务，尚未达到真人目标。保留本地原型、失败与边界记录。 | 研究中 | [研究笔记](projects/005-cyber-companion/RESEARCH.md) | [GitHub](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) | — |
 | 006 | [随机门：世界身份实验、源库原理与作品馆](projects/006-random-doors/README.md) | 阶段归档：Four-Seasons 以固定种子与参数联动三维场景；我们保留六地点偶遇、三世界八身份与列车第一人称样本，汇总随机价值、原画与人物深度的不足及完整游戏的投入边界。随机作品馆真实接入留待后续立项。 | 已归档 | [研究笔记](projects/006-random-doors/RESEARCH.md) | [原帖](https://x.com/techartist_/status/2109737086601556195) | [演示](https://yydshly.github.io/1014_codex_project/006-random-doors/research.html) |
 | 007 | [Atlas：模型驱动的资产工作流与月门水庭实证](projects/007-autumn-courtyard-blender/README.md) | Atlas 以技能规范和辅助脚本组织 2D/3D 资产生成、验证与引擎接入，底层依赖模型和建模工具；价值在可编辑资产与可重复交付。以月门水庭验证 Blender 脚本路线，探索展陈、教学、产品展示和游戏，流程增益仍待评测。 | 研究中 | [研究笔记](projects/007-autumn-courtyard-blender/RESEARCH.md) | [原帖](https://x.com/xikhar/status/2110143242591510835) | [演示](https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html) |
+| 008 | [Specreel：004 需求采集页面演示生成实测](projects/008-specreel/README.md) | 已用004真实操作生成三条原生与中文回放及MP4，验证更新标记；记录网址推荐、中文字体与播放节奏的限制。 | 已复现 | [研究笔记](projects/008-specreel/RESEARCH.md) | [GitHub](https://github.com/specreel/specreel) | — |
 | 009 | [个人主页启发与需求发现产品探索](projects/009-demand-discovery/README.md) | JasonZhu.AI 以博客、工具、项目、订阅与服务构成个人主页，并用 AI 管线更新快讯。我们的收获是研究沉淀、入口引导与复习更新，形成“研究→实践→记录→展示→接触用户→获得反馈→更新研究”；再延伸到 AI 发现需求、证据追查、验证和产品化。009 已跑通三轮本地探索，公开页展示真实档案，持续使用与付费待验证。 | 研究中 | [研究笔记](projects/009-demand-discovery/RESEARCH.md) | [来源](https://jasonzhu.ai/) | [演示](https://yydshly.github.io/1014_codex_project/009-demand-discovery/#synthesis) |
 | 010 | [从 Atypica 到数据驱动的需求调研](projects/010-evidence-research-lab/README.md) | Atypica 以资料研究、用户视角模拟与报告辅助需求和市场调研。我们自建导入、证据与报告原型，同模型同合成资料 B/C 未证明额外流程增益；由此追问模型、身份和流程价值，收束为数据→证据→需求→产品验证→反馈沉淀。可扩展需求雷达、调研工作台和领域助手，效果与付费待验证。 | 已归档 | [研究笔记](projects/010-evidence-research-lab/RESEARCH.md) | [原帖](https://x.com/gkxspace/status/2109970698303373750) | [演示](https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/#synthesis) |
 | 011 | [古人说唱 Battle：AI 视频制作流程研究](projects/011-ancient-rap-battle/README.md) | 研究歌曲、人物图与远端逐句视频的编排机制；制作94.64秒《压轴人间》，记录原曲驱动修复、阶段验收、可复用资产与扩展方向。 | 研究中 | [研究笔记](projects/011-ancient-rap-battle/RESEARCH.md) | [GitHub](https://github.com/10291124jcjc-dotcom/ancient-rap-battle) | [演示](https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/) |
@@ -27,6 +34,30 @@
 
 ### 项目配图
 
+#### 001 · Archify：交互式代码库图解
+
+![001 Archify 本地演示：交互式结构图、组件讲解与固定版本源码证据。](projects/001-archify/assets/preview.png)
+
+001 Archify 本地演示：交互式结构图、组件讲解与固定版本源码证据。
+
+[查看项目](projects/001-archify/README.md)
+
+#### 002 · 雨夜提灯小幽灵：Three.js 交互场景
+
+![002 雨夜小幽灵实际运行截图：雨滴命中斗篷、湿润材质、暖色提灯与水面倒影。](projects/002-rainy-ghost/assets/rain-impact.jpg)
+
+002 雨夜小幽灵实际运行截图：雨滴命中斗篷、湿润材质、暖色提灯与水面倒影。
+
+[查看项目](projects/002-rainy-ghost/README.md)
+
+#### 003 · 夜半小屋与 Agent 工作室：3D 协作空间
+
+![003 真实 Agent 协作运行截图：开发员走到窗边电脑并入座处理任务，人物动作随目标推进，同项目保留原房间。](projects/003-lofi-room/assets/workspace-actions-computer.png)
+
+003 真实 Agent 协作运行截图：开发员走到窗边电脑并入座处理任务，人物动作随目标推进，同项目保留原房间。
+
+[查看项目](projects/003-lofi-room/README.md)
+
 #### 004 · 从网站入口研究到 AI 研究工作台
 
 ![004 产品全景图：问题、来源、搜索读取、分析筛选、发现库、人工验证，以及适用方向、扩展产品与当前边界。](projects/004-jasonzhu-ai/assets/product-overview.png)
@@ -34,6 +65,14 @@
 004 产品全景图：问题、来源、搜索读取、分析筛选、发现库、人工验证，以及适用方向、扩展产品与当前边界。
 
 [查看项目](projects/004-jasonzhu-ai/README.md)
+
+#### 005 · 小汐：AI 虚拟角色互动实验
+
+![005 小汐实际运行截图：Live2D 角色、真实模型聊天、中文语音与音频驱动嘴型。](projects/005-cyber-companion/assets/preview.jpg)
+
+005 小汐实际运行截图：Live2D 角色、真实模型聊天、中文语音与音频驱动嘴型。
+
+[查看项目](projects/005-cyber-companion/README.md)
 
 #### 006 · 随机门：世界身份实验、源库原理与作品馆
 
@@ -50,6 +89,14 @@
 007 专门制作的 Atlas 研究总览图：能力、原理、月门水庭实际效果、价值与意义、应用、边界及扩展方向。
 
 [查看项目](projects/007-autumn-courtyard-blender/README.md)
+
+#### 008 · Specreel：004 需求采集页面演示生成实测
+
+![008 实际回放：004 需求采集计划的截图、操作步骤与中文说明，可切换原生结果。](projects/008-specreel/assets/preview.png)
+
+008 实际回放：004 需求采集计划的截图、操作步骤与中文说明，可切换原生结果。
+
+[查看项目](projects/008-specreel/README.md)
 
 #### 009 · 个人主页启发与需求发现产品探索
 

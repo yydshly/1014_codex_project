@@ -1,0 +1,177 @@
+{
+  "verifiedAt": "2026-10-15T00:46:23.923Z",
+  "sourceUrl": "http://127.0.0.1:4176/1014_codex_project/004-jasonzhu-ai/",
+  "captureResults": [
+    {
+      "slug": "01-reddit-evidence",
+      "title": "看真实问题、原话和已有办法",
+      "run": "baseline",
+      "failed": null,
+      "errors": [],
+      "requestCount": 9,
+      "postRequests": [],
+      "recordedSeconds": 8.69
+    },
+    {
+      "slug": "03-source-filter",
+      "title": "筛选历史线索并查看来源详情",
+      "run": "baseline",
+      "failed": null,
+      "errors": [],
+      "requestCount": 9,
+      "postRequests": [],
+      "recordedSeconds": 9.73
+    },
+    {
+      "slug": "02-search-plan",
+      "title": "从观察对象到下一轮采集指令",
+      "run": "baseline",
+      "failed": null,
+      "errors": [],
+      "requestCount": 10,
+      "postRequests": [],
+      "recordedSeconds": 15.26
+    }
+  ],
+  "variants": {
+    "native": {
+      "flows": [
+        {
+          "slug": "01-reddit-evidence",
+          "title": "看真实问题、原话和已有办法",
+          "public": true,
+          "steps": 11,
+          "actions": 5,
+          "checks": 6,
+          "duration": 13.75,
+          "failed": false,
+          "healed": false,
+          "sig": "666709096f57",
+          "capture_ok": true,
+          "demo": "01-reddit-evidence/demo.html",
+          "htmlBytes": 1159313,
+          "videoSeconds": 18.466667,
+          "videoBytes": 362447,
+          "videoSize": "1280 × 948",
+          "uniqueFrames": 6
+        },
+        {
+          "slug": "02-search-plan",
+          "title": "从观察对象到下一轮采集指令",
+          "public": true,
+          "steps": 21,
+          "actions": 13,
+          "checks": 8,
+          "duration": 25.98,
+          "failed": false,
+          "healed": false,
+          "sig": "b3c615b35b9c",
+          "capture_ok": true,
+          "demo": "02-search-plan/demo.html",
+          "htmlBytes": 3082646,
+          "videoSeconds": 31.766667,
+          "videoBytes": 585413,
+          "videoSize": "1280 × 948",
+          "uniqueFrames": 11
+        },
+        {
+          "slug": "03-source-filter",
+          "title": "筛选历史线索并查看来源详情",
+          "public": true,
+          "steps": 15,
+          "actions": 8,
+          "checks": 7,
+          "duration": 18.42,
+          "failed": false,
+          "healed": false,
+          "sig": "6d1a31367f83",
+          "capture_ok": true,
+          "demo": "03-source-filter/demo.html",
+          "htmlBytes": 2145810,
+          "videoSeconds": 24.866667,
+          "videoBytes": 436980,
+          "videoSize": "1280 × 948",
+          "uniqueFrames": 7
+        }
+      ],
+      "bundleBytes": 3242532
+    },
+    "zh": {
+      "flows": [
+        {
+          "slug": "01-reddit-evidence",
+          "title": "看真实问题、原话和已有办法",
+          "public": true,
+          "steps": 11,
+          "actions": 5,
+          "checks": 6,
+          "duration": 13.75,
+          "failed": false,
+          "healed": true,
+          "sig": "dccd2213bb32",
+          "capture_ok": true,
+          "demo": "01-reddit-evidence/demo.html",
+          "htmlBytes": 1159600,
+          "videoSeconds": 18.466667,
+          "videoBytes": 359330,
+          "videoSize": "1280 × 948",
+          "uniqueFrames": 6
+        },
+        {
+          "slug": "02-search-plan",
+          "title": "从观察对象到下一轮采集指令",
+          "public": true,
+          "steps": 21,
+          "actions": 13,
+          "checks": 8,
+          "duration": 25.98,
+          "failed": false,
+          "healed": true,
+          "sig": "a625198727a3",
+          "capture_ok": true,
+          "demo": "02-search-plan/demo.html",
+          "htmlBytes": 3082924,
+          "videoSeconds": 31.766667,
+          "videoBytes": 617384,
+          "videoSize": "1280 × 948",
+          "uniqueFrames": 11
+        },
+        {
+          "slug": "03-source-filter",
+          "title": "筛选历史线索并查看来源详情",
+          "public": true,
+          "steps": 15,
+          "actions": 8,
+          "checks": 7,
+          "duration": 18.42,
+          "failed": false,
+          "healed": true,
+          "sig": "0e97d64f23fe",
+          "capture_ok": true,
+          "demo": "03-source-filter/demo.html",
+          "htmlBytes": 2145949,
+          "videoSeconds": 24.866667,
+          "videoBytes": 442987,
+          "videoSize": "1280 × 948",
+          "uniqueFrames": 7
+        }
+      ],
+      "bundleBytes": 3243504
+    }
+  },
+  "updatedFlow": {
+    "slug": "02-search-plan",
+    "healed": true,
+    "signature": "4ddd22d99afd"
+  },
+  "mp4RangeRequest": "206 / 32 bytes",
+  "sourceSha256": {
+    "projects/004-jasonzhu-ai/web/index.html": "26b638aae05789fcfbab1621f0ac2726ee768c53b2f7117888f012fd6e112061",
+    "projects/004-jasonzhu-ai/web/app.js": "31b461bbdc97848af69303ebb15bed378032858b41b38c0f0008d76cffe4ddec",
+    "projects/004-jasonzhu-ai/web/reddit.js": "f6b615209752f067a94897c8853241a908fdd7ade0a4f68c70784e711b4116c8",
+    "projects/004-jasonzhu-ai/web/styles.css": "7776b2a280ec255b57838d31d9ebd53c3f6dba25c1e4e424acefcd40a414ed14",
+    "projects/004-jasonzhu-ai/web/data/reddit-latest.json": "38912ac149b10ad0dd679f1604df85a87a39cbf3f5f19a7b67779f52a4c94c02",
+    "projects/004-jasonzhu-ai/demand-sources.json": "db62c65a27acb2ac1fd1d7ddd5711c0cca33d207277426bdc5885e2f339fbbb2"
+  },
+  "browserReview": "另见 assets/preview.png 与 RESEARCH.md；浏览器回放单独检查"
+}

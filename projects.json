@@ -2,6 +2,39 @@
   "schema_version": 1,
   "projects": [
     {
+      "id": "001",
+      "slug": "archify",
+      "title": "Archify：交互式代码库图解",
+      "repository": "https://github.com/tt-a1i/archify",
+      "summary": "已本地复现中英文交互式代码库导览，展示 Archify 的生成链路、组件讲解和固定版本源码证据。",
+      "status": "已复现",
+      "preview": "assets/preview.png",
+      "preview_caption": "001 Archify 本地演示：交互式结构图、组件讲解与固定版本源码证据。",
+      "demo_url": null
+    },
+    {
+      "id": "002",
+      "slug": "rainy-ghost",
+      "title": "雨夜提灯小幽灵：Three.js 交互场景",
+      "repository": "https://github.com/mrdoob/three.js",
+      "summary": "已本地复现雨夜提灯小幽灵，支持雨滴碰撞与渐湿、镜头环绕、拖拽回弹和水面提灯交互。",
+      "status": "已复现",
+      "preview": "assets/rain-impact.jpg",
+      "preview_caption": "002 雨夜小幽灵实际运行截图：雨滴命中斗篷、湿润材质、暖色提灯与水面倒影。",
+      "demo_url": null
+    },
+    {
+      "id": "003",
+      "slug": "lofi-room",
+      "title": "夜半小屋与 Agent 工作室：3D 协作空间",
+      "repository": "https://github.com/mrdoob/three.js",
+      "summary": "人物随目标到白板讨论、电脑入座、桌边检查与当面交接；MiniMax 驱动真实角色、语音与交付，保留原房间及目标验收。",
+      "status": "已完成",
+      "preview": "assets/workspace-actions-computer.png",
+      "preview_caption": "003 真实 Agent 协作运行截图：开发员走到窗边电脑并入座处理任务，人物动作随目标推进，同项目保留原房间。",
+      "demo_url": null
+    },
+    {
       "id": "004",
       "slug": "jasonzhu-ai",
       "title": "从网站入口研究到 AI 研究工作台",
@@ -12,6 +45,17 @@
       "preview_caption": "004 产品全景图：问题、来源、搜索读取、分析筛选、发现库、人工验证，以及适用方向、扩展产品与当前边界。",
       "demo_url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html",
       "source_url": "https://x.com/shenxiankk/status/2107493081146691700"
+    },
+    {
+      "id": "005",
+      "slug": "cyber-companion",
+      "title": "小汐：AI 虚拟角色互动实验",
+      "repository": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber",
+      "summary": "已跑通 Live2D 中文对话、语音、表情与打断；真人实时闭环仍缺数字人服务，尚未达到真人目标。保留本地原型、失败与边界记录。",
+      "status": "研究中",
+      "preview": "assets/preview.jpg",
+      "preview_caption": "005 小汐实际运行截图：Live2D 角色、真实模型聊天、中文语音与音频驱动嘴型。",
+      "demo_url": null
     },
     {
       "id": "006",
@@ -36,6 +80,17 @@
       "preview_caption": "007 专门制作的 Atlas 研究总览图：能力、原理、月门水庭实际效果、价值与意义、应用、边界及扩展方向。",
       "demo_url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html",
       "source_url": "https://x.com/xikhar/status/2110143242591510835"
+    },
+    {
+      "id": "008",
+      "slug": "specreel",
+      "title": "Specreel：004 需求采集页面演示生成实测",
+      "repository": "https://github.com/specreel/specreel",
+      "summary": "已用004真实操作生成三条原生与中文回放及MP4，验证更新标记；记录网址推荐、中文字体与播放节奏的限制。",
+      "status": "已复现",
+      "preview": "assets/preview.png",
+      "preview_caption": "008 实际回放：004 需求采集计划的截图、操作步骤与中文说明，可切换原生结果。",
+      "demo_url": null
     },
     {
       "id": "009",

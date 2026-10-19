@@ -1,0 +1,187 @@
+{
+  "naturalCompletionWhileScenePaused": {
+    "before": {
+      "renders": 5177,
+      "cloth": 1301,
+      "focusLights": 0
+    },
+    "after": {
+      "cloth": "1301",
+      "focusLights": "1",
+      "paused": "true",
+      "renders": "5178"
+    }
+  },
+  "restoredCompletion": {
+    "panel": {
+      "elapsedMs": "0",
+      "lights": "1",
+      "records": "1",
+      "remainingMs": "0",
+      "saved": "true",
+      "state": "idle"
+    },
+    "record": "读完一页书 · 功能验证\n点亮一盏灯\n\n10/14 21:12 · 陪伴 1 分钟",
+    "lights": "1"
+  },
+  "pausedBeforeReload": {
+    "elapsedMs": "131323",
+    "lights": "1",
+    "records": "1",
+    "remainingMs": "168677",
+    "saved": "true",
+    "state": "paused"
+  },
+  "pausedAfterReload": {
+    "elapsedMs": "131323",
+    "lights": "1",
+    "records": "1",
+    "remainingMs": "168677",
+    "saved": "true",
+    "state": "paused"
+  },
+  "mobile": {
+    "size": "390x844",
+    "panel": {
+      "elapsedMs": "131323",
+      "lights": "1",
+      "records": "1",
+      "remainingMs": "168677",
+      "saved": "true",
+      "state": "paused"
+    },
+    "layout": {
+      "scrollWidth": 390,
+      "width": 390
+    }
+  },
+  "resetKeepsSession": {
+    "elapsedMs": "131324",
+    "lights": "1",
+    "records": "1",
+    "remainingMs": "168676",
+    "saved": "true",
+    "state": "running"
+  },
+  "runningBeforeReload": {
+    "elapsedMs": "142354",
+    "lights": "1",
+    "records": "1",
+    "remainingMs": "157646",
+    "saved": "true",
+    "state": "running"
+  },
+  "runningAfterReload": {
+    "elapsedMs": "144352",
+    "lights": "1",
+    "records": "1",
+    "remainingMs": "155648",
+    "saved": "true",
+    "state": "running"
+  },
+  "stopped": {
+    "panel": {
+      "elapsedMs": "0",
+      "lights": "1",
+      "records": "2",
+      "remainingMs": "0",
+      "saved": "true",
+      "state": "idle"
+    },
+    "history": "整理今天的想法\n中途停下\n\n10/14 21:17 · 陪伴 2 分 24 秒\n\n读完一页书 · 功能验证\n点亮一盏灯\n\n10/14 21:12 · 陪伴 1 分钟",
+    "lights": "1"
+  },
+  "smallMobile": {
+    "buttons": [
+      {
+        "height": 44,
+        "id": "focus-toggle",
+        "right": 245.6041717529297,
+        "x": 150.0729217529297
+      },
+      {
+        "height": 44,
+        "id": "help-toggle",
+        "right": 297.6041717529297,
+        "x": 253.6041717529297
+      }
+    ],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  "completionToast": {
+    "visible": true,
+    "text": "这一程完成了 · 远处亮起第 2 盏灯 ↗",
+    "lights": "2"
+  },
+  "orbitBefore": {
+    "angle": "0.000",
+    "cloth": "121",
+    "lights": "2"
+  },
+  "orbitAfter": {
+    "angle": "-0.348",
+    "cloth": "121",
+    "lights": "2",
+    "paused": "true"
+  },
+  "bodyDrag": {
+    "interaction": "ghost",
+    "lights": "2",
+    "paused": "true"
+  },
+  "shortMobile": {
+    "client": 479,
+    "contentWidth": 340,
+    "rect": {
+      "bottom": 546,
+      "top": 66,
+      "width": 351
+    },
+    "scroll": 603
+  },
+  "smallMobileIdle": {
+    "children": [
+      {
+        "class": "brand",
+        "height": 37.89583587646485,
+        "left": 22.39583396911621,
+        "right": 128.0833339691162
+      },
+      {
+        "class": "focus-entry",
+        "height": 44,
+        "left": 144.27084350585938,
+        "right": 245.60417938232425
+      },
+      {
+        "class": "icon-button help-button",
+        "height": 44,
+        "left": 253.6041717529297,
+        "right": 297.6041717529297
+      }
+    ],
+    "rect": {
+      "left": 22.39583396911621,
+      "right": 297.6041774749756
+    }
+  },
+  "final": {
+    "panel": {
+      "elapsedMs": "0",
+      "lights": "2",
+      "records": "3",
+      "remainingMs": "0",
+      "saved": "true",
+      "state": "idle"
+    },
+    "scene": {
+      "lights": "2",
+      "paused": "false",
+      "quality": "high",
+      "visibleLights": "2",
+      "wetCompiled": "true"
+    },
+    "errors": []
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "beforeSound": {
+    "buffers": "5",
+    "context": "running",
+    "hidden": "false",
+    "kind": "happy",
+    "paused": "false",
+    "plays": "9",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.62",
+    "voices": "0"
+  },
+  "focusBefore": {
+    "elapsedMs": "0",
+    "lights": "2",
+    "records": "4",
+    "remainingMs": "0",
+    "saved": "true",
+    "state": "idle"
+  },
+  "loadedSound": {
+    "buffers": "1",
+    "context": "running",
+    "hidden": "false",
+    "kind": "happy",
+    "paused": "false",
+    "plays": "1",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.62",
+    "voices": "1"
+  },
+  "headTap": {
+    "scene": {
+      "eyes": "0.995",
+      "gesture": "pet",
+      "interaction": "head",
+      "pets": "1",
+      "tuck": "0.006"
+    },
+    "sound": {
+      "buffers": "2",
+      "context": "running",
+      "hidden": "false",
+      "kind": "pet",
+      "paused": "false",
+      "plays": "2",
+      "quiet": "false",
+      "rain": "false",
+      "rainVolume": "0.28",
+      "voice": "true",
+      "voiceVolume": "0.62",
+      "voices": "1"
+    }
+  },
+  "tucked": {
+    "eyes": "0.211",
+    "gesture": "pet",
+    "pets": "2",
+    "tuck": "0.986"
+  },
+  "repeat": {
+    "pets": "2",
+    "sound": {
+      "buffers": "3",
+      "context": "running",
+      "hidden": "false",
+      "kind": "pet",
+      "paused": "false",
+      "plays": "3",
+      "quiet": "false",
+      "rain": "false",
+      "rainVolume": "0.28",
+      "voice": "true",
+      "voiceVolume": "0.62",
+      "voices": "0"
+    }
+  },
+  "greet": {
+    "response": "greet",
+    "sound": {
+      "buffers": "3",
+      "context": "running",
+      "hidden": "false",
+      "kind": "happy",
+      "paused": "false",
+      "plays": "4",
+      "quiet": "false",
+      "rain": "false",
+      "rainVolume": "0.28",
+      "voice": "true",
+      "voiceVolume": "0.62",
+      "voices": "1"
+    }
+  },
+  "headDrag": {
+    "gesture": "greet",
+    "interaction": "head",
+    "pets": "2"
+  },
+  "pauseBefore": {
+    "cloth": "4524",
+    "eyes": "0.273",
+    "pets": "3",
+    "renders": "8329",
+    "time": "78.206",
+    "tuck": "0.909"
+  },
+  "pausedSound": {
+    "buffers": "3",
+    "context": "suspended",
+    "hidden": "false",
+    "kind": "pet",
+    "paused": "true",
+    "plays": "5",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.62",
+    "voices": "0"
+  },
+  "pauseAfter": {
+    "cloth": "4524",
+    "eyes": "0.273",
+    "pets": "3",
+    "renders": "8329",
+    "time": "78.206",
+    "tuck": "0.909"
+  },
+  "idleStartSound": {
+    "buffers": "3",
+    "context": "running",
+    "hidden": "false",
+    "kind": "pet",
+    "paused": "false",
+    "plays": "5",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.62",
+    "voices": "0"
+  },
+  "idle": {
+    "scene": {
+      "eyes": "0.293",
+      "gesture": "squint",
+      "pets": "3",
+      "squint": "0.982",
+      "tuck": "0.000"
+    },
+    "sound": {
+      "buffers": "3",
+      "context": "running",
+      "hidden": "false",
+      "kind": "pet",
+      "paused": "false",
+      "plays": "5",
+      "quiet": "false",
+      "rain": "false",
+      "rainVolume": "0.28",
+      "voice": "true",
+      "voiceVolume": "0.62",
+      "voices": "0"
+    }
+  },
+  "mobileLayout": {
+    "buttons": [
+      {
+        "height": 44,
+        "left": 27.291667938232425,
+        "name": "轻轻叫它一声 ↗",
+        "right": 130.7083396911621
+      },
+      {
+        "height": 44,
+        "left": 152.70834350585938,
+        "name": "摸摸头",
+        "right": 192.3125114440918
+      }
+    ],
+    "scrollWidth": 335,
+    "width": 335
+  },
+  "mobilePet": {
+    "scene": {
+      "eyes": "0.259",
+      "gesture": "pet",
+      "pets": "4",
+      "tuck": "0.926"
+    },
+    "sound": {
+      "buffers": "3",
+      "context": "running",
+      "hidden": "false",
+      "kind": "pet",
+      "paused": "false",
+      "plays": "6",
+      "quiet": "false",
+      "rain": "false",
+      "rainVolume": "0.28",
+      "voice": "true",
+      "voiceVolume": "0.62",
+      "voices": "1"
+    }
+  },
+  "mobileLayoutFinal": {
+    "buttons": [
+      {
+        "height": 44,
+        "name": "轻轻叫它一声 ↗",
+        "width": 103.41667175292967
+      },
+      {
+        "height": 44,
+        "name": "摸摸头",
+        "width": 44
+      }
+    ],
+    "scrollWidth": 335,
+    "width": 335
+  },
+  "shortLayout": {
+    "button": {
+      "height": 44,
+      "top": 111,
+      "width": 44
+    },
+    "controlsTop": 446.3333435058594,
+    "experienceWidth": 390,
+    "introBottom": 175,
+    "scrollWidth": 390
+  },
+  "keyboardPet": {
+    "eyes": "0.256",
+    "gesture": "pet",
+    "pets": "2",
+    "tuck": "0.930"
+  },
+  "focusAfter": {
+    "elapsedMs": "0",
+    "lights": "2",
+    "records": "4",
+    "remainingMs": "0",
+    "saved": "true",
+    "state": "idle"
+  },
+  "finalSound": {
+    "buffers": "3",
+    "context": "running",
+    "hidden": "false",
+    "kind": "pet",
+    "paused": "false",
+    "plays": "3",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.62",
+    "voices": "1"
+  },
+  "errors": []
+}

@@ -1,0 +1,24 @@
+{
+  "status": "local-checks-passed-awaiting-public-verification",
+  "date": "2026-10-19",
+  "before": {
+    "localResearchProjects": 15,
+    "remoteResearchProjects": 10,
+    "publicIndexProjects": 9,
+    "missingUncommittedProjects": ["001", "002", "003", "005", "008"],
+    "committedButHiddenProject": "015"
+  },
+  "local": {
+    "researchProjects": 15,
+    "publishedApplications": 9,
+    "recordsOnly": 6,
+    "ids": ["001", "002", "003", "004", "005", "006", "007", "008", "009", "010", "011", "012", "013", "014", "015"],
+    "fullSiteBuild": "passed",
+    "catalogTests": 10,
+    "recordDialogsChecked": ["001", "015"],
+    "mobileViewportWidth": 390,
+    "horizontalOverflow": false,
+    "browserErrors": 0
+  },
+  "scope": "补齐全部研究索引，以及五项此前未提交的研究文档、来源和证据配图；保留九项已有应用发布。五项运行工程仍保存在本地，未声明已全量提交或上线。"
+}

@@ -1,0 +1,197 @@
+{
+  "beforeSound": {
+    "buffers": "4",
+    "context": "running",
+    "hidden": "false",
+    "kind": "pet",
+    "paused": "false",
+    "plays": "7",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.62",
+    "voices": "0"
+  },
+  "focusBefore": {
+    "elapsedMs": "0",
+    "lights": "2",
+    "records": "4",
+    "remainingMs": "0",
+    "saved": "true",
+    "state": "idle"
+  },
+  "initial": {
+    "pets": "0",
+    "view": "0.000"
+  },
+  "headCursor": {
+    "blush": "0.299",
+    "cursor": "url(\"http://127.0.0.1:4174/1014_codex_project/002-rainy-ghost/pet-hand.svg\") 14 9, pointer",
+    "hit": "head",
+    "inline": "touch-action: none;",
+    "pets": "1",
+    "tuck": "0.982"
+  },
+  "headHint": {
+    "hidden": false,
+    "text": "在头顶轻轻来回抚摸"
+  },
+  "bodyDrag": {
+    "cursor": "grab",
+    "hit": "ghost",
+    "interaction": "ghost",
+    "pets": "1",
+    "view": "0.000"
+  },
+  "bodyHint": "",
+  "mobileGuide": {
+    "display": "block",
+    "scrollWidth": 390,
+    "text": "头顶轻抚 · 身体拖动",
+    "width": 390
+  },
+  "mobileStroke": {
+    "hit": "head",
+    "interaction": "head",
+    "pets": "1",
+    "view": "0.000",
+    "entry": "native-head-drag"
+  },
+  "mobileReaction": {
+    "scene": {
+      "blush": "0.299",
+      "gesture": "pet",
+      "pets": "2"
+    },
+    "sound": {
+      "buffers": "2",
+      "context": "running",
+      "hidden": "false",
+      "kind": "pet",
+      "paused": "false",
+      "plays": "2",
+      "quiet": "false",
+      "rain": "false",
+      "rainVolume": "0.28",
+      "voice": "true",
+      "voiceVolume": "0.62",
+      "voices": "1"
+    },
+    "entry": "button"
+  },
+  "desktop": {
+    "blush": "0.290",
+    "cursor": "url(\"http://127.0.0.1:4174/1014_codex_project/002-rainy-ghost/pet-hand.svg\") 14 9, pointer",
+    "gesture": "pet",
+    "hit": "head",
+    "pets": "3",
+    "entry": "head-tap"
+  },
+  "pausedBefore": {
+    "blush": "0.258",
+    "cloth": "7713",
+    "pets": "3",
+    "time": "211.899",
+    "tuck": "0.661"
+  },
+  "pausedAfter": {
+    "blush": "0.258",
+    "cloth": "7713",
+    "pets": "3",
+    "time": "211.899",
+    "tuck": "0.661"
+  },
+  "pausedSound": {
+    "buffers": "4",
+    "context": "suspended",
+    "hidden": "false",
+    "kind": "pet",
+    "paused": "true",
+    "plays": "4",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.62",
+    "voices": "0"
+  },
+  "focusAfter": {
+    "elapsedMs": "0",
+    "lights": "2",
+    "records": "4",
+    "remainingMs": "0",
+    "saved": "true",
+    "state": "idle"
+  },
+  "finalSound": {
+    "buffers": "4",
+    "context": "running",
+    "hidden": "false",
+    "kind": "pet",
+    "paused": "false",
+    "plays": "4",
+    "quiet": "false",
+    "rain": "false",
+    "rainVolume": "0.28",
+    "voice": "true",
+    "voiceVolume": "0.62",
+    "voices": "0"
+  },
+  "errors": [],
+  "beforeCursorFix": {
+    "scene": {
+      "blush": "0.000",
+      "cursor": "auto",
+      "gesture": "rest",
+      "hit": "head",
+      "interaction": "head",
+      "pets": "0",
+      "tuck": "0.000",
+      "view": "0.000"
+    },
+    "sound": {
+      "buffers": "1",
+      "context": "running",
+      "hidden": "false",
+      "kind": "happy",
+      "paused": "false",
+      "plays": "1",
+      "quiet": "false",
+      "rain": "false",
+      "rainVolume": "0.28",
+      "voice": "true",
+      "voiceVolume": "0.62",
+      "voices": "0"
+    },
+    "hint": {
+      "hidden": false,
+      "text": "在头顶轻轻来回抚摸"
+    }
+  },
+  "bodyEdgeDrag": {
+    "scene": {
+      "blush": "0.000",
+      "gesture": "rest",
+      "hit": "head",
+      "interaction": "ghost",
+      "pets": "1",
+      "tuck": "0.000",
+      "view": "0.000"
+    },
+    "sound": {
+      "buffers": "1",
+      "context": "running",
+      "hidden": "false",
+      "kind": "happy",
+      "paused": "false",
+      "plays": "1",
+      "quiet": "false",
+      "rain": "false",
+      "rainVolume": "0.28",
+      "voice": "true",
+      "voiceVolume": "0.62",
+      "voices": "0"
+    }
+  }
+}

@@ -115,6 +115,10 @@ def validate(data, check_files=True):
             require(parsed.scheme == "https" and bool(parsed.hostname)
                     and parsed.username is None and not any(char.isspace() for char in demo),
                     f"{project_id} 的 demo_url 必须是有效的 HTTPS 地址。")
+    if ids:
+        expected_ids = {f"{number:03d}" for number in range(1, max(map(int, ids)) + 1)}
+        missing_ids = sorted(expected_ids - ids)
+        require(not missing_ids, f"研究总索引缺少编号：{', '.join(missing_ids)}；保留既有项目记录，不以网页发布清单过滤总索引。")
     if check_files:
         for directory in (ROOT / "projects").iterdir():
             if directory.is_dir():

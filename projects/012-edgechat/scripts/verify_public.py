@@ -79,7 +79,11 @@ sources = json.loads(contents[prefix + 'research/upstream.json'])
 assert len(sources['files']) == 18
 assert sources['commit'] == '5a69f11ef0b2bdbdee611620af0f438c68d90f1e'
 catalog = json.loads(contents['projects.json'])
-assert [p['id'] + '-' + p['slug'] for p in catalog['projects']] == manifest['projects']
+catalog_names = [p['id'] + '-' + p['slug'] for p in catalog['projects']]
+assert all(name in catalog_names for name in manifest['projects'])
+assert catalog_names == sorted(catalog_names)
+publication = json.loads(contents['entries.json'])
+assert publication['mode'] == 'static' and publication['publishedProjects'] == manifest['projects']
 assert contents['projects/012-edgechat/assets/edgechat-summary.png'] == (project / 'assets/edgechat-summary.png').read_bytes()
 report = {
     'verifiedAt': datetime.now(timezone.utc).isoformat(),

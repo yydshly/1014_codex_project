@@ -6,6 +6,7 @@ import { spawnSync } from 'node:child_process';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const output = resolve(root, '_site');
 const catalog = JSON.parse(await readFile(resolve(root, 'projects.json'), 'utf8'));
+const allProjects = [...catalog.projects].sort((a, b) => Number(a.id) - Number(b.id));
 const manifest = JSON.parse(await readFile(resolve(root, 'web/pages.json'), 'utf8'));
 const entrances = await readFile(resolve(root, 'web/entries.json'), 'utf8').then(JSON.parse).catch(error => {
   if (error.code === 'ENOENT') return { version: 1, projects: {} };
@@ -31,9 +32,17 @@ for (const {name, item} of published) {
   const dist = resolve(project, 'web/dist');
   if (!(await stat(resolve(dist, 'index.html'))).isFile()) throw new Error(`缺少入口：${name}`);
   await cp(dist, resolve(output, name), { recursive: true });
+}
+// 研究收录和应用发布独立：所有研究都有目录与记录，只有发布清单中的项目构建应用。
+for (const item of allProjects) {
+  const name = `${item.id}-${item.slug}`;
+  const project = resolve(root, 'projects', name);
   const notes = resolve(output, 'projects', name);
   await mkdir(notes, { recursive: true });
-  for (const file of ['README.md', 'RESEARCH.md']) await cp(resolve(project, file), resolve(notes, file));
+  for (const file of ['README.md', 'RESEARCH.md', 'assets/README.md', 'web/README.md']) {
+    await mkdir(dirname(resolve(notes, file)), { recursive: true });
+    await cp(resolve(project, file), resolve(notes, file));
+  }
   if (item.preview) {
     const source = resolve(project, item.preview);
     if (!source.startsWith(project + sep)) throw new Error(`配图路径越界：${name}`);
@@ -44,7 +53,7 @@ for (const {name, item} of published) {
 }
 await cp(resolve(root, 'web/index.html'), resolve(output, 'index.html'));
 await writeFile(resolve(output, '.nojekyll'), '');
-await writeFile(resolve(output, 'projects.json'), JSON.stringify({ schema_version: 1, projects: published.map(p => p.item) }, null, 2) + '\n');
+await writeFile(resolve(output, 'projects.json'), JSON.stringify({ schema_version: 1, projects: allProjects }, null, 2) + '\n');
 const entries = {};
 for (const {name, item} of published) {
   const configured = entrances.projects?.[item.id];
@@ -56,5 +65,7 @@ for (const {name, item} of published) {
     if (!target.startsWith(output + sep) || !(await stat(target)).isFile()) throw new Error(`入口不存在：${entry.path}`);
   }
 }
-await writeFile(resolve(output, 'entries.json'), JSON.stringify({ version: 1, projects: entries }, null, 2) + '\n');
-console.log(`Pages完整站点已生成：${published.map(p => p.name).join('、')}。仅发布清单中明确登记的静态项目。`);
+await writeFile(resolve(output, 'entries.json'), JSON.stringify({ version: 1, mode: 'static', publishedProjects: published.map(p => p.name), projects: entries }, null, 2) + '\n');
+const delivered = JSON.parse(await readFile(resolve(output, 'projects.json'), 'utf8'));
+if (delivered.projects.length !== allProjects.length || delivered.projects.some((item, index) => item.id !== allProjects[index].id)) throw new Error('公开研究索引缺项或顺序错误。');
+console.log(`Pages完整站点已生成：${allProjects.length} 项研究全部收录，${published.length} 项静态应用发布：${published.map(p => p.name).join('、')}。`);

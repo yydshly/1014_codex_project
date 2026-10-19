@@ -1,36 +1,67 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>项目首页 · GitHub 研究集</title><style>
-*{box-sizing:border-box}body{margin:0;background:#101920;color:#dde4d9;font-family:system-ui,'Microsoft YaHei',sans-serif}main{max-width:1060px;margin:auto;padding:50px 28px}small{letter-spacing:3px;color:#9aaf91}h1{font-weight:400;font-size:36px;letter-spacing:5px}p{color:#95a4ab;line-height:1.8}#projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:35px}article{border:1px solid #ffffff16;background:#1b272e;border-radius:15px;overflow:hidden}article img{width:100%;height:205px;object-fit:cover}article>a{display:block;padding:0;border:0;border-radius:0;background:transparent}.guide-image img{height:auto;object-fit:contain}.guide-image-long{background:#f2f0e8}.guide-image-long img{max-height:620px}article>div{padding:22px}h2{font-size:18px;font-weight:500;margin:12px 0}article span{color:#a7ba93;font-size:11px}nav{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}a,button{border:1px solid #8fa18442;border-radius:7px;padding:9px 13px;background:#27392c;color:#d4e0c7;text-decoration:none;font-size:12px;cursor:pointer}button{background:transparent}dialog{background:#17232c;color:#dae3d4;border:1px solid #435246;border-radius:14px;width:min(850px,90vw);max-height:85vh}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.8;font:13px system-ui}dialog::backdrop{background:#071017b0}@media(max-width:650px){#projects{grid-template-columns:1fr}main{padding:30px 18px}h1{font-size:28px}}
-</style></head><body><main><small>PROJECT COLLECTION / RESEARCH & PLAY</small><h1>每个项目，都在这里。</h1><p>按编号查看项目能力、底层原理、价值与扩展方向，进入完整研究并核对来源。公网入口只列出已纳入发布清单的项目。</p><section id="projects" aria-label="项目目录"></section><p id="notice" role="status"></p></main><dialog id="notes"><button id="close-notes">关闭记录</button><pre id="notes-body"></pre></dialog><script type="module">
+*{box-sizing:border-box}body{margin:0;background:#101920;color:#dde4d9;font-family:system-ui,'Microsoft YaHei',sans-serif}main{max-width:1060px;margin:auto;padding:50px 28px}small{letter-spacing:3px;color:#9aaf91}h1{font-weight:400;font-size:36px;letter-spacing:5px}p{color:#95a4ab;line-height:1.8}.counts{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.counts span{padding:9px 13px;border:1px solid #8fa18442;border-radius:7px;color:#a7ba93;font-size:13px}.counts strong{color:#dde4d9;font-size:19px;font-weight:500;margin-right:5px}#projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:28px}article{border:1px solid #ffffff16;background:#1b272e;border-radius:15px;overflow:hidden}article img{display:block;width:100%;height:205px;object-fit:cover}article>a{display:block;padding:0;border:0;border-radius:0;background:transparent}.guide-image img{height:auto;object-fit:contain}.guide-image-long{background:#f2f0e8}.guide-image-long img{max-height:620px}article>div{padding:22px}h2{font-size:18px;font-weight:500;margin:12px 0}article span{color:#a7ba93;font-size:11px}.availability{font-size:12px;margin-bottom:0}nav{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}a,button{border:1px solid #8fa18442;border-radius:7px;padding:9px 13px;background:#27392c;color:#d4e0c7;text-decoration:none;font-size:12px;cursor:pointer}button{background:transparent}dialog{background:#17232c;color:#dae3d4;border:1px solid #435246;border-radius:14px;width:min(850px,90vw);max-height:85vh}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.8;font:13px system-ui}dialog::backdrop{background:#071017b0}@media(max-width:650px){#projects{grid-template-columns:1fr}main{padding:30px 18px}h1{font-size:28px}}
+</style></head><body><main><small>PROJECT COLLECTION / RESEARCH & PLAY</small><h1>每个项目，都在这里。</h1><p>按编号查看全部研究的能力、底层原理、价值与扩展方向，并核对研究记录和原始来源。网页发布状态单独标明，未发布的演示需在本地运行。</p><div id="counts" class="counts" aria-label="目录收录与发布统计"></div><section id="projects" aria-label="完整项目目录"></section><p id="notice" role="status"></p></main><dialog id="notes" aria-label="项目研究记录"><button id="close-notes">关闭记录</button><pre id="notes-body"></pre></dialog><script type="module">
 const container=document.querySelector('#projects');
 async function loadJson(path){const response=await fetch(path);if(!response.ok)throw new Error('Unable to load '+path);return response.json();}
+async function openNotes(name,title){
+  const dialog=document.querySelector('#notes'),body=document.querySelector('#notes-body');
+  body.textContent=title+'\n\n正在载入研究记录…';
+  if(!dialog.open)dialog.showModal();
+  try{
+    const response=await fetch('./projects/'+name+'/README.md');
+    if(!response.ok)throw new Error('HTTP '+response.status);
+    body.textContent=await response.text();
+  }catch(error){body.textContent=title+'\n\n研究记录暂时无法载入（'+error.message+'）。请稍后重试，或通过原始来源核对。';}
+}
 try{
   const [data,manifest]=await Promise.all([
     loadJson('./projects.json'),
     loadJson('./entries.json').catch(()=>null)
   ]);
-  for(const p of data.projects.sort((a,b)=>Number(a.id)-Number(b.id))){
+  const isStatic=manifest?.mode==='static';
+  const publishedNames=new Set(Array.isArray(manifest?.publishedProjects)?manifest.publishedProjects:[]);
+  const projects=data.projects.sort((a,b)=>Number(a.id)-Number(b.id));
+  const isPublished=p=>isStatic?publishedNames.has(p.id+'-'+p.slug):Boolean(p.demo_url);
+  const publishedCount=projects.filter(isPublished).length;
+  for(const [count,text] of [[projects.length,'项研究'],[publishedCount,'项网页已发布'],[projects.length-publishedCount,'项仅研究记录']]){
+    const item=document.createElement('span'),number=document.createElement('strong');number.textContent=count;item.append(number,text);document.querySelector('#counts').append(item);
+  }
+  for(const p of projects){
     const name=p.id+'-'+p.slug,card=document.createElement('article');
-    if(p.preview){const imageLink=document.createElement('a'),img=document.createElement('img');imageLink.className=['010','014'].includes(p.id)?'guide-image':['006','007','009'].includes(p.id)?'guide-image guide-image-long':'card-image';imageLink.href=p.demo_url||'./'+name+'/';img.src=p.id==='007'?'./'+name+'/assets/atlas-overview-preview.webp':'./projects/'+name+'/'+p.preview;img.alt=p.preview_caption;imageLink.append(img);card.append(imageLink);}
+    card.dataset.projectId=p.id;
+    const published=isPublished(p),hasLocalDemo=p.id!=='015',canOpenDemo=published||(!isStatic&&hasLocalDemo);
+    if(p.preview){
+      const imageLink=document.createElement('a'),img=document.createElement('img');
+      imageLink.className=['010','014'].includes(p.id)?'guide-image':['006','007','009','012'].includes(p.id)?'guide-image guide-image-long':'card-image';
+      imageLink.href=canOpenDemo?(p.demo_url||'./'+name+'/'):'./projects/'+name+'/README.md';
+      if(!canOpenDemo)imageLink.addEventListener('click',event=>{event.preventDefault();openNotes(name,p.title);});
+      imageLink.setAttribute('aria-label',p.title+'：'+(canOpenDemo?'打开网页':'阅读研究记录'));
+      img.src=p.id==='007'&&canOpenDemo?'./'+name+'/assets/atlas-overview-preview.webp':'./projects/'+name+'/'+p.preview;
+      img.alt=p.preview_caption||p.title;img.loading='lazy';imageLink.append(img);card.append(imageLink);
+    }
     const body=document.createElement('div'),label=document.createElement('span'),title=document.createElement('h2'),summary=document.createElement('p'),nav=document.createElement('nav');
-    label.textContent=p.id+' / '+p.status;title.textContent=p.title;summary.textContent=p.summary;
+    label.textContent=p.id+' / '+p.status+' · '+(published?'网页已发布':'研究记录已收录');title.textContent=p.title;summary.textContent=p.summary;
     const addLink=(text,path)=>{const a=document.createElement('a');a.textContent=text;a.href=path;nav.append(a);};
     const configured=manifest?.projects?.[p.id];
     const entries=Array.isArray(configured)?configured.filter(entry=>entry&&typeof entry.label==='string'&&typeof entry.path==='string'&&entry.path.startsWith(name+'/')):[];
-    if(entries.length){
+    if(canOpenDemo&&entries.length){
       for(const entry of entries)addLink(entry.label,'./'+entry.path);
-    }else if(p.id==='003'){
+    }else if(canOpenDemo&&p.id==='003'){
       addLink('夜半小屋 · 原房间','./'+name+'/?view=room');
       addLink('Agent 工作室','./'+name+'/?view=workspace');
-    }else if(p.id==='013'){
+    }else if(canOpenDemo&&p.id==='013'){
       addLink('理解总图与价值','./'+name+'/index.html#understanding-map');
       addLink('来源与接入目录','./'+name+'/index.html#source-access-catalog');
       addLink('研究网页','./'+name+'/index.html');
       addLink('AI 探索工作台','./'+name+'/explore/index.html');
-    }else if(p.preview)addLink(p.status==='已归档'?'阅读归档':'打开演示',p.demo_url||'./'+name+'/');
+    }else if(canOpenDemo&&p.preview)addLink(p.status==='已归档'?'阅读归档网页':'打开研究网页',p.demo_url||'./'+name+'/');
     const notes=document.createElement('button');notes.textContent='研究记录';
-    notes.addEventListener('click',async()=>{const response=await fetch('./projects/'+name+'/README.md');document.querySelector('#notes-body').textContent=await response.text();document.querySelector('#notes').showModal();});
-    nav.append(notes);if(p.source_url)addLink('原始来源',p.source_url);else if(p.repository)addLink('原仓库',p.repository);body.append(label,title,summary,nav);card.append(body);container.append(card);
+    notes.addEventListener('click',()=>openNotes(name,p.title));
+    nav.append(notes);if(p.source_url)addLink('原始来源',p.source_url);else if(p.repository)addLink('原仓库',p.repository);
+    body.append(label,title,summary);
+    if(!published){const availability=document.createElement('p');availability.className='availability';availability.textContent=p.id==='015'?'本轮已归档，无独立演示。':'研究记录已收录；网页演示需本地运行。';body.append(availability);}
+    body.append(nav);card.append(body);container.append(card);
   }
 }catch{document.querySelector('#notice').textContent='目录暂未载入，请通过本地项目服务打开。';}
 document.querySelector('#close-notes').onclick=()=>document.querySelector('#notes').close();

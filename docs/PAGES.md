@@ -13,7 +13,7 @@
 - 014 研究页：<https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/>
 - 工作流：`.github/workflows/pages.yml`。
 - 发布清单：`web/pages.json`。每次重新构建清单中的全部项目，避免发布单个项目时覆盖已有入口。
-- 目录数据：`projects.json`；静态首页只列出发布清单中的项目，沿用原编号，不重排。
+- 目录数据：`projects.json`；静态首页列出全部研究，沿用原编号并按升序展示。`web/pages.json` 只决定构建哪些应用，不再筛掉未上线的研究记录。
 
 ## 构建
 

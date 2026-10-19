@@ -1,0 +1,147 @@
+{
+  "memory": {
+    "familiar": "false",
+    "greetings": "1",
+    "quiet": "false",
+    "response": "greet",
+    "saved": "true",
+    "sessionMs": "1752",
+    "totalMs": "95619"
+  },
+  "focusBefore": {
+    "elapsedMs": "0",
+    "lights": "2",
+    "records": "4",
+    "remainingMs": "0",
+    "saved": "true",
+    "state": "idle"
+  },
+  "focusAfter": {
+    "elapsedMs": "0",
+    "lights": "2",
+    "records": "4",
+    "remainingMs": "0",
+    "saved": "true",
+    "state": "idle"
+  },
+  "attention": {
+    "attention": "1.000",
+    "gesture": "watching",
+    "lift": "0.140"
+  },
+  "pausedBefore": {
+    "attention": "0.920",
+    "cloth": "6099",
+    "lift": "0.129",
+    "renders": "16742",
+    "time": "101.619"
+  },
+  "pausedAfter": {
+    "attention": "0.920",
+    "cloth": "6099",
+    "lift": "0.129",
+    "renders": "16742",
+    "time": "101.619"
+  },
+  "quietBeforeReload": {
+    "familiar": "false",
+    "greetings": "2",
+    "quiet": "true",
+    "response": "greet",
+    "saved": "true",
+    "sessionMs": "145152",
+    "totalMs": "239019"
+  },
+  "quietAfterReload": {
+    "familiar": "false",
+    "greetings": "2",
+    "quiet": "true",
+    "response": "return",
+    "saved": "true",
+    "sessionMs": "1378",
+    "totalMs": "241927"
+  },
+  "quietBubbleHidden": true,
+  "mobile": {
+    "layout": {
+      "scroll": 390,
+      "width": 390
+    },
+    "memory": {
+      "familiar": "false",
+      "greetings": "4",
+      "quiet": "false",
+      "response": "greet",
+      "saved": "true",
+      "sessionMs": "45635",
+      "totalMs": "286184"
+    }
+  },
+  "awayBefore": {
+    "familiar": "false",
+    "greetings": "4",
+    "quiet": "false",
+    "response": "greet",
+    "saved": "true",
+    "sessionMs": "60029",
+    "totalMs": "300578"
+  },
+  "returned": {
+    "memory": {
+      "familiar": "false",
+      "greetings": "4",
+      "quiet": "false",
+      "response": "return",
+      "saved": "true",
+      "sessionMs": "0",
+      "totalMs": "300913"
+    },
+    "bubble": "你又来啦，灯还亮着。",
+    "visible": true
+  },
+  "familiar": {
+    "familiar": "true",
+    "greetings": "5",
+    "quiet": "false",
+    "response": "nod",
+    "saved": "true",
+    "sessionMs": "15013",
+    "totalMs": "315926"
+  },
+  "shortMobile": {
+    "bottom": 546,
+    "client": 479,
+    "contentWidth": 340,
+    "scroll": 613,
+    "top": 66,
+    "width": 340
+  },
+  "orbitBefore": {
+    "angle": "0.000",
+    "cloth": "2340"
+  },
+  "orbitAfter": {
+    "angle": "-0.353",
+    "cloth": "2340"
+  },
+  "final": {
+    "memory": {
+      "familiar": "true",
+      "greetings": "6",
+      "quiet": "false",
+      "response": "nod",
+      "saved": "true",
+      "sessionMs": "98620",
+      "totalMs": "399533"
+    },
+    "focus": {
+      "elapsedMs": "0",
+      "lights": "2",
+      "records": "4",
+      "remainingMs": "0",
+      "saved": "true",
+      "state": "idle"
+    },
+    "errors": []
+  }
+}

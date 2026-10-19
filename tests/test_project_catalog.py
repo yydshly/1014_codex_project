@@ -124,6 +124,19 @@ class CatalogCommands(unittest.TestCase):
         (self.root / "projects" / "001-first" / "RESEARCH.md").unlink()
         self.run_command("check", success=False)
 
+    def test_incomplete_catalog_is_rejected_without_renumbering(self):
+        for slug in ("first", "second", "third", "fourth"):
+            self.add_project(slug)
+        complete = self.load()
+        for keep, missing in (([3], "001, 002, 003"), ([0, 2, 3], "002")):
+            with self.subTest(keep=keep):
+                self.save({"schema_version": 1, "projects": [complete["projects"][i] for i in keep]})
+                result = self.run_command("check", success=False)
+                self.assertIn("研究总索引缺少编号", result.stderr)
+                self.assertIn(missing, result.stderr)
+                self.assertEqual([item["id"] for item in self.load()["projects"]],
+                                 [complete["projects"][i]["id"] for i in keep])
+
     def test_source_only_project_keeps_unknown_repository_and_links_original_post(self):
         origin = "https://x.com/huoshan007/status/2109919568617484522"
         self.run_command("add", "--slug", "source-study", "--title", "原视频研究",
