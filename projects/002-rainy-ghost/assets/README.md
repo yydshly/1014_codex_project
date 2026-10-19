@@ -69,3 +69,7 @@
 | sound/soft/voice-preview.wav | 开心、害羞、安心依次播放，约 6.5 秒，使用默认回应音量，无雨声 | 同一合成器由 scripts/voice-preview.mjs 导出，2026-10-15 |
 
 格式仍为 48 kHz、16 bit 单声道 PCM WAV。信号检查见 sound/soft/signal-checks.json，页面联动验证见 sound/soft/checks.json；网页按需合成，不读取这些试听文件。
+
+## 2026-10-19 发布检查截图
+
+`publication/01-summary-desktop.jpg` 为公网摘要首屏，`02-synthesis-desktop.jpg` 与 `03-synthesis-mobile.jpg` 为本地摘要和 390 × 844 视口检查，`04-public-summary.jpg` 为公网摘要章节，`05-public-scene.jpg` 为公网雨夜加载。均为本项目实际网页截图，只作本轮验收证据；引导图仍是原来的 `pet/farewell/desktop.jpg`。

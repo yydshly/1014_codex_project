@@ -4,6 +4,7 @@ import concurrent.futures
 import hashlib
 import json
 import re
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin
@@ -54,6 +55,9 @@ assert hash_bytes(image) == hash_bytes((PROJECT / entry['preview']).read_bytes()
 entrances = json.loads(fetch('entries.json')[0])['projects']['002']
 assert {item['path'] for item in entrances} == {
     '002-rainy-ghost/research.html#synthesis', '002-rainy-ghost/', '002-rainy-ghost/research.html#extensions'}
+records = json.loads(fetch('records.json')[0])['projects']
+assert records['002'] == (PROJECT / 'README.md').read_text(encoding='utf-8'), '目录中的研究记录未更新'
+assert len(records) == len(catalog['projects']), '研究记录预载缺项'
 fetch('index.html')
 manifest = json.loads((ROOT / 'web/pages.json').read_text(encoding='utf-8'))['projects']
 retained = []
@@ -63,14 +67,16 @@ for name in manifest:
     assert b'<html' in data.lower() and 'text/html' in content_type
     retained.append(name)
 report = {
+    'phase': 'after-demo-registration' if entry['demo_url'] else 'initial-deployment-before-demo-registration',
     'verifiedAt': datetime.now(timezone.utc).isoformat(),
     'base': BASE, 'projectFiles': checked, 'projectStaticFileCount': len(checked),
     'summaryIds': len(ids), 'summaryAnchorLinks': len(anchors),
     'sourceAndOwnWorkSeparated': True, 'finalImageOriginalBytesMatch': True,
-    'catalogAndEntrances': 'passed', 'demoUrl': entry['demo_url'],
+    'catalogAndEntrances': 'passed', 'preloadedRecords': len(records), 'demoUrl': entry['demo_url'],
     'retainedProjectEntrances': retained,
     'limits': ['HTTP与字节检查不替代WebGL、真实触屏、音频听感或长期性能验收'],
 }
 destination = PROJECT / 'public-verification.json'
-destination.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-print(json.dumps({'result': 'passed', 'projectFiles': len(checked), 'retainedEntrances': len(retained), 'report': str(destination)}, ensure_ascii=False))
+if '--no-write' not in sys.argv:
+    destination.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+print(json.dumps({'result': 'passed', 'projectFiles': len(checked), 'retainedEntrances': len(retained), 'phase': report['phase'], 'demoUrl': entry['demo_url'], 'report': None if '--no-write' in sys.argv else str(destination)}, ensure_ascii=False))

@@ -1,0 +1,107 @@
+{
+  "verifiedAt": "2026-10-19T10:15:51.060956+00:00",
+  "base": "https://yydshly.github.io/1014_codex_project/",
+  "projectFiles": [
+    {
+      "path": "002-rainy-ghost/assets/research-DK_usfk5.css",
+      "status": 200,
+      "bytes": 3822,
+      "sha256": "946fb5ea4a94b30cf83b1b6a258ceae586ee5e557e7ef1ac4a1b78f49c4fc032"
+    },
+    {
+      "path": "002-rainy-ghost/assets/scene-Dn2Q9SZs.js",
+      "status": 200,
+      "bytes": 141443,
+      "sha256": "9078ee16de3b21272c3e5ace55658bffd35205d1cb77de0600bef8d46e412f5f"
+    },
+    {
+      "path": "002-rainy-ghost/assets/scene-XDnoSaq4.css",
+      "status": 200,
+      "bytes": 23900,
+      "sha256": "984951fb7a7b7582d68418b57791f253c7c3234e952e8e2b967d82175a811876"
+    },
+    {
+      "path": "002-rainy-ghost/assets/three-x3sbRK8t.js",
+      "status": 200,
+      "bytes": 571237,
+      "sha256": "1616e82085778eb2257814949957553f3ff902c72868c45d1ebe49bda8075fcb"
+    },
+    {
+      "path": "002-rainy-ghost/ghost.svg",
+      "status": 200,
+      "bytes": 382,
+      "sha256": "d15384b720d159c9729a894c3b99b1696e35dae098be6f8cd186f12dd37cac31"
+    },
+    {
+      "path": "002-rainy-ghost/index.html",
+      "status": 200,
+      "bytes": 14603,
+      "sha256": "f72f32e1b5b6fe840c6758d6c903c0507914702f246031ebbb050c716e5884b2"
+    },
+    {
+      "path": "002-rainy-ghost/licenses/THREE-LICENSE.txt",
+      "status": 200,
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "002-rainy-ghost/pet-hand.svg",
+      "status": 200,
+      "bytes": 403,
+      "sha256": "a73daf197d347c4b1efcd7456b60cc05031801d15bff7cf6dc50b4c992ef2bcf"
+    },
+    {
+      "path": "002-rainy-ghost/research/final-effect.jpg",
+      "status": 200,
+      "bytes": 47613,
+      "sha256": "cbe8858dd2388956b77b3215ad581386764db5be7ee43cbda3feb37a2ee86b5d"
+    },
+    {
+      "path": "002-rainy-ghost/research/README.md",
+      "status": 200,
+      "bytes": 13484,
+      "sha256": "a629527259f3c40c945faa22794e6f491779aa2134a1fdfb9238bf4e3a351d41"
+    },
+    {
+      "path": "002-rainy-ghost/research/RESEARCH.md",
+      "status": 200,
+      "bytes": 47644,
+      "sha256": "358a14473a6b2d5767af32092e503a4ff76b4f945496986ebb8c977aba47fbdf"
+    },
+    {
+      "path": "002-rainy-ghost/research/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "bytes": 1545,
+      "sha256": "dce4d16bcf5ba91eeafb50d4f42d9a0e3163102eeef792c0ebe04b870256167d"
+    },
+    {
+      "path": "002-rainy-ghost/research.html",
+      "status": 200,
+      "bytes": 11256,
+      "sha256": "dd48c7cdd683e03dee6f388b0091fea56ffbc87197841214d95ecfa6274d8327"
+    }
+  ],
+  "projectStaticFileCount": 13,
+  "summaryIds": 7,
+  "summaryAnchorLinks": 8,
+  "sourceAndOwnWorkSeparated": true,
+  "finalImageOriginalBytesMatch": true,
+  "catalogAndEntrances": "passed",
+  "demoUrl": null,
+  "retainedProjectEntrances": [
+    "004-jasonzhu-ai",
+    "006-random-doors",
+    "007-autumn-courtyard-blender",
+    "009-demand-discovery",
+    "010-evidence-research-lab",
+    "011-ancient-rap-battle",
+    "012-edgechat",
+    "013-crawl-hive",
+    "014-cyber-xiaoya-study"
+  ],
+  "limits": [
+    "HTTP与字节检查不替代WebGL、真实触屏、音频听感或长期性能验收"
+  ],
+  "phase": "initial-deployment-before-demo-registration",
+  "sourceCommit": "92a41a7c78df5efc3274004ad7ca2d7d2cbca53c"
+}

@@ -1,6 +1,6 @@
 {
   "project": "002-rainy-ghost",
-  "status": "prepared",
+  "status": "published-and-verified",
   "preparedDate": "2026-10-19",
   "scope": "发布现有交互场景与新增理解摘要，不继续细化角色，不发布用户浏览器记录。",
   "visualReference": {
@@ -36,7 +36,8 @@
     "mobileViewportWidth": 390,
     "mobileBodyWidth": 375,
     "mobileHorizontalOverflow": false,
-    "browserScope": "本轮只验收新摘要、导航、引导图和场景加载，不重测全部旧手势与听感"
+    "browserScope": "本轮只验收新摘要、导航、引导图和场景加载，不重测全部旧手势与听感",
+    "publishedCatalogProjects": 15
   },
   "knownLimitations": [
     "慢速轻抚间隔较紧，3–4秒往返模拟会重启会话，未继续细化",
@@ -47,5 +48,29 @@
   "plannedUrls": {
     "summary": "https://yydshly.github.io/1014_codex_project/002-rainy-ghost/research.html#synthesis",
     "scene": "https://yydshly.github.io/1014_codex_project/002-rainy-ghost/"
+  },
+  "publishedDate": "2026-10-19",
+  "sourceCommit": "92a41a7c78df5efc3274004ad7ca2d7d2cbca53c",
+  "workflow": {
+    "runId": 39235931930,
+    "url": "https://github.com/yydshly/1014_codex_project/actions/runs/39235931930",
+    "conclusion": "success"
+  },
+  "urls": {
+    "summary": "https://yydshly.github.io/1014_codex_project/002-rainy-ghost/research.html#synthesis",
+    "scene": "https://yydshly.github.io/1014_codex_project/002-rainy-ghost/",
+    "guideImage": "https://yydshly.github.io/1014_codex_project/002-rainy-ghost/research/final-effect.jpg",
+    "site": "https://yydshly.github.io/1014_codex_project/"
+  },
+  "publicVerification": {
+    "report": "public-verification.json",
+    "phase": "首次发布、登记demo_url之前的产物快照",
+    "staticFiles": 13,
+    "retainedProjectEntrances": 9,
+    "guideOriginalHashMatches": true,
+    "summaryStructureAndSources": "passed",
+    "browserSummaryAndNavigation": "passed",
+    "browserSceneReady": true,
+    "browserErrors": 0
   }
 }

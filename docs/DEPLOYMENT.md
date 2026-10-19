@@ -113,3 +113,6 @@ _site/
 发布现有 `index.html` 雨夜体验与 `research.html` 理解摘要，明确区分原帖效果、Three.js 技术上游、我们的环境反应/陪伴/声音/计时扩展，以及暂停、手势、手机与自动画质优化。引导图直接沿用 `assets/pet/farewell/desktop.jpg` 的原始字节，不重新生成；角色已按用户决定保留当前版本。
 
 `projects/002-rainy-ghost/web/build.mjs` 执行语法、现有测试、双入口构建、资源和章节检查、静态白名单与截图 SHA-256 核对。加入 `web/pages.json`，每次重建既有九个项目和 002，不覆盖其他入口。默认静音，记录保留在当前浏览器，不上传个人任务、相处数据或偏好。正式发布与公网验收记录见 [002 部署记录](../projects/002-rainy-ghost/deployment.json)，验证后才登记 `demo_url`。
+
+
+002 于 2026-10-19 首次 Actions 发布及公网核验通过后，已登记 [理解摘要](https://yydshly.github.io/1014_codex_project/002-rainy-ghost/research.html#synthesis) 与 [雨夜体验](https://yydshly.github.io/1014_codex_project/002-rainy-ghost/)。13 份静态资源、原引导图哈希和既有九个项目入口均通过；15 项研究索引保留，静态应用共十项。见 [002 发布记录](../projects/002-rainy-ghost/deployment.json)。

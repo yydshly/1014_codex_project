@@ -30,7 +30,7 @@ node scripts/smoke.mjs
 
 检查实际构建 HTML 中的脚本、样式和图标链接，确认能从编号子路径返回且不依赖 CDN。该检查不代替浏览器 shader 编译、视觉与交互验证；已完成的检查记录在上级 [RESEARCH.md](../RESEARCH.md)。
 
-vite.config.js 使用 `/1014_codex_project/002-rainy-ghost/` 基础路径。产物在 dist，可复制至总发布目录 `_site/002-rainy-ghost/`。本次仅本地实现，尚未部署。
+vite.config.js 使用 `/1014_codex_project/002-rainy-ghost/` 基础路径。产物在 dist，可复制至总发布目录 `_site/002-rainy-ghost/`。2026-10-19 已随统一站点发布，正式入口和验收见上级 deployment.json。
 
 ## 文件
 

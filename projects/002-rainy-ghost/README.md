@@ -20,6 +20,14 @@
 
 总索引的 repository 指向实际使用的 Three.js 技术上游。原演示是否有公开仓库、作者具体使用的布料和水面算法，仍待确认。
 
+## 正式网页
+
+- [理解摘要与最终效果](https://yydshly.github.io/1014_codex_project/002-rainy-ghost/research.html#synthesis)
+- [进入雨夜陪伴](https://yydshly.github.io/1014_codex_project/002-rainy-ghost/)
+- [部署与验证记录](deployment.json) · [首次公网验收快照](public-verification.json)
+
+2026-10-19 已验证两处入口、13 份静态文件、最终截图原始字节和原有九个项目入口；浏览器确认摘要、导航与场景加载。公网和本地的浏览器记录各自独立，不会自动迁移。
+
 ## 本地运行
 
 需要 Node.js `^20.19.0` 或 `>=22.12.0`，以及支持 WebGL 2 的现代浏览器。已在 Node.js 22.15.0、npm 10.9.2 下验证。
@@ -128,7 +136,7 @@ npm run preview
 
 在另一个终端运行 `node scripts/smoke.mjs`，检查实际构建的入口、脚本、样式、图标与许可证是否能从编号子路径加载。
 
-产物位于 `web/dist/`，全部运行资源在本地构建打包，不依赖外部图片、字体、音频或 CDN。GitHub Pages 基础路径固定为 `/1014_codex_project/002-rainy-ghost/`；将来部署时需与其他项目一起汇总至 `_site/002-rainy-ghost/`，遵循[仓库部署约定](../../docs/DEPLOYMENT.md)。当前没有登记线上演示地址。
+产物位于 `web/dist/`，全部运行资源在本地构建打包，不依赖外部图片、字体、音频或 CDN。GitHub Pages 基础路径固定为 `/1014_codex_project/002-rainy-ghost/`；将来部署时需与其他项目一起汇总至 `_site/002-rainy-ghost/`，遵循[仓库部署约定](../../docs/DEPLOYMENT.md)。正式网页已发布并登记，精确范围见 [deployment.json](deployment.json)。
 
 ## 实现与边界
 
