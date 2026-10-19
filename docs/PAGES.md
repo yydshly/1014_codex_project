@@ -7,6 +7,7 @@
 - 006 研究页：<https://yydshly.github.io/1014_codex_project/006-random-doors/research.html>
 - 006 世界与身份实验：<https://yydshly.github.io/1014_codex_project/006-random-doors/worlds.html>
 - 007 Atlas 研究页：<https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html>
+- 009 个人主页启发与需求发现：<https://yydshly.github.io/1014_codex_project/009-demand-discovery/#synthesis>
 - 010 数据与需求调研：<https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/#synthesis>
 - 014 研究页：<https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/>
 - 工作流：`.github/workflows/pages.yml`。
@@ -71,3 +72,16 @@ node scripts/build_pages.mjs
 010 用五项摘要说明源产品能力、使用场景、我们的 B/C 实践、引发的核心思考及可扩展方向，沿用原创 `assets/understanding-map.png` 引导图。公开页保留完整讨论、来源与合成试跑材料，主线是 Atypica 调研用途 → 模型、身份与流程 → 数据与证据 → 需求判断 → 产品验证 → 反馈沉淀。
 
 `web/build.mjs` 不安装第三方依赖或调用模型；执行语法检查、已有测试与公开产物检查。公开导航不指向读者的 localhost，不发布本地 API 或实验运行目录。发布清单保留已有四个项目。2026-10-19 已通过 Actions 发布；13 个公网地址、94 个页内编号及原引导图哈希核对通过。正式入口为 [https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/#synthesis](https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/#synthesis)，详见 [010 发布记录](../projects/010-evidence-research-lab/deployment.json)。页面视觉和点击未自动复测，验证范围为实际 HTTP、字节和静态结构。
+
+## 009 个人主页启发、研究沉淀与需求发现
+
+009 先说明源库的个人主页展示与自动快讯能力，重点学习研究沉淀、入口引导和复习更新，形成“研究 → 实践 → 记录 → 展示 → 接触用户 → 获得反馈 → 更新研究”；再向需求发现工具、证据追查、任务验证和产品化扩展。全景图保留原库事实、我们的推导、本地实测与未来假设。
+
+- [理解摘要与主页启发](https://yydshly.github.io/1014_codex_project/009-demand-discovery/#synthesis)
+- [沉淀、入口与复习](https://yydshly.github.io/1014_codex_project/009-demand-discovery/#accumulation)
+- [可缩放全景图](https://yydshly.github.io/1014_codex_project/009-demand-discovery/understanding.html)
+- [真实探索档案](https://yydshly.github.io/1014_codex_project/009-demand-discovery/#explore)
+
+2026-10-19 已通过已有 Actions 发布，35 个公网地址、34 份资源内容对照、77 个页内编号和 31 处锚点链接通过核对，包含既有五个项目入口。009 的 10 项测试与完整站点构建通过；总图 PNG 为 2000×4375，与 SVG 一并发布。公开模式只读实验快照，不请求本机 API 或执行模型。
+
+本轮浏览器接入被 URL 安全策略拒绝，未进行新的视觉和点击验收；HTTP、结构、渲染与隔离行为测试的范围分别记录。正式地址、提交、工作流及资源核对见 [009 发布记录](../projects/009-demand-discovery/deployment.json)。

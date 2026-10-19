@@ -20,9 +20,11 @@ JasonZhu.AI 是个人品牌网站：以博客、工具推荐、项目和服务�
 | 原站固定参考版本 | `9780c4408227e9b0bace1b1e2ed5160f341f2753` |
 | 原站权利说明 | 该版本 README 标注“Private project. All rights reserved.”；未复制其代码或图片 |
 | 本项目实现 | 原创 HTML / CSS / JavaScript，无第三方运行依赖；本仓库当前未声明独立许可证 |
-| 发布状态 | 仅本地预览；未登记线上演示地址 |
+| 发布状态 | 2026-10-19 已发布静态研究档案；新的自动探索仍需本地服务 |
 
 ## 查看网页
+
+[理解摘要与主页启发](https://yydshly.github.io/1014_codex_project/009-demand-discovery/#synthesis) · [沉淀、入口与复习](https://yydshly.github.io/1014_codex_project/009-demand-discovery/#accumulation) · [可缩放全景图](https://yydshly.github.io/1014_codex_project/009-demand-discovery/understanding.html) · [真实探索档案](https://yydshly.github.io/1014_codex_project/009-demand-discovery/#explore)。公网只读保存的真实实验，不启动模型。
 
 需要 Node.js 22 或更新版本，以及已安装并登录的官方 Codex CLI。当前可使用本机正常登录执行，无需另配 API Key；运行消耗现有账户额度。静态浏览不调用模型。
 
@@ -71,5 +73,9 @@ npm run dev
 004 继续作为原研究记录保留。009 新增目录、产品规划、原创页面、结构化资料与本地构建脚本。
 
 004 后续独立演进的入口研究，和本次从 JasonZhu.AI 出发的历史分别记录。本轮起点以 [UNDERSTANDING.md](UNDERSTANDING.md) 为准。
+
+## 发布与验收
+
+2026-10-19 经已有 GitHub Actions 发布，35 个公网地址、34 份资源内容对照、77 个页内编号和 31 处锚点链接核对通过，保留既有五个项目入口。10 项测试与完整站点构建通过。图像通过直接渲染检查；本轮浏览器接入被 URL 安全策略拒绝，未完成新的视觉点击验收。详见 [发布记录](deployment.json)与[公开模式说明](PUBLICATION.md)。
 
 [返回项目总索引](../../README.md)

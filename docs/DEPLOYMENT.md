@@ -85,4 +85,4 @@ _site/
 
 发布理解摘要、沉淀与复习方法、既有全景图、27 平台目录及首轮真实探索档案。`projects/009-demand-discovery/web/build.mjs` 执行检查、10 项测试、公开构建和静态白名单校验；公开页只读保存的实验，不请求本机 API，不执行模型。新探索继续依赖本地服务与 Codex 登录。未将服务器、运行目录或凭据打包上线。
 
-009 已纳入完整站点发布清单；首次实际部署及公网核验完成后，在项目 `deployment.json` 记录工作流、资源和验证范围，再登记正式地址。
+009 已于 2026-10-19 通过完整站点 Actions 发布，35 个公网地址与资源、摘要及锚点核对通过，保留既有五个项目。正式入口为 [理解摘要](https://yydshly.github.io/1014_codex_project/009-demand-discovery/#synthesis)，完整记录见 [009 发布验收](../projects/009-demand-discovery/deployment.json)。本轮未进行新的浏览器视觉点击验收。
