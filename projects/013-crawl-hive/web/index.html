@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#f6f7f2">
-  <meta name="description" content="解释CrawlHive多来源监控能力，沉淀接入与持续处理经验；展示独立AI探索、21项来源接法、规则过滤、研究场景及价值边界。">
+  <meta name="description" content="用既有理解总图和八项摘要解释CrawlHive的能力、原理与启发：来源接入、增量监控、规则处理、独立AI探索，以及通用化扩展的意义与边界。">
   <title>CrawlHive 理解总览 · 来源、原理、价值与扩展</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
@@ -19,7 +19,7 @@
     <div class="sidebar-project"><span class="mono">PROJECT / 013</span><strong>CrawlHive</strong><span>跨平台信息监控研究</span></div>
     <nav id="chapter-nav">
       <a href="#overview" class="active"><span>00</span> 研究首页</a>
-      <a href="#synthesis"><span>SUM</span> 理解摘要与使用场景</a>
+      <a href="#synthesis"><span>SUM</span> 能力、原理与扩展摘要</a>
       <a href="#understanding-map"><span>MAP</span> 我们的理解总图</a>
       <a href="#research-synthesis"><span>NOTE</span> 能力、思考与价值</a>
       <a href="#source-access-catalog"><span>DATA</span> 来源与接入目录</a>
@@ -48,29 +48,24 @@
     <main id="main">
       <section class="hero chapter" id="overview" aria-labelledby="hero-title">
         <div class="hero-copy"><div class="eyebrow"><span class="tiny-square"></span> CRAWLHIVE / RESEARCH NOTES</div><h1 id="hero-title">从信息来源，<br>看清监控的<span class="underline-word">价值</span>。</h1><p class="hero-intro">CrawlHive 把 X、公开频道、网页和行情接成监控任务；我们提炼来源接入与持续处理的价值，再探索面向 AI 新闻、产品与开源项目的方向筛选工作台。</p><div class="hero-actions"><a class="button primary" href="#synthesis">先看理解摘要 <span>↓</span></a><a class="text-link" href="#source-access-catalog">查来源与接法 <span>↗</span></a><a class="text-link" href="./explore/index.html">AI 探索工作台 <span>↗</span></a></div><p class="hero-footnote">基于 <a data-source="readme">h100envy/crawl-hive</a> · MIT<br>研究版本 <code>77cfe1c</code> · 原项目自述为 MVP</p></div>
-        <div class="hero-visual" aria-label="多来源经过规则与分析，成为私有信号的原理示意">
-          <div class="visual-label mono">FROM SOURCES TO SIGNALS</div>
-          <svg class="wires" viewBox="0 0 500 430" aria-hidden="true"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#c9d0c5"/></pattern></defs><rect width="500" height="430" fill="url(#dots)"/><circle cx="250" cy="206" r="145" fill="none" stroke="#cbd4c6" stroke-dasharray="3 8"/><circle cx="250" cy="206" r="95" fill="none" stroke="#d3dacd"/><path d="M80 90H160L210 173M420 95H340L290 173M75 300H160L210 236M425 300H340L290 236M250 245V350" fill="none" stroke="#8d9d87" stroke-width="1.5"/><circle cx="160" cy="90" r="4" fill="#172b23"/><circle cx="340" cy="300" r="4" fill="#172b23"/><path d="m246 342 4 8 4-8" fill="none" stroke="#172b23" stroke-width="2"/></svg>
-          <div class="source-node node-x"><span class="node-symbol">𝕏</span><div><strong>X 动态</strong><small>账号与话题</small></div></div>
-          <div class="source-node node-tg"><span class="node-symbol">↗</span><div><strong>Telegram</strong><small>公开频道</small></div></div>
-          <div class="source-node node-web"><span class="node-symbol">⌘</span><div><strong>公开网页</strong><small>文档与公告</small></div></div>
-          <div class="source-node node-chain"><span class="node-symbol">≋</span><div><strong>链上行情</strong><small>代币与交易对</small></div></div>
-          <div class="hub"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="m20 3 15 9v16l-15 9-15-9V12Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 12 7 4v8l-7 4-7-4v-8Z" fill="currentColor"/></svg><strong>你的规则</strong><span>采集 · 分析 · 检查</span></div>
-          <div class="signal-output"><span class="status-dot"></span><strong>值得注意的变化</strong><small>私有信号 / 来源 / 后续追踪</small></div>
-          <div class="diagram-caption">结构示意 · 不代表实时数据流</div>
-        </div>
+        <figure class="hero-guide">
+          <button type="button" data-open-understanding-map aria-label="放大首页引导图：我们的理解总图"><img src="./media/understanding-map.svg" width="1600" height="1320" alt="既有理解总图：原库能力与原理、我们的思考、通用化探索、个人价值及信息来源。"></button>
+          <figcaption><strong>沿用我们生成的理解总图</strong><span>点击放大阅读 · 原库 → 思考 → 扩展 → 来源与价值</span><a href="#understanding-map">查看总图说明与下载 →</a></figcaption>
+        </figure>
         <div class="hero-facts four-facts"><div><a href="#source-control"><span>01 / 决定范围</span><strong>来源控制 ↗</strong><small>有哪些来源，用户能指定什么</small></a></div><div><a href="#information-search"><span>02 / 获取内容</span><strong>信息搜索 ↗</strong><small>主动搜索，或盯住目标更新</small></a></div><div><a href="#information-filtering"><span>03 / 判断去留</span><strong>信息过滤 ↗</strong><small>搜索词、硬规则与 AI 偏好</small></a></div><div><a href="#information-presentation"><span>04 / 整理交付</span><strong>信息呈现 ↗</strong><small>候选怎样成为可追溯的提醒</small></a></div></div>
       </section>
 
       <section class="section chapter" id="synthesis" aria-labelledby="synthesis-title">
-        <div class="section-heading"><div><p class="eyebrow">RESEARCH SUMMARY / SIX QUESTIONS</p><h2 id="synthesis-title">从源库能力，到我们能怎样用。</h2></div><p>先读清六件事，再用总图和来源目录展开。固定源码、我们的实际探索与待实现的方向分别说明。</p></div>
+        <div class="section-heading"><div><p class="eyebrow">RESEARCH SUMMARY / EIGHT QUESTIONS</p><h2 id="synthesis-title">能力、原理、启发，以及扩展的意义。</h2></div><p>八项摘要串起源库能做什么、怎样运行、我们学到什么与如何继续用。沿用既有总图引导阅读，来源和规则可向下逐项追查。</p></div>
         <div class="synthesis-grid">
           <article class="synthesis-card"><p class="eyebrow">01 / 源库能力</p><h3>持续发现币圈信息中的变化</h3><p>CrawlHive 将用户指定的账号、频道、网页、词表与行情条件组织成监控任务，通过 <strong>Grok 搜索 X、读取 Telegram 公开预览、比较指定网页新增文本、调用 DexScreener 接口</strong> 获取候选，再经规则或可选 AI 提取、代币关联、去重与风险检查，保存和交付私有信号，追踪后续价格表现。</p><p class="conclusion">它是领域化监控应用；本研究阅读固定源码，尚未运行上游服务。</p></article>
-          <article class="synthesis-card"><p class="eyebrow">02 / 带来的思考</p><h3>沉淀来源接入，也沉淀处理经验</h3><p>公开平台名单容易获得，值得积累的是<strong>选哪些具体来源、怎样接入、覆盖到哪里、如何持续运行，以及信息为何留下</strong>。接入适配、调度增量、过滤去重、证据保存与交付共同构成可复用经验。钱包、积分与行情评价服务原作场景，我们探索 AI 信息时需要重新设计它们。</p><p class="conclusion">现有研究尚未证明独占数据、难复制算法或长期效果；价值应由真实任务验证。</p></article>
-          <article class="synthesis-card"><p class="eyebrow">03 / 我们探索了什么</p><h3>从四环节拆解，到独立 AI 工作台</h3><p>先逐来源追查<strong>来源控制、信息搜索、信息过滤、信息呈现</strong>的实际实现，整理总图、26 条源码依据和 21 项来源接入档案；再从零构建“知向”，探索<strong>方向 × 目的 × 来源 × 规则</strong>的使用方式。2026-10-15 实采 4 个公开来源、51 条条目，验证筛选、匹配原因、收藏、导出与本地主动刷新。</p><p class="conclusion">独立原型没有调用上游业务或模型；来源覆盖和长期收益仍待评估。</p></article>
-          <article class="synthesis-card"><p class="eyebrow">04 / 哪些来源可以获取信息</p><h3>原库 4 类、原型 4 个、候选 13 项</h3><p>原库覆盖 <strong>X、Telegram、公开网页与 DexScreener</strong>；原型已接入 <strong>Hugging Face Blog、Google AI Blog、GitHub AI &amp; ML Blog 与 GitHub 仓库搜索</strong>。候选再补官方公告、HF 模型与 Spaces、arXiv、GitHub Releases、Hacker News、Product Hunt、中文媒体、YouTube、Reddit 和 X 官方 API。</p><p class="conclusion">RSS / Atom、API、公开 HTML 各有覆盖、认证、费用与稳定性边界；候选未等于已接入。<a href="#source-access-catalog">查具体入口和请求示例 →</a></p></article>
-          <article class="synthesis-card"><p class="eyebrow">05 / 我们怎样处理信息</p><h3>受控获取 → 规范整理 → 规则筛选 → 留存研究</h3><p>原型读取固定 RSS，并按预设 GitHub topic 搜索，保留原链接、来源、日期和短摘；同 URL 合并。选择方向与内容类型后，对标题、短摘和主题标签执行<strong>搜索词、包含词任一／全部、排除优先、来源开关和时间范围</strong>检查，再按命中数或时间排序，展示匹配理由、原文、收藏与导出。</p><p class="conclusion">关键词筛选当前已采集数据；没有全网语义搜索、模型摘要、事实核查或语义事件聚类。</p></article>
-          <article class="synthesis-card"><p class="eyebrow">06 / 使用场景与我的价值</p><h3>跟动态、找产品、研究开源与已知目标</h3><p><strong>AI 信息跟进：</strong>组合公告、论文和讨论，找值得核实的更新；<strong>产品发现：</strong>收集上新、演示与反馈，形成待试用清单；<strong>开源研究：</strong>结合仓库、许可证和版本信息决定读什么、试什么。进一步可扩展为指定项目、竞品文档和行业主题监控。</p><p class="conclusion">预期减少逐站查找、复用关注规则、保留来源证据和下一步；节省时间、漏报、重复与费用需要实际记录。</p></article>
+          <article class="synthesis-card" id="summary-principle"><p class="eyebrow">02 / 工作原理</p><h3>配置关注对象，持续把变化变成信号</h3><p><strong>来源控制 → 信息搜索 → 信息过滤 → 信息呈现</strong>是主线。一个原库任务选择一种来源，调度器周期触发适配器：X 提交搜索意图，频道用消息编号追增量，网页建立基线再比较新增文本，行情接口按列表、关键词或地址读取；候选再进入规则／可选 AI、关联检查、去重、保存和私有交付。</p><p class="conclusion">搜索词、程序硬规则与模型偏好分别生效；不同来源的“关键词”不保证同一种约束。<a href="#synthesis-principle">展开原理与逐来源例外 →</a></p></article>
+          <article class="synthesis-card"><p class="eyebrow">03 / 带来的思考</p><h3>沉淀来源接入，也沉淀处理经验</h3><p>公开平台名单容易获得，值得积累的是<strong>选哪些具体来源、怎样接入、覆盖到哪里、如何持续运行，以及信息为何留下</strong>。接入适配、调度增量、过滤去重、证据保存与交付共同构成可复用经验。钱包、积分与行情评价服务原作场景，我们探索 AI 信息时需要重新设计它们。</p><p class="conclusion">现有研究尚未证明独占数据、难复制算法或长期效果；价值应由真实任务验证。</p></article>
+          <article class="synthesis-card"><p class="eyebrow">04 / 我们探索了什么</p><h3>从四环节拆解，到独立 AI 工作台</h3><p>先逐来源追查<strong>来源控制、信息搜索、信息过滤、信息呈现</strong>的实际实现，整理总图、26 条源码依据和 21 项来源接入档案；再从零构建“知向”，探索<strong>方向 × 目的 × 来源 × 规则</strong>的使用方式。2026-10-15 实采 4 个公开来源、51 条条目，验证筛选、匹配原因、收藏、导出与本地主动刷新。</p><p class="conclusion">独立原型没有调用上游业务或模型；来源覆盖和长期收益仍待评估。</p></article>
+          <article class="synthesis-card"><p class="eyebrow">05 / 哪些来源可以获取信息</p><h3>原库 4 类、原型 4 个、候选 13 项</h3><p>原库覆盖 <strong>X、Telegram、公开网页与 DexScreener</strong>；原型已接入 <strong>Hugging Face Blog、Google AI Blog、GitHub AI &amp; ML Blog 与 GitHub 仓库搜索</strong>。候选再补官方公告、HF 模型与 Spaces、arXiv、GitHub Releases、Hacker News、Product Hunt、中文媒体、YouTube、Reddit 和 X 官方 API。</p><p class="conclusion">RSS / Atom、API、公开 HTML 各有覆盖、认证、费用与稳定性边界；候选未等于已接入。<a href="#source-access-catalog">查具体入口和请求示例 →</a></p></article>
+          <article class="synthesis-card"><p class="eyebrow">06 / 我们怎样处理信息</p><h3>受控获取 → 规范整理 → 规则筛选 → 留存研究</h3><p>原型读取固定 RSS，并按预设 GitHub topic 搜索，保留原链接、来源、日期和短摘；同 URL 合并。选择方向与内容类型后，对标题、短摘和主题标签执行<strong>搜索词、包含词任一／全部、排除优先、来源开关和时间范围</strong>检查，再按命中数或时间排序，展示匹配理由、原文、收藏与导出。</p><p class="conclusion">关键词筛选当前已采集数据；没有全网语义搜索、模型摘要、事实核查或语义事件聚类。</p></article>
+          <article class="synthesis-card" id="summary-expansion"><p class="eyebrow">07 / 可扩展思路与意义</p><h3>把领域监控，变成可配置的研究入口</h3><p>围绕<strong>方向 × 目的 × 来源 × 规则</strong>重建主题、条目、事件与证据模型，替换币名、钱包和币价评价；先把 RSS／API 来源接稳，再补游标、重试、健康状态和定时交付，后续按任务需要增加模型辅助分类、事件聚合、跨来源核对与用户反馈。</p><p class="conclusion">意义在于复用关注方案、减少重复获取与阅读、保留可追溯证据，连接“发现 → 判断 → 行动”。后续能力仍待实现，省时、漏报和费用需对照评估。<a href="#synthesis-expansion">查看扩展设计与实施顺序 →</a></p></article>
+          <article class="synthesis-card"><p class="eyebrow">08 / 使用场景与我的价值</p><h3>跟动态、找产品、研究开源与已知目标</h3><p><strong>AI 信息跟进：</strong>组合公告、论文和讨论，找值得核实的更新；<strong>产品发现：</strong>收集上新、演示与反馈，形成待试用清单；<strong>开源研究：</strong>结合仓库、许可证和版本信息决定读什么、试什么。进一步可扩展为指定项目、竞品文档和行业主题监控。</p><p class="conclusion">预期减少逐站查找、复用关注规则、保留来源证据和下一步；节省时间、漏报、重复与费用需要实际记录。</p></article>
         </div>
         <div class="summary-jumps"><a href="#understanding-map">一张图看完整关系 →</a><a href="#source-access-catalog">逐项查看来源与接法 →</a><a href="./explore/index.html">体验真实快照工作台 →</a></div>
       </section>

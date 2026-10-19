@@ -77,7 +77,7 @@
       "slug": "crawl-hive",
       "title": "CrawlHive：跨平台信息监控的能力与本质",
       "repository": "https://github.com/h100envy/crawl-hive",
-      "summary": "CrawlHive以X、公开频道、网页和行情构建监控；我们提炼来源接入与持续处理经验，自建AI方向工作台，整理21项来源接法，以规则筛选、证据留存和收藏导出支持动态跟进、产品发现与开源研究。",
+      "summary": "CrawlHive以X、频道、网页和行情构建监控，按任务调度与增量获取，经规则／可选AI、去重检查后交付信号。我们提炼来源接入和持续处理经验，自建AI方向工作台并整理21项来源接法；可扩展为按主题与目的筛选、留存证据的研究入口，用于动态跟进、产品发现与开源研究，实际收益待评估。",
       "status": "研究中",
       "preview": "assets/understanding-overview.jpg",
       "preview_caption": "013 CrawlHive 理解总览：从原库监控链路到通用AI探索，区分源码实现、原型实测和来源接入候选。",
