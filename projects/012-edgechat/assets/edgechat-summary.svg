@@ -1,0 +1,264 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="6642" viewBox="0 0 2400 6642" role="img" aria-labelledby="title desc">
+<title id="title">EdgeChat：从聊天能力，到产品价值——完整研究总结图</title>
+<desc id="desc">总结源库能力、使用效果、Cloudflare 架构、消息流程、加密与桥接边界、网页嵌入、六类扩展方向、产品价值及我们保留研究而暂不开发通用聊天产品的阶段性取舍。</desc>
+<rect width="2400" height="6642" fill="#f6f5ef"/>
+<text x="96" y="73" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#164b48">012 / OPEN-SOURCE RESEARCH</text>
+<text x="96" y="126" font-size="79" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">EdgeChat：从聊天能力，到产品价值</text>
+<text x="96" y="241" font-size="37" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">完整聊天应用的能力、效果、原理、扩展与阶段性取舍</text>
+<rect x="96" y="310" width="265.0" height="51" rx="12" fill="#e7efda" stroke="#e7efda" stroke-width="2"/>
+<text x="116.0" y="318" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#164b48">已有实现 / 源码依据</text>
+<rect x="650" y="310" width="265.0" height="51" rx="12" fill="#e8eff4" stroke="#e8eff4" stroke-width="2"/>
+<text x="670.0" y="318" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#37647e">需要开发 / 候选方向</text>
+<rect x="1205" y="310" width="290.0" height="51" rx="12" fill="#f6ecd9" stroke="#f6ecd9" stroke-width="2"/>
+<text x="1225.0" y="318" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#93632a">研究判断 / 需求未验证</text>
+<rect x="1770" y="310" width="534" height="51" rx="12" fill="#e9ece7" stroke="#e9ece7" stroke-width="2"/>
+<text x="1924.5" y="318" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#758079">实际部署 / 尚未实测</text>
+<rect x="96" y="394" width="2208" height="106" rx="18" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="127" y="423" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#e7efda">本质</text>
+<text x="241" y="417" font-size="44" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#f5f6e8">完整应用 = 基础通信 + 多端入口 + 外部互联</text>
+<rect x="96" y="550" width="66" height="61" rx="14" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="110.0" y="559" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#e7efda">01</text>
+<text x="187" y="553" font-size="49" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">源库已有的能力，能带来什么效果？</text>
+<rect x="96" y="644" width="1078" height="827" rx="20" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<rect x="1226" y="644" width="1078" height="827" rx="20" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<text x="128" y="668" font-size="35" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#164b48">能力 / 已有对应实现</text>
+<text x="1258" y="668" font-size="35" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#164b48">效果 / 部署与配置后的使用方式</text>
+<text x="128" y="738" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">文字、群聊与私信</text>
+<text x="128" y="787" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">公开/私有群、回复、@、置顶、未读；邀请、权限与封禁。</text>
+<text x="1258" y="738" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">独立团队聊天室</text>
+<text x="1258" y="787" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">团队按群讨论、成员单独联系，运营者管理成员与访问范围。</text>
+<path d="M 1182 785 L 1218 785" fill="none" stroke="#9db286" stroke-width="3"/>
+<polygon points="1218,785 1208.9955289764732,789.3496553411123 1208.9955289764732,780.6503446588877" fill="#9db286"/>
+<path d="M 128 865 L 1142 865" fill="none" stroke="#d8dfd2" stroke-width="3"/>
+<path d="M 1258 865 L 2272 865" fill="none" stroke="#d8dfd2" stroke-width="3"/>
+<text x="128" y="878" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">文件、录音与语音通话</text>
+<text x="128" y="927" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">图片、视频文件、附件、录音；默认上传 20 MiB，TG 入站超 16 MB 附件跳过；</text>
+<text x="128" y="966" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">网页一对一语音。</text>
+<text x="1258" y="878" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">异步分享与实时声音</text>
+<text x="1258" y="927" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">发文件、留言录音，也能在网页私信中发起一对一语音。</text>
+<path d="M 1182 925 L 1218 925" fill="none" stroke="#9db286" stroke-width="3"/>
+<polygon points="1218,925 1208.9955289764732,929.3496553411123 1208.9955289764732,920.6503446588877" fill="#9db286"/>
+<path d="M 128 1005 L 1142 1005" fill="none" stroke="#d8dfd2" stroke-width="3"/>
+<path d="M 1258 1005 L 2272 1005" fill="none" stroke="#d8dfd2" stroke-width="3"/>
+<text x="128" y="1018" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">网页、PWA 与 Android</text>
+<text x="128" y="1067" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">现成客户端入口；Android Web UI 可填写自己的服务地址。</text>
+<text x="1258" y="1018" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">多端访问同一个实例</text>
+<text x="1258" y="1067" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">成员打开网站或客户端登录使用；不代表任意网站一键嵌入。</text>
+<path d="M 1182 1065 L 1218 1065" fill="none" stroke="#9db286" stroke-width="3"/>
+<polygon points="1218,1065 1208.9955289764732,1069.3496553411123 1208.9955289764732,1060.6503446588877" fill="#9db286"/>
+<path d="M 128 1145 L 1142 1145" fill="none" stroke="#d8dfd2" stroke-width="3"/>
+<path d="M 1258 1145 L 2272 1145" fill="none" stroke="#d8dfd2" stroke-width="3"/>
+<text x="128" y="1158" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">Telegram 与跨实例桥接</text>
+<text x="128" y="1207" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">Telegram 群互通；跨实例通过 10 分钟邀请、双方管理员确认后绑定。</text>
+<text x="1258" y="1158" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">多个入口参与讨论</text>
+<text x="1258" y="1207" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">网页与 TG 群互通，TG 成员无需站内账号；两站群共享范围内的新消息。</text>
+<path d="M 1182 1205 L 1218 1205" fill="none" stroke="#9db286" stroke-width="3"/>
+<polygon points="1218,1205 1208.9955289764732,1209.3496553411123 1208.9955289764732,1200.6503446588877" fill="#9db286"/>
+<path d="M 128 1285 L 1142 1285" fill="none" stroke="#d8dfd2" stroke-width="3"/>
+<path d="M 1258 1285 L 2272 1285" fill="none" stroke="#d8dfd2" stroke-width="3"/>
+<text x="128" y="1298" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">HTTP API 与 WebMCP</text>
+<text x="128" y="1347" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">登录、列群、读消息、发文字、开私聊等操作入口。</text>
+<text x="1258" y="1298" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">外部软件 / AI 操作会话</text>
+<text x="1258" y="1347" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">兼容工具可复用账号与接口；更多平台和智能行为仍需适配。</text>
+<path d="M 1182 1345 L 1218 1345" fill="none" stroke="#9db286" stroke-width="3"/>
+<polygon points="1218,1345 1208.9955289764732,1349.3496553411123 1208.9955289764732,1340.6503446588877" fill="#9db286"/>
+<rect x="96" y="1518" width="66" height="61" rx="14" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="110.0" y="1527" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#e7efda">02</text>
+<text x="187" y="1521" font-size="49" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">底层架构：界面、请求、协调与存储分工</text>
+<rect x="96" y="1612" width="2208" height="646" rx="20" fill="#ecf1e4" stroke="#d8dfd2" stroke-width="2"/>
+<text x="129" y="1636" font-size="29" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">资源运行在自己的 Cloudflare 账号下；机器运行交给平台，密钥、备份、配额与费用仍需管理。</text>
+<rect x="215" y="1698" width="600" height="93" rx="12" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<text x="410.0" y="1712" font-size="32" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">浏览器 / PWA</text>
+<text x="452.5078125" y="1758" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">Vue 3 界面</text>
+<rect x="900" y="1698" width="600" height="93" rx="12" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<text x="1081.5" y="1712" font-size="32" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">Android 客户端</text>
+<text x="1127.5078125" y="1758" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">内置 Web UI</text>
+<rect x="1585" y="1698" width="600" height="93" rx="12" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<text x="1777.5" y="1712" font-size="32" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">兼容 AI 客户端</text>
+<text x="1776.0078125" y="1758" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">WebMCP 操作入口</text>
+<path d="M 515 1791 L 515 1816" fill="none" stroke="#a1b493" stroke-width="3"/>
+<path d="M 1200 1791 L 1200 1816" fill="none" stroke="#a1b493" stroke-width="3"/>
+<path d="M 1885 1791 L 1885 1816" fill="none" stroke="#a1b493" stroke-width="3"/>
+<path d="M 515 1816 L 1885 1816" fill="none" stroke="#a1b493" stroke-width="3"/>
+<path d="M 1200.0 1816 L 1200.0 1841" fill="none" stroke="#164b48" stroke-width="3"/>
+<polygon points="1200.0,1841 1194.7804135906651,1830.1946347717678 1205.2195864093349,1830.1946347717678" fill="#164b48"/>
+<rect x="530" y="1844" width="1340" height="104" rx="15" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="700.515625" y="1861" font-size="34" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#f2f5dd">Workers + Hono：登录、鉴权、业务 API、文件入口与外部回调</text>
+<text x="889.5" y="1909" font-size="27" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#c1d5bd">按请求运行后端逻辑；服务端权限不能交给前端替代</text>
+<path d="M 1200.0 1949 L 1200.0 1977" fill="none" stroke="#164b48" stroke-width="3"/>
+<polygon points="1200.0,1977 1194.7804135906651,1966.1946347717678 1205.2195864093349,1966.1946347717678" fill="#164b48"/>
+<path d="M 1200.0 1977 L 1200.0 1949" fill="none" stroke="#164b48" stroke-width="3"/>
+<polygon points="1200.0,1949 1205.2195864093349,1959.8053652282322 1194.7804135906651,1959.8053652282322" fill="#164b48"/>
+<rect x="530" y="1982" width="1340" height="106" rx="15" fill="#fffefa" stroke="#a6ba91" stroke-width="2"/>
+<text x="739.0" y="1997" font-size="34" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">Durable Objects：房间连接、用户收件箱、通话与桥接任务</text>
+<text x="790.5234375" y="2047" font-size="27" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">ChannelRoom / UserInbox；WebSocket 实时广播与 Hibernation</text>
+<path d="M 1200.0 2088 L 1200.0 2112" fill="none" stroke="#a1b493" stroke-width="3"/>
+<path d="M 510 2112 L 1890 2112" fill="none" stroke="#a1b493" stroke-width="3"/>
+<path d="M 515 2112 L 515 2135" fill="none" stroke="#164b48" stroke-width="3"/>
+<polygon points="515,2135 510.6503446588877,2125.9955289764735 519.3496553411123,2125.9955289764735" fill="#164b48"/>
+<rect x="215" y="2137" width="600" height="83" rx="12" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<text x="492.5" y="2143" font-size="32" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#164b48">D1</text>
+<text x="364.0" y="2190" font-size="24" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">用户 / 群组 / 消息 / Outbox</text>
+<path d="M 1200 2112 L 1200 2135" fill="none" stroke="#164b48" stroke-width="3"/>
+<polygon points="1200,2135 1195.6503446588877,2125.9955289764735 1204.3496553411123,2125.9955289764735" fill="#164b48"/>
+<rect x="900" y="2137" width="600" height="83" rx="12" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<text x="1177.5" y="2143" font-size="32" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#164b48">KV</text>
+<text x="1090.5" y="2190" font-size="24" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">登录会话 SESSIONS</text>
+<path d="M 1885 2112 L 1885 2135" fill="none" stroke="#164b48" stroke-width="3"/>
+<polygon points="1885,2135 1880.6503446588877,2125.9955289764735 1889.3496553411123,2125.9955289764735" fill="#164b48"/>
+<rect x="1585" y="2137" width="600" height="83" rx="12" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<text x="1864.0" y="2143" font-size="32" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#164b48">R2</text>
+<text x="1777.0" y="2190" font-size="24" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">附件文件的加密字节</text>
+<text x="129" y="2228" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">职责概念图：Worker 与 DO 均按业务访问存储，不代表每条请求都沿同一条串行路径。</text>
+<rect x="96" y="2311" width="66" height="61" rx="14" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="110.0" y="2320" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#e7efda">03</text>
+<text x="187" y="2314" font-size="49" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">工作原理：存储、推送、媒体与外部投递分开处理</text>
+<rect x="96" y="2405" width="2208" height="180" rx="15" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<rect x="118" y="2427" width="230" height="136" rx="11" fill="#e7efda" stroke="#e7efda" stroke-width="2"/>
+<text x="154.5" y="2472" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#164b48">文字 / 附件</text>
+<text x="380" y="2427" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">发消息 → 身份与会话授权 → 正文加密存入 D1 → 房间 WebSocket 广播 → 异步未读与桥接</text>
+<text x="380" y="2495" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">附件先校验并加密上传 R2，再随消息保存引用。重试可按消息标识去重；断线后通过 HTTP 同步，实时推送不替代历史存储。</text>
+<rect x="96" y="2601" width="2208" height="180" rx="15" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<rect x="118" y="2623" width="230" height="136" rx="11" fill="#e7efda" stroke="#e7efda" stroke-width="2"/>
+<text x="171.0" y="2668" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#164b48">实时语音</text>
+<text x="380" y="2623" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">声音：用户 A ⇄ WebRTC（P2P 直连 / 配置后的 TURN 中继）⇄ 用户 B</text>
+<text x="380" y="2691" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">控制：Workers / VoiceCall DO 只协调呼叫、SDP、ICE 与状态，不转发或保存音频。没有 TURN 配置时，直连失败不能当作已切到中继。</text>
+<rect x="96" y="2797" width="2208" height="180" rx="15" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<rect x="118" y="2819" width="230" height="136" rx="11" fill="#e7efda" stroke="#e7efda" stroke-width="2"/>
+<text x="171.0" y="2864" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#164b48">两种桥接</text>
+<text x="380" y="2819" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">TG：Bot API 出站 / Webhook 入站；仅群组文字/媒体互通，私信不桥接；出站尽力转发。</text>
+<text x="380" y="2887" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">实例桥：签名 HTTPS + Outbox + 重试/去重；仅本站原创无附件新群消息；不补历史、不传播编辑/撤回；导入消息不再跨桥扩散。</text>
+<rect x="96" y="3036" width="66" height="61" rx="14" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="110.0" y="3045" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#e7efda">04</text>
+<text x="187" y="3039" font-size="49" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">能力边界：能运行，不等于所有场景都已覆盖</text>
+<rect x="96.0" y="3130" width="720.0" height="480" rx="18" fill="#f6ecd9" stroke="#d8dfd2" stroke-width="2"/>
+<rect x="122.0" y="3160" width="6" height="39" rx="2" fill="#93632a" stroke="#93632a" stroke-width="2"/>
+<text x="145.0" y="3156" font-size="36" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">加密：仍需信任服务端</text>
+<text x="127.0" y="3222" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">新正文与新附件使用 AES-256-GCM 静态加密，密钥</text>
+<text x="127.0" y="3267" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">可版本化轮换。</text>
+<text x="127.0" y="3312" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">Worker 持有密钥、验权后解密；这不是端到端加密</text>
+<text x="127.0" y="3357" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">。</text>
+<text x="127.0" y="3402" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">历史明文不自动补加密，元数据也不代表全部加密。</text>
+<text x="127.0" y="3447" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">旧密钥仍需保留。</text>
+<rect x="840.0" y="3130" width="720.0" height="480" rx="18" fill="#f6ecd9" stroke="#d8dfd2" stroke-width="2"/>
+<rect x="866.0" y="3160" width="6" height="39" rx="2" fill="#93632a" stroke="#93632a" stroke-width="2"/>
+<text x="889.0" y="3156" font-size="36" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">语音、文件与客户端</text>
+<text x="871.0" y="3222" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">录音消息是音频文件；实时语音仅网页一对一，双方</text>
+<text x="871.0" y="3267" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">需在线留在工作区。</text>
+<text x="871.0" y="3312" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">群语音、视频会议、屏幕共享与 Android 通话不在当</text>
+<text x="871.0" y="3357" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">前范围。</text>
+<text x="871.0" y="3402" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">视频文件不等于视频通话。Android 停止后不保证即</text>
+<text x="871.0" y="3447" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">时通知；TG 提醒不含正文。</text>
+<rect x="1584.0" y="3130" width="720.0" height="480" rx="18" fill="#f6ecd9" stroke="#d8dfd2" stroke-width="2"/>
+<rect x="1610.0" y="3160" width="6" height="39" rx="2" fill="#93632a" stroke="#93632a" stroke-width="2"/>
+<text x="1633.0" y="3156" font-size="36" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">AI 工具与运行责任</text>
+<text x="1615.0" y="3222" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">WebMCP 的五个工具是：登录、列群、读消息、发</text>
+<text x="1615.0" y="3267" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">文字、开私聊。</text>
+<text x="1615.0" y="3312" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">模型、总结、自动回复和任务执行需外部实现。</text>
+<text x="1615.0" y="3357" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">Serverless 省去常驻机器维护，账号、密钥、更新、</text>
+<text x="1615.0" y="3402" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">备份、配额和成本仍要管理。</text>
+<rect x="96" y="3659" width="66" height="61" rx="14" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="110.0" y="3668" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#e7efda">05</text>
+<text x="187" y="3662" font-size="49" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">可以封装成网页模块，但必须继续开发</text>
+<rect x="96" y="3753" width="2208" height="370" rx="18" fill="#e8eff4" stroke="#cfdde6" stroke-width="2"/>
+<text x="127" y="3777" font-size="34" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#37647e">可做的形态：右下角聊天浮窗 / 页面讨论区 / 站内私信 / 客服入口</text>
+<rect x="131" y="3844" width="469" height="75" rx="12" fill="#fffefa" stroke="#c5d6e0" stroke-width="2"/>
+<text x="299.5" y="3862" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#37647e">宿主网页</text>
+<path d="M 613 3881 L 672 3881" fill="none" stroke="#37647e" stroke-width="3"/>
+<polygon points="672,3881 660.2941876694152,3886.6545519434458 660.2941876694152,3875.3454480565542" fill="#37647e"/>
+<rect x="685" y="3844" width="469" height="75" rx="12" fill="#fffefa" stroke="#c5d6e0" stroke-width="2"/>
+<text x="837.0" y="3862" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#37647e">可嵌入组件</text>
+<path d="M 1167 3881 L 1226 3881" fill="none" stroke="#37647e" stroke-width="3"/>
+<polygon points="1226,3881 1214.2941876694151,3886.6545519434458 1214.2941876694151,3875.3454480565542" fill="#37647e"/>
+<rect x="1239" y="3844" width="469" height="75" rx="12" fill="#fffefa" stroke="#c5d6e0" stroke-width="2"/>
+<text x="1356.5" y="3862" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#37647e">账号 / 会话授权</text>
+<path d="M 1721 3881 L 1780 3881" fill="none" stroke="#37647e" stroke-width="3"/>
+<polygon points="1780,3881 1768.2941876694151,3886.6545519434458 1768.2941876694151,3875.3454480565542" fill="#37647e"/>
+<rect x="1793" y="3844" width="469" height="75" rx="12" fill="#fffefa" stroke="#c5d6e0" stroke-width="2"/>
+<text x="1928.5" y="3862" font-size="33" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#37647e">独立聊天后端</text>
+<text x="130" y="3959" font-size="32" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#37647e">界面封装</text>
+<text x="130" y="4008" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">组件化、样式与移动适配，融入宿主页面。</text>
+<text x="856" y="3959" font-size="32" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#37647e">身份与业务映射</text>
+<text x="856" y="4008" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">网站账号、成员权限、页面/项目/订单对应会话。</text>
+<text x="1582" y="3959" font-size="32" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#37647e">稳定接口与后端</text>
+<text x="1582" y="4008" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">收发、上传、重连、版本兼容；资源部署和运营。</text>
+<rect x="96" y="4170" width="66" height="61" rx="14" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="110.0" y="4179" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#e7efda">06</text>
+<text x="187" y="4173" font-size="49" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">六个产品方向：可扩展，只代表候选方案</text>
+<text x="187" y="4246" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">以下均需二次开发；真实需求、付费意愿与效果尚未验证，不能当作源库现成功能。</text>
+<rect x="96" y="4315" width="2208" height="67" rx="12" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="118" y="4332" font-size="30" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#f0f3de">方向 / 使用者</text>
+<text x="548" y="4332" font-size="30" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#f0f3de">期待解决的问题</text>
+<text x="1233" y="4332" font-size="30" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#f0f3de">还需要开发</text>
+<text x="1958" y="4332" font-size="30" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#f0f3de">当前取舍</text>
+<rect x="96" y="4382" width="2208" height="134" rx="0" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<text x="118" y="4404" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">客户交付协作室</text>
+<text x="118" y="4460" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">客户 / 外包与设计团队</text>
+<text x="548" y="4410" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">围绕交付物沟通、改稿、传文件与确认。</text>
+<text x="1233" y="4410" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">项目权限、文件版本、待办、交付确认。</text>
+<text x="1958" y="4410" font-size="29" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#93632a">需求明确后验证</text>
+<rect x="96" y="4516" width="2208" height="134" rx="0" fill="#edf1e6" stroke="#d8dfd2" stroke-width="2"/>
+<text x="118" y="4538" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">页面反馈与处理</text>
+<text x="118" y="4594" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">网站用户 / 开发维护者</text>
+<text x="548" y="4544" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">就地报告问题、携带页面上下文，处理后回告。</text>
+<text x="1233" y="4544" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">嵌入与身份、问题状态、负责人、完成通知。</text>
+<text x="1958" y="4544" font-size="29" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#93632a">先看表单是否够用</text>
+<rect x="96" y="4650" width="2208" height="134" rx="0" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<text x="118" y="4672" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">Telegram 支持台</text>
+<text x="118" y="4728" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">已有 Telegram 社群</text>
+<text x="548" y="4678" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">求助不沉底，有人负责，也有最终答案。</text>
+<text x="1233" y="4678" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">问题归档、状态与回流；访客私有客服路由另做。</text>
+<text x="1958" y="4678" font-size="29" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#93632a">适合明确 TG 人群</text>
+<rect x="96" y="4784" width="2208" height="134" rx="0" fill="#edf1e6" stroke="#d8dfd2" stroke-width="2"/>
+<text x="118" y="4806" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">AI 任务协作室</text>
+<text x="118" y="4862" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">人与 AI 协作的团队</text>
+<text x="548" y="4812" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">讨论后能执行任务，并回传结果与依据。</text>
+<text x="1233" y="4812" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">模型、工具执行、任务状态、授权、失败恢复。</text>
+<text x="1958" y="4812" font-size="29" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#93632a">投入较大，先验闭环</text>
+<rect x="96" y="4918" width="2208" height="134" rx="0" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<text x="118" y="4940" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">通用聊天 SDK</text>
+<text x="118" y="4996" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">多个网站 / 开发者</text>
+<text x="548" y="4946" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">用统一模块减少重复接入聊天的工作。</text>
+<text x="1233" y="4946" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">组件、账号/API、多框架、多租户、文档与运维。</text>
+<text x="1958" y="4946" font-size="29" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#93632a">自用复用；售卖暂缓</text>
+<rect x="96" y="5052" width="2208" height="134" rx="0" fill="#edf1e6" stroke="#d8dfd2" stroke-width="2"/>
+<text x="118" y="5074" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">多人音视频</text>
+<text x="118" y="5130" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">有会议需求的团队</text>
+<text x="548" y="5080" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">群语音、视频会议、屏幕共享。</text>
+<text x="1233" y="5080" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">多人媒体、网络质量、移动适配及运营能力。</text>
+<text x="1958" y="5080" font-size="29" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#93632a">当前不优先</text>
+<rect x="96" y="5231" width="66" height="61" rx="14" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="110.0" y="5240" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#e7efda">07</text>
+<text x="187" y="5234" font-size="49" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">价值判断：工程与研究有收获，商业优势要另证</text>
+<rect x="96.0" y="5325" width="720.0" height="304" rx="18" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<rect x="122.0" y="5355" width="6" height="39" rx="2" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="145.0" y="5351" font-size="36" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">直接自部署的使用价值</text>
+<text x="127.0" y="5417" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">需要独立实例、邀请制成员与 Telegram 群互联时，</text>
+<text x="127.0" y="5462" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">可把现有应用作为候选。平台依赖与运营责任仍在。</text>
+<rect x="840.0" y="5325" width="720.0" height="304" rx="18" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<rect x="866.0" y="5355" width="6" height="39" rx="2" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="889.0" y="5351" font-size="36" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">明确需求下的工程复用</text>
+<text x="871.0" y="5417" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">会话、权限、存储、文件和实时通信已有基础。能否</text>
+<text x="871.0" y="5462" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">更省事，要与成熟产品和轻量方案比较。</text>
+<rect x="1584.0" y="5325" width="720.0" height="304" rx="18" fill="#fffefa" stroke="#d8dfd2" stroke-width="2"/>
+<rect x="1610.0" y="5355" width="6" height="39" rx="2" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="1633.0" y="5351" font-size="36" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">完整系统的研究价值</text>
+<text x="1615.0" y="5417" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">理解“存储 + 推送”、媒体与信令分离、桥接去重、</text>
+<text x="1615.0" y="5462" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">权限与密钥边界，以及多入口如何协作。</text>
+<rect x="96" y="5654" width="2208" height="190" rx="16" fill="#f6ecd9" stroke="#e8d6b7" stroke-width="2"/>
+<text x="126" y="5677" font-size="38" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#93632a">成熟选择已经存在：通用聊天功能的商业差异化有限。</text>
+<text x="127" y="5737" font-size="29" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">Chatwoot：客服、AI 与多渠道支持   ·   CometChat：聊天 SDK / 界面组件   ·   Canny：反馈、讨论与进度通知</text>
+<text x="127" y="5795" font-size="28" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">增加聊天框、接上模型、能继续扩展，都不能单独证明用户会迁移、持续使用或付费。</text>
+<rect x="96" y="5891" width="66" height="61" rx="14" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="110.0" y="5900" font-size="31" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#e7efda">08</text>
+<text x="187" y="5894" font-size="49" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#233c38">对我们的意义：保留研究，需求出现后再选择</text>
+<rect x="96" y="5985" width="2208" height="362" rx="20" fill="#164b48" stroke="#164b48" stroke-width="2"/>
+<text x="132" y="6016" font-size="45" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#f4f5df">当前取舍：暂不主动开发通用聊天模块或新产品。</text>
+<text x="134" y="6098" font-size="32" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#c8d7bc">把它保留为架构研究与备选技术实现。这个判断针对当前阶段，不是永久否定；不为了利用这个库而硬找产品需求。</text>
+<text x="134" y="6216" font-size="34" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#e7edc5">具体痛点 → 比较成熟产品 / 轻量方案 → 小范围验证收益 → 再决定是否用 EdgeChat</text>
+<text x="134" y="6287" font-size="27" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#bbcfb1">比较：改造量、身份与权限、运行成本、GPL 许可与维护；观察：回复耗时、问题解决率、历史记录复用。</text>
+<path d="M 96 6387 L 2304 6387" fill="none" stroke="#bfcbb5" stroke-width="2"/>
+<text x="96" y="6412" font-size="27" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="700" dominant-baseline="text-before-edge" fill="#164b48">研究依据：aozorae/Edgechat  2.16.6 / 5a69f11  ·  2026-10-15  ·  上游声明 GPL-3.0-or-later</text>
+<text x="96" y="6463" font-size="27" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#61746c">已完成：18 处固定版本文档与核心源码核读、研究网页交互检查。尚未实测：上游部署、多账号通信、真实桥接/通话、并发与成本；产品需求和付费意愿也未验证。</text>
+<text x="96" y="6561" font-size="25" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-weight="400" dominant-baseline="text-before-edge" fill="#758079">原仓库：github.com/aozorae/Edgechat  ·  完整来源与边界：本项目 RESEARCH.md / 网页第 08、09 章</text>
+</svg>

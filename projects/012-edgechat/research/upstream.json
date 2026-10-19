@@ -1,0 +1,190 @@
+{
+  "repository": "https://github.com/aozorae/Edgechat",
+  "commit": "5a69f11ef0b2bdbdee611620af0f438c68d90f1e",
+  "version": "2.16.6",
+  "research_date": "2026-10-15",
+  "license": "README: GPL-3.0-or-later; LICENSE: GNU GPL v3 text",
+  "method": "读取固定提交的原始文件并记录 HTTP 状态、字节数和 SHA-256；不代表上游功能已运行验证。",
+  "files": [
+    {
+      "id": "readme",
+      "title": "项目定位与功能说明",
+      "path": "README.md",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/README.md",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/README.md",
+      "http_status": 200,
+      "bytes": 16989,
+      "sha256": "e46aec0723459b7e173e24215e927117e1a640c2c32c14266151f4713d6d39a6"
+    },
+    {
+      "id": "config",
+      "title": "Cloudflare 资源与默认配置",
+      "path": "wrangler.example.toml",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/wrangler.example.toml",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/wrangler.example.toml",
+      "http_status": 200,
+      "bytes": 2576,
+      "sha256": "ad2c582b6e6b84311be0494688d3df9d9e02d4e2052bae56fc2d4ea9d6e2499e"
+    },
+    {
+      "id": "room",
+      "title": "房间连接与消息广播",
+      "path": "worker/src/do/ChannelRoom.js",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/do/ChannelRoom.js",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/do/ChannelRoom.js",
+      "http_status": 200,
+      "bytes": 12483,
+      "sha256": "5b115795dd66f8e40361620e1635abbf7d08fccca00e17aca6284caef776b371"
+    },
+    {
+      "id": "submit",
+      "title": "消息提交与去重",
+      "path": "worker/src/message-submission.js",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/message-submission.js",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/message-submission.js",
+      "http_status": 200,
+      "bytes": 3554,
+      "sha256": "09cd620c8ac83d27a5ddd1b0f9f397b759ca6a849c09c8a14fb85513fbab6d10"
+    },
+    {
+      "id": "messages",
+      "title": "消息存储与解密读取",
+      "path": "worker/src/data/messages.js",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/data/messages.js",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/data/messages.js",
+      "http_status": 200,
+      "bytes": 18758,
+      "sha256": "c2fc8b2a7c52cb68715a6eb0bbd48c4b97cfd2dca285669c665f7d02cf4dbb93"
+    },
+    {
+      "id": "socket",
+      "title": "实时连接与断线恢复",
+      "path": "docs/api/websocket-v1.md",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/docs/api/websocket-v1.md",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/docs/api/websocket-v1.md",
+      "http_status": 200,
+      "bytes": 2695,
+      "sha256": "580fa182c244ae0f0d4d6441bef2edad824f736fb5b6c4bc0737fe24e7fa58db"
+    },
+    {
+      "id": "upload",
+      "title": "附件上传与下载",
+      "path": "worker/src/api/upload.js",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/api/upload.js",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/api/upload.js",
+      "http_status": 200,
+      "bytes": 7256,
+      "sha256": "bbc2ad2ed5c23d59bfee7dfae51f8e9cccbbd575b26d384a70d0788622c28bc2"
+    },
+    {
+      "id": "encryption",
+      "title": "AES-GCM 与版本化密钥",
+      "path": "worker/src/encryption.js",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/encryption.js",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/encryption.js",
+      "http_status": 200,
+      "bytes": 13430,
+      "sha256": "6d245ede056ebe62cf7301417b5d5e5821834735e2dacaf6460fdbb612a8bf9b"
+    },
+    {
+      "id": "telegram",
+      "title": "Telegram 双向转发",
+      "path": "worker/src/integrations/telegram/bridge.js",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/integrations/telegram/bridge.js",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/integrations/telegram/bridge.js",
+      "http_status": 200,
+      "bytes": 8062,
+      "sha256": "8cbc8edb15c56b7e76fd62f0e3e4a7a49eaf6bcfeffcf031d69b57e85bdd38fe"
+    },
+    {
+      "id": "webhook",
+      "title": "Telegram Webhook 入口",
+      "path": "worker/src/api/telegram.js",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/api/telegram.js",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/worker/src/api/telegram.js",
+      "http_status": 200,
+      "bytes": 8662,
+      "sha256": "7e14c2f04c84e2c4d4a73406e4b69092971fe97019c5514f7a296f0a19cb73a3"
+    },
+    {
+      "id": "bridge",
+      "title": "跨实例群组绑定协议",
+      "path": "docs/api/instance-bridge-v1.md",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/docs/api/instance-bridge-v1.md",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/docs/api/instance-bridge-v1.md",
+      "http_status": 200,
+      "bytes": 5790,
+      "sha256": "be967fb7b7ae0b8a9a1f876a5cecb0306d9464c653388b7628387c79d7546e83"
+    },
+    {
+      "id": "calls",
+      "title": "一对一语音通话",
+      "path": "docs/api/voice-calls.md",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/docs/api/voice-calls.md",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/docs/api/voice-calls.md",
+      "http_status": 200,
+      "bytes": 4567,
+      "sha256": "44d40c9b3b5bc1da034375882cd50c74779a18faa7c21330e654ad9310027c6b"
+    },
+    {
+      "id": "webmcp",
+      "title": "五个 WebMCP 站点工具",
+      "path": "frontend/src/webmcp.ts",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/frontend/src/webmcp.ts",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/frontend/src/webmcp.ts",
+      "http_status": 200,
+      "bytes": 7785,
+      "sha256": "d2da2c2f3475f5b43bf689bc22e7abe6117660c2b472f020e449d90ed5ffab69"
+    },
+    {
+      "id": "roles",
+      "title": "角色与权限模型",
+      "path": "docs/rbac.md",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/docs/rbac.md",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/docs/rbac.md",
+      "http_status": 200,
+      "bytes": 6294,
+      "sha256": "956bea16cfebe5f129227714d987c9ad6168b72d014a824530516fe572f037f1"
+    },
+    {
+      "id": "notifications",
+      "title": "Telegram 离线提醒",
+      "path": "docs/telegram-notifications.md",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/docs/telegram-notifications.md",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/docs/telegram-notifications.md",
+      "http_status": 200,
+      "bytes": 2217,
+      "sha256": "d19e5520429cfc6a71673bea7c4397a26730845bf3f9f189b02bf4e1d582aa2d"
+    },
+    {
+      "id": "admin",
+      "title": "首次管理员初始化",
+      "path": "docs/admin-bootstrap.md",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/docs/admin-bootstrap.md",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/docs/admin-bootstrap.md",
+      "http_status": 200,
+      "bytes": 6371,
+      "sha256": "0066ced293ba8bf55213b549c100f0ee02ab4cfe0353fac0b5e87ef83881266f"
+    },
+    {
+      "id": "package",
+      "title": "版本与技术依赖",
+      "path": "package.json",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/package.json",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/package.json",
+      "http_status": 200,
+      "bytes": 2299,
+      "sha256": "134fe774a97e96cb65b0f1debfedf6a4d45f16d73aee3d4ef0e95ca561bb8a83"
+    },
+    {
+      "id": "license",
+      "title": "上游许可证",
+      "path": "LICENSE",
+      "url": "https://github.com/aozorae/Edgechat/blob/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/LICENSE",
+      "raw_url": "https://raw.githubusercontent.com/aozorae/Edgechat/5a69f11ef0b2bdbdee611620af0f438c68d90f1e/LICENSE",
+      "http_status": 200,
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    }
+  ]
+}

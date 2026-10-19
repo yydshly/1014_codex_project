@@ -73,6 +73,17 @@
       "demo_url": "https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/"
     },
     {
+      "id": "012",
+      "slug": "edgechat",
+      "title": "EdgeChat：自部署聊天系统原理研究",
+      "repository": "https://github.com/aozorae/Edgechat",
+      "summary": "源库提供自部署聊天、文件、网页一对一语音及限定桥接；我们整理架构、复用价值与六类产品假设，保留研究，暂不开发通用聊天产品。",
+      "status": "研究中",
+      "preview": "assets/edgechat-summary.png",
+      "preview_caption": "012 沿用已生成的原创总结图：源库能力与效果、Cloudflare 原理、网页接入、六类扩展假设、价值与当前取舍。",
+      "demo_url": null
+    },
+    {
       "id": "013",
       "slug": "crawl-hive",
       "title": "CrawlHive：跨平台信息监控的能力与本质",

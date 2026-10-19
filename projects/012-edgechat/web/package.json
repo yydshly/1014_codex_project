@@ -1,0 +1,13 @@
+{
+  "name": "edgechat-research-012",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node build.mjs && node server.mjs",
+    "start": "node build.mjs && node server.mjs",
+    "build": "node build.mjs",
+    "check": "node --check app.js && node --check data.js && node --check server.mjs && node --check scripts/build.mjs && node --check build.mjs"
+  }
+}

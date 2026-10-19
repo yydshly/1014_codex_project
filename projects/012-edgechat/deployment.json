@@ -1,0 +1,32 @@
+{
+  "project": "012-edgechat",
+  "status": "prepared-awaiting-public-verification",
+  "preparedDate": "2026-10-19",
+  "upstream": {
+    "repository": "https://github.com/aozorae/Edgechat",
+    "version": "2.16.6",
+    "commit": "5a69f11ef0b2bdbdee611620af0f438c68d90f1e",
+    "researchDate": "2026-10-15",
+    "license": "README GPL-3.0-or-later; LICENSE GNU GPL v3",
+    "runtimeTested": false
+  },
+  "scope": "仅发布中文研究摘要、九章图解、原总结图、离线页面和固定来源；不部署上游聊天后端。",
+  "guideImage": {
+    "path": "assets/edgechat-summary.png",
+    "unchangedOriginal": true,
+    "width": 2400,
+    "height": 6642
+  },
+  "localVerification": {
+    "summaryCards": 6,
+    "chapterLinks": 10,
+    "fixedSources": 18,
+    "fullImageOpens": true,
+    "offlineImagesEmbedded": true,
+    "mobileViewport": 390,
+    "horizontalOverflow": false,
+    "browserErrors": 0,
+    "fullSiteBuild": "passed"
+  },
+  "notVerified": ["上游后端部署", "真实多人消息", "Telegram与实例桥接", "真实语音通话", "性能及成本", "产品需求与付费意愿"]
+}

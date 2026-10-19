@@ -114,6 +114,20 @@
         "label": "AI 探索工作台",
         "path": "013-crawl-hive/explore/index.html"
       }
+    ],
+    "012": [
+      {
+        "label": "能力、原理与价值摘要",
+        "path": "012-edgechat/#synthesis"
+      },
+      {
+        "label": "一张图看完理解",
+        "path": "012-edgechat/#summary-overview"
+      },
+      {
+        "label": "产品方向与当前取舍",
+        "path": "012-edgechat/#understanding"
+      }
     ]
   }
 }
