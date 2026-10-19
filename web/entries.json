@@ -78,6 +78,20 @@
         "label": "真实探索档案",
         "path": "009-demand-discovery/#explore"
       }
+    ],
+    "011": [
+      {
+        "label": "理解摘要与研究引导图",
+        "path": "011-ancient-rap-battle/#synthesis"
+      },
+      {
+        "label": "压轴人间完整舞台版",
+        "path": "011-ancient-rap-battle/#repaired-film-004"
+      },
+      {
+        "label": "思考与可扩展方向",
+        "path": "011-ancient-rap-battle/#reflection"
+      }
     ]
   }
 }

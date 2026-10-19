@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "title": "李白 × 杜甫 · 三句原创小样",
+  "status": "partial-generated",
+  "generated_at": "2026-10-15T08:54:06.819Z",
+  "provenance": {
+    "kind": "locally-produced",
+    "project_id": "011",
+    "experiment_id": "001-libai-dufu"
+  },
+  "production": {
+    "image_provider": "内置 ImageGen · 3张原创参考图",
+    "voice_provider": "MiniMax speech-2.8-turbo · 两种声线",
+    "video_provider": "ChatArt 网页 · MiniMax H3 × 2 / Seedance 2.0 Fast × 1",
+    "music_provider": "本地原创合成节拍",
+    "bpm": 100,
+    "total_duration": 19.2
+  },
+  "video_service": {
+    "provider": "ChatArt",
+    "status": "partially_completed",
+    "created_tasks": 4,
+    "outputs_available": 3,
+    "full_four_line_assembly": false
+  },
+  "clips": [
+    {
+      "id": "A01",
+      "actor": "李白",
+      "text": "酒杯一举，银河都来捧场",
+      "start": 2.4,
+      "end": 7.2,
+      "heard_start": 2.862,
+      "heard_end": 4.783,
+      "status": "completed",
+      "video_generated": true,
+      "provider": "ChatArt",
+      "model_label": "MiniMax H3",
+      "credits_displayed": 75,
+      "asset": {
+        "sha256": "52a4be38964b6f2ee33d4708ec864b73c27ff1c624824c31fab2fa64c4b39380",
+        "size_bytes": 4887822
+      },
+      "assembly": {
+        "source_in": 0,
+        "source_out": 4.8,
+        "source_duration": 5.166667,
+        "slot_start": 2.4,
+        "slot_end": 7.2
+      },
+      "qa": {
+        "audio_match": true,
+        "correlation": 0.998,
+        "min_window_correlation": 0.997,
+        "thresholds": {
+          "overall": 0.85,
+          "min_window": 0.8
+        },
+        "suggested_picture_advance_seconds": 0,
+        "manual_lip_review": "required",
+        "video_sha256": "52a4be38964b6f2ee33d4708ec864b73c27ff1c624824c31fab2fa64c4b39380",
+        "audio_sha256": "07147fa241668df8663e6e3765cac9c86f5ab99472fb75545c991b3e234ae3e2",
+        "checked_at": "2026-10-15T07:42:28.968Z",
+        "scope": "原片音轨与输入人声的能量包络筛查，不是口型评分"
+      }
+    },
+    {
+      "id": "A02",
+      "actor": "李白",
+      "text": "你的工整，装不下我的月光",
+      "start": 7.2,
+      "end": 12,
+      "heard_start": 7.655,
+      "heard_end": 9.638,
+      "status": "completed",
+      "video_generated": true,
+      "provider": "ChatArt",
+      "model_label": "Seedance 2.0 Fast",
+      "credits_displayed": 60,
+      "asset": {
+        "sha256": "e050ae36759707ee8f5c58ec71939c600c89b443a1ae199d14efc5f6ac17d4a6",
+        "size_bytes": 3038815
+      },
+      "assembly": {
+        "source_in": 0,
+        "source_out": 5.041667,
+        "source_duration": 5.041667,
+        "slot_start": 7.2,
+        "slot_end": 12,
+        "retime": {
+          "method": "piecewise_linear_video_retime",
+          "control_points": [
+            [
+              0,
+              0
+            ],
+            [
+              0.57,
+              0.45
+            ],
+            [
+              1.31,
+              1.09
+            ],
+            [
+              2.39,
+              1.5
+            ],
+            [
+              3.59,
+              2.44
+            ],
+            [
+              5.041667,
+              4.8
+            ]
+          ],
+          "sync_passed": false
+        }
+      },
+      "qa": {
+        "audio_match": false,
+        "correlation": 0.218,
+        "min_window_correlation": -0.375,
+        "thresholds": {
+          "overall": 0.85,
+          "min_window": 0.8
+        },
+        "suggested_picture_advance_seconds": 0.16,
+        "manual_lip_review": "required",
+        "video_sha256": "e050ae36759707ee8f5c58ec71939c600c89b443a1ae199d14efc5f6ac17d4a6",
+        "audio_sha256": "4705b6cfdc958a3d3dad06bada168a859c2781f5ef9ea277784258477ccc65ce",
+        "checked_at": "2026-10-15T08:20:23.406Z",
+        "scope": "原片音轨与输入人声的能量包络筛查，不是口型评分"
+      }
+    },
+    {
+      "id": "B01",
+      "actor": "杜甫",
+      "text": "月光再亮，也得照见风霜",
+      "start": 12,
+      "end": 16.8,
+      "heard_start": 12.459,
+      "heard_end": 14.316,
+      "status": "completed",
+      "video_generated": true,
+      "provider": "ChatArt",
+      "model_label": "MiniMax H3",
+      "credits_displayed": 75,
+      "asset": {
+        "sha256": "fc3ad799465487f9109201b3abddedf0e04035b200ab054dcfb023eed3f2b496",
+        "size_bytes": 3502853
+      },
+      "assembly": {
+        "source_in": 0,
+        "source_out": 4.8,
+        "source_duration": 5.166667,
+        "slot_start": 12,
+        "slot_end": 16.8
+      },
+      "qa": {
+        "audio_match": false,
+        "correlation": 0.864,
+        "min_window_correlation": 0.482,
+        "thresholds": {
+          "overall": 0.85,
+          "min_window": 0.8
+        },
+        "suggested_picture_advance_seconds": -0.02,
+        "manual_lip_review": "required",
+        "video_sha256": "fc3ad799465487f9109201b3abddedf0e04035b200ab054dcfb023eed3f2b496",
+        "audio_sha256": "d7e9c0d19dd1b83252f5975e5bf56ad568e735d680e5e9db78e79758dc9c8a29",
+        "checked_at": "2026-10-15T08:46:53.712Z",
+        "scope": "原片音轨与输入人声的能量包络筛查，不是口型评分"
+      }
+    }
+  ],
+  "cost": {
+    "provider": "ChatArt",
+    "video_credits_estimate": 285,
+    "returned_clip_credits_estimate": 210,
+    "video_credits_spent": null,
+    "credit_cap": 300,
+    "invoice_verified": false,
+    "note": "285钻石是四任务网页标价，三条已返回素材标价合计210；实际扣减及图像/TTS费用未核对。"
+  },
+  "assets": {
+    "video": {
+      "path": "media/own-libai-dufu-v1.mp4",
+      "size_bytes": 5606286,
+      "sha256": "ea4ed6b799176315c69a5505756117a61dca7d215fb91670d26bff900709d1a4",
+      "width": 1280,
+      "height": 720,
+      "fps": 25,
+      "video_codec": "h264",
+      "audio_codec": "aac"
+    },
+    "poster": {
+      "path": "media/own-poets-v1.png",
+      "sha256": "0c1e7a6b62264024d5d63a0e0d73ddae8fd5b3ff5929c4aa1b53a76f52ed12a7"
+    }
+  },
+  "assembly": {
+    "status": "three_line_demo_completed",
+    "source_clips": 3,
+    "source_hashes_verified": true,
+    "final_hash_verified": true,
+    "intro_still_seconds": 2.4,
+    "outro_still_seconds": 2.4,
+    "unified_audio": true,
+    "full_four_line_assembly": false,
+    "audio_source_ranges": [
+      [
+        0,
+        16.8
+      ],
+      [
+        21.6,
+        24
+      ]
+    ],
+    "fade_out": {
+      "start": 18.4,
+      "duration": 0.8
+    }
+  },
+  "remote_generation": {
+    "provider": "ChatArt",
+    "status": "pending",
+    "submitted_clips": 4,
+    "outputs_available": 3,
+    "planned_credits": 285,
+    "credit_cap": 300,
+    "models": [
+      "MiniMax H3",
+      "Seedance 2.0 Fast"
+    ],
+    "last_checked_at": "2026-10-15T08:47:26.195031Z",
+    "outputs": [
+      {
+        "id": "A01",
+        "video_url": "https://files.chatartpro.com/web-video/20261015/6ad08258dd350.mp4",
+        "model": "MiniMax H3"
+      },
+      {
+        "id": "A02",
+        "video_url": "https://files.chatartpro.com/web-video/20261015/6ad08a0a3d996.mp4",
+        "model": "Seedance 2.0 Fast"
+      },
+      {
+        "id": "B01",
+        "video_url": "https://files.chatartpro.com/web-video/20261015/6ad09177c773f.mp4",
+        "model": "MiniMax H3"
+      }
+    ],
+    "actual_credit_debit_verified": false
+  },
+  "limitations": [
+    "当前交付为19.2秒三句实测：李白两句、杜甫一句。第四句B02尚未回传，完整四句交锋未完成。",
+    "中间三句采用真实生成视频；片头片尾各2.4秒为原创静态共同舞台图。",
+    "A01原始音轨筛查通过；A02与B01原始音轨筛查未通过，均保留失败结果，不作为精准口型成片。",
+    "A02按两组声学活动对画面分段重定时，统一配音不变；B01保持原画面时间。抽帧、音轨相关性和tiny转写均不能证明逐音素准确。",
+    "人声为节奏化TTS加原创100 BPM节拍，尚未使用Suno歌曲生成；人物与歌词为AI娱乐演绎。",
+    "四任务网页标价合计285钻石，上限300，无重抽；实际总扣减和账单未核对。",
+    "直接MiniMax API首条曾被HTTP402/2068拒绝；ChatArt网页另行生成，网页标注的后台模型实现未独立验证。"
+  ]
+}

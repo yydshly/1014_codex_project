@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "title": "月光与人间",
+  "checked_on": "2026-10-15",
+  "endpoint": "https://api.minimax.cn/v1/music_generation",
+  "request": {
+    "model": "music-3.0",
+    "prompt": "约27秒的完整中文国风说唱短曲，100 BPM，D minor，开头约一小节古筝拨弦和笛声，清晰厚重的hip hop鼓与低音，唐代诗人友好交锋的舞台感。两位明显不同的成年男性声音，前两句由明亮洒脱的青年男声以有旋律的rap演唱，后两句切换低沉坚定的成熟男声回应；吐字清楚，押重音，避免朗读感。完整演唱提供的四句歌词，每句只唱一次，不添加任何歌词，不重复副歌。开场和最后约一小节为器乐，最后一个低音和古筝音形成明确收束，短余响自然结束。总长目标24到30秒，精炼完整的开场、交锋、结尾，录音室成品，鼓和人声保持清晰。",
+    "lyrics": "[Intro]\n[Verse]\n酒杯一举，银河都来捧场\n你的工整，装不下我的月光\n[Verse]\n月光再亮，也得照见风霜\n我把人间，写成压轴的回响\n[Outro]",
+    "stream": false,
+    "output_format": "hex",
+    "lyrics_optimizer": false,
+    "is_instrumental": false,
+    "audio_setting": {
+      "sample_rate": 44100,
+      "bitrate": 256000,
+      "format": "mp3"
+    }
+  },
+  "pricing": {
+    "reference_cny_per_song": 1,
+    "max_requests": 1,
+    "max_estimate_cny": 1,
+    "actual_cost_cny": null,
+    "source": "https://platform.minimax.cn/docs/pricing/overview"
+  },
+  "availability": "官方自2026-08-20起仅对历史付费用户保留；本地配置是否具备音乐权限需一次请求验证。免费版本已停服。",
+  "timing": "接口没有精确duration参数；24–30秒和双声线均为提示词目标，返回后实测，不保证遵循。",
+  "sources": [
+    "https://platform.minimax.cn/docs/api-reference/music-generation",
+    "https://platform.minimax.cn/docs/pricing/overview"
+  ],
+  "no_paid_retry": true
+}

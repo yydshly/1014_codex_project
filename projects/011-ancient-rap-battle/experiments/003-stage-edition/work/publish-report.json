@@ -1,0 +1,13 @@
+{
+  "status": "published-local",
+  "at": "2026-10-15T11:41:56.596Z",
+  "video_sha256": "011c49f6527f84ca834ac319ad14bb97dd4a410b75a37729b00bf025382970d6",
+  "base_video_sha256": "88c112607640aeaa960a4682aca4a533781d58b82e658af4ad2777fa1848871e",
+  "new_video_generation_calls": 0,
+  "public_files": [
+    "media/own-libai-dufu-v1.mp4",
+    "media/own-poets-v1.png",
+    "data/own-sample-run.json"
+  ],
+  "deployed": false
+}

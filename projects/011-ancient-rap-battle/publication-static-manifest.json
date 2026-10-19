@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-19",
+  "public_project": "011-ancient-rap-battle",
+  "static_files": 67,
+  "bytes": 257903480,
+  "runtime_model_calls": false,
+  "local_generation_models_published": false,
+  "original_guide_preserved": true,
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 91803,
+      "sha256": "eb8eeecd5e565eee27b1906d18f549801bf78dbbce660f3a3fab799b7cc4b2f7"
+    },
+    {
+      "path": "data/004-h3-audio-pilot-pending-0856.json",
+      "bytes": 3616,
+      "sha256": "8269abd324b64bc093ab20a9208abb40df83a0df3cc52082d0588580efcf6294"
+    },
+    {
+      "path": "data/004-h3-audio-pilot.json",
+      "bytes": 6535,
+      "sha256": "35831d5225442a6b574fda098024646e7c7e36bc92e8de649faea4a0e3220f6b"
+    },
+    {
+      "path": "data/004-h3-pilot-acceptance.json",
+      "bytes": 1786,
+      "sha256": "ddeccce64e9a8ef78c2f65ef7f3487e2d2063d772386f1aa16c49756091a877e"
+    },
+    {
+      "path": "data/004-pilot-demo.json",
+      "bytes": 16097,
+      "sha256": "486acd3caf4f42ac9da12ebe53ce77f9b7fb29771fc742ddd79b5e85db1c8087"
+    },
+    {
+      "path": "data/004-repaired-film.json",
+      "bytes": 12458,
+      "sha256": "e201df68df24b57bbe3a1f3ca4d0e99828bbecff1eadbc582f96e9fcd1e59bad"
+    },
+    {
+      "path": "data/004-stage-film.json",
+      "bytes": 54188,
+      "sha256": "a3116cb804950d622e505dbeb8ea2d8c3f4d29e3ac8cc1977c677aaa1ea0d19c"
+    },
+    {
+      "path": "data/own-sample-run.json",
+      "bytes": 442592,
+      "sha256": "145aaffd378e9af8b26fe472b3e9fa80568064c2cd7feb5a8f8db8fe9bfee8c8"
+    },
+    {
+      "path": "data/research-overview-sources.json",
+      "bytes": 26432,
+      "sha256": "77ddf535178f6339ac61541bebf5c96ec714e070d5cba5c3cdecf651862b12a4"
+    },
+    {
+      "path": "data/source-register.json",
+      "bytes": 427991,
+      "sha256": "9b2793b51e6f06a85ac3d3e2ef44318108557d9b937b927f164b8800049e84a4"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 19801,
+      "sha256": "d5bb7e5816e1d4f2651dd3fc900ad0e9b9cff7e4230a9832029751fbcea0b075"
+    },
+    {
+      "path": "docs/RESEARCH.md",
+      "bytes": 37559,
+      "sha256": "e00c19149d1011886fd859d637b671077549100d0e56b81ee5a22ed6dc67aee2"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "bytes": 17708,
+      "sha256": "c0cce9cb39b286c89128e956e1ad80ba5be60cf670522ff934b2a102d1d4b1cf"
+    },
+    {
+      "path": "docs/UNDERSTANDING.md",
+      "bytes": 8558,
+      "sha256": "9fce23ad12c9cbbe7a4a913ea381031b414671bd96e4a6460a8f99ab1bb27f21"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "bytes": 35432,
+      "sha256": "c48e005c96658cc313db24e5eed2f1383532b858be0496c0691a2fda243e1a58"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 230,
+      "sha256": "a07da418aadca3efb565bbdd3c780b7f99616bdf54aee0670da612ef87777c30"
+    },
+    {
+      "path": "h3-pilot-report.mjs",
+      "bytes": 4326,
+      "sha256": "5cb2bfcce5b65aa5a77c9a497880fc475e1c85ed2a0e5dde59dba3e87d0b32e0"
+    },
+    {
+      "path": "history/001-full-four-line-demo.mp4",
+      "bytes": 6374421,
+      "sha256": "d3ff4396ae24c9b9540a006267232aebea738e112d34e02cacdfb964b42e0e37"
+    },
+    {
+      "path": "history/001-full-run.json",
+      "bytes": 4382,
+      "sha256": "0f393d277e6c7c6db1a4bfda3c5e3a664cbf643152519794785b9b0e51360461"
+    },
+    {
+      "path": "history/001-poets.png",
+      "bytes": 2301814,
+      "sha256": "0c1e7a6b62264024d5d63a0e0d73ddae8fd5b3ff5929c4aa1b53a76f52ed12a7"
+    },
+    {
+      "path": "history/001-run.json",
+      "bytes": 8310,
+      "sha256": "bb509a20fd81ecc7e126dbe13a13e8555333cf2b3143e5f9dbd7047965f105e3"
+    },
+    {
+      "path": "history/001-three-line-demo.mp4",
+      "bytes": 5606286,
+      "sha256": "ea4ed6b799176315c69a5505756117a61dca7d215fb91670d26bff900709d1a4"
+    },
+    {
+      "path": "history/002-jing-feng-shuang-v2.mp4",
+      "bytes": 18110087,
+      "sha256": "88c112607640aeaa960a4682aca4a533781d58b82e658af4ad2777fa1848871e"
+    },
+    {
+      "path": "history/002-poets-v2.png",
+      "bytes": 2340087,
+      "sha256": "807a064b780e0c12007e1e3469daad2e33eb004b2bafad247799bb4529f14d05"
+    },
+    {
+      "path": "history/002-run.json",
+      "bytes": 475608,
+      "sha256": "69fb6cb33ce2699bdcbbd80b39aa91ca9d9c420b5d87d5b52abb26ece4965a14"
+    },
+    {
+      "path": "history/003-jing-feng-shuang-stage-v3.mp4",
+      "bytes": 25573442,
+      "sha256": "011c49f6527f84ca834ac319ad14bb97dd4a410b75a37729b00bf025382970d6"
+    },
+    {
+      "path": "history/003-run.json",
+      "bytes": 442592,
+      "sha256": "145aaffd378e9af8b26fe472b3e9fa80568064c2cd7feb5a8f8db8fe9bfee8c8"
+    },
+    {
+      "path": "history/003-stage-v3.png",
+      "bytes": 2457087,
+      "sha256": "93f81dc4d6b4eb21c8c119e0825be461ce027325665da2122bc1ed5106e5cd49"
+    },
+    {
+      "path": "index.html",
+      "bytes": 65464,
+      "sha256": "0c3dc4aa5c65e7fced49741f48825d6b1c04ecd948a222768b27e048894c41f2"
+    },
+    {
+      "path": "licenses/UPSTREAM-MIT.txt",
+      "bytes": 1091,
+      "sha256": "c9ea59d28751414cb9b96d311ceb4a28b67f0b2b455ccec0d185fcee3c172e7b"
+    },
+    {
+      "path": "media/cover-16x9.jpg",
+      "bytes": 441172,
+      "sha256": "d7de767201546b12a23f8b33008d28bfb45e00b42e702525af60ea97b36c3bcf"
+    },
+    {
+      "path": "media/demo-github.mp4",
+      "bytes": 9381327,
+      "sha256": "3318276b94c109381747c4b3838676d9a32b87189e3e626179aa05381b483fc9"
+    },
+    {
+      "path": "media/frame-1.jpg",
+      "bytes": 64218,
+      "sha256": "aad33c500b75418118b51438395592eaa7263adcea93335ae832d570046fbda6"
+    },
+    {
+      "path": "media/frame-2.jpg",
+      "bytes": 67758,
+      "sha256": "0fc0fb72844c89c0b0fc16acd36ea60ac3685978fb19a9aa670f79dfd107ae75"
+    },
+    {
+      "path": "media/h3-audio-pilot-004/accepted.png",
+      "bytes": 101972,
+      "sha256": "41927c0a278511186e5b44b960629ae8a8ce0dde2f3c614ff5ac784cf3e211d8"
+    },
+    {
+      "path": "media/h3-audio-pilot-004/before-submit.png",
+      "bytes": 136072,
+      "sha256": "f081b04add394f10be8bcb97cbb85434f04eee31b73da9515e3bf20e53880687"
+    },
+    {
+      "path": "media/h3-audio-pilot-004/model-first-frame.jpg",
+      "bytes": 60228,
+      "sha256": "672f8311205fd3d33f5f34e2f7b0995dda6e2d25f04ea200ac87c868544904fb"
+    },
+    {
+      "path": "media/h3-audio-pilot-004/model-original.mp4",
+      "bytes": 3342437,
+      "sha256": "13af814763a8ede67fb627e5724342bb760446e80a7610b8ce2a07d61668d129"
+    },
+    {
+      "path": "media/h3-audio-pilot-004/reference-9.4-14.4.wav",
+      "bytes": 960078,
+      "sha256": "79f91a413fee6811b2c1a90e762f44150cc0a0d98c8bd207fb0958a719e18962"
+    },
+    {
+      "path": "media/h3-audio-pilot-004/reference-listen-only.mp4",
+      "bytes": 3359104,
+      "sha256": "cb2c25bbe17d1c8e8feeb431fa31d5852dcba6ac308b8a00c065e33f9147944f"
+    },
+    {
+      "path": "media/h3-audio-pilot-004/typed-inputs.png",
+      "bytes": 55185,
+      "sha256": "9c07d84783bb8304ed64948762d9dedaff0050e8a4f32aac03f408c0f2807c31"
+    },
+    {
+      "path": "media/own-libai-dufu-v1.mp4",
+      "bytes": 25573442,
+      "sha256": "011c49f6527f84ca834ac319ad14bb97dd4a410b75a37729b00bf025382970d6"
+    },
+    {
+      "path": "media/own-poets-v1.png",
+      "bytes": 2457087,
+      "sha256": "93f81dc4d6b4eb21c8c119e0825be461ce027325665da2122bc1ed5106e5cd49"
+    },
+    {
+      "path": "media/pilot-004/R01-MASTER.png",
+      "bytes": 2352715,
+      "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c"
+    },
+    {
+      "path": "media/pilot-004/R02-LIBAI.png",
+      "bytes": 2068459,
+      "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871"
+    },
+    {
+      "path": "media/pilot-004/R03-DUFU.png",
+      "bytes": 2133385,
+      "sha256": "5d03d6ee8a07d9cc849821137555e76d8e557e8c2937569be5baa3b190d1fdb1"
+    },
+    {
+      "path": "media/pilot-004/R04-STAGE.png",
+      "bytes": 2214849,
+      "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a"
+    },
+    {
+      "path": "media/pilot-004/R05-CROWD.png",
+      "bytes": 2352432,
+      "sha256": "40439336b6c9921f024953f1cfb36381442156e05deba275845842bd8be7ed5f"
+    },
+    {
+      "path": "media/pilot-004/R06-DETAIL.png",
+      "bytes": 2318516,
+      "sha256": "9415cc240ac14625691efc19eaf26fbb2fec3252d569dd095e379c1610603747"
+    },
+    {
+      "path": "media/pilot-004/singing-original.mp4",
+      "bytes": 2749170,
+      "sha256": "c5985495b7220d2b9bf39f09764b944b2acce4961d0ee88c5b4360241bb02fce"
+    },
+    {
+      "path": "media/pilot-004/singing-reference-diagnostic.mp4",
+      "bytes": 2766463,
+      "sha256": "01e990b8ed9affbbead5e8c5de37ab9b0f6786536106906e8f0f16d6f1d7911b"
+    },
+    {
+      "path": "media/pilot-004/stage-original.mp4",
+      "bytes": 7202655,
+      "sha256": "bb101af1ac0ae290818079b6d5ad9fa82afee21fd98bdd63a1b9d4eca75510c3"
+    },
+    {
+      "path": "media/pilot-004/stage-song-preview.mp4",
+      "bytes": 6252638,
+      "sha256": "cf9410c549e7898704af7bbbf7149ae6c6cf437c296ecc06330e9b5487f49740"
+    },
+    {
+      "path": "media/pilot-004/ya-zhou-ren-jian.mp3",
+      "bytes": 2276894,
+      "sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0"
+    },
+    {
+      "path": "media/repaired-film-004/ya-zhou-ren-jian-audio-driven.jpg",
+      "bytes": 125704,
+      "sha256": "9191bdea2eb2afcf3a766c0c32b29d458ed5a6f1af2724cdf9946b430823b0b6"
+    },
+    {
+      "path": "media/repaired-film-004/ya-zhou-ren-jian-audio-driven.mp4",
+      "bytes": 45964902,
+      "sha256": "97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6"
+    },
+    {
+      "path": "media/research-overview-011-preview.jpg",
+      "bytes": 684881,
+      "sha256": "9a859820a7b4bcb574ca270b85d653ed869cae7a7b45c24beacfd3d9a8892006"
+    },
+    {
+      "path": "media/research-overview-011.png",
+      "bytes": 6591274,
+      "sha256": "cbe55cde30b35917581c986454e7a86542ce4d3832711133cd421c2431a32990"
+    },
+    {
+      "path": "media/research-overview-011.svg",
+      "bytes": 1204456,
+      "sha256": "5bb81a3664cab6aba37f3f0d92b5c2966f02991df0a3c3d0d7e85ca617261838"
+    },
+    {
+      "path": "media/stage-film-004/poster.jpg",
+      "bytes": 203056,
+      "sha256": "a2872761614025eed427a254cccc7b00890eef79c7d067cfd887fee2ff0a6928"
+    },
+    {
+      "path": "media/stage-film-004/ya-zhou-ren-jian-stage.mp4",
+      "bytes": 57372869,
+      "sha256": "525c42dfe2bbe7bf0fe0dff77f122451464927e5aede6488a1b19f9691a0cb45"
+    },
+    {
+      "path": "performance-report.mjs",
+      "bytes": 13631,
+      "sha256": "2e92998d974d2c60002f6dccccf2627fd8f9b7c128d402999994392b9215575f"
+    },
+    {
+      "path": "pilot-report.mjs",
+      "bytes": 3251,
+      "sha256": "4dad0ce5c4a443d48c26c56456a43a2b65e77c87258d62a1588c4c8141f3f732"
+    },
+    {
+      "path": "repaired-film-report.mjs",
+      "bytes": 3418,
+      "sha256": "8644c917d323dc7d573d51b48488c16f0406427db1e399ed462d5741484f74d3"
+    },
+    {
+      "path": "sample-report.mjs",
+      "bytes": 10448,
+      "sha256": "50fdc383d9b17ecf2fe744cf6291537adf181c3f036b58eb218a20401a661c74"
+    },
+    {
+      "path": "stage-film-report.mjs",
+      "bytes": 7890,
+      "sha256": "9ec593ade30d96b9cfe8f70db3680f2dda8f0ebcae521ebc61448ce88ddb870b"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 61661,
+      "sha256": "a59bacf5fa258c4216c2ec7c279af4cc9c279cda0aa91b89184640f1fc72134d"
+    }
+  ]
+}

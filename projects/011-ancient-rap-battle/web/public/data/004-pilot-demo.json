@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "experiment_id": "004-performance-film",
+  "title": "《压轴人间》普通视频真实测试",
+  "status": "real-pilots-only-full-film-not-completed",
+  "generated_at": "2026-10-15T17:31:01.118048+00:00",
+  "full_film_completed": false,
+  "mv_feature_used": false,
+  "verification": {
+    "scope": "仅本地现有JSON、文件SHA和MP4头元数据复核；未运行媒体解码、模型、网络或付费调用。",
+    "current_files_hashed": true,
+    "new_visual_review_performed": false,
+    "new_audio_listening_performed": false,
+    "mouth_score_computed": false
+  },
+  "source_song": {
+    "title": "压轴人间",
+    "path": "media/pilot-004/ya-zhou-ren-jian.mp3",
+    "sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+    "bytes": 2276894,
+    "container_duration_seconds": 94.615458,
+    "decoded_duration_at_48k_seconds": 94.61552083333333,
+    "provider": "用户提供，生成平台与具体模型未独立核验",
+    "complete_song_video_status": "not-completed",
+    "source_path": "music/source-ya-zhou-ren-jian.mp3"
+  },
+  "assets": [
+    {
+      "path": "media/pilot-004/stage-original.mp4",
+      "sha256": "bb101af1ac0ae290818079b6d5ad9fa82afee21fd98bdd63a1b9d4eca75510c3",
+      "bytes": 7202655,
+      "duration_seconds": 10.048,
+      "video_duration_seconds": 10.041666666666666,
+      "width": 1268,
+      "height": 728,
+      "fps": 24,
+      "video_frame_samples": 241,
+      "hash_verified_from_current_file": true,
+      "metadata_method": "read-existing-MP4-mvhd-mdhd-tkhd-stsz-no-decode",
+      "tracks": [
+        {
+          "kind": "vide",
+          "duration_seconds": 10.041666666666666,
+          "width": 1268,
+          "height": 728,
+          "frame_samples": 241,
+          "fps": 24
+        },
+        {
+          "kind": "soun",
+          "duration_seconds": 10.048
+        }
+      ],
+      "id": "stage-original",
+      "title": "舞台试片 · 模型原声",
+      "provider_task_id": "1027533",
+      "requested_seconds": 10,
+      "kind": "ordinary-generated-video",
+      "audio_mode": "model-original-audio",
+      "motion_status": "accepted-for-pilot-by-sampled-visual-review",
+      "lip_sync_test": false,
+      "full_song_video": false,
+      "notes": [
+        "真实双人动态舞台试片，保留模型原声。",
+        "以接触表和8.5秒大帧审看确认动作、身份与舞台基本连续；未宣称逐帧无瑕。"
+      ],
+      "source_path": "clips/skill-open-t1-download/SKILL_OPEN_t1-original.mp4"
+    },
+    {
+      "path": "media/pilot-004/stage-song-preview.mp4",
+      "sha256": "cf9410c549e7898704af7bbbf7149ae6c6cf437c296ecc06330e9b5487f49740",
+      "bytes": 6252638,
+      "duration_seconds": 9.4,
+      "video_duration_seconds": 9.4,
+      "width": 1280,
+      "height": 720,
+      "fps": 25,
+      "video_frame_samples": 235,
+      "hash_verified_from_current_file": true,
+      "metadata_method": "read-existing-MP4-mvhd-mdhd-tkhd-stsz-no-decode",
+      "tracks": [
+        {
+          "kind": "vide",
+          "duration_seconds": 9.4,
+          "width": 1280,
+          "height": 720,
+          "frame_samples": 235,
+          "fps": 25
+        },
+        {
+          "kind": "soun",
+          "duration_seconds": 9.421333333333333
+        }
+      ],
+      "id": "stage-song-preview",
+      "title": "开场预览 · 配《压轴人间》前奏",
+      "kind": "edited-preview",
+      "parent_asset_id": "stage-original",
+      "audio_mode": "original-song-replaced-model-audio",
+      "song_in": 0,
+      "song_out": 9.4,
+      "audio_source": "handoff-source/audio/01-OPEN.wav",
+      "gain_already_applied_db": -1.5,
+      "additional_gain_db": 0,
+      "lip_sync_test": false,
+      "full_song_video": false,
+      "notes": [
+        "从10秒舞台试片取9.4秒，配回用户歌曲前奏。",
+        "此镜头没有检验外部歌曲演唱口型。"
+      ],
+      "source_path": "delivery/skill-video-pilot/压轴人间-开场预览-普通视频生成.mp4"
+    },
+    {
+      "path": "media/pilot-004/singing-original.mp4",
+      "sha256": "c5985495b7220d2b9bf39f09764b944b2acce4961d0ee88c5b4360241bb02fce",
+      "bytes": 2749170,
+      "duration_seconds": 5.056,
+      "video_duration_seconds": 5.041666666666667,
+      "width": 1268,
+      "height": 728,
+      "fps": 24,
+      "video_frame_samples": 121,
+      "hash_verified_from_current_file": true,
+      "metadata_method": "read-existing-MP4-mvhd-mdhd-tkhd-stsz-no-decode",
+      "tracks": [
+        {
+          "kind": "vide",
+          "duration_seconds": 5.041666666666667,
+          "width": 1268,
+          "height": 728,
+          "frame_samples": 121,
+          "fps": 24
+        },
+        {
+          "kind": "soun",
+          "duration_seconds": 5.056
+        }
+      ],
+      "id": "singing-original",
+      "title": "5秒试唱 · 模型原声",
+      "provider_task_id": "1027559",
+      "requested_seconds": 5,
+      "kind": "ordinary-generated-video-audio-compatibility-probe",
+      "audio_mode": "model-original-audio",
+      "song_in": 9.4,
+      "song_out": 14.4,
+      "reference_lyrics": "我携一身月色，踏过长安的墙",
+      "audio_reference_submitted_as_media": true,
+      "audio_reference_recognized_by_backend": null,
+      "native_audio_preserves_reference": false,
+      "visual_lip_sync_status": "not-validated",
+      "accepted_for_lip_sync": false,
+      "full_song_video": false,
+      "notes": [
+        "参考图片和原曲5秒MP3已随现有普通视频参数提交，任务成功返回真实动态片。",
+        "原生音轨与外部原曲不一致；后台是否识别并用于音频驱动仍未证实。",
+        "ASR与音轨相关仅为音频粗筛，不能提供嘴型通过或失败的数值。"
+      ],
+      "source_path": "clips/skill-lip-A1-t1-download/video_20261016003014.mp4"
+    },
+    {
+      "path": "media/pilot-004/singing-reference-diagnostic.mp4",
+      "sha256": "01e990b8ed9affbbead5e8c5de37ab9b0f6786536106906e8f0f16d6f1d7911b",
+      "bytes": 2766463,
+      "duration_seconds": 5.042,
+      "video_duration_seconds": 5.041666666666667,
+      "width": 1268,
+      "height": 728,
+      "fps": 24,
+      "video_frame_samples": 121,
+      "hash_verified_from_current_file": true,
+      "metadata_method": "read-existing-MP4-mvhd-mdhd-tkhd-stsz-no-decode",
+      "tracks": [
+        {
+          "kind": "vide",
+          "duration_seconds": 5.041666666666667,
+          "width": 1268,
+          "height": 728,
+          "frame_samples": 121,
+          "fps": 24
+        },
+        {
+          "kind": "soun",
+          "duration_seconds": 5.063
+        }
+      ],
+      "id": "singing-reference-diagnostic",
+      "title": "原曲对照 · 仅配回音乐，未修嘴型",
+      "kind": "reference-listening-diagnostic",
+      "parent_asset_id": "singing-original",
+      "audio_mode": "original-song-replaced-model-audio",
+      "song_in": 9.4,
+      "song_out": 14.4,
+      "audio_source": "work/lip-pilot-A1/VA01-song-9.4-to-14.4.wav",
+      "audio_source_sha256": "b98dfba5b2fa3b8e90aef1de239ba12f7287367bdcb24f07f4a090493a6d7104",
+      "gain_already_applied_db": -1.5,
+      "additional_gain_db": 0,
+      "video_stream_copy": true,
+      "tail_silence_pad_seconds": 0.04166700000000034,
+      "visual_lip_sync_status": "not-validated",
+      "accepted_for_lip_sync": false,
+      "copied_audio_is_lipsync_evidence": false,
+      "full_song_video": false,
+      "notes": [
+        "保留原片视频流，只用指定原曲替换声音，帮助听看对照。",
+        "未做嘴部校正；不能因音乐一致就判定口型一致。"
+      ],
+      "source_path": "work/lip-review-tools/A1-original/reference-listen-only.mp4"
+    }
+  ],
+  "generation_facts": {
+    "submitted_successful_video_tasks": 2,
+    "provider_task_ids": [
+      "1027533",
+      "1027559"
+    ],
+    "uncreated_legacy_video_attempts": 3,
+    "submitted_image_tasks": 0,
+    "ordinary_video_generation_demonstrated": true,
+    "reference_identity_and_stage_continuity": "accepted-for-first-stage-pilot-with-sampled-review-limitations",
+    "external_song_audio_media_submitted_for_singing_probe": true,
+    "external_song_audio_recognized_by_backend": null,
+    "native_singing_audio_preserves_reference": false,
+    "visual_lip_sync_passed": false,
+    "visual_lip_sync_result": "尚未通过验证，不将音频粗筛当作嘴型失败评分。",
+    "local_lip_correction_created": false,
+    "full_94_second_film_completed": false
+  },
+  "references": {
+    "provider": "OpenAI",
+    "tool": "built-in image_gen",
+    "model": "GPT image generation; exact backend model not separately exposed",
+    "primary_reference_count": 4,
+    "primary": [
+      {
+        "id": "R01-MASTER",
+        "path": "media/pilot-004/R01-MASTER.png",
+        "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c",
+        "width": 1672,
+        "height": 941,
+        "source_path": "refs/R01-MASTER.png",
+        "bytes": 2352715
+      },
+      {
+        "id": "R02-LIBAI",
+        "path": "media/pilot-004/R02-LIBAI.png",
+        "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871",
+        "width": 1672,
+        "height": 941,
+        "source_path": "refs/R02-LIBAI.png",
+        "bytes": 2068459
+      },
+      {
+        "id": "R03-DUFU",
+        "path": "media/pilot-004/R03-DUFU.png",
+        "sha256": "5d03d6ee8a07d9cc849821137555e76d8e557e8c2937569be5baa3b190d1fdb1",
+        "width": 1672,
+        "height": 941,
+        "source_path": "refs/R03-DUFU.png",
+        "bytes": 2133385
+      },
+      {
+        "id": "R04-STAGE",
+        "path": "media/pilot-004/R04-STAGE.png",
+        "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+        "width": 1672,
+        "height": 941,
+        "source_path": "refs/R04-STAGE.png",
+        "bytes": 2214849
+      }
+    ],
+    "additional_environment_reference_count": 2,
+    "additional_environment": [
+      {
+        "id": "R05-CROWD",
+        "path": "media/pilot-004/R05-CROWD.png",
+        "sha256": "40439336b6c9921f024953f1cfb36381442156e05deba275845842bd8be7ed5f",
+        "width": 1672,
+        "height": 941,
+        "is_video": false,
+        "usage": "仅供后续真实视频的观众/舞台细节构图参考，不充当成片动态镜头。",
+        "source_path": "refs/R05-CROWD.png",
+        "bytes": 2352432
+      },
+      {
+        "id": "R06-DETAIL",
+        "path": "media/pilot-004/R06-DETAIL.png",
+        "sha256": "9415cc240ac14625691efc19eaf26fbb2fec3252d569dd095e379c1610603747",
+        "width": 1672,
+        "height": 941,
+        "is_video": false,
+        "usage": "仅供后续真实视频的观众/舞台细节构图参考，不充当成片动态镜头。",
+        "source_path": "refs/R06-DETAIL.png",
+        "bytes": 2318516
+      }
+    ],
+    "note": "主图为身份与场地权威，单人及空舞台由主图编辑派生；精确后端型号未单独暴露，不能称ChatArt GPT Image 2已付费成功。"
+  },
+  "cost": {
+    "currency": "ChatArt diamonds",
+    "credit_cap": 2400,
+    "successful_submitted_video_tasks": 2,
+    "provider_reported_credits": 225,
+    "committed_credits": 225,
+    "video_credits": 225,
+    "image_credits": 0,
+    "reserved_unconfirmed_credits": 50,
+    "exposure_credits": 275,
+    "uncommitted_headroom_after_reserve": 2125,
+    "actual_credits_spent": null,
+    "invoice_verified": false,
+    "tasks": [
+      {
+        "id": "SKILL_OPEN_t1",
+        "provider_task_id": "1027533",
+        "credits_reported_by_provider": 150,
+        "credits_committed": 150
+      },
+      {
+        "id": "SKILL_LIP_A1_t1",
+        "provider_task_id": "1027559",
+        "credits_reported_by_provider": 75,
+        "credits_committed": 75
+      }
+    ],
+    "note": "150+75为两条成功任务的官方返回值，并有余额差观察；独立账单未核验。旧图片任务未确认持久化，50钻仅保守预留，不计成功任务或已消费。"
+  },
+  "user_copy": {
+    "intro": "先看两条普通视频的真实测试：舞台动作已跑通，外部歌曲演唱口型仍需验证。完整94.6秒成片尚未完成。",
+    "stage": "同一组定妆参考生成了10秒动态舞台试片；下方9.4秒版本配上《压轴人间》前奏。",
+    "singing": "5秒试唱成功出片，但模型原声没有保留外部原曲；配回原曲的版本仅作对照，尚不能称为口型同步成果。",
+    "references": "4张人物与舞台定妆图统一形象，另有2张观众和细节参考图；这些图片不计作动态表演。",
+    "cost": "两条成功任务官方报告共225钻，另有50钻旧预留；本轮上限2400钻，未核独立账单。"
+  },
+  "handling_plan": {
+    "status": "proposal-only-no-new-submissions",
+    "steps": [
+      "先确认普通视频接口对外部原曲音频的明确输入方式及实际识别结果，继续使用普通视频路线。",
+      "沿用现有定妆和原曲9.4–14.4秒，先做5秒小样，带声核对可见嘴部开闭与实际唱词。",
+      "小样达到可接受效果后，再规划完整94.6秒、多机位舞台与观众镜头，保留完整歌曲并核算剩余额度。",
+      "若直接生成仍不能可靠跟随外部歌曲，保留原片和对照展示，清楚说明限制与可行的直接生成条件，不把配乐替换当成口型修复。"
+    ],
+    "constraints": [
+      "不用MV功能。",
+      "不新增本地口型模型或本地模型推理；本次模型清理由另一代理负责。",
+      "本说明不触发新生成或付费。",
+      "不将ASR、音轨相关或复制原曲当作视觉唇形评分。"
+    ]
+  },
+  "evidence_records": [
+    {
+      "path": "work/chatart-tasks.json",
+      "sha256": "9c611ff19f9993137b612970b805edcb9899f7cb4d085163752b60a882dbe115"
+    },
+    {
+      "path": "work/skill-video-pilot/qa-result.json",
+      "sha256": "485518b288b00cba1072e5782acb7aaf1110a2c4b597dad11e003dc3fb0be4fe"
+    },
+    {
+      "path": "work/skill-video-pilot/integration-record.json",
+      "sha256": "f0559230d7340d5de5f5e13bdc8ec7ea99b74d79a745a83b786ca2863f88e8f9"
+    },
+    {
+      "path": "work/skill-video-pilot/progress.json",
+      "sha256": "66a7611cbc5d2a6610e8d6118fba2e08d789caff295af131dcb30c04b48646ed"
+    },
+    {
+      "path": "work/lip-pilot-A1/progress.json",
+      "sha256": "c291ce1f3775b71a1174c19c9738a0e9d3cda0d59b0790397224c2029e8d75ed"
+    },
+    {
+      "path": "work/lip-pilot-A1/acoustic-screen.json",
+      "sha256": "a891a9e1ed13355c5d894396a5b8b1040f144f2ada601424258625d35950e8d1"
+    },
+    {
+      "path": "work/lip-pilot-A1/audio-source.json",
+      "sha256": "719ec86a2c724d944ad5438de354387318e90548eb580a98eef362fe2e9eb833"
+    },
+    {
+      "path": "work/lip-review-tools/A1-original/review.json",
+      "sha256": "396a6deb887e791fbf2cbc879779893e7bcdb13534352754ec0812cd6922714b"
+    },
+    {
+      "path": "work/new-song-analysis.json",
+      "sha256": "517608bfa801f58042e4deea19519f827b46e0e099bfc0968c3e6a178886078b"
+    },
+    {
+      "path": "refs/reference-images.json",
+      "sha256": "9a3ee98722001355829f1aac204e080c216d0782f755bb28b75dec4006e1e07b"
+    },
+    {
+      "path": "refs/additional-stage-references.json",
+      "sha256": "e52db10b7c48d3333645098c350827f5ce0a606e909997c57fbc19ad98ef44bc"
+    }
+  ],
+  "record_cautions": [
+    "integration-record.json的external_song_uploaded=false只描述首条OPEN试验；后续A1试验确已把MP3随参考媒体提交，但后台识别结果未知。",
+    "旧review.json中的awaiting-human-visual-review为当时工具模板；本摘要只表示未验收，不额外要求人类审批。",
+    "原声与原曲不同是音频现象，不能直接推出嘴形一定失败。",
+    "视频帧轨时长与MP4容器时长受音频封装影响略有差异，网页可简称10秒/5秒，精确值见各资产字段。"
+  ],
+  "evidence_snapshot": {
+    "source_path": "work/demo-evidence-summary.json",
+    "sha256": "ea56cbb0afb47761bb9e22522deb892a02f8aa20345701ad9e5470fd8d8e6efe"
+  }
+}

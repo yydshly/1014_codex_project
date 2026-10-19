@@ -1,0 +1,60 @@
+{
+  "status": "sampled_frames_reviewed_audio_screening_failed",
+  "source": "clips/A02_t1.mp4",
+  "sha256": "e050ae36759707ee8f5c58ec71939c600c89b443a1ae199d14efc5f6ac17d4a6",
+  "size_bytes": 3038815,
+  "video": {
+    "width": 1280,
+    "height": 720,
+    "fps": "24/1",
+    "duration": 5.041667,
+    "frames": 121,
+    "codec": "h264"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": 32000,
+    "channels": 2,
+    "duration": 5.088
+  },
+  "container_duration": 5.088,
+  "contact_sheet": "work/A02-review.jpg",
+  "comparison_contact_sheet": "work/A01-review.jpg",
+  "sample_times": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5
+  ],
+  "input_audio_heard_local": {
+    "start": 0.455,
+    "end": 2.438
+  },
+  "observations": [
+    "人物脸部、服装、发型与舞台仍大体对应同一李白参考形象，未见明显换人。",
+    "相比A01，A02推镜幅度更大，后半由中景变为近景，表情更夸张，面部视觉上略显年轻；跨镜头风格并不完全一致。",
+    "麦克风位于下巴下方，抽帧中嘴部可见，未见持续遮嘴。",
+    "0.5、1.0、2.0、2.5、3.0、3.5秒可见不同说话口形，4.0/4.5秒主要闭口。",
+    "输入人声能量在槽内约2.438秒结束，3.0/3.5秒仍存在明显口形，延续到输入静音区域；单一0.16秒整体偏移不足以解释此差异。"
+  ],
+  "external_audio_screening": {
+    "source": "父任务已实测并提供的四舍五入结果，此文件未重新计算",
+    "passed": false,
+    "overall_correlation": 0.218,
+    "minimum_window_correlation": -0.375,
+    "suggested_shift_seconds": 0.16
+  },
+  "sync_passed": false,
+  "limitations": [
+    "每0.5秒抽帧不能判断逐音素口型同步、运动连续性或准确读词。",
+    "外观差异可能同时受镜头尺度与表情影响，不能仅据此判定身份变化。",
+    "音轨筛查失败必须保留；不能用静帧外观正常替代音画同步通过。"
+  ],
+  "suggested_next_step": "保留为失败候选和Fast对照；需带声播放核对输出内容，或另选候选，不应仅套用0.16秒偏移后标记通过。"
+}

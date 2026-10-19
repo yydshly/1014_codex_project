@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "imported_awaiting_alignment",
+  "source_kind": "用户提供音乐文件",
+  "provider_claim": "用户称Gemini生成，未独立核实生成平台或模型",
+  "user_confirmed_lyrics": [
+    "酒杯一举，银河都来捧场",
+    "你的工整，装不下我的月光",
+    "月光再亮，也得照见风霜",
+    "我把人间，写成压轴的回响"
+  ],
+  "lyrics_confirmation": "用户确认仍是前面四句，具体唱法/重复和时间以音轨分析为准",
+  "original_filename": "敬风霜.mp3",
+  "original_local_path": "C:/Users/yun68/Downloads/敬风霜.mp3",
+  "preserved_copy": "music/source-jing-feng-shuang.mp3",
+  "bytes": 1524567,
+  "sha256": "91f5993a91f49e455fe9c60f60cc799692a96a40afa78c6b80e0f35831dbe8c8",
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "mp3",
+        "codec_long_name": "MP3 (MPEG audio layer 3)",
+        "codec_type": "audio",
+        "codec_tag_string": "[0][0][0][0]",
+        "codec_tag": "0x0000",
+        "sample_fmt": "fltp",
+        "sample_rate": "44100",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/14112000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 892845072,
+        "duration": "63.268500",
+        "bit_rate": "192000",
+        "disposition": {
+          "default": 0,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0
+        }
+      }
+    ],
+    "format": {
+      "filename": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\002-moon-and-earth\\music\\source-jing-feng-shuang.mp3",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "format_name": "mp3",
+      "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+      "start_time": "0.000000",
+      "duration": "63.268500",
+      "size": "1524567",
+      "bit_rate": "192774",
+      "probe_score": 51
+    }
+  },
+  "paid_generation_calls_for_import": 0,
+  "audio_modified": false
+}

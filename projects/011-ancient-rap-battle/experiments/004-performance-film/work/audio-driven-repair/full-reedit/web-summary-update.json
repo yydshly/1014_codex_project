@@ -1,0 +1,25 @@
+{
+  "updated_at_utc": "2026-10-16T05:11:45.664466+00:00",
+  "scope": "User-requested web summary; no media regeneration",
+  "url": "http://127.0.0.1:4184/1014_codex_project/011-ancient-rap-battle/?v=summary-20261016#repaired-film-004",
+  "http_status": 200,
+  "summary_sections_present": true,
+  "unique_html_ids": true,
+  "new_film_first_summary_card": true,
+  "budget": {
+    "cap": 2400,
+    "committed": 2265,
+    "unconfirmed_reserve": 110,
+    "exposure": 2375,
+    "remaining": 25,
+    "production_tasks": 6,
+    "production_reported_credits": 615,
+    "invoice_verified": false
+  },
+  "movie_sha256_unchanged": "97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6",
+  "build_and_existing_check_passed": true,
+  "static_assets": 62,
+  "browser_visual_review": "Not performed: existing tabs remain on prior error documents restricted by URL policy; no alternate automation used.",
+  "new_generation_calls": 0,
+  "new_credits": 0
+}

@@ -1,0 +1,1439 @@
+{
+  "schema_version": 1,
+  "status": "rendered-awaiting-final-audiovisual-review",
+  "created_at": "2026-10-16T04:52:19.696227+00:00",
+  "title": "压轴人间 · 原曲驱动舞台版",
+  "mode": "original-audio-driven-stage-reedit",
+  "ordinary_video_only": true,
+  "mv_feature_used": false,
+  "local_models_used": false,
+  "precise_lip_sync_claim": false,
+  "output": {
+    "path": "work/audio-driven-repair/full-reedit/final/压轴人间-原曲驱动舞台版.mp4",
+    "sha256": "97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6",
+    "bytes": 45964902,
+    "width": 1280,
+    "height": 720,
+    "fps": 25.0,
+    "frames": 2366,
+    "duration": 94.64,
+    "container_duration": 94.64
+  },
+  "poster": {
+    "path": "work/audio-driven-repair/full-reedit/final/压轴人间-原曲驱动舞台版封面.jpg",
+    "sha256": "9191bdea2eb2afcf3a766c0c32b29d458ed5a6f1af2724cdf9946b430823b0b6",
+    "bytes": 125704
+  },
+  "timeline": {
+    "path": "work/audio-driven-repair/full-reedit/timeline.json",
+    "sha256": "5e0e6818381e25912787a282a3b2787576b259fd7d4082df5340afffc7dcac86"
+  },
+  "capacity": {
+    "path": "work/audio-driven-repair/full-reedit/capacity-report.json",
+    "sha256": "d3341d8bf7032b2366cf6c738cd54adc42e1d27458ed87a7d9647b3967215957"
+  },
+  "pilot_acceptance": {
+    "path": "work/audio-driven-repair/pilot-acceptance.json",
+    "sha256": "ddeccce64e9a8ef78c2f65ef7f3487e2d2063d772386f1aa16c49756091a877e"
+  },
+  "sources": [
+    {
+      "id": "DUFU_VERSE14",
+      "source_key": "DUFU_VERSE14",
+      "path": "work/audio-driven-repair/production/H3_DUFU_VERSE14_t1/original/video_20261016121633.mp4",
+      "task_id": "1027840",
+      "sha256": "3b53a8ea5139031542769b19315232000c250d57ce437d9dbfb3f2d02a2368df",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true
+      },
+      "independent_review": {
+        "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\work\\audio-driven-repair\\source-reviews\\DUFU_VERSE14\\independent-review.json",
+        "sha256": "567ffd38aa14b9119c68f29c5a8cb761f014a153dec3a8022f1f25ee93b5040a"
+      },
+      "subjective_audio_review_claimed": false,
+      "typed_audio_input_confirmed": true,
+      "driver": {
+        "song_in": 28.4,
+        "song_out": 42.4,
+        "path": "work/audio-driven-repair/prepared-blocks/02-REEDIT-DUFU-VERSE.wav",
+        "sha256": "1985cfa823317f3cf4d7ce6c4f88d20599ba6eb4da44d1a1767f99ef86cbf550"
+      },
+      "provider_manifest_id": "H3_DUFU_VERSE14_t1",
+      "source_role": "original-audio-driven-performance",
+      "manifest_evidence": {
+        "path": "work/audio-driven-repair/production/source-files.json",
+        "sha256": "a1dcb343581e379aebd549b817a604c9b0cbb16eb20883c0988b221e05e838db"
+      },
+      "ledger_local_id": "H3_DUFU_VERSE14_t1",
+      "bytes": 10462947,
+      "width": 1344,
+      "height": 768,
+      "fps": 24.0,
+      "frames": 345,
+      "duration": 14.375,
+      "container_duration": 14.375,
+      "native_audio_used_in_final": false,
+      "source_experiment": "004-performance-film"
+    },
+    {
+      "id": "CROP_DUET",
+      "path": "work/audio-driven-repair/crop-preflight/C4-STAGE-STEPS.mp4",
+      "sha256": "8c8af24d5b83a872371587e24438ed9b9e885ad8fec0478b8ae6371b4cd85602",
+      "task_id": "1027655",
+      "source_role": "historical-real-video-derived-crop",
+      "allowed_source_ranges_in_this_reedit": [
+        [
+          0,
+          2.48
+        ]
+      ],
+      "derivation": {
+        "parent_path": "clips/STAGE_DUET_t1/video_20261016031359.mp4",
+        "parent_sha256": "21d3a305e30af910623735c31990e0377ea60b7791943abf0bd783caf124553e",
+        "parent_source_in": 1.2,
+        "parent_source_out": 3.68,
+        "crop": {
+          "x": 280,
+          "y": 323,
+          "width": 720,
+          "height": 405
+        },
+        "spatial_upscale_factor": 1.7777777777777777
+      },
+      "review": {
+        "status": "acceptable-short-real-motion-detail-after-frame-review",
+        "reviewed_frames": "native and 1280x720 output at beginning/middle/end",
+        "face_and_mouth_absent_in_reviewed_frames": true,
+        "clarity": "1.78倍空间裁切放大，衣纹/金环/靴步清晰度可接受；弱于原生全幅，建议每段1.5–2.48秒，不能声称新生成或720p原生细节。",
+        "motion": "真实衣袖/手势或步伐与相机视差变化，不冻结、不拉长、不变速。"
+      },
+      "review_evidence": {
+        "path": "work/audio-driven-repair/crop-preflight/crop-preflight.json",
+        "sha256": "46a322e5b31b90085587e691c87253a3e5903bd1c8d9d25732859ea2954bcd2f"
+      },
+      "generated_new_for_repair": false,
+      "native_audio_used_in_final": false,
+      "singing_lip_sync_claimed_for_this_reuse": false,
+      "bytes": 1491461,
+      "width": 1280,
+      "height": 720,
+      "fps": 25.0,
+      "frames": 62,
+      "duration": 2.48,
+      "container_duration": 2.48,
+      "source_experiment": "004-performance-film"
+    },
+    {
+      "id": "PILOT_H3",
+      "path": "work/audio-driven-repair/model-original/video_20261016091518.mp4",
+      "sha256": "13af814763a8ede67fb627e5724342bb760446e80a7610b8ce2a07d61668d129",
+      "task_id": "1027778",
+      "source_role": "original-audio-driven-performance",
+      "model_label": "MiniMax H3",
+      "driver": {
+        "song_in": 9.4,
+        "song_out": 14.4,
+        "path": "work/audio-driven-repair/VA01-original-song-9.4-to-14.4.wav",
+        "sha256": "79f91a413fee6811b2c1a90e762f44150cc0a0d98c8bd207fb0958a719e18962",
+        "source_song_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0"
+      },
+      "review": {
+        "source": "direct-human-user",
+        "trusted": true,
+        "reviewer": "user",
+        "review_type": "audiovisual-playback-feedback",
+        "question": "演唱口型是否已达到继续制作《压轴人间》整片的程度？",
+        "answer": "口型已可用，继续修整片",
+        "scope": "This exact VA01 pilot only; later blocks still require technical and visual checks."
+      },
+      "review_evidence": {
+        "path": "work/audio-driven-repair/pilot-acceptance.json",
+        "sha256": "ddeccce64e9a8ef78c2f65ef7f3487e2d2063d772386f1aa16c49756091a877e"
+      },
+      "accepted_for_lip_sync": true,
+      "acceptance_scope": "this-exact-human-reviewed-pilot-only",
+      "bytes": 3342437,
+      "width": 1344,
+      "height": 768,
+      "fps": 24.0,
+      "frames": 124,
+      "duration": 5.166667,
+      "container_duration": 5.175,
+      "native_audio_used_in_final": false,
+      "source_experiment": "004-performance-film"
+    },
+    {
+      "id": "LIBAI2_SAFE",
+      "path": "clips/STAGE_LIBAI2_t1/video_20261016032313.mp4",
+      "task_id": "1027661",
+      "sha256": "26d909fee040e79a8d0d7071f61d6ec7f7a33edd30c2e22ac168c34b79dd9edf",
+      "bytes": 10265039,
+      "model_label": "Seedance 2.0",
+      "kind": "libai",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Nine chronological actual frames reviewed. Initial face matches young clean-shaven Li Bai with small gold crown; same ivory/teal robe, embroidery, black microphone, circular stage. Real robe/foot movement and camera orbit provide detail coverage.",
+        "root_review_path": "work/stage-film-20261016/reviews/LIBAI2/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": "Use only source 0–7.2 s as robe, sleeve and walking details. Later rear view has blue concert-like audience styling and is excluded. Most middle frames crop the face, so do not call this frontal singing or a cup shot.",
+        "allowed_source_ranges": [
+          [
+            0,
+            7.2
+          ]
+        ],
+        "source_id": "LIBAI2",
+        "source_sha256": "26d909fee040e79a8d0d7071f61d6ec7f7a33edd30c2e22ac168c34b79dd9edf",
+        "reviewed_at": "2026-10-15T19:25:31.015235+00:00",
+        "scope": "natural-performance visual stage montage only",
+        "method": "root visual inspection of nine chronological decoded native-source frames"
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/LIBAI2/root-review.json",
+        "sha256": "93e66ced887541d349a2fbf3e8b08351ecfb08dc91e79c125c715f3929f86f29"
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_LIBAI2_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false,
+      "source_role": "historical-real-video-limited-safe-reuse",
+      "allowed_source_ranges_in_this_reedit": [
+        [
+          1.4,
+          6.68
+        ]
+      ],
+      "historical_source_report": {
+        "path": "work/stage-film-20261016/stage-film-report.json",
+        "sha256": "ebc3cc778639ea1be397555dad63fe2788c90cdd8172e2dbb6403aa754e8075e"
+      },
+      "historical_lip_sync_not_accepted": true,
+      "singing_lip_sync_claimed_for_this_reuse": false
+    },
+    {
+      "id": "OPEN",
+      "path": "clips/skill-open-t1-download/SKILL_OPEN_t1-original.mp4",
+      "task_id": "1027533",
+      "sha256": "bb101af1ac0ae290818079b6d5ad9fa82afee21fd98bdd63a1b9d4eca75510c3",
+      "bytes": 7202655,
+      "model_label": "Seedance 2.0",
+      "kind": "stage",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "method": "root visual inspection of nine chronological native-source frames plus prior native playback; independent editor review and all-frame decode",
+        "note": "Same locked faces/costumes/stage retained. OPEN contains visible turning, steps and gestures; SINGING contains mouth, expression and hand changes. Accepted only for natural-performance stage montage; original-song precise lip sync not claimed."
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "SKILL_OPEN_t1",
+      "ledger_status_at_render": "completed-pilot-accepted",
+      "native_audio_used_in_final": false,
+      "source_role": "historical-real-video-limited-safe-reuse",
+      "allowed_source_ranges_in_this_reedit": [
+        [
+          0,
+          9.4
+        ]
+      ],
+      "historical_source_report": {
+        "path": "work/stage-film-20261016/stage-film-report.json",
+        "sha256": "ebc3cc778639ea1be397555dad63fe2788c90cdd8172e2dbb6403aa754e8075e"
+      },
+      "historical_lip_sync_not_accepted": true,
+      "singing_lip_sync_claimed_for_this_reuse": false
+    },
+    {
+      "id": "CROWD2",
+      "path": "clips/STAGE_CROWD2_t1/video_20261016032242.mp4",
+      "task_id": "1027659",
+      "sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+      "bytes": 10885235,
+      "model_label": "Seedance 2.0",
+      "kind": "audience",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Nine chronological actual frames reviewed. Adult audience clapping and moving on layered wooden balconies; camera moves sideways and down to a deep audience hall with pine/rock wings and gold/white stage lighting. No lead clones or contradictory moon.",
+        "root_review_path": "work/stage-film-20261016/reviews/CROWD2/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": "Small background faces/hands remain generated detail; use as audience reaction or spatial transition.",
+        "source_id": "CROWD2",
+        "source_sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+        "reviewed_at": "2026-10-15T19:25:31.015235+00:00",
+        "scope": "natural-performance visual stage montage only",
+        "method": "root visual inspection of nine chronological decoded native-source frames"
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/CROWD2/root-review.json",
+        "sha256": "6aee427e0d0a63beac10813670f947d7cfba0019a280d9538008b6a18b5cf7fb"
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_CROWD2_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false,
+      "source_role": "historical-real-video-limited-safe-reuse",
+      "allowed_source_ranges_in_this_reedit": [
+        [
+          0,
+          10.04
+        ]
+      ],
+      "historical_source_report": {
+        "path": "work/stage-film-20261016/stage-film-report.json",
+        "sha256": "ebc3cc778639ea1be397555dad63fe2788c90cdd8172e2dbb6403aa754e8075e"
+      },
+      "historical_lip_sync_not_accepted": true,
+      "singing_lip_sync_claimed_for_this_reuse": false
+    },
+    {
+      "id": "DUFU_CHORUS1",
+      "source_key": "DUFU_CHORUS1",
+      "path": "work/audio-driven-repair/production/H3_DUFU_CHORUS1_t1/original/video_20261016124722.mp4",
+      "task_id": "1027844",
+      "sha256": "26065b2070553926f5769a9acfe97e8f28c367c2acc889c21bdc305e20001938",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true
+      },
+      "independent_review": {
+        "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\work\\audio-driven-repair\\source-reviews\\DUFU_CHORUS1\\independent-review.json",
+        "sha256": "985edc12a1aef627d4e7d73da187329ad9376d3dbc2620c0672d1113df5c2d83"
+      },
+      "subjective_audio_review_claimed": false,
+      "typed_audio_input_confirmed": true,
+      "driver": {
+        "song_in": 49.76,
+        "song_out": 54.76,
+        "path": "work/audio-driven-repair/prepared-blocks/04-REEDIT-DUFU-CHORUS-ONE.wav",
+        "sha256": "e83f27f561f6f8add866ce276c149125e6d578cc9935bfb1876ddb33afc5a7e4"
+      },
+      "provider_manifest_id": "H3_DUFU_CHORUS1_t1",
+      "source_role": "original-audio-driven-performance",
+      "manifest_evidence": {
+        "path": "work/audio-driven-repair/production/source-files.json",
+        "sha256": "a1dcb343581e379aebd549b817a604c9b0cbb16eb20883c0988b221e05e838db"
+      },
+      "ledger_local_id": "H3_DUFU_CHORUS1_t1",
+      "bytes": 3968273,
+      "width": 1344,
+      "height": 768,
+      "fps": 24.0,
+      "frames": 124,
+      "duration": 5.166667,
+      "container_duration": 5.175,
+      "native_audio_used_in_final": false,
+      "source_experiment": "004-performance-film"
+    },
+    {
+      "id": "FINALE",
+      "path": "clips/STAGE_FINALE_t1/video_20261016032213.mp4",
+      "task_id": "1027660",
+      "sha256": "16a87ff53c5be226a37c24467dc6fb37db50a58692fefd65dd13055a4adf0434",
+      "bytes": 6898341,
+      "model_label": "Seedance 2.0",
+      "kind": "duet",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Nine chronological actual frames reviewed. Same young ivory/teal Li Bai on left and mature bearded indigo/copper Du Fu on right, matching small gold crowns, microphones, moonlit brass-ring stage and balconies. Real singing gesture, joint bow, recovery, mutual glance and camera pullback.",
+        "root_review_path": "work/stage-film-20261016/reviews/FINALE/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": "Source 3.5–5.5 s contains a bow; place it in the outro rather than mid-verse. Exact lip synchronization is not claimed.",
+        "source_id": "FINALE",
+        "source_sha256": "16a87ff53c5be226a37c24467dc6fb37db50a58692fefd65dd13055a4adf0434",
+        "reviewed_at": "2026-10-15T19:25:31.015235+00:00",
+        "scope": "natural-performance visual stage montage only",
+        "method": "root visual inspection of nine chronological decoded native-source frames"
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/FINALE/root-review.json",
+        "sha256": "6924c72975ca458d6666c8c8258b1f1a4a54c3dfb8d3aaf968700ca260e67b2a"
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_FINALE_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false,
+      "source_role": "historical-real-video-limited-safe-reuse",
+      "allowed_source_ranges_in_this_reedit": [
+        [
+          2,
+          10.04
+        ]
+      ],
+      "historical_source_report": {
+        "path": "work/stage-film-20261016/stage-film-report.json",
+        "sha256": "ebc3cc778639ea1be397555dad63fe2788c90cdd8172e2dbb6403aa754e8075e"
+      },
+      "historical_lip_sync_not_accepted": true,
+      "singing_lip_sync_claimed_for_this_reuse": false
+    },
+    {
+      "id": "CROP_DUFU",
+      "path": "work/audio-driven-repair/crop-preflight/C3-DUFU-ROBE.mp4",
+      "sha256": "60063f46d4a07e6ceec43353a33e76a4b05f1e2b72091ebf2f7bfce1a8ff52c3",
+      "task_id": "1027662",
+      "source_role": "historical-real-video-derived-crop",
+      "allowed_source_ranges_in_this_reedit": [
+        [
+          0,
+          2.48
+        ]
+      ],
+      "derivation": {
+        "parent_path": "clips/STAGE_DUFU2_t1/video_20261016032312.mp4",
+        "parent_sha256": "65cb2f7f09847eaed3953e7b6e33c34ce3175c9d81578db7ba8416571ed13e56",
+        "parent_source_in": 1.2,
+        "parent_source_out": 3.68,
+        "crop": {
+          "x": 390,
+          "y": 300,
+          "width": 720,
+          "height": 405
+        },
+        "spatial_upscale_factor": 1.7777777777777777
+      },
+      "review": {
+        "status": "acceptable-short-real-motion-detail-after-frame-review",
+        "reviewed_frames": "native and 1280x720 output at beginning/middle/end",
+        "face_and_mouth_absent_in_reviewed_frames": true,
+        "clarity": "1.78倍空间裁切放大，衣纹/金环/靴步清晰度可接受；弱于原生全幅，建议每段1.5–2.48秒，不能声称新生成或720p原生细节。",
+        "motion": "真实衣袖/手势或步伐与相机视差变化，不冻结、不拉长、不变速。"
+      },
+      "review_evidence": {
+        "path": "work/audio-driven-repair/crop-preflight/crop-preflight.json",
+        "sha256": "46a322e5b31b90085587e691c87253a3e5903bd1c8d9d25732859ea2954bcd2f"
+      },
+      "generated_new_for_repair": false,
+      "native_audio_used_in_final": false,
+      "singing_lip_sync_claimed_for_this_reuse": false,
+      "bytes": 1768072,
+      "width": 1280,
+      "height": 720,
+      "fps": 25.0,
+      "frames": 62,
+      "duration": 2.48,
+      "container_duration": 2.48,
+      "source_experiment": "004-performance-film"
+    },
+    {
+      "id": "STAGE_DETAIL",
+      "source_key": "STAGE_DETAIL",
+      "path": "work/audio-driven-repair/production/SKILL_STAGE_DETAIL_t1/original/video_20261016100947.mp4",
+      "task_id": "1027850",
+      "sha256": "9ffdb22c87f595862009fde24ac475989e16d1fc34398c314c5aff3ec723a63c",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "face_and_mouth_absent": true
+      },
+      "independent_review": {
+        "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\work\\audio-driven-repair\\source-reviews\\STAGE_DETAIL\\independent-review.json",
+        "sha256": "0d9ffbccf8d481d3f84d37b9ea4dec46844834823c307babb544211c52b8a300"
+      },
+      "subjective_audio_review_claimed": false,
+      "allowed_source_ranges_in_this_reedit": [
+        [
+          0.28,
+          3.72
+        ]
+      ],
+      "model_provenance": {
+        "requested_model": "Seedance 2.0 Fast",
+        "container_produce_id_hint": "Metasota_minimaxh3",
+        "underlying_model_independently_verified": false,
+        "official_history_task_and_result_url_match": true,
+        "official_history_evidence": "work/audio-driven-repair/production/SKILL_STAGE_DETAIL_t1/official-history-confirmation.json",
+        "root_reconciliation": "work/audio-driven-repair/production/SKILL_STAGE_DETAIL_t1/provenance-reconciliation.json"
+      },
+      "provider_manifest_id": "SKILL_STAGE_DETAIL_t1",
+      "source_role": "new-faceless-stage-detail",
+      "manifest_evidence": {
+        "path": "work/audio-driven-repair/production/source-files.json",
+        "sha256": "a1dcb343581e379aebd549b817a604c9b0cbb16eb20883c0988b221e05e838db"
+      },
+      "ledger_local_id": "SKILL_STAGE_DETAIL_t1",
+      "bytes": 6456236,
+      "width": 1344,
+      "height": 768,
+      "fps": 24.0,
+      "frames": 124,
+      "duration": 5.166667,
+      "container_duration": 5.175,
+      "native_audio_used_in_final": false,
+      "source_experiment": "004-performance-film"
+    },
+    {
+      "id": "CROWD1",
+      "path": "clips/STAGE_CROWD1_t1/video_20261016030143.mp4",
+      "task_id": "1027650",
+      "sha256": "0409bc1315bff4e3aacaa207b31c41a612b86eb6bb0aad1c47dd0d399d998e53",
+      "bytes": 5696511,
+      "model_label": "Seedance 2.0",
+      "kind": "audience",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Nine chronological source frames plus independent native-size samples; actual adult audience clapping, expression and body changes. Same stage world; no cloned lead faces or misplaced moon. Use as short reaction shots.",
+        "root_review_path": "work/stage-film-20261016/reviews/CROWD1/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": [
+          "Camera movement subtle; use short shots, not one ten-second hold."
+        ],
+        "source_id": "CROWD1",
+        "source_sha256": "0409bc1315bff4e3aacaa207b31c41a612b86eb6bb0aad1c47dd0d399d998e53",
+        "reviewed_by": "root and independent visual reviewer",
+        "scope": "Nine chronological source frames plus independent native-size samples; actual adult audience clapping, expression and body changes. Same stage world; no cloned lead faces or misplaced moon. Use as short reaction shots."
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/CROWD1/root-review.json",
+        "sha256": "f8fab2ee49bf7e34f38ba2f9e199845886c2f5055de7c4007abea5a41be9096c"
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_CROWD1_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false,
+      "source_role": "historical-real-video-limited-safe-reuse",
+      "allowed_source_ranges_in_this_reedit": [
+        [
+          0,
+          10.04
+        ]
+      ],
+      "historical_source_report": {
+        "path": "work/stage-film-20261016/stage-film-report.json",
+        "sha256": "ebc3cc778639ea1be397555dad63fe2788c90cdd8172e2dbb6403aa754e8075e"
+      },
+      "historical_lip_sync_not_accepted": true,
+      "singing_lip_sync_claimed_for_this_reuse": false
+    },
+    {
+      "id": "LIBAI_CHORUS2",
+      "source_key": "LIBAI_CHORUS2",
+      "path": "work/audio-driven-repair/production/H3_LIBAI_CHORUS2_t1/original/video_20261016111248.mp4",
+      "task_id": "1027835",
+      "sha256": "ca86a81d51b8b8fc16ed2c95d017ed9f836e2e236a504337bf8340ef51b7e310",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "all_native_frames_actually_viewed": true,
+        "native_frames_viewed": 192,
+        "mouth_unobstructed": true,
+        "reviewer_can_hear_audio": false,
+        "subjective_audio_review_claimed": false,
+        "accepted_for_precise_lip_sync": false,
+        "review_mode": "全部原生帧按时序接触表审核，并查看六张 1344x768 原尺寸关键帧；未声称正常速度听看。",
+        "scope": "仅批准技术与独立视觉编辑可用性，供原曲最终剪辑；不代表逐字口型或主观视听验收。"
+      },
+      "independent_review": {
+        "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\work\\audio-driven-repair\\source-reviews\\LIBAI_CHORUS2\\independent-review.json",
+        "sha256": "09d706cd67257a9111fe79b2df5f24857cc221323cca372a934ada4013c5c5e1"
+      },
+      "subjective_audio_review_claimed": false,
+      "typed_audio_input_confirmed": true,
+      "driver": {
+        "song_in": 65.6,
+        "song_out": 73.6,
+        "path": "work/audio-driven-repair/prepared-blocks/05-REEDIT-LIBAI-CHORUS-TWO.wav",
+        "sha256": "c734b4cebaca8230b3effda9adf4fc4e60d95463429376f5324629e57023d450"
+      },
+      "provider_manifest_id": "H3_LIBAI_CHORUS2_t1",
+      "source_role": "original-audio-driven-performance",
+      "manifest_evidence": {
+        "path": "work/audio-driven-repair/production/source-files.json",
+        "sha256": "a1dcb343581e379aebd549b817a604c9b0cbb16eb20883c0988b221e05e838db"
+      },
+      "ledger_local_id": "H3_LIBAI_CHORUS2_t1",
+      "bytes": 5053016,
+      "width": 1344,
+      "height": 768,
+      "fps": 24.0,
+      "frames": 192,
+      "duration": 8.0,
+      "container_duration": 8.0,
+      "native_audio_used_in_final": false,
+      "source_experiment": "004-performance-film"
+    },
+    {
+      "id": "CROP_LIBAI",
+      "path": "work/audio-driven-repair/crop-preflight/C1-LIBAI-SLEEVE.mp4",
+      "sha256": "8d729a994c5c91e1fd08f2db3b2229b9604588e7993cfeaafff0ccfc05782938",
+      "task_id": "1027648",
+      "source_role": "historical-real-video-derived-crop",
+      "allowed_source_ranges_in_this_reedit": [
+        [
+          0,
+          2.48
+        ]
+      ],
+      "derivation": {
+        "parent_path": "clips/STAGE_LIBAI1_t1/recovered/video_20261016030618.mp4",
+        "parent_sha256": "cdc376283c1a81e4f975e7d3ac12d705a96c7ca5c88865218a86968dfc459c2e",
+        "parent_source_in": 2.6,
+        "parent_source_out": 5.08,
+        "crop": {
+          "x": 320,
+          "y": 323,
+          "width": 720,
+          "height": 405
+        },
+        "spatial_upscale_factor": 1.7777777777777777
+      },
+      "review": {
+        "status": "acceptable-short-real-motion-detail-after-frame-review",
+        "reviewed_frames": "native and 1280x720 output at beginning/middle/end",
+        "face_and_mouth_absent_in_reviewed_frames": true,
+        "clarity": "1.78倍空间裁切放大，衣纹/金环/靴步清晰度可接受；弱于原生全幅，建议每段1.5–2.48秒，不能声称新生成或720p原生细节。",
+        "motion": "真实衣袖/手势或步伐与相机视差变化，不冻结、不拉长、不变速。"
+      },
+      "review_evidence": {
+        "path": "work/audio-driven-repair/crop-preflight/crop-preflight.json",
+        "sha256": "46a322e5b31b90085587e691c87253a3e5903bd1c8d9d25732859ea2954bcd2f"
+      },
+      "generated_new_for_repair": false,
+      "native_audio_used_in_final": false,
+      "singing_lip_sync_claimed_for_this_reuse": false,
+      "bytes": 1466974,
+      "width": 1280,
+      "height": 720,
+      "fps": 25.0,
+      "frames": 62,
+      "duration": 2.48,
+      "container_duration": 2.48,
+      "source_experiment": "004-performance-film"
+    },
+    {
+      "id": "LIBAI_VERSE",
+      "source_key": "LIBAI_VERSE",
+      "path": "work/audio-driven-repair/production/H3_LIBAI_VERSE_t1/original/video_20261016114405.mp4",
+      "task_id": "1027831",
+      "sha256": "5cc68050c1e346eecacd20a2b633bab67e2f9219e81d73dcdb1ab8d352458308",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true
+      },
+      "independent_review": {
+        "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\work\\audio-driven-repair\\source-reviews\\LIBAI_VERSE\\independent-review.json",
+        "sha256": "2242a1e3722517f4d42bb682e1661ab54d8f1d9a88ff1f0cbfd93cac8e2e55c3"
+      },
+      "subjective_audio_review_claimed": false,
+      "typed_audio_input_confirmed": true,
+      "driver": {
+        "song_in": 14.4,
+        "song_out": 19.4,
+        "path": "work/audio-driven-repair/prepared-blocks/01-REEDIT-LIBAI-VERSE.wav",
+        "sha256": "424de01f377c706c77096255c0b2f3b13a9ec6e9b7077dcbfe0f142bb3c3c64a"
+      },
+      "provider_manifest_id": "H3_LIBAI_VERSE_t1",
+      "source_role": "original-audio-driven-performance",
+      "manifest_evidence": {
+        "path": "work/audio-driven-repair/production/source-files.json",
+        "sha256": "a1dcb343581e379aebd549b817a604c9b0cbb16eb20883c0988b221e05e838db"
+      },
+      "ledger_local_id": "H3_LIBAI_VERSE_t1",
+      "bytes": 3663004,
+      "width": 1344,
+      "height": 768,
+      "fps": 24.0,
+      "frames": 124,
+      "duration": 5.166667,
+      "container_duration": 5.175,
+      "native_audio_used_in_final": false,
+      "source_experiment": "004-performance-film"
+    },
+    {
+      "id": "LIBAI_CHORUS1",
+      "source_key": "LIBAI_CHORUS1",
+      "path": "work/audio-driven-repair/production/H3_LIBAI_CHORUS1_t1/original/video_20261016104125.mp4",
+      "task_id": "1027834",
+      "sha256": "a414b510eb9330b910eb5b520f760b1d18dae425bdc851b26540069ef446ee3a",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "all_native_frames_actually_viewed": true,
+        "native_frames_viewed": 124,
+        "mouth_unobstructed": true,
+        "reviewer_can_hear_audio": false,
+        "subjective_audio_review_claimed": false,
+        "accepted_for_precise_lip_sync": false,
+        "scope": "Technical and independent visual approval for original-song editing, not subjective audiovisual or word-level lip-sync acceptance."
+      },
+      "independent_review": {
+        "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\work\\audio-driven-repair\\source-reviews\\LIBAI_CHORUS1\\independent-review.json",
+        "sha256": "0819fa0bd8c253c68b407b26f013ab5da5d07b184f851d6028dae9b29feac6fb"
+      },
+      "subjective_audio_review_claimed": false,
+      "typed_audio_input_confirmed": true,
+      "driver": {
+        "song_in": 42.24,
+        "song_out": 47.24,
+        "path": "work/audio-driven-repair/prepared-blocks/03-REEDIT-LIBAI-CHORUS-ONE.wav",
+        "sha256": "a25073f5e9a295013b18ee259f047fe88b9c17fc5cbf697d5eb7adb3da151a09"
+      },
+      "provider_manifest_id": "H3_LIBAI_CHORUS1_t1",
+      "source_role": "original-audio-driven-performance",
+      "manifest_evidence": {
+        "path": "work/audio-driven-repair/production/source-files.json",
+        "sha256": "a1dcb343581e379aebd549b817a604c9b0cbb16eb20883c0988b221e05e838db"
+      },
+      "ledger_local_id": "H3_LIBAI_CHORUS1_t1",
+      "bytes": 4710541,
+      "width": 1344,
+      "height": 768,
+      "fps": 24.0,
+      "frames": 124,
+      "duration": 5.166667,
+      "container_duration": 5.175,
+      "native_audio_used_in_final": false,
+      "source_experiment": "004-performance-film"
+    }
+  ],
+  "shots": [
+    {
+      "id": "R01",
+      "source_id": "OPEN",
+      "slot_start": 0,
+      "slot_end": 9.4,
+      "start_frame": 0,
+      "end_frame_exclusive": 235,
+      "frames": 235,
+      "source_in": 0,
+      "source_out": 9.4,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "quiet-opening",
+      "intent": "月下同台登场；原曲演唱开始前",
+      "transition": "straight-cut",
+      "source_sha256": "bb101af1ac0ae290818079b6d5ad9fa82afee21fd98bdd63a1b9d4eca75510c3",
+      "source_task_id": "1027533"
+    },
+    {
+      "id": "R02",
+      "source_id": "PILOT_H3",
+      "slot_start": 9.4,
+      "slot_end": 14.4,
+      "start_frame": 235,
+      "end_frame_exclusive": 360,
+      "frames": 125,
+      "source_in": 0,
+      "source_out": 5.0,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "corresponding-performance",
+      "intent": "用户已带声验收的原曲首段",
+      "transition": "straight-cut",
+      "source_sha256": "13af814763a8ede67fb627e5724342bb760446e80a7610b8ce2a07d61668d129",
+      "source_task_id": "1027778"
+    },
+    {
+      "id": "R03",
+      "source_id": "LIBAI_VERSE",
+      "slot_start": 14.4,
+      "slot_end": 19.4,
+      "start_frame": 360,
+      "end_frame_exclusive": 485,
+      "frames": 125,
+      "source_in": 0,
+      "source_out": 5.0,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "corresponding-performance",
+      "intent": "李白主歌，原曲对应输入",
+      "transition": "straight-cut",
+      "source_sha256": "5cc68050c1e346eecacd20a2b633bab67e2f9219e81d73dcdb1ab8d352458308",
+      "source_task_id": "1027831"
+    },
+    {
+      "id": "R04",
+      "source_id": "LIBAI2_SAFE",
+      "slot_start": 19.4,
+      "slot_end": 21.88,
+      "start_frame": 485,
+      "end_frame_exclusive": 547,
+      "frames": 62,
+      "source_in": 1.4,
+      "source_out": 3.88,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "faceless-costume",
+      "intent": "无脸衣袖与步伐",
+      "transition": "straight-cut",
+      "source_sha256": "26d909fee040e79a8d0d7071f61d6ec7f7a33edd30c2e22ac168c34b79dd9edf",
+      "source_task_id": "1027661"
+    },
+    {
+      "id": "R05",
+      "source_id": "CROWD1",
+      "slot_start": 21.88,
+      "slot_end": 24.28,
+      "start_frame": 547,
+      "end_frame_exclusive": 607,
+      "frames": 60,
+      "source_in": 0,
+      "source_out": 2.4,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "audience",
+      "intent": "观众回应",
+      "transition": "straight-cut",
+      "source_sha256": "0409bc1315bff4e3aacaa207b31c41a612b86eb6bb0aad1c47dd0d399d998e53",
+      "source_task_id": "1027650"
+    },
+    {
+      "id": "R06",
+      "source_id": "CROP_LIBAI",
+      "slot_start": 24.28,
+      "slot_end": 26.76,
+      "start_frame": 607,
+      "end_frame_exclusive": 669,
+      "frames": 62,
+      "source_in": 0,
+      "source_out": 2.48,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "derived-faceless-detail",
+      "intent": "旧真实视频裁出的衣袖手势",
+      "transition": "straight-cut",
+      "source_sha256": "8d729a994c5c91e1fd08f2db3b2229b9604588e7993cfeaafff0ccfc05782938",
+      "source_task_id": "1027648"
+    },
+    {
+      "id": "R07",
+      "source_id": "CROWD2",
+      "slot_start": 26.76,
+      "slot_end": 28.4,
+      "start_frame": 669,
+      "end_frame_exclusive": 710,
+      "frames": 41,
+      "source_in": 0,
+      "source_out": 1.64,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "audience",
+      "intent": "看台回应并转入杜甫",
+      "transition": "straight-cut",
+      "source_sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+      "source_task_id": "1027659"
+    },
+    {
+      "id": "R08",
+      "source_id": "DUFU_VERSE14",
+      "slot_start": 28.4,
+      "slot_end": 42.24,
+      "start_frame": 710,
+      "end_frame_exclusive": 1056,
+      "frames": 346,
+      "source_in": 0,
+      "source_out": 13.84,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "corresponding-performance",
+      "intent": "杜甫连续主歌；14秒原曲输入，42.24收镜",
+      "transition": "straight-cut",
+      "source_sha256": "3b53a8ea5139031542769b19315232000c250d57ce437d9dbfb3f2d02a2368df",
+      "source_task_id": "1027840"
+    },
+    {
+      "id": "R09",
+      "source_id": "LIBAI_CHORUS1",
+      "slot_start": 42.24,
+      "slot_end": 46.96,
+      "start_frame": 1056,
+      "end_frame_exclusive": 1174,
+      "frames": 118,
+      "source_in": 0,
+      "source_out": 4.72,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "corresponding-performance",
+      "intent": "李白第一副歌，保留对应原曲时序",
+      "transition": "straight-cut",
+      "source_sha256": "a414b510eb9330b910eb5b520f760b1d18dae425bdc851b26540069ef446ee3a",
+      "source_task_id": "1027834"
+    },
+    {
+      "id": "R10",
+      "source_id": "LIBAI2_SAFE",
+      "slot_start": 46.96,
+      "slot_end": 49.76,
+      "start_frame": 1174,
+      "end_frame_exclusive": 1244,
+      "frames": 70,
+      "source_in": 3.88,
+      "source_out": 6.68,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "faceless-costume",
+      "intent": "衣带与步伐；6.68之前结束，排除现代看台",
+      "transition": "straight-cut",
+      "source_sha256": "26d909fee040e79a8d0d7071f61d6ec7f7a33edd30c2e22ac168c34b79dd9edf",
+      "source_task_id": "1027661"
+    },
+    {
+      "id": "R11",
+      "source_id": "DUFU_CHORUS1",
+      "slot_start": 49.76,
+      "slot_end": 54.44,
+      "start_frame": 1244,
+      "end_frame_exclusive": 1361,
+      "frames": 117,
+      "source_in": 0,
+      "source_out": 4.68,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "corresponding-performance",
+      "intent": "杜甫副歌回应",
+      "transition": "straight-cut",
+      "source_sha256": "26065b2070553926f5769a9acfe97e8f28c367c2acc889c21bdc305e20001938",
+      "source_task_id": "1027844"
+    },
+    {
+      "id": "R12",
+      "source_id": "CROP_DUFU",
+      "slot_start": 54.44,
+      "slot_end": 56.92,
+      "start_frame": 1361,
+      "end_frame_exclusive": 1423,
+      "frames": 62,
+      "source_in": 0,
+      "source_out": 2.48,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "derived-faceless-detail",
+      "intent": "旧视频裁出的衣纹与展臂",
+      "transition": "straight-cut",
+      "source_sha256": "60063f46d4a07e6ceec43353a33e76a4b05f1e2b72091ebf2f7bfce1a8ff52c3",
+      "source_task_id": "1027662"
+    },
+    {
+      "id": "R13",
+      "source_id": "CROWD1",
+      "slot_start": 56.92,
+      "slot_end": 59.6,
+      "start_frame": 1423,
+      "end_frame_exclusive": 1490,
+      "frames": 67,
+      "source_in": 2.4,
+      "source_out": 5.08,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "audience",
+      "intent": "桥段观众反应",
+      "transition": "straight-cut",
+      "source_sha256": "0409bc1315bff4e3aacaa207b31c41a612b86eb6bb0aad1c47dd0d399d998e53",
+      "source_task_id": "1027650"
+    },
+    {
+      "id": "R14",
+      "source_id": "STAGE_DETAIL",
+      "slot_start": 59.6,
+      "slot_end": 63.04,
+      "start_frame": 1490,
+      "end_frame_exclusive": 1576,
+      "frames": 86,
+      "source_in": 0.28,
+      "source_out": 3.72,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "faceless-stage",
+      "intent": "新增舞台灯雾与金环细节；不用MV功能",
+      "transition": "straight-cut",
+      "source_sha256": "9ffdb22c87f595862009fde24ac475989e16d1fc34398c314c5aff3ec723a63c",
+      "source_task_id": "1027850"
+    },
+    {
+      "id": "R15",
+      "source_id": "CROWD2",
+      "slot_start": 63.04,
+      "slot_end": 65.6,
+      "start_frame": 1576,
+      "end_frame_exclusive": 1640,
+      "frames": 64,
+      "source_in": 1.64,
+      "source_out": 4.2,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "audience",
+      "intent": "看台空间调度",
+      "transition": "straight-cut",
+      "source_sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+      "source_task_id": "1027659"
+    },
+    {
+      "id": "R16",
+      "source_id": "LIBAI_CHORUS2",
+      "slot_start": 65.6,
+      "slot_end": 73.32,
+      "start_frame": 1640,
+      "end_frame_exclusive": 1833,
+      "frames": 193,
+      "source_in": 0,
+      "source_out": 7.72,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "corresponding-performance",
+      "intent": "李白最终副歌，原曲连续输入",
+      "transition": "straight-cut",
+      "source_sha256": "ca86a81d51b8b8fc16ed2c95d017ed9f836e2e236a504337bf8340ef51b7e310",
+      "source_task_id": "1027835"
+    },
+    {
+      "id": "R17",
+      "source_id": "CROWD1",
+      "slot_start": 73.32,
+      "slot_end": 75.8,
+      "start_frame": 1833,
+      "end_frame_exclusive": 1895,
+      "frames": 62,
+      "source_in": 5.08,
+      "source_out": 7.56,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "audience",
+      "intent": "观众合拍",
+      "transition": "straight-cut",
+      "source_sha256": "0409bc1315bff4e3aacaa207b31c41a612b86eb6bb0aad1c47dd0d399d998e53",
+      "source_task_id": "1027650"
+    },
+    {
+      "id": "R18",
+      "source_id": "CROWD2",
+      "slot_start": 75.8,
+      "slot_end": 78.72,
+      "start_frame": 1895,
+      "end_frame_exclusive": 1968,
+      "frames": 73,
+      "source_in": 4.2,
+      "source_out": 7.12,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "audience",
+      "intent": "全场回应",
+      "transition": "straight-cut",
+      "source_sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+      "source_task_id": "1027659"
+    },
+    {
+      "id": "R19",
+      "source_id": "CROP_DUET",
+      "slot_start": 78.72,
+      "slot_end": 81.2,
+      "start_frame": 1968,
+      "end_frame_exclusive": 2030,
+      "frames": 62,
+      "source_in": 0,
+      "source_out": 2.48,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "derived-faceless-detail",
+      "intent": "二人下半身走位与舞台金环",
+      "transition": "straight-cut",
+      "source_sha256": "8c8af24d5b83a872371587e24438ed9b9e885ad8fec0478b8ae6371b4cd85602",
+      "source_task_id": "1027655"
+    },
+    {
+      "id": "R20",
+      "source_id": "CROWD1",
+      "slot_start": 81.2,
+      "slot_end": 83.68,
+      "start_frame": 2030,
+      "end_frame_exclusive": 2092,
+      "frames": 62,
+      "source_in": 7.56,
+      "source_out": 10.04,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "audience",
+      "intent": "终句倾听",
+      "transition": "straight-cut",
+      "source_sha256": "0409bc1315bff4e3aacaa207b31c41a612b86eb6bb0aad1c47dd0d399d998e53",
+      "source_task_id": "1027650"
+    },
+    {
+      "id": "R21",
+      "source_id": "CROWD2",
+      "slot_start": 83.68,
+      "slot_end": 86.6,
+      "start_frame": 2092,
+      "end_frame_exclusive": 2165,
+      "frames": 73,
+      "source_in": 7.12,
+      "source_out": 10.04,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "audience",
+      "intent": "终句后的掌声画面",
+      "transition": "straight-cut",
+      "source_sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+      "source_task_id": "1027659"
+    },
+    {
+      "id": "R22",
+      "source_id": "FINALE",
+      "slot_start": 86.6,
+      "slot_end": 94.64,
+      "start_frame": 2165,
+      "end_frame_exclusive": 2366,
+      "frames": 201,
+      "source_in": 2,
+      "source_out": 10.04,
+      "speed": 1,
+      "picture_advance_seconds": 0,
+      "kind": "quiet-outro",
+      "intent": "尾奏放下麦克风、鞠躬与拉远；避开旧片开头演唱",
+      "transition": "straight-cut",
+      "source_sha256": "16a87ff53c5be226a37c24467dc6fb37db50a58692fefd65dd13055a4adf0434",
+      "source_task_id": "1027660"
+    }
+  ],
+  "audio": {
+    "path": "music/source-ya-zhou-ren-jian.mp3",
+    "sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+    "source_sample_frames_48k": 4541545,
+    "output_sample_frames_48k": 4542720,
+    "tail_silence_samples": 1175,
+    "tail_silence_seconds": 0.024479166666666666,
+    "gain_db": -1.5,
+    "gain_applications": 1,
+    "trim_start": 0,
+    "trim_end": 0,
+    "speed": 1,
+    "full_song_preserved": true,
+    "adjusted_source_sample_peak_dbfs": -1.4406992197036743,
+    "adjusted_source_samples_abs_ge_1": 0,
+    "output_verification": {
+      "status": "passed-full-song-audio-content-check",
+      "decoded_aac_frames": 4543488,
+      "compared_frames": 4542720,
+      "zero_offset_waveform_correlation": 0.9995417904431186,
+      "best_fit_gain_relative_to_once_adjusted_source_db": -0.032922778181008326,
+      "aac_roundtrip_snr_db": 30.34389004665421,
+      "window_correlations": [
+        {
+          "start": 0,
+          "end": 10,
+          "correlation": 0.9998895030609443
+        },
+        {
+          "start": 10,
+          "end": 20,
+          "correlation": 0.9998263526916497
+        },
+        {
+          "start": 20,
+          "end": 30,
+          "correlation": 0.9997255388396226
+        },
+        {
+          "start": 30,
+          "end": 40,
+          "correlation": 0.9997188469555374
+        },
+        {
+          "start": 40,
+          "end": 50,
+          "correlation": 0.9994576629536821
+        },
+        {
+          "start": 50,
+          "end": 60,
+          "correlation": 0.9994307651149851
+        },
+        {
+          "start": 60,
+          "end": 70,
+          "correlation": 0.9993771550485193
+        },
+        {
+          "start": 70,
+          "end": 80,
+          "correlation": 0.9993166804009624
+        },
+        {
+          "start": 80,
+          "end": 90,
+          "correlation": 0.9996772612646898
+        }
+      ],
+      "aac_decoded_sample_peak_dbfs": -1.4784595966339111,
+      "aac_decoded_samples_abs_ge_1": 0,
+      "limitation": "AAC有损编码会改变采样；此核验只证明配乐完整/无额外偏移或重复衰减，不证明嘴型。"
+    }
+  },
+  "caption_policy": {
+    "events": [
+      {
+        "id": "VA01",
+        "text": "我携一身月色，踏过长安的墙",
+        "start": 9.84,
+        "end": 14.12,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "VA02",
+        "text": "袖里藏着清风，胸口住着汪洋",
+        "start": 15.08,
+        "end": 18.64,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "VA03",
+        "text": "把失意酿成酒，把夜色唱到亮",
+        "start": 19.64,
+        "end": 23.24,
+        "actor_reference": "李白",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "VA04",
+        "text": "今夜借你鼓点，让天地听我讲",
+        "start": 24.28,
+        "end": 27.98,
+        "actor_reference": "李白",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "VB01",
+        "text": "我从长街走来，听过万户的忙",
+        "start": 28.9,
+        "end": 32.6,
+        "actor_reference": "杜甫",
+        "timing_status": "short-window-supported-start-uncertain"
+      },
+      {
+        "id": "VB03",
+        "text": "有人仰望星河，有人守着炉膛",
+        "start": 33.34,
+        "end": 37.88,
+        "actor_reference": "杜甫",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "VB04",
+        "text": "我让无名的脸，站到舞台中央",
+        "start": 38.2,
+        "end": 42.26,
+        "actor_reference": "杜甫",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "C1A01",
+        "text": "酒杯一举，银河都来捧场",
+        "start": 42.26,
+        "end": 45.06,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "C1A02",
+        "text": "你的工整，装不下我的月光",
+        "start": 46.98,
+        "end": 49.76,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "C1B01",
+        "text": "月光再亮，也得照见风霜",
+        "start": 49.74,
+        "end": 52.1,
+        "actor_reference": "杜甫",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "C1B02",
+        "text": "我把人间，写成压轴的回响",
+        "start": 52.1,
+        "end": 54.46,
+        "actor_reference": "杜甫",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "BRA01",
+        "text": "你把千家灯火，捧在手掌",
+        "start": 54.46,
+        "end": 56.82,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "BRB01",
+        "text": "你让天边明月，落在肩上",
+        "start": 56.82,
+        "end": 59.34,
+        "actor_reference": "杜甫",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "BRA02",
+        "text": "这一杯，敬远方",
+        "start": 59.34,
+        "end": 61.88,
+        "actor_reference": "李白",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "C2A01",
+        "text": "酒杯一举，银河都来捧场",
+        "start": 65.6,
+        "end": 68.6,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "C2A02",
+        "text": "你的工整，装不下我的月光",
+        "start": 70.56,
+        "end": 73.32,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "C2B01",
+        "text": "月光再亮，也得照见风霜",
+        "start": 73.34,
+        "end": 75.68,
+        "actor_reference": "杜甫",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "C2B02",
+        "text": "我把人间，写成压轴的回响",
+        "start": 75.68,
+        "end": 79.1,
+        "actor_reference": "杜甫",
+        "timing_status": "end-uncertain-phonetic-approximation"
+      },
+      {
+        "id": "DUO02",
+        "text": "让这人间，听见回响",
+        "start": 80.3,
+        "end": 85.86,
+        "actor_reference": "合唱",
+        "timing_status": "long-note-end-supported-start-uncertain"
+      }
+    ],
+    "omitted_uncertain_lines": [
+      {
+        "id": "VB02",
+        "text": "鞋底沾着泥土，纸上落着风霜",
+        "reason": "reference_unconfirmed_possibly_omitted"
+      },
+      {
+        "id": "BRB02",
+        "text": "这一笔，敬担当",
+        "reason": "possible-repeat-or-word-change-needs-listening"
+      },
+      {
+        "id": "DUO01",
+        "text": "敬月光，也敬风霜",
+        "reason": "reference_unconfirmed_possibly_omitted"
+      }
+    ],
+    "timings": "existing-editorial-candidates-not-new-listening-confirmation",
+    "word_precise_timing_claim": false
+  },
+  "edit_summary": {
+    "shots": 22,
+    "corresponding_performance_seconds": 40.96,
+    "audience_seconds": 20.08,
+    "repeated_source_time_ranges": false,
+    "source_speed": 1,
+    "still_image_motion": false,
+    "old_wrong_mouth_faces_in_vocal_sections": false,
+    "crop_inserts_seconds": 7.44
+  },
+  "budget_ledger": {
+    "path": "work/chatart-tasks.json",
+    "snapshot_path": "work/audio-driven-repair/full-reedit/budget-ledger-at-render.json",
+    "snapshot_sha256": "8b7001079219ea2194dc7aba1b5bd2697e617cdd74d9c0c856e7d0cbdf8f8935",
+    "accounting_owner": "root"
+  },
+  "verification": {
+    "all_video_audio_frames_decoded_without_errors": true,
+    "full_speed_audiovisual_review": null,
+    "full_speed_visual_playback_review": null,
+    "subjective_audio_review_claimed": false,
+    "all_clear_singing_source_windows_match_original_song": true,
+    "audio_content_check_not_lip_sync_score": true,
+    "editorial_frame_review": {
+      "path": "work/audio-driven-repair/full-reedit/final-editorial-review.json",
+      "sha256": "b8ccd9dbe28ec44d3bf4fea93cbcb8f0bb4bb90185f6f27bf4aac8b12400d911",
+      "all22_midpoints_and21_cut_pairs_actually_viewed": true,
+      "full_speed_or_subjective_audio_claimed": false
+    }
+  },
+  "limitations": [
+    "5秒pilot由用户带声验收，后续片段逐条记录真实审核，不以音频相关性代替嘴型审核。",
+    "全曲与原速保留；部分唱词使用观众、舞台、无脸衣纹动态覆盖，不声称94秒均为正脸演唱。",
+    "三处旧片裁切为1.78倍空间放大短插镜，非新增原生画质素材。",
+    "字幕延用候选定位，三条未定位或改词疑点仍省略。"
+  ],
+  "review_evidence": {
+    "storyboard_pages": [
+      "work/audio-driven-repair/full-reedit/final-review/storyboard-01.jpg",
+      "work/audio-driven-repair/full-reedit/final-review/storyboard-02.jpg",
+      "work/audio-driven-repair/full-reedit/final-review/storyboard-03.jpg"
+    ],
+    "cut_neighbour_pages": [
+      "work/audio-driven-repair/full-reedit/final-review/cuts-01.jpg",
+      "work/audio-driven-repair/full-reedit/final-review/cuts-02.jpg",
+      "work/audio-driven-repair/full-reedit/final-review/cuts-03.jpg"
+    ],
+    "scope": "真实成片各镜头中点及全部切口前后帧；需另做全片原速审看，静帧不是口型或连续动作验收。"
+  }
+}

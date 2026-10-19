@@ -1,0 +1,42 @@
+{
+  "heading": "《压轴人间》：这一回，唱完整首。",
+  "hero": null,
+  "observed_at": "2026-10-15T19:38:23.560Z",
+  "summary": "《压轴人间》与《敬风霜》完整舞台版均可观看。真实试片、人物参考和制作记录继续保留。",
+  "url": "http://127.0.0.1:4184/1014_codex_project/011-ancient-rap-battle/#stage-film-004",
+  "video": {
+    "currentTime": 42.438586,
+    "duration": 94.64,
+    "error": null,
+    "height": 720,
+    "paused": true,
+    "src": "http://127.0.0.1:4184/1014_codex_project/011-ancient-rap-battle/media/stage-film-004/ya-zhou-ren-jian-stage.mp4",
+    "width": 1280
+  },
+  "viewport": {
+    "documentWidth": 766,
+    "height": 871,
+    "width": 781
+  },
+  "visible": true,
+  "source_sha256": "525c42dfe2bbe7bf0fe0dff77f122451464927e5aede6488a1b19f9691a0cb45",
+  "play_from_start_observation": {
+    "times": [
+      0,
+      5.9278,
+      20.718382
+    ],
+    "paused": false,
+    "error": null
+  },
+  "chapter_jump": {
+    "button": "0:42 双人副歌",
+    "observed_time": 42.438586,
+    "paused_with_native_Space": true,
+    "error": null
+  },
+  "no_horizontal_overflow": true,
+  "screenshot": "browser-review/web-stage-final.jpg",
+  "full_playback_evidence": "browser-review/native-full-playback.json",
+  "passed": true
+}

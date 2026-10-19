@@ -1,0 +1,227 @@
+{
+  "status": "completed",
+  "output": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\001-libai-dufu\\final\\libai-dufu-sample-v1.mp4",
+  "sha256": "d3ff4396ae24c9b9540a006267232aebea738e112d34e02cacdfb964b42e0e37",
+  "parameters": {
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_bitrate": 192000,
+    "audio_sample_rate": 48000,
+    "crf": 20
+  },
+  "total_duration": 24,
+  "expected_duration": 24,
+  "video_frames": 576,
+  "elapsed_ms": 14024,
+  "poster": {
+    "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\001-libai-dufu\\refs\\poets-stage-v1.png",
+    "sha256": "0c1e7a6b62264024d5d63a0e0d73ddae8fd5b3ff5929c4aa1b53a76f52ed12a7"
+  },
+  "audio": {
+    "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\001-libai-dufu\\work\\music_final.wav",
+    "sha256": "1fe6deb9906e8c2bc414c3126614994116bb09d9abf101195ef3d937142eb122",
+    "source_clip_audio_used": false
+  },
+  "shift_source": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\001-libai-dufu\\work\\shifts.json",
+  "shift_meaning": "正值多裁源片开头，负值在源前定格；不足以末帧补齐",
+  "retime_source": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\001-libai-dufu\\work\\retimes.json",
+  "shots": [
+    {
+      "id": "A01",
+      "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\001-libai-dufu\\clips\\A01_t1.mp4",
+      "sha256": "52a4be38964b6f2ee33d4708ec864b73c27ff1c624824c31fab2fa64c4b39380",
+      "source_duration": 5.166667,
+      "requested_advance_seconds": 0,
+      "source_in": 0,
+      "source_out": 4.8,
+      "start_frame_hold_seconds": 0,
+      "end_frame_hold_seconds": 0,
+      "slot_start": 2.4,
+      "slot_end": 7.2,
+      "slot_duration": 4.8,
+      "source_stream": {
+        "width": 1344,
+        "height": 768,
+        "fps": "24/1"
+      }
+    },
+    {
+      "id": "A02",
+      "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\001-libai-dufu\\clips\\A02_t1.mp4",
+      "sha256": "e050ae36759707ee8f5c58ec71939c600c89b443a1ae199d14efc5f6ac17d4a6",
+      "source_duration": 5.041667,
+      "requested_advance_seconds": 0,
+      "source_in": 0,
+      "source_out": 5.041667,
+      "start_frame_hold_seconds": 0,
+      "end_frame_hold_seconds": 0,
+      "slot_start": 7.2,
+      "slot_end": 12,
+      "slot_duration": 4.8,
+      "retime": {
+        "method": "声学活动分组启发式，非逐词ASR/非口型证明",
+        "reason": "原片音轨活动两组与输入参考音频的两组边界不同，尝试仅对画面分段线性调整节奏；原音轨筛查失败状态保留。",
+        "control_points": [
+          [
+            0,
+            0
+          ],
+          [
+            0.57,
+            0.45
+          ],
+          [
+            1.31,
+            1.09
+          ],
+          [
+            2.39,
+            1.5
+          ],
+          [
+            3.59,
+            2.44
+          ],
+          [
+            5.041667,
+            4.8
+          ]
+        ],
+        "internal_segment_fps": 100,
+        "slot_fps": 25,
+        "original_audio_screening_passed": false,
+        "sync_passed": false,
+        "segments": [
+          {
+            "source_start": 0,
+            "source_end": 0.57,
+            "target_start": 0,
+            "target_end": 0.45,
+            "source_duration": 0.57,
+            "target_duration": 0.45,
+            "setpts_scale": 0.7894736842105264
+          },
+          {
+            "source_start": 0.57,
+            "source_end": 1.31,
+            "target_start": 0.45,
+            "target_end": 1.09,
+            "source_duration": 0.7400000000000001,
+            "target_duration": 0.64,
+            "setpts_scale": 0.8648648648648649
+          },
+          {
+            "source_start": 1.31,
+            "source_end": 2.39,
+            "target_start": 1.09,
+            "target_end": 1.5,
+            "source_duration": 1.08,
+            "target_duration": 0.41,
+            "setpts_scale": 0.37962962962962954
+          },
+          {
+            "source_start": 2.39,
+            "source_end": 3.59,
+            "target_start": 1.5,
+            "target_end": 2.44,
+            "source_duration": 1.1999999999999997,
+            "target_duration": 0.94,
+            "setpts_scale": 0.7833333333333334
+          },
+          {
+            "source_start": 3.59,
+            "source_end": 5.041667,
+            "target_start": 2.44,
+            "target_end": 4.8,
+            "source_duration": 1.4516670000000005,
+            "target_duration": 2.36,
+            "setpts_scale": 1.625717192717062
+          }
+        ]
+      },
+      "source_stream": {
+        "width": 1280,
+        "height": 720,
+        "fps": "24/1"
+      }
+    },
+    {
+      "id": "B01",
+      "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\001-libai-dufu\\clips\\B01_t1.mp4",
+      "sha256": "fc3ad799465487f9109201b3abddedf0e04035b200ab054dcfb023eed3f2b496",
+      "source_duration": 5.166667,
+      "requested_advance_seconds": 0,
+      "source_in": 0,
+      "source_out": 4.8,
+      "start_frame_hold_seconds": 0,
+      "end_frame_hold_seconds": 0,
+      "slot_start": 12,
+      "slot_end": 16.8,
+      "slot_duration": 4.8,
+      "source_stream": {
+        "width": 1344,
+        "height": 768,
+        "fps": "24/1"
+      }
+    },
+    {
+      "id": "B02",
+      "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\001-libai-dufu\\clips\\B02_t1.mp4",
+      "sha256": "9d8e37eed7bc9cf86011a790cff24b55a33bd9d0ae19811ce6917b947bd4ccd1",
+      "source_duration": 5.166667,
+      "requested_advance_seconds": 0,
+      "source_in": 0,
+      "source_out": 4.8,
+      "start_frame_hold_seconds": 0,
+      "end_frame_hold_seconds": 0,
+      "slot_start": 16.8,
+      "slot_end": 21.6,
+      "slot_duration": 4.8,
+      "source_stream": {
+        "width": 1344,
+        "height": 768,
+        "fps": "24/1"
+      }
+    }
+  ],
+  "subtitles": [
+    {
+      "id": "A01",
+      "start": 2.862,
+      "end": 4.933000000000001,
+      "text": "酒杯一举，银河都来捧场"
+    },
+    {
+      "id": "A02",
+      "start": 7.655,
+      "end": 9.788,
+      "text": "你的工整，装不下我的月光"
+    },
+    {
+      "id": "B01",
+      "start": 12.459,
+      "end": 14.466000000000001,
+      "text": "月光再亮，也得照见风霜"
+    },
+    {
+      "id": "B02",
+      "start": 17.269,
+      "end": 19.391,
+      "text": "我把人间，写成压轴的回响"
+    }
+  ],
+  "checks": {
+    "dimensions": true,
+    "fps": true,
+    "duration": true,
+    "audio_codec": true
+  },
+  "limitations": [
+    "源片是否说对歌词、角色一致性与口型自然度需人工看片确认。",
+    "偏移或retime只移动画面，统一配音和节拍时间轴保持固定。",
+    "启用retime的片段只按声学活动分组启发式修节奏，非逐词ASR/非口型证明；原片音轨QA失败不会被回填参考音频改成通过。"
+  ]
+}

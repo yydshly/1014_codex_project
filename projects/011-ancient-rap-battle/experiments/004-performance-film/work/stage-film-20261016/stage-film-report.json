@@ -1,0 +1,1244 @@
+{
+  "schema_version": 1,
+  "experiment_id": "004-performance-film",
+  "status": "completed-visual-stage-montage",
+  "title": "压轴人间 · 完整舞台版",
+  "created_at": "2026-10-15T19:30:15.388699+00:00",
+  "mode": "visual-stage-montage",
+  "lip_sync_requirement": "natural-not-precise",
+  "precise_lip_sync_claim": false,
+  "ordinary_video_only": true,
+  "mv_feature_used": false,
+  "local_lipsync_model_used": false,
+  "edit_summary": {
+    "real_remote_sources": 11,
+    "new_remote_sources": 9,
+    "reused_pilot_sources": [
+      "OPEN",
+      "SINGING"
+    ],
+    "shots": 28,
+    "source_speed": 1,
+    "repeated_source_time_ranges": false,
+    "still_image_motion": false,
+    "audience_picture_seconds": 18.04
+  },
+  "output": {
+    "path": "work/stage-film-20261016/final/压轴人间-完整舞台版.mp4",
+    "sha256": "525c42dfe2bbe7bf0fe0dff77f122451464927e5aede6488a1b19f9691a0cb45",
+    "bytes": 57372869,
+    "width": 1280,
+    "height": 720,
+    "fps": 25.0,
+    "frames": 2366,
+    "duration": 94.64,
+    "container_duration": 94.64
+  },
+  "poster": {
+    "path": "work/stage-film-20261016/final/压轴人间-舞台版封面.jpg",
+    "sha256": "a2872761614025eed427a254cccc7b00890eef79c7d067cfd887fee2ff0a6928",
+    "bytes": 203056
+  },
+  "source_manifest": {
+    "path": "work/stage-film-20261016/source-files.json",
+    "sha256": "9b78262a0f9da8a3b0fd6d6f9606b58de776923c36f987d47f771284cee46860"
+  },
+  "timeline": {
+    "path": "work/stage-film-20261016/stage-timeline.json",
+    "sha256": "99242fa693288b6fbf7b4ddfb9f7b9e455a5f4c500e42e94c2c821fee6d338c2"
+  },
+  "audio": {
+    "path": "music/source-ya-zhou-ren-jian.mp3",
+    "sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+    "kind": "user-supplied-song",
+    "provider": "用户提供，具体生成平台与模型未独立核验",
+    "source_sample_frames_48k": 4541545,
+    "output_sample_frames_48k": 4542720,
+    "tail_silence_samples": 1175,
+    "tail_silence_seconds": 0.024479166666666666,
+    "gain_db": -1.5,
+    "gain_applications": 1,
+    "trim_start": 0,
+    "trim_end": 0,
+    "speed": 1,
+    "full_song_preserved": true,
+    "adjusted_source_sample_peak_dbfs": -1.4406992197036743,
+    "adjusted_source_samples_abs_ge_1": 0,
+    "output_verification": {
+      "status": "passed-full-song-audio-content-check",
+      "decoded_aac_frames": 4543488,
+      "compared_frames": 4542720,
+      "zero_offset_waveform_correlation": 0.9995417904431186,
+      "best_fit_gain_relative_to_once_adjusted_source_db": -0.032922778181008326,
+      "aac_roundtrip_snr_db": 30.34389004665421,
+      "window_correlations": [
+        {
+          "start": 0,
+          "end": 10,
+          "correlation": 0.9998895030609443
+        },
+        {
+          "start": 10,
+          "end": 20,
+          "correlation": 0.9998263526916497
+        },
+        {
+          "start": 20,
+          "end": 30,
+          "correlation": 0.9997255388396226
+        },
+        {
+          "start": 30,
+          "end": 40,
+          "correlation": 0.9997188469555374
+        },
+        {
+          "start": 40,
+          "end": 50,
+          "correlation": 0.9994576629536821
+        },
+        {
+          "start": 50,
+          "end": 60,
+          "correlation": 0.9994307651149851
+        },
+        {
+          "start": 60,
+          "end": 70,
+          "correlation": 0.9993771550485193
+        },
+        {
+          "start": 70,
+          "end": 80,
+          "correlation": 0.9993166804009624
+        },
+        {
+          "start": 80,
+          "end": 90,
+          "correlation": 0.9996772612646898
+        }
+      ],
+      "aac_decoded_sample_peak_dbfs": -1.4784595966339111,
+      "aac_decoded_samples_abs_ge_1": 0,
+      "limitation": "AAC有损编码会改变采样；此核验只证明配乐完整/无额外偏移或重复衰减，不证明嘴型。"
+    }
+  },
+  "sources": [
+    {
+      "id": "OPEN",
+      "path": "clips/skill-open-t1-download/SKILL_OPEN_t1-original.mp4",
+      "task_id": "1027533",
+      "sha256": "bb101af1ac0ae290818079b6d5ad9fa82afee21fd98bdd63a1b9d4eca75510c3",
+      "bytes": 7202655,
+      "model_label": "Seedance 2.0",
+      "kind": "stage",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "method": "root visual inspection of nine chronological native-source frames plus prior native playback; independent editor review and all-frame decode",
+        "note": "Same locked faces/costumes/stage retained. OPEN contains visible turning, steps and gestures; SINGING contains mouth, expression and hand changes. Accepted only for natural-performance stage montage; original-song precise lip sync not claimed."
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "SKILL_OPEN_t1",
+      "ledger_status_at_render": "completed-pilot-accepted",
+      "native_audio_used_in_final": false
+    },
+    {
+      "id": "SINGING",
+      "path": "clips/skill-lip-A1-t1-download/video_20261016003014.mp4",
+      "task_id": "1027559",
+      "sha256": "c5985495b7220d2b9bf39f09764b944b2acce4961d0ee88c5b4360241bb02fce",
+      "bytes": 2749170,
+      "model_label": "Seedance 2.0",
+      "kind": "libai",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "method": "root visual inspection of nine chronological native-source frames plus prior native playback; independent editor review and all-frame decode",
+        "note": "Same locked faces/costumes/stage retained. OPEN contains visible turning, steps and gestures; SINGING contains mouth, expression and hand changes. Accepted only for natural-performance stage montage; original-song precise lip sync not claimed."
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 121,
+      "duration": 5.041667,
+      "container_duration": 5.056,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "SKILL_LIP_A1_t1",
+      "ledger_status_at_render": "video-completed-lip-sync-not-passed",
+      "native_audio_used_in_final": false
+    },
+    {
+      "id": "CROWD1",
+      "path": "clips/STAGE_CROWD1_t1/video_20261016030143.mp4",
+      "task_id": "1027650",
+      "sha256": "0409bc1315bff4e3aacaa207b31c41a612b86eb6bb0aad1c47dd0d399d998e53",
+      "bytes": 5696511,
+      "model_label": "Seedance 2.0",
+      "kind": "audience",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Nine chronological source frames plus independent native-size samples; actual adult audience clapping, expression and body changes. Same stage world; no cloned lead faces or misplaced moon. Use as short reaction shots.",
+        "root_review_path": "work/stage-film-20261016/reviews/CROWD1/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": [
+          "Camera movement subtle; use short shots, not one ten-second hold."
+        ],
+        "source_id": "CROWD1",
+        "source_sha256": "0409bc1315bff4e3aacaa207b31c41a612b86eb6bb0aad1c47dd0d399d998e53",
+        "reviewed_by": "root and independent visual reviewer",
+        "scope": "Nine chronological source frames plus independent native-size samples; actual adult audience clapping, expression and body changes. Same stage world; no cloned lead faces or misplaced moon. Use as short reaction shots."
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/CROWD1/root-review.json",
+        "sha256": "f8fab2ee49bf7e34f38ba2f9e199845886c2f5055de7c4007abea5a41be9096c"
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_CROWD1_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false
+    },
+    {
+      "id": "WIDE",
+      "path": "clips/STAGE_WIDE_t1/video_20261016030144.mp4",
+      "task_id": "1027649",
+      "sha256": "50f21be6bbe83040318ef62d0a9a8d9cf1d58a1b35ca2a975f60f768d3f1d7e4",
+      "bytes": 7606017,
+      "model_label": "Seedance 2.0",
+      "kind": "stage",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Nine chronological native-source frames inspected. Both locked actors retain gold crowns, ivory/teal vs indigo/copper garments and microphones. Real measured steps, turns and open-arm gestures; deep spectator-to-stage camera parallax. Moon, pine/rock wings, brass-ring floor and balconies remain continuous.",
+        "root_review_path": "work/stage-film-20261016/reviews/WIDE/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": [
+          "Camera pushes closer rather than remaining at a full-arena wide angle; edit with audience cuts."
+        ],
+        "source_id": "WIDE",
+        "source_sha256": "50f21be6bbe83040318ef62d0a9a8d9cf1d58a1b35ca2a975f60f768d3f1d7e4",
+        "reviewed_by": "root and independent editor",
+        "scope": "Nine chronological native-source frames inspected. Both locked actors retain gold crowns, ivory/teal vs indigo/copper garments and microphones. Real measured steps, turns and open-arm gestures; deep spectator-to-stage camera parallax. Moon, pine/rock wings, brass-ring floor and balconies remain continuous."
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/WIDE/root-review.json",
+        "sha256": "27f9afe50f09bba6ec293b95202183b3f935ced0cd8d0e279d5a4aef8b93ed12"
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_WIDE_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false
+    },
+    {
+      "id": "LIBAI1",
+      "path": "clips/STAGE_LIBAI1_t1/recovered/video_20261016030618.mp4",
+      "task_id": "1027648",
+      "sha256": "cdc376283c1a81e4f975e7d3ac12d705a96c7ca5c88865218a86968dfc459c2e",
+      "bytes": 7704186,
+      "model_label": "Seedance 2.0",
+      "kind": "libai",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Recovered full source only, not the 884736B partial. Nine chronological frames show same young clean-shaven Li Bai, small gold crown, ivory/teal embroidered robe, black microphone and moonlit stage. Real step, raised microphone, arm gestures and expression changes.",
+        "root_review_path": "work/stage-film-20261016/reviews/LIBAI1/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": [
+          "Microphone partly overlaps mouth; exact original-song articulation is not claimed."
+        ],
+        "source_id": "LIBAI1",
+        "source_sha256": "cdc376283c1a81e4f975e7d3ac12d705a96c7ca5c88865218a86968dfc459c2e",
+        "reviewed_by": "root, editor and independent character reviewer",
+        "scope": "Recovered full source only, not the 884736B partial. Nine chronological frames show same young clean-shaven Li Bai, small gold crown, ivory/teal embroidered robe, black microphone and moonlit stage. Real step, raised microphone, arm gestures and expression changes."
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/LIBAI1/root-review.json",
+        "sha256": "7acd89de25dc8224cadbe53cd0d558ec41c16aa60006e7dbc5dc9ca5f17afe5e"
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_LIBAI1_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false
+    },
+    {
+      "id": "DUFU1",
+      "path": "clips/STAGE_DUFU1_t1/video_20261016030708.mp4",
+      "task_id": "1027654",
+      "sha256": "8e43da253c74be9e247c3126a2f129ce2e645021dc7c0d27465f1baf5d3a3dde",
+      "bytes": 8789448,
+      "model_label": "Seedance 2.0",
+      "kind": "dufu",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Nine chronological native-source frames. Mature short moustache/chin beard, small gold crown and indigo/copper embroidered wardrobe match the locked character. Camera arcs from three-quarter view to frontal view; singing expressions, free-hand gesture and mic raise visible. Stage and audience geometry consistent.",
+        "root_review_path": "work/stage-film-20261016/reviews/DUFU1/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": [
+          "Subtle embroidery and facial rendering vary with angle; exact singing articulation not evaluated."
+        ],
+        "source_id": "DUFU1",
+        "source_sha256": "8e43da253c74be9e247c3126a2f129ce2e645021dc7c0d27465f1baf5d3a3dde",
+        "reviewed_by": "root and editor",
+        "scope": "Nine chronological native-source frames. Mature short moustache/chin beard, small gold crown and indigo/copper embroidered wardrobe match the locked character. Camera arcs from three-quarter view to frontal view; singing expressions, free-hand gesture and mic raise visible. Stage and audience geometry consistent."
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/DUFU1/root-review.json",
+        "sha256": "4b192dca5496a93c4b1330324aabe041e0efb54c9b7862b1c90d0853e200d9e9"
+      },
+      "width": 1344,
+      "height": 768,
+      "fps": 24.0,
+      "frames": 243,
+      "duration": 10.125,
+      "container_duration": 10.125,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_DUFU1_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false
+    },
+    {
+      "id": "DUET",
+      "path": "clips/STAGE_DUET_t1/video_20261016031359.mp4",
+      "task_id": "1027655",
+      "sha256": "21d3a305e30af910623735c31990e0377ea60b7791943abf0bd783caf124553e",
+      "bytes": 8020262,
+      "model_label": "Seedance 2.0",
+      "kind": "duet",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Nine chronological native-source frames. Locked Li Bai remains left, Du Fu right, small gold crowns and ivory/teal vs indigo/copper costumes consistent. Real turns, inviting free-hand gesture, mic response and final audience-facing pose; same moon, stage rings, columns and balconies.",
+        "root_review_path": "work/stage-film-20261016/reviews/DUET/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": [
+          "Actual camera is a slow push rather than the requested lateral slide.",
+          "Singing actions are natural performance only; not original-song lip sync."
+        ],
+        "source_id": "DUET",
+        "source_sha256": "21d3a305e30af910623735c31990e0377ea60b7791943abf0bd783caf124553e",
+        "reviewed_by": "root and editor",
+        "scope": "Nine chronological native-source frames. Locked Li Bai remains left, Du Fu right, small gold crowns and ivory/teal vs indigo/copper costumes consistent. Real turns, inviting free-hand gesture, mic response and final audience-facing pose; same moon, stage rings, columns and balconies."
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/DUET/root-review.json",
+        "sha256": "71d8938879f7cb3af109acff3b12498d852841072a973db07e01c3f05e6dcaa3"
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_DUET_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false
+    },
+    {
+      "id": "FINALE",
+      "path": "clips/STAGE_FINALE_t1/video_20261016032213.mp4",
+      "task_id": "1027660",
+      "sha256": "16a87ff53c5be226a37c24467dc6fb37db50a58692fefd65dd13055a4adf0434",
+      "bytes": 6898341,
+      "model_label": "Seedance 2.0",
+      "kind": "duet",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Nine chronological actual frames reviewed. Same young ivory/teal Li Bai on left and mature bearded indigo/copper Du Fu on right, matching small gold crowns, microphones, moonlit brass-ring stage and balconies. Real singing gesture, joint bow, recovery, mutual glance and camera pullback.",
+        "root_review_path": "work/stage-film-20261016/reviews/FINALE/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": "Source 3.5–5.5 s contains a bow; place it in the outro rather than mid-verse. Exact lip synchronization is not claimed.",
+        "source_id": "FINALE",
+        "source_sha256": "16a87ff53c5be226a37c24467dc6fb37db50a58692fefd65dd13055a4adf0434",
+        "reviewed_at": "2026-10-15T19:25:31.015235+00:00",
+        "scope": "natural-performance visual stage montage only",
+        "method": "root visual inspection of nine chronological decoded native-source frames"
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/FINALE/root-review.json",
+        "sha256": "6924c72975ca458d6666c8c8258b1f1a4a54c3dfb8d3aaf968700ca260e67b2a"
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_FINALE_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false
+    },
+    {
+      "id": "CROWD2",
+      "path": "clips/STAGE_CROWD2_t1/video_20261016032242.mp4",
+      "task_id": "1027659",
+      "sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+      "bytes": 10885235,
+      "model_label": "Seedance 2.0",
+      "kind": "audience",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Nine chronological actual frames reviewed. Adult audience clapping and moving on layered wooden balconies; camera moves sideways and down to a deep audience hall with pine/rock wings and gold/white stage lighting. No lead clones or contradictory moon.",
+        "root_review_path": "work/stage-film-20261016/reviews/CROWD2/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": "Small background faces/hands remain generated detail; use as audience reaction or spatial transition.",
+        "source_id": "CROWD2",
+        "source_sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+        "reviewed_at": "2026-10-15T19:25:31.015235+00:00",
+        "scope": "natural-performance visual stage montage only",
+        "method": "root visual inspection of nine chronological decoded native-source frames"
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/CROWD2/root-review.json",
+        "sha256": "6aee427e0d0a63beac10813670f947d7cfba0019a280d9538008b6a18b5cf7fb"
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_CROWD2_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false
+    },
+    {
+      "id": "DUFU2",
+      "path": "clips/STAGE_DUFU2_t1/video_20261016032312.mp4",
+      "task_id": "1027662",
+      "sha256": "65cb2f7f09847eaed3953e7b6e33c34ce3175c9d81578db7ba8416571ed13e56",
+      "bytes": 8969554,
+      "model_label": "Seedance 2.0",
+      "kind": "dufu",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Nine chronological actual frames reviewed. Same mature short moustache/chin beard, small gold crown, indigo/copper robe and black microphone. Real open-arm gesture, singing expression, measured body movement and camera arc/pullback with continuous moon, brass-ring stage and wooden balcony world.",
+        "root_review_path": "work/stage-film-20261016/reviews/DUFU2/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": "Natural performance visuals only; exact lips to the original song are not claimed.",
+        "source_id": "DUFU2",
+        "source_sha256": "65cb2f7f09847eaed3953e7b6e33c34ce3175c9d81578db7ba8416571ed13e56",
+        "reviewed_at": "2026-10-15T19:25:31.015235+00:00",
+        "scope": "natural-performance visual stage montage only",
+        "method": "root visual inspection of nine chronological decoded native-source frames"
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/DUFU2/root-review.json",
+        "sha256": "89f5ed4577c87c1115223c8ab2ee3b34321df83cd9f37c41205712a5dcf5cded"
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_DUFU2_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false
+    },
+    {
+      "id": "LIBAI2",
+      "path": "clips/STAGE_LIBAI2_t1/video_20261016032313.mp4",
+      "task_id": "1027661",
+      "sha256": "26d909fee040e79a8d0d7071f61d6ec7f7a33edd30c2e22ac168c34b79dd9edf",
+      "bytes": 10265039,
+      "model_label": "Seedance 2.0",
+      "kind": "libai",
+      "generation_method": "ordinary-video-via-official-ChatArt-Skill",
+      "review": {
+        "accepted_for_final": true,
+        "identity_preserved": true,
+        "motion_reviewed": true,
+        "note": "Nine chronological actual frames reviewed. Initial face matches young clean-shaven Li Bai with small gold crown; same ivory/teal robe, embroidery, black microphone, circular stage. Real robe/foot movement and camera orbit provide detail coverage.",
+        "root_review_path": "work/stage-film-20261016/reviews/LIBAI2/root-review.json",
+        "precise_lip_sync_claimed": false,
+        "limitations": "Use only source 0–7.2 s as robe, sleeve and walking details. Later rear view has blue concert-like audience styling and is excluded. Most middle frames crop the face, so do not call this frontal singing or a cup shot.",
+        "allowed_source_ranges": [
+          [
+            0,
+            7.2
+          ]
+        ],
+        "source_id": "LIBAI2",
+        "source_sha256": "26d909fee040e79a8d0d7071f61d6ec7f7a33edd30c2e22ac168c34b79dd9edf",
+        "reviewed_at": "2026-10-15T19:25:31.015235+00:00",
+        "scope": "natural-performance visual stage montage only",
+        "method": "root visual inspection of nine chronological decoded native-source frames"
+      },
+      "review_evidence": {
+        "path": "work/stage-film-20261016/reviews/LIBAI2/root-review.json",
+        "sha256": "93e66ced887541d349a2fbf3e8b08351ecfb08dc91e79c125c715f3929f86f29"
+      },
+      "width": 1268,
+      "height": 728,
+      "fps": 24.0,
+      "frames": 241,
+      "duration": 10.041667,
+      "container_duration": 10.048,
+      "source_kind": "remote-ordinary-generated-video",
+      "source_experiment": "004-performance-film",
+      "ledger_local_id": "STAGE_LIBAI2_t1",
+      "ledger_status_at_render": "reviewed-accepted-for-natural-stage-montage",
+      "native_audio_used_in_final": false
+    }
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "source_id": "OPEN",
+      "slot_start": 0,
+      "slot_end": 3.2,
+      "start_frame": 0,
+      "end_frame_exclusive": 80,
+      "frames": 80,
+      "source_in": 0,
+      "source_out": 3.2,
+      "speed": 1,
+      "intent": "月下舞台揭幕",
+      "transition": "straight-cut",
+      "source_sha256": "bb101af1ac0ae290818079b6d5ad9fa82afee21fd98bdd63a1b9d4eca75510c3",
+      "source_task_id": "1027533"
+    },
+    {
+      "id": "S02",
+      "source_id": "CROWD2",
+      "slot_start": 3.2,
+      "slot_end": 5.6,
+      "start_frame": 80,
+      "end_frame_exclusive": 140,
+      "frames": 60,
+      "source_in": 0,
+      "source_out": 2.4,
+      "speed": 1,
+      "intent": "看台预热",
+      "transition": "straight-cut",
+      "source_sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+      "source_task_id": "1027659"
+    },
+    {
+      "id": "S03",
+      "source_id": "OPEN",
+      "slot_start": 5.6,
+      "slot_end": 9.4,
+      "start_frame": 140,
+      "end_frame_exclusive": 235,
+      "frames": 95,
+      "source_in": 3.2,
+      "source_out": 7.0,
+      "speed": 1,
+      "intent": "双人登场",
+      "transition": "straight-cut",
+      "source_sha256": "bb101af1ac0ae290818079b6d5ad9fa82afee21fd98bdd63a1b9d4eca75510c3",
+      "source_task_id": "1027533"
+    },
+    {
+      "id": "S04",
+      "source_id": "SINGING",
+      "slot_start": 9.4,
+      "slot_end": 14.4,
+      "start_frame": 235,
+      "end_frame_exclusive": 360,
+      "frames": 125,
+      "source_in": 0,
+      "source_out": 5.0,
+      "speed": 1,
+      "intent": "李白首句",
+      "transition": "straight-cut",
+      "source_sha256": "c5985495b7220d2b9bf39f09764b944b2acce4961d0ee88c5b4360241bb02fce",
+      "source_task_id": "1027559"
+    },
+    {
+      "id": "S05",
+      "source_id": "LIBAI1",
+      "slot_start": 14.4,
+      "slot_end": 19,
+      "start_frame": 360,
+      "end_frame_exclusive": 475,
+      "frames": 115,
+      "source_in": 1.8,
+      "source_out": 6.4,
+      "speed": 1,
+      "intent": "李白主歌中景，取抬麦之后",
+      "transition": "straight-cut",
+      "source_sha256": "cdc376283c1a81e4f975e7d3ac12d705a96c7ca5c88865218a86968dfc459c2e",
+      "source_task_id": "1027648"
+    },
+    {
+      "id": "S06",
+      "source_id": "LIBAI2",
+      "slot_start": 19,
+      "slot_end": 21.6,
+      "start_frame": 475,
+      "end_frame_exclusive": 540,
+      "frames": 65,
+      "source_in": 0,
+      "source_out": 2.6,
+      "speed": 1,
+      "intent": "李白衣袖与转身细节",
+      "transition": "straight-cut",
+      "source_sha256": "26d909fee040e79a8d0d7071f61d6ec7f7a33edd30c2e22ac168c34b79dd9edf",
+      "source_task_id": "1027661"
+    },
+    {
+      "id": "S07",
+      "source_id": "CROWD1",
+      "slot_start": 21.6,
+      "slot_end": 24.2,
+      "start_frame": 540,
+      "end_frame_exclusive": 605,
+      "frames": 65,
+      "source_in": 0,
+      "source_out": 2.6,
+      "speed": 1,
+      "intent": "观众回应",
+      "transition": "straight-cut",
+      "source_sha256": "0409bc1315bff4e3aacaa207b31c41a612b86eb6bb0aad1c47dd0d399d998e53",
+      "source_task_id": "1027650"
+    },
+    {
+      "id": "S07B",
+      "source_id": "LIBAI2",
+      "slot_start": 24.2,
+      "slot_end": 26,
+      "start_frame": 605,
+      "end_frame_exclusive": 650,
+      "frames": 45,
+      "source_in": 2.6,
+      "source_out": 4.4,
+      "speed": 1,
+      "intent": "青绿衣带与舞台步伐",
+      "transition": "straight-cut",
+      "source_sha256": "26d909fee040e79a8d0d7071f61d6ec7f7a33edd30c2e22ac168c34b79dd9edf",
+      "source_task_id": "1027661"
+    },
+    {
+      "id": "S08",
+      "source_id": "LIBAI1",
+      "slot_start": 26,
+      "slot_end": 28.52,
+      "start_frame": 650,
+      "end_frame_exclusive": 713,
+      "frames": 63,
+      "source_in": 6.4,
+      "source_out": 8.92,
+      "speed": 1,
+      "intent": "李白抬手收句",
+      "transition": "straight-cut",
+      "source_sha256": "cdc376283c1a81e4f975e7d3ac12d705a96c7ca5c88865218a86968dfc459c2e",
+      "source_task_id": "1027648"
+    },
+    {
+      "id": "S09",
+      "source_id": "DUFU1",
+      "slot_start": 28.52,
+      "slot_end": 33.32,
+      "start_frame": 713,
+      "end_frame_exclusive": 833,
+      "frames": 120,
+      "source_in": 0,
+      "source_out": 4.8,
+      "speed": 1,
+      "intent": "杜甫接唱",
+      "transition": "straight-cut",
+      "source_sha256": "8e43da253c74be9e247c3126a2f129ce2e645021dc7c0d27465f1baf5d3a3dde",
+      "source_task_id": "1027654"
+    },
+    {
+      "id": "S10",
+      "source_id": "DUFU2",
+      "slot_start": 33.32,
+      "slot_end": 37.92,
+      "start_frame": 833,
+      "end_frame_exclusive": 948,
+      "frames": 115,
+      "source_in": 0,
+      "source_out": 4.6,
+      "speed": 1,
+      "intent": "杜甫另一机位",
+      "transition": "straight-cut",
+      "source_sha256": "65cb2f7f09847eaed3953e7b6e33c34ce3175c9d81578db7ba8416571ed13e56",
+      "source_task_id": "1027662"
+    },
+    {
+      "id": "S11",
+      "source_id": "DUFU1",
+      "slot_start": 37.92,
+      "slot_end": 42.24,
+      "start_frame": 948,
+      "end_frame_exclusive": 1056,
+      "frames": 108,
+      "source_in": 4.8,
+      "source_out": 9.12,
+      "speed": 1,
+      "intent": "杜甫主歌收束",
+      "transition": "straight-cut",
+      "source_sha256": "8e43da253c74be9e247c3126a2f129ce2e645021dc7c0d27465f1baf5d3a3dde",
+      "source_task_id": "1027654"
+    },
+    {
+      "id": "S12",
+      "source_id": "DUET",
+      "slot_start": 42.24,
+      "slot_end": 46.96,
+      "start_frame": 1056,
+      "end_frame_exclusive": 1174,
+      "frames": 118,
+      "source_in": 0,
+      "source_out": 4.72,
+      "speed": 1,
+      "intent": "副歌双人互动",
+      "transition": "straight-cut",
+      "source_sha256": "21d3a305e30af910623735c31990e0377ea60b7791943abf0bd783caf124553e",
+      "source_task_id": "1027655"
+    },
+    {
+      "id": "S13",
+      "source_id": "LIBAI2",
+      "slot_start": 46.96,
+      "slot_end": 49.76,
+      "start_frame": 1174,
+      "end_frame_exclusive": 1244,
+      "frames": 70,
+      "source_in": 4.4,
+      "source_out": 7.2,
+      "speed": 1,
+      "intent": "衣摆与靴步的副歌细节",
+      "transition": "straight-cut",
+      "source_sha256": "26d909fee040e79a8d0d7071f61d6ec7f7a33edd30c2e22ac168c34b79dd9edf",
+      "source_task_id": "1027661"
+    },
+    {
+      "id": "S14",
+      "source_id": "DUFU2",
+      "slot_start": 49.76,
+      "slot_end": 54.32,
+      "start_frame": 1244,
+      "end_frame_exclusive": 1358,
+      "frames": 114,
+      "source_in": 4.6,
+      "source_out": 9.16,
+      "speed": 1,
+      "intent": "杜甫副歌回应",
+      "transition": "straight-cut",
+      "source_sha256": "65cb2f7f09847eaed3953e7b6e33c34ce3175c9d81578db7ba8416571ed13e56",
+      "source_task_id": "1027662"
+    },
+    {
+      "id": "S15",
+      "source_id": "OPEN",
+      "slot_start": 54.32,
+      "slot_end": 56.84,
+      "start_frame": 1358,
+      "end_frame_exclusive": 1421,
+      "frames": 63,
+      "source_in": 7,
+      "source_out": 9.52,
+      "speed": 1,
+      "intent": "桥段双人相和",
+      "transition": "straight-cut",
+      "source_sha256": "bb101af1ac0ae290818079b6d5ad9fa82afee21fd98bdd63a1b9d4eca75510c3",
+      "source_task_id": "1027533"
+    },
+    {
+      "id": "S16",
+      "source_id": "DUET",
+      "slot_start": 56.84,
+      "slot_end": 59.32,
+      "start_frame": 1421,
+      "end_frame_exclusive": 1483,
+      "frames": 62,
+      "source_in": 4.72,
+      "source_out": 7.2,
+      "speed": 1,
+      "intent": "桥段二人对望",
+      "transition": "straight-cut",
+      "source_sha256": "21d3a305e30af910623735c31990e0377ea60b7791943abf0bd783caf124553e",
+      "source_task_id": "1027655"
+    },
+    {
+      "id": "S17",
+      "source_id": "CROWD2",
+      "slot_start": 59.32,
+      "slot_end": 61.92,
+      "start_frame": 1483,
+      "end_frame_exclusive": 1548,
+      "frames": 65,
+      "source_in": 7.36,
+      "source_out": 9.96,
+      "speed": 1,
+      "intent": "木看台观众回应",
+      "transition": "straight-cut",
+      "source_sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+      "source_task_id": "1027659"
+    },
+    {
+      "id": "S18",
+      "source_id": "DUET",
+      "slot_start": 61.92,
+      "slot_end": 64.64,
+      "start_frame": 1548,
+      "end_frame_exclusive": 1616,
+      "frames": 68,
+      "source_in": 7.2,
+      "source_out": 9.92,
+      "speed": 1,
+      "intent": "桥段相和",
+      "transition": "straight-cut",
+      "source_sha256": "21d3a305e30af910623735c31990e0377ea60b7791943abf0bd783caf124553e",
+      "source_task_id": "1027655"
+    },
+    {
+      "id": "S19",
+      "source_id": "WIDE",
+      "slot_start": 64.64,
+      "slot_end": 68.6,
+      "start_frame": 1616,
+      "end_frame_exclusive": 1715,
+      "frames": 99,
+      "source_in": 0,
+      "source_out": 3.96,
+      "speed": 1,
+      "intent": "最终副歌舞台展开",
+      "transition": "straight-cut",
+      "source_sha256": "50f21be6bbe83040318ef62d0a9a8d9cf1d58a1b35ca2a975f60f768d3f1d7e4",
+      "source_task_id": "1027649"
+    },
+    {
+      "id": "S20",
+      "source_id": "CROWD2",
+      "slot_start": 68.6,
+      "slot_end": 70.56,
+      "start_frame": 1715,
+      "end_frame_exclusive": 1764,
+      "frames": 49,
+      "source_in": 2.4,
+      "source_out": 4.36,
+      "speed": 1,
+      "intent": "高层看台呼应",
+      "transition": "straight-cut",
+      "source_sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+      "source_task_id": "1027659"
+    },
+    {
+      "id": "S21",
+      "source_id": "WIDE",
+      "slot_start": 70.56,
+      "slot_end": 73.32,
+      "start_frame": 1764,
+      "end_frame_exclusive": 1833,
+      "frames": 69,
+      "source_in": 3.96,
+      "source_out": 6.72,
+      "speed": 1,
+      "intent": "双人舞台高潮",
+      "transition": "straight-cut",
+      "source_sha256": "50f21be6bbe83040318ef62d0a9a8d9cf1d58a1b35ca2a975f60f768d3f1d7e4",
+      "source_task_id": "1027649"
+    },
+    {
+      "id": "S22",
+      "source_id": "CROWD1",
+      "slot_start": 73.32,
+      "slot_end": 76.4,
+      "start_frame": 1833,
+      "end_frame_exclusive": 1910,
+      "frames": 77,
+      "source_in": 2.6,
+      "source_out": 5.68,
+      "speed": 1,
+      "intent": "观众合拍欢呼",
+      "transition": "straight-cut",
+      "source_sha256": "0409bc1315bff4e3aacaa207b31c41a612b86eb6bb0aad1c47dd0d399d998e53",
+      "source_task_id": "1027650"
+    },
+    {
+      "id": "S23",
+      "source_id": "WIDE",
+      "slot_start": 76.4,
+      "slot_end": 79.6,
+      "start_frame": 1910,
+      "end_frame_exclusive": 1990,
+      "frames": 80,
+      "source_in": 6.72,
+      "source_out": 9.92,
+      "speed": 1,
+      "intent": "副歌大舞台收势",
+      "transition": "straight-cut",
+      "source_sha256": "50f21be6bbe83040318ef62d0a9a8d9cf1d58a1b35ca2a975f60f768d3f1d7e4",
+      "source_task_id": "1027649"
+    },
+    {
+      "id": "S24",
+      "source_id": "CROWD2",
+      "slot_start": 79.6,
+      "slot_end": 82.6,
+      "start_frame": 1990,
+      "end_frame_exclusive": 2065,
+      "frames": 75,
+      "source_in": 4.36,
+      "source_out": 7.36,
+      "speed": 1,
+      "intent": "全场倾听终句",
+      "transition": "straight-cut",
+      "source_sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+      "source_task_id": "1027659"
+    },
+    {
+      "id": "S25",
+      "source_id": "FINALE",
+      "slot_start": 82.6,
+      "slot_end": 89.2,
+      "start_frame": 2065,
+      "end_frame_exclusive": 2230,
+      "frames": 165,
+      "source_in": 0,
+      "source_out": 6.6,
+      "speed": 1,
+      "intent": "双人终句后鞠躬谢幕",
+      "transition": "straight-cut",
+      "source_sha256": "16a87ff53c5be226a37c24467dc6fb37db50a58692fefd65dd13055a4adf0434",
+      "source_task_id": "1027660"
+    },
+    {
+      "id": "S26",
+      "source_id": "CROWD1",
+      "slot_start": 89.2,
+      "slot_end": 91.6,
+      "start_frame": 2230,
+      "end_frame_exclusive": 2290,
+      "frames": 60,
+      "source_in": 5.68,
+      "source_out": 8.08,
+      "speed": 1,
+      "intent": "尾奏观众掌声画面",
+      "transition": "straight-cut",
+      "source_sha256": "0409bc1315bff4e3aacaa207b31c41a612b86eb6bb0aad1c47dd0d399d998e53",
+      "source_task_id": "1027650"
+    },
+    {
+      "id": "S27",
+      "source_id": "FINALE",
+      "slot_start": 91.6,
+      "slot_end": 94.64,
+      "start_frame": 2290,
+      "end_frame_exclusive": 2366,
+      "frames": 76,
+      "source_in": 6.6,
+      "source_out": 9.64,
+      "speed": 1,
+      "intent": "舞台拉远落幕",
+      "transition": "straight-cut",
+      "source_sha256": "16a87ff53c5be226a37c24467dc6fb37db50a58692fefd65dd13055a4adf0434",
+      "source_task_id": "1027660"
+    }
+  ],
+  "caption_policy": {
+    "text_source": "user-confirmed-full-song-lyrics",
+    "timings": "existing-short-window-candidates-editorial-placement",
+    "events": [
+      {
+        "id": "VA01",
+        "text": "我携一身月色，踏过长安的墙",
+        "start": 9.84,
+        "end": 14.12,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "VA02",
+        "text": "袖里藏着清风，胸口住着汪洋",
+        "start": 15.08,
+        "end": 18.64,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "VA03",
+        "text": "把失意酿成酒，把夜色唱到亮",
+        "start": 19.64,
+        "end": 23.24,
+        "actor_reference": "李白",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "VA04",
+        "text": "今夜借你鼓点，让天地听我讲",
+        "start": 24.28,
+        "end": 27.98,
+        "actor_reference": "李白",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "VB01",
+        "text": "我从长街走来，听过万户的忙",
+        "start": 28.9,
+        "end": 32.6,
+        "actor_reference": "杜甫",
+        "timing_status": "short-window-supported-start-uncertain"
+      },
+      {
+        "id": "VB03",
+        "text": "有人仰望星河，有人守着炉膛",
+        "start": 33.34,
+        "end": 37.88,
+        "actor_reference": "杜甫",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "VB04",
+        "text": "我让无名的脸，站到舞台中央",
+        "start": 38.2,
+        "end": 42.26,
+        "actor_reference": "杜甫",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "C1A01",
+        "text": "酒杯一举，银河都来捧场",
+        "start": 42.26,
+        "end": 45.06,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "C1A02",
+        "text": "你的工整，装不下我的月光",
+        "start": 46.98,
+        "end": 49.76,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "C1B01",
+        "text": "月光再亮，也得照见风霜",
+        "start": 49.74,
+        "end": 52.1,
+        "actor_reference": "杜甫",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "C1B02",
+        "text": "我把人间，写成压轴的回响",
+        "start": 52.1,
+        "end": 54.46,
+        "actor_reference": "杜甫",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "BRA01",
+        "text": "你把千家灯火，捧在手掌",
+        "start": 54.46,
+        "end": 56.82,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "BRB01",
+        "text": "你让天边明月，落在肩上",
+        "start": 56.82,
+        "end": 59.34,
+        "actor_reference": "杜甫",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "BRA02",
+        "text": "这一杯，敬远方",
+        "start": 59.34,
+        "end": 61.88,
+        "actor_reference": "李白",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "C2A01",
+        "text": "酒杯一举，银河都来捧场",
+        "start": 65.6,
+        "end": 68.6,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "C2A02",
+        "text": "你的工整，装不下我的月光",
+        "start": 70.56,
+        "end": 73.32,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "C2B01",
+        "text": "月光再亮，也得照见风霜",
+        "start": 73.34,
+        "end": 75.68,
+        "actor_reference": "杜甫",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "C2B02",
+        "text": "我把人间，写成压轴的回响",
+        "start": 75.68,
+        "end": 79.1,
+        "actor_reference": "杜甫",
+        "timing_status": "end-uncertain-phonetic-approximation"
+      },
+      {
+        "id": "DUO02",
+        "text": "让这人间，听见回响",
+        "start": 80.3,
+        "end": 85.86,
+        "actor_reference": "合唱",
+        "timing_status": "long-note-end-supported-start-uncertain"
+      }
+    ],
+    "omitted_uncertain_lines": [
+      {
+        "id": "VB02",
+        "text": "鞋底沾着泥土，纸上落着风霜",
+        "reason": "reference_unconfirmed_possibly_omitted"
+      },
+      {
+        "id": "BRB02",
+        "text": "这一笔，敬担当",
+        "reason": "possible-repeat-or-word-change-needs-listening"
+      },
+      {
+        "id": "DUO01",
+        "text": "敬月光，也敬风霜",
+        "reason": "reference_unconfirmed_possibly_omitted"
+      }
+    ],
+    "uncertain_words_not_fabricated": true,
+    "word_precise_timing_claim": false
+  },
+  "budget_ledger": {
+    "path": "work/chatart-tasks.json",
+    "sha256_at_render": "f012fb639b8d098b8da2b3e695e7ff48bc2e866344d0add550c255f8955222e1",
+    "snapshot_path": "work/stage-film-20261016/budget-ledger-at-render.json",
+    "snapshot_sha256": "f012fb639b8d098b8da2b3e695e7ff48bc2e866344d0add550c255f8955222e1",
+    "accounting_owner": "root"
+  },
+  "verification": {
+    "all_video_audio_frames_decoded_without_errors": true,
+    "frame_count": 2366,
+    "full_speed_visual_review": {
+      "passed": true,
+      "path": "work/stage-film-20261016/browser-review/native-full-playback.json",
+      "sha256": "b1eac4e867af569ca2612307cfc660d66da3375af7a28a3939b15bc786b71ee5",
+      "review_scope": "Continuous normal-speed browser playback to ended; observed DOM playback ranges and representative screenshots; final 28-shot storyboard and every cut neighbour visually inspected separately.",
+      "complete_played_range": [
+        0,
+        94.64
+      ],
+      "playback_rate": 1,
+      "media_error": null,
+      "precise_lip_sync_claimed": false,
+      "subjective_audio_listening_claimed": false
+    },
+    "identity_review_source_scope": "each real raw source",
+    "cut_review": {
+      "path": "work/stage-film-20261016/final-review/editor-cut-review.json",
+      "sha256": "e201830c08b989fdb43dc74dde7d66a1934445f92484e0d87da77e12f6c320bf",
+      "status": "passed-editorial-still-frame-and-cut-boundary-review"
+    },
+    "root_final_storyboard_and_cut_review": {
+      "passed": true,
+      "scope": "All four storyboard pages covering 28 shots and all four cut-neighbour pages; root actual visual inspection. Same faces/crowns/robes and stage; unsuitable modern crowd tail excluded; bow moved to song release/outro; no visible subtitle clipping."
+    },
+    "independent_final_review": {
+      "path": "work/stage-film-20261016/independent-final-review.json",
+      "sha256": "d6db32f15af67b47d9294abab673639d090546ea5d8813b0a011369c1ce7762b"
+    }
+  },
+  "limitations": [
+    "这是按原曲剪辑的舞台效果版，不声称逐字逐拍精准口型。",
+    "字幕正文来自用户确认歌词，时间为已有短窗候选；三条未定位/改词疑点没有强行写入。",
+    "源片自生声音全部静音，最终只使用完整用户原曲。"
+  ],
+  "review_evidence": {
+    "storyboard_pages": [
+      "work/stage-film-20261016/final-review/storyboard-01.jpg",
+      "work/stage-film-20261016/final-review/storyboard-02.jpg",
+      "work/stage-film-20261016/final-review/storyboard-03.jpg",
+      "work/stage-film-20261016/final-review/storyboard-04.jpg"
+    ],
+    "cut_neighbour_pages": [
+      "work/stage-film-20261016/final-review/cuts-01.jpg",
+      "work/stage-film-20261016/final-review/cuts-02.jpg",
+      "work/stage-film-20261016/final-review/cuts-03.jpg",
+      "work/stage-film-20261016/final-review/cuts-04.jpg"
+    ],
+    "scope": "真实成片各镜头中点及全部切口前后帧；需另做全片原速审看，静帧不是口型或连续动作验收。"
+  },
+  "accepted_at": "2026-10-15T19:34:06.434866+00:00",
+  "user_acceptance": {
+    "status": "rejected-for-singing-performance",
+    "recorded_at": "2026-10-15T19:44:58.873599+00:00",
+    "feedback_path": "work/stage-film-20261016/user-rejection.json",
+    "feedback_sha256": "877a187b2dee3baeff9bfaa42f7ed6c18a75cebfeffc35bcf05faa8a80229d3e",
+    "feedback": "看起来效果太差了，口型一点不对应啊",
+    "singing_lip_sync_passed": false,
+    "technical_render_status_unchanged": true
+  },
+  "delivery_qualification": "舞台视觉样片；演唱效果未通过用户验收。已导出与播放成功不表示演唱口型合格。"
+}

@@ -1,0 +1,18 @@
+{
+  "provider_task_id": "1027778",
+  "operation": "query-existing-task-only",
+  "new_generation_calls": 0,
+  "status": "completed-with-file",
+  "updated_at": "2026-10-16T01:15:22.099973+00:00",
+  "provider_status": 1,
+  "reported_cost": 75.0,
+  "public_video_url": "https://files.chatartpro.com/web-video/20261016/6ad17a878f1cd.mp4",
+  "exit_code": 0,
+  "files": [
+    {
+      "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\work\\audio-driven-repair\\model-original\\video_20261016091518.mp4",
+      "bytes": 3342437,
+      "sha256": "13af814763a8ede67fb627e5724342bb760446e80a7610b8ce2a07d61668d129"
+    }
+  ]
+}

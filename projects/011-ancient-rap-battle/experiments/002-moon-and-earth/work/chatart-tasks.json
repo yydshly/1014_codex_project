@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "experiment_id": "002-moon-and-earth",
+  "title": "敬风霜 · 李白 × 杜甫",
+  "status": "downloaded",
+  "provider": "ChatArt",
+  "credit_cap": 300,
+  "planned_credits": 300,
+  "credit_balance_before": 5415,
+  "actual_debit_verified": false,
+  "no_paid_rerolls": true,
+  "music_source": "用户提供《敬风霜》，用户说明由Gemini生成；具体模型未独立核验",
+  "source_song_sha256": "91f5993a91f49e455fe9c60f60cc799692a96a40afa78c6b80e0f35831dbe8c8",
+  "created_at": "2026-10-15T10:03:35.710Z",
+  "tasks": [
+    {
+      "id": "A-block",
+      "actor": "李白",
+      "reference": "refs/libai-v2.png",
+      "audio": "music/candidates/A-main-mix-candidate.wav",
+      "source_in": 18.2,
+      "source_out": 28.2,
+      "prompt": "这是《敬风霜》音乐短片的单人连续演唱镜头。严格保持图片1的国风3D动画电影造型、面孔、发型、服装和月下唐风屋顶场景。全程只有参考图中的一个人，近正面的胸部以上中近景，轻微缓慢推近，不切镜。嘴唇与下颌始终清楚可见，青铜麦克风始终在胸前、下巴下方，不得遮挡嘴。音频1包含必须同步的原唱和伴奏，准确跟随现有中文发音、长音、节奏与停顿进行口型和克制的演唱表演；使用原音频，不重新作曲或配音，不改字、变速、移调或添加其他人声。仅在有演唱时张嘴，器乐或停顿时自然收嘴、眨眼、呼吸。保持脸部和手部稳定，不夸张甩头或挥手。不添加任何文字、字幕、Logo、水印、观众或第二个人。年轻白袍青绿肩饰诗人，自信潇洒、带微笑，轻微点头。按音频顺序演唱两句：“酒杯一举，银河都来捧场”“你的工整，装不下我的月光”。第一句大约在0.5至4.5秒，保留其后原有词尾回声；第二句大约在5.5至9.3秒。以音频实际时序优先，不机械按提示词重新朗读。",
+      "reference_sha256": "3a4b6abcd7608beb02fb1bba82f6e0830237d11825a5f00404aae41e2ded9537",
+      "audio_sha256": "8f86d615d474e4473e1ed65789525654fd684950a84438fea6910ce78b9bf108",
+      "status": "downloaded",
+      "model_label": "MiniMax H3",
+      "duration_requested": 10,
+      "resolution_label": "768p",
+      "aspect_ratio": "16:9",
+      "credits_displayed": 150,
+      "provider": "ChatArt",
+      "clip": "clips/A-block_t1.mp4",
+      "submitted_at": "2026-10-15T10:04:15.228Z",
+      "ui_time": "2026/10/15 18:03",
+      "credit_balance_after": 5265,
+      "latest_ui_status": "已返回并下载",
+      "last_checked_at": "2026-10-15T10:32:29.746Z",
+      "output_url": "https://files.chatartpro.com/web-video/20261015/6ad0ac719ff1c.mp4",
+      "output_observed_at": "2026-10-15T10:41:50.275Z",
+      "output_sha256": "4cd130d33053374667529f38e939aa62df9a1b78e7f207021c18caa47752a3fb",
+      "output_size_bytes": 7421943,
+      "downloaded_at": "2026-10-15T10:44:41.450Z",
+      "download_method": "ChatArt下载按钮，浏览器原生download事件返回本地文件；原字节复制并核对公开文件长度/ftyp/SHA"
+    },
+    {
+      "id": "B-block",
+      "actor": "杜甫",
+      "reference": "refs/dufu-v2.png",
+      "audio": "music/candidates/B-main-mix-candidate.wav",
+      "source_in": 27.6,
+      "source_out": 37.6,
+      "prompt": "这是《敬风霜》音乐短片的单人连续演唱镜头。严格保持图片1的国风3D动画电影造型、面孔、发型、服装和月下唐风屋顶场景。全程只有参考图中的一个人，近正面的胸部以上中近景，轻微缓慢推近，不切镜。嘴唇与下颌始终清楚可见，青铜麦克风始终在胸前、下巴下方，不得遮挡嘴。音频1包含必须同步的原唱和伴奏，准确跟随现有中文发音、长音、节奏与停顿进行口型和克制的演唱表演；使用原音频，不重新作曲或配音，不改字、变速、移调或添加其他人声。仅在有演唱时张嘴，器乐或停顿时自然收嘴、眨眼、呼吸。保持脸部和手部稳定，不夸张甩头或挥手。不添加任何文字、字幕、Logo、水印、观众或第二个人。成熟短须、深蓝铜金纹袍诗人，沉稳坚定，轻微点头、有力量地回应画外对手。按音频顺序演唱两句：“月光再亮，也得照见风霜”“我把人间，写成压轴的回响”。第一句大约在0.7至4.6秒，第二句大约在5.5至9.2秒；保留原有句间停顿和词尾长音。以音频实际时序优先，不机械按提示词重新朗读。",
+      "reference_sha256": "6bbd53c6ff1ed518c2c9a4536b1a9c068139aba21e134be5160328c3b87ad9d1",
+      "audio_sha256": "391c72771c25e9f44d4203fdb64f0893d0373b6c297d1c72bdcd3e6d5e51b442",
+      "status": "downloaded",
+      "model_label": "MiniMax H3",
+      "duration_requested": 10,
+      "resolution_label": "768p",
+      "aspect_ratio": "16:9",
+      "credits_displayed": 150,
+      "provider": "ChatArt",
+      "clip": "clips/B-block_t1.mp4",
+      "submitted_at": "2026-10-15T10:05:02.979Z",
+      "ui_time": "2026/10/15 18:04",
+      "credit_balance_after": 5115,
+      "latest_ui_status": "已返回并下载",
+      "last_checked_at": "2026-10-15T10:32:29.746Z",
+      "output_url": "https://files.chatartpro.com/web-video/20261015/6ad0b3d1a08ef.mp4",
+      "output_sha256": "1b724e0607878c93f2dedbec9bb423db009fe43ddf5ddcc68990f45265273f56",
+      "output_size_bytes": 6672179,
+      "downloaded_at": "2026-10-15T11:11:29.862Z",
+      "download_method": "ChatArt下载按钮，浏览器原生download事件返回本地文件；原字节复制并核对ftyp/SHA"
+    }
+  ],
+  "credit_balance_after": 5115,
+  "observed_balance_delta": 300,
+  "balance_delta_verified": false,
+  "credit_note": "两任务完成后网页余额显示5115，较提交前5415少300，与标价一致；期间出现过刷新回滚，独立实际账单未核对。",
+  "last_checked_at": "2026-10-15T11:11:29.862Z",
+  "credit_observations": [
+    {
+      "stage": "before-submit",
+      "balance": 5415
+    },
+    {
+      "stage": "after-A",
+      "balance": 5265
+    },
+    {
+      "stage": "after-B",
+      "balance": 5115
+    },
+    {
+      "stage": "after-reload",
+      "balance": 5415,
+      "at": "2026-10-15T10:11:20.813Z"
+    },
+    {
+      "stage": "A-output-returned",
+      "balance": 5265,
+      "at": "2026-10-15T10:41:50.275Z"
+    },
+    {
+      "stage": "B-still-processing-latest-refresh",
+      "balance": 5115,
+      "at": "2026-10-15T11:06:32.760Z"
+    },
+    {
+      "stage": "both-outputs-returned",
+      "balance": 5115,
+      "at": "2026-10-15T11:11:29.862Z"
+    }
+  ],
+  "credit_balance_after_refresh": 5115,
+  "final_observed_balance": 5115,
+  "observed_final_balance_delta": 300
+}

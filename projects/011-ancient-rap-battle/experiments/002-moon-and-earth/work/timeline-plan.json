@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "experiment_id": "002-moon-and-earth",
+  "status": "planned",
+  "audio_status": "awaiting-user-music",
+  "note": "此文件是音乐与剪辑目标，不是实际素材测量结果。用户提供歌曲后，分析真实时长、歌词位置与段落，再另写status=confirmed的work/timeline.json。不得直接改名或按此稿提交视频生成。",
+  "title": "月光与人间 · 李白 × 杜甫",
+  "subtitle": "四句交锋 · 原创 AI 娱乐演绎",
+  "bpm": 100,
+  "duration": 28.8,
+  "fps": 25,
+  "size": { "width": 1280, "height": 720 },
+  "poster": "refs/moon-and-earth-stage.png",
+  "audio": {
+    "path": "work/music_final.wav",
+    "kind": "generated-song",
+    "provider": "待用户提供实际音乐来源",
+    "status": "awaiting-user-music"
+  },
+  "intro": {
+    "duration": 4.8,
+    "title": "月光与人间",
+    "subtitle": "李白 × 杜甫 · 四句交锋"
+  },
+  "outro": {
+    "duration": 4.8,
+    "title": "月光入诗，人间回响。",
+    "subtitle": "原创歌词 · 合成声音 · AI 画面"
+  },
+  "qa_reports": ["work/video-qa.json"],
+  "max_frame_hold_seconds": 0.25,
+  "lines": [
+    {
+      "id": "A01", "actor": "李白", "text": "酒杯一举，银河都来捧场",
+      "start": 4.8, "end": 9.6, "heard_start": null, "heard_end": null,
+      "clip": "clips/A-block_t1.mp4", "source_in": 0, "qa_id": "A-block",
+      "name_subtitle": "自由月光 / ROUND 01", "color": "#F0CF8D"
+    },
+    {
+      "id": "A02", "actor": "李白", "text": "你的工整，装不下我的月光",
+      "start": 9.6, "end": 14.4, "heard_start": null, "heard_end": null,
+      "clip": "clips/A-block_t1.mp4", "source_in": 4.8, "qa_id": "A-block",
+      "name_subtitle": "自由月光 / ROUND 01", "color": "#F0CF8D"
+    },
+    {
+      "id": "B01", "actor": "杜甫", "text": "月光再亮，也得照见风霜",
+      "start": 14.4, "end": 19.2, "heard_start": null, "heard_end": null,
+      "clip": "clips/B-block_t1.mp4", "source_in": 0, "qa_id": "B-block",
+      "name_subtitle": "人间回响 / ROUND 02", "color": "#8DD6DF"
+    },
+    {
+      "id": "B02", "actor": "杜甫", "text": "我把人间，写成压轴的回响",
+      "start": 19.2, "end": 24, "heard_start": null, "heard_end": null,
+      "clip": "clips/B-block_t1.mp4", "source_in": 4.8, "qa_id": "B-block",
+      "name_subtitle": "人间回响 / ROUND 02", "color": "#8DD6DF"
+    }
+  ],
+  "planned_sources": [
+    { "id": "A-block", "path": "clips/A-block_t1.mp4", "actor": "李白", "target_generation_seconds": 10, "used_target_seconds": 9.6, "status": "not_submitted" },
+    { "id": "B-block", "path": "clips/B-block_t1.mp4", "actor": "杜甫", "target_generation_seconds": 10, "used_target_seconds": 9.6, "status": "not_submitted" }
+  ]
+}

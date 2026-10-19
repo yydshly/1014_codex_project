@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "experiment_id": "002-moon-and-earth",
+  "scope": "抽帧视觉取舍；只决定是否用于小样，不是逐音素口型通过证明",
+  "clips": {
+    "A-block": {
+      "video_sha256": "4cd130d33053374667529f38e939aa62df9a1b78e7f207021c18caa47752a3fb",
+      "reviewed_at": "2026-10-15T10:47:23.038622+00:00",
+      "method": "20帧约0.5秒间隔抽样",
+      "contact_sheet": "work/A-block-contact.jpg",
+      "accepted_for_demo": true,
+      "picture_shift_seconds": 0,
+      "retime": false,
+      "lip_sync_passed": null,
+      "observations": [
+        "新白袍青绿人物的脸、服装、发型与月下屋顶场景整体稳定",
+        "麦克风在下巴下方，抽样中嘴部清楚可见",
+        "两组演唱时嘴部有开合、停顿时可见收口，动作和轻微推镜自然",
+        "未见额外角色、明显手部畸形或文字叠入；抽样不能证明所有帧无瑕疵",
+        "结合原片混音QA与同条件转写，采用shift0，不作画面重定时；没有据高相关声称逐字口型准确"
+      ]
+    },
+    "B-block": {
+      "video_sha256": "1b724e0607878c93f2dedbec9bb423db009fe43ddf5ddcc68990f45265273f56",
+      "reviewed_at": "2026-10-15T11:11:56.050224+00:00",
+      "method": "20帧约0.5秒间隔抽样",
+      "contact_sheet": "work/B-block-contact.jpg",
+      "accepted_for_demo": true,
+      "picture_shift_seconds": 0,
+      "retime_main": false,
+      "reprise": "同句B02区间复用，按已登记声学分组做画面重定时，待全片复核",
+      "lip_sync_passed": null,
+      "observations": [
+        "新深蓝铜金人物的脸、短须、服装、发型与月下屋顶场景整体稳定",
+        "麦克风保持胸前，抽样中嘴唇与下颌可见",
+        "演唱中可见口形变化、眨眼和克制点头，两句之间及末尾可见收口",
+        "未见额外角色、明显畸形或文字叠入；抽样不等于逐帧或逐音素证明",
+        "主段暂按原时轴采用shift0；原生音轨筛查独立登记，不以统一铺回歌曲改变原QA"
+      ]
+    }
+  },
+  "final_review": {
+    "source_sha256": "88c112607640aeaa960a4682aca4a533781d58b82e658af4ad2777fa1848871e",
+    "accepted_for_demo": true,
+    "contact_sheet": "work/final-contact.jpg",
+    "lip_sync_passed": null,
+    "note": "完整解码及16帧包装/字幕/人物抽查完成；重唱为同词原片复用，不算额外任务。"
+  }
+}

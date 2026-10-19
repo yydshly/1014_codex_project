@@ -1,0 +1,454 @@
+{
+  "schema_version": 1,
+  "experiment_id": "003-stage-edition",
+  "status": "used_in_final",
+  "used_in_final": true,
+  "created_at": "2026-10-15T11:34:58.347423+00:00",
+  "kind": "原创程序合成现场效果，非真实观众/场地录音",
+  "output": {
+    "path": "music/stage-ambience-candidate-v1.wav",
+    "bytes": 18224684,
+    "sha256": "ed21ce561ee376f8912e96328d208f084dd22530dff424c8e46305049d5d0d09",
+    "duration_s": 63.28,
+    "sample_frames": 3037440,
+    "sample_rate": 48000,
+    "channels": 2,
+    "encoding": "PCM_24"
+  },
+  "method": {
+    "seed": 2026101503,
+    "instruments_or_sounds": [
+      "有限短噪声脉冲合成的掌声",
+      "短时空间反射衰减"
+    ],
+    "external_samples": false,
+    "downloaded_assets": false,
+    "network_calls": 0,
+    "model_calls": 0,
+    "paid_calls": 0,
+    "continuous_noise_bed": false,
+    "new_melody": false,
+    "bandpass_hz": [
+      190,
+      4200
+    ],
+    "room_reflection_lowpass_hz": 2500,
+    "maximum_reflection_delay_s": 0.87,
+    "output_peak_target_dbfs": -22,
+    "master_scalar": 0.11110661759703756,
+    "events_locked_to_music_beats": false
+  },
+  "groups": [
+    {
+      "id": "opening-first-reveal",
+      "start": 0.55,
+      "span": 1.1,
+      "count": 6,
+      "gain": 0.24,
+      "meaning": "稀疏开场掌声，较轻，不能当真实观众录音"
+    },
+    {
+      "id": "opening-character-one",
+      "start": 5.65,
+      "span": 0.65,
+      "count": 3,
+      "gain": 0.18,
+      "meaning": "角色亮相时少量掌声"
+    },
+    {
+      "id": "opening-character-two",
+      "start": 10.15,
+      "span": 0.95,
+      "count": 4,
+      "gain": 0.21,
+      "meaning": "第二角色亮相时克制回应"
+    },
+    {
+      "id": "opening-hush",
+      "start": 15.75,
+      "span": 1.0,
+      "count": 4,
+      "gain": 0.15,
+      "meaning": "开唱前收势，18.2前完全落下"
+    },
+    {
+      "id": "silent-break-acknowledgement",
+      "start": 38.58,
+      "span": 1.0,
+      "count": 5,
+      "gain": 0.17,
+      "meaning": "停拍刚开始少量掌声，随后留白"
+    },
+    {
+      "id": "silent-break-single-response",
+      "start": 42.0,
+      "span": 0.35,
+      "count": 2,
+      "gain": 0.095,
+      "meaning": "安静舞台中的零星回应，不填满整个静默段"
+    },
+    {
+      "id": "closing-applause",
+      "start": 60.9,
+      "span": 1.5,
+      "count": 20,
+      "gain": 0.52,
+      "meaning": "歌曲已结束后的小规模合成掌声，随片尾淡出"
+    }
+  ],
+  "events": [
+    {
+      "group": "opening-first-reveal",
+      "time_s": 0.560407,
+      "pan": -0.2986982380012968,
+      "relative_dry_gain": 0.19578822441719018
+    },
+    {
+      "group": "opening-first-reveal",
+      "time_s": 0.763244,
+      "pan": 0.3669614604599736,
+      "relative_dry_gain": 0.24210470694867345
+    },
+    {
+      "group": "opening-first-reveal",
+      "time_s": 0.838582,
+      "pan": -0.5600574457308728,
+      "relative_dry_gain": 0.21682132108468316
+    },
+    {
+      "group": "opening-first-reveal",
+      "time_s": 1.006406,
+      "pan": 0.4197611796545391,
+      "relative_dry_gain": 0.22439354580138113
+    },
+    {
+      "group": "opening-first-reveal",
+      "time_s": 1.197325,
+      "pan": 0.7110837080411327,
+      "relative_dry_gain": 0.20251064050295794
+    },
+    {
+      "group": "opening-first-reveal",
+      "time_s": 1.497946,
+      "pan": 0.3101720038517355,
+      "relative_dry_gain": 0.1734610573611377
+    },
+    {
+      "group": "opening-character-one",
+      "time_s": 5.668878,
+      "pan": -0.0571368515108055,
+      "relative_dry_gain": 0.16850986648910776
+    },
+    {
+      "group": "opening-character-one",
+      "time_s": 5.859717,
+      "pan": 0.16608514596204704,
+      "relative_dry_gain": 0.1552801605409121
+    },
+    {
+      "group": "opening-character-one",
+      "time_s": 6.198611,
+      "pan": 0.3680535318432896,
+      "relative_dry_gain": 0.154046284497759
+    },
+    {
+      "group": "opening-character-two",
+      "time_s": 10.346091,
+      "pan": -0.11926271426782298,
+      "relative_dry_gain": 0.14977184821340425
+    },
+    {
+      "group": "opening-character-two",
+      "time_s": 10.960737,
+      "pan": -0.4337477035093613,
+      "relative_dry_gain": 0.1372392134207302
+    },
+    {
+      "group": "opening-character-two",
+      "time_s": 10.978301,
+      "pan": 0.7935702669937712,
+      "relative_dry_gain": 0.16879553875693343
+    },
+    {
+      "group": "opening-character-two",
+      "time_s": 11.07326,
+      "pan": 0.7197941995375778,
+      "relative_dry_gain": 0.1868361134506344
+    },
+    {
+      "group": "opening-hush",
+      "time_s": 15.96886,
+      "pan": 0.05068391881252443,
+      "relative_dry_gain": 0.13817319424678337
+    },
+    {
+      "group": "opening-hush",
+      "time_s": 16.156675,
+      "pan": -0.4375399155539496,
+      "relative_dry_gain": 0.14685312537382536
+    },
+    {
+      "group": "opening-hush",
+      "time_s": 16.275983,
+      "pan": -0.6354347048404612,
+      "relative_dry_gain": 0.11648842729848996
+    },
+    {
+      "group": "opening-hush",
+      "time_s": 16.411948,
+      "pan": -0.01173577794440761,
+      "relative_dry_gain": 0.10255826129594589
+    },
+    {
+      "group": "silent-break-acknowledgement",
+      "time_s": 38.700636,
+      "pan": -0.57891392934903,
+      "relative_dry_gain": 0.17509856863965503
+    },
+    {
+      "group": "silent-break-acknowledgement",
+      "time_s": 38.847232,
+      "pan": 0.28904940366428145,
+      "relative_dry_gain": 0.13944986673241158
+    },
+    {
+      "group": "silent-break-acknowledgement",
+      "time_s": 39.103737,
+      "pan": -0.3245991374214905,
+      "relative_dry_gain": 0.11334982951141147
+    },
+    {
+      "group": "silent-break-acknowledgement",
+      "time_s": 39.419146,
+      "pan": -0.6512298595181449,
+      "relative_dry_gain": 0.17464869881298806
+    },
+    {
+      "group": "silent-break-acknowledgement",
+      "time_s": 39.468495,
+      "pan": -0.5655721581275552,
+      "relative_dry_gain": 0.15326695064509016
+    },
+    {
+      "group": "silent-break-single-response",
+      "time_s": 42.333878,
+      "pan": 0.7603075261930314,
+      "relative_dry_gain": 0.0846673855457179
+    },
+    {
+      "group": "silent-break-single-response",
+      "time_s": 42.343391,
+      "pan": -0.20114583730918645,
+      "relative_dry_gain": 0.06731276697597581
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 60.919624,
+      "pan": 0.5123000859667453,
+      "relative_dry_gain": 0.38586668749930664
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 60.965202,
+      "pan": -0.18865392691417981,
+      "relative_dry_gain": 0.5045150101268826
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 60.967819,
+      "pan": 0.43337932981037075,
+      "relative_dry_gain": 0.5200743268581944
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.018203,
+      "pan": 0.5070868655535803,
+      "relative_dry_gain": 0.5083201345738398
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.110064,
+      "pan": 0.32443383632963396,
+      "relative_dry_gain": 0.36588361828622207
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.16445,
+      "pan": 0.5851556713827342,
+      "relative_dry_gain": 0.3460437133658757
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.201456,
+      "pan": 0.7668039991056019,
+      "relative_dry_gain": 0.45487587094628074
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.433585,
+      "pan": -0.016659745094666056,
+      "relative_dry_gain": 0.4852521622505392
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.503685,
+      "pan": 0.7573114524817541,
+      "relative_dry_gain": 0.4567200501352527
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.512617,
+      "pan": 0.7755001056156408,
+      "relative_dry_gain": 0.4502629822192585
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.601518,
+      "pan": 0.5040479926874093,
+      "relative_dry_gain": 0.5030345228700666
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.602713,
+      "pan": 0.5922545508628818,
+      "relative_dry_gain": 0.5434161262327625
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.634896,
+      "pan": -0.04581782635671239,
+      "relative_dry_gain": 0.5135466215074881
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.637159,
+      "pan": 0.4871791073612106,
+      "relative_dry_gain": 0.496862762311592
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.847947,
+      "pan": -0.45635611869245274,
+      "relative_dry_gain": 0.49117718061810095
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.880396,
+      "pan": -0.7218678963271066,
+      "relative_dry_gain": 0.5283680864528228
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 61.966508,
+      "pan": -0.043054361903361205,
+      "relative_dry_gain": 0.4867327606234405
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 62.233501,
+      "pan": -0.7694718313985928,
+      "relative_dry_gain": 0.3567312188302581
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 62.2814,
+      "pan": 0.24297469106336633,
+      "relative_dry_gain": 0.5101952283899919
+    },
+    {
+      "group": "closing-applause",
+      "time_s": 62.306177,
+      "pan": -0.07395125634792232,
+      "relative_dry_gain": 0.47666730489336284
+    }
+  ],
+  "protected_vocal_ranges": [
+    [
+      18.2,
+      37.6
+    ],
+    [
+      51.2,
+      56.4
+    ]
+  ],
+  "level_check": {
+    "all_samples_finite": true,
+    "float_sample_peak_linear": 0.07943272590637207,
+    "float_sample_peak_dbfs": -22.00001066874472,
+    "samples_abs_ge_1": 0,
+    "sample_peak_is_not_oversampled_true_peak": true,
+    "segments": [
+      {
+        "start": 0,
+        "end": 18.2,
+        "peak_dbfs": -32.546637910603536,
+        "rms_dbfs": -65.78210063777514,
+        "nonzero_sample_fraction": 0.3199147206959707
+      },
+      {
+        "start": 18.2,
+        "end": 37.6,
+        "peak_dbfs": null,
+        "rms_dbfs": null,
+        "nonzero_sample_fraction": 0.0
+      },
+      {
+        "start": 38.4,
+        "end": 47.1,
+        "peak_dbfs": -34.574302902421394,
+        "rms_dbfs": -67.90025007857362,
+        "nonzero_sample_fraction": 0.2741954022988506
+      },
+      {
+        "start": 51.2,
+        "end": 56.4,
+        "peak_dbfs": null,
+        "rms_dbfs": null,
+        "nonzero_sample_fraction": 0.0
+      },
+      {
+        "start": 60.76,
+        "end": 63.28,
+        "peak_dbfs": -22.00001066874472,
+        "rms_dbfs": -47.55944501128222,
+        "nonzero_sample_fraction": 0.8930224867724867
+      }
+    ]
+  },
+  "recommended_mix": {
+    "input_name": "stage_ambience",
+    "enabled_by_default": false,
+    "candidate_gain_db": 0,
+    "quieter_alternative_gain_db": -3,
+    "original_song_gain_db": -1.5,
+    "original_song_remains_continuous": true,
+    "instruction": "先审听再决定启用；此文件已做低音量分段编排，可从0dB相加开始试听，若抢戏降至-3dB或禁用，不以新增旋律填静音。"
+  },
+  "source_song": {
+    "path": "../002-moon-and-earth/music/source-jing-feng-shuang.mp3",
+    "sha256": "91f5993a91f49e455fe9c60f60cc799692a96a40afa78c6b80e0f35831dbe8c8",
+    "unchanged_after_generation": true
+  },
+  "limitations": [
+    "合成声效没有真实观众的行为或空间证据，不能称为现场实录。",
+    "掌声只提供克制的现场感候选，不掩盖主歌、不替换原曲，也不使静音区产生原本没有的音乐节拍。",
+    "当前仅输出候选；最终是否混入、采用何种音量由审听和最终合成记录决定。"
+  ],
+  "candidate_record": {
+    "path": "work/stage-ambience-candidate-report-v1.json",
+    "sha256": "5ffc9097f5e68560a5252f28922041b06f39523c158cd561a8024e0224ea8569",
+    "initial_status": "candidate_not_approved"
+  },
+  "render_references": [
+    {
+      "final_path": "final/jing-feng-shuang-stage-v3.mp4",
+      "final_sha256": "011c49f6527f84ca834ac319ad14bb97dd4a410b75a37729b00bf025382970d6",
+      "final_report": "work/final-report.json",
+      "final_report_sha256": "c1536845c08a3f08c288064a01a95d64a3fd0095b7366da41d9a97354421ac16",
+      "gain_db": 0,
+      "verified_at": "2026-10-15T11:41:58.964700+00:00",
+      "audio_verification": "work/final-audio-verification.json"
+    }
+  ]
+}

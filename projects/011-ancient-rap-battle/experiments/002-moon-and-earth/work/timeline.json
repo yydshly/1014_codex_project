@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "experiment_id": "002-moon-and-earth",
+  "status": "confirmed",
+  "note": "正式编辑选择时间轴：两个真实新视频均已下载，原生音轨筛查通过且源SHA一致，root已抽样审片并接纳主段shift0；四词、回声与重唱边界仍为ASR辅助和人工剪辑选择，不表示精准口型或逐音素对齐通过。",
+  "title": "敬风霜 · 李白×杜甫",
+  "subtitle": "原创人物演绎 · 月光与人间",
+  "bpm": 102,
+  "bpm_estimated": true,
+  "bpm_note": "音轨分析估计值，不作为自动伸缩歌曲或固定歌词时间的依据。",
+  "duration": 63.28,
+  "fps": 25,
+  "size": {
+    "width": 1280,
+    "height": 720
+  },
+  "poster": "refs/moon-and-earth-stage.png",
+  "audio": {
+    "path": "music/source-jing-feng-shuang.mp3",
+    "kind": "user-supplied-song",
+    "provider": "用户提供《敬风霜》，用户自述由Gemini生成；未独立核验平台或模型",
+    "source_sha256": "91f5993a91f49e455fe9c60f60cc799692a96a40afa78c6b80e0f35831dbe8c8",
+    "decoded_duration_seconds": 63.26858333333333,
+    "trim_seconds": 0,
+    "playback_speed": 1,
+    "gain_db": -1.5,
+    "gain_note": "成片统一音轨只施-1.5dB恒定响度调整以预留编码峰值余量，不修改用户输入文件、不裁歌或变速；最终AAC电平仍需实际核验。",
+    "planned_end_silence_seconds": 0.01141666666667,
+    "note": "完整保留用户歌曲内容，成片仅施恒定音量调整，并在末尾补不到一帧静音以对齐1582帧；数值为剪辑计划，成片以最终样本和浮点电平核验为准。"
+  },
+  "intro": {
+    "duration": 5.2,
+    "title": "敬风霜",
+    "subtitle": "李白 × 杜甫 · 月光与人间"
+  },
+  "outro": {
+    "duration": 6.88,
+    "title": "敬月光，也敬人间风霜。",
+    "subtitle": "原创人物演绎 · 非历史形象重建"
+  },
+  "qa_reports": [
+    "work/video-qa.json"
+  ],
+  "max_frame_hold_seconds": 0.25,
+  "expected_performance_occurrences": 5,
+  "lines": [
+    {
+      "id": "A01",
+      "actor": "李白",
+      "text": "酒杯一举，银河都来捧场",
+      "start": 18.2,
+      "end": 23.6,
+      "heard_start": 18.68,
+      "heard_end": 22.68,
+      "clip": "clips/A-block_t1.mp4",
+      "source_in": 0,
+      "qa_id": "A-block",
+      "name_subtitle": "自由月光 / ROUND 01",
+      "color": "#F0CF8D"
+    },
+    {
+      "id": "A02",
+      "actor": "李白",
+      "text": "你的工整，装不下我的月光",
+      "start": 23.6,
+      "end": 28,
+      "heard_start": 23.7,
+      "heard_end": 27.44,
+      "clip": "clips/A-block_t1.mp4",
+      "source_in": 5.4,
+      "qa_id": "A-block",
+      "name_subtitle": "自由月光 / ROUND 01",
+      "color": "#F0CF8D"
+    },
+    {
+      "id": "B01",
+      "actor": "杜甫",
+      "text": "月光再亮，也得照见风霜",
+      "start": 28,
+      "end": 33,
+      "heard_start": 28.3,
+      "heard_end": 32.18,
+      "clip": "clips/B-block_t1.mp4",
+      "source_in": 0.4,
+      "qa_id": "B-block",
+      "name_subtitle": "人间风霜 / ROUND 02",
+      "color": "#8DD6DF"
+    },
+    {
+      "id": "B02",
+      "actor": "杜甫",
+      "text": "我把人间，写成压轴的回响",
+      "start": 33,
+      "end": 37.6,
+      "heard_start": 33.1,
+      "heard_end": 36.76,
+      "clip": "clips/B-block_t1.mp4",
+      "source_in": 5.4,
+      "qa_id": "B-block",
+      "name_subtitle": "人间风霜 / ROUND 02",
+      "color": "#8DD6DF"
+    }
+  ],
+  "visual_timeline": [
+    {
+      "id": "opening-stage",
+      "type": "instrumental_art_motion",
+      "start": 0,
+      "end": 5,
+      "image": "refs/moon-and-earth-stage.png",
+      "motion": "slow-push"
+    },
+    {
+      "id": "opening-city",
+      "type": "instrumental_art_motion",
+      "start": 5,
+      "end": 9.6,
+      "image": "refs/moonlit-city-v2.png",
+      "motion": "slow-pull"
+    },
+    {
+      "id": "opening-dufu",
+      "type": "instrumental_art_motion",
+      "start": 9.6,
+      "end": 14,
+      "image": "refs/dufu-v2.png",
+      "motion": "slow-push"
+    },
+    {
+      "id": "opening-libai",
+      "type": "instrumental_art_motion",
+      "start": 14,
+      "end": 18.2,
+      "image": "refs/libai-v2.png",
+      "motion": "slow-pull"
+    },
+    {
+      "id": "A01-main",
+      "type": "performance",
+      "line_id": "A01",
+      "start": 18.2,
+      "end": 23.6,
+      "heard_start": 18.68,
+      "heard_end": 22.68
+    },
+    {
+      "id": "A02-main",
+      "type": "performance",
+      "line_id": "A02",
+      "start": 23.6,
+      "end": 28,
+      "heard_start": 23.7,
+      "heard_end": 27.44
+    },
+    {
+      "id": "B01-main",
+      "type": "performance",
+      "line_id": "B01",
+      "start": 28,
+      "end": 33,
+      "heard_start": 28.3,
+      "heard_end": 32.18
+    },
+    {
+      "id": "B02-main",
+      "type": "performance",
+      "line_id": "B02",
+      "start": 33,
+      "end": 37.6,
+      "heard_start": 33.1,
+      "heard_end": 36.76
+    },
+    {
+      "id": "interlude-city",
+      "type": "instrumental_art_motion",
+      "start": 37.6,
+      "end": 42.4,
+      "image": "refs/moonlit-city-v2.png",
+      "motion": "slow-push"
+    },
+    {
+      "id": "interlude-frost",
+      "type": "instrumental_art_motion",
+      "start": 42.4,
+      "end": 46.8,
+      "image": "refs/frost-and-poetry-v2.png",
+      "motion": "slow-pull"
+    },
+    {
+      "id": "interlude-dufu",
+      "type": "instrumental_art_motion",
+      "start": 46.8,
+      "end": 51.2,
+      "image": "refs/dufu-v2.png",
+      "motion": "slow-push"
+    },
+    {
+      "id": "B02-reprise",
+      "type": "performance",
+      "line_id": "B02",
+      "start": 51.2,
+      "end": 56.4,
+      "heard_start": 51.6,
+      "heard_end": 55.6,
+      "clip": "clips/B-block_t1.mp4",
+      "source_in": 5.4,
+      "qa_id": "B-block",
+      "retime": {
+        "enabled": true,
+        "control_points": [
+          [
+            0,
+            0
+          ],
+          [
+            0.1,
+            0.4
+          ],
+          [
+            3.76,
+            4.4
+          ],
+          [
+            4.6,
+            5.2
+          ]
+        ],
+        "reason": "同词重唱复用B02主段完全相同源区间[5.4,10]。源局部0.1–3.76秒主唱（3.66秒）映射到目标局部0.4–4.4秒（4秒），调整开头准备与尾部；仅声学分组启发式，须见片复核，不宣称逐音素口型准确。"
+      }
+    },
+    {
+      "id": "closing-stage",
+      "type": "instrumental_art_motion",
+      "start": 56.4,
+      "end": 59.8,
+      "image": "refs/moon-and-earth-stage.png",
+      "motion": "slow-pull"
+    },
+    {
+      "id": "closing-city",
+      "type": "instrumental_art_motion",
+      "start": 59.8,
+      "end": 63.28,
+      "image": "refs/moonlit-city-v2.png",
+      "motion": "slow-push"
+    }
+  ],
+  "planned_sources": [
+    {
+      "id": "A-block",
+      "path": "clips/A-block_t1.mp4",
+      "actor": "李白",
+      "model_label": "MiniMax H3",
+      "source_audio_global_range": [
+        18.2,
+        28.2
+      ],
+      "requested_duration_seconds": 10,
+      "status": "downloaded",
+      "reviewed": true,
+      "output_sha256": "4cd130d33053374667529f38e939aa62df9a1b78e7f207021c18caa47752a3fb",
+      "output_size_bytes": 7421943,
+      "source_video_duration_seconds": 10.125
+    },
+    {
+      "id": "B-block",
+      "path": "clips/B-block_t1.mp4",
+      "actor": "杜甫",
+      "model_label": "MiniMax H3",
+      "source_audio_global_range": [
+        27.6,
+        37.6
+      ],
+      "requested_duration_seconds": 10,
+      "status": "downloaded",
+      "reviewed": true,
+      "output_sha256": "1b724e0607878c93f2dedbec9bb423db009fe43ddf5ddcc68990f45265273f56",
+      "output_size_bytes": 6672179,
+      "source_video_duration_seconds": 10.125
+    }
+  ],
+  "retime_coordinate_system": {
+    "control_points": "每对[source_elapsed,target_elapsed]均为相对秒数。source_elapsed相对于该视觉段source_in裁入后的原片起点，不是整条原片的绝对秒数；target_elapsed相对于该视觉段在成片中的start。",
+    "B02_reprise_source_absolute_points": [
+      5.4,
+      5.5,
+      9.16,
+      10
+    ],
+    "B02_reprise_target_global_points": [
+      51.2,
+      51.6,
+      55.6,
+      56.4
+    ],
+    "retime_changes_audio": false,
+    "lip_sync_passed": null
+  },
+  "review_notes": [
+    "人物是重新定制的原创AI艺术演绎，不是历史人物形象重建。",
+    "四句歌词正文由用户确认；ASR仅辅助分段，不以识别误字替换原词。",
+    "A01主唱听见范围约18.68–22.68秒，尾回声约22.62–23.76秒跨入A02镜头；此处仅注记，不改歌词正文、不重复生成字幕，待看片复核听感。",
+    "B01 heard_start约28.3秒，属于辅助边界，需结合真实原片复核。",
+    "B02重唱约51.6–55.6秒，使用已确认同词；重定时计划并非口型准确的证据。",
+    "最终须核查原片实际时长能覆盖A至9.8秒及B至10秒；不足时保留失败，不以静图补齐四句表演。",
+    "两个10秒任务现均已下载：原生音轨筛查通过、两源SHA一致，root的20帧抽样审片接纳用于演示；该编辑选择不把QA或抽样改称精准口型证明。"
+  ],
+  "confirmation": {
+    "kind": "chosen-edit-for-demo",
+    "confirmed_at": "2026-10-15T11:13:07.221082+00:00",
+    "based_on_plan": "work/timeline-edit-plan.json",
+    "based_on_plan_sha256": "da5ad3c2cbc3eb67e50da1f2a039a593eb67d93d39bcba86611648b3ea446df1",
+    "raw_audio_qa": "work/video-qa.json",
+    "visual_review": "work/visual-review.json",
+    "source_hashes_verified": true,
+    "main_picture_shift_seconds": 0,
+    "main_retime": false,
+    "reprise_retime": "仅B02同词重唱采用原计划局部控制点，原曲不变速",
+    "lip_sync_passed": null,
+    "precision_limit": "已接纳用于完整演示；ASR辅助边界与抽帧视觉取舍不构成逐音素口型证明。"
+  },
+  "expected_assembly_counts": {
+    "source_clips": 2,
+    "unique_lyric_shots": 4,
+    "performance_occurrences": 5,
+    "performance_occurrence_seconds": 24.6,
+    "instrumental_art_motion_segments": 9,
+    "instrumental_art_motion_seconds": 38.68,
+    "total_video_frames": 1582,
+    "note": "待合成核验的编辑选择分配；不是已输出参数。38.68秒原创图像运镜＋24.6秒表演取用＝63.28秒。"
+  }
+}

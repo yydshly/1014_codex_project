@@ -1,0 +1,72 @@
+{
+  "status": "complete-four-gpt-references-ready-for-video-generation",
+  "provider": "OpenAI",
+  "tool": "built-in image_gen",
+  "model": "GPT image generation; exact backend model not separately exposed",
+  "created_at_utc": "2026-10-15T14:26:46.670294+00:00",
+  "identity_policy": "R01 sole visual identity and stage authority; every derived image references R01, not independent text-to-image",
+  "assets": [
+    {
+      "id": "R01-MASTER",
+      "filename": "R01-MASTER.png",
+      "path": "refs/R01-MASTER.png",
+      "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c",
+      "bytes": 2352715,
+      "width": 1672,
+      "height": 941,
+      "reference_images": [],
+      "source_output": "D:\\codex\\home\\generated_images\\01a13e1a-2f68-7943-b2a8-2e9c80fa7a78\\exec-cd80448f-9025-4a8e-975d-e53fc2a9e39d.png",
+      "note": "Original generated PNG copied unchanged; visually checked two distinct adult actors, left ivory/teal and right indigo/copper, moon stage, microphones and audience."
+    },
+    {
+      "id": "R02-LIBAI",
+      "filename": "R02-LIBAI.png",
+      "path": "refs/R02-LIBAI.png",
+      "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871",
+      "bytes": 2068459,
+      "width": 1672,
+      "height": 941,
+      "reference_images": [
+        "R01-MASTER.png"
+      ],
+      "source_output": "D:\\codex\\home\\generated_images\\01a13e1a-2f68-7943-b2a8-2e9c80fa7a78\\exec-05419dd2-b90d-4691-a26a-88737e3fd2e7.png",
+      "note": "Derived with built-in GPT image editing from the exact R01 master; only framing/actor isolation or removal changes, identity and stage authority remains R01."
+    },
+    {
+      "id": "R03-DUFU",
+      "filename": "R03-DUFU.png",
+      "path": "refs/R03-DUFU.png",
+      "sha256": "5d03d6ee8a07d9cc849821137555e76d8e557e8c2937569be5baa3b190d1fdb1",
+      "bytes": 2133385,
+      "width": 1672,
+      "height": 941,
+      "reference_images": [
+        "R01-MASTER.png"
+      ],
+      "source_output": "D:\\codex\\home\\generated_images\\01a13e1a-2f68-7943-b2a8-2e9c80fa7a78\\exec-efdd092b-1aa1-4475-900f-45d701e3b3f0.png",
+      "note": "Derived with built-in GPT image editing from the exact R01 master; only framing/actor isolation or removal changes, identity and stage authority remains R01."
+    },
+    {
+      "id": "R04-STAGE",
+      "filename": "R04-STAGE.png",
+      "path": "refs/R04-STAGE.png",
+      "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+      "bytes": 2214849,
+      "width": 1672,
+      "height": 941,
+      "reference_images": [
+        "R01-MASTER.png"
+      ],
+      "source_output": "D:\\codex\\home\\generated_images\\01a13e1a-2f68-7943-b2a8-2e9c80fa7a78\\exec-51c8127e-84d0-4acc-947d-91c02ffccc2d.png",
+      "note": "Derived with built-in GPT image editing from the exact R01 master; only framing/actor isolation or removal changes, identity and stage authority remains R01."
+    }
+  ],
+  "completed_at_utc": "2026-10-15T14:35:04.531595+00:00",
+  "prompt_set": "refs/gpt-image-prompts.json",
+  "visual_review": {
+    "status": "root-reviewed-all-four",
+    "identity": "same younger clean-shaven ivory/teal performer and older bearded indigo/copper performer visually retained",
+    "stage": "moon disc, warm vertical columns, pine/rock scenery, tiered wooden audience balconies and concentric wet black/brass platform retained",
+    "limitations": "Generative close-ups have small texture/detail variations; not a pixel-identical crop or guaranteed future video consistency. Video output still requires review."
+  }
+}

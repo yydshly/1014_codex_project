@@ -1,0 +1,618 @@
+{
+  "schema_version": 1,
+  "experiment_id": "004-performance-film",
+  "status": "candidate_pending_audio_review_not_confirmed",
+  "created_at": "2026-10-15T12:42:40.406506+00:00",
+  "source_song": {
+    "path": "music/source-ya-zhou-ren-jian.mp3",
+    "sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+    "full_song_preserved": true
+  },
+  "reference": {
+    "path": "docs/full-song-lyrics.txt",
+    "sha256": "cefba1418bb9545a1eb2b590b1de74bd4bdc62a65c012a00552fc690737e2357",
+    "user_confirmed": true,
+    "line_count": 22,
+    "confirmation_scope": "用户确认采用这份完整歌词；实际音频是否每字每句遵循仍按证据保留疑点。"
+  },
+  "caption_policy": {
+    "text_source": "user_confirmed_reference",
+    "timing_status": "candidate",
+    "reference_unconfirmed_possibly_omitted": [
+      "VB02",
+      "DUO01"
+    ],
+    "text_disputed_pending_listening": [
+      "BRB02"
+    ],
+    "omit_unconfirmed_lines": true,
+    "no_asr_homophone_replacement": true,
+    "note": "已定位候选可供人工核对和分镜；未定位或文本疑点不自动写入成片字幕。"
+  },
+  "asr_evidence_paths": [
+    "work/new-song-asr-base-unprompted.json",
+    "work/new-song-asr-window-unprompted-initial.json",
+    "work/new-song-asr-targeted-unprompted.json",
+    "work/new-song-asr-window-hinted.json",
+    "work/new-song-asr-small-unprompted.json",
+    "work/new-song-asr-small-hinted.json"
+  ],
+  "lyric_occurrences": [
+    {
+      "id": "VA01",
+      "actor_reference": "李白",
+      "section": "verse-a",
+      "text_from_user_confirmed_reference": "我携一身月色，踏过长安的墙",
+      "heard_start_candidate": 9.84,
+      "heard_end_candidate": 14.12,
+      "timing_status": "short-window-supported",
+      "raw_asr_evidence_or_uncertainty": "我欠一身月色他过长暗的墙",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "VA02",
+      "actor_reference": "李白",
+      "section": "verse-a",
+      "text_from_user_confirmed_reference": "袖里藏着清风，胸口住着汪洋",
+      "heard_start_candidate": 15.08,
+      "heard_end_candidate": 18.64,
+      "timing_status": "short-window-supported",
+      "raw_asr_evidence_or_uncertainty": "绣意藏着轻风凶口住这荒谅",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "VA03",
+      "actor_reference": "李白",
+      "section": "verse-a",
+      "text_from_user_confirmed_reference": "把失意酿成酒，把夜色唱到亮",
+      "heard_start_candidate": 19.64,
+      "heard_end_candidate": 23.24,
+      "timing_status": "phonetic-approximation",
+      "raw_asr_evidence_or_uncertainty": "十一块成就帮夜搜尝到了",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "VA04",
+      "actor_reference": "李白",
+      "section": "verse-a",
+      "text_from_user_confirmed_reference": "今夜借你鼓点，让天地听我讲",
+      "heard_start_candidate": 24.28,
+      "heard_end_candidate": 27.98,
+      "timing_status": "phonetic-approximation",
+      "raw_asr_evidence_or_uncertainty": "今天见你孤天让天地听我唱",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "VB01",
+      "actor_reference": "杜甫",
+      "section": "verse-b",
+      "text_from_user_confirmed_reference": "我从长街走来，听过万户的忙",
+      "heard_start_candidate": 28.9,
+      "heard_end_candidate": 32.6,
+      "timing_status": "short-window-supported-start-uncertain",
+      "raw_asr_evidence_or_uncertainty": "我从唱着走来听出万戏的梦",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "VB02",
+      "actor_reference": "杜甫",
+      "section": "verse-b",
+      "text_from_user_confirmed_reference": "鞋底沾着泥土，纸上落着风霜",
+      "heard_start_candidate": null,
+      "heard_end_candidate": null,
+      "timing_status": "reference_unconfirmed_possibly_omitted",
+      "raw_asr_evidence_or_uncertainty": "无可靠独立时间窗；不能将参考第二句塞进第一句与第三句之间。",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": false,
+      "small_recheck": {
+        "decision": "reference_unconfirmed_possibly_omitted",
+        "source_window": [
+          28,
+          43
+        ],
+        "raw_evidence_paths": [
+          "work/new-song-asr-small-unprompted.json",
+          "work/new-song-asr-small-hinted.json"
+        ],
+        "no_forced_reference_alignment": true
+      }
+    },
+    {
+      "id": "VB03",
+      "actor_reference": "杜甫",
+      "section": "verse-b",
+      "text_from_user_confirmed_reference": "有人仰望星河，有人守着炉膛",
+      "heard_start_candidate": 33.34,
+      "heard_end_candidate": 37.88,
+      "timing_status": "short-window-supported",
+      "raw_asr_evidence_or_uncertainty": "有人阳望星花有人守着轮到",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "VB04",
+      "actor_reference": "杜甫",
+      "section": "verse-b",
+      "text_from_user_confirmed_reference": "我让无名的脸，站到舞台中央",
+      "heard_start_candidate": 38.2,
+      "heard_end_candidate": 42.26,
+      "timing_status": "phonetic-approximation",
+      "raw_asr_evidence_or_uncertainty": "我让我明的电战道太创意啊",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "C1A01",
+      "actor_reference": "李白",
+      "section": "chorus-1",
+      "text_from_user_confirmed_reference": "酒杯一举，银河都来捧场",
+      "heard_start_candidate": 42.26,
+      "heard_end_candidate": 45.06,
+      "timing_status": "short-window-supported",
+      "raw_asr_evidence_or_uncertainty": "就被一只银河那来捧场",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "C1A02",
+      "actor_reference": "李白",
+      "section": "chorus-1",
+      "text_from_user_confirmed_reference": "你的工整，装不下我的月光",
+      "heard_start_candidate": 46.98,
+      "heard_end_candidate": 49.76,
+      "timing_status": "short-window-supported",
+      "raw_asr_evidence_or_uncertainty": "你的光成长不下我的月光",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "C1B01",
+      "actor_reference": "杜甫",
+      "section": "chorus-1",
+      "text_from_user_confirmed_reference": "月光再亮，也得照见风霜",
+      "heard_start_candidate": 49.74,
+      "heard_end_candidate": 52.1,
+      "timing_status": "phonetic-approximation",
+      "raw_asr_evidence_or_uncertainty": "原本在暗夜的招春风霜",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "C1B02",
+      "actor_reference": "杜甫",
+      "section": "chorus-1",
+      "text_from_user_confirmed_reference": "我把人间，写成压轴的回响",
+      "heard_start_candidate": 52.1,
+      "heard_end_candidate": 54.46,
+      "timing_status": "phonetic-approximation",
+      "raw_asr_evidence_or_uncertainty": "花花人最新情怀孤独灰烧",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "BRA01",
+      "actor_reference": "李白",
+      "section": "bridge",
+      "text_from_user_confirmed_reference": "你把千家灯火，捧在手掌",
+      "heard_start_candidate": 54.46,
+      "heard_end_candidate": 56.82,
+      "timing_status": "short-window-supported",
+      "raw_asr_evidence_or_uncertainty": "你把天降浪活碰在手掌",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "BRB01",
+      "actor_reference": "杜甫",
+      "section": "bridge",
+      "text_from_user_confirmed_reference": "你让天边明月，落在肩上",
+      "heard_start_candidate": 56.82,
+      "heard_end_candidate": 59.34,
+      "timing_status": "short-window-supported",
+      "raw_asr_evidence_or_uncertainty": "你让天天明月落在街上",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "BRA02",
+      "actor_reference": "李白",
+      "section": "bridge",
+      "text_from_user_confirmed_reference": "这一杯，敬远方",
+      "heard_start_candidate": 59.34,
+      "heard_end_candidate": 61.88,
+      "timing_status": "phonetic-approximation",
+      "raw_asr_evidence_or_uncertainty": "找一杯新圆帕",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "BRB02",
+      "actor_reference": "杜甫",
+      "section": "bridge",
+      "text_from_user_confirmed_reference": "这一笔，敬担当",
+      "heard_start_candidate": 62.08,
+      "heard_end_candidate": 65.06,
+      "timing_status": "possible-repeat-or-word-change-needs-listening",
+      "raw_asr_evidence_or_uncertainty": "无提示两处均像“这一杯敬远方”的同音串，是否实际唱成“这一笔敬担当”待核。",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": false,
+      "small_recheck": {
+        "decision": "possible_actual_repetition_of_previous_line",
+        "source_window": [
+          62,
+          65.6
+        ],
+        "raw_evidence_paths": [
+          "work/new-song-asr-small-unprompted.json",
+          "work/new-song-asr-small-hinted.json"
+        ],
+        "no_forced_reference_alignment": true
+      }
+    },
+    {
+      "id": "C2A01",
+      "actor_reference": "李白",
+      "section": "chorus-2",
+      "text_from_user_confirmed_reference": "酒杯一举，银河都来捧场",
+      "heard_start_candidate": 65.6,
+      "heard_end_candidate": 68.6,
+      "timing_status": "short-window-supported",
+      "raw_asr_evidence_or_uncertainty": "就被一只英文的来捧场",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "C2A02",
+      "actor_reference": "李白",
+      "section": "chorus-2",
+      "text_from_user_confirmed_reference": "你的工整，装不下我的月光",
+      "heard_start_candidate": 70.56,
+      "heard_end_candidate": 73.32,
+      "timing_status": "short-window-supported",
+      "raw_asr_evidence_or_uncertainty": "你的共争装扫下我的月光",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "C2B01",
+      "actor_reference": "杜甫",
+      "section": "chorus-2",
+      "text_from_user_confirmed_reference": "月光再亮，也得照见风霜",
+      "heard_start_candidate": 73.34,
+      "heard_end_candidate": 75.68,
+      "timing_status": "phonetic-approximation",
+      "raw_asr_evidence_or_uncertainty": "月光再燃夜的照片风霜",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "C2B02",
+      "actor_reference": "杜甫",
+      "section": "chorus-2",
+      "text_from_user_confirmed_reference": "我把人间，写成压轴的回响",
+      "heard_start_candidate": 75.68,
+      "heard_end_candidate": 79.1,
+      "timing_status": "end-uncertain-phonetic-approximation",
+      "raw_asr_evidence_or_uncertainty": "破坏了这些青外魂的灰少",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    },
+    {
+      "id": "DUO01",
+      "actor_reference": "合唱",
+      "section": "closing",
+      "text_from_user_confirmed_reference": "敬月光，也敬风霜",
+      "heard_start_candidate": null,
+      "heard_end_candidate": null,
+      "timing_status": "reference_unconfirmed_possibly_omitted",
+      "raw_asr_evidence_or_uncertainty": "未找到“敬月光也敬风霜”的可靠独立时间窗。",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": false,
+      "small_recheck": {
+        "decision": "reference_unconfirmed_possibly_omitted",
+        "source_window": [
+          79,
+          87
+        ],
+        "raw_evidence_paths": [
+          "work/new-song-asr-small-unprompted.json",
+          "work/new-song-asr-small-hinted.json"
+        ],
+        "no_forced_reference_alignment": true
+      }
+    },
+    {
+      "id": "DUO02",
+      "actor_reference": "合唱",
+      "section": "closing",
+      "text_from_user_confirmed_reference": "让这人间，听见回响",
+      "heard_start_candidate": 80.3,
+      "heard_end_candidate": 85.86,
+      "timing_status": "long-note-end-supported-start-uncertain",
+      "raw_asr_evidence_or_uncertainty": "让许人坚听结回一下",
+      "lyrics_from_asr_not_substituted": true,
+      "manual_review_required": true,
+      "caption_allowed_without_further_review": true
+    }
+  ],
+  "additional_vocal_candidates": [
+    {
+      "kind": "first-chorus-tail-repeat",
+      "source_range": [
+        45.06,
+        46.98
+      ],
+      "text_reference": "酒杯一举…捧场附近重复/回声候选，不能只靠ASR定具体新增文字"
+    },
+    {
+      "kind": "final-chorus-tail-repeat",
+      "source_range": [
+        68.6,
+        70.56
+      ],
+      "text_reference": "同上尾词/重唱候选"
+    }
+  ],
+  "uncertain_reference_lines": [
+    "VB02",
+    "DUO01",
+    "BRB02"
+  ],
+  "driver_groups": [
+    {
+      "id": "OPEN",
+      "song_in": 0,
+      "song_out": 9,
+      "request_video_seconds": 10,
+      "actors": [],
+      "kind": "instrumental-transition",
+      "reference_path": "music/full-song-drivers/OPEN-9s.wav",
+      "lines": [],
+      "status": "driver_group_suggestion_not_submitted",
+      "pad_lead_seconds": 0,
+      "pad_tail_seconds": 0,
+      "source_song_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+      "source_audio_seconds": 9,
+      "video_request_extra_seconds": 1,
+      "reference_gain_db": -1.5,
+      "mapping_formula": "source picture local time = final song time - song_in + pad_lead_seconds + picture_advance; picture_advance defaults0",
+      "generation_extra_tail_note": "请求视频比驱动长时，新增尾段不代表原曲延长；最终仍按原曲统一配回。",
+      "reference_sha256": "6a27fcde723d1ca1547f034c97bffc46d170ea2c4b3385c75f0406f8a0cbe9b8"
+    },
+    {
+      "id": "A1",
+      "song_in": 9.4,
+      "song_out": 19.4,
+      "request_video_seconds": 10,
+      "actors": [
+        "李白"
+      ],
+      "kind": "single-performance",
+      "reference_path": "music/full-song-drivers/A1-first-two-10s.wav",
+      "lines": [
+        "VA01",
+        "VA02"
+      ],
+      "status": "driver_group_suggestion_not_submitted",
+      "pad_lead_seconds": 0,
+      "pad_tail_seconds": 0,
+      "source_song_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+      "source_audio_seconds": 10.0,
+      "video_request_extra_seconds": 0.0,
+      "reference_gain_db": -1.5,
+      "mapping_formula": "source picture local time = final song time - song_in + pad_lead_seconds + picture_advance; picture_advance defaults0",
+      "generation_extra_tail_note": "请求视频比驱动长时，新增尾段不代表原曲延长；最终仍按原曲统一配回。",
+      "reference_sha256": "dca00ffc16e7e488a9477e2b85c0b3942fe446015a792aeb8e3a0ca8373bfd86"
+    },
+    {
+      "id": "A2",
+      "song_in": 19,
+      "song_out": 29,
+      "request_video_seconds": 10,
+      "actors": [
+        "李白"
+      ],
+      "kind": "single-performance",
+      "lines": [
+        "VA03",
+        "VA04"
+      ],
+      "status": "driver_group_suggestion_not_submitted",
+      "pad_lead_seconds": 0,
+      "pad_tail_seconds": 0,
+      "source_song_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+      "source_audio_seconds": 10,
+      "video_request_extra_seconds": 0,
+      "reference_gain_db": -1.5,
+      "mapping_formula": "source picture local time = final song time - song_in + pad_lead_seconds + picture_advance; picture_advance defaults0",
+      "generation_extra_tail_note": "请求视频比驱动长时，新增尾段不代表原曲延长；最终仍按原曲统一配回。"
+    },
+    {
+      "id": "B",
+      "song_in": 28.5,
+      "song_out": 42.7,
+      "request_video_seconds": 15,
+      "actors": [
+        "杜甫"
+      ],
+      "kind": "single-performance-with-next-role-context",
+      "lines": [
+        "VB01",
+        "VB02",
+        "VB03",
+        "VB04"
+      ],
+      "note": "VB02未定位；驱动仍保留整个原段，不删除疑似漏唱内容。最后约0.5秒可能已有下段李白起声，杜甫镜头实际用至约42.2，重叠由下一机位承接。",
+      "status": "driver_group_suggestion_not_submitted",
+      "pad_lead_seconds": 0,
+      "pad_tail_seconds": 0,
+      "source_song_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+      "source_audio_seconds": 14.2,
+      "video_request_extra_seconds": 0.8,
+      "reference_gain_db": -1.5,
+      "mapping_formula": "source picture local time = final song time - song_in + pad_lead_seconds + picture_advance; picture_advance defaults0",
+      "generation_extra_tail_note": "请求视频比驱动长时，新增尾段不代表原曲延长；最终仍按原曲统一配回。"
+    },
+    {
+      "id": "CH1",
+      "song_in": 42,
+      "song_out": 54.7,
+      "request_video_seconds": 15,
+      "actors": [
+        "李白",
+        "杜甫"
+      ],
+      "kind": "two-role-alternating-performance",
+      "lines": [
+        "C1A01",
+        "C1A02",
+        "C1B01",
+        "C1B02"
+      ],
+      "note": "自然短句轮替较快，优先双人参考，不能把全段强制交给同一角色对口。",
+      "status": "driver_group_suggestion_not_submitted",
+      "pad_lead_seconds": 0,
+      "pad_tail_seconds": 0,
+      "source_song_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+      "source_audio_seconds": 12.7,
+      "video_request_extra_seconds": 2.3,
+      "reference_gain_db": -1.5,
+      "mapping_formula": "source picture local time = final song time - song_in + pad_lead_seconds + picture_advance; picture_advance defaults0",
+      "generation_extra_tail_note": "请求视频比驱动长时，新增尾段不代表原曲延长；最终仍按原曲统一配回。"
+    },
+    {
+      "id": "BR",
+      "song_in": 54.1,
+      "song_out": 65.6,
+      "request_video_seconds": 15,
+      "actors": [
+        "李白",
+        "杜甫"
+      ],
+      "kind": "two-role-alternating-performance",
+      "lines": [
+        "BRA01",
+        "BRB01",
+        "BRA02",
+        "BRB02"
+      ],
+      "note": "桥段最后短句文本疑点需带声核对，不把参考词硬写成实际已唱。",
+      "status": "driver_group_suggestion_not_submitted",
+      "pad_lead_seconds": 0,
+      "pad_tail_seconds": 0,
+      "source_song_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+      "source_audio_seconds": 11.5,
+      "video_request_extra_seconds": 3.5,
+      "reference_gain_db": -1.5,
+      "mapping_formula": "source picture local time = final song time - song_in + pad_lead_seconds + picture_advance; picture_advance defaults0",
+      "generation_extra_tail_note": "请求视频比驱动长时，新增尾段不代表原曲延长；最终仍按原曲统一配回。"
+    },
+    {
+      "id": "CH2",
+      "song_in": 65.2,
+      "song_out": 79.8,
+      "request_video_seconds": 15,
+      "actors": [
+        "李白",
+        "杜甫"
+      ],
+      "kind": "two-role-alternating-performance",
+      "lines": [
+        "C2A01",
+        "C2A02",
+        "C2B01",
+        "C2B02"
+      ],
+      "status": "driver_group_suggestion_not_submitted",
+      "pad_lead_seconds": 0,
+      "pad_tail_seconds": 0,
+      "source_song_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+      "source_audio_seconds": 14.6,
+      "video_request_extra_seconds": 0.4,
+      "reference_gain_db": -1.5,
+      "mapping_formula": "source picture local time = final song time - song_in + pad_lead_seconds + picture_advance; picture_advance defaults0",
+      "generation_extra_tail_note": "请求视频比驱动长时，新增尾段不代表原曲延长；最终仍按原曲统一配回。"
+    },
+    {
+      "id": "CLOSE",
+      "song_in": 79.4,
+      "song_out": 86.4,
+      "request_video_seconds": 10,
+      "actors": [
+        "李白",
+        "杜甫"
+      ],
+      "kind": "duet-closing",
+      "lines": [
+        "DUO01",
+        "DUO02"
+      ],
+      "note": "DUO01未定位，不虚构额外一句或字幕时间。",
+      "status": "driver_group_suggestion_not_submitted",
+      "pad_lead_seconds": 0,
+      "pad_tail_seconds": 0,
+      "source_song_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+      "source_audio_seconds": 7.0,
+      "video_request_extra_seconds": 3.0,
+      "reference_gain_db": -1.5,
+      "mapping_formula": "source picture local time = final song time - song_in + pad_lead_seconds + picture_advance; picture_advance defaults0",
+      "generation_extra_tail_note": "请求视频比驱动长时，新增尾段不代表原曲延长；最终仍按原曲统一配回。"
+    }
+  ],
+  "all_located_lyric_windows_covered_by_groups": true,
+  "first_pass_plan": {
+    "video_requests": 8,
+    "requested_generated_seconds": 100,
+    "reference_credits_per_second_768p": 15,
+    "reference_credits": 1500,
+    "actual_ui_price_must_be_checked_by_root": true,
+    "new_calls_made_by_this_analysis": 0
+  },
+  "optional_later_transition": {
+    "id": "OUTRO",
+    "song_in": 86.2,
+    "song_out": 94.61552083333333,
+    "request_video_seconds": 10,
+    "kind": "instrumental-ending",
+    "note": "全曲尾奏另计；按参考价再150钻、总仍在2400上限内，是否提交由root决定。"
+  },
+  "constraints": [
+    "整首94.6155秒原曲保留，不使用旧38.24秒剪辑。",
+    "没有为缺少可靠ASR匹配的参考句捏造时间；null不是已确认漏唱。",
+    "字幕正文由用户确认，ASR同音错字不直接替换正文；实际改词疑点需听核。",
+    "100秒为请求源视频容量，不是音乐被拉长到100秒，不自动填满视频模型多余尾段。",
+    "角色标签来自参考歌词，不证明原歌声线可完全分离或模型能逐字对口。"
+  ],
+  "small_recheck": {
+    "path": "work/lyric-recheck-small.json",
+    "sha256": "f0563c0c503813b1c1a022ad495e3dfa13355824a9dad2fdad7a768377be0806",
+    "status": "bounded_small_recheck_complete_uncertainties_retained",
+    "no_timing_or_driver_audio_change": true
+  }
+}

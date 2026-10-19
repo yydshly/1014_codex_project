@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "experiment_id": "004-performance-film",
+  "trial_id": "web-h3-audio-VA01",
+  "status": "submitted-awaiting-output",
+  "snapshot_at": "2026-10-16T00:56:42.903133+00:00",
+  "task": {
+    "provider": "ChatArt",
+    "provider_task_id": "1027778",
+    "route": "ordinary-image-to-video",
+    "model_label": "MiniMax H3",
+    "mode_label": "全能模式",
+    "mv_feature_used": false,
+    "submissions": 1,
+    "submitted_at_ui": "2026/10/16 08:43",
+    "requested_duration": 5,
+    "quality_label": "768p",
+    "aspect_ratio": "16:9",
+    "provider_status": "pending",
+    "ui_progress_connection": "network-error-but-task-persists",
+    "official_query_confirmed_pending": true,
+    "official_query_observed_at": "2026-10-16T00:56:42.903133+00:00"
+  },
+  "input": {
+    "image_count": 2,
+    "audio_count": 1,
+    "audio_label": "音频 1",
+    "image_references": [
+      "R02-LIBAI",
+      "R04-STAGE"
+    ],
+    "song_in": 9.4,
+    "song_out": 14.4,
+    "lyrics": "我携一身月色，踏过长安的墙",
+    "source_song_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+    "audio_gain_db": 0,
+    "contains_original_instrumental": true
+  },
+  "source_audio": {
+    "duration": 5,
+    "label": "实际提交的原曲9.4–14.4秒",
+    "path": "media/h3-audio-pilot-004/reference-9.4-14.4.wav",
+    "source_path": "work/audio-driven-repair/VA01-original-song-9.4-to-14.4.wav",
+    "bytes": 960078,
+    "sha256": "79f91a413fee6811b2c1a90e762f44150cc0a0d98c8bd207fb0958a719e18962"
+  },
+  "evidence_images": [
+    {
+      "label": "提交前的网页设置与75钻标价",
+      "path": "media/h3-audio-pilot-004/before-submit.png",
+      "source_path": "work/audio-driven-repair/web-pilot-review/before-submit.png",
+      "bytes": 136072,
+      "sha256": "f081b04add394f10be8bcb97cbb85434f04eee31b73da9515e3bf20e53880687"
+    },
+    {
+      "label": "08:43已受理任务卡与余额3375",
+      "path": "media/h3-audio-pilot-004/accepted.png",
+      "source_path": "work/audio-driven-repair/web-pilot-review/accepted.png",
+      "bytes": 101972,
+      "sha256": "41927c0a278511186e5b44b960629ae8a8ce0dde2f3c614ff5ac784cf3e211d8"
+    },
+    {
+      "label": "两图加音频1槽位；连接异常的余额0是占位，不是费用证据",
+      "path": "media/h3-audio-pilot-004/typed-inputs.png",
+      "source_path": "work/audio-driven-repair/web-pilot-review/typed-inputs-after-submit.png",
+      "bytes": 55185,
+      "sha256": "9c07d84783bb8304ed64948762d9dedaff0050e8a4f32aac03f408c0f2807c31"
+    }
+  ],
+  "output": null,
+  "evaluation": {
+    "status": "not-evaluated-output-pending",
+    "singing_lip_sync_passed": false,
+    "agent_subjective_audio_review_claimed": false,
+    "full_song_batch_enabled": false
+  },
+  "cost": {
+    "reported_credits": 75,
+    "balance_before": 3450,
+    "balance_after": 3375,
+    "evidence": "页面标价与余额观察，非独立消费账单",
+    "invoice_verified": false,
+    "actual_credits_spent": null
+  },
+  "clarification": "已实际验证ChatArt网页普通H3全能模式允许两图加音频。此前Skill接口没有明确audio参数，不能泛化为网页或模型不支持音频。上传成功也不等于演唱效果已通过。",
+  "source_snapshot": {
+    "path": "work/audio-driven-repair/repair-status.json",
+    "sha256": "f95a83a3002f1bfe106d73265e529daa8de5512f61038c7a1f38a18fa05d32ac"
+  },
+  "official_history_snapshot": {
+    "path": "work/audio-driven-repair/history-after-first-poll-timeout.json",
+    "sha256": "de8c9ec49aa5bf9d1931345963134e5854cb73cd3080ead2555f1517b9fb6fa6"
+  }
+}

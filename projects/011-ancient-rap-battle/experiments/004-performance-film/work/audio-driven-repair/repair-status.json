@@ -1,0 +1,130 @@
+{
+  "status": "original-song-full-repair-exported-awaiting-user-review",
+  "updated_at": "2026-10-16T04:53:34.974145+00:00",
+  "website_logged_in": true,
+  "route": "ordinary image-to-video / MiniMax H3 / 全能模式",
+  "input_labels": [
+    "图片 1",
+    "图片 2",
+    "音频 1"
+  ],
+  "duration": 5,
+  "displayed_credits": 75,
+  "generation_submitted": true,
+  "quality_result": "pilot-human-accepted-full-film-technical-and-editorial-frame-checks-passed",
+  "local_models_downloaded": false,
+  "mv_used": false,
+  "budget_exposure_including_reservation": 2375.0,
+  "remaining_authorized": 25.0,
+  "ui_submission_time": "2026/10/16 08:43",
+  "new_generation_calls": 1,
+  "credits_committed": 75,
+  "balance_before": 3450,
+  "balance_after": 3375,
+  "provider_task_id": "1027778",
+  "ui_progress_connection": "failed-but-official-history-confirms-pending",
+  "recovery": "official query on same task; no resubmission",
+  "output": {
+    "path": "work/audio-driven-repair/model-original/video_20261016091518.mp4",
+    "sha256": "13af814763a8ede67fb627e5724342bb760446e80a7610b8ce2a07d61668d129",
+    "bytes": 3342437,
+    "video_duration": 5.166667,
+    "container_duration": 5.175,
+    "width": 1344,
+    "height": 768,
+    "fps": 24,
+    "frames": 124
+  },
+  "provider_status": "completed",
+  "credits_reported_by_provider": 75,
+  "singing_lip_sync_passed": true,
+  "full_song_batch_enabled": true,
+  "subjective_audio_review_claimed": false,
+  "audio_similarity_supports_content_preservation": true,
+  "audio_comparison_is_lip_sync_evidence": false,
+  "pilot_passed": true,
+  "pilot_acceptance": "work/audio-driven-repair/pilot-acceptance.json",
+  "full_film_completed": true,
+  "full_song_repair_started": true,
+  "human_quality_reply": "口型已可用，继续修整片",
+  "production_tasks": [
+    {
+      "id": "H3_LIBAI_VERSE_t1",
+      "source_key": "LIBAI_VERSE",
+      "provider_task_id": "1027831",
+      "submitted": true
+    },
+    {
+      "id": "H3_LIBAI_CHORUS1_t1",
+      "source_key": "LIBAI_CHORUS1",
+      "provider_task_id": "1027834",
+      "submitted": true
+    },
+    {
+      "id": "H3_LIBAI_CHORUS2_t1",
+      "source_key": "LIBAI_CHORUS2",
+      "provider_task_id": "1027835",
+      "submitted": true
+    },
+    {
+      "id": "H3_DUFU_VERSE14_t1",
+      "source_key": "DUFU_VERSE14",
+      "provider_task_id": "1027840",
+      "submitted": true
+    },
+    {
+      "id": "H3_DUFU_CHORUS1_t1",
+      "source_key": "DUFU_CHORUS1",
+      "provider_task_id": "1027844",
+      "submitted": true
+    },
+    {
+      "id": "SKILL_STAGE_DETAIL_t1",
+      "source_key": "STAGE_DETAIL",
+      "provider_task_id": "1027850",
+      "submitted": true
+    }
+  ],
+  "budget_committed": 2265.0,
+  "reserved": 110,
+  "new_production_submissions": 6,
+  "unconfirmed_new_stage_attempt": {
+    "id": "H3_STAGE_DETAIL_t1",
+    "reserved_credits": 60,
+    "persistent_task_confirmed": false
+  },
+  "pilot_acceptance_scope": "exact-pilot-1027778-only",
+  "production_completed_source_keys": [
+    "LIBAI_VERSE",
+    "LIBAI_CHORUS1",
+    "LIBAI_CHORUS2",
+    "DUFU_VERSE14",
+    "DUFU_CHORUS1",
+    "STAGE_DETAIL"
+  ],
+  "production_reviewed_source_keys": [
+    "LIBAI_VERSE",
+    "LIBAI_CHORUS1",
+    "LIBAI_CHORUS2",
+    "DUFU_VERSE14",
+    "DUFU_CHORUS1",
+    "STAGE_DETAIL"
+  ],
+  "production_pending_source_keys": [],
+  "full_film_user_accepted": false,
+  "singing_lip_sync_passed_scope": "exact-pilot-1027778-only",
+  "full_film": {
+    "path": "work/audio-driven-repair/full-reedit/final/压轴人间-原曲驱动舞台版.mp4",
+    "sha256": "97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6",
+    "bytes": 45964902,
+    "width": 1280,
+    "height": 720,
+    "fps": 25.0,
+    "frames": 2366,
+    "duration": 94.64,
+    "container_duration": 94.64
+  },
+  "full_film_report": "work/audio-driven-repair/full-reedit/reedit-film-report.json",
+  "final_editorial_review": "work/audio-driven-repair/full-reedit/final-editorial-review.json",
+  "web_url": "http://127.0.0.1:4184/1014_codex_project/011-ancient-rap-battle/?v=audio-repair-20261016#repaired-film-004"
+}

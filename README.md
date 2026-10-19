@@ -19,6 +19,7 @@
 | 007 | [Atlas：模型驱动的资产工作流与月门水庭实证](projects/007-autumn-courtyard-blender/README.md) | Atlas 以技能规范和辅助脚本组织 2D/3D 资产生成、验证与引擎接入，底层依赖模型和建模工具；价值在可编辑资产与可重复交付。以月门水庭验证 Blender 脚本路线，探索展陈、教学、产品展示和游戏，流程增益仍待评测。 | 研究中 | [研究笔记](projects/007-autumn-courtyard-blender/RESEARCH.md) | [原帖](https://x.com/xikhar/status/2110143242591510835) | [演示](https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html) |
 | 009 | [个人主页启发与需求发现产品探索](projects/009-demand-discovery/README.md) | JasonZhu.AI 以博客、工具、项目、订阅与服务构成个人主页，并用 AI 管线更新快讯。我们的收获是研究沉淀、入口引导与复习更新，形成“研究→实践→记录→展示→接触用户→获得反馈→更新研究”；再延伸到 AI 发现需求、证据追查、验证和产品化。009 已跑通三轮本地探索，公开页展示真实档案，持续使用与付费待验证。 | 研究中 | [研究笔记](projects/009-demand-discovery/RESEARCH.md) | [来源](https://jasonzhu.ai/) | [演示](https://yydshly.github.io/1014_codex_project/009-demand-discovery/#synthesis) |
 | 010 | [从 Atypica 到数据驱动的需求调研](projects/010-evidence-research-lab/README.md) | Atypica 以资料研究、用户视角模拟与报告辅助需求和市场调研。我们自建导入、证据与报告原型，同模型同合成资料 B/C 未证明额外流程增益；由此追问模型、身份和流程价值，收束为数据→证据→需求→产品验证→反馈沉淀。可扩展需求雷达、调研工作台和领域助手，效果与付费待验证。 | 已归档 | [研究笔记](projects/010-evidence-research-lab/RESEARCH.md) | [原帖](https://x.com/gkxspace/status/2109970698303373750) | [演示](https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/#synthesis) |
+| 011 | [古人说唱 Battle：AI 视频制作流程研究](projects/011-ancient-rap-battle/README.md) | 研究歌曲、人物图与远端逐句视频的编排机制；制作94.64秒《压轴人间》，记录原曲驱动修复、阶段验收、可复用资产与扩展方向。 | 研究中 | [研究笔记](projects/011-ancient-rap-battle/RESEARCH.md) | [GitHub](https://github.com/10291124jcjc-dotcom/ancient-rap-battle) | — |
 | 014 | [赛博小雅：真人拟人化效果与模型依赖研究](projects/014-cyber-xiaoya-study/README.md) | 真人互动角色研究：识别、语言、声音与视觉模型提供听想说动，工程负责同步和打断；价值在在场感，扩展到陪练、讲解、直播与角色记忆。原作源码及完整闭环待核验。 | 研究中 | [研究笔记](projects/014-cyber-xiaoya-study/RESEARCH.md) | [原帖](https://x.com/huoshan007/status/2109919568617484522) | [演示](https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/) |
 | 015 | [Fotor Agent：视觉创作平台的能力、价值与我们的取舍](projects/015-fotor-agent/README.md) | Fotor 将图片与视频模型、Agent 编排和代码动画整合成视觉创作平台，价值在降低制作与修改门槛。对会用 Agent 和代码的我们，主要参考工作流与编辑体验，是否采用取决于省时和成品成本；后续可探索多模态 Agent 的工具协作、局部修改与质量评估。本轮仅整理归档，未做效果实测。 | 已归档 | [研究笔记](projects/015-fotor-agent/RESEARCH.md) | [来源](https://www.fotor.com/agent/) | — |
 
@@ -63,6 +64,14 @@
 010 原创理解总览图：从 Atypica 研究用途、模型与身份的追问，收束到数据、需求判断、产品验证和反馈；概念总结，非源产品架构或效果证明。
 
 [查看项目](projects/010-evidence-research-lab/README.md)
+
+#### 011 · 古人说唱 Battle：AI 视频制作流程研究
+
+![011原创研究引导图：源库原作、我们的探索与94.64秒舞台成片真实画面对照，说明音频驱动、制作价值与验收边界。](projects/011-ancient-rap-battle/assets/ancient-rap-battle-research-overview.png)
+
+011原创研究引导图：源库原作、我们的探索与94.64秒舞台成片真实画面对照，说明音频驱动、制作价值与验收边界。
+
+[查看项目](projects/011-ancient-rap-battle/README.md)
 
 #### 014 · 赛博小雅：真人拟人化效果与模型依赖研究
 

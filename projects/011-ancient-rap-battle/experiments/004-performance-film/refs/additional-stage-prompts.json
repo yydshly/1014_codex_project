@@ -1,0 +1,16 @@
+{
+  "prompts": [
+    {
+      "id": "R05-CROWD",
+      "prompt": "Use case: photorealistic-natural. Create a new cinematic 16:9 reference photograph for an audience reaction shot in the EXACT same concert location as the provided reference image. The input is the sole set-design, materials, architecture and lighting authority. Move the camera onto the front edge of this stage and face the surrounding audience balconies: low brass-ring glossy stage edge in the foreground, lively adult Chinese audience in layered dark wood Tang-inspired multi-tier balconies filling the background. Warm amber small lanterns, tall slender warm-gold light columns at the sides, cold blue-gray haze, naturally lit real faces. No lead singers are visible in this view. The giant moon is behind the camera on the stage side, so DO NOT put another giant moon behind the audience. Show a varied mixture of men and women, adult spectators only, modest muted dark traditional clothes, authentic excited smiles and attentive faces, a few fans and naturally raised clapping hands, believable uneven reactions, physical venue depth, realistic timber, skin and fabric. It should feel like a high-end live-action concert reaction still captured mid-motion with a 35mm cinema lens. Keep set architecture and cool/warm balance faithful to the supplied reference; avoid inventing a different venue. No modern logos, phones, readable text, captions, watermark, celebrity likeness, collage, duplicated patterned people, animation, plastic skin, neon signs or stage lasers. This will be used as an actual video-generation reference, not a finished shot.",
+      "reference": "refs/R01-MASTER.png",
+      "method": "built-in image_gen reference edit"
+    },
+    {
+      "id": "R06-DETAIL",
+      "prompt": "Use case: photorealistic-natural. Create a cinematic 16:9 close detail photograph INSIDE the exact physical stage set in the supplied image, which is the sole authority for set design, lighting and materials. Move camera down to 20cm above the stage floor near its outer brass ring, aiming diagonally across the glossy wet black stage towards the warm rear step lights and vertical gold light columns. Focus sharply on the fine concentric brass rings, subtle ripples and realistic wet floor reflections; pale blue-gray low fog drifts across them. Only a small hem of the SAME left singer's ivory embroidered robe and ONE pair of dark boots may appear on the far left edge to anchor scale, no visible face, no other performer or hand. Background warm-gold stairs and dark timber audience balconies are softly out of focus, a soft partial moon glow may be far in background but don't dominate with the full moon. Natural lens depth, very high-end live-action cinema texture, detailed brass and water, warm amber and cool blue-gray separation, moody but readable. Faithfully retain the supplied world's scale and architecture. No new musical instrument, no sword, no magic, no text, watermark, logo, collage, animation, CG look or modern props. This is an insert reference for later generating REAL moving fog, ripple, reflection and camera parallax video.",
+      "reference": "refs/R01-MASTER.png",
+      "method": "built-in image_gen reference edit"
+    }
+  ]
+}

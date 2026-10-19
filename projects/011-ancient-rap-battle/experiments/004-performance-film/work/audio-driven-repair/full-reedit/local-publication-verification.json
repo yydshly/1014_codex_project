@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-10-16T04:55:37.659651+00:00",
+  "local_url": "http://127.0.0.1:4184/1014_codex_project/011-ancient-rap-battle/?v=audio-repair-20261016#repaired-film-004",
+  "actual_http_status": 200,
+  "repaired_film_enabled_in_built_html": true,
+  "served_record_status": "exported-awaiting-full-review",
+  "served_video_sha256": "97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6",
+  "served_movie_range_checks": [
+    {
+      "range": "bytes=0-31",
+      "status": 206,
+      "content_range": "bytes 0-31/45964902",
+      "bytes": 32
+    },
+    {
+      "range": "bytes=-32",
+      "status": 206,
+      "content_range": "bytes 45964870-45964901/45964902",
+      "bytes": 32
+    }
+  ],
+  "build_artifacts_checked": 62,
+  "both_base_paths_range_and_hash_check_passed": true,
+  "historical_rejected_video_unchanged": true,
+  "browser_ui_playback_test": "not-completed-old-error-tab-url-policy-denied",
+  "user_reported_refreshed_existing_page_opens": true,
+  "subjective_audio_review_claimed": false,
+  "full_film_user_accepted": false,
+  "new_generation_calls": 0
+}

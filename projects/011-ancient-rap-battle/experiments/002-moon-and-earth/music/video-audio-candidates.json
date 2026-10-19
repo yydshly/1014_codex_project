@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "status": "candidate_timeline_not_final_confirmed",
+  "source_sha256": "91f5993a91f49e455fe9c60f60cc799692a96a40afa78c6b80e0f35831dbe8c8",
+  "source_unchanged": true,
+  "paid_generation_calls": 0,
+  "blocks": [
+    {
+      "id": "A-main",
+      "actor": "李白",
+      "source_in": 18.2,
+      "source_out": 28.2,
+      "lines": [
+        {
+          "id": "A01",
+          "text": "酒杯一举，银河都来捧场",
+          "heard_candidate": [
+            0.48,
+            4.48
+          ],
+          "echo_candidate": [
+            4.42,
+            5.56
+          ]
+        },
+        {
+          "id": "A02",
+          "text": "你的工整，装不下我的月光",
+          "heard_candidate": [
+            5.5,
+            9.24
+          ]
+        }
+      ],
+      "duration_s": 10,
+      "source_path": "music/source-jing-feng-shuang.mp3",
+      "source_sha256": "91f5993a91f49e455fe9c60f60cc799692a96a40afa78c6b80e0f35831dbe8c8",
+      "source_kind": "原始完整混音的时间截取，包含伴奏；不是分离人声",
+      "status": "candidate_ready_for_review",
+      "amplitude_gain_db": -1.0,
+      "time_stretch": false,
+      "resample": false,
+      "wav": {
+        "path": "music/candidates/A-main-mix-candidate.wav",
+        "sha256": "8f86d615d474e4473e1ed65789525654fd684950a84438fea6910ce78b9bf108",
+        "bytes": 2646102,
+        "decoded_duration_s": 10.0,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "pcm_s24le",
+              "sample_rate": "44100",
+              "channels": 2
+            }
+          ],
+          "format": {
+            "duration": "10.000000",
+            "size": "2646102"
+          }
+        }
+      },
+      "mp3": {
+        "path": "music/candidates/A-main-mix-candidate.mp3",
+        "sha256": "6a4c0b893f2cd3078737f666df55acec3dbf67d38f0df047f3afe3e8cfaf389a",
+        "bytes": 241415,
+        "decoded_duration_s": 10.0,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "mp3",
+              "sample_rate": "44100",
+              "channels": 2
+            }
+          ],
+          "format": {
+            "duration": "10.031020",
+            "size": "241415"
+          }
+        }
+      }
+    },
+    {
+      "id": "B-main",
+      "actor": "杜甫",
+      "source_in": 27.6,
+      "source_out": 37.6,
+      "lines": [
+        {
+          "id": "B01",
+          "text": "月光再亮，也得照见风霜",
+          "heard_candidate": [
+            0.7,
+            4.58
+          ]
+        },
+        {
+          "id": "B02",
+          "text": "我把人间，写成压轴的回响",
+          "heard_candidate": [
+            5.5,
+            9.16
+          ]
+        }
+      ],
+      "duration_s": 10,
+      "source_path": "music/source-jing-feng-shuang.mp3",
+      "source_sha256": "91f5993a91f49e455fe9c60f60cc799692a96a40afa78c6b80e0f35831dbe8c8",
+      "source_kind": "原始完整混音的时间截取，包含伴奏；不是分离人声",
+      "status": "candidate_ready_for_review",
+      "amplitude_gain_db": -1.0,
+      "time_stretch": false,
+      "resample": false,
+      "wav": {
+        "path": "music/candidates/B-main-mix-candidate.wav",
+        "sha256": "391c72771c25e9f44d4203fdb64f0893d0373b6c297d1c72bdcd3e6d5e51b442",
+        "bytes": 2646102,
+        "decoded_duration_s": 10.0,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "pcm_s24le",
+              "sample_rate": "44100",
+              "channels": 2
+            }
+          ],
+          "format": {
+            "duration": "10.000000",
+            "size": "2646102"
+          }
+        }
+      },
+      "mp3": {
+        "path": "music/candidates/B-main-mix-candidate.mp3",
+        "sha256": "559195531226a5a765f6c5dbf5a1fa5b4a329d7bc290d19767af9e4a9a6259b0",
+        "bytes": 241415,
+        "decoded_duration_s": 10.0,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "mp3",
+              "sample_rate": "44100",
+              "channels": 2
+            }
+          ],
+          "format": {
+            "duration": "10.031020",
+            "size": "241415"
+          }
+        }
+      }
+    }
+  ],
+  "actor_slots_candidate": [
+    {
+      "actor": "李白",
+      "start": 18.2,
+      "end": 28.0
+    },
+    {
+      "actor": "杜甫",
+      "start": 28.0,
+      "end": 37.6
+    },
+    {
+      "actor": "杜甫",
+      "start": 51.6,
+      "end": 55.6,
+      "kind": "第四句重唱候选，拟复用同句表演，不能声称新增独立镜头"
+    }
+  ],
+  "boundary_notes": [
+    "A块完整保留A01主句和尾词式回声候选；A02终点短窗一致约27.44秒。",
+    "B块从27.6秒开始，比A02主句终点晚约0.16秒，短窗未识别到A02新字音；仍可能含人声混响尾音。",
+    "B01首字时间被ASR向前拉长；采用保守0.7秒相对候选起点，不将其当精确音素边界。",
+    "B块截取与A块重叠0.6秒，仅作为视频模型独立参考；最终统一使用完整原曲，不能把两个block音轨直接拼接。",
+    "WAV和MP3均仅常量降低1dB以容纳原MP3解码峰值，不改变速度、音高或声线；原文件仍完整保留。"
+  ],
+  "limitations": [
+    "ASR只辅助定位；字幕正文来自用户确认的四句。",
+    "词尾回声和51.6–55.6整句重唱仍需带声复核，不能由tiny长窗循环推定重复次数。",
+    "REPET候选不是干净分轨，本次导出采用原mix保留字音。",
+    "此文件不是最终confirmed timeline，生成表演后还需画面与原音轨核对。"
+  ]
+}

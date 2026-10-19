@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "media_and_sampled_visual_review_completed",
+  "checked_at": "2026-10-15T11:16:16.851835+00:00",
+  "sha256": "88c112607640aeaa960a4682aca4a533781d58b82e658af4ad2777fa1848871e",
+  "size_bytes": 18110087,
+  "duration": 63.28,
+  "fps": 25,
+  "frames": 1582,
+  "full_decode": true,
+  "black_intervals": [],
+  "black_settings": {
+    "minimum_duration": 0.05,
+    "pixel_threshold": 0.1
+  },
+  "max_volume_dbfs": -0.8,
+  "faststart": true,
+  "top_level_boxes": [
+    {
+      "type": "ftyp",
+      "offset": 0,
+      "size": 32
+    },
+    {
+      "type": "moov",
+      "offset": 32,
+      "size": 49221
+    },
+    {
+      "type": "free",
+      "offset": 49253,
+      "size": 8
+    },
+    {
+      "type": "mdat",
+      "offset": 49261,
+      "size": 18060826
+    }
+  ],
+  "contact_sheet": "work/final-contact.jpg",
+  "reviewed_frames": [
+    25,
+    135,
+    175,
+    275,
+    400,
+    495,
+    562,
+    625,
+    725,
+    775,
+    862,
+    912,
+    1000,
+    1125,
+    1325,
+    1512
+  ],
+  "visual_observations": [
+    "四句字幕与两位新人物依次出现；末句重唱再次使用杜甫同句表演",
+    "九段原创图像运镜连续衔接，片头片尾文字与程序运镜标识可见",
+    "抽样中人物脸型、服装和场景稳定；字幕与麦克风均未遮嘴",
+    "本次只作抽样视觉取舍，不证明逐帧无瑕疵或逐音素口型准确"
+  ],
+  "accepted_for_demo": true,
+  "lip_sync_passed": null,
+  "final_audio_integrity": "separate work/final-audio-verification.json",
+  "deployed": false
+}

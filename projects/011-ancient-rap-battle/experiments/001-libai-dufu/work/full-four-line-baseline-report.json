@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "status": "full_four_line_baseline_completed",
+  "checked_at": "2026-10-15T10:03:20.622730+00:00",
+  "output": "final/libai-dufu-sample-v1.mp4",
+  "sha256": "d3ff4396ae24c9b9540a006267232aebea738e112d34e02cacdfb964b42e0e37",
+  "size_bytes": 6374421,
+  "duration": 24.0,
+  "parameters": {
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "frames": 576,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "full_decode": true,
+  "black_detect_settings": {
+    "minimum_duration": 0.05,
+    "pixel_threshold": 0.1
+  },
+  "black_intervals": [],
+  "mean_volume_dbfs": -25.9,
+  "max_volume_dbfs": -4.4,
+  "faststart": true,
+  "top_level_boxes": [
+    {
+      "type": "ftyp",
+      "offset": 0,
+      "size": 32
+    },
+    {
+      "type": "moov",
+      "offset": 32,
+      "size": 18037
+    },
+    {
+      "type": "free",
+      "offset": 18069,
+      "size": 8
+    },
+    {
+      "type": "mdat",
+      "offset": 18077,
+      "size": 6356344
+    }
+  ],
+  "source_hashes_verified": true,
+  "all_four_tasks_downloaded": true,
+  "raw_qa": {
+    "A01": {
+      "audio_match": true,
+      "correlation": 0.998,
+      "min_window_correlation": 0.997,
+      "suggested_picture_advance_seconds": 0
+    },
+    "A02": {
+      "audio_match": false,
+      "correlation": 0.218,
+      "min_window_correlation": -0.375,
+      "suggested_picture_advance_seconds": 0.16
+    },
+    "B01": {
+      "audio_match": false,
+      "correlation": 0.864,
+      "min_window_correlation": 0.482,
+      "suggested_picture_advance_seconds": -0.02
+    },
+    "B02": {
+      "audio_match": true,
+      "correlation": 0.996,
+      "min_window_correlation": 0.995,
+      "suggested_picture_advance_seconds": 0
+    }
+  },
+  "source_clip_audio_used": false,
+  "unified_audio_sha256": "1fe6deb9906e8c2bc414c3126614994116bb09d9abf101195ef3d937142eb122",
+  "historical_three_line_video": {
+    "path": "final/libai-dufu-three-line-demo-v1.mp4",
+    "sha256": "ea4ed6b799176315c69a5505756117a61dca7d215fb91670d26bff900709d1a4"
+  },
+  "public_resources_modified": false,
+  "new_paid_calls": 0,
+  "logs": "work/full-four-line-media-check.txt",
+  "visual_review": "sampled_frames_reviewed",
+  "limitations": [
+    "音轨筛查不等于口型评分，A02/B01原始失败保留。",
+    "只完成本地四句24秒基线，未替换主站public或部署。",
+    "A02仅画面按声学分组重定时；其余镜头shift0，总音乐与配音不变。"
+  ],
+  "contact_sheet": "work/full-four-line-review.jpg",
+  "reviewed_sample_frames": [
+    14,
+    58,
+    86,
+    130,
+    173,
+    202,
+    259,
+    288,
+    317,
+    374,
+    403,
+    432,
+    490,
+    518,
+    547,
+    566
+  ],
+  "reviewed_sample_times": [
+    0.5833333333333334,
+    2.4166666666666665,
+    3.5833333333333335,
+    5.416666666666667,
+    7.208333333333333,
+    8.416666666666666,
+    10.791666666666666,
+    12.0,
+    13.208333333333334,
+    15.583333333333334,
+    16.791666666666668,
+    18.0,
+    20.416666666666668,
+    21.583333333333332,
+    22.791666666666668,
+    23.583333333333332
+  ],
+  "visual_observations": [
+    "共同舞台图片头尾，中间依次为A01/A02李白与B01/B02杜甫，四句均使用真实生成视频。",
+    "四句中文字幕、角色名和AI生成娱乐演绎标记均可见，字幕位于下方且未遮挡抽帧中的嘴部。",
+    "B02约17.3–19.4秒显示末句字幕，之后收口且字幕消失；片尾四句已交锋文案出现。",
+    "A02近景与其余镜头景别不同，沿用已记录分段画面重定时；未据抽帧宣称精准口型。"
+  ],
+  "public_resource_sha256_unchanged": {
+    "../../web/public/media/own-libai-dufu-v1.mp4": "ea4ed6b799176315c69a5505756117a61dca7d215fb91670d26bff900709d1a4",
+    "../../web/public/media/own-poets-v1.png": "0c1e7a6b62264024d5d63a0e0d73ddae8fd5b3ff5929c4aa1b53a76f52ed12a7",
+    "../../web/public/data/own-sample-run.json": "bb509a20fd81ecc7e126dbe13a13e8555333cf2b3143e5f9dbd7047965f105e3"
+  },
+  "publisher_check": {
+    "status": "ready_for_explicit_publish",
+    "modified_files": 0,
+    "mode": "--check",
+    "clips": 4,
+    "video_credits_estimate": 285,
+    "video_credits_spent": null
+  }
+}

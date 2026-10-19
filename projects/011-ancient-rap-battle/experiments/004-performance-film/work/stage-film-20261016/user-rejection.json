@@ -1,0 +1,21 @@
+{
+  "recorded_at": "2026-10-15T19:44:58.873599+00:00",
+  "source": "direct-user-feedback",
+  "user_feedback": "看起来效果太差了，口型一点不对应啊",
+  "video_sha256": "525c42dfe2bbe7bf0fe0dff77f122451464927e5aede6488a1b19f9691a0cb45",
+  "acceptance": "rejected-for-singing-performance",
+  "visual_stage_montage_rendered": true,
+  "complete_song_and_playback_verified": true,
+  "singing_lip_sync_passed": false,
+  "failure_cause": "All nine new tasks submitted only image references and motion prompts, with no original-song audio drive; final assembly muted all source sound and laid back the full song. Generic mouth movement does not follow this song.",
+  "acceptance_error": "Tolerating imperfect lip sync was incorrectly treated as permitting unrelated mouth movement. Identity, motion, waveform and playback checks did not assess audible lyric-to-mouth correspondence.",
+  "reuse_existing_sources": [
+    "stage",
+    "audience",
+    "costume details"
+  ],
+  "next_required_gate": "Verify an explicit remote external-audio-driven singing route with one five-second original-song segment before any new full-song production.",
+  "new_generation_submitted_during_this_audit": false,
+  "new_credits_spent_during_this_audit": 0,
+  "local_models_downloaded": false
+}

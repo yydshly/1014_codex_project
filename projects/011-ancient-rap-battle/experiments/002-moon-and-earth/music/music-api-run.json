@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "provider": "MiniMax",
+  "model": "music-3.0",
+  "endpoint": "https://api.minimax.cn/v1/music_generation",
+  "started_at": "2026-10-15T09:36:48.935Z",
+  "status": "rejected_no_audio",
+  "request_count": 1,
+  "reference_estimate_cny": 1,
+  "actual_cost_cny": null,
+  "no_retry": true,
+  "sources": [
+    "https://platform.minimax.cn/docs/api-reference/music-generation",
+    "https://platform.minimax.cn/docs/pricing/overview"
+  ],
+  "http_status": 410,
+  "status_code": 2153,
+  "status_msg": "This Music API is no longer available to new users. Existing paying customers can continue to use the service. For new access, please try MiniMax Audio (https://www.minimax.io/audio) or the open-source model at https://huggingface.co/MiniMaxAI/MiniMax-Music3",
+  "finished_at": "2026-10-15T09:36:50.549Z",
+  "audio_returned": false
+}

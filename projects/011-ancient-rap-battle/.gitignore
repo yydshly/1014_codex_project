@@ -1,0 +1,19 @@
+# Production archive stays local; the website publishes reviewed, named copies.
+experiments/**/clips/
+experiments/**/final/
+experiments/**/delivery/
+experiments/**/handoff-source/
+experiments/**/work/
+experiments/**/music/*.mp3
+experiments/**/music/*.wav
+experiments/**/music/drivers/
+experiments/**/music/full-song-drivers/
+# Curated text reports are included explicitly in the publication checkout.
+# No model weights, environments, raw network captures or account configuration.
+*.bin
+*.safetensors
+*.onnx
+*.pth
+*.pt
+*.model
+*.ckpt

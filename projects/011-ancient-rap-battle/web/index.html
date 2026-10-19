@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="古人说唱制作流程研究：源库用人物图、逐句音频与远端视频模型编排成片；展示我们的94.64秒《压轴人间》、流程修复、价值判断及扩展方向。">
+  <title>古人说唱 · 源库能力、我们的探索与舞台成果 | 研究 011</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="古人说唱研究首页"><span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>研物<span class="brand-divider">/</span><small>011</small></span></a>
+      <nav class="main-nav" aria-label="页面导航"><a id="stage-film-nav" href="#stage-film-004" hidden>压轴人间</a><a href="#our-summary">成果汇总</a><a href="#own-sample">敬风霜</a><a href="#pilot-004">试片留档</a><a href="#mechanism">制作原理</a><a href="#sources">资料来源</a></nav>
+      <a class="source-button" href="https://github.com/10291124jcjc-dotcom/ancient-rap-battle" target="_blank" rel="noopener noreferrer">原仓库 <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-square"></span> ANCIENT RAP BATTLE <span class="eyebrow-line"></span> 源码研究</p>
+        <h1 id="hero-title">古人说唱，<br><em>从创意到成片。</em></h1>
+        <p class="hero-description">源库把歌曲、人物参考图、逐句视频和剪辑串成制作流程。我们沿此思路制作李白 × 杜甫舞台版，记录从画面可看，到原曲真正参与演唱生成的探索。</p>
+        <p id="hero-production-note" class="hero-subtext">新的94.64秒原曲驱动舞台版已导出，可在下方观看整片；旧样片的拒收记录独立保留。</p>
+        <div class="hero-actions"><a id="main-film-action" class="button primary" href="#repaired-film-004">查看新的修复版 <span aria-hidden="true">↓</span></a><a class="text-link" href="#synthesis">先读理解摘要 <span aria-hidden="true">↓</span></a><a id="own-sample-jump" class="text-link own-sample-jump" href="#own-sample" hidden>看已完成的舞台版 ↓</a></div>
+        <div id="research-status" class="research-status"><span class="status-dot" aria-hidden="true"></span> 新94.64秒修复版已导出 <span class="status-divider">·</span> 待整片听看</div>
+      </div>
+      <figure class="hero-figure guide-figure">
+        <div class="image-heading"><span>OUR RESEARCH MAP</span><span>源库 → 探索 → 成果 → 价值</span></div>
+        <a href="./media/research-overview-011.png" target="_blank" rel="noopener noreferrer"><img src="./media/research-overview-011-preview.jpg" width="1440" height="2448" alt="我们已经生成的研究引导图：源库效果与李白杜甫新成片对照、音频驱动机制、探索过程、预算与可复用价值"></a>
+        <figcaption><div><strong>从源库到我们的舞台版</strong><span>采用原有总览图，点击放大阅读。</span></div><a href="./media/research-overview-011.png" target="_blank" rel="noopener noreferrer">高清全图 ↗</a></figcaption>
+        <p class="image-note">3600 × 6120 原图保留；画面取自真实成片。<a href="./media/research-overview-011.svg" download>SVG</a> · <a href="./data/research-overview-sources.json">图像与数据来源</a></p>
+      </figure>
+    </section>
+
+    <section id="synthesis" class="section container synthesis-section" aria-labelledby="synthesis-title">
+      <div class="section-heading"><div><p class="eyebrow">UNDERSTANDING / 理解摘要</p><h2 id="synthesis-title">学到的是制作机制，也是一套判断方法。</h2></div><p class="section-intro">源码研究、真实制作和未来设想分开说明。<br>原作、我们的新成片与失败版本均可对照。</p></div>
+      <div class="synthesis-grid">
+        <article><span class="mini-label">01 / 库的效果与能力</span><h3>把多项创作接成完整短片。</h3><p>上游用 Claude Code Skill、模板和10个Python脚本，连接选题歌词、外部歌曲与角色图、MiniMax H3逐句视频、质检和FFmpeg后期。示例为周瑜×诸葛亮约102秒成片；歌曲和参考图仍需准备，选歌、审片保留人工判断。</p><a href="#source-effect">看上游原作 ↓</a></article>
+        <article><span class="mini-label">02 / 我们的探索与成果</span><h3>从24秒基线走到94.64秒舞台版。</h3><p>经历TTS加代码节拍、《敬风霜》整曲、舞台扩充、《压轴人间》视觉样片及口型返工。最新22镜保留完整原曲，使用统一人物参考、新的原曲驱动演唱、舞台和观众；5秒试片用户确认可用，整片仍待听看验收。</p><a href="#repaired-film-004">看最新成片与实际范围 ↓</a></article>
+        <article><span class="mini-label">03 / 核心机制与修正</span><h3>声音先决定表演，再决定剪辑。</h3><p>人物图约束身份，镜头提示约束表演与摄影；演唱还需要把对应原曲作为模型识别的音频输入。只给图片和提示词，最后配回音乐，不能使嘴部跟随原曲。先验证短片，再按原曲相同时段拼接，避免整片返工。</p><a href="#mechanism">理解输入、生成与时间轴 ↓</a></article>
+        <article><span class="mini-label">04 / 对我们的价值与思考</span><h3>把失败定位到能改的一步。</h3><p>收获不只是一条视频：还有统一角色资产、带音频的分镜、任务与预算记录、素材来源和可替换剪辑表。服务能连接、输入被识别、画面能用是三项不同检查；音轨相关或文件导出成功，也不能代替口型与审美验收。</p><a href="#reflection">看关键判断与证据边界 ↓</a></article>
+        <article class="synthesis-wide"><span class="mini-label">05 / 可以扩展的方向</span><h3>向可复用的创作工作台推进。</h3><p>优先做角色资产库、以音频为主线的分镜、声明输入能力的模型适配、可续查且防重扣的任务队列、对照审片和局部重剪。再尝试诗词演出、角色对谈或系列短片；题材价值、观众接受度和制作成本需要真实验证，不把一次小样当作成熟产品。</p><a href="#extensions">看方向、收益与下一步验证 ↓</a></article>
+      </div>
+      <p class="summary-note">引导图沿用本次已经生成的原图；其中“未发布公网”是制图当时的状态，当前发布状态以网页与部署记录为准。静帧只展示视觉效果，不承担带声口型验收。</p>
+    </section>
+
+    <section id="our-summary" class="section container summary-section" aria-labelledby="summary-title">
+      <div class="section-heading"><div><p class="eyebrow">OUR WORK / 当前成果</p><h2 id="summary-title">效果留下，过程也说清楚。</h2></div><p id="summary-progress" class="section-intro">《压轴人间》94.64秒原曲驱动版已导出。<br>整片待听看，旧版与试片独立保留。</p></div>
+      <div class="summary-grid">
+        <article id="summary-stage-card"><span id="summary-stage-state" class="summary-state">新修复版已导出 · 待整片听看</span><h3>《压轴人间》</h3><strong id="summary-stage-number" class="summary-number">94.64<span>秒新修复版</span></strong><p id="summary-stage-description">完整原曲、原曲驱动的人物演唱，配合舞台、观众和细节，共22个镜头。旧视觉样片的拒收记录另行保留。</p><a id="summary-stage-link" href="#repaired-film-004">观看新修复版与制作汇总 ↓</a></article>
+        <article><span class="summary-state">已完成 · 实验003</span><h3>《敬风霜》舞台版</h3><strong class="summary-number">63.28<span>秒</span></strong><p>完整原曲、李白与杜甫表演，加入全景舞台、观众视角、灯光与氛围剪辑。人物沿用第二版视频，新舞台部分使用图像运镜。</p><a href="#own-sample">观看完整成片 ↓</a></article>
+        <article><span class="summary-state">研究完成 · 固定源码版本</span><h3>机制、价值与边界</h3><strong class="summary-number">9<span>个制作环节</span></strong><p>整理选题、歌曲、定妆、分镜、远端生成、审片和后期的衔接方式。早期24秒基线和第二版完整歌曲，也保留在历史区。</p><a href="#mechanism">阅读制作原理 ↓</a></article>
+      </div>
+      <div class="summary-mechanism"><div><span class="mini-label">原库怎样调度</span><p>助手按操作手册运行脚本，将人物图、单句人声与镜头提示明确提交给远端 MiniMax H3，查询进度并下载；审片后按同一歌曲时间轴剪辑合成。</p></div><div><span id="summary-current-method-label" class="mini-label">本次如何修复</span><p id="summary-current-method">本次把人物图、舞台图和对应原曲音频一起提交给远端生成；试片确认后重做演唱，按同一歌曲时段剪入，复用舞台和观众素材。完整原曲保留，不用MV或本地口型模型。</p></div></div>
+      <p class="summary-note">本页只展示已有素材，不发起生成或扣除积分。上游作者原作、我们的完整成片与未完成试片分别标明；音轨筛查不代表口型验收。</p>
+    </section>
+
+    <section id="repaired-film-004" class="section stage-film-section repaired-film-section" aria-labelledby="repaired-film-title" data-repaired-film-ready="false" hidden><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">004 / AUDIO-DRIVEN REPAIR</p><h2 id="repaired-film-title">《压轴人间》原曲驱动修复版。</h2></div><p id="repaired-film-intro" class="section-intro">新的修复版，独立于此前被拒收的视觉样片。<br>整片验收与5秒试片确认分别记录。</p></div>
+      <figure class="stage-film-figure"><video id="repaired-film-video" controls playsinline preload="metadata" aria-label="压轴人间新的原曲驱动修复版" aria-describedby="repaired-film-status repaired-film-method"></video><figcaption><strong>压轴人间 · 原曲驱动修复版</strong><span id="repaired-film-duration" class="duration"></span></figcaption><div class="video-actions"><span id="repaired-film-status" role="status">新的修复版尚未接入。</span><a id="repaired-film-open" target="_blank" rel="noopener noreferrer">单独打开新修复版 ↗</a></div></figure>
+      <p id="repaired-film-method" class="repaired-film-method">主角演唱使用明确提交原曲音频的远端镜头，保留完整歌曲；旧版拒收结论与原文件继续保留。</p><p class="repaired-film-history"><a href="./data/004-repaired-film.json" target="_blank" rel="noopener noreferrer">查看新成片来源与制作记录 ↗</a> · <a href="#stage-film-004">对照此前口型未通过的视觉样片 ↓</a></p>
+      <details class="research-overview-poster"><summary>一图总览：源库效果 → 我们的探索 → 新成片与价值</summary><figure><a href="./media/research-overview-011.png" target="_blank" rel="noopener noreferrer"><img src="./media/research-overview-011.png" alt="古人说唱研究总览：上游周瑜诸葛亮原作与我们的李白杜甫真实画面对照、源库机制、六个探索阶段、94.64秒新成片范围、可复用价值、累计预算及验收边界" width="3600" height="6120" loading="lazy"></a><figcaption>2026-10-19整理 · 效果画面来自既有原作与真实新成片截帧。原作与我们的成果分别标注，静帧不代表口型验收。</figcaption><div class="video-actions"><a href="./media/research-overview-011.png" target="_blank" rel="noopener noreferrer">打开高清长图 ↗</a><a href="./media/research-overview-011.png" download="古人说唱-源库与我们的探索总览.png">下载PNG长图 ↓</a></div></figure></details>
+      <dl class="repair-metrics" aria-label="新修复版实际制作范围">
+        <div><dt>完整歌曲</dt><dd id="repair-metric-duration">94.64<small>秒</small></dd></div>
+        <div><dt>最终镜头</dt><dd id="repair-metric-shots">22<small>镜</small></dd></div>
+        <div><dt>对应原曲的人物演唱</dt><dd id="repair-metric-performance">40.96<small>秒</small></dd></div>
+        <div><dt>观众镜头</dt><dd id="repair-metric-audience">20.08<small>秒</small></dd></div>
+      </dl>
+      <div class="repair-overview-grid">
+        <article><span class="mini-label">这次修复了什么</span><h3>让原曲音频参与演唱生成。</h3><p>此前画面只参考图片和提示词，后期配回歌曲，嘴部没有跟随原曲。这次先确认5秒试片，再按对应的原曲片段重新生成演唱。</p><div class="repair-table-wrap"><table class="repair-comparison"><caption>两版制作方式对照</caption><thead><tr><th scope="col">环节</th><th scope="col">此前视觉样片</th><th scope="col">本次修复版</th></tr></thead><tbody><tr><th scope="row">生成输入</th><td>人物图＋镜头提示</td><td>人物图＋舞台图＋对应原曲WAV＋提示</td></tr><tr><th scope="row">画面与歌曲</th><td>生成后配回原曲</td><td>按驱动音频的同一时段剪入</td></tr><tr><th scope="row">效果结论</th><td>用户拒收演唱口型</td><td>5秒试片确认可用；整片待听看</td></tr></tbody></table></div></article>
+        <article><span class="mini-label">实际制作链路</span><h3>原曲 → 参考 → 生成 → 剪辑。</h3><ol class="repair-steps"><li><span>01</span><div><strong>用户提供完整歌曲</strong><p>《压轴人间》原歌保留，按演唱时段切出5–14秒WAV；没有在本轮重新生成音乐。</p></div></li><li><span>02</span><div><strong>GPT定妆与舞台参考</strong><p>由同一双人主图派生李白、杜甫和舞台图，固定人物服饰与演出空间。</p></div></li><li><span>03</span><div><strong>普通远端视频生成</strong><p>演唱使用ChatArt网页H3全能模式的“两图＋音频1”；Skill续查同一任务并取回原片。六条后续任务全部返回，不用MV。</p></div></li><li><span>04</span><div><strong>审片后按原曲位置合成</strong><p>保持演唱片段原速和对应时段，穿插舞台、观众与服装细节。完整原歌只降低1.5dB，末尾补24.48毫秒静音对齐画面。</p></div></li></ol></article>
+        <article><span class="mini-label">可以复用的价值</span><h3>角色、镜头和时间表都能继续用。</h3><p>同一组人物与舞台参考可继续扩展演出；每段保留原片、参考音频和歌曲位置，发现问题可以只替换这一段。舞台与观众镜头能独立复用，既丰富现场感，也减少重做范围。</p><p class="repair-subnote">本版40.96秒为可见主角演唱，其余为动态舞台、观众、无脸细节及开场收尾；没有把94.64秒全都称为正脸演唱。</p><a class="repair-inline-link" href="#pilot-004">查看人物参考与早期素材 ↓</a></article>
+        <article><span class="mini-label">004累计预算 / 钻石</span><h3>额度、预留与费用回报分开记录。</h3><dl id="repair-budget-facts" class="repair-budget-facts"></dl><p id="repair-budget-note" class="repair-subnote">费用由实际任务账本快照载入；独立消费账单尚未核对。</p></article>
+      </div>
+      <details class="repair-review-details"><summary>已完成的检查，以及仍需听看的部分</summary><div class="repair-review-grid"><div><h3>文件和画面已检查</h3><p>1280×720、25fps、2366帧；全段音视频解码及完整原曲核验通过。六条新源均检查全部原生帧，成片22镜中点与21组切口前后画面已查看。</p><p>用户已确认那条5秒试片口型可用，后续片段各自保留审看记录。音轨相似度只支持音乐内容核对，不是嘴部准确率。</p></div><div><h3>整片效果还需实际听看</h3><p>新整片尚未记录用户验收；代理未声称主观听音或逐音素口型检查通过。字幕沿用候选定位，三条未确认内容省略；三处衣纹细节为旧视频的1.78倍空间裁切，来源均已登记。</p><p>自动浏览器连续播放尚未完成，旧错误页受访问策略限制；本地HTTP、媒体文件与分段播放已另行核验。</p></div></div><a class="repair-inline-link" href="./docs/VERIFICATION.md" target="_blank" rel="noopener noreferrer">阅读完整验证记录 ↗</a></details>
+    </div></section>
+
+    <section id="source-effect" class="section container source-effect-section" aria-labelledby="source-effect-title">
+      <div class="section-heading"><div><p class="eyebrow">SOURCE / 原库效果</p><h2 id="source-effect-title">源库的目标：做出完整的一期。</h2></div><p class="section-intro">周瑜 × 诸葛亮，作者原作约102秒。<br>下方是原文件，我们的实验另行展示。</p></div>
+      <figure class="hero-figure">
+        <div class="image-heading"><span>THE ORIGINAL EPISODE</span><span>上游作者作品 · 本页可播放</span></div>
+        <div class="episode-player">
+          <video id="episode-video" controls playsinline preload="metadata" poster="./media/cover-16x9.jpg" width="1920" height="1080" aria-label="上游原作视频：周瑜 vs 诸葛亮" aria-describedby="video-description video-status">
+            <source src="./media/demo-github.mp4" type="video/mp4">
+            你的浏览器暂不支持视频播放。可通过下方“单独打开视频”观看。
+          </video>
+          <button id="play-episode" class="episode-play-button" type="button" aria-label="播放原作视频"><span aria-hidden="true">▶</span><span>播放原作</span></button>
+        </div>
+        <figcaption><div><strong>周瑜 × 诸葛亮</strong><span>正史出招，演义还手。</span></div><span class="duration">01:42 <span>分享版 · 540p</span></span></figcaption>
+        <div class="video-actions"><span id="video-status" role="status">点击播放，支持拖动进度与全屏。</span><a href="./media/demo-github.mp4" target="_blank" rel="noopener noreferrer">单独打开视频 ↗</a></div>
+        <p id="video-description" class="image-note">视频原文件来自上游固定版本，本地保留并直接播放；并非本次生成。</p>
+      </figure>
+      <p class="summary-note">原作分享版实测960 × 540、24fps；作者记录约16美元视频生成费，属于历史个案，不含全部服务成本。固定版本、许可与代码依据见来源区。</p>
+    </section>
+
+    <section id="stage-film-004" class="section stage-film-section" aria-labelledby="stage-film-title" data-stage-film-ready="false" hidden><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">004 / VISUAL STAGE SAMPLE</p><h2 id="stage-film-title">此前《压轴人间》视觉样片。</h2></div><p class="section-intro">94.64秒已导出 · 演唱口型未通过<br>人物、舞台与观众素材保留。</p></div>
+      <p id="stage-film-result" class="stage-film-result">这版未达到演唱目标：新增9条视频没有提交原曲音频驱动，现片是画面配回原曲，嘴部不对应，不能作为合格演唱成果。</p>
+      <figure class="stage-film-figure"><video id="stage-film-video" controls playsinline preload="metadata" width="1280" height="720" aria-label="压轴人间94.64秒舞台视觉样片，演唱口型未通过" aria-describedby="stage-film-result stage-film-status stage-film-method">请使用下方链接单独打开视觉样片。</video><figcaption><div><span class="own-sample-badge">舞台视觉样片 · 演唱口型未通过</span><strong>李白 × 杜甫 · 压轴人间</strong></div><span class="duration">01:34 <span>720p · 25fps</span></span></figcaption><div class="video-actions"><span id="stage-film-status" role="status">视觉样片可播放，演唱口型未通过。</span><a id="stage-film-open" target="_blank" rel="noopener noreferrer">单独打开视觉样片 ↗</a><a id="stage-film-download" download="压轴人间-舞台视觉样片-口型未通过.mp4">下载视觉样片 ↓</a></div></figure>
+      <div id="stage-film-chapters" class="stage-film-chapters" role="group" aria-label="跳转视觉样片段落"></div>
+      <div class="stage-film-record"><div><span class="mini-label">旧方案的结论</span><h3>舞台与观众保留，演唱已另做新版本。</h3><p id="stage-film-method">同一组GPT参考保留了李白、杜甫与月轮舞台，普通视频生成了观众、灯光和细节镜头。它们可以继续使用，但配回原曲无法修正嘴部动作。</p><p class="stage-film-limit">这版当时未达到演唱要求。后续已完成音频参考试片和新整片；本段保留原拒收结论。<a href="#h3-audio-pilot">查看新的5秒音频参考试验 ↓</a></p></div><div><dl id="stage-film-facts" class="stage-film-facts"></dl></div></div>
+      <details class="stage-film-limitations"><summary>查看制作记录、费用与效果边界</summary><dl id="stage-film-technical-facts" class="stage-film-facts"></dl><p id="stage-film-qa" class="stage-film-qa"></p><a id="stage-film-evidence" class="stage-film-evidence" target="_blank" rel="noopener noreferrer">查看实际来源、剪辑与费用记录 ↗</a><ul id="stage-film-limitations"></ul><p>早期两条004试片、完整原曲与6张GPT参考在下方保留；003《敬风霜》及更早实验也继续按原字节展示。</p><a href="#pilot-004">对照早期试片与人物参考 ↓</a></details>
+    </div></section>
+
+    <section id="h3-audio-pilot" class="section container h3-pilot-section" aria-labelledby="h3-pilot-title">
+      <div class="section-heading"><div><p class="eyebrow">004 / H3 AUDIO-REFERENCE TEST</p><h2 id="h3-pilot-title">这一句，用户试听已确认可用。</h2></div><p id="h3-pilot-intro" class="section-intro">ChatArt普通H3音频参考试片<br>确认仅限这一条；新整片已在上方展示。</p></div>
+      <div class="h3-pilot-grid"><article class="h3-pilot-card"><span id="h3-pilot-badge" class="pilot-badge h3-pilot-accepted">用户试听确认可用 · 仅此试片</span><h3>同一句原曲，这次明确上传音频。</h3><p id="h3-pilot-status" role="status">用户试听反馈“口型已可用，继续修整片”；确认只限这条H3试片；新整片效果分别记录。</p><div id="h3-pilot-output-pending" class="h3-pilot-pending">正在载入真实原片与试验记录。</div><div id="h3-pilot-switch" class="pilot-switch h3-pilot-switch" role="group" aria-label="H3试验原片和原曲诊断对照" hidden><button type="button" data-h3-pilot-asset="output" aria-pressed="true">模型原片 · 保留原声</button><button type="button" data-h3-pilot-asset="diagnostic" aria-pressed="false">零偏移配原曲诊断</button></div><video id="h3-pilot-video" controls playsinline preload="metadata" width="1344" height="768" aria-label="H3真实原片，用户试听确认此试片口型可用" hidden></video><p id="h3-pilot-model-note">原片1344×768、24fps、124帧，视频5.166667秒，比5秒输入约长0.167秒；保留模型原声。</p><a id="h3-pilot-open" target="_blank" rel="noopener noreferrer" hidden>单独打开当前视频版本 ↗</a><p class="h3-pilot-assessment">可用结论来自用户对此条视频的试听反馈；音轨相关性、静帧或配原曲诊断不是验收依据。新整片已导出，试片确认与整片效果分别记录，旧样片拒收结论不变。</p></article><article class="h3-pilot-card"><span class="mini-label">实际提交的原曲 / 9.4–14.4秒</span><h3>「我携一身月色，踏过长安的墙」</h3><audio id="h3-pilot-source-audio" controls preload="metadata" aria-label="H3试验实际上传的5秒原曲片段"><source src="./media/h3-audio-pilot-004/reference-9.4-14.4.wav" type="audio/wav">请单独打开原曲片段试听。</audio><p>人物参考为R02李白，场地参考为R04舞台。申请5秒、768p、16:9；实际原片尺寸如左侧所列，不用MV。</p><p>2026/10/16 08:43提交一次；官方结果回报75钻，余额观察3450→3375，非独立消费账单。</p><a href="./media/h3-audio-pilot-004/reference-9.4-14.4.wav" target="_blank" rel="noopener noreferrer">单独试听这5秒原曲 ↗</a></article></div>
+      <p class="h3-pilot-clarification">已确认ChatArt网页的普通H3全能模式可以提交音频。此前Skill命令没有明确的音频参数，不能据此判断网页或模型不支持音频；能上传也不代表演唱效果已通过。</p>
+      <p id="h3-pilot-production-status" class="h3-pilot-production-status">新的94.64秒整片已导出，可在上方播放；完整制作过程与费用也已汇总。</p>
+      <details class="h3-pilot-evidence"><summary>查看实际提交证据与状态记录</summary><p>以下是提交前设置与08:43受理卡的真实截图。08:56仍等待，09:15同一任务真实返回；未重复提交。原声前5秒与输入原曲零偏移相关约0.939，只支持声轨内容保留，不证明嘴部对上唱词。</p><div class="h3-pilot-evidence-grid"><a href="./media/h3-audio-pilot-004/accepted.png" target="_blank" rel="noopener noreferrer"><img src="./media/h3-audio-pilot-004/accepted.png" alt="2026年10月16日08点43分H3任务已受理并排队，余额3375" loading="lazy" width="1280" height="720"><span>08:43已受理任务卡</span></a><a href="./media/h3-audio-pilot-004/before-submit.png" target="_blank" rel="noopener noreferrer"><img src="./media/h3-audio-pilot-004/before-submit.png" alt="H3普通图生视频提交前设置，5秒768p和75钻标价" loading="lazy" width="1280" height="720"><span>提交前设置与75钻标价</span></a></div><p><a href="./media/h3-audio-pilot-004/typed-inputs.png" target="_blank" rel="noopener noreferrer">另看“两图＋音频1”输入槽位截图 ↗</a>；该截图连接异常，余额0是占位值，未用于费用核对。</p><a href="./data/004-h3-audio-pilot.json" target="_blank" rel="noopener noreferrer">查看当前原片、对照与费用证据 ↗</a><a href="./data/004-h3-audio-pilot-pending-0856.json" target="_blank" rel="noopener noreferrer">保留的08:56等待快照 ↗</a></details>
+    </section>
+
+    <section id="own-sample" class="section own-sample-section" aria-labelledby="own-sample-title" data-own-sample-ready="false" hidden><div class="container">
+      <div class="section-heading"><div><p id="own-sample-eyebrow" class="eyebrow">OUR PRODUCTION / 制作实测</p><h2 id="own-sample-title">我们的制作实测。</h2></div><p id="own-sample-intro" class="section-intro">从真实音乐、人设参考和表演镜头，看到最终剪辑与制作记录。</p></div>
+      <div class="own-sample-grid">
+        <figure class="own-sample-figure">
+          <div class="own-sample-player"><video id="own-sample-video" controls playsinline preload="metadata" width="1920" height="1080" aria-label="本项目原创小样：李白 vs 杜甫" aria-describedby="own-sample-video-status own-sample-method">你的浏览器暂不支持视频播放，请使用下方视频链接。</video></div>
+          <figcaption><div><span id="own-sample-badge" class="own-sample-badge">本项目制作 · AI 生成</span><strong id="own-sample-episode-title">李白 × 杜甫</strong></div><span id="own-sample-duration" class="duration"></span></figcaption>
+          <div class="video-actions"><span id="own-sample-video-status" role="status">准备播放小样。</span><a id="own-sample-open" target="_blank" rel="noopener noreferrer">单独打开小样 ↗</a></div>
+          <p id="own-sample-returned" class="own-sample-returned" hidden><a id="own-sample-returned-link" target="_blank" rel="noopener noreferrer">查看已返回的首句原片 ↗</a><span>独立原片；当前播放器仍为静态预演。</span></p>
+          <p id="own-sample-method" class="own-sample-method"></p>
+        </figure>
+        <div class="own-sample-record">
+          <div class="own-sample-record-heading"><span class="mini-label">真实制作记录</span><span id="own-sample-status" class="own-sample-status"></span></div>
+          <h3 id="own-sample-lyrics-title">李白出招，杜甫接住。</h3>
+          <ol id="own-sample-lyrics" class="own-sample-lyrics" aria-label="四句原创歌词"><li><span>李白</span><p>酒杯一举，银河都来捧场</p></li><li><span>李白</span><p>你的工整，装不下我的月光</p></li><li><span>杜甫</span><p>月光再亮，也得照见风霜</p></li><li><span>杜甫</span><p>我把人间，写成压轴的回响</p></li></ol>
+          <dl id="own-sample-facts" class="own-sample-facts"></dl>
+          <p class="own-sample-evidence"><a id="own-sample-evidence" target="_blank" rel="noopener noreferrer">查看任务、逐条质检与费用记录 ↗</a><span id="own-sample-generated-at"></span></p>
+        </div>
+      </div>
+      <div class="own-sample-limits"><div><span class="mini-label">这次实际看到了什么</span><h3 id="own-sample-result-title">小样完成，边界也一起留下。</h3><p id="own-sample-qa-summary"></p></div><ul id="own-sample-limitations"></ul></div>
+      <details id="own-sample-history" class="own-sample-history" data-own-history-ready="false" hidden>
+        <summary>早期版本留档 · 完整歌曲与首次实验</summary>
+        <p>第二版保留用户提供的完整《敬风霜》，人物表演来自两条H3视频；原任务网页标价300钻石，独立账单未核对。首次实验采用MiniMax TTS和代码合成节拍，三句过程版与24秒完整基线分别保留，各版本都不宣称精准口型。</p>
+        <div class="own-history-grid">
+          <figure id="own-history-stage-figure" class="own-history-song" hidden><figcaption><strong>第三版 · 舞台重剪</strong><span>63.28秒 · 新舞台场景与已有表演</span></figcaption><video id="own-history-stage-video" controls playsinline preload="none" width="1280" height="720" poster="./history/003-stage-v3.png" aria-label="第三版历史：敬风霜舞台重剪63.28秒"><source src="./history/003-jing-feng-shuang-stage-v3.mp4" type="video/mp4">你的浏览器暂不支持视频播放。</video><div class="video-actions"><a href="./history/003-jing-feng-shuang-stage-v3.mp4" target="_blank" rel="noopener noreferrer">单独打开舞台重剪版 ↗</a><a href="./history/003-run.json" target="_blank" rel="noopener noreferrer">原始来源、费用与混音记录 ↗</a></div></figure>
+          <figure class="own-history-song"><figcaption><strong>第二版 · 完整歌曲原剪辑</strong><span>63.28秒 · 用户歌曲与两段人物表演</span></figcaption><video id="own-history-song-video" controls playsinline preload="none" width="1280" height="720" poster="./history/002-poets-v2.png" aria-label="第二版完整歌曲历史：敬风霜63.28秒"><source src="./history/002-jing-feng-shuang-v2.mp4" type="video/mp4">你的浏览器暂不支持视频播放。</video><div class="video-actions"><a href="./history/002-jing-feng-shuang-v2.mp4" target="_blank" rel="noopener noreferrer">单独打开第二版完整歌曲 ↗</a><a href="./history/002-run.json" target="_blank" rel="noopener noreferrer">原始来源、费用与制作记录 ↗</a></div></figure>
+          <figure><figcaption><strong>四句完整基线</strong><span>24 秒 · 四段真实生成表演</span></figcaption><video id="own-history-full-video" controls playsinline preload="none" width="1280" height="720" poster="./history/001-poets.png" aria-label="首次实验完整基线：四句24秒交锋"><source src="./history/001-full-four-line-demo.mp4" type="video/mp4">你的浏览器暂不支持视频播放。</video><div class="video-actions"><a href="./history/001-full-four-line-demo.mp4" target="_blank" rel="noopener noreferrer">单独打开四句完整基线 ↗</a><a href="./history/001-full-run.json" target="_blank" rel="noopener noreferrer">完整基线验证记录 ↗</a></div></figure>
+          <figure><figcaption><strong>三句过程版</strong><span>19.2 秒 · 原字节历史留档</span></figcaption><video id="own-history-video" controls playsinline preload="none" width="1280" height="720" poster="./history/001-poets.png" aria-label="首次实验过程归档：三句原创交锋"><source src="./history/001-three-line-demo.mp4" type="video/mp4">你的浏览器暂不支持视频播放。</video><div class="video-actions"><a href="./history/001-three-line-demo.mp4" target="_blank" rel="noopener noreferrer">单独打开三句过程版 ↗</a><a href="./history/001-run.json" target="_blank" rel="noopener noreferrer">当时的三句制作记录 ↗</a></div></figure>
+        </div>
+      </details>
+    </div></section>
+
+    <section id="pilot-004" class="section pilot-section" aria-labelledby="pilot-title"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">004 / TEST ARCHIVE</p><h2 id="pilot-title">《压轴人间》：此前口型试验留档。</h2></div><p id="pilot-progress" class="section-intro">最初两条任务与后来的94.64秒样片均保留。<br>演唱口型未通过，不能视为合格演唱成果。</p></div>
+      <div class="pilot-status"><span class="pilot-badge">早期试片 · 历史快照</span><p id="pilot-record-status" role="status">以下四个播放版本来自最初两条生成任务；原始结果继续保留。</p><a id="pilot-back-to-film" href="#own-sample">返回完整舞台版 ↑</a></div>
+      <div class="pilot-video-grid">
+        <article class="pilot-video-card"><div class="pilot-card-heading"><span class="mini-label">01 / 舞台与人物</span><h3>同一组人物，进入动态舞台。</h3><p>双人、月轮、灯光和观众的10秒普通视频；9.4秒预览配上歌曲前奏。</p></div>
+          <div class="pilot-switch" role="group" aria-label="舞台试片版本"><button type="button" data-pilot-player="pilot-stage-video" data-pilot-asset="stage-song-preview" aria-pressed="true">9.4秒配乐预览</button><button type="button" data-pilot-player="pilot-stage-video" data-pilot-asset="stage-original" aria-pressed="false">10秒模型原片</button></div>
+          <video id="pilot-stage-video" controls playsinline preload="metadata" width="1280" height="720" aria-label="004舞台试片：配歌曲前奏的9.4秒预览" aria-describedby="pilot-stage-note"><source src="./media/pilot-004/stage-song-preview.mp4" type="video/mp4">请使用下方链接单独打开视频。</video>
+          <p id="pilot-stage-note" class="pilot-media-note" role="status">配《压轴人间》0–9.4秒前奏。用于看人物与舞台，不是演唱口型测试。</p>
+          <div class="pilot-media-links"><a href="./media/pilot-004/stage-song-preview.mp4" target="_blank" rel="noopener noreferrer">配乐预览 ↗</a><a href="./media/pilot-004/stage-original.mp4" target="_blank" rel="noopener noreferrer">模型原片 ↗</a></div>
+        </article>
+        <article class="pilot-video-card"><div class="pilot-card-heading"><span class="mini-label">02 / 外部歌曲试唱</span><h3>5秒试唱：出片了，原曲还没跟上。</h3><p>目标唱词「我携一身月色，踏过长安的墙」。模型原声与指定原曲不一致。</p></div>
+          <div class="pilot-switch" role="group" aria-label="试唱片版本"><button type="button" data-pilot-player="pilot-singing-video" data-pilot-asset="singing-original" aria-pressed="true">5秒模型原声</button><button type="button" data-pilot-player="pilot-singing-video" data-pilot-asset="singing-reference-diagnostic" aria-pressed="false">配原曲诊断</button></div>
+          <video id="pilot-singing-video" controls playsinline preload="metadata" width="1268" height="728" aria-label="004五秒试唱：模型原声，尚未通过原曲口型验证" aria-describedby="pilot-singing-note"><source src="./media/pilot-004/singing-original.mp4" type="video/mp4">请使用下方链接单独打开视频。</video>
+          <p id="pilot-singing-note" class="pilot-media-note" role="status">已把原曲片段随参考媒体提交，但后台是否识别为音频驱动未知；尚未通过原曲口型验证。</p>
+          <div class="pilot-media-links"><a href="./media/pilot-004/singing-original.mp4" target="_blank" rel="noopener noreferrer">模型原片 ↗</a><a href="./media/pilot-004/singing-reference-diagnostic.mp4" target="_blank" rel="noopener noreferrer">原曲对照 ↗</a></div>
+        </article>
+      </div>
+      <div class="pilot-song"><div><span class="mini-label">原曲 / 用户提供</span><h3>《压轴人间》完整音乐</h3><p>约94.6秒。用户说明由Gemini生成，具体模型未独立核验；原曲原文件保留，可独立试听。</p></div><div class="pilot-song-controls"><audio id="pilot-song-audio" controls preload="metadata" aria-label="用户提供的完整歌曲压轴人间"><source src="./media/pilot-004/ya-zhou-ren-jian.mp3" type="audio/mpeg">请单独打开原曲试听。</audio><div class="pilot-media-links"><button id="pilot-song-compare" type="button">听试唱对应的9.4–14.4秒</button><a href="./media/pilot-004/ya-zhou-ren-jian.mp3" target="_blank" rel="noopener noreferrer">单独打开原曲 ↗</a></div><p id="pilot-song-status" class="pilot-media-note" role="status">可对照试唱片，核对实际唱词与节奏。</p></div></div>
+      <details class="pilot-references"><summary>查看GPT定妆与场景参考 · 4张主参考＋2张环境图</summary><p>由OpenAI内置图像生成工具制作。先生成主图，再从主图编辑派生人物与场地，保持同一形象；图片是生成视频的参考，不计作动态镜头。点击可查看原图。</p><div class="pilot-reference-grid">
+        <a href="./media/pilot-004/R01-MASTER.png" target="_blank" rel="noopener noreferrer"><img src="./media/pilot-004/R01-MASTER.png" alt="GPT生成的李白杜甫双人主定妆与月轮舞台参考" loading="lazy" width="1672" height="941"><span>R01 · 主图：人物与舞台基准</span></a>
+        <a href="./media/pilot-004/R02-LIBAI.png" target="_blank" rel="noopener noreferrer"><img src="./media/pilot-004/R02-LIBAI.png" alt="从主图编辑派生的李白人物参考" loading="lazy" width="1672" height="941"><span>R02 · 李白人物参考</span></a>
+        <a href="./media/pilot-004/R03-DUFU.png" target="_blank" rel="noopener noreferrer"><img src="./media/pilot-004/R03-DUFU.png" alt="从主图编辑派生的杜甫人物参考" loading="lazy" width="1672" height="941"><span>R03 · 杜甫人物参考</span></a>
+        <a href="./media/pilot-004/R04-STAGE.png" target="_blank" rel="noopener noreferrer"><img src="./media/pilot-004/R04-STAGE.png" alt="与主图一致的月轮舞台场地参考" loading="lazy" width="1672" height="941"><span>R04 · 舞台场地参考</span></a>
+        <a href="./media/pilot-004/R05-CROWD.png" target="_blank" rel="noopener noreferrer"><img src="./media/pilot-004/R05-CROWD.png" alt="GPT生成的观众看台环境参考" loading="lazy" width="1672" height="941"><span>R05 · 观众环境参考</span></a>
+        <a href="./media/pilot-004/R06-DETAIL.png" target="_blank" rel="noopener noreferrer"><img src="./media/pilot-004/R06-DETAIL.png" alt="GPT生成的舞台细节环境参考" loading="lazy" width="1672" height="941"><span>R06 · 舞台细节参考</span></a>
+      </div></details>
+      <div class="pilot-explanation"><div><span class="mini-label">可复用素材与未完成部分</span><h3>出片和配乐成功，不等于演唱成功。</h3><ol class="pilot-process"><li><strong>人物与场地</strong><span>同一组参考生成的形象、舞台与观众素材已保留。</span></li><li><strong>未达目标</strong><span>新增9条视频没有原曲音频驱动，主角嘴部与歌曲不对应。</span></li><li><strong>处理方向</strong><span>先验证原曲驱动的一小段演唱，再重做主角镜头；舞台和观众可复用。</span></li></ol></div><div class="pilot-boundary"><h3>此前口型试验也未通过</h3><p>早期试唱曾把音频与参考媒体一起提交，但未证实后台按原曲驱动；后来新增9条只提交图片和提示词，没有提交原曲音频驱动。</p><p>本次未达到演唱目标。应先确认远端普通视频的音频驱动入口并验证小段，不能继续用配回原曲替代这项验证。本地口型模型路线仍停用。</p><p class="pilot-warning">配回原曲只替换声音，没有修改嘴部。原片、失败结论、真实费用与播放记录均保留。</p></div></div>
+      <div class="pilot-budget"><div><strong>225<span>钻</span></strong><p>早期两条视频任务<br>官方返回150＋75</p></div><div><strong>50<span>钻</span></strong><p>旧图片尝试保守预留<br>未确认受理，不计已消费</p></div><div><strong>2400<span>钻</span></strong><p>004总预算上限<br>后续新任务另记入成片记录</p></div><p>这是最初两条试片的费用快照，不能作为新成片的当前总费用。任务返回值与余额差已观察，独立账单未核验；GPT参考图不是ChatArt付费出图。本页不会提交生成或产生费用。<a href="./data/004-pilot-demo.json" target="_blank" rel="noopener noreferrer">查看早期素材与费用快照 ↗</a></p></div>
+    </div></section>
+
+    <div class="container"><div class="facts" aria-label="项目基本信息"><div><strong>34<span>句</span></strong><p>16 句先手 · 18 句回击</p></div><div><strong>35<span>条</span></strong><p>默认模板的生成素材</p></div><div><strong>9<span>步</span></strong><p>从选题到封面文案</p></div><div><strong class="fact-text">人机协作</strong><p>关键创作与效果由人确认</p></div></div></div>
+
+    <section id="value" class="section container" aria-labelledby="value-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / WHY IT MATTERS</p><h2 id="value-title">值得学的，是它把创作组织起来的方式。</h2></div><p class="section-intro">Claude Code 负责理解与调度，生成服务负责素材，脚本负责对齐和组装。</p></div>
+      <div class="value-grid">
+        <article><span class="value-number">01</span><h3>让试错经验留下来</h3><p>近景用半身参考图、每条只放一句人声、始终让嘴部可见。反复试出来的规则，变成下一次的默认做法。</p><a href="https://github.com/10291124jcjc-dotcom/ancient-rap-battle/blob/e5e40fa3612777133a141c8448122dd0fd45e4cc/references/pitfalls.md" target="_blank" rel="noopener noreferrer">看作者的踩坑清单 <span aria-hidden="true">↗</span></a></article>
+        <article><span class="value-number">02</span><h3>让返工只发生在一小段</h3><p>按句保存素材版本，用剪辑表决定选哪条、偏移多少。一个镜头出错时，可以调整或重做这一句。</p><span class="value-tag">逐句素材 · 多版本 · 时间偏移</span></article>
+        <article><span class="value-number">03</span><h3>让一个创意长成一个系列</h3><p>替换人物、典故、服装与动作，保留制作结构。同一套方法可以承接下一期，也能启发其他角色对话栏目。</p><span class="value-tag">可复用的是流程与约束</span></article>
+      </div>
+      <p class="section-note">价值判断基于源码分析；节省多少工时、是否能稳定量产，尚未通过实际制作测量。</p>
+    </section>
+
+    <section id="capabilities" class="section capability-section" aria-labelledby="capability-title"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">02 / CAPABILITY MAP</p><h2 id="capability-title">它会做什么，哪里还需要你？</h2></div><p class="section-intro">“一句话做一期”是启动方式。挑歌、准备参考图与审片，仍是制作过程的一部分。</p></div>
+      <div class="filter-row"><div class="filter-group" role="group" aria-label="按参与方式筛选能力"><button class="filter active" type="button" data-filter="all" aria-pressed="true">全部环节 <span>9</span></button><button class="filter" type="button" data-filter="auto" aria-pressed="false">脚本自动处理</button><button class="filter" type="button" data-filter="human" aria-pressed="false">需要人工参与</button></div><p id="capability-count" class="count-note" aria-live="polite">显示 9 个环节</p></div>
+      <div id="capability-grid" class="capability-grid"></div>
+      <div class="boundary-note"><span class="note-icon" aria-hidden="true">i</span><p><strong>能力来自协作。</strong> 这个库将操作手册、模板与脚本交给 Claude Code 使用；做歌用 Suno，定妆图用 Midjourney，视频脚本调用 MiniMax H3。仓库本身没有训练新的生成模型。</p></div>
+    </div></section>
+
+    <section id="workflow" class="section workflow-section" aria-labelledby="workflow-title"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">03 / UNDER THE HOOD</p><h2 id="workflow-title">从一句歌词，到一个镜头。</h2></div><p class="section-intro">先确定歌曲的时间轴，再让画面跟着声音走。<br>点选节点，查看每一步怎样接上下一步。</p></div>
+      <div class="workflow-tabs" role="tablist" aria-label="制作流程阶段"><button type="button" role="tab" id="stage-tab-0" aria-controls="stage-panel" aria-selected="true" data-stage="0"><span>01</span> 内容设定</button><button type="button" role="tab" id="stage-tab-1" aria-controls="stage-panel" aria-selected="false" tabindex="-1" data-stage="1"><span>02</span> 音频时间轴</button><button type="button" role="tab" id="stage-tab-2" aria-controls="stage-panel" aria-selected="false" tabindex="-1" data-stage="2"><span>03</span> 参考与分镜</button><button type="button" role="tab" id="stage-tab-3" aria-controls="stage-panel" aria-selected="false" tabindex="-1" data-stage="3"><span>04</span> 生成与质检</button><button type="button" role="tab" id="stage-tab-4" aria-controls="stage-panel" aria-selected="false" tabindex="-1" data-stage="4"><span>05</span> 剪辑与交付</button></div>
+      <div id="stage-panel" class="stage-panel" role="tabpanel" aria-labelledby="stage-tab-0" tabindex="0"></div>
+      <div class="workflow-bottom"><span class="workflow-key">一致性靠参考图与约束</span><span class="workflow-key">同步性靠人声与时间轴</span><span class="workflow-key">最终质量靠筛选与审片</span></div>
+      <a class="mechanism-jump" href="#mechanism">继续拆开看：代码怎样让这些环节接起来 <span aria-hidden="true">↓</span></a>
+    </div></section>
+
+    <section id="mechanism" class="section mechanism-section" aria-labelledby="mechanism-title"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">04 / HOW THE MECHANISM WORKS</p><h2 id="mechanism-title">模型负责生成，文件与时间轴把它们接起来。</h2></div><p class="section-intro">下面沿着代码追踪一次制作。<br>点选节点，查看具体算法、交接文件与实际限制。</p></div>
+      <p class="mechanism-lead">这套机制可以理解成一个制作流水线：<strong>Claude 读操作手册并执行步骤；脚本把创意转成有时间和编号的数据；生成服务返回候选素材；最后按统一歌曲时间轴选片、剪辑。</strong> 大部分稳定性来自这些约束与检查。</p>
+      <div class="mechanism-tabs" role="tablist" aria-label="源码机制拆解">
+        <button type="button" role="tab" id="mechanism-tab-0" aria-controls="mechanism-panel" aria-selected="true" data-mechanism="0"><span>01</span> 谁来调度</button>
+        <button type="button" role="tab" id="mechanism-tab-1" aria-controls="mechanism-panel" aria-selected="false" tabindex="-1" data-mechanism="1"><span>02</span> 歌词对时</button>
+        <button type="button" role="tab" id="mechanism-tab-2" aria-controls="mechanism-panel" aria-selected="false" tabindex="-1" data-mechanism="2"><span>03</span> 编排镜头</button>
+        <button type="button" role="tab" id="mechanism-tab-3" aria-controls="mechanism-panel" aria-selected="false" tabindex="-1" data-mechanism="3"><span>04</span> 请求生成</button>
+        <button type="button" role="tab" id="mechanism-tab-4" aria-controls="mechanism-panel" aria-selected="false" tabindex="-1" data-mechanism="4"><span>05</span> 筛查偏差</button>
+        <button type="button" role="tab" id="mechanism-tab-5" aria-controls="mechanism-panel" aria-selected="false" tabindex="-1" data-mechanism="5"><span>06</span> 组装成片</button>
+      </div>
+      <div id="mechanism-panel" class="mechanism-panel" role="tabpanel" aria-labelledby="mechanism-tab-0" tabindex="0"></div>
+
+      <div class="sync-explainer" aria-labelledby="sync-title">
+        <div class="sync-copy"><p class="eyebrow">TRY THE IDEA / 原理示意</p><h3 id="sync-title">为什么“把画面提前一点”会有用？</h3><p>假设生成画面里的嘴部动作，比原歌曲整体晚了 200 毫秒。保持歌曲不动，剪辑时从视频更靠后的位置取画面，就相当于让画面提前播放。</p><p>试着补偿这 200 毫秒。这个例子只演示整体时差；模型改唱、嘴型画错或节奏逐渐漂移，不能靠一次平移解决。</p><a href="https://github.com/10291124jcjc-dotcom/ancient-rap-battle/blob/e5e40fa3612777133a141c8448122dd0fd45e4cc/scripts/assemble.py" target="_blank" rel="noopener noreferrer">对照 assemble.py 的取片位置计算 ↗</a></div>
+        <div class="sync-demo">
+          <div class="sync-demo-heading"><span>以原歌曲为统一时间轴</span><span class="demo-label">示意数据 · 非原作测量</span></div>
+          <svg id="sync-diagram" class="sync-diagram" viewBox="0 0 640 170" role="img" aria-label="原歌曲和嘴部动作的时间对齐示意，初始晚200毫秒">
+            <text x="0" y="40" class="sync-track-label">原歌曲</text><text x="0" y="112" class="sync-track-label">嘴部动作</text>
+            <path d="M125 45H625M125 117H625" class="sync-baseline"/>
+            <g class="sync-guide"><path d="M170 14V145M265 14V145M360 14V145M455 14V145M550 14V145"/></g>
+            <g class="sync-audio-pulses"><rect x="170" y="27" width="13" height="34" rx="3"/><rect x="265" y="19" width="13" height="50" rx="3"/><rect x="360" y="31" width="13" height="26" rx="3"/><rect x="455" y="23" width="13" height="42" rx="3"/><rect x="550" y="28" width="13" height="32" rx="3"/></g>
+            <g id="mouth-pulses" class="sync-mouth-pulses" transform="translate(40 0)"><rect x="170" y="99" width="13" height="34" rx="3"/><rect x="265" y="91" width="13" height="50" rx="3"/><rect x="360" y="103" width="13" height="26" rx="3"/><rect x="455" y="95" width="13" height="42" rx="3"/><rect x="550" y="100" width="13" height="32" rx="3"/></g>
+            <text x="125" y="163" class="sync-axis-label">时间 →</text><text x="625" y="163" text-anchor="end" class="sync-axis-label">脉冲代表对应的发声与动作</text>
+          </svg>
+          <div class="range-heading"><label for="picture-shift">画面提前量</label><output id="picture-shift-output" for="picture-shift">0 毫秒</output></div><input type="range" id="picture-shift" min="0" max="400" step="10" value="0">
+          <div class="sync-demo-footer"><output id="sync-result" for="picture-shift" aria-live="polite">嘴部动作仍晚 200 毫秒</output><button id="align-example" type="button">补偿 200 毫秒</button></div>
+        </div>
+      </div>
+      <div class="mechanism-transfer"><span class="mini-label">如果要做出类似效果</span><p>先固定一份内容设定、一条歌曲时间轴和一份剪辑表；为每句保留参考图、人声与候选版本。跑通“生成一条 → 看效果 → 选中 → 导出”，再增加批量、自动续查与去重。具体路线在下一节。</p></div>
+    </div></section>
+
+    <section id="reflection" class="section container synthesis-section" aria-labelledby="reflection-title">
+      <div class="section-heading"><div><p class="eyebrow">LESSONS / 探索引发的思考</p><h2 id="reflection-title">先确定问题发生在哪一层。</h2></div><p class="section-intro">没有把所有失败归结为模型不行。<br>依据本次实际输入、任务返回与用户反馈判断。</p></div>
+      <div class="synthesis-grid">
+        <article><h3>接入能力 ≠ 创作能力</h3><p>Token Plan不支持视频、网页登录异常、Skill已授权但网页未登录，是接入层问题。网页和Skill都可能调度远端模型；更换入口的价值在于输入能否完整传递、任务能否恢复，而不是入口本身自动提高画质。</p></article>
+        <article><h3>附件存在 ≠ 音频参与生成</h3><p>旧片只有图像和提示词，用户明确拒收。新5秒试片使用网页明确的“两图＋音频1”输入，同曲片段生成后获用户认可，才扩大制作。这个对照支持修正流程，但不能推出所有片段、所有模型都能稳定精确对口型。</p></article>
+        <article><h3>人物连续与舞台感需要编排</h3><p>定妆从同一双人主图派生单人、舞台与细节参考，减少身份漂移。全景、演唱、观众反打与无脸细节按歌曲结构配置；反应镜头服务情绪和节奏，也要明确它们不等于新增演唱素材。</p></article>
+        <article><h3>自动检查与人看各有职责</h3><p>哈希、全段解码、时间轴覆盖和原曲核对证明文件与素材映射。音轨相关只筛查声音保留情况。口型、表情、人物是否像同一人以及情绪推进，需要带声审片；当前5秒已获确认，整片尚未得到同等反馈。</p></article>
+      </div>
+      <p class="summary-note">我们的增量是制作资产、流程约束与真实失败记录，并未训练新视频模型，也未证明源库对所有内容的效果或确定收益。完整原曲驱动版没有使用MV功能或本地口型生成模型。</p>
+    </section>
+
+    <section id="extensions" class="section container extension-section" aria-labelledby="extensions-title">
+      <div class="section-heading"><div><p class="eyebrow">NEXT / 可扩展方向</p><h2 id="extensions-title">先减少返工，再扩充题材。</h2></div><p class="section-intro">以下是基于探索提出的方向，尚未产品化。<br>每项都对应具体问题和可验证的下一步。</p></div>
+      <div class="extension-table-wrap"><table class="extension-table"><thead><tr><th>方向</th><th>可以带来的价值</th><th>先验证什么</th></tr></thead><tbody>
+        <tr><th>统一角色资产库</th><td>固定脸、服装、舞台世界与参考版本，减少跨镜漂移，复用到后续集数。</td><td>同一角色在近景、侧脸、双人及不同灯光下是否仍可辨认。</td></tr>
+        <tr><th>音频优先的分镜计划</th><td>将段落、歌词时段、演唱者与驱动WAV绑定，再配置表演、反打和过场。</td><td>不同语速、停顿和双人轮唱的切片边界与对应时段是否可靠。</td></tr>
+        <tr><th>模型适配与任务调度</th><td>明确图片、音频和时长能力；记录任务ID，断线后续查，避免重复提交与重复扣费。</td><td>每个入口实际识别何种音频输入、允许的片长，以及超时和失败后的计费。</td></tr>
+        <tr><th>对照审片与局部返工</th><td>把原曲、输入图、候选镜头和最终切口放在同一时间轴，保留通过及拒收原因。</td><td>独立审片者能否更快发现错唱、身份变化及不自然切口，重做是否只影响目标片段。</td></tr>
+        <tr><th>质量与成本基准</th><td>按可用演唱秒数、角色稳定性、重做率和总成本比较模型与输入方式。</td><td>同一段歌词、同一人物参考下重复试验；不要只比较单条漂亮样片。</td></tr>
+        <tr><th>系列内容与创作工具</th><td>扩展诗词舞台、人物对谈、知识短剧或品牌角色；把资产、排期和审片沉淀为工作台。</td><td>观众是否愿意持续观看、制作是否可负担；事实准确、授权与内容定位逐项核对。</td></tr>
+      </tbody></table></div>
+      <p class="summary-note">本次已保存的素材、脚本和来源是起点；自动编剧、批量稳定生产、多模型优选与商业收益均不作为已实现能力。</p>
+    </section>
+
+    <section id="routes" class="section container" aria-labelledby="routes-title">
+      <div class="section-heading"><div><p class="eyebrow">05 / MAKE SOMETHING SIMILAR</p><h2 id="routes-title">想做出类似效果，从哪一步开始？</h2></div><p class="section-intro">先验证一个小片段的音画效果，再决定是否做完整一期，或把流程做成自己的工具。</p></div>
+      <div class="route-tabs" role="tablist" aria-label="选择复现路线"><button type="button" role="tab" id="route-tab-0" aria-controls="route-panel" aria-selected="true" data-route="0">先做一个小实验 <span>建议起点</span></button><button type="button" role="tab" id="route-tab-1" aria-controls="route-panel" aria-selected="false" tabindex="-1" data-route="1">按原版做完整一期</button><button type="button" role="tab" id="route-tab-2" aria-controls="route-panel" aria-selected="false" tabindex="-1" data-route="2">搭建自己的制作系统</button></div>
+      <div id="route-panel" class="route-panel" role="tabpanel" aria-labelledby="route-tab-0" tabindex="0"></div>
+      <div class="reality-grid"><article><span class="mini-label">画质</span><h3>1080p 输出 ≠ 原生 1080p 生成</h3><p>默认调用 768P；后期使用 FFmpeg 放大到 1920 × 1080。清晰度仍受原始素材影响。</p></article><article><span class="mini-label">同步</span><h3>自动筛查后，还要看嘴</h3><p>音轨相似说明声音可能没被改唱，不能直接证明嘴型准确。遮挡、侧脸和音节细节仍需审片。</p></article><article><span class="mini-label">恢复</span><h3>重跑之前，先确认远端任务</h3><p>已选素材可以跳过，超时任务没有自动续查与去重。先查任务日志，避免重复提交付费任务。</p></article></div>
+    </section>
+
+    <section id="planner" class="section planner-section" aria-labelledby="planner-title"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">06 / BEFORE YOU GENERATE</p><h2 id="planner-title">先把制作范围与预算写清楚。</h2></div><p class="section-intro">这是一份本地制作计划，不提交生成任务。<br>所有金额按仓库内置参考单价计算，并非实时报价。</p></div>
+      <div class="planner-grid">
+        <form id="brief-form" class="brief-card">
+          <div class="card-heading"><h3>你的第一期</h3><span>制作简报</span></div>
+          <div class="rival-fields"><label>人物 A<input id="rival-a" name="rival-a" maxlength="20" value="曹操" required autocomplete="off"></label><span class="versus" aria-hidden="true">VS</span><label>人物 B<input id="rival-b" name="rival-b" maxlength="20" value="刘备" required autocomplete="off"></label></div>
+          <label class="route-label" for="brief-route">制作方式</label><select id="brief-route" name="brief-route"><option value="0">先做一个小实验</option><option value="1">按原版做完整一期</option><option value="2">搭建自己的制作系统</option></select>
+          <div class="checklist-preview"><span class="mini-label">清单将包含</span><p>选题与人设 · 音乐与参考图 · 生成范围 · 预算假设 · 验收标准 · 来源版本</p></div>
+          <button class="button primary" type="submit">下载制作清单 <span aria-hidden="true">↓</span></button><p id="download-status" class="form-status" role="status">输入两位古人，带走一份可以开始执行的计划。</p>
+        </form>
+        <div class="estimate-card">
+          <div class="card-heading"><h3>视频生成费用估算</h3><span>仅作规划</span></div>
+          <div class="preset-row" role="group" aria-label="素材时长预设"><button type="button" class="preset active" data-seconds="180" aria-pressed="true">默认分镜 · 180 秒</button><button type="button" class="preset" data-seconds="20" aria-pressed="false">四条测试 · 20 秒</button></div>
+          <div class="range-heading"><label for="material-seconds">生成素材总时长</label><output id="seconds-output" for="material-seconds">180 秒</output></div><input id="material-seconds" type="range" min="20" max="600" step="5" value="180">
+          <div class="range-heading"><label for="retry-percent">额外重做预算</label><output id="retry-output" for="retry-percent">20%</output></div><input id="retry-percent" type="range" min="0" max="100" step="5" value="20">
+          <div class="resolution-row"><label for="resolution">生成规格</label><select id="resolution"><option value="768P">768P · 参考 $0.08 / 秒</option><option value="2K">2K · 参考 $0.13 / 秒</option></select></div>
+          <div class="estimate-total" aria-live="polite"><div><span>规划预算 / USD</span><strong id="estimate-total">$17.28</strong></div><div><span>基础生成 <b id="base-cost">$14.40</b></span><span>重做预留 <b id="retry-cost">$2.88</b></span></div></div>
+          <p class="estimate-note">公式：素材秒数 × 参考单价 ×（1 + 重做比例）。默认 35 条素材合计 180 秒，作者示例成片约 102 秒。此估算不含 Suno、Midjourney、Claude 等费用；实际按服务方当期价格与计费结果结算。</p>
+        </div>
+      </div>
+    </div></section>
+
+    <section id="sources" class="section container source-section" aria-labelledby="sources-title">
+      <div class="section-heading"><div><p class="eyebrow">07 / EVIDENCE & CREDITS</p><h2 id="sources-title">结论有出处，边界也留下。</h2></div><p class="section-intro">研究日期 2026.10.15<br>基于说明、示例配置与主要脚本的静态分析。</p></div>
+      <div class="source-meta"><span>上游作者 <strong>10291124jcjc-dotcom / 硅基废话</strong></span><span>固定版本 <a href="https://github.com/10291124jcjc-dotcom/ancient-rap-battle/tree/e5e40fa3612777133a141c8448122dd0fd45e4cc" target="_blank" rel="noopener noreferrer"><code>e5e40fa</code> ↗</a></span><span>上游许可 <strong>MIT</strong></span></div>
+      <div class="source-links"><a href="https://github.com/10291124jcjc-dotcom/ancient-rap-battle/blob/e5e40fa3612777133a141c8448122dd0fd45e4cc/README.md" target="_blank" rel="noopener noreferrer"><span>01</span><div><strong>项目说明与原作</strong><small>定位、分工、示例与依赖</small></div><span aria-hidden="true">↗</span></a><a href="https://github.com/10291124jcjc-dotcom/ancient-rap-battle/blob/e5e40fa3612777133a141c8448122dd0fd45e4cc/SKILL.md" target="_blank" rel="noopener noreferrer"><span>02</span><div><strong>完整操作手册</strong><small>九步流程与人工确认点</small></div><span aria-hidden="true">↗</span></a><a href="./docs/RESEARCH.md" target="_blank" rel="noopener noreferrer"><span>03</span><div><strong>本项目研究记录</strong><small>实现细节、价值判断与复现方法</small></div><span aria-hidden="true">↗</span></a><a href="./docs/SOURCES.md" target="_blank" rel="noopener noreferrer"><span>04</span><div><strong>来源与证据清单</strong><small>固定版本、引用与未验证事项</small></div><span aria-hidden="true">↗</span></a></div>
+      <p id="source-disclosure" class="source-disclosure">本页为独立研究与实验记录。上游原作来自固定版本并保留来源和MIT声明；李白×杜甫为我们制作的独立样例。已实际调用远端服务，修复版使用原曲音频驱动；5秒试片用户确认可用，整片待带声验收。模型缓存、账号配置与制作中间文件不随静态网页发布。</p>
+    </section>
+    <noscript><div class="container noscript-note">交互功能需要 JavaScript。你仍可阅读页面说明，并通过上方资料链接查看完整研究记录。</div></noscript>
+  </main>
+  <footer><div class="container footer-inner"><a class="brand" href="#"><span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>研物 <small>/ 011</small></span></a><p>研究一个项目，也研究把想法做出来的方法。</p><a href="#hero-title">回到顶部 ↑</a></div></footer>
+</body>
+</html>

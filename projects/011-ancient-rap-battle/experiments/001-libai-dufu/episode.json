@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "id": "001-libai-dufu",
+  "title": "李白 vs 杜甫 · 第一支原创小样",
+  "created_on": "2026-10-15",
+  "model": "MiniMax-H3",
+  "resolution": "768P",
+  "ratio": "16:9",
+  "reference_price_cny_per_second": 0.5,
+  "max_video_estimate_cny": 10,
+  "pricing_source": "https://platform.minimax.cn/docs/pricing/overview",
+  "pricing_checked_on": "2026-10-15",
+  "bpm": 100,
+  "total_duration": 24,
+  "intro_duration": 2.4,
+  "outro_duration": 2.4,
+  "slot_duration": 4.8,
+  "characters": {
+    "a": {
+      "name": "李白",
+      "look": "原创虚构面孔，松束长发、细胡须，米白袍与青色领口腰带",
+      "reference": "refs/libai-v1.png"
+    },
+    "b": {
+      "name": "杜甫",
+      "look": "原创虚构面孔，黑色布巾、较长胡须，赭黄与深棕长袍",
+      "reference": "refs/dufu-v1.png"
+    }
+  },
+  "music_method": "MiniMax 节奏化 TTS + 自制 100 BPM 节拍；没有使用 Suno，未声称生成歌曲",
+  "image_method": "内置 ImageGen 原创双人舞台图，再从同一图分别编辑单人参考，非 Midjourney",
+  "clips": [
+    {
+      "id": "A01",
+      "who": "a",
+      "name": "李白",
+      "text": "酒杯一举，银河都来捧场",
+      "duration": 5,
+      "reference": "refs/libai-v1.png",
+      "audio": "work/audio/A01.mp3",
+      "t0": 2.4,
+      "t1": 7.2,
+      "prompt": "One continuous cinematic medium close-up of the single Chinese male poet in Image 1, inspired by Li Bai. Preserve exactly his original face, loose tied black hair, thin moustache, ivory robe and muted teal collar. The same dark Tang-style timber tavern, warm lanterns and cool rim light. Only this ONE man appears. Camera at eye level, nearly frontal three-quarter view, very gentle push-in, face and lips large and clearly visible throughout. He holds a plain silver wired microphone at his chin but BELOW his lower lip, never covering his mouth. During the brief opening silence he calmly lifts the microphone, then performs the rhythmic spoken rap in Audio 1, with a confident small nod and a subtle open left hand, looking slightly toward an unseen rival to camera-right. SOUND: use Audio 1 exactly, every Chinese word, original voice, rhythm and silence unchanged. His mouth articulates this exact audio syllable by syllable. Do not re-sing, rewrite, replace, extend or retime the recording. No new lyrics, no music and no added crowd audio. When the input speech finishes, his mouth closes naturally and he holds a confident expression. No other people, text, subtitles, logos, captions or watermarks. Photorealistic film quality, natural hands, stable identity, restrained acting."
+    },
+    {
+      "id": "A02",
+      "who": "a",
+      "name": "李白",
+      "text": "你的工整，装不下我的月光",
+      "duration": 5,
+      "reference": "refs/libai-v1.png",
+      "audio": "work/audio/A02.mp3",
+      "t0": 7.2,
+      "t1": 12,
+      "prompt": "A single continuous eye-level close-up of ONLY the male poet from Image 1, the Li Bai-inspired character in an ivory robe with muted teal collar, loose tied black hair and thin moustache. Preserve his exact face, costume, lighting and Tang timber tavern from the reference. Face almost frontal, eyes and lips very clear, camera nearly static with a slow subtle push-in. He holds the silver microphone at chin level, below the lower lip, never obscuring articulation. After the short opening silence, he delivers Audio 1 with a playful confident smirk and one restrained left-hand gesture, addressing an offscreen rival. EXACT AUDIO: reproduce the reference Audio 1 unchanged as his voice, same words and original timing. Synchronize every mouth movement to that recording. Do not re-sing, retime, add words or invent a melody. Keep the pauses silent, add no music or crowd sounds. When speech ends, close his mouth and hold the expression. One person only, no other faces, no text or subtitles, no logos or watermark. Realistic natural skin and facial motion, cinematic shallow depth of field."
+    },
+    {
+      "id": "B01",
+      "who": "b",
+      "name": "杜甫",
+      "text": "月光再亮，也得照见风霜",
+      "duration": 5,
+      "reference": "refs/dufu-v1.png",
+      "audio": "work/audio/B01.mp3",
+      "t0": 12,
+      "t1": 16.8,
+      "prompt": "One continuous cinematic medium close-up of ONLY the original Du Fu-inspired poet from Image 1. Keep exactly his face, black cloth headwrap, beard, warm ochre and brown robe, and the same lantern-lit wooden Tang tavern. He faces nearly toward camera, with a very slight turn toward an unseen rival to camera-left; his lips stay plainly visible above the microphone. He holds one silver wired microphone at chin height but below his lower lip, with natural hands. Camera at eye level with a slow gentle push-in. After the brief opening silence, he performs the rhythmic spoken rap in Audio 1 with composed firmness, a small eyebrow lift and a restrained nod. Audio 1 is the exact final voice: preserve all Chinese words, the original voice, timing, rhythm and silence. Lip articulation follows Audio 1 syllable by syllable. Do not re-sing, rewrite, stretch, speed up or replace any of it. No background music, no crowd audio and no extra words. His mouth relaxes closed after the recording ends. Only one person appears. No text, captions, subtitles, logos or watermarks. Photorealistic facial movement and stable original identity."
+    },
+    {
+      "id": "B02",
+      "who": "b",
+      "name": "杜甫",
+      "text": "我把人间，写成压轴的回响",
+      "duration": 5,
+      "reference": "refs/dufu-v1.png",
+      "audio": "work/audio/B02.mp3",
+      "t0": 16.8,
+      "t1": 21.6,
+      "prompt": "One continuous frontal close-up of ONLY the Du Fu-inspired Chinese male poet from Image 1. Preserve the identical original face, beard, dark cloth headwrap and ochre-brown robe, same Tang timber tavern with warm lantern bokeh and cool rim light. Eye-level framing, lips and eyes sharp and unobstructed, gentle slow camera push-in. The plain silver wired microphone remains below the lower lip, not in front of the mouth. After the short silent lead, he delivers Audio 1 with calm triumphant energy, a small nod at the punchline, then a knowing closed-mouth expression. His voice must be Audio 1 exactly as provided, every Chinese word and all original rhythm and pauses unchanged. Lips track that exact recording syllable by syllable. Do not re-sing or add, remove, repeat, retime or replace any sound. No melody, music or additional crowd noise. Keep the silent tail silent and the mouth closed. One person only; no text, subtitles, logos or watermarks. Natural cinematic realism, restrained movement and stable identity."
+    }
+  ],
+  "scope": {
+    "original_lyrics": true,
+    "historical_accuracy": "诗人形象的虚构娱乐对唱；不是历史人物真实言论",
+    "video_request_limit": 4,
+    "automatic_paid_retry": false,
+    "voice_is_song_generation": false,
+    "full_original_pipeline_reproduction": false
+  }
+}

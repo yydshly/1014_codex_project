@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "experiment_id": "003-stage-edition",
+  "status": "approved-for-render",
+  "images": {
+    "wide": {
+      "path": "refs/stage-wide-v3.png",
+      "sha256": "93f81dc4d6b4eb21c8c119e0825be461ce027325665da2122bc1ed5106e5cd49"
+    },
+    "duel": {
+      "path": "refs/stage-duel-v3.png",
+      "sha256": "d7a1b22c1b448c416abb8cdeb75853fe885b3b6020a047bf5b165f1a90eee652"
+    },
+    "crowd": {
+      "path": "refs/stage-crowd-v3.png",
+      "sha256": "40737360253a074f592b338a578eb825722f9f5a0d851f5b841e74d0af44f31a"
+    },
+    "detail": {
+      "path": "refs/stage-detail-v3.png",
+      "sha256": "6063cfa2d45d7d0870e80ef3c18a4baf7e62602b50154f0a6e38d8428c033b83"
+    }
+  },
+  "stage_ambience": {
+    "enabled": true,
+    "approved": true,
+    "path": "music/stage-ambience-candidate-v1.wav",
+    "sha256": "ed21ce561ee376f8912e96328d208f084dd22530dff424c8e46305049d5d0d09",
+    "gain_db": 0,
+    "source": "local-synthesis",
+    "kind": "procedural-applause",
+    "approval_note": "仅主歌外的稀疏合成掌声与空间衰减；主歌全静音、峰值-22dBFS，按声学指标与时段接受试混，不宣称真实现场录音。"
+  }
+}

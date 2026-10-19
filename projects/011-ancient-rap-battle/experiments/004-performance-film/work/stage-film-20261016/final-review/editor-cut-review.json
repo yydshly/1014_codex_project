@@ -1,0 +1,24 @@
+{
+  "status": "passed-editorial-still-frame-and-cut-boundary-review",
+  "reviewed_by": "stage-director-edit-agent",
+  "source_video_sha256": "525c42dfe2bbe7bf0fe0dff77f122451464927e5aede6488a1b19f9691a0cb45",
+  "methods": [
+    "Inspected all 28 final shot midpoint images across four storyboard pages.",
+    "Inspected the real frame immediately before and at all 27 straight cuts across four cut-neighbour pages.",
+    "Every encoded shot and the complete final 2366-frame video have been decoded without errors."
+  ],
+  "findings": {
+    "faces_costumes_and_stage_consistent_in_sampled_frames": true,
+    "no_blank_or_corrupt_cut_frames": true,
+    "modern_audience_from_LIBAI2_tail_excluded": true,
+    "LIBAI2_used_only_as_short_costume_and_footstep_details": true,
+    "bow_during_song_ending_and_instrumental_tail": true,
+    "chinese_captions_legible_and_inside_frame": true,
+    "intro_title_and_ending_fade_rendered": true,
+    "no_repeated_source_time_range": true
+  },
+  "limitations": [
+    "These are real-frame editorial checks, not a claim of full-speed listening or precise phoneme lip sync.",
+    "LIBAI2 contributes costume/step detail shots, not front-facing singing."
+  ]
+}

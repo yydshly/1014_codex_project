@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "status": "candidate_not_confirmed",
+  "source_sha256": "91f5993a91f49e455fe9c60f60cc799692a96a40afa78c6b80e0f35831dbe8c8",
+  "decoded_duration_s": 63.26857142857143,
+  "phrase_windows_candidate_s": [
+    [
+      18.68,
+      22.68
+    ],
+    [
+      22.62,
+      23.76
+    ],
+    [
+      23.7,
+      27.44
+    ],
+    [
+      28.3,
+      32.18
+    ],
+    [
+      33.1,
+      36.76
+    ],
+    [
+      51.6,
+      55.6
+    ]
+  ],
+  "merged_windows_candidate_s": [
+    [
+      18.68,
+      27.44
+    ],
+    [
+      28.3,
+      32.18
+    ],
+    [
+      33.1,
+      36.76
+    ],
+    [
+      51.6,
+      55.6
+    ]
+  ],
+  "candidate_phrase_window_union_s": 20.3,
+  "not_captioned_seconds_not_proven_instrumental": 42.968571,
+  "not_for_forced_cutting": true
+}

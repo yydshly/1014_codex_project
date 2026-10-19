@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "experiment_id": "003-stage-edition",
+  "created_date": "2026-10-15",
+  "tool": "built-in image_gen",
+  "mode": "reference-guided-generation",
+  "image_count": 4,
+  "new_video_generation_calls": 0,
+  "rights_note": "本轮内置ImageGen生成的舞台概念图，不是历史现场记录或真人容貌复原；不把上游MIT代码许可当作素材完整权利链证明。",
+  "assets": [
+    {
+      "id": "wide",
+      "path": "refs/stage-wide-v3.png",
+      "sha256": "93f81dc4d6b4eb21c8c119e0825be461ce027325665da2122bc1ed5106e5cd49",
+      "reference_images": [
+        "../002-moon-and-earth/refs/moon-and-earth-stage.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset: a single 16:9 cinematic establishing shot for a music video, no collage. Reference image is identity, wardrobe, animation style and moonlit Tang city reference. Expand this exact world into a GRAND LIVE RAP BATTLE STAGE. A vast floating circular dark stone stage on a Tang palace lake terrace, glazed pavilion eaves and tall carved columns, huge luminous full moon and city pagoda behind. Two small but legible full-body performers in the middle, SAME Li Bai in flowing white and jade-teal silver embroidered robes, SAME mature Du Fu in dark indigo copper-gold embroidered robes with short beard. They stand 4 metres apart facing each other with handheld microphones lowered at chest level. A densely packed audience of period-robed silhouettes around three sides of stage; heads and raised fans in extreme foreground create immersive concert scale. Big concentric gold floor rings, warm amber lantern towers, teal blue shaft spotlights crossing upward through layered low fog, subtle flying gold flecks, water reflections. Dynamic camera high wide angle from audience left, strong foreground/midground/background depth, large stage occupies 60% of frame. Premium stylized 3D animated feature film, rich detailed material and cinematic contrast, energetic anticipation, NOT photoreal, NOT generic empty rooftop portrait. Preserve Tang visual language and existing character colors. Do not add readable text, subtitles, labels, logos, watermarks, extra lead performers, neon billboards or modern stadium architecture. Full bleed widescreen composition.",
+      "output_hint": "Generated images are saved to D:\\codex\\home\\generated_images\\01a13e1a-2f68-7943-b2a8-2e9c80fa7a78 as D:\\codex\\home\\generated_images\\01a13e1a-2f68-7943-b2a8-2e9c80fa7a78\\exec-c2002c32-4cce-4e7f-af63-219f4a438cda.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "accepted_for_demo": true,
+      "review_note": "已人工检查构图、服装色系、舞台空间和明显文字/肢体异常，接受用于舞台图像运镜。"
+    },
+    {
+      "id": "duel",
+      "path": "refs/stage-duel-v3.png",
+      "sha256": "d7a1b22c1b448c416abb8cdeb75853fe885b3b6020a047bf5b165f1a90eee652",
+      "reference_images": [
+        "refs/stage-wide-v3.png",
+        "../002-moon-and-earth/refs/moon-and-earth-stage.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset: one 16:9 cinematic music-video stage shot. Reference 1 is exact stage world and costumes, reference 2 exact faces/identity. SAME Tang palace lake concert as reference 1, same concentric gilded dark stone circular floor, carved lantern columns, teal and warm gold stage lights, moonlit city and thick crowd around perimeter. Camera at LOW SIDE ANGLE ON THE STAGE, a dramatic full-body two-shot of the duel: young Li Bai left in white jade-teal robes and silver high ponytail ornament, mature short-bearded Du Fu right in indigo copper-gold robes, facing each other three metres apart, microphones held at lower chest, mouths relaxed as if waiting for beat. Full heads and full footwear inside frame, characters fill 65% of image height, no crop. Dynamic diagonal stage edge runs through foreground, low fog, near-camera blurred lantern and audience hands at far edge, beam rim light on robes. Premium stylized 3D animated feature film, same natural faces as reference 2, NOT photo. Strong focused stage presence and spatial depth. Calm combative posture, subtle wind in sleeves, not frozen mannequin pose. Single cohesive view, no montage. No text, labels, logos, watermark, extra lead characters, giant hologram faces, duplicate persons or instruments in lead hands.",
+      "output_hint": "Generated images are saved to D:\\codex\\home\\generated_images\\01a13e1a-2f68-7943-b2a8-2e9c80fa7a78 as D:\\codex\\home\\generated_images\\01a13e1a-2f68-7943-b2a8-2e9c80fa7a78\\exec-e7434a4a-917a-45ca-88cc-f2881d291dfe.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "accepted_for_demo": true,
+      "review_note": "已人工检查构图、服装色系、舞台空间和明显文字/肢体异常，接受用于舞台图像运镜。"
+    },
+    {
+      "id": "crowd",
+      "path": "refs/stage-crowd-v3.png",
+      "sha256": "40737360253a074f592b338a578eb825722f9f5a0d851f5b841e74d0af44f31a",
+      "reference_images": [
+        "refs/stage-wide-v3.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset: one 16:9 music-video REVERSE ANGLE audience reaction shot. Exact same spectacular Tang palace lake circular rap battle stage from reference. View from behind and just above the stage looking OUT TOWARD THE AUDIENCE: lower-left blurred back/shoulder of Li Bai in white with jade-teal shoulder embroidery and black high ponytail; lower-right blurred shoulder of Du Fu in indigo with copper-gold trim and mature bun. Only backs of two leads, do not show faces. Broad steeply layered crowd in period Tang robes, energetic raised hands and folding fans, many tiny warm lanterns, cheering expressions for nearer listeners, spectators occupy middle and deep background. Deep navy night and teal spotlight shafts sweep ABOVE heads toward sky, amber rim light on nearest spectators, gold stage edge curves across bottom, low fog along floor, Tang pavilion balcony packed with listeners. No moon in this reverse direction. Camera position is visibly opposite the front establishing view, foreground performers create frame within frame, rich depth and cinematic animated-film composition. Premium stylized 3D same reference art direction, energetic LIVE concert atmosphere, no photoreal skin. No readable text, logos, watermark, giant close faces, modern clothing, phones or billboards.",
+      "output_hint": "Generated images are saved to D:\\codex\\home\\generated_images\\01a13e1a-2f68-7943-b2a8-2e9c80fa7a78 as D:\\codex\\home\\generated_images\\01a13e1a-2f68-7943-b2a8-2e9c80fa7a78\\exec-1754d416-98c0-4a94-bd3c-a697ed301e0d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "accepted_for_demo": true,
+      "review_note": "已人工检查构图、服装色系、舞台空间和明显文字/肢体异常，接受用于舞台图像运镜。"
+    },
+    {
+      "id": "detail",
+      "path": "refs/stage-detail-v3.png",
+      "sha256": "6063cfa2d45d7d0870e80ef3c18a4baf7e62602b50154f0a6e38d8428c033b83",
+      "reference_images": [
+        "refs/stage-wide-v3.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset: one 16:9 cinematic music-video rhythmic insert. Same Tang palace lake rap stage art direction as reference, glossy dark stone floor with gold concentric rings, teal and amber lighting. Extreme low near-stage corner perspective of a Tang performance DRUM SECTION: a large richly grained oxhide barrel drum in lower-left foreground, copper studs and lacquered dark red body; two well formed wooden drumsticks held by a period-robed drummer's hands, poised above the skin, no need to show drummer face. Focus on drum and hands, dramatic shallow depth of field. Behind, layered low stage fog, narrow gold lantern towers, several distant crowd silhouettes and diffuse sapphire shafts of light give deep LIVE concert atmosphere. The circular stage floor continues to right; distant tiny out-of-focus white and indigo performers may be barely suggested but no detailed new leads. A bright gold rim glints on drum edge, warm particles in air, premium stylized 3D animated feature film with exquisite material detail. Strong diagonal motion composition, energetic percussion anticipation, no text, words, labels, logos, watermark or random multiple hands.",
+      "output_hint": "Generated images are saved to D:\\codex\\home\\generated_images\\01a13e1a-2f68-7943-b2a8-2e9c80fa7a78 as D:\\codex\\home\\generated_images\\01a13e1a-2f68-7943-b2a8-2e9c80fa7a78\\exec-5dbad5bd-8c30-4abf-a230-9e1917dda949.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "accepted_for_demo": true,
+      "review_note": "已人工检查构图、服装色系、舞台空间和明显文字/肢体异常，接受用于舞台图像运镜。"
+    }
+  ]
+}

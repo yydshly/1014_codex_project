@@ -1,0 +1,570 @@
+{
+  "schema_version": 1,
+  "experiment_id": "003-stage-edition",
+  "status": "measured_needs_review",
+  "measured_at": "2026-10-15T11:41:58.964700+00:00",
+  "purpose": "最终AAC相对原歌-1.5dB+获准合成现场效果0dB的完整性核验；不是原片模型native QA或音素口型证明。",
+  "sources": {
+    "song": {
+      "path": "../002-moon-and-earth/music/source-jing-feng-shuang.mp3",
+      "sha256": "91f5993a91f49e455fe9c60f60cc799692a96a40afa78c6b80e0f35831dbe8c8",
+      "gain_db": -1.5,
+      "decoded_frames_48k": 3036892
+    },
+    "stage_ambience": {
+      "path": "music/stage-ambience-candidate-v1.wav",
+      "sha256": "ed21ce561ee376f8912e96328d208f084dd22530dff424c8e46305049d5d0d09",
+      "gain_db": 0,
+      "decoded_frames_48k": 3037440,
+      "is_real_recording": false
+    },
+    "base_002_final": {
+      "path": "../002-moon-and-earth/final/moon-and-earth-v2.mp4",
+      "sha256": "88c112607640aeaa960a4682aca4a533781d58b82e658af4ad2777fa1848871e"
+    }
+  },
+  "final": {
+    "path": "final/jing-feng-shuang-stage-v3.mp4",
+    "sha256": "011c49f6527f84ca834ac319ad14bb97dd4a410b75a37729b00bf025382970d6",
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "width": 1280,
+          "height": 720,
+          "coded_width": 1280,
+          "coded_height": 720,
+          "closed_captions": 0,
+          "film_grain": 0,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuv420p",
+          "level": 31,
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "refs": 1,
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "time_base": "1/12800",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 809984,
+          "duration": "63.280000",
+          "bit_rate": "3049641",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "1582",
+          "extradata_size": 47,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "vendor_id": "[0][0][0][0]",
+            "encoder": "Lavc60.31.102 libx264"
+          }
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_long_name": "AAC (Advanced Audio Coding)",
+          "profile": "LC",
+          "codec_type": "audio",
+          "codec_tag_string": "mp4a",
+          "codec_tag": "0x6134706d",
+          "sample_fmt": "fltp",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "id": "0x2",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/48000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 3037440,
+          "duration": "63.280000",
+          "bit_rate": "177073",
+          "nb_frames": "2968",
+          "extradata_size": 5,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "SoundHandler",
+            "vendor_id": "[0][0][0][0]"
+          }
+        }
+      ],
+      "format": {
+        "filename": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\003-stage-edition\\final\\jing-feng-shuang-stage-v3.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "63.280000",
+        "size": "25573442",
+        "bit_rate": "3233052",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf60.16.100"
+        }
+      }
+    }
+  },
+  "preconditions": {
+    "completed_report_sha256": "c1536845c08a3f08c288064a01a95d64a3fd0095b7366da41d9a97354421ac16",
+    "confirmed_timeline_sha256": "6dfe95bb7e18d4bfe50814c886ea701a864592fde14993a4862c70d6a225f308",
+    "approved_manifest_sha256": "011edc306008a22c9ff8aa8208141e5dae8e3369070832be2dccd329dd1676e2",
+    "numerical_helper_sha256": "f859664ce24902765ba2114455e2e79ba01b96083ab4494d953ea82df8901e95",
+    "source_hashes_verified": true,
+    "no_writes_to_002": true
+  },
+  "expected_mix": {
+    "formula": "pad(original song decoded48k*10**(-1.5/20),63.28s)+stage ambience WAV decoded48k*1.0",
+    "normalize": false,
+    "limiter": false,
+    "frames": 3037440,
+    "duration_s": 63.28,
+    "level": {
+      "float_sample_peak_linear": 0.8880298085585615,
+      "float_sample_peak_dbfs": -1.031449119670776,
+      "samples_abs_ge_1": 0,
+      "all_samples_finite": true,
+      "oversampled_true_peak_measured": false
+    }
+  },
+  "decode": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "format": "f32le",
+    "expected_frames": 3037440,
+    "actual_frames": 3038208,
+    "actual_duration_s": 63.296,
+    "full_decode_completed": true,
+    "all_samples_finite": true
+  },
+  "alignment": {
+    "coarse_8k": {
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9995185406001686,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ]
+    },
+    "lag_frames_48k": 0,
+    "lag_s": 0.0,
+    "reference_start_frame": 0,
+    "actual_start_frame": 0,
+    "compared_frames": 3037440,
+    "uncovered_expected_start_frames": 0,
+    "uncovered_expected_end_frames": 0,
+    "uncovered_original_song_start_frames": 0,
+    "uncovered_original_song_end_frames": 0,
+    "actual_extra_tail_frames": 768
+  },
+  "overall_relative_to_expected_mix": {
+    "correlation": 0.9985361215780556,
+    "gain_linear": 0.9942676677840491,
+    "gain_db": -0.049933660288046564,
+    "dc_offset": -1.2952670552731933e-05,
+    "rms_ratio_db": -0.0372276759895626,
+    "residual_snr_db": 25.325105484814074,
+    "residual_rms": 0.00876159501547158,
+    "reference_rms_dbfs": -15.771632356813186,
+    "final_rms_dbfs": -15.80886003280275
+  },
+  "local_windows": [
+    {
+      "center_s": 2.0,
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9996674041070046,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9993988796728508,
+      "gain_linear": 0.994979768104151,
+      "gain_db": -0.04371500197108532,
+      "dc_offset": 2.871759250875868e-06,
+      "rms_ratio_db": -0.03849038000777717,
+      "residual_snr_db": 29.196168580247203,
+      "residual_rms": 0.0026495324126005115,
+      "reference_rms_dbfs": -22.296572965733485,
+      "final_rms_dbfs": -22.335063345741265
+    },
+    {
+      "center_s": 7.928,
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9992629371923335,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9979927772448953,
+      "gain_linear": 0.9916834896262928,
+      "gain_db": -0.07253834406193671,
+      "dc_offset": 2.164964616980581e-05,
+      "rms_ratio_db": -0.055077978326276804,
+      "residual_snr_db": 23.95065310696138,
+      "residual_rms": 0.007458362392310368,
+      "reference_rms_dbfs": -18.523809390627953,
+      "final_rms_dbfs": -18.57888736895423
+    },
+    {
+      "center_s": 13.856,
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9996525215841533,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9987137619760598,
+      "gain_linear": 0.9954893047960401,
+      "gain_db": -0.03926803052176861,
+      "dc_offset": 4.5668606237008955e-06,
+      "rms_ratio_db": -0.028091966026888765,
+      "residual_snr_db": 25.888101218477008,
+      "residual_rms": 0.01007862555364009,
+      "reference_rms_dbfs": -14.001155341335833,
+      "final_rms_dbfs": -14.029247307362722
+    },
+    {
+      "center_s": 19.784,
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9994660387123888,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9985567411741676,
+      "gain_linear": 0.9932611095571081,
+      "gain_db": -0.058731373831236486,
+      "dc_offset": -7.778459935632413e-05,
+      "rms_ratio_db": -0.04627871046451278,
+      "residual_snr_db": 25.386847909673385,
+      "residual_rms": 0.010044381875373173,
+      "reference_rms_dbfs": -14.513485725876883,
+      "final_rms_dbfs": -14.559764436341396
+    },
+    {
+      "center_s": 25.712,
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9996023186133699,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9990457792696146,
+      "gain_linear": 0.995319912022616,
+      "gain_db": -0.04074614999858052,
+      "dc_offset": 2.204452852689817e-06,
+      "rms_ratio_db": -0.03245586622105057,
+      "residual_snr_db": 27.186991915464176,
+      "residual_rms": 0.008616572015954147,
+      "reference_rms_dbfs": -14.063431413081975,
+      "final_rms_dbfs": -14.095887279303028
+    },
+    {
+      "center_s": 31.64,
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9995615858075698,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9983926887440924,
+      "gain_linear": 0.9945716934760099,
+      "gain_db": -0.04727810782914423,
+      "dc_offset": -7.829773890410778e-05,
+      "rms_ratio_db": -0.033394011891368446,
+      "residual_snr_db": 24.918219658068132,
+      "residual_rms": 0.012339488762635154,
+      "reference_rms_dbfs": -13.205730764714572,
+      "final_rms_dbfs": -13.239124776605939
+    },
+    {
+      "center_s": 37.568,
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9995013426316641,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9983432841031264,
+      "gain_linear": 0.9960026262908198,
+      "gain_db": -0.03479032827086163,
+      "dc_offset": 8.227498031194557e-05,
+      "rms_ratio_db": -0.020227620493375065,
+      "residual_snr_db": 24.78641666731835,
+      "residual_rms": 0.006457847194814193,
+      "reference_rms_dbfs": -18.97398281328111,
+      "final_rms_dbfs": -18.994210433774484
+    },
+    {
+      "center_s": 43.496,
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9995354132771843,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9991159576801438,
+      "gain_linear": 0.9960308478984599,
+      "gain_db": -0.034544218180280584,
+      "dc_offset": 1.7308338703709388e-09,
+      "rms_ratio_db": -0.026862119581718434,
+      "residual_snr_db": 27.51920749552768,
+      "residual_rms": 8.547998899669024e-06,
+      "reference_rms_dbfs": -73.80895908094095,
+      "final_rms_dbfs": -73.83582120052267
+    },
+    {
+      "center_s": 49.424,
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9994822715945807,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9984662950615085,
+      "gain_linear": 0.9933920755196918,
+      "gain_db": -0.05758617555753926,
+      "dc_offset": -9.127946480924631e-05,
+      "rms_ratio_db": -0.0443568011104314,
+      "residual_snr_db": 25.12228174100414,
+      "residual_rms": 0.011127797494794861,
+      "reference_rms_dbfs": -13.889391800377417,
+      "final_rms_dbfs": -13.93374860148785
+    },
+    {
+      "center_s": 55.352,
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9995156977241972,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9981808700705346,
+      "gain_linear": 0.9939710259254674,
+      "gain_db": -0.05252550046593015,
+      "dc_offset": -0.00011780582893513355,
+      "rms_ratio_db": -0.036866391371012185,
+      "residual_snr_db": 24.379199688266517,
+      "residual_rms": 0.01268080128994826,
+      "reference_rms_dbfs": -13.501538990588905,
+      "final_rms_dbfs": -13.538405381959919
+    },
+    {
+      "center_s": 61.28,
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9998239209938968,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9995192736134573,
+      "gain_linear": 0.9984460724769068,
+      "gain_db": -0.013507740716375328,
+      "dc_offset": 6.115484776146151e-07,
+      "rms_ratio_db": -0.009327692579089613,
+      "residual_snr_db": 30.167587905317124,
+      "residual_rms": 0.0005084459250163179,
+      "reference_rms_dbfs": -35.69327546148425,
+      "final_rms_dbfs": -35.70260315406334
+    }
+  ],
+  "timing_drift": {
+    "reliable_windows": 10,
+    "estimated_audio_speed_ratio": 1.0,
+    "predicted_end_to_end_lag_change_s": 0.0,
+    "lag_slope_seconds_per_second": 0.0
+  },
+  "protected_vocal_ambience_levels": [
+    {
+      "start": 18.2,
+      "end": 37.6,
+      "float_sample_peak_linear": 0.0,
+      "float_sample_peak_dbfs": null,
+      "samples_abs_ge_1": 0,
+      "all_samples_finite": true,
+      "oversampled_true_peak_measured": false
+    },
+    {
+      "start": 51.2,
+      "end": 56.4,
+      "float_sample_peak_linear": 0.0,
+      "float_sample_peak_dbfs": null,
+      "samples_abs_ge_1": 0,
+      "all_samples_finite": true,
+      "oversampled_true_peak_measured": false
+    }
+  ],
+  "protected_vocal_comparison_to_002": [
+    {
+      "start": 18.2,
+      "end": 37.6,
+      "ambience_peak_is_zero": true,
+      "comparison": "003最终AAC vs 002最终AAC，同一原歌同一时刻",
+      "correlation": 0.9983167939140345,
+      "gain_linear": 0.9979499559993767,
+      "gain_db": -0.017824732935044146,
+      "dc_offset": 4.814015935974449e-06,
+      "rms_ratio_db": -0.003195532010355649,
+      "residual_snr_db": 24.71735122981872,
+      "residual_rms": 0.011799069999700595,
+      "reference_rms_dbfs": -13.82546294459139,
+      "final_rms_dbfs": -13.828658476601746
+    },
+    {
+      "start": 51.2,
+      "end": 56.4,
+      "ambience_peak_is_zero": true,
+      "comparison": "003最终AAC vs 002最终AAC，同一原歌同一时刻",
+      "correlation": 0.9974156191144551,
+      "gain_linear": 0.9975436713402976,
+      "gain_db": -0.021361646018416787,
+      "dc_offset": 7.881245645279672e-05,
+      "rms_ratio_db": 0.0011752387974026638,
+      "residual_snr_db": 22.84927367749019,
+      "residual_rms": 0.014796737536655747,
+      "reference_rms_dbfs": -13.724143050455266,
+      "final_rms_dbfs": -13.722967811657865
+    }
+  ],
+  "ambience_presence_in_quiet_song_regions": [
+    {
+      "start": 38.5,
+      "end": 47.0,
+      "comparison": "003 AAC减002 AAC相对独立氛围候选，源曲此段近数字零；仅用于确认新增声效实际存在",
+      "correlation": 0.99783905307478,
+      "gain_linear": 0.9907200247547908,
+      "gain_db": -0.08098117635335071,
+      "dc_offset": -1.0666573992752265e-08,
+      "rms_ratio_db": -0.06219115658481805,
+      "residual_snr_db": 23.62916395730471,
+      "residual_rms": 2.6578495680441654e-05,
+      "reference_rms_dbfs": -67.79924680953036,
+      "final_rms_dbfs": -67.86143796611518
+    },
+    {
+      "start": 60.9,
+      "end": 63.28,
+      "comparison": "003 AAC减002 AAC相对独立氛围候选，源曲此段近数字零；仅用于确认新增声效实际存在",
+      "correlation": 0.993507817039778,
+      "gain_linear": 0.9855298934200992,
+      "gain_db": -0.12660396040518182,
+      "dc_offset": -7.678196251176605e-07,
+      "rms_ratio_db": -0.07003073992492596,
+      "residual_snr_db": 18.823338836553162,
+      "residual_rms": 0.0004863425730791957,
+      "reference_rms_dbfs": -47.311209174031895,
+      "final_rms_dbfs": -47.381239913956826
+    }
+  ],
+  "final_float_level": {
+    "float_sample_peak_linear": 0.900023341178894,
+    "float_sample_peak_dbfs": -0.9149245486857682,
+    "samples_abs_ge_1": 0,
+    "all_samples_finite": true,
+    "oversampled_true_peak_measured": false
+  },
+  "advisories": [],
+  "automatic_pass": null,
+  "manual_audio_review": "required",
+  "lip_sync_verified": null,
+  "paid_calls": 0,
+  "audio_replaced_or_modified_by_verifier": false,
+  "limitations": [
+    "新增掌声是获准独立合成声源；比较对象必须是两声源预期混音，不能把它当作原歌曲漂移或换音。",
+    "AAC有损编码产生残差，相关性和增益不要求逐样本镜像。",
+    "主歌与002对比只验证相同音乐段，没有验证嘴形。",
+    "极低电平或静音窗口可能不能估计可靠偏移。"
+  ]
+}

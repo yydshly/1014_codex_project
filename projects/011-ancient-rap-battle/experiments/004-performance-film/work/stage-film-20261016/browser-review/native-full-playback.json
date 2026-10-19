@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T19:33:46.673Z",
+  "reviewer": "root",
+  "source_sha256": "525c42dfe2bbe7bf0fe0dff77f122451464927e5aede6488a1b19f9691a0cb45",
+  "passed": true,
+  "method": "Continuous normal-speed browser playback to ended; observed DOM playback ranges and representative screenshots; final 28-shot storyboard and every cut neighbour visually inspected separately.",
+  "playback_rate": 1,
+  "complete_played_range": [
+    0,
+    94.64
+  ],
+  "duration": 94.64,
+  "ended": true,
+  "media_error": null,
+  "subjective_audio_listening_claimed": false,
+  "precise_lip_sync_claimed": false,
+  "observations": [
+    {
+      "currentTime": 10.939385,
+      "duration": 94.64,
+      "ended": false,
+      "error": null,
+      "exists": true,
+      "height": 720,
+      "muted": false,
+      "observed_at": "2026-10-15T19:31:56.166Z",
+      "paused": false,
+      "playbackRate": 1,
+      "played": [
+        [
+          0,
+          10.939385
+        ]
+      ],
+      "readyState": 4,
+      "url": "http://127.0.0.1:4184/1014_codex_project/011-ancient-rap-battle/media/stage-film-004/ya-zhou-ren-jian-stage.mp4",
+      "width": 1280
+    },
+    {
+      "currentTime": 49.644808,
+      "duration": 94.64,
+      "ended": false,
+      "error": null,
+      "frames": null,
+      "observed_at": "2026-10-15T19:32:34.874Z",
+      "paused": false,
+      "playbackRate": 1,
+      "played": [
+        [
+          0,
+          49.644808
+        ]
+      ],
+      "readyState": 4
+    },
+    {
+      "currentTime": 94.64,
+      "duration": 94.64,
+      "ended": true,
+      "error": null,
+      "observed_at": "2026-10-15T19:33:28.563Z",
+      "paused": true,
+      "playbackRate": 1,
+      "played": [
+        [
+          0,
+          94.64
+        ]
+      ],
+      "readyState": 4
+    }
+  ],
+  "screenshots": [
+    "native-playing-01.jpg",
+    "native-playing-02.jpg",
+    "native-playing-03.jpg"
+  ],
+  "limitations": [
+    "Natural performance stage montage; exact singing visemes are not verified.",
+    "Playback success, original-song waveform verification, and static-frame visual review are separate evidence."
+  ]
+}

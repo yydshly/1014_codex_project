@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-19",
+  "artifact": "assets/ancient-rap-battle-research-overview.png",
+  "dimensions": [
+    3600,
+    6120
+  ],
+  "sha256": "cbe55cde30b35917581c986454e7a86542ce4d3832711133cd421c2431a32990",
+  "real_effect_images": 6,
+  "actually_viewed": [
+    "full-poster-preview",
+    "top-crop",
+    "middle-crop",
+    "bottom-crop",
+    "final-full-preview",
+    "final-middle-crop"
+  ],
+  "layout_checks": "140 text lines positioned with bounds and paragraph-height assertions; final SVG XML valid; Latin words kept intact; no isolated closing punctuation.",
+  "web_asset_http_status": 200,
+  "web_page_http_status": 200,
+  "build_and_existing_check_passed": true,
+  "static_files": 63,
+  "paid_generation_calls": 0,
+  "new_credits": 0,
+  "new_models_used": false
+}

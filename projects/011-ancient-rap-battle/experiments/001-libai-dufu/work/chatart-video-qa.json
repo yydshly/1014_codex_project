@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "episode_id": "001-libai-dufu",
+  "source": "ChatArt 网页",
+  "note": "独立网页素材的音轨筛查，未经人工嘴形验收；与官方API任务记录分离。",
+  "clips": {
+    "A01": {
+      "audio_match": true,
+      "correlation": 0.998,
+      "min_window_correlation": 0.997,
+      "thresholds": {
+        "overall": 0.85,
+        "min_window": 0.8
+      },
+      "suggested_picture_advance_seconds": 0,
+      "compared_seconds": 4.8,
+      "voiced_frames": 247,
+      "windows": [
+        {
+          "start": 0,
+          "correlation": 0.999
+        },
+        {
+          "start": 0.5,
+          "correlation": 0.999
+        },
+        {
+          "start": 1,
+          "correlation": 0.999
+        },
+        {
+          "start": 1.5,
+          "correlation": 0.997
+        },
+        {
+          "start": 2,
+          "correlation": 0.998
+        }
+      ],
+      "manual_lip_review": "required",
+      "note": "仅比较音轨形态；正偏移表示生成音轨较晚，可尝试让画面提前；不代表嘴形准确。",
+      "model_label": "MiniMax H3",
+      "checked_at": "2026-10-15T07:42:28.968Z",
+      "video": "clips/A01_t1.mp4",
+      "audio": "work/audio/A01.mp3",
+      "video_sha256": "52a4be38964b6f2ee33d4708ec864b73c27ff1c624824c31fab2fa64c4b39380",
+      "audio_sha256": "07147fa241668df8663e6e3765cac9c86f5ab99472fb75545c991b3e234ae3e2",
+      "video_bytes": 4887822,
+      "generated_audio_seconds": 5.184,
+      "reference_audio_seconds": 4.8
+    },
+    "A02": {
+      "audio_match": false,
+      "correlation": 0.218,
+      "min_window_correlation": -0.375,
+      "thresholds": {
+        "overall": 0.85,
+        "min_window": 0.8
+      },
+      "suggested_picture_advance_seconds": 0.16,
+      "compared_seconds": 4.8,
+      "voiced_frames": 254,
+      "windows": [
+        {
+          "start": 0,
+          "correlation": 0.905
+        },
+        {
+          "start": 0.5,
+          "correlation": 0.955
+        },
+        {
+          "start": 1,
+          "correlation": 0.082
+        },
+        {
+          "start": 1.5,
+          "correlation": -0.143
+        },
+        {
+          "start": 2,
+          "correlation": -0.375
+        }
+      ],
+      "manual_lip_review": "required",
+      "note": "仅比较音轨形态；正偏移表示生成音轨较晚，可尝试让画面提前；不代表嘴形准确。",
+      "model_label": "Seedance 2.0 Fast",
+      "checked_at": "2026-10-15T08:20:23.406Z",
+      "video": "clips/A02_t1.mp4",
+      "audio": "work/audio/A02.mp3",
+      "video_sha256": "e050ae36759707ee8f5c58ec71939c600c89b443a1ae199d14efc5f6ac17d4a6",
+      "audio_sha256": "4705b6cfdc958a3d3dad06bada168a859c2781f5ef9ea277784258477ccc65ce",
+      "video_bytes": 3038815,
+      "generated_audio_seconds": 5.088,
+      "reference_audio_seconds": 4.8
+    },
+    "B01": {
+      "audio_match": false,
+      "correlation": 0.864,
+      "min_window_correlation": 0.482,
+      "thresholds": {
+        "overall": 0.85,
+        "min_window": 0.8
+      },
+      "suggested_picture_advance_seconds": -0.02,
+      "compared_seconds": 4.78,
+      "voiced_frames": 231,
+      "windows": [
+        {
+          "start": 0.02,
+          "correlation": 0.986
+        },
+        {
+          "start": 0.52,
+          "correlation": 0.627
+        },
+        {
+          "start": 1.02,
+          "correlation": 0.482
+        },
+        {
+          "start": 1.52,
+          "correlation": 0.922
+        },
+        {
+          "start": 2.02,
+          "correlation": 0.966
+        }
+      ],
+      "manual_lip_review": "required",
+      "note": "仅比较音轨形态；正偏移表示生成音轨较晚，可尝试让画面提前；不代表嘴形准确。",
+      "model_label": "MiniMax H3",
+      "checked_at": "2026-10-15T08:46:53.712Z",
+      "video": "clips/B01_t1.mp4",
+      "audio": "work/audio/B01.mp3",
+      "video_sha256": "fc3ad799465487f9109201b3abddedf0e04035b200ab054dcfb023eed3f2b496",
+      "audio_sha256": "d7e9c0d19dd1b83252f5975e5bf56ad568e735d680e5e9db78e79758dc9c8a29",
+      "video_bytes": 3502853,
+      "generated_audio_seconds": 5.184,
+      "reference_audio_seconds": 4.8
+    },
+    "B02": {
+      "audio_match": true,
+      "correlation": 0.996,
+      "min_window_correlation": 0.995,
+      "thresholds": {
+        "overall": 0.85,
+        "min_window": 0.8
+      },
+      "suggested_picture_advance_seconds": 0,
+      "compared_seconds": 4.8,
+      "voiced_frames": 248,
+      "windows": [
+        {
+          "start": 0,
+          "correlation": 0.998
+        },
+        {
+          "start": 0.5,
+          "correlation": 0.996
+        },
+        {
+          "start": 1,
+          "correlation": 0.996
+        },
+        {
+          "start": 1.5,
+          "correlation": 0.995
+        },
+        {
+          "start": 2,
+          "correlation": 0.996
+        }
+      ],
+      "manual_lip_review": "required",
+      "note": "仅比较音轨形态；正偏移表示生成音轨较晚，可尝试让画面提前；不代表嘴形准确。",
+      "model_label": "MiniMax H3",
+      "checked_at": "2026-10-15T10:00:46.943Z",
+      "video": "clips/B02_t1.mp4",
+      "audio": "work/audio/B02.mp3",
+      "video_sha256": "9d8e37eed7bc9cf86011a790cff24b55a33bd9d0ae19811ce6917b947bd4ccd1",
+      "audio_sha256": "ca82de93f9c10340a4975d6ab7e6d6f409c801d9273d5c665e4b5123960e66bf",
+      "video_bytes": 2943548,
+      "generated_audio_seconds": 5.184,
+      "reference_audio_seconds": 4.8
+    }
+  },
+  "updated_at": "2026-10-15T10:00:46.957Z"
+}

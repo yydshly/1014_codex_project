@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "provider": "ChatArt browser UI",
+  "model_label": "MiniMax H3",
+  "source": "https://app.chatartpro.com/video/image-to-video",
+  "credit_cap": 300,
+  "estimated_credits_per_clip": 75,
+  "max_tasks": 4,
+  "automatic_rerolls": false,
+  "clips": {
+    "A01": {
+      "id": "A01",
+      "status": "downloaded",
+      "submitted_at": "2026-10-15T07:04:54.184Z",
+      "ui_task_time": "2026/10/15 15:04",
+      "expected_duration": 5,
+      "resolution_label": "768p",
+      "ratio": "16:9",
+      "mode": "全能模式",
+      "credits_displayed": 75,
+      "reference": "refs/libai-v1.png",
+      "reference_audio": "work/audio/A01.mp3",
+      "prompt": "以图片1中的白衣诗人为唯一人物，保持他的脸型、长发、细髭、白袍和青绿色衣襟，以及木质酒馆、红灯笼的原有场景。固定为近正面的中近景，镜头轻微推近，全程清楚看见嘴唇；麦克风保持在下巴下方，不得挡嘴。严格按照音频1的原始声音、中文发音、节奏与停顿逐字表演这一句：“酒杯一举，银河都来捧场”。开头短静音自然举起麦克风，说话时自信地轻点头；说完后自然闭嘴，保留音频尾部静音。音频1是必须准确同步的原声，不要重新配音、改词、变速、延长或增加背景音乐。只有这一个人，没有对手、观众、字幕、文字、标识或水印。写实电影质感，面部和手部稳定，自然克制的表演。",
+      "ui_evidence": "../../assets/chatart-preflight.jpg",
+      "last_ui_status": "video_available",
+      "last_checked_at": "2026-10-15T07:41:53.030Z",
+      "model_label": "MiniMax H3",
+      "output": "clips/A01_t1.mp4",
+      "output_sha256": "52a4be38964b6f2ee33d4708ec864b73c27ff1c624824c31fab2fa64c4b39380",
+      "output_bytes": 4887822,
+      "source_media_url": "https://files.chatartpro.com/web-video/20261015/6ad08258dd350.mp4",
+      "downloaded_at": "2026-10-15T07:41:53.030Z",
+      "qa": {
+        "audio_match": true,
+        "correlation": 0.998,
+        "min_window_correlation": 0.997,
+        "thresholds": {
+          "overall": 0.85,
+          "min_window": 0.8
+        },
+        "suggested_picture_advance_seconds": 0,
+        "compared_seconds": 4.8,
+        "voiced_frames": 247,
+        "windows": [
+          {
+            "start": 0,
+            "correlation": 0.999
+          },
+          {
+            "start": 0.5,
+            "correlation": 0.999
+          },
+          {
+            "start": 1,
+            "correlation": 0.999
+          },
+          {
+            "start": 1.5,
+            "correlation": 0.997
+          },
+          {
+            "start": 2,
+            "correlation": 0.998
+          }
+        ],
+        "manual_lip_review": "required",
+        "note": "仅比较音轨形态；正偏移表示生成音轨较晚，可尝试让画面提前；不代表嘴形准确。",
+        "checked_at": "2026-10-15T07:40:55.623Z",
+        "video": "clips/A01_t1.mp4",
+        "audio": "work/audio/A01.mp3",
+        "video_sha256": "52a4be38964b6f2ee33d4708ec864b73c27ff1c624824c31fab2fa64c4b39380",
+        "audio_sha256": "07147fa241668df8663e6e3765cac9c86f5ab99472fb75545c991b3e234ae3e2",
+        "video_bytes": 4887822,
+        "generated_audio_seconds": 5.184,
+        "reference_audio_seconds": 4.8
+      }
+    },
+    "A02": {
+      "id": "A02",
+      "status": "downloaded",
+      "expected_duration": 5,
+      "resolution_label": "720p",
+      "ratio": "16:9",
+      "mode": "全能模式",
+      "credits_displayed": 60,
+      "reference": "refs/libai-v1.png",
+      "reference_audio": "work/audio/A02.mp3",
+      "prompt": "以图片1中的白衣诗人，保持他的脸型、长发、细髭、白袍和青绿色衣襟，以及木质酒馆、红灯笼的原有场景。只有这一个人。固定为略微收紧的近景，稳定拍摄，轻微推近，全程清楚看见嘴唇；麦克风保持在下巴下方，不得挡嘴。严格按照音频1的原始声音、中文发音、节奏与停顿逐字表演这一句：“你的工整，装不下我的月光”。开头短静音自然准备开口，说话时自信、潇洒，轻微点头回应画外对手；说完后自然闭嘴，保留音频尾部静音。音频1是必须准确同步的原声，不要重新配音、改词、变速、延长或增加背景音乐。没有对手、观众、字幕、文字、标识或水印。写实电影质感，面部和手部稳定，自然克制的表演。",
+      "submitted_at": "2026-10-15T07:19:58.040Z",
+      "ui_task_time": "2026/10/15 15:19",
+      "model_label": "Seedance 2.0 Fast",
+      "reason": "H3首句排队超过14分钟；第二句采用支持同样参考图+音频的快速模型，非重抽首句",
+      "last_ui_status": "video_available",
+      "last_checked_at": "2026-10-15T08:19:53.999094Z",
+      "output": "clips/A02_t1.mp4",
+      "output_sha256": "e050ae36759707ee8f5c58ec71939c600c89b443a1ae199d14efc5f6ac17d4a6",
+      "output_bytes": 3038815,
+      "source_media_url": "https://files.chatartpro.com/web-video/20261015/6ad08a0a3d996.mp4",
+      "downloaded_at": "2026-10-15T08:19:53.999094Z",
+      "qa": {
+        "audio_match": false,
+        "correlation": 0.218,
+        "min_window_correlation": -0.375,
+        "thresholds": {
+          "overall": 0.85,
+          "min_window": 0.8
+        },
+        "suggested_picture_advance_seconds": 0.16,
+        "compared_seconds": 4.8,
+        "voiced_frames": 254,
+        "windows": [
+          {
+            "start": 0,
+            "correlation": 0.905
+          },
+          {
+            "start": 0.5,
+            "correlation": 0.955
+          },
+          {
+            "start": 1,
+            "correlation": 0.082
+          },
+          {
+            "start": 1.5,
+            "correlation": -0.143
+          },
+          {
+            "start": 2,
+            "correlation": -0.375
+          }
+        ],
+        "manual_lip_review": "required",
+        "note": "仅比较音轨形态；正偏移表示生成音轨较晚，可尝试让画面提前；不代表嘴形准确。",
+        "model_label": "Seedance 2.0 Fast",
+        "checked_at": "2026-10-15T08:20:23.406Z",
+        "video": "clips/A02_t1.mp4",
+        "audio": "work/audio/A02.mp3",
+        "video_sha256": "e050ae36759707ee8f5c58ec71939c600c89b443a1ae199d14efc5f6ac17d4a6",
+        "audio_sha256": "4705b6cfdc958a3d3dad06bada168a859c2781f5ef9ea277784258477ccc65ce",
+        "video_bytes": 3038815,
+        "generated_audio_seconds": 5.088,
+        "reference_audio_seconds": 4.8
+      }
+    },
+    "B01": {
+      "id": "B01",
+      "status": "downloaded",
+      "expected_duration": 5,
+      "resolution_label": "768p",
+      "ratio": "16:9",
+      "mode": "全能模式",
+      "credits_displayed": 75,
+      "reference": "refs/dufu-v1.png",
+      "reference_audio": "work/audio/B01.mp3",
+      "prompt": "以图片1中的褐衣诗人，保持他的脸型、深色头巾、胡须、褐色外袍和赭色衣襟，以及木质酒馆、红灯笼的原有场景。只有这一个人。固定为近正面的中近景，稳定拍摄，轻微推近，全程清楚看见嘴唇；麦克风保持在下巴下方，不得挡嘴。严格按照音频1的原始声音、中文发音、节奏与停顿逐字表演这一句：“月光再亮，也得照见风霜”。开头短静音自然准备开口，说话时沉稳坚定，轻微点头，以克制有力的语气回应画外对手；说完后自然闭嘴，保留音频尾部静音。音频1是必须准确同步的原声，不要重新配音、改词、变速、延长或增加背景音乐。没有对手、观众、字幕、文字、标识或水印。写实电影质感，面部和手部稳定，自然克制的表演。",
+      "submitted_at": "2026-10-15T07:44:28.994Z",
+      "ui_task_time": "2026/10/15 15:44",
+      "model_label": "MiniMax H3",
+      "last_ui_status": "video_available",
+      "last_checked_at": "2026-10-15T08:47:26.195031Z",
+      "output": "clips/B01_t1.mp4",
+      "output_sha256": "fc3ad799465487f9109201b3abddedf0e04035b200ab054dcfb023eed3f2b496",
+      "output_bytes": 3502853,
+      "source_media_url": "https://files.chatartpro.com/web-video/20261015/6ad09177c773f.mp4",
+      "downloaded_at": "2026-10-15T08:47:26.195031Z",
+      "qa": {
+        "audio_match": false,
+        "correlation": 0.864,
+        "min_window_correlation": 0.482,
+        "thresholds": {
+          "overall": 0.85,
+          "min_window": 0.8
+        },
+        "suggested_picture_advance_seconds": -0.02,
+        "compared_seconds": 4.78,
+        "voiced_frames": 231,
+        "windows": [
+          {
+            "start": 0.02,
+            "correlation": 0.986
+          },
+          {
+            "start": 0.52,
+            "correlation": 0.627
+          },
+          {
+            "start": 1.02,
+            "correlation": 0.482
+          },
+          {
+            "start": 1.52,
+            "correlation": 0.922
+          },
+          {
+            "start": 2.02,
+            "correlation": 0.966
+          }
+        ],
+        "manual_lip_review": "required",
+        "note": "仅比较音轨形态；正偏移表示生成音轨较晚，可尝试让画面提前；不代表嘴形准确。",
+        "model_label": "MiniMax H3",
+        "checked_at": "2026-10-15T08:46:53.712Z",
+        "video": "clips/B01_t1.mp4",
+        "audio": "work/audio/B01.mp3",
+        "video_sha256": "fc3ad799465487f9109201b3abddedf0e04035b200ab054dcfb023eed3f2b496",
+        "audio_sha256": "d7e9c0d19dd1b83252f5975e5bf56ad568e735d680e5e9db78e79758dc9c8a29",
+        "video_bytes": 3502853,
+        "generated_audio_seconds": 5.184,
+        "reference_audio_seconds": 4.8
+      }
+    },
+    "B02": {
+      "id": "B02",
+      "status": "downloaded",
+      "expected_duration": 5,
+      "resolution_label": "768p",
+      "ratio": "16:9",
+      "mode": "全能模式",
+      "credits_displayed": 75,
+      "reference": "refs/dufu-v1.png",
+      "reference_audio": "work/audio/B02.mp3",
+      "prompt": "以图片1中的褐衣诗人，保持他的脸型、深色头巾、胡须、褐色外袍和赭色衣襟，以及木质酒馆、红灯笼的原有场景。只有这一个人。固定为近正面的中近景，稳定拍摄，轻微推近，全程清楚看见嘴唇；麦克风保持在下巴下方，不得挡嘴。严格按照音频1的原始声音、中文发音、节奏与停顿逐字表演这一句：“我把人间，写成压轴的回响”。开头短静音自然准备开口，说话时沉稳坚定，轻微点头，以克制有力的语气回应画外对手；说完后自然闭嘴，保留音频尾部静音。音频1是必须准确同步的原声，不要重新配音、改词、变速、延长或增加背景音乐。没有对手、观众、字幕、文字、标识或水印。写实电影质感，面部和手部稳定，自然克制的表演。",
+      "submitted_at": "2026-10-15T07:45:16.572Z",
+      "ui_task_time": "2026/10/15 15:44",
+      "model_label": "MiniMax H3",
+      "submitted_prompt": "以图片1中的褐衣诗人，保持他的脸型、深色头巾、胡须、褐色外袍和赭色衣襟，以及木质酒馆、红灯笼的原有场景。只有这一个人。固定为近正面的中近景，稳定拍摄，轻微推近，全程清楚看见嘴唇；麦克风保持在下巴下方，不得挡嘴。严格按照音频1的原始声音、中文发音、节奏与停顿逐字表演这一句：“我把人间，写成压轴的回响”。开头短静音自然准备开口，说话时沉稳坚定，轻微点头，以克制有力的语气回应画外对手；说完后自然闭嘴，保留音频尾部静音。音频1是必须准确同步的原声，不要重新配音、改词、变速、延长或增加背景音乐。没有对手、观众、字幕、文字、标识或水印。写实电影质感，面部和手部稳定，自然克制的表演。zzh",
+      "prompt_note": "网页结果卡实际文本末尾多出zzh；保留真实提交记录，不重复生成。",
+      "last_ui_status": "video_available",
+      "last_checked_at": "2026-10-15T10:02:13.615244+00:00",
+      "output": "clips/B02_t1.mp4",
+      "output_sha256": "9d8e37eed7bc9cf86011a790cff24b55a33bd9d0ae19811ce6917b947bd4ccd1",
+      "output_bytes": 2943548,
+      "source_media_url": "https://files.chatartpro.com/web-video/20261015/6ad098d2abb96.mp4",
+      "downloaded_at": "2026-10-15T10:00:25.091324+00:00",
+      "download_time_note": "本地下载文件mtime；远端完成时间未知",
+      "qa": {
+        "audio_match": true,
+        "correlation": 0.996,
+        "min_window_correlation": 0.995,
+        "thresholds": {
+          "overall": 0.85,
+          "min_window": 0.8
+        },
+        "suggested_picture_advance_seconds": 0,
+        "compared_seconds": 4.8,
+        "voiced_frames": 248,
+        "windows": [
+          {
+            "start": 0,
+            "correlation": 0.998
+          },
+          {
+            "start": 0.5,
+            "correlation": 0.996
+          },
+          {
+            "start": 1,
+            "correlation": 0.996
+          },
+          {
+            "start": 1.5,
+            "correlation": 0.995
+          },
+          {
+            "start": 2,
+            "correlation": 0.996
+          }
+        ],
+        "manual_lip_review": "required",
+        "note": "仅比较音轨形态；正偏移表示生成音轨较晚，可尝试让画面提前；不代表嘴形准确。",
+        "model_label": "MiniMax H3",
+        "checked_at": "2026-10-15T10:00:46.943Z",
+        "video": "clips/B02_t1.mp4",
+        "audio": "work/audio/B02.mp3",
+        "video_sha256": "9d8e37eed7bc9cf86011a790cff24b55a33bd9d0ae19811ce6917b947bd4ccd1",
+        "audio_sha256": "ca82de93f9c10340a4975d6ab7e6d6f409c801d9273d5c665e4b5123960e66bf",
+        "video_bytes": 2943548,
+        "generated_audio_seconds": 5.184,
+        "reference_audio_seconds": 4.8
+      }
+    }
+  },
+  "note": "独立于直接API被402/2068拒绝的video-tasks.json；不从页面读取私有接口或凭据。",
+  "estimated_committed_credits": 285,
+  "updated_at": "2026-10-15T10:02:13.615244+00:00",
+  "last_checked_at": "2026-10-15T10:02:13.615244+00:00",
+  "outputs_available": 4,
+  "credit_observations": {
+    "initial_displayed": 5700,
+    "after_A01_displayed": 5625,
+    "difference": 75,
+    "observed_at": "2026-10-15T07:56:07.547Z",
+    "scope": "网页余额先显示5700，A01后5625，目前5565；差额135与A01+A02标价相符，不代表后两句已扣费或独立账单核对",
+    "after_two_displayed": 5565,
+    "total_observed_delta": 135,
+    "last_observed_at": "2026-10-15T08:09:16.544Z"
+  },
+  "last_result_page_read_attempt_at": "2026-10-15T09:03:14.204379Z",
+  "last_result_page_state": "result_list_unavailable",
+  "current_deliverable": {
+    "status": "partial-generated",
+    "output": "final/libai-dufu-three-line-demo-v1.mp4",
+    "duration": 19.2,
+    "included_clips": [
+      "A01",
+      "A02",
+      "B01"
+    ],
+    "remaining_clip": "B02",
+    "sha256": "ea4ed6b799176315c69a5505756117a61dca7d215fb91670d26bff900709d1a4"
+  }
+}

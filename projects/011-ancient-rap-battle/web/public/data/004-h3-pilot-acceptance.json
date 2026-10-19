@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "accepted-by-human-for-basic-singing-correspondence",
+  "accepted_at": "2026-10-16T01:44:33.345168+00:00",
+  "provider_task_id": "1027778",
+  "accepted_for_lip_sync": true,
+  "visual_lip_sync_reviewed": true,
+  "audio_correlation_only": false,
+  "output_video": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\work\\audio-driven-repair\\model-original\\video_20261016091518.mp4",
+  "output_video_sha256": "13af814763a8ede67fb627e5724342bb760446e80a7610b8ce2a07d61668d129",
+  "original_audio": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\work\\audio-driven-repair\\VA01-original-song-9.4-to-14.4.wav",
+  "original_audio_sha256": "79f91a413fee6811b2c1a90e762f44150cc0a0d98c8bd207fb0958a719e18962",
+  "original_song_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+  "song_in": 9.4,
+  "song_out": 14.4,
+  "typed_audio_input_confirmed": true,
+  "model_label": "MiniMax H3",
+  "route": "ChatArt ordinary image-to-video full-reference website",
+  "mv_feature_used": false,
+  "local_models_used": false,
+  "subjective_audio_review_claimed_by_agent": false,
+  "acceptance": {
+    "source": "direct-human-user",
+    "trusted": true,
+    "reviewer": "user",
+    "review_type": "audiovisual-playback-feedback",
+    "question": "演唱口型是否已达到继续制作《压轴人间》整片的程度？",
+    "answer": "口型已可用，继续修整片",
+    "scope": "This exact VA01 pilot only; later blocks still require technical and visual checks."
+  },
+  "visual_review": "visual-review/independent-visual-review.json",
+  "audio_analysis_is_only_auxiliary": true
+}

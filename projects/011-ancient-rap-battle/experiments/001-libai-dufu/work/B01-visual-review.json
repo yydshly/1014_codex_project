@@ -1,0 +1,57 @@
+{
+  "id": "B01",
+  "source": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\001-libai-dufu\\clips\\B01_t1.mp4",
+  "sha256": "fc3ad799465487f9109201b3abddedf0e04035b200ab054dcfb023eed3f2b496",
+  "size_bytes": 3502853,
+  "container_duration": 5.175,
+  "video": {
+    "width": 1344,
+    "height": 768,
+    "fps": "24/1",
+    "duration": 5.166667,
+    "frames": 124,
+    "codec": "h264"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": 32000,
+    "channels": 2,
+    "duration": 5.175
+  },
+  "contact_sheet": "work/B01-review.jpg",
+  "sample_times": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5
+  ],
+  "status": "sampled_frames_reviewed_original_audio_screening_failed",
+  "observations": [
+    "抽帧中人物脸型、发型、服装和背景整体稳定，未见明显换人或大幅脸部畸变。",
+    "手持麦克风位于嘴部下方，抽帧中嘴部可见。",
+    "0.5–2.0秒样本可见不同口形，2.5秒后主要闭口；抽帧不等于逐音素验收。",
+    "参考和原片两组活动范围总体接近，第二组起点相差约80ms、末端一致，未见A02级别的时间重排。"
+  ],
+  "original_qa": {
+    "audio_match": false,
+    "correlation": 0.864,
+    "min_window_correlation": 0.482,
+    "suggested_picture_advance_seconds": -0.02,
+    "manual_lip_review": "required"
+  },
+  "activity_report": "work/B01-diagnostic.json",
+  "asr_report": "work/B01-asr-review.json",
+  "sync_passed": false,
+  "automatic_retime_added": false,
+  "limitations": [
+    "固定阈值活动范围和tiny转写都不是口型证明。",
+    "tiny原片转写比参考少件/见对应字，但参考该字概率约0.379，不能确定真实漏词。"
+  ],
+  "recommendation": "先保持原画面和shift0候选，重点带声核对照见风霜；当前不足以支持必须分段retime。"
+}

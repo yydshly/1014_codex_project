@@ -1,0 +1,57 @@
+{
+  "reviewed_at": "2026-10-15T18:24:53.684653+00:00",
+  "status": "passed-after-user-refresh",
+  "source_updated": true,
+  "completed_film_before_pilot_archive": true,
+  "summary_anchor": "our-summary",
+  "primary_film": "003-stage-edition",
+  "primary_duration_seconds": 63.28,
+  "pilot_full_film_completed": false,
+  "generation_paused_by_user": true,
+  "new_generation_calls": 0,
+  "new_model_downloads": 0,
+  "build": "passed: 43 artifacts",
+  "check": "passed: media SHA, history bytes, root and project-path media range requests",
+  "server_port": 4184,
+  "server_process_id": 18952,
+  "http_status": 200,
+  "browser_visual_verification": "User refreshed the existing error tab; CUA could then observe the normal HTTP page. Completed-film layout and playback were inspected.",
+  "screenshot_saved": true,
+  "browser_user_refresh_confirmed": true,
+  "browser_policy_bypassed": false,
+  "screenshot": "completed-film.jpg",
+  "browser_error_logs": [],
+  "horizontal_overflow": false,
+  "observed_viewports": [
+    {
+      "width": 715,
+      "height": 871
+    },
+    {
+      "width": 858,
+      "height": 871
+    }
+  ],
+  "section_order": [
+    "hero",
+    "our-summary",
+    "own-sample",
+    "pilot-004"
+  ],
+  "visible_status": "《敬风霜》舞台版已完成 · 《压轴人间》试片留档，生成暂停",
+  "film_playback": {
+    "duration": 63.28,
+    "observed_playing_times": [
+      14.052096,
+      42.255912
+    ],
+    "final_observed_time": 49.133254,
+    "final_paused": true,
+    "ready_state": 4,
+    "media_error": null,
+    "video_width": 1280,
+    "video_height": 720,
+    "full_playthrough_repeated": false
+  },
+  "summary_content_confirmed_in_accessibility_tree": true
+}

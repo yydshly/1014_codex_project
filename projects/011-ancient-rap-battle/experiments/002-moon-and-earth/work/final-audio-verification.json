@@ -1,0 +1,576 @@
+{
+  "schema_version": 1,
+  "experiment_id": "002-moon-and-earth",
+  "status": "measured_needs_review",
+  "purpose": "最终成片音乐完整性核验；不是生成模型原片native音轨QA，不验证嘴形或唱词。",
+  "measured_at": "2026-10-15T11:15:22.048970+00:00",
+  "paid_calls": 0,
+  "sources_modified": false,
+  "source": {
+    "path": "music/source-jing-feng-shuang.mp3",
+    "sha256": "91f5993a91f49e455fe9c60f60cc799692a96a40afa78c6b80e0f35831dbe8c8",
+    "user_original_byte_check": {
+      "present": true,
+      "matches_import": true
+    },
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "mp3",
+          "codec_long_name": "MP3 (MPEG audio layer 3)",
+          "codec_type": "audio",
+          "codec_tag_string": "[0][0][0][0]",
+          "codec_tag": "0x0000",
+          "sample_fmt": "fltp",
+          "sample_rate": "44100",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/14112000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 892845072,
+          "duration": "63.268500",
+          "bit_rate": "192000",
+          "disposition": {
+            "default": 0,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0
+          }
+        }
+      ],
+      "format": {
+        "filename": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\002-moon-and-earth\\music\\source-jing-feng-shuang.mp3",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "format_name": "mp3",
+        "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+        "start_time": "0.000000",
+        "duration": "63.268500",
+        "size": "1524567",
+        "bit_rate": "192774",
+        "probe_score": 51
+      }
+    }
+  },
+  "final": {
+    "path": "final/moon-and-earth-v2.mp4",
+    "sha256": "88c112607640aeaa960a4682aca4a533781d58b82e658af4ad2777fa1848871e",
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "width": 1280,
+          "height": 720,
+          "coded_width": 1280,
+          "coded_height": 720,
+          "closed_captions": 0,
+          "film_grain": 0,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuv420p",
+          "level": 31,
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "refs": 1,
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "time_base": "1/12800",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 809984,
+          "duration": "63.280000",
+          "bit_rate": "2119875",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "1582",
+          "extradata_size": 47,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "vendor_id": "[0][0][0][0]",
+            "encoder": "Lavc60.31.102 libx264"
+          }
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_long_name": "AAC (Advanced Audio Coding)",
+          "profile": "LC",
+          "codec_type": "audio",
+          "codec_tag_string": "mp4a",
+          "codec_tag": "0x6134706d",
+          "sample_fmt": "fltp",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "id": "0x2",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/48000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 3037440,
+          "duration": "63.280000",
+          "bit_rate": "163358",
+          "nb_frames": "2968",
+          "extradata_size": 5,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "SoundHandler",
+            "vendor_id": "[0][0][0][0]"
+          }
+        }
+      ],
+      "format": {
+        "filename": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\002-moon-and-earth\\final\\moon-and-earth-v2.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "63.280000",
+        "size": "18110087",
+        "bit_rate": "2289517",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf60.16.100"
+        }
+      }
+    }
+  },
+  "preconditions": {
+    "timeline_status": "confirmed",
+    "timeline_sha256": "5f006dfb5784d7e1d4e9f10795b3ed61ac7073dba5a801730e02fe4962174ead",
+    "assembly_status": "completed",
+    "assembly_report_sha256": "8f1fbe2db650d6281edf331cddf9e8acc326e4272aeb1f13595df1c450533a07",
+    "final_hash_matches_report": true,
+    "source_hash_matches_user_import": true,
+    "real_raw_clips": [
+      {
+        "path": "clips/A-block_t1.mp4",
+        "sha256": "4cd130d33053374667529f38e939aa62df9a1b78e7f207021c18caa47752a3fb"
+      },
+      {
+        "path": "clips/B-block_t1.mp4",
+        "sha256": "1b724e0607878c93f2dedbec9bb423db009fe43ddf5ddcc68990f45265273f56"
+      }
+    ]
+  },
+  "decode": {
+    "method": "ffmpeg full 0:a:0 decode to 48000 Hz stereo f32le; no limiter, time stretch or gain applied during verification",
+    "sample_rate": 48000,
+    "channels": 2,
+    "source_frames": 3036892,
+    "final_frames": 3038208,
+    "source_channel_samples": 6073784,
+    "final_channel_samples": 6076416,
+    "source_duration_s": 63.26858333333333,
+    "final_duration_s": 63.296,
+    "sample_frame_delta": 1316,
+    "duration_delta_s": 0.027416666666666666,
+    "timeline_duration_s": 63.28,
+    "expected_append_silence_s": 0.011416666666669073,
+    "declared_audio_alignment": {
+      "method": "append_silence_only",
+      "decoded_sample_rate": 48000,
+      "decoded_stereo_sample_frames": 3036892,
+      "padding_seconds": 0.011416666666669073,
+      "maximum_padding_seconds": 0.04,
+      "original_audio_trimmed_seconds": 0,
+      "original_audio_speed": 1,
+      "note": "完整保留原音轨的解码内容；仅在歌曲结束后补不超过一个视频帧的静音。AAC重新编码可能另含编码器延迟。"
+    },
+    "full_decode_completed": true,
+    "all_samples_finite": true
+  },
+  "alignment": {
+    "method": "8kHz waveform normalized cross-correlation, then 48kHz +/-6-frame refinement on energetic 3s window",
+    "coarse": {
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9995278086285714,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ]
+    },
+    "refined_lag_sample_frames_48k": 0,
+    "refined_lag_seconds": 0.0,
+    "lag_meaning": "positive = final decoded audio occurs later than reference",
+    "reference_start_frame": 0,
+    "final_start_frame": 0,
+    "compared_frames": 3036892,
+    "uncovered_source_start_frames": 0,
+    "uncovered_source_end_frames": 0,
+    "final_extra_tail_frames": 1316,
+    "refinement_window_center_s": 31.63429166666667
+  },
+  "overall_music_comparison": {
+    "correlation": 0.9986350504822363,
+    "gain_linear": 0.8367650923269796,
+    "gain_db": -1.5479289148033903,
+    "dc_offset": -1.9515215553942214e-05,
+    "rms_ratio_db": -1.5360899465385294,
+    "residual_snr_db": 25.62963521165897,
+    "residual_rms": 0.008462319926003242,
+    "reference_rms_dbfs": -14.270981888336983,
+    "final_rms_dbfs": -15.807071834875511,
+    "expected_gain_db": -1.5,
+    "timeline_declared_gain_db": -1.5,
+    "measured_gain_delta_to_expected_db": -0.04792891480339034
+  },
+  "local_windows": [
+    {
+      "reference_center_s": 2.0,
+      "reference_window_s": [
+        0.5,
+        3.5
+      ],
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9996717837125416,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9994000147014379,
+      "gain_linear": 0.837156967306033,
+      "gain_db": -1.5438620792388902,
+      "dc_offset": 8.685438504328743e-06,
+      "rms_ratio_db": -1.538643282332879,
+      "residual_snr_db": 29.204384030269402,
+      "residual_rms": 0.002646697430335897,
+      "reference_rms_dbfs": -20.797509447973518,
+      "final_rms_dbfs": -22.3361527303064
+    },
+    {
+      "reference_center_s": 7.926858333333334,
+      "reference_window_s": [
+        6.426854166666667,
+        9.426854166666667
+      ],
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9992636970922991,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9981139827480277,
+      "gain_linear": 0.8347013752227845,
+      "gain_db": -1.5693774194162755,
+      "dc_offset": -1.3929357564088454e-05,
+      "rms_ratio_db": -1.552985780739918,
+      "residual_snr_db": 24.221943594310524,
+      "residual_rms": 0.007231189782313326,
+      "reference_rms_dbfs": -17.024371820476922,
+      "final_rms_dbfs": -18.577357601216843
+    },
+    {
+      "reference_center_s": 13.853716666666667,
+      "reference_window_s": [
+        12.353708333333334,
+        15.353708333333334
+      ],
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9996402222299082,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9986600148609973,
+      "gain_linear": 0.8368633417535453,
+      "gain_db": -1.5469091141597646,
+      "dc_offset": -7.173067664484854e-05,
+      "rms_ratio_db": -1.5353589586007534,
+      "residual_snr_db": 25.70996417244594,
+      "residual_rms": 0.010278866925452086,
+      "reference_rms_dbfs": -12.500791207789685,
+      "final_rms_dbfs": -14.036150166390438
+    },
+    {
+      "reference_center_s": 19.780575,
+      "reference_window_s": [
+        18.280583333333333,
+        21.280583333333333
+      ],
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9994744272982021,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9985096660950766,
+      "gain_linear": 0.8364821083258934,
+      "gain_db": -1.5508668761820177,
+      "dc_offset": -5.552958573967065e-05,
+      "rms_ratio_db": -1.537976561447949,
+      "residual_snr_db": 25.24714712002617,
+      "residual_rms": 0.010204308374129011,
+      "reference_rms_dbfs": -13.024108448478295,
+      "final_rms_dbfs": -14.562085009926244
+    },
+    {
+      "reference_center_s": 25.707433333333334,
+      "reference_window_s": [
+        24.2074375,
+        27.2074375
+      ],
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9995832689870257,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.998981145795584,
+      "gain_linear": 0.8370226566264878,
+      "gain_db": -1.5452557262831725,
+      "dc_offset": -7.748336973410243e-05,
+      "rms_ratio_db": -1.5364789226732407,
+      "residual_snr_db": 26.90193843480596,
+      "residual_rms": 0.008898796722720334,
+      "reference_rms_dbfs": -12.564139778673635,
+      "final_rms_dbfs": -14.100618701346876
+    },
+    {
+      "reference_center_s": 31.63429166666667,
+      "reference_window_s": [
+        30.134291666666666,
+        33.13429166666667
+      ],
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9995884615282411,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9985694878412851,
+      "gain_linear": 0.8361687253707333,
+      "gain_db": -1.5541216018426098,
+      "dc_offset": -7.2450060562903595e-06,
+      "rms_ratio_db": -1.5417007090680648,
+      "residual_snr_db": 25.425457771347645,
+      "residual_rms": 0.011612342637775856,
+      "reference_rms_dbfs": -11.719712503054822,
+      "final_rms_dbfs": -13.261413212122887
+    },
+    {
+      "reference_center_s": 37.56115,
+      "reference_window_s": [
+        36.061145833333335,
+        39.061145833333335
+      ],
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9995373844270747,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9986329112906897,
+      "gain_linear": 0.8359212933730332,
+      "gain_db": -1.5566922374143124,
+      "dc_offset": 1.6193121429565905e-05,
+      "rms_ratio_db": -1.5447885328840607,
+      "residual_snr_db": 25.622820182999902,
+      "residual_rms": 0.00590565294317478,
+      "reference_rms_dbfs": -17.39315364838867,
+      "final_rms_dbfs": -18.937942181272728
+    },
+    {
+      "reference_center_s": 43.48800833333333,
+      "measurable": false
+    },
+    {
+      "reference_center_s": 49.41486666666667,
+      "reference_window_s": [
+        47.914875,
+        50.914875
+      ],
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9994959096368121,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9983596553336465,
+      "gain_linear": 0.8366846365976356,
+      "gain_db": -1.5487641111935677,
+      "dc_offset": 3.562359268270438e-05,
+      "rms_ratio_db": -1.5344771104433554,
+      "residual_snr_db": 24.82965280849305,
+      "residual_rms": 0.011512264467611744,
+      "reference_rms_dbfs": -12.396177065062359,
+      "final_rms_dbfs": -13.930654175505712
+    },
+    {
+      "reference_center_s": 55.341725000000004,
+      "reference_window_s": [
+        53.84172916666667,
+        56.84172916666667
+      ],
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9995396461354178,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9984045489907294,
+      "gain_linear": 0.8367498814491525,
+      "gain_db": -1.5480868100217517,
+      "dc_offset": -9.97698750712546e-05,
+      "rms_ratio_db": -1.5343541016061946,
+      "residual_snr_db": 24.950462195150788,
+      "residual_rms": 0.011873077824590732,
+      "reference_rms_dbfs": -12.006200300899959,
+      "final_rms_dbfs": -13.540554402506153
+    },
+    {
+      "reference_center_s": 61.26858333333333,
+      "reference_window_s": [
+        59.76858333333333,
+        62.76858333333333
+      ],
+      "measurable": true,
+      "local_lag_s": 0.0,
+      "lag_samples_8k": 0,
+      "correlation_8k": 0.9999303813844795,
+      "at_search_boundary": false,
+      "search_range_samples_8k": [
+        -2000,
+        2000
+      ],
+      "correlation": 0.9998424261315082,
+      "gain_linear": 0.8408347943921689,
+      "gain_db": -1.50578650334835,
+      "dc_offset": -2.745156567725461e-06,
+      "rms_ratio_db": -1.5044376701822049,
+      "residual_snr_db": 35.01383147485332,
+      "residual_rms": 0.00028383167543557256,
+      "reference_rms_dbfs": -34.41839647091292,
+      "final_rms_dbfs": -35.92283414109512
+    }
+  ],
+  "timing_drift": {
+    "reliable_window_count": 10,
+    "lag_slope_seconds_per_second": 0.0,
+    "estimated_audio_speed_ratio": 1.0,
+    "predicted_end_to_end_lag_change_s": 0.0,
+    "intercept_s": 0.0
+  },
+  "final_float_level": {
+    "sample_peak_linear": 0.9081661701202393,
+    "sample_peak_dbfs": -0.8366935986624315,
+    "samples_abs_ge_1": 0,
+    "sample_peak_is_not_oversampled_true_peak": true
+  },
+  "advisories": [],
+  "automatic_integrity_pass": null,
+  "manual_music_review": "required",
+  "lip_sync_verified": null,
+  "interpretation": "只报告实测和宽松复核提示；AAC为有损编码，残差不要求逐样本镜像。样本覆盖、声明补尾、全局与局部对齐共同帮助识别裁切或变速。",
+  "limitations": [
+    "编码延迟、MP4 edit list和AAC帧余量可能影响解码样本数与首尾覆盖；边界静音无法靠相关性单独证明完整。",
+    "最小二乘增益和波形相关不等于音乐听感验收；残差包含AAC损失与潜在处理差异。",
+    "局部拍点/旋律重复可能造成错峰，速度比仅在可靠窗口足够时提供候选。",
+    "此报告检查最终统一原曲，不应替换work/video-qa.json原片模型native音轨结果，更不能证明嘴形准确。"
+  ]
+}

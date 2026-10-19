@@ -1,0 +1,389 @@
+{
+  "schema_version": 1,
+  "experiment_id": "004-performance-film",
+  "repair_id": "audio-driven-repair-004",
+  "status": "exported-awaiting-full-review",
+  "full_film_completed": true,
+  "old_rejected_video_sha256": "525c42dfe2bbe7bf0fe0dff77f122451464927e5aede6488a1b19f9691a0cb45",
+  "original_rejection_unchanged": true,
+  "mv_feature_used": false,
+  "local_generation_models_used": false,
+  "old_rejected_singing_reused": false,
+  "pilot_gate": {
+    "accepted_by": "human-user",
+    "source_video_sha256": "13af814763a8ede67fb627e5724342bb760446e80a7610b8ce2a07d61668d129",
+    "evidence_path": "work/audio-driven-repair/pilot-acceptance.json",
+    "evidence_sha256": "ddeccce64e9a8ef78c2f65ef7f3487e2d2063d772386f1aa16c49756091a877e",
+    "scope": "this-pilot-only"
+  },
+  "video": {
+    "path": "work/audio-driven-repair/full-reedit/final/压轴人间-原曲驱动舞台版.mp4",
+    "sha256": "97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6",
+    "bytes": 45964902,
+    "width": 1280,
+    "height": 720,
+    "fps": 25,
+    "frames": 2366,
+    "duration": 94.64,
+    "container_duration": 94.64,
+    "full_decode": true
+  },
+  "audio": {
+    "path": "music/source-ya-zhou-ren-jian.mp3",
+    "sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+    "source_sample_frames_48k": 4541545,
+    "output_sample_frames_48k": 4542720,
+    "tail_silence_samples": 1175,
+    "tail_silence_seconds": 0.024479166666666666,
+    "gain_db": -1.5,
+    "gain_applications": 1,
+    "trim_start": 0,
+    "trim_end": 0,
+    "speed": 1,
+    "full_song_preserved": true,
+    "adjusted_source_sample_peak_dbfs": -1.4406992197036743,
+    "adjusted_source_samples_abs_ge_1": 0,
+    "output_verification": {
+      "status": "passed-full-song-audio-content-check",
+      "decoded_aac_frames": 4543488,
+      "compared_frames": 4542720,
+      "zero_offset_waveform_correlation": 0.9995417904431186,
+      "best_fit_gain_relative_to_once_adjusted_source_db": -0.032922778181008326,
+      "aac_roundtrip_snr_db": 30.34389004665421,
+      "window_correlations": [
+        {
+          "start": 0,
+          "end": 10,
+          "correlation": 0.9998895030609443
+        },
+        {
+          "start": 10,
+          "end": 20,
+          "correlation": 0.9998263526916497
+        },
+        {
+          "start": 20,
+          "end": 30,
+          "correlation": 0.9997255388396226
+        },
+        {
+          "start": 30,
+          "end": 40,
+          "correlation": 0.9997188469555374
+        },
+        {
+          "start": 40,
+          "end": 50,
+          "correlation": 0.9994576629536821
+        },
+        {
+          "start": 50,
+          "end": 60,
+          "correlation": 0.9994307651149851
+        },
+        {
+          "start": 60,
+          "end": 70,
+          "correlation": 0.9993771550485193
+        },
+        {
+          "start": 70,
+          "end": 80,
+          "correlation": 0.9993166804009624
+        },
+        {
+          "start": 80,
+          "end": 90,
+          "correlation": 0.9996772612646898
+        }
+      ],
+      "aac_decoded_sample_peak_dbfs": -1.4784595966339111,
+      "aac_decoded_samples_abs_ge_1": 0,
+      "limitation": "AAC有损编码会改变采样；此核验只证明配乐完整/无额外偏移或重复衰减，不证明嘴型。"
+    },
+    "source_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0"
+  },
+  "singing_sources": [
+    {
+      "id": "DUFU_VERSE14",
+      "task_id": "1027840",
+      "sha256": "3b53a8ea5139031542769b19315232000c250d57ce437d9dbfb3f2d02a2368df",
+      "audio_reference_submitted": true,
+      "song_in": 28.4,
+      "song_out": 42.4,
+      "acceptance_scope": "independent-visual-and-technical-review-only"
+    },
+    {
+      "id": "PILOT_H3",
+      "task_id": "1027778",
+      "sha256": "13af814763a8ede67fb627e5724342bb760446e80a7610b8ce2a07d61668d129",
+      "audio_reference_submitted": true,
+      "song_in": 9.4,
+      "song_out": 14.4,
+      "acceptance_scope": "this-exact-human-reviewed-pilot-only"
+    },
+    {
+      "id": "DUFU_CHORUS1",
+      "task_id": "1027844",
+      "sha256": "26065b2070553926f5769a9acfe97e8f28c367c2acc889c21bdc305e20001938",
+      "audio_reference_submitted": true,
+      "song_in": 49.76,
+      "song_out": 54.76,
+      "acceptance_scope": "independent-visual-and-technical-review-only"
+    },
+    {
+      "id": "LIBAI_CHORUS2",
+      "task_id": "1027835",
+      "sha256": "ca86a81d51b8b8fc16ed2c95d017ed9f836e2e236a504337bf8340ef51b7e310",
+      "audio_reference_submitted": true,
+      "song_in": 65.6,
+      "song_out": 73.6,
+      "acceptance_scope": "independent-visual-and-technical-review-only"
+    },
+    {
+      "id": "LIBAI_VERSE",
+      "task_id": "1027831",
+      "sha256": "5cc68050c1e346eecacd20a2b633bab67e2f9219e81d73dcdb1ab8d352458308",
+      "audio_reference_submitted": true,
+      "song_in": 14.4,
+      "song_out": 19.4,
+      "acceptance_scope": "independent-visual-and-technical-review-only"
+    },
+    {
+      "id": "LIBAI_CHORUS1",
+      "task_id": "1027834",
+      "sha256": "a414b510eb9330b910eb5b520f760b1d18dae425bdc851b26540069ef446ee3a",
+      "audio_reference_submitted": true,
+      "song_in": 42.24,
+      "song_out": 47.24,
+      "acceptance_scope": "independent-visual-and-technical-review-only"
+    }
+  ],
+  "assets": {
+    "video": {
+      "path": "media/repaired-film-004/ya-zhou-ren-jian-audio-driven.mp4",
+      "source_path": "work/audio-driven-repair/full-reedit/final/压轴人间-原曲驱动舞台版.mp4",
+      "sha256": "97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6",
+      "bytes": 45964902
+    },
+    "poster": {
+      "path": "media/repaired-film-004/ya-zhou-ren-jian-audio-driven.jpg",
+      "source_path": "work/audio-driven-repair/full-reedit/final/压轴人间-原曲驱动舞台版封面.jpg",
+      "sha256": "9191bdea2eb2afcf3a766c0c32b29d458ed5a6f1af2724cdf9946b430823b0b6",
+      "bytes": 125704
+    }
+  },
+  "quality": {
+    "agent_subjective_audio_review_claimed": false,
+    "full_film_user_accepted": false
+  },
+  "edit_summary": {
+    "shots": 22,
+    "corresponding_performance_seconds": 40.96,
+    "audience_seconds": 20.08,
+    "repeated_source_time_ranges": false,
+    "source_speed": 1,
+    "still_image_motion": false,
+    "old_wrong_mouth_faces_in_vocal_sections": false,
+    "crop_inserts_seconds": 7.44
+  },
+  "caption_policy": {
+    "events": [
+      {
+        "id": "VA01",
+        "text": "我携一身月色，踏过长安的墙",
+        "start": 9.84,
+        "end": 14.12,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "VA02",
+        "text": "袖里藏着清风，胸口住着汪洋",
+        "start": 15.08,
+        "end": 18.64,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "VA03",
+        "text": "把失意酿成酒，把夜色唱到亮",
+        "start": 19.64,
+        "end": 23.24,
+        "actor_reference": "李白",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "VA04",
+        "text": "今夜借你鼓点，让天地听我讲",
+        "start": 24.28,
+        "end": 27.98,
+        "actor_reference": "李白",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "VB01",
+        "text": "我从长街走来，听过万户的忙",
+        "start": 28.9,
+        "end": 32.6,
+        "actor_reference": "杜甫",
+        "timing_status": "short-window-supported-start-uncertain"
+      },
+      {
+        "id": "VB03",
+        "text": "有人仰望星河，有人守着炉膛",
+        "start": 33.34,
+        "end": 37.88,
+        "actor_reference": "杜甫",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "VB04",
+        "text": "我让无名的脸，站到舞台中央",
+        "start": 38.2,
+        "end": 42.26,
+        "actor_reference": "杜甫",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "C1A01",
+        "text": "酒杯一举，银河都来捧场",
+        "start": 42.26,
+        "end": 45.06,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "C1A02",
+        "text": "你的工整，装不下我的月光",
+        "start": 46.98,
+        "end": 49.76,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "C1B01",
+        "text": "月光再亮，也得照见风霜",
+        "start": 49.74,
+        "end": 52.1,
+        "actor_reference": "杜甫",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "C1B02",
+        "text": "我把人间，写成压轴的回响",
+        "start": 52.1,
+        "end": 54.46,
+        "actor_reference": "杜甫",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "BRA01",
+        "text": "你把千家灯火，捧在手掌",
+        "start": 54.46,
+        "end": 56.82,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "BRB01",
+        "text": "你让天边明月，落在肩上",
+        "start": 56.82,
+        "end": 59.34,
+        "actor_reference": "杜甫",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "BRA02",
+        "text": "这一杯，敬远方",
+        "start": 59.34,
+        "end": 61.88,
+        "actor_reference": "李白",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "C2A01",
+        "text": "酒杯一举，银河都来捧场",
+        "start": 65.6,
+        "end": 68.6,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "C2A02",
+        "text": "你的工整，装不下我的月光",
+        "start": 70.56,
+        "end": 73.32,
+        "actor_reference": "李白",
+        "timing_status": "short-window-supported"
+      },
+      {
+        "id": "C2B01",
+        "text": "月光再亮，也得照见风霜",
+        "start": 73.34,
+        "end": 75.68,
+        "actor_reference": "杜甫",
+        "timing_status": "phonetic-approximation"
+      },
+      {
+        "id": "C2B02",
+        "text": "我把人间，写成压轴的回响",
+        "start": 75.68,
+        "end": 79.1,
+        "actor_reference": "杜甫",
+        "timing_status": "end-uncertain-phonetic-approximation"
+      },
+      {
+        "id": "DUO02",
+        "text": "让这人间，听见回响",
+        "start": 80.3,
+        "end": 85.86,
+        "actor_reference": "合唱",
+        "timing_status": "long-note-end-supported-start-uncertain"
+      }
+    ],
+    "omitted_uncertain_lines": [
+      {
+        "id": "VB02",
+        "text": "鞋底沾着泥土，纸上落着风霜",
+        "reason": "reference_unconfirmed_possibly_omitted"
+      },
+      {
+        "id": "BRB02",
+        "text": "这一笔，敬担当",
+        "reason": "possible-repeat-or-word-change-needs-listening"
+      },
+      {
+        "id": "DUO01",
+        "text": "敬月光，也敬风霜",
+        "reason": "reference_unconfirmed_possibly_omitted"
+      }
+    ],
+    "timings": "existing-editorial-candidates-not-new-listening-confirmation",
+    "word_precise_timing_claim": false
+  },
+  "budget_ledger_snapshot": {
+    "source_path": "work/audio-driven-repair/full-reedit/budget-ledger-at-render.json",
+    "sha256": "8b7001079219ea2194dc7aba1b5bd2697e617cdd74d9c0c856e7d0cbdf8f8935"
+  },
+  "budget": {
+    "cap": 2400,
+    "committed": 2265,
+    "unconfirmed_reserve": 110,
+    "exposure": 2375,
+    "remaining": 25,
+    "production_tasks": 6,
+    "production_reported_credits": 615,
+    "invoice_verified": false
+  },
+  "assembly_evidence": {
+    "source_path": "work/audio-driven-repair/full-reedit/reedit-film-report.json",
+    "sha256": "b08aa5532582bd9b76c8a19522dd62b6c5086fbe39727bb82420fb935f9e760d"
+  },
+  "limitations": [
+    "5秒pilot由用户带声验收，后续片段逐条记录真实审核，不以音频相关性代替嘴型审核。",
+    "全曲与原速保留；部分唱词使用观众、舞台、无脸衣纹动态覆盖，不声称94秒均为正脸演唱。",
+    "三处旧片裁切为1.78倍空间放大短插镜，非新增原生画质素材。",
+    "字幕延用候选定位，三条未定位或改词疑点仍省略。"
+  ]
+}

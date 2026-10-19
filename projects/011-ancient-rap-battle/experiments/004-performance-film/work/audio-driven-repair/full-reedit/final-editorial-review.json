@@ -1,0 +1,41 @@
+{
+  "reviewed_at_utc": "2026-10-16T04:53:34.974145+00:00",
+  "source_video_sha256": "97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6",
+  "status": "technical-and-editorial-frame-review-passed-awaiting-user-audiovisual-review",
+  "all22_shot_midpoints_actually_viewed": true,
+  "all21_cut_pairs_actually_viewed": true,
+  "full_resolution_final_frames_actually_viewed_seconds": [
+    35.32,
+    52.1,
+    69.1
+  ],
+  "observations": [
+    "The locked Li Bai and Du Fu costume/face identities, moon stage, gold lights and wooden audience galleries remain recognizable across the edit.",
+    "All clear singing shots are the newly audio-referenced sources at their exact original-song positions. Previously rejected singing faces are absent in voiced sections.",
+    "Audience, costume and faceless stage inserts provide changes of scale. Cropped detail shots remain declared as derived from actual older video.",
+    "Subtitles remain below faces; no accidental black cut, obvious frame corruption or unexpected scene replacement was observed in these editorial samples."
+  ],
+  "evidence_pages": {
+    "storyboard_pages": [
+      "work/audio-driven-repair/full-reedit/final-review/storyboard-01.jpg",
+      "work/audio-driven-repair/full-reedit/final-review/storyboard-02.jpg",
+      "work/audio-driven-repair/full-reedit/final-review/storyboard-03.jpg"
+    ],
+    "cut_neighbour_pages": [
+      "work/audio-driven-repair/full-reedit/final-review/cuts-01.jpg",
+      "work/audio-driven-repair/full-reedit/final-review/cuts-02.jpg",
+      "work/audio-driven-repair/full-reedit/final-review/cuts-03.jpg"
+    ],
+    "scope": "真实成片各镜头中点及全部切口前后帧；需另做全片原速审看，静帧不是口型或连续动作验收。"
+  },
+  "limitations": [
+    "Frame samples do not establish full-speed continuous motion or phoneme accuracy.",
+    "No subjective audio listening, human full-film acceptance or complete browser playback is claimed."
+  ],
+  "browser_ui_check": {
+    "status": "not-completed-old-error-tab-blocked-by-url-policy",
+    "user_reported_refreshed_page_opens": true,
+    "bypass_used": false
+  },
+  "local_models_used": false
+}

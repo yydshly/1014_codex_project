@@ -62,6 +62,17 @@
       "source_url": "https://x.com/gkxspace/status/2109970698303373750"
     },
     {
+      "id": "011",
+      "slug": "ancient-rap-battle",
+      "title": "古人说唱 Battle：AI 视频制作流程研究",
+      "repository": "https://github.com/10291124jcjc-dotcom/ancient-rap-battle",
+      "summary": "研究歌曲、人物图与远端逐句视频的编排机制；制作94.64秒《压轴人间》，记录原曲驱动修复、阶段验收、可复用资产与扩展方向。",
+      "status": "研究中",
+      "preview": "assets/ancient-rap-battle-research-overview.png",
+      "preview_caption": "011原创研究引导图：源库原作、我们的探索与94.64秒舞台成片真实画面对照，说明音频驱动、制作价值与验收边界。",
+      "demo_url": null
+    },
+    {
       "id": "014",
       "slug": "cyber-xiaoya-study",
       "title": "赛博小雅：真人拟人化效果与模型依赖研究",

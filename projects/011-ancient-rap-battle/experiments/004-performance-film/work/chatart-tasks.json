@@ -1,0 +1,1261 @@
+{
+  "schema_version": 1,
+  "experiment_id": "004-performance-film",
+  "title": "压轴人间",
+  "status": "original-song-full-repair-exported-awaiting-user-review",
+  "credit_cap": 2400,
+  "currency": "ChatArt diamonds",
+  "authorization": {
+    "source": "direct-human-user",
+    "date": "2026-10-15",
+    "answer": "2400 钻（推荐）",
+    "purpose": "重新定制，以效果为准制作完整音乐视频样例，允许必要重做"
+  },
+  "music_source": {
+    "path": "music/source-ya-zhou-ren-jian.mp3",
+    "sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+    "size_bytes": 2276894,
+    "lyrics_reference": "docs/full-song-lyrics.txt",
+    "lyrics_confirmed_by_user": true,
+    "full_song_required": true
+  },
+  "tasks": [
+    {
+      "id": "OPEN_t1",
+      "kind": "stage-establishing",
+      "status": "not-created-no-card-no-observed-charge",
+      "request_kind": "text-to-video",
+      "model_label": "MiniMax H3",
+      "duration_requested": 9,
+      "quality_label": "2k",
+      "aspect_ratio": "16:9",
+      "credits_displayed": 180,
+      "prompt": "《压轴人间》电影舞台开场。9秒，横版16:9，真人实拍电影质感，一条连续的稳定器摇臂镜头。原创中国成年男性演员扮演李白和杜甫，不模仿明星。李白约32岁，清瘦俊朗、棱角脸、清洁无须、黑色高马尾与银色发冠，象牙白丝绸长袍、少量银线刺绣、青绿色单肩披帛、黑靴；杜甫约46岁，成熟坚毅的面庞、短黑胡须略带灰色、低束文士发髻，深藏蓝长袍、铜金刺绣衣襟、暗赭内衫和皮腰带、黑靴。两人始终是同一张脸同一套衣服，左白右蓝，手持黑色无线麦克风在胸前，嘴唇闭合，此段不演唱不说话。舞台是黑色漆面圆形地台，细同心黄铜金纹、湿润镜面地面反射；舞台背后有巨大的开放式金属月轮门，深蓝满月从月轮内可见，左右唐式深木亭翼和琥珀灯柱，三面阶梯看台挤满穿质朴深色长袍的观众。灯光冷蓝背光和暖金侧逆光，贴地薄雾低于膝盖，肤色自然，丝绸、皮肤毛孔、发丝和地面反射真实，空间层次强。0–3秒：摄影机从观众背后上方平滑前推下降，近处观众举手与扇子形成真实视差，完整揭示舞台与两位人物站位；3–6秒：下降到舞台略低角度，两人自然迈半步面对彼此，衣袖和披帛随风轻摆，麦克风手势自然；6–9秒：继续平滑推近为清楚的双人膝上中景，两张脸同时清晰、人物占画面高度约70%，他们交换坚定的眼神，背景灯束向天空缓慢扫动、观众有自然动作，镜头轻缓停稳但人物仍有呼吸和眨眼。动作物理可信，人物比例稳定，不变脸不变服，不增加主角。摄影风格35mm电影镜头、自然运动模糊、克制胶片颗粒、冷蓝暖金，真实演出空间。避免动画感、游戏CG、塑料皮肤、定格图片推拉、幻灯片、疯狂转圈、夸张魔法和过曝。无字幕、无海报文字、无台标、水印或多余文字。只允许很低的环境底声，不添加对白或主唱。",
+      "references": [],
+      "audio": null,
+      "clip": "clips/OPEN_t1.mp4",
+      "output_sha256": null,
+      "attempted_at": "2026-10-15T12:41:43.905Z",
+      "note": "刷新并检查文生/图生两分类后均无新卡，余额仍5115；不认定实际扣费，预留180钻作为未确认风险。",
+      "submitted": false,
+      "credits_committed": 0
+    },
+    {
+      "id": "OPEN_t2",
+      "kind": "stage-establishing",
+      "status": "rejected-before-creation",
+      "request_kind": "omni-audio-reference",
+      "model_label": "MiniMax H3",
+      "duration_requested": 9,
+      "quality_label": "2k",
+      "aspect_ratio": "16:9",
+      "credits_displayed": 180,
+      "prompt": "《压轴人间》电影舞台开场。9秒，横版16:9，真人实拍电影质感，一条连续的稳定器摇臂镜头。原创中国成年男性演员扮演李白和杜甫，不模仿明星。李白约32岁，清瘦俊朗、棱角脸、清洁无须、黑色高马尾与银色发冠，象牙白丝绸长袍、少量银线刺绣、青绿色单肩披帛、黑靴；杜甫约46岁，成熟坚毅的面庞、短黑胡须略带灰色、低束文士发髻，深藏蓝长袍、铜金刺绣衣襟、暗赭内衫和皮腰带、黑靴。两人始终是同一张脸同一套衣服，左白右蓝，手持黑色无线麦克风在胸前，嘴唇闭合，此段不演唱不说话。舞台是黑色漆面圆形地台，细同心黄铜金纹、湿润镜面地面反射；舞台背后有巨大的开放式金属月轮门，深蓝满月从月轮内可见，左右唐式深木亭翼和琥珀灯柱，三面阶梯看台挤满穿质朴深色长袍的观众。灯光冷蓝背光和暖金侧逆光，贴地薄雾低于膝盖，肤色自然，丝绸、皮肤毛孔、发丝和地面反射真实，空间层次强。0–3秒：摄影机从观众背后上方平滑前推下降，近处观众举手与扇子形成真实视差，完整揭示舞台与两位人物站位；3–6秒：下降到舞台略低角度，两人自然迈半步面对彼此，衣袖和披帛随风轻摆，麦克风手势自然；6–9秒：继续平滑推近为清楚的双人膝上中景，两张脸同时清晰、人物占画面高度约70%，他们交换坚定的眼神，背景灯束向天空缓慢扫动、观众有自然动作，镜头轻缓停稳但人物仍有呼吸和眨眼。动作物理可信，人物比例稳定，不变脸不变服，不增加主角。摄影风格35mm电影镜头、自然运动模糊、克制胶片颗粒、冷蓝暖金，真实演出空间。避免动画感、游戏CG、塑料皮肤、定格图片推拉、幻灯片、疯狂转圈、夸张魔法和过曝。无字幕、无海报文字、无台标、水印或多余文字。只允许很低的环境底声，不添加对白或主唱。 音频1是本片原曲前奏，只跟随节奏组织镜头和灯光，不能添加说话或演唱。",
+      "references": [
+        {
+          "kind": "audio",
+          "path": "music/full-song-drivers/OPEN-9s.wav"
+        }
+      ],
+      "audio": "music/full-song-drivers/OPEN-9s.wav",
+      "clip": "clips/OPEN_t2.mp4",
+      "output_sha256": null,
+      "submitted": false,
+      "credits_committed": 0,
+      "ui_error": "请上传图片或视频。"
+    },
+    {
+      "id": "OPEN_t3",
+      "kind": "stage-establishing-master",
+      "status": "not-created-after-user-and-ui-verification",
+      "request_kind": "text-to-video",
+      "model_label": "Seedance 2.0",
+      "duration_requested": 9,
+      "quality_label": "1080p",
+      "aspect_ratio": "16:9",
+      "credits_displayed": 270,
+      "prompt": "《压轴人间》电影舞台开场。9秒，横版16:9，真人实拍电影质感，一条连续的稳定器摇臂镜头。原创中国成年男性演员扮演李白和杜甫，不模仿明星。李白约32岁，清瘦俊朗、棱角脸、清洁无须、黑色高马尾与银色发冠，象牙白丝绸长袍、少量银线刺绣、青绿色单肩披帛、黑靴；杜甫约46岁，成熟坚毅的面庞、短黑胡须略带灰色、低束文士发髻，深藏蓝长袍、铜金刺绣衣襟、暗赭内衫和皮腰带、黑靴。两人始终是同一张脸同一套衣服，左白右蓝，手持黑色无线麦克风在胸前，嘴唇闭合，此段不演唱不说话。舞台是黑色漆面圆形地台，细同心黄铜金纹、湿润镜面地面反射；舞台背后有巨大的开放式金属月轮门，深蓝满月从月轮内可见，左右唐式深木亭翼和琥珀灯柱，三面阶梯看台挤满穿质朴深色长袍的观众。灯光冷蓝背光和暖金侧逆光，贴地薄雾低于膝盖，肤色自然，丝绸、皮肤毛孔、发丝和地面反射真实，空间层次强。0–3秒：摄影机从观众背后上方平滑前推下降，近处观众举手与扇子形成真实视差，完整揭示舞台与两位人物站位；3–6秒：下降到舞台略低角度，两人自然迈半步面对彼此，衣袖和披帛随风轻摆，麦克风手势自然；6–9秒：继续平滑推近为清楚的双人膝上中景，两张脸同时清晰、人物占画面高度约70%，他们交换坚定的眼神，背景灯束向天空缓慢扫动、观众有自然动作，镜头轻缓停稳但人物仍有呼吸和眨眼。动作物理可信，人物比例稳定，不变脸不变服，不增加主角。摄影风格35mm电影镜头、自然运动模糊、克制胶片颗粒、冷蓝暖金，真实演出空间。避免动画感、游戏CG、塑料皮肤、定格图片推拉、幻灯片、疯狂转圈、夸张魔法和过曝。无字幕、无海报文字、无台标、水印或多余文字。只允许很低的环境底声，不添加对白或主唱。",
+      "references": [],
+      "audio": null,
+      "clip": "clips/OPEN_t3.mp4",
+      "output_sha256": null,
+      "submitted": false,
+      "submitted_at": "2026-10-15T12:52:15.633Z",
+      "ui_submission_time": "2026/10/15 20:50",
+      "credits_committed": 0,
+      "ui_status": "网络开小差，请刷新页面重新获取结果",
+      "note": "最初卡片与余额变化未持久化；用户外部查看无任务，恢复后的页面余额仍5115，未认定实际扣费。"
+    },
+    {
+      "id": "SKILL_OPEN_t1",
+      "kind": "stage-establishing-pilot",
+      "status": "completed-pilot-accepted",
+      "request_kind": "ordinary-omni-reference-video",
+      "model_label": "Seedance 2.0",
+      "duration_requested": 10,
+      "quality_label": "720p",
+      "aspect_ratio": "16:9",
+      "credits_estimated": 180,
+      "estimate_kind": "official-script-static-table-not-live-quote",
+      "references": [
+        {
+          "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\refs\\R01-MASTER.png",
+          "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c"
+        },
+        {
+          "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\refs\\R02-LIBAI.png",
+          "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871"
+        },
+        {
+          "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\refs\\R03-DUFU.png",
+          "sha256": "5d03d6ee8a07d9cc849821137555e76d8e557e8c2937569be5baa3b190d1fdb1"
+        },
+        {
+          "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\refs\\R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a"
+        }
+      ],
+      "prompt_file": "work/skill-video-pilot/OPEN-prompt.txt",
+      "audio": null,
+      "submitted": true,
+      "credits_committed": 150,
+      "prepared_at": "2026-10-15T16:01:38.177328+00:00",
+      "clip": "clips/skill-open-t1-download/SKILL_OPEN_t1-original.mp4",
+      "note": "普通视频10秒测试已完成；模型原片与配原曲前奏9.4秒预览均保留。官方返回150钻，与提交前后余额差一致；独立账单未核验。外部歌曲口型未测试。",
+      "provider_task_id": "1027533",
+      "submitted_at": "2026-10-15T16:02:33.340718+00:00",
+      "credits_reported_by_provider": 150,
+      "completed_at": "2026-10-15T16:14:02.280247+00:00",
+      "output_sha256": "bb101af1ac0ae290818079b6d5ad9fa82afee21fd98bdd63a1b9d4eca75510c3",
+      "preview": "delivery/skill-video-pilot/压轴人间-开场预览-普通视频生成.mp4",
+      "qa_report": "work/skill-video-pilot/qa-result.json"
+    },
+    {
+      "id": "SKILL_LIP_A1_t1",
+      "kind": "singing-lip-sync-transport-probe",
+      "status": "video-completed-lip-sync-not-passed",
+      "request_kind": "ordinary-omni-reference-existing-schema-audio-probe",
+      "model_label": "Seedance 2.0",
+      "duration_requested": 5,
+      "quality_label": "720p",
+      "aspect_ratio": "16:9",
+      "credits_estimated": 90,
+      "references": [
+        {
+          "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\refs\\R02-LIBAI.png",
+          "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871",
+          "media_type": "image"
+        },
+        {
+          "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\refs\\R01-MASTER.png",
+          "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c",
+          "media_type": "image"
+        },
+        {
+          "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\work\\lip-pilot-A1\\VA01-song-9.4-to-14.4.mp3",
+          "sha256": "99e9fbcf805494f16c9fe88d55ab5a8eca19f322491d7bc08fb2eccf3649ff6c",
+          "media_type": "audio"
+        }
+      ],
+      "audio": "work/lip-pilot-A1/VA01-song-9.4-to-14.4.mp3",
+      "song_range": [
+        9.4,
+        14.4
+      ],
+      "lyrics": "我携一身月色，踏过长安的墙",
+      "prompt_file": "work/lip-pilot-A1/singing-prompt.txt",
+      "prepared_at": "2026-10-15T16:25:40.700652+00:00",
+      "submitted": true,
+      "credits_committed": 75,
+      "lip_sync_passed": false,
+      "note": "真实动态单人演唱底片已生成；原生音轨与参考不一致，ASR仅为粗筛，未判口型通过。MP3参考是否被接口用于驱动仍未证实。用户已放弃本地口型模型路线，现仅保留真实试片及原曲对照作效果说明。",
+      "provider_task_id": "1027559",
+      "submitted_at": "2026-10-15T16:26:02.136228+00:00",
+      "credits_reported_by_provider": 75,
+      "clip": "clips/skill-lip-A1-t1-download/video_20261016003014.mp4",
+      "output_sha256": "c5985495b7220d2b9bf39f09764b944b2acce4961d0ee88c5b4360241bb02fce",
+      "completed_at": "2026-10-15T16:30:26.962629+00:00",
+      "native_audio_preserves_reference": false
+    },
+    {
+      "id": "STAGE_LIBAI1_t1",
+      "source_key": "LIBAI1",
+      "kind": "libai",
+      "status": "reviewed-accepted-for-natural-stage-montage",
+      "submitted": true,
+      "credits_committed": 150.0,
+      "model_label": "Seedance 2.0",
+      "request_kind": "ordinary-omni-images-only",
+      "duration_requested": 10,
+      "resolution": 720,
+      "aspect_ratio": "16:9",
+      "estimated_credits": 180,
+      "prompt_file": "work\\stage-film-20261016\\prompts\\LIBAI1.txt",
+      "references": [
+        {
+          "id": "R01-MASTER",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R01-MASTER.png",
+          "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c",
+          "media_type": "image"
+        },
+        {
+          "id": "R02-LIBAI",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R02-LIBAI.png",
+          "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871",
+          "media_type": "image"
+        },
+        {
+          "id": "R04-STAGE",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "media_type": "image"
+        }
+      ],
+      "precise_lip_sync_claimed": false,
+      "user_authorization": "2026-10-16 direct user: use Skill for full stage film, lip precision relaxed, consistent characters, stage and crowd, no MV",
+      "prepared_at": "2026-10-15T18:54:41.754626+00:00",
+      "last_safe_event_at": "2026-10-15T19:04:33.880123+00:00",
+      "submission_started": true,
+      "provider_task_id": "1027648",
+      "submitted_at": "2026-10-15T18:54:55.624578+00:00",
+      "credits_reported_by_provider": 150.0,
+      "clip": "clips/STAGE_LIBAI1_t1/recovered/video_20261016030618.mp4",
+      "output_sha256": "cdc376283c1a81e4f975e7d3ac12d705a96c7ca5c88865218a86968dfc459c2e",
+      "size_bytes": 7704186,
+      "completed_at": "2026-10-15T19:04:33.878133+00:00",
+      "reconciliation_required": false,
+      "download_attempt_history": [
+        {
+          "status": "interrupted-protocol-error",
+          "path": "clips/STAGE_LIBAI1_t1/video_20261016030211.mp4",
+          "bytes": 884736,
+          "sha256": "0cd12b61495acc827e8ef839a1a37c0fa712a7eac8bcffe98c7caa2475b46c72",
+          "usable_for_final": false
+        },
+        {
+          "status": "recovered-same-provider-task",
+          "path": "clips/STAGE_LIBAI1_t1/recovered/video_20261016030618.mp4",
+          "bytes": 7704186,
+          "sha256": "cdc376283c1a81e4f975e7d3ac12d705a96c7ca5c88865218a86968dfc459c2e",
+          "additional_generation_credits": 0
+        }
+      ],
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261015/6ad12329f29e6.mp4",
+      "recovered_at": "2026-10-15T19:06:20.532839+00:00",
+      "visual_review_path": "work/stage-film-20261016/reviews/LIBAI1/root-review.json"
+    },
+    {
+      "id": "STAGE_WIDE_t1",
+      "source_key": "WIDE",
+      "kind": "stage",
+      "status": "reviewed-accepted-for-natural-stage-montage",
+      "submitted": true,
+      "credits_committed": 150.0,
+      "model_label": "Seedance 2.0",
+      "request_kind": "ordinary-omni-images-only",
+      "duration_requested": 10,
+      "resolution": 720,
+      "aspect_ratio": "16:9",
+      "estimated_credits": 180,
+      "prompt_file": "work\\stage-film-20261016\\prompts\\WIDE.txt",
+      "references": [
+        {
+          "id": "R01-MASTER",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R01-MASTER.png",
+          "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c",
+          "media_type": "image"
+        },
+        {
+          "id": "R02-LIBAI",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R02-LIBAI.png",
+          "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871",
+          "media_type": "image"
+        },
+        {
+          "id": "R03-DUFU",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R03-DUFU.png",
+          "sha256": "5d03d6ee8a07d9cc849821137555e76d8e557e8c2937569be5baa3b190d1fdb1",
+          "media_type": "image"
+        },
+        {
+          "id": "R04-STAGE",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "media_type": "image"
+        }
+      ],
+      "precise_lip_sync_claimed": false,
+      "user_authorization": "2026-10-16 direct user: use Skill for full stage film, lip precision relaxed, consistent characters, stage and crowd, no MV",
+      "prepared_at": "2026-10-15T18:54:41.772356+00:00",
+      "last_safe_event_at": "2026-10-15T19:02:56.476303+00:00",
+      "submission_started": true,
+      "provider_task_id": "1027649",
+      "submitted_at": "2026-10-15T18:54:57.852692+00:00",
+      "credits_reported_by_provider": 150.0,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261015/6ad12303ed59d.mp4",
+      "clip": "clips/STAGE_WIDE_t1/video_20261016030144.mp4",
+      "output_sha256": "50f21be6bbe83040318ef62d0a9a8d9cf1d58a1b35ca2a975f60f768d3f1d7e4",
+      "size_bytes": 7606017,
+      "completed_at": "2026-10-15T19:02:56.474300+00:00",
+      "visual_review_path": "work/stage-film-20261016/reviews/WIDE/root-review.json"
+    },
+    {
+      "id": "STAGE_CROWD1_t1",
+      "source_key": "CROWD1",
+      "kind": "audience",
+      "status": "reviewed-accepted-for-natural-stage-montage",
+      "submitted": true,
+      "credits_committed": 150.0,
+      "model_label": "Seedance 2.0",
+      "request_kind": "ordinary-omni-images-only",
+      "duration_requested": 10,
+      "resolution": 720,
+      "aspect_ratio": "16:9",
+      "estimated_credits": 180,
+      "prompt_file": "work\\stage-film-20261016\\prompts\\CROWD1.txt",
+      "references": [
+        {
+          "id": "R04-STAGE",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "media_type": "image"
+        },
+        {
+          "id": "R05-CROWD",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R05-CROWD.png",
+          "sha256": "40439336b6c9921f024953f1cfb36381442156e05deba275845842bd8be7ed5f",
+          "media_type": "image"
+        },
+        {
+          "id": "R01-MASTER",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R01-MASTER.png",
+          "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c",
+          "media_type": "image"
+        }
+      ],
+      "precise_lip_sync_claimed": false,
+      "user_authorization": "2026-10-16 direct user: use Skill for full stage film, lip precision relaxed, consistent characters, stage and crowd, no MV",
+      "prepared_at": "2026-10-15T18:54:41.792955+00:00",
+      "last_safe_event_at": "2026-10-15T19:01:45.031147+00:00",
+      "submission_started": true,
+      "provider_task_id": "1027650",
+      "submitted_at": "2026-10-15T18:55:01.631166+00:00",
+      "credits_reported_by_provider": 150.0,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261015/6ad122f7ef487.mp4",
+      "clip": "clips/STAGE_CROWD1_t1/video_20261016030143.mp4",
+      "output_sha256": "0409bc1315bff4e3aacaa207b31c41a612b86eb6bb0aad1c47dd0d399d998e53",
+      "size_bytes": 5696511,
+      "completed_at": "2026-10-15T19:01:45.030141+00:00",
+      "visual_review_path": "work/stage-film-20261016/reviews/CROWD1/root-review.json"
+    },
+    {
+      "id": "STAGE_DUFU1_t1",
+      "source_key": "DUFU1",
+      "kind": "dufu",
+      "status": "reviewed-accepted-for-natural-stage-montage",
+      "submitted": true,
+      "credits_committed": 150.0,
+      "model_label": "Seedance 2.0",
+      "request_kind": "ordinary-omni-images-only",
+      "duration_requested": 10,
+      "resolution": 720,
+      "aspect_ratio": "16:9",
+      "estimated_credits": 180,
+      "prompt_file": "work\\stage-film-20261016\\prompts\\DUFU1.txt",
+      "references": [
+        {
+          "id": "R01-MASTER",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R01-MASTER.png",
+          "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c",
+          "media_type": "image"
+        },
+        {
+          "id": "R03-DUFU",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R03-DUFU.png",
+          "sha256": "5d03d6ee8a07d9cc849821137555e76d8e557e8c2937569be5baa3b190d1fdb1",
+          "media_type": "image"
+        },
+        {
+          "id": "R04-STAGE",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "media_type": "image"
+        }
+      ],
+      "precise_lip_sync_claimed": false,
+      "user_authorization": "2026-10-16 direct user: use Skill for full stage film, lip precision relaxed, consistent characters, stage and crowd, no MV",
+      "prepared_at": "2026-10-15T19:01:45.617296+00:00",
+      "last_safe_event_at": "2026-10-15T19:07:33.996262+00:00",
+      "submission_started": true,
+      "provider_task_id": "1027654",
+      "submitted_at": "2026-10-15T19:01:58.749345+00:00",
+      "credits_reported_by_provider": 150.0,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261015/6ad1243aeab78.mp4",
+      "clip": "clips/STAGE_DUFU1_t1/video_20261016030708.mp4",
+      "output_sha256": "8e43da253c74be9e247c3126a2f129ce2e645021dc7c0d27465f1baf5d3a3dde",
+      "size_bytes": 8789448,
+      "completed_at": "2026-10-15T19:07:33.995146+00:00",
+      "visual_review_path": "work/stage-film-20261016/reviews/DUFU1/root-review.json"
+    },
+    {
+      "id": "STAGE_DUET_t1",
+      "source_key": "DUET",
+      "kind": "duet",
+      "status": "reviewed-accepted-for-natural-stage-montage",
+      "submitted": true,
+      "credits_committed": 150.0,
+      "model_label": "Seedance 2.0",
+      "request_kind": "ordinary-omni-images-only",
+      "duration_requested": 10,
+      "resolution": 720,
+      "aspect_ratio": "16:9",
+      "estimated_credits": 180,
+      "prompt_file": "work\\stage-film-20261016\\prompts\\DUET.txt",
+      "references": [
+        {
+          "id": "R01-MASTER",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R01-MASTER.png",
+          "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c",
+          "media_type": "image"
+        },
+        {
+          "id": "R02-LIBAI",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R02-LIBAI.png",
+          "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871",
+          "media_type": "image"
+        },
+        {
+          "id": "R03-DUFU",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R03-DUFU.png",
+          "sha256": "5d03d6ee8a07d9cc849821137555e76d8e557e8c2937569be5baa3b190d1fdb1",
+          "media_type": "image"
+        },
+        {
+          "id": "R04-STAGE",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "media_type": "image"
+        }
+      ],
+      "precise_lip_sync_claimed": false,
+      "user_authorization": "2026-10-16 direct user: use Skill for full stage film, lip precision relaxed, consistent characters, stage and crowd, no MV",
+      "prepared_at": "2026-10-15T19:02:57.088200+00:00",
+      "last_safe_event_at": "2026-10-15T19:14:02.197757+00:00",
+      "submission_started": true,
+      "provider_task_id": "1027655",
+      "submitted_at": "2026-10-15T19:03:12.879240+00:00",
+      "credits_reported_by_provider": 150.0,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261015/6ad125d712a67.mp4",
+      "clip": "clips/STAGE_DUET_t1/video_20261016031359.mp4",
+      "output_sha256": "21d3a305e30af910623735c31990e0377ea60b7791943abf0bd783caf124553e",
+      "size_bytes": 8020262,
+      "completed_at": "2026-10-15T19:14:02.196687+00:00",
+      "visual_review_path": "work/stage-film-20261016/reviews/DUET/root-review.json"
+    },
+    {
+      "id": "STAGE_DUFU2_t1",
+      "source_key": "DUFU2",
+      "kind": "dufu",
+      "status": "reviewed-accepted-for-natural-stage-montage",
+      "submitted": true,
+      "credits_committed": 150.0,
+      "model_label": "Seedance 2.0",
+      "request_kind": "ordinary-omni-images-only",
+      "duration_requested": 10,
+      "resolution": 720,
+      "aspect_ratio": "16:9",
+      "estimated_credits": 180,
+      "prompt_file": "work\\stage-film-20261016\\prompts\\DUFU2.txt",
+      "references": [
+        {
+          "id": "R01-MASTER",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R01-MASTER.png",
+          "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c",
+          "media_type": "image"
+        },
+        {
+          "id": "R03-DUFU",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R03-DUFU.png",
+          "sha256": "5d03d6ee8a07d9cc849821137555e76d8e557e8c2937569be5baa3b190d1fdb1",
+          "media_type": "image"
+        },
+        {
+          "id": "R04-STAGE",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "media_type": "image"
+        }
+      ],
+      "precise_lip_sync_claimed": false,
+      "user_authorization": "2026-10-16 direct user: use Skill for full stage film, lip precision relaxed, consistent characters, stage and crowd, no MV",
+      "prepared_at": "2026-10-15T19:15:44.934617+00:00",
+      "last_safe_event_at": "2026-10-15T19:23:15.968156+00:00",
+      "submission_started": true,
+      "provider_task_id": "1027662",
+      "submitted_at": "2026-10-15T19:16:02.264714+00:00",
+      "credits_reported_by_provider": 150.0,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261015/6ad128131a980.mp4",
+      "clip": "clips/STAGE_DUFU2_t1/video_20261016032312.mp4",
+      "output_sha256": "65cb2f7f09847eaed3953e7b6e33c34ce3175c9d81578db7ba8416571ed13e56",
+      "size_bytes": 8969554,
+      "completed_at": "2026-10-15T19:23:15.966390+00:00",
+      "visual_review_path": "work/stage-film-20261016/reviews/DUFU2/root-review.json"
+    },
+    {
+      "id": "STAGE_LIBAI2_t1",
+      "source_key": "LIBAI2",
+      "kind": "libai",
+      "status": "reviewed-accepted-for-natural-stage-montage",
+      "submitted": true,
+      "credits_committed": 150.0,
+      "model_label": "Seedance 2.0",
+      "request_kind": "ordinary-omni-images-only",
+      "duration_requested": 10,
+      "resolution": 720,
+      "aspect_ratio": "16:9",
+      "estimated_credits": 180,
+      "prompt_file": "work\\stage-film-20261016\\prompts\\LIBAI2.txt",
+      "references": [
+        {
+          "id": "R01-MASTER",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R01-MASTER.png",
+          "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c",
+          "media_type": "image"
+        },
+        {
+          "id": "R02-LIBAI",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R02-LIBAI.png",
+          "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871",
+          "media_type": "image"
+        },
+        {
+          "id": "R04-STAGE",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "media_type": "image"
+        }
+      ],
+      "precise_lip_sync_claimed": false,
+      "user_authorization": "2026-10-16 direct user: use Skill for full stage film, lip precision relaxed, consistent characters, stage and crowd, no MV",
+      "prepared_at": "2026-10-15T19:15:44.955170+00:00",
+      "last_safe_event_at": "2026-10-15T19:23:17.169277+00:00",
+      "submission_started": true,
+      "provider_task_id": "1027661",
+      "submitted_at": "2026-10-15T19:16:00.932389+00:00",
+      "credits_reported_by_provider": 150.0,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261015/6ad12804192f1.mp4",
+      "clip": "clips/STAGE_LIBAI2_t1/video_20261016032313.mp4",
+      "output_sha256": "26d909fee040e79a8d0d7071f61d6ec7f7a33edd30c2e22ac168c34b79dd9edf",
+      "size_bytes": 10265039,
+      "completed_at": "2026-10-15T19:23:17.159721+00:00",
+      "visual_review_path": "work/stage-film-20261016/reviews/LIBAI2/root-review.json",
+      "excluded_source_range_reason": "Use 0–7.2s only as costume/walking detail; later modern blue crowd excluded."
+    },
+    {
+      "id": "STAGE_FINALE_t1",
+      "source_key": "FINALE",
+      "kind": "duet",
+      "status": "reviewed-accepted-for-natural-stage-montage",
+      "submitted": true,
+      "credits_committed": 150.0,
+      "model_label": "Seedance 2.0",
+      "request_kind": "ordinary-omni-images-only",
+      "duration_requested": 10,
+      "resolution": 720,
+      "aspect_ratio": "16:9",
+      "estimated_credits": 180,
+      "prompt_file": "work\\stage-film-20261016\\prompts\\FINALE.txt",
+      "references": [
+        {
+          "id": "R01-MASTER",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R01-MASTER.png",
+          "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c",
+          "media_type": "image"
+        },
+        {
+          "id": "R02-LIBAI",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R02-LIBAI.png",
+          "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871",
+          "media_type": "image"
+        },
+        {
+          "id": "R03-DUFU",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R03-DUFU.png",
+          "sha256": "5d03d6ee8a07d9cc849821137555e76d8e557e8c2937569be5baa3b190d1fdb1",
+          "media_type": "image"
+        },
+        {
+          "id": "R04-STAGE",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "media_type": "image"
+        }
+      ],
+      "precise_lip_sync_claimed": false,
+      "user_authorization": "2026-10-16 direct user: use Skill for full stage film, lip precision relaxed, consistent characters, stage and crowd, no MV",
+      "prepared_at": "2026-10-15T19:15:44.966837+00:00",
+      "last_safe_event_at": "2026-10-15T19:22:16.809890+00:00",
+      "submission_started": true,
+      "provider_task_id": "1027660",
+      "submitted_at": "2026-10-15T19:16:00.930449+00:00",
+      "credits_reported_by_provider": 150.0,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261015/6ad127ce112ce.mp4",
+      "clip": "clips/STAGE_FINALE_t1/video_20261016032213.mp4",
+      "output_sha256": "16a87ff53c5be226a37c24467dc6fb37db50a58692fefd65dd13055a4adf0434",
+      "size_bytes": 6898341,
+      "completed_at": "2026-10-15T19:22:16.807751+00:00",
+      "visual_review_path": "work/stage-film-20261016/reviews/FINALE/root-review.json"
+    },
+    {
+      "id": "STAGE_CROWD2_t1",
+      "source_key": "CROWD2",
+      "kind": "audience",
+      "status": "reviewed-accepted-for-natural-stage-montage",
+      "submitted": true,
+      "credits_committed": 150.0,
+      "model_label": "Seedance 2.0",
+      "request_kind": "ordinary-omni-images-only",
+      "duration_requested": 10,
+      "resolution": 720,
+      "aspect_ratio": "16:9",
+      "estimated_credits": 180,
+      "prompt_file": "work\\stage-film-20261016\\prompts\\CROWD2.txt",
+      "references": [
+        {
+          "id": "R04-STAGE",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "media_type": "image"
+        },
+        {
+          "id": "R05-CROWD",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R05-CROWD.png",
+          "sha256": "40439336b6c9921f024953f1cfb36381442156e05deba275845842bd8be7ed5f",
+          "media_type": "image"
+        },
+        {
+          "id": "R01-MASTER",
+          "path": "F:/codex_project/1014_codex_project/projects/011-ancient-rap-battle/experiments/004-performance-film/refs/R01-MASTER.png",
+          "sha256": "de422b578dec2860713766ee5cba2e64619cccd473a322106e4872ec0a59cd0c",
+          "media_type": "image"
+        }
+      ],
+      "precise_lip_sync_claimed": false,
+      "user_authorization": "2026-10-16 direct user: use Skill for full stage film, lip precision relaxed, consistent characters, stage and crowd, no MV",
+      "prepared_at": "2026-10-15T19:15:44.988584+00:00",
+      "last_safe_event_at": "2026-10-15T19:22:44.434036+00:00",
+      "submission_started": true,
+      "provider_task_id": "1027659",
+      "submitted_at": "2026-10-15T19:16:00.939359+00:00",
+      "credits_reported_by_provider": 150.0,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261015/6ad127f2154a1.mp4",
+      "clip": "clips/STAGE_CROWD2_t1/video_20261016032242.mp4",
+      "output_sha256": "0349eae01bd80e383c609b1d6a9ad07641dec6624a3b52fb506765b12df52c3f",
+      "size_bytes": 10885235,
+      "completed_at": "2026-10-15T19:22:44.432034+00:00",
+      "visual_review_path": "work/stage-film-20261016/reviews/CROWD2/root-review.json"
+    },
+    {
+      "id": "WEB_AUDIO_VA01_t1",
+      "kind": "original-song-driven-singing-pilot",
+      "status": "completed-human-accepted-for-basic-singing-correspondence",
+      "request_kind": "ordinary-web-omni-image-plus-audio",
+      "model_label": "MiniMax H3",
+      "mode": "全能模式",
+      "duration_requested": 5,
+      "quality_label": "768p",
+      "aspect_ratio": "16:9",
+      "credits_displayed": 75,
+      "submitted": true,
+      "credits_committed": 75,
+      "prepared_at": "2026-10-16T00:43:02.577560+00:00",
+      "references": [
+        {
+          "path": "refs/R02-LIBAI.png",
+          "media_type": "image",
+          "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871"
+        },
+        {
+          "path": "refs/R04-STAGE.png",
+          "media_type": "image",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a"
+        },
+        {
+          "path": "work/audio-driven-repair/VA01-original-song-9.4-to-14.4.wav",
+          "media_type": "audio",
+          "sha256": "79f91a413fee6811b2c1a90e762f44150cc0a0d98c8bd207fb0958a719e18962"
+        }
+      ],
+      "audio": "work/audio-driven-repair/VA01-original-song-9.4-to-14.4.wav",
+      "prompt_file": "work/audio-driven-repair/VA01-web-prompt.txt",
+      "prompt_sha256": "8769dd269fc82067cef3fa6b68fa74fe7576a0fce85db8ee7dc53316a8db95f0",
+      "ui_input_labels": [
+        "图片 1",
+        "图片 2",
+        "音频 1"
+      ],
+      "original_song_interval": [
+        9.4,
+        14.4
+      ],
+      "mv_feature_used": false,
+      "local_models_used": false,
+      "pre_submission_evidence": "work/audio-driven-repair/web-pilot-review/before-submit.png",
+      "submitted_at": "2026-10-16T00:44:08.323892+00:00",
+      "ui_submission_time": "2026/10/16 08:43",
+      "ui_status": "网络开小差，请刷新页面重新获取结果",
+      "ui_progress": 13,
+      "provider_task_id": "1027778",
+      "accepted_evidence": "work/audio-driven-repair/web-pilot-review/accepted.png",
+      "note": "Returned through official query of the same website task; original native audio preserved. Technical and visual checks do not constitute subjective sung lip-sync approval.",
+      "provider_task_id_source": "official user.py logs, matching 2026-10-16 08:43 unique latest entry",
+      "last_safe_event_at": "2026-10-16T00:46:16.788429+00:00",
+      "completed_at": "2026-10-16T01:18:07.003481+00:00",
+      "credits_reported_by_provider": 75,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261016/6ad17a878f1cd.mp4",
+      "clip": "work/audio-driven-repair/model-original/video_20261016091518.mp4",
+      "output_sha256": "13af814763a8ede67fb627e5724342bb760446e80a7610b8ce2a07d61668d129",
+      "size_bytes": 3342437,
+      "actual_video_duration": 5.166667,
+      "actual_container_duration": 5.175,
+      "actual_dimensions": [
+        1344,
+        768
+      ],
+      "fps": 24,
+      "frames": 124,
+      "singing_lip_sync_passed": true,
+      "audio_analysis": "work/audio-driven-repair/audio-content-analysis.json",
+      "visual_review": "work/audio-driven-repair/visual-review/review.json",
+      "acceptance_source": "direct-human-user",
+      "acceptance_answer": "口型已可用，继续修整片"
+    },
+    {
+      "id": "H3_LIBAI_VERSE_t1",
+      "source_key": "LIBAI_VERSE",
+      "kind": "original-song-driven-singing",
+      "status": "reviewed-accepted-for-original-song-reedit",
+      "submitted": true,
+      "credits_committed": 75,
+      "credits_displayed": 75,
+      "model_label": "MiniMax H3",
+      "request_kind": "ordinary-web-omni-image-plus-audio",
+      "duration_requested": 5,
+      "quality_label": "768p",
+      "aspect_ratio": "16:9",
+      "references": [
+        {
+          "slot": "图片1",
+          "kind": "reference_image",
+          "path": "refs/R02-LIBAI.png",
+          "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871",
+          "purpose": "唯一人物定妆参考",
+          "new_image_generated": false
+        },
+        {
+          "slot": "图片2",
+          "kind": "reference_image",
+          "path": "refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "purpose": "同一舞台环境参考",
+          "new_image_generated": false
+        }
+      ],
+      "audio": "work/audio-driven-repair/prepared-blocks/01-REEDIT-LIBAI-VERSE.wav",
+      "prompt_file": "work/audio-driven-repair/prepared-blocks/01-REEDIT-LIBAI-VERSE-H3普通视频提示词.txt",
+      "driver_song_in": 14.4,
+      "driver_song_out": 19.4,
+      "pilot_acceptance": "work/audio-driven-repair/pilot-acceptance.json",
+      "mv_feature_used": false,
+      "local_models_used": false,
+      "provider_task_id": "1027831",
+      "submitted_at": "2026-10-16T01:51:07.796422+00:00",
+      "ui_submission_time": "2026/10/16 09:50",
+      "typed_audio_input_confirmed": true,
+      "typed_audio_confirmation": "work/audio-driven-repair/production/typed-input-confirmation.json",
+      "credits_reported_by_provider": 75.0,
+      "clip": "work/audio-driven-repair/production/H3_LIBAI_VERSE_t1/original/video_20261016114405.mp4",
+      "output_sha256": "5cc68050c1e346eecacd20a2b633bab67e2f9219e81d73dcdb1ab8d352458308",
+      "size_bytes": 3663004,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261016/6ad19d75b3a0d.mp4",
+      "completed_at": "2026-10-16T03:44:08.385223+00:00",
+      "visual_review_path": "work/audio-driven-repair/source-reviews/LIBAI_VERSE/independent-review.json"
+    },
+    {
+      "id": "H3_LIBAI_CHORUS1_t1",
+      "source_key": "LIBAI_CHORUS1",
+      "kind": "original-song-driven-singing",
+      "status": "reviewed-accepted-for-original-song-reedit",
+      "submitted": true,
+      "credits_committed": 75,
+      "credits_displayed": 75,
+      "model_label": "MiniMax H3",
+      "request_kind": "ordinary-web-omni-image-plus-audio",
+      "duration_requested": 5,
+      "quality_label": "768p",
+      "aspect_ratio": "16:9",
+      "references": [
+        {
+          "slot": "图片1",
+          "kind": "reference_image",
+          "path": "refs/R02-LIBAI.png",
+          "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871",
+          "purpose": "唯一人物定妆参考",
+          "new_image_generated": false
+        },
+        {
+          "slot": "图片2",
+          "kind": "reference_image",
+          "path": "refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "purpose": "同一舞台环境参考",
+          "new_image_generated": false
+        }
+      ],
+      "audio": "work/audio-driven-repair/prepared-blocks/03-REEDIT-LIBAI-CHORUS-ONE.wav",
+      "prompt_file": "work/audio-driven-repair/prepared-blocks/03-REEDIT-LIBAI-CHORUS-ONE-H3普通视频提示词.txt",
+      "driver_song_in": 42.24,
+      "driver_song_out": 47.24,
+      "pilot_acceptance": "work/audio-driven-repair/pilot-acceptance.json",
+      "mv_feature_used": false,
+      "local_models_used": false,
+      "provider_task_id": "1027834",
+      "submitted_at": "2026-10-16T01:52:46.932701+00:00",
+      "ui_submission_time": "2026/10/16 09:52",
+      "typed_audio_input_confirmed": true,
+      "typed_audio_confirmation": "work/audio-driven-repair/production/typed-input-confirmation.json",
+      "credits_reported_by_provider": 75.0,
+      "clip": "work/audio-driven-repair/production/H3_LIBAI_CHORUS1_t1/original/video_20261016104125.mp4",
+      "output_sha256": "a414b510eb9330b910eb5b520f760b1d18dae425bdc851b26540069ef446ee3a",
+      "size_bytes": 4710541,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261016/6ad18eae6c663.mp4",
+      "completed_at": "2026-10-16T02:41:28.283590+00:00",
+      "visual_review_path": "work/audio-driven-repair/source-reviews/LIBAI_CHORUS1/independent-review.json"
+    },
+    {
+      "id": "H3_LIBAI_CHORUS2_t1",
+      "source_key": "LIBAI_CHORUS2",
+      "kind": "original-song-driven-singing",
+      "status": "reviewed-accepted-for-original-song-reedit",
+      "submitted": true,
+      "credits_committed": 120,
+      "credits_displayed": 120,
+      "model_label": "MiniMax H3",
+      "request_kind": "ordinary-web-omni-image-plus-audio",
+      "duration_requested": 8,
+      "quality_label": "768p",
+      "aspect_ratio": "16:9",
+      "references": [
+        {
+          "slot": "图片1",
+          "kind": "reference_image",
+          "path": "refs/R02-LIBAI.png",
+          "sha256": "a256de20e8960a30fde923c15684ae13491dcc3b59357c3888f83e0695c4f871",
+          "purpose": "唯一人物定妆参考",
+          "new_image_generated": false
+        },
+        {
+          "slot": "图片2",
+          "kind": "reference_image",
+          "path": "refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "purpose": "同一舞台环境参考",
+          "new_image_generated": false
+        }
+      ],
+      "audio": "work/audio-driven-repair/prepared-blocks/05-REEDIT-LIBAI-CHORUS-TWO.wav",
+      "prompt_file": "work/audio-driven-repair/prepared-blocks/05-REEDIT-LIBAI-CHORUS-TWO-H3普通视频提示词.txt",
+      "driver_song_in": 65.6,
+      "driver_song_out": 73.6,
+      "pilot_acceptance": "work/audio-driven-repair/pilot-acceptance.json",
+      "mv_feature_used": false,
+      "local_models_used": false,
+      "provider_task_id": "1027835",
+      "submitted_at": "2026-10-16T01:54:36.206442+00:00",
+      "ui_submission_time": "2026/10/16 09:53",
+      "typed_audio_input_confirmed": true,
+      "typed_audio_confirmation": "work/audio-driven-repair/production/typed-input-confirmation.json",
+      "credits_reported_by_provider": 120.0,
+      "clip": "work/audio-driven-repair/production/H3_LIBAI_CHORUS2_t1/original/video_20261016111248.mp4",
+      "output_sha256": "ca86a81d51b8b8fc16ed2c95d017ed9f836e2e236a504337bf8340ef51b7e310",
+      "size_bytes": 5053016,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261016/6ad1961788423.mp4",
+      "completed_at": "2026-10-16T03:12:51.706227+00:00",
+      "visual_review_path": "work/audio-driven-repair/source-reviews/LIBAI_CHORUS2/independent-review.json"
+    },
+    {
+      "id": "H3_DUFU_VERSE14_t1",
+      "source_key": "DUFU_VERSE14",
+      "kind": "original-song-driven-singing",
+      "status": "reviewed-accepted-for-original-song-reedit",
+      "submitted": true,
+      "credits_committed": 210,
+      "credits_displayed": 210,
+      "model_label": "MiniMax H3",
+      "request_kind": "ordinary-web-omni-image-plus-audio",
+      "duration_requested": 14,
+      "quality_label": "768p",
+      "aspect_ratio": "16:9",
+      "references": [
+        {
+          "slot": "图片1",
+          "kind": "reference_image",
+          "path": "refs/R03-DUFU.png",
+          "sha256": "5d03d6ee8a07d9cc849821137555e76d8e557e8c2937569be5baa3b190d1fdb1",
+          "purpose": "唯一人物定妆参考",
+          "new_image_generated": false
+        },
+        {
+          "slot": "图片2",
+          "kind": "reference_image",
+          "path": "refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "purpose": "同一舞台环境参考",
+          "new_image_generated": false
+        }
+      ],
+      "audio": "work/audio-driven-repair/prepared-blocks/02-REEDIT-DUFU-VERSE.wav",
+      "prompt_file": "work/audio-driven-repair/prepared-blocks/02-REEDIT-DUFU-VERSE-H3普通视频提示词.txt",
+      "driver_song_in": 28.4,
+      "driver_song_out": 42.4,
+      "pilot_acceptance": "work/audio-driven-repair/pilot-acceptance.json",
+      "mv_feature_used": false,
+      "local_models_used": false,
+      "provider_task_id": "1027840",
+      "submitted_at": "2026-10-16T01:56:39.277523+00:00",
+      "ui_submission_time": "2026/10/16 09:55",
+      "typed_audio_input_confirmed": true,
+      "typed_audio_confirmation": "work/audio-driven-repair/production/typed-input-confirmation.json",
+      "credits_reported_by_provider": 210.0,
+      "clip": "work/audio-driven-repair/production/H3_DUFU_VERSE14_t1/original/video_20261016121633.mp4",
+      "output_sha256": "3b53a8ea5139031542769b19315232000c250d57ce437d9dbfb3f2d02a2368df",
+      "size_bytes": 10462947,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261016/6ad1a4f335431.mp4",
+      "completed_at": "2026-10-16T04:16:37.434783+00:00",
+      "visual_review_path": "work/audio-driven-repair/source-reviews/DUFU_VERSE14/independent-review.json"
+    },
+    {
+      "id": "H3_DUFU_CHORUS1_t1",
+      "source_key": "DUFU_CHORUS1",
+      "kind": "original-song-driven-singing",
+      "status": "reviewed-accepted-for-original-song-reedit",
+      "submitted": true,
+      "credits_committed": 75,
+      "credits_displayed": 75,
+      "model_label": "MiniMax H3",
+      "request_kind": "ordinary-web-omni-image-plus-audio",
+      "duration_requested": 5,
+      "quality_label": "768p",
+      "aspect_ratio": "16:9",
+      "references": [
+        {
+          "slot": "图片1",
+          "kind": "reference_image",
+          "path": "refs/R03-DUFU.png",
+          "sha256": "5d03d6ee8a07d9cc849821137555e76d8e557e8c2937569be5baa3b190d1fdb1",
+          "purpose": "唯一人物定妆参考",
+          "new_image_generated": false
+        },
+        {
+          "slot": "图片2",
+          "kind": "reference_image",
+          "path": "refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a",
+          "purpose": "同一舞台环境参考",
+          "new_image_generated": false
+        }
+      ],
+      "audio": "work/audio-driven-repair/prepared-blocks/04-REEDIT-DUFU-CHORUS-ONE.wav",
+      "prompt_file": "work/audio-driven-repair/prepared-blocks/04-REEDIT-DUFU-CHORUS-ONE-H3普通视频提示词.txt",
+      "driver_song_in": 49.76,
+      "driver_song_out": 54.76,
+      "pilot_acceptance": "work/audio-driven-repair/pilot-acceptance.json",
+      "mv_feature_used": false,
+      "local_models_used": false,
+      "provider_task_id": "1027844",
+      "submitted_at": "2026-10-16T01:58:12.325171+00:00",
+      "ui_submission_time": "2026/10/16 09:57",
+      "typed_audio_input_confirmed": true,
+      "typed_audio_confirmation": "work/audio-driven-repair/production/typed-input-confirmation.json",
+      "credits_reported_by_provider": 75.0,
+      "clip": "work/audio-driven-repair/production/H3_DUFU_CHORUS1_t1/original/video_20261016124722.mp4",
+      "output_sha256": "26065b2070553926f5769a9acfe97e8f28c367c2acc889c21bdc305e20001938",
+      "size_bytes": 3968273,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261016/6ad1ac57ce6cc.mp4",
+      "completed_at": "2026-10-16T04:47:24.812875+00:00",
+      "visual_review_path": "work/audio-driven-repair/source-reviews/DUFU_CHORUS1/independent-review.json"
+    },
+    {
+      "id": "H3_STAGE_DETAIL_t1",
+      "source_key": "STAGE_DETAIL",
+      "kind": "stage-detail",
+      "status": "unconfirmed-web-attempt-no-persistent-task",
+      "submitted": false,
+      "credits_committed": 0,
+      "credits_displayed": 60,
+      "model_label": "MiniMax H3",
+      "request_kind": "ordinary-web-omni-images",
+      "duration_requested": 4,
+      "quality_label": "768p",
+      "aspect_ratio": "16:9",
+      "references": [
+        {
+          "path": "refs/R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a"
+        },
+        {
+          "path": "refs/R06-DETAIL.png",
+          "sha256": "9415cc240ac14625691efc19eaf26fbb2fec3252d569dd095e379c1610603747"
+        }
+      ],
+      "audio": null,
+      "prompt_file": "work/audio-driven-repair/production/STAGE_DETAIL-prompt.txt",
+      "driver_song_in": null,
+      "driver_song_out": null,
+      "pilot_acceptance": "work/audio-driven-repair/pilot-acceptance.json",
+      "mv_feature_used": false,
+      "local_models_used": false,
+      "attempted_at_ui": "2026/10/16 09:59",
+      "note": "Temporary optimistic card disappeared; repeated official history has no matching task. UI estimate balance remained2820. Keep60 reserved conservatively; do not call this generation failed or paid."
+    },
+    {
+      "id": "SKILL_STAGE_DETAIL_t1",
+      "source_key": "STAGE_DETAIL",
+      "kind": "stage-detail",
+      "status": "reviewed-accepted-for-original-song-reedit",
+      "submitted": true,
+      "credits_committed": 60,
+      "model_label": "Seedance 2.0 Fast",
+      "request_kind": "ordinary-skill-omni-images-only",
+      "duration_requested": 5,
+      "resolution": 720,
+      "aspect_ratio": "16:9",
+      "estimated_credits": 60,
+      "credits_displayed": null,
+      "estimate_source": "official estimate-cost 2026-10-16",
+      "references": [
+        {
+          "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\refs\\R04-STAGE.png",
+          "sha256": "e2ee6d16ca14fbc1cdd805771c977e56e1374ae1b91aad7615b5247695b1da4a"
+        },
+        {
+          "path": "F:\\codex_project\\1014_codex_project\\projects\\011-ancient-rap-battle\\experiments\\004-performance-film\\refs\\R06-DETAIL.png",
+          "sha256": "9415cc240ac14625691efc19eaf26fbb2fec3252d569dd095e379c1610603747"
+        }
+      ],
+      "audio": null,
+      "prompt_file": "work/audio-driven-repair/production/SKILL_STAGE_DETAIL_t1/prompt.txt",
+      "prompt_sha256": "7f3358d268d58e7755daf2a9c0681cb42b1431ad6e93b8948d8c01f5671c9183",
+      "mv_feature_used": false,
+      "local_models_used": false,
+      "replaces_unconfirmed_attempt": "H3_STAGE_DETAIL_t1",
+      "provider_task_id": "1027850",
+      "submitted_at": "2026-10-16T02:07:09.150208+00:00",
+      "official_submission_time": "2026-10-16T02:06:09.183638+00:00",
+      "credits_reported_by_provider": 60.0,
+      "clip": "work/audio-driven-repair/production/SKILL_STAGE_DETAIL_t1/original/video_20261016100947.mp4",
+      "output_sha256": "9ffdb22c87f595862009fde24ac475989e16d1fc34398c314c5aff3ec723a63c",
+      "size_bytes": 6456236,
+      "provider_result_url": "https://files.chatartpro.com/web-video/20261016/6ad1874d4a75d.mp4",
+      "completed_at": "2026-10-16T02:09:50.099531+00:00",
+      "visual_review_path": "work/audio-driven-repair/source-reviews/STAGE_DETAIL/independent-review.json"
+    }
+  ],
+  "submitted_credits_total": 2265.0,
+  "invoice_verified": false,
+  "actual_credits_spent": null,
+  "credit_observations": [
+    {
+      "stage": "before-first-submit",
+      "balance": 5115,
+      "at": "2026-10-15T12:39:19.469Z"
+    },
+    {
+      "stage": "after-OPEN-t3-accepted",
+      "balance": 4845,
+      "at": "2026-10-15T12:52:15.633Z",
+      "note": "相对5115下降270，与唯一已显示任务标价相符；非独立账单。"
+    },
+    {
+      "stage": "connection-recovered",
+      "balance": 5115,
+      "at": "2026-10-15T13:07:54.811Z",
+      "note": "正常余额和历史任务恢复，无新开场任务；此前4845为未确认瞬时变化。"
+    },
+    {
+      "stage": "official-skill-before-SKILL_OPEN_t1",
+      "balance": 5085,
+      "at": "2026-10-15T16:01:38.177328+00:00",
+      "source": "official user.py credit query",
+      "note": "与旧余额差额不能归因于本次任务；保留此前50钻未确认预留。"
+    },
+    {
+      "stage": "official-skill-after-SKILL_OPEN_t1-accepted",
+      "balance": 4935.0,
+      "at": "2026-10-15T16:04:04.841535+00:00",
+      "source": "official user.py credit query",
+      "difference_from_pre_submit": 150.0,
+      "note": "余额差仅作本次受理前后观察，不替代独立账单核验。"
+    },
+    {
+      "stage": "official-skill-after-SKILL_LIP_A1_t1-completed",
+      "balance": 4860.0,
+      "at": "2026-10-15T16:48:57.510602+00:00",
+      "source": "official user.py credit query",
+      "difference_from_last_verified_4935": 75.0,
+      "note": "对应本条官方返回75钻，余额观察不等于独立账单。"
+    },
+    {
+      "stage": "web-before-WEB_AUDIO_VA01_t1",
+      "balance": 3450,
+      "at": "2026-10-16T00:43:02.577560+00:00",
+      "source": "visible signed-in ordinary image-to-video website"
+    },
+    {
+      "stage": "web-after-WEB_AUDIO_VA01_t1-accepted",
+      "balance": 3375,
+      "at": "2026-10-16T00:44:08.323892+00:00",
+      "source": "visible signed-in ordinary image-to-video website",
+      "difference_from_pre_submit": 75,
+      "note": "Balance observation and matching result card; not independent invoice verification."
+    }
+  ],
+  "notes": [
+    "根代理维护本轮账本；失败、重做和未用于成片的已提交任务仍计入标价合计。",
+    "本轮不沿用001至003人物MP4，不用静态图像运镜替代应有动态镜头。",
+    "OPEN_t1首次点击后未出现对应结果卡且余额未变，先刷新核实，不重复点击生成。",
+    "用户后续授权接入官方ChatArt Skill；仅通过固定版本官方脚本调用，不回显凭据和原始上传响应。"
+  ],
+  "reserved_unconfirmed_credits": 110,
+  "image_tasks": [
+    {
+      "id": "MASTER_IMAGE_t1",
+      "kind": "character-and-stage-reference",
+      "status": "unverified-client-submission-no-persisted-task",
+      "submitted": false,
+      "model_label": "GPT Image 2",
+      "definition_label": "2K",
+      "quality_label": "高",
+      "aspect_ratio": "16:9",
+      "credits_displayed": 50,
+      "prompt": "《压轴人间》人物与舞台定妆主视觉。A single widescreen 16:9 cinematic LIVE-ACTION reference photograph for an original Chinese poetry rap duet. Two adult Chinese male actors on the SAME black-and-brass circular stage, knee-up two-shot, faces large and sharply detailed. Left: 32-year-old lean clean-shaven man, angular handsome face, long black high ponytail with simple silver clasp, ivory silk hanfu with restrained silver embroidery and jade-teal shoulder stole. Right: 46-year-old mature man, short neat beard and moustache, hair in scholar bun, midnight-indigo hanfu with copper-gold lapels and rust underlayer. Both hold black microphones at chest level with lips clearly visible. They face slightly toward each other, natural relaxed poised bodies, no celebrity likeness. Glossy black stage floor with thin concentric brass rings, monumental open moon-ring portal behind, Tang dark wood pavilion wings, amber lantern columns, stepped audience balconies, blue moonlit sky, cinematic cool-blue and warm gold rim lights, low floor mist. Physical concert set with strong layered depth. Photoreal skin pores, fabric weave, realistic proportions, 35mm cinema lens, refined dark contrast, very high-end music video art direction. No animation, plastic skin, collage, captions, logos, watermarks, swords, magic or extra lead performers.\n",
+      "output": "refs/master-character-stage-v4.png",
+      "output_sha256": null,
+      "credits_committed": 0,
+      "ui_submission_time": "2026/10/15 21:27",
+      "ui_progress": "25%",
+      "persistence_verified": false,
+      "note": "客户端提交动作曾显示卡片与进度，随后网络异常；未确认后台持久化或实际扣费，不列为已受理任务。保守预留50钻等待核实。",
+      "ui_status": "网络开小差，请刷新页面重新获取结果",
+      "output_created": false,
+      "credits_accounting": "conservative-reservation-unverified",
+      "attempted_at": "2026-10-15T13:28:49.116Z"
+    }
+  ],
+  "last_verification": {
+    "at": "2026-10-15T16:14:02.280247+00:00",
+    "connection": "Official Skill authorization, generation, query, and download verified",
+    "new_unique_outputs_downloaded": 1,
+    "pilot_task_id": "1027533",
+    "pilot_reported_cost": 150,
+    "master_task_persistence": "previous image attempt remains unverified, keep 50-credit reservation",
+    "full_song_film_completed": false
+  },
+  "reservations": [
+    {
+      "task_id": "MASTER_IMAGE_t1",
+      "credits": 50,
+      "reason": "Client progress was observed, but persistent task and actual debit remain unverified; do not resubmit blindly."
+    },
+    {
+      "task_id": "H3_STAGE_DETAIL_t1",
+      "credits": 60,
+      "reason": "Authorized full-song repair after human acceptance; reserve before separate website submission."
+    }
+  ],
+  "manual_handoff": {
+    "authorized_by": "direct user request: 用户在ChatArt生成，后续我们剪辑合成",
+    "package": "delivery/压轴人间-ChatArt制作包.zip",
+    "package_sha256": "8ed76e93dcaec0c990f92fa17e447c26a500915bde9e038451f400d0d03a3d3f",
+    "required_video_tasks": 11,
+    "optional_video_tasks": 2,
+    "new_provider_tasks_submitted_by_agent": 0,
+    "actual_spend_remains_unverified": true,
+    "gpt_references_provided": 4,
+    "reference_metadata": "refs/reference-images.json",
+    "user_generation_scope": "ChatArt videos only; GPT character and stage references supplied by us",
+    "downloads_package": "C:/Users/yun68/Downloads/压轴人间-GPT定妆版-ChatArt视频制作包-20261015.zip"
+  },
+  "official_skill": {
+    "repository": "https://github.com/chatart-ai/skill",
+    "commit": "a426ffe3de46bde7e2738d4442f309834564bfbc",
+    "license": "Apache-2.0",
+    "local_path": "D:/codex/home/skills/chatart-skill",
+    "account_authorized_by_user": true,
+    "authorization_reply": "好了，已完成授权",
+    "generation_scope": "ordinary video only, no MV; GPT references; original music added during editing",
+    "safe_output_capture": true
+  },
+  "current_production_mode": "visual-stage-montage",
+  "generation_paused_by_user": false,
+  "precise_lip_sync_required": false,
+  "mv_feature_used": false,
+  "local_lip_model_route_used_for_current_production": false,
+  "updated_at": "2026-10-16T04:53:34.974145+00:00",
+  "stage_film_result": {
+    "path": "work/stage-film-20261016/final/压轴人间-完整舞台版.mp4",
+    "sha256": "525c42dfe2bbe7bf0fe0dff77f122451464927e5aede6488a1b19f9691a0cb45",
+    "duration": 94.64,
+    "shots": 28,
+    "status": "rendered-user-rejected-for-singing-performance",
+    "new_video_tasks": 9,
+    "new_provider_reported_credits": 1350,
+    "balance_observation_path": "work/stage-film-20261016/post-generation-credit-observation.json",
+    "ordinary_video_only": true,
+    "mv_feature_used": false,
+    "precise_lip_sync_claimed": false,
+    "local_lipsync_model_used": false,
+    "full_playback_review_path": "work/stage-film-20261016/browser-review/native-full-playback.json",
+    "user_feedback_path": "work/stage-film-20261016/user-rejection.json",
+    "singing_lip_sync_passed": false
+  },
+  "audio_driven_repair": {
+    "status": "six-confirmed-production-tasks-pending",
+    "prepared_at": "2026-10-15T20:05:08.948714+00:00",
+    "pilot_plan": "work/audio-driven-repair/pilot-plan.json",
+    "generation_policy": "work/audio-driven-repair/generation-policy.json",
+    "original_song_sha256": "cfd1b761118e601384589fbaed54b8d6260093f031d59570bab24b277e3899b0",
+    "new_generation_calls": 1,
+    "new_credits_spent": null,
+    "pilot_passed": true,
+    "local_models_downloaded": false,
+    "installed_chatart_skill_has_typed_audio_input": false,
+    "provider_spend_authorization_transferable": false,
+    "remaining_chatart_authorized_exposure": 25.0,
+    "next_required_gate": "Connect a documented external-audio-plus-reference-image remote entry, submit one 5-second pilot, inspect the same original-song phoneme onsets and pauses before any batch singing generation.",
+    "website_logged_in": true,
+    "trial_inputs_uploaded": true,
+    "generation_submitted": true,
+    "latest_trial_task": "WEB_AUDIO_VA01_t1",
+    "new_credits_committed": 75,
+    "output_sha256": "13af814763a8ede67fb627e5724342bb760446e80a7610b8ce2a07d61668d129",
+    "native_original_audio_content_comparison": "high-similarity-at-zero-overall-lag; not a lip-sync score",
+    "pilot_acceptance": "work/audio-driven-repair/pilot-acceptance.json",
+    "human_reply": "口型已可用，继续修整片",
+    "new_production_submissions": 6,
+    "unconfirmed_new_stage_reserve": 60
+  },
+  "final_repair_output": {
+    "path": "work/audio-driven-repair/full-reedit/final/压轴人间-原曲驱动舞台版.mp4",
+    "sha256": "97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6",
+    "bytes": 45964902,
+    "width": 1280,
+    "height": 720,
+    "fps": 25.0,
+    "frames": 2366,
+    "duration": 94.64,
+    "container_duration": 94.64
+  },
+  "final_repair_report": "work/audio-driven-repair/full-reedit/reedit-film-report.json",
+  "final_repair_user_accepted": false
+}

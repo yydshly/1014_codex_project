@@ -1,0 +1,19 @@
+{
+  "status": "auxiliary-original-audio-content-comparison-only",
+  "reference_sha256": "79f91a413fee6811b2c1a90e762f44150cc0a0d98c8bd207fb0958a719e18962",
+  "generated_video_sha256": "13af814763a8ede67fb627e5724342bb760446e80a7610b8ce2a07d61668d129",
+  "sample_rate": 16000,
+  "reference_samples": 80000,
+  "generated_samples": 82944,
+  "reference_duration": 5.0,
+  "generated_duration": 5.184,
+  "zero_lag_normalized_correlation_first_5s": 0.9389929976995139,
+  "max_correlation_within_750ms": 0.913393791896207,
+  "lag_samples_generated_later_positive": 0,
+  "lag_seconds_generated_later_positive": 0.0,
+  "reference_rms": 0.2499615033970004,
+  "generated_rms": 0.2947783159383686,
+  "lip_sync_pass_claimed": false,
+  "subjective_audio_review_claimed": false,
+  "limitation": "Signal similarity or low offset can only support soundtrack provenance; it does not show visible phoneme or lyric correspondence."
+}

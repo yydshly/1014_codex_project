@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-15",
+  "experiment_id": "003-stage-edition",
+  "sha256": "011c49f6527f84ca834ac319ad14bb97dd4a410b75a37729b00bf025382970d6",
+  "size_bytes": 25573442,
+  "accepted_for_demo": true,
+  "full_decode": true,
+  "frames": 1582,
+  "black_intervals": [],
+  "maximum_volume_dbfs": -0.9,
+  "faststart": true,
+  "boxes": [
+    {
+      "type": "ftyp",
+      "offset": 0,
+      "size": 32
+    },
+    {
+      "type": "moov",
+      "offset": 32,
+      "size": 49609
+    },
+    {
+      "type": "free",
+      "offset": 49641,
+      "size": 8
+    },
+    {
+      "type": "mdat",
+      "offset": 49649,
+      "size": 25523793
+    }
+  ],
+  "visual_review": {
+    "method": "16 frames sampled from actual final MP4",
+    "contact_sheet": "work/final-contact.jpg",
+    "accepted": true,
+    "observations": [
+      "新全景、双人站位、观众反打与鼓阵景别清楚，角色色系和舞台连贯",
+      "原片演唱段口鼻可见，字幕底板较小，FX未明显遮脸",
+      "停拍段与音乐重入有不同节奏，片尾回全景",
+      "图像段有舞台场景图像运镜小标，未把新图当作新增开口视频"
+    ]
+  },
+  "lip_sync_passed": null,
+  "publicly_deployed": false
+}

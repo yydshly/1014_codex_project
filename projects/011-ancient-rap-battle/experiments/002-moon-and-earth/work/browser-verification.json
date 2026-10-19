@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-15",
+  "scope": "local-browser-playback-and-layout",
+  "url": "http://127.0.0.1:4184/1014_codex_project/011-ancient-rap-battle/#own-sample",
+  "film_sha256": "88c112607640aeaa960a4682aca4a533781d58b82e658af4ad2777fa1848871e",
+  "duration": 63.28,
+  "desktop": {
+    "viewport": {"width": 1280, "height": 900},
+    "loaded_ready_state": 4,
+    "first_lyric_button": {"observed_time": 18.53, "paused": false},
+    "keyboard_pause": {"observed_time": 23.60212, "paused": true},
+    "reprise_button": {"observed_time": 51.523405, "paused": false},
+    "reprise_to_end": {"observed_time": 63.28, "ended": true, "error": null},
+    "full_play": {
+      "start_observation": {"time": 0.003167, "paused": false, "ended": false},
+      "end_observation": {"time": 63.28, "paused": true, "ended": true, "error": null}
+    },
+    "after_copy_edit": {"first_lyric_seek_play": true, "pause": true, "error": null},
+    "screenshot": "assets/own-sample-v2.png"
+  },
+  "mobile": {
+    "viewport": {"width": 390, "height": 844},
+    "document_client_width": 375,
+    "document_scroll_width": 375,
+    "video_css_width": 337.3333435058594,
+    "no_horizontal_overflow": true,
+    "dufu_first_lyric": {"observed_time": 28.15, "paused": false, "ready_state": 4, "error": null},
+    "after_copy_edit": {"observed_time": 35.493634, "paused": true, "ready_state": 4, "error": null},
+    "screenshot": "assets/own-sample-v2-mobile.png"
+  },
+  "console_errors": [],
+  "viewport_restored": true,
+  "screenshots_visually_reviewed": true,
+  "lip_sync_passed": null,
+  "publicly_deployed": false,
+  "note": "Browser media playback and sampled visual review do not certify phoneme-level lip synchronization. Full decode and source-music integrity are recorded separately."
+}

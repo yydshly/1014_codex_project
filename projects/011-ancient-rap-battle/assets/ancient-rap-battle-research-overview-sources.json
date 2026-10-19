@@ -1,0 +1,1113 @@
+{
+  "date": "2026-10-19",
+  "title": "古人说唱：从源库到我们的舞台版",
+  "size": [
+    3600,
+    6120
+  ],
+  "render_method": "Deterministic native SVG/text layout with Pillow PNG; existing real images only.",
+  "source_commit": "e5e40fa3612777133a141c8448122dd0fd45e4cc",
+  "upstream_url": "https://github.com/10291124jcjc-dotcom/ancient-rap-battle/tree/e5e40fa3612777133a141c8448122dd0fd45e4cc",
+  "upstream_image_url": "https://github.com/10291124jcjc-dotcom/ancient-rap-battle/blob/e5e40fa3612777133a141c8448122dd0fd45e4cc/assets/frame-2.jpg",
+  "upstream_license": "MIT (code); original example attribution retained; media rights chain not independently audited.",
+  "final_movie": {
+    "path": "experiments/004-performance-film/work/audio-driven-repair/full-reedit/final/压轴人间-原曲驱动舞台版.mp4",
+    "sha256": "97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6"
+  },
+  "data_evidence": [
+    {
+      "path": "experiments/004-performance-film/work/audio-driven-repair/full-reedit/reedit-film-report.json",
+      "sha256": "b08aa5532582bd9b76c8a19522dd62b6c5086fbe39727bb82420fb935f9e760d"
+    },
+    {
+      "path": "web/public/data/004-repaired-film.json",
+      "sha256": "e201df68df24b57bbe3a1f3ca4d0e99828bbecff1eadbc582f96e9fcd1e59bad"
+    },
+    {
+      "path": "RESEARCH.md",
+      "sha256": "c081d234ce2b3e94efe2617126734f370e6b9c55a14916c54109e2d31479f51f"
+    }
+  ],
+  "images": [
+    {
+      "path": "web/public/media/frame-2.jpg",
+      "sha256": "0fc0fb72844c89c0b0fc16acd36ea60ac3685978fb19a9aa670f79dfd107ae75",
+      "role": "upstream original example image; attribution preserved",
+      "source_time_seconds": null,
+      "placement": [
+        148,
+        582,
+        1597,
+        898
+      ],
+      "treatment": "proportional resize only; no generated replacement or face editing"
+    },
+    {
+      "path": "experiments/004-performance-film/work/research-overview-20261019/frames/final-duet-90.62.jpg",
+      "sha256": "e6d7c1ea14369a5982b9bebfa792ef2d360dc50018b713a0c9831c2953d7e45c",
+      "role": "our actual repaired film duet frame",
+      "source_time_seconds": 90.62,
+      "placement": [
+        1855,
+        582,
+        1597,
+        898
+      ],
+      "treatment": "proportional resize only; no generated replacement or face editing"
+    },
+    {
+      "path": "experiments/004-performance-film/work/research-overview-20261019/frames/final-libai-69.10.jpg",
+      "sha256": "9191bdea2eb2afcf3a766c0c32b29d458ed5a6f1af2724cdf9946b430823b0b6",
+      "role": "our actual final movie: 李白演唱",
+      "source_time_seconds": 69.1,
+      "placement": [
+        120,
+        3798,
+        816,
+        459
+      ],
+      "treatment": "proportional resize only; no generated replacement or face editing"
+    },
+    {
+      "path": "experiments/004-performance-film/work/research-overview-20261019/frames/final-dufu-35.32.jpg",
+      "sha256": "a2e56d45ea996cac2465f76e3f33dd782db4c8a7a1bb9a58d54a3e677b2fc8a3",
+      "role": "our actual final movie: 杜甫演唱",
+      "source_time_seconds": 35.32,
+      "placement": [
+        968,
+        3798,
+        816,
+        459
+      ],
+      "treatment": "proportional resize only; no generated replacement or face editing"
+    },
+    {
+      "path": "experiments/004-performance-film/work/research-overview-20261019/frames/final-stage-61.32.jpg",
+      "sha256": "558c00578e217d34481933b56791a47c2dc54778726ea524080f1063db805791",
+      "role": "our actual final movie: 同场舞台",
+      "source_time_seconds": 61.32,
+      "placement": [
+        1816,
+        3798,
+        816,
+        459
+      ],
+      "treatment": "proportional resize only; no generated replacement or face editing"
+    },
+    {
+      "path": "experiments/004-performance-film/work/research-overview-20261019/frames/final-audience-58.26.jpg",
+      "sha256": "79351c885593024d8f913682633e601120750414701f8a3859bdf3f9eecbf573",
+      "role": "our actual final movie: 观众反打",
+      "source_time_seconds": 58.26,
+      "placement": [
+        2664,
+        3798,
+        816,
+        459
+      ],
+      "treatment": "proportional resize only; no generated replacement or face editing"
+    }
+  ],
+  "text_layout": [
+    {
+      "text": "研物 / 011     项目研究与制作复盘",
+      "x": 152,
+      "y": 82,
+      "width": 476.0,
+      "size": 31
+    },
+    {
+      "text": "制作 2026.10.15–16  ·  汇总 2026.10.19",
+      "x": 2525,
+      "y": 82,
+      "width": 527.0,
+      "size": 29
+    },
+    {
+      "text": "古人说唱：从源库到我们的舞台版",
+      "x": 120,
+      "y": 167,
+      "width": 1500.0,
+      "size": 100
+    },
+    {
+      "text": "以音乐为时间基准，用人物参考稳定形象，把短镜头生成、审片与整曲合成组织成可追溯的制作流程。",
+      "x": 120,
+      "y": 306,
+      "width": 1755.0,
+      "size": 39
+    },
+    {
+      "text": "源库效果｜周瑜 × 诸葛亮",
+      "x": 148,
+      "y": 461,
+      "width": 489.0,
+      "size": 43
+    },
+    {
+      "text": "上游作者：硅基废话 · 非本项目生成",
+      "x": 148,
+      "y": 526,
+      "width": 460.0,
+      "size": 29
+    },
+    {
+      "text": "本次成果｜李白 × 杜甫 · 压轴人间",
+      "x": 1855,
+      "y": 461,
+      "width": 663.0,
+      "size": 43
+    },
+    {
+      "text": "我们的真实成片截帧 · 整片待用户验收",
+      "x": 1855,
+      "y": 526,
+      "width": 489.0,
+      "size": 29
+    },
+    {
+      "text": "分享文件实测 102.13秒 / 960×540 / 24fps",
+      "x": 148,
+      "y": 1500,
+      "width": 597.0,
+      "size": 31
+    },
+    {
+      "text": "34句；默认35素材 / 180秒；视频费约$16（作者历史记录）",
+      "x": 148,
+      "y": 1545,
+      "width": 831.0,
+      "size": 31
+    },
+    {
+      "text": "新修复版 94.64秒 / 1280×720 / 25fps / 22镜",
+      "x": 1855,
+      "y": 1500,
+      "width": 633.0,
+      "size": 31
+    },
+    {
+      "text": "保留完整用户原曲；普通远端视频生成与本地剪辑。",
+      "x": 1855,
+      "y": 1545,
+      "width": 713.0,
+      "size": 31
+    },
+    {
+      "text": "01",
+      "x": 130,
+      "y": 1700,
+      "width": 38.0,
+      "size": 31
+    },
+    {
+      "text": "源库提供的能力：一套创作编排与素材流水线",
+      "x": 208,
+      "y": 1690,
+      "width": 1080.0,
+      "size": 54
+    },
+    {
+      "text": "Claude Code Skill＋模板＋Python脚本；音乐、图像、视频由相应外部服务生成。",
+      "x": 208,
+      "y": 1764,
+      "width": 1139.0,
+      "size": 31
+    },
+    {
+      "text": "01  内容与歌曲",
+      "x": 142,
+      "y": 1863,
+      "width": 239.0,
+      "size": 35
+    },
+    {
+      "text": "Claude写词、用户确认；用户在",
+      "x": 142,
+      "y": 1925,
+      "width": 458.0,
+      "size": 32
+    },
+    {
+      "text": "Suno生成并选歌。",
+      "x": 142,
+      "y": 1972,
+      "width": 270.0,
+      "size": 32
+    },
+    {
+      "text": "→",
+      "x": 653,
+      "y": 1931,
+      "width": 33.0,
+      "size": 33
+    },
+    {
+      "text": "02  歌曲时间轴",
+      "x": 710,
+      "y": 1863,
+      "width": 239.0,
+      "size": 35
+    },
+    {
+      "text": "脚本分离人声、定位歌词与节",
+      "x": 710,
+      "y": 1925,
+      "width": 416.0,
+      "size": 32
+    },
+    {
+      "text": "拍，形成逐句起止。",
+      "x": 710,
+      "y": 1972,
+      "width": 288.0,
+      "size": 32
+    },
+    {
+      "text": "→",
+      "x": 1221,
+      "y": 1931,
+      "width": 33.0,
+      "size": 33
+    },
+    {
+      "text": "03  参考与分镜",
+      "x": 1278,
+      "y": 1863,
+      "width": 239.0,
+      "size": 35
+    },
+    {
+      "text": "Midjourney定妆；角色、动作、",
+      "x": 1278,
+      "y": 1925,
+      "width": 464.0,
+      "size": 32
+    },
+    {
+      "text": "景别、提示词与剪辑表。",
+      "x": 1278,
+      "y": 1972,
+      "width": 352.0,
+      "size": 32
+    },
+    {
+      "text": "→",
+      "x": 1789,
+      "y": 1931,
+      "width": 33.0,
+      "size": 33
+    },
+    {
+      "text": "04  H3逐句生成",
+      "x": 1846,
+      "y": 1863,
+      "width": 255.0,
+      "size": 35
+    },
+    {
+      "text": "参考图＋单句人声＋镜头提示，",
+      "x": 1846,
+      "y": 1925,
+      "width": 448.0,
+      "size": 32
+    },
+    {
+      "text": "提交远端生成任务。",
+      "x": 1846,
+      "y": 1972,
+      "width": 288.0,
+      "size": 32
+    },
+    {
+      "text": "→",
+      "x": 2357,
+      "y": 1931,
+      "width": 33.0,
+      "size": 33
+    },
+    {
+      "text": "05  筛查与选片",
+      "x": 2414,
+      "y": 1863,
+      "width": 239.0,
+      "size": 35
+    },
+    {
+      "text": "比较音轨、记录候选与偏移；用",
+      "x": 2414,
+      "y": 1925,
+      "width": 448.0,
+      "size": 32
+    },
+    {
+      "text": "户听看嘴部与人物。",
+      "x": 2414,
+      "y": 1972,
+      "width": 288.0,
+      "size": 32
+    },
+    {
+      "text": "→",
+      "x": 2925,
+      "y": 1931,
+      "width": 33.0,
+      "size": 33
+    },
+    {
+      "text": "06  合成与包装",
+      "x": 2982,
+      "y": 1863,
+      "width": 239.0,
+      "size": 35
+    },
+    {
+      "text": "FFmpeg拼接；字幕、名字卡、封",
+      "x": 2982,
+      "y": 1925,
+      "width": 474.0,
+      "size": 32
+    },
+    {
+      "text": "面与发布文案。",
+      "x": 2982,
+      "y": 1972,
+      "width": 224.0,
+      "size": 32
+    },
+    {
+      "text": "交接文件：内容设定 episode.json  →  逐句时间与素材 clips  →  选片 / 偏移 picks、shifts  →  剪辑表 edl",
+      "x": 146,
+      "y": 2142,
+      "width": 1565.02,
+      "size": 33
+    },
+    {
+      "text": "02",
+      "x": 130,
+      "y": 2280,
+      "width": 38.0,
+      "size": 31
+    },
+    {
+      "text": "我们的探索：先证明闭环，再纠正真正影响效果的输入",
+      "x": 208,
+      "y": 2270,
+      "width": 1296.0,
+      "size": 54
+    },
+    {
+      "text": "全过程保留阶段结果与失败结论；没有把旧视觉样片改名当作修复版。",
+      "x": 208,
+      "y": 2344,
+      "width": 961.0,
+      "size": 31
+    },
+    {
+      "text": "01  四句基线｜24秒",
+      "x": 145,
+      "y": 2443,
+      "width": 336.0,
+      "size": 37
+    },
+    {
+      "text": "MiniMax TTS＋代码节拍＋真实视频。",
+      "x": 145,
+      "y": 2503,
+      "width": 549.02,
+      "size": 32
+    },
+    {
+      "text": "先跑通上传、生成、回片、质检、合成；不把TTS加节拍称为音乐模型歌",
+      "x": 145,
+      "y": 2555,
+      "width": 1014.02,
+      "size": 32
+    },
+    {
+      "text": "曲。",
+      "x": 145,
+      "y": 2602,
+      "width": 64.0,
+      "size": 32
+    },
+    {
+      "text": "验证的是最小制作闭环",
+      "x": 145,
+      "y": 2687,
+      "width": 300.0,
+      "size": 30
+    },
+    {
+      "text": "02  敬风霜｜63.28秒",
+      "x": 1283,
+      "y": 2443,
+      "width": 356.0,
+      "size": 37
+    },
+    {
+      "text": "用户完整音乐＋新GPT人物参考。",
+      "x": 1283,
+      "y": 2503,
+      "width": 478.0,
+      "size": 32
+    },
+    {
+      "text": "两段人物原片组成五次演唱，取用24.6秒；其余38.68秒为明确标注的图",
+      "x": 1283,
+      "y": 2555,
+      "width": 1013.0,
+      "size": 32
+    },
+    {
+      "text": "像运镜。",
+      "x": 1283,
+      "y": 2602,
+      "width": 128.0,
+      "size": 32
+    },
+    {
+      "text": "完整歌曲已成立，场景仍需丰富",
+      "x": 1283,
+      "y": 2687,
+      "width": 420.0,
+      "size": 30
+    },
+    {
+      "text": "03  舞台扩展｜63.28秒",
+      "x": 2421,
+      "y": 2443,
+      "width": 393.0,
+      "size": 37
+    },
+    {
+      "text": "新增4张场景图、17段舞台运镜。",
+      "x": 2421,
+      "y": 2503,
+      "width": 473.0,
+      "size": 32
+    },
+    {
+      "text": "沿用原人物视频，新增视频生成0次。加强全景、观众、鼓阵与灯光，仍",
+      "x": 2421,
+      "y": 2555,
+      "width": 1011.0,
+      "size": 32
+    },
+    {
+      "text": "有图像运镜。",
+      "x": 2421,
+      "y": 2602,
+      "width": 192.0,
+      "size": 32
+    },
+    {
+      "text": "把舞台氛围与人物表演分开设计",
+      "x": 2421,
+      "y": 2687,
+      "width": 420.0,
+      "size": 30
+    },
+    {
+      "text": "04  旧压轴人间｜94.64秒",
+      "x": 145,
+      "y": 2789,
+      "width": 430.0,
+      "size": 37
+    },
+    {
+      "text": "新增9条只带图片与提示的视频。",
+      "x": 145,
+      "y": 2849,
+      "width": 467.0,
+      "size": 32
+    },
+    {
+      "text": "后期配回原曲，嘴部未随原歌演唱；用户拒收。舞台与观众可复用，演唱",
+      "x": 145,
+      "y": 2901,
+      "width": 1024.0,
+      "size": 32
+    },
+    {
+      "text": "需要另做。",
+      "x": 145,
+      "y": 2948,
+      "width": 160.0,
+      "size": 32
+    },
+    {
+      "text": "找到症结：音频必须进入生成输入",
+      "x": 145,
+      "y": 3033,
+      "width": 450.0,
+      "size": 30
+    },
+    {
+      "text": "05  5秒试片｜用户确认",
+      "x": 1283,
+      "y": 2789,
+      "width": 387.0,
+      "size": 37
+    },
+    {
+      "text": "H3全能模式明确“两图＋音频1”。",
+      "x": 1283,
+      "y": 2849,
+      "width": 511.0,
+      "size": 32
+    },
+    {
+      "text": "提交原歌9.4–14.4秒与锁定人物/舞台图。用户反馈“口型已可用”，仅",
+      "x": 1283,
+      "y": 2901,
+      "width": 1006.0,
+      "size": 32
+    },
+    {
+      "text": "确认这条试片。",
+      "x": 1283,
+      "y": 2948,
+      "width": 224.0,
+      "size": 32
+    },
+    {
+      "text": "先确认同一段原曲的基础可用性",
+      "x": 1283,
+      "y": 3033,
+      "width": 420.0,
+      "size": 30
+    },
+    {
+      "text": "06  原曲修复｜94.64秒",
+      "x": 2421,
+      "y": 2789,
+      "width": 393.0,
+      "size": 37
+    },
+    {
+      "text": "试片后新增5条演唱＋1条舞台。",
+      "x": 2421,
+      "y": 2849,
+      "width": 454.0,
+      "size": 32
+    },
+    {
+      "text": "六条原片全部回传并逐帧检查；演唱按对应原歌位置剪入，最终22镜并接",
+      "x": 2421,
+      "y": 2901,
+      "width": 1030.0,
+      "size": 32
+    },
+    {
+      "text": "入网页。",
+      "x": 2421,
+      "y": 2948,
+      "width": 128.0,
+      "size": 32
+    },
+    {
+      "text": "重做演唱，保留可复用动态素材",
+      "x": 2421,
+      "y": 3033,
+      "width": 420.0,
+      "size": 30
+    },
+    {
+      "text": "接入与调度的纠偏",
+      "x": 148,
+      "y": 3153,
+      "width": 272.0,
+      "size": 34
+    },
+    {
+      "text": "早期API权限不足、网页登录与余额连接不稳 → 分开确认视频权限与授权。网页提交明确音频输入，官方Skill按同一任务ID续查；超时不直接重投。本次修复不下载或运行本地口型模型。",
+      "x": 148,
+      "y": 3208,
+      "width": 2713.0,
+      "size": 33
+    },
+    {
+      "text": "03",
+      "x": 130,
+      "y": 3360,
+      "width": 38.0,
+      "size": 31
+    },
+    {
+      "text": "最终呈现：完整歌曲＋演唱＋舞台＋观众",
+      "x": 208,
+      "y": 3350,
+      "width": 972.0,
+      "size": 54
+    },
+    {
+      "text": "下列四张均为同一新修复成片的真实画面；静帧展示视觉效果，口型和连续动作须播放视频判断。",
+      "x": 208,
+      "y": 3424,
+      "width": 1333.0,
+      "size": 31
+    },
+    {
+      "text": "94.64",
+      "x": 120,
+      "y": 3501,
+      "width": 192.0,
+      "size": 70
+    },
+    {
+      "text": "秒 / 完整歌曲",
+      "x": 120,
+      "y": 3590,
+      "width": 181.0,
+      "size": 30
+    },
+    {
+      "text": "1280×720",
+      "x": 688,
+      "y": 3501,
+      "width": 305.0,
+      "size": 60
+    },
+    {
+      "text": "最终输出尺寸",
+      "x": 688,
+      "y": 3590,
+      "width": 180.0,
+      "size": 30
+    },
+    {
+      "text": "25",
+      "x": 1256,
+      "y": 3501,
+      "width": 86.0,
+      "size": 70
+    },
+    {
+      "text": "fps / 2366帧",
+      "x": 1256,
+      "y": 3590,
+      "width": 176.0,
+      "size": 30
+    },
+    {
+      "text": "22",
+      "x": 1824,
+      "y": 3501,
+      "width": 86.0,
+      "size": 70
+    },
+    {
+      "text": "个剪辑镜头",
+      "x": 1824,
+      "y": 3590,
+      "width": 150.0,
+      "size": 30
+    },
+    {
+      "text": "40.96",
+      "x": 2392,
+      "y": 3501,
+      "width": 192.0,
+      "size": 70
+    },
+    {
+      "text": "秒 / 对应演唱",
+      "x": 2392,
+      "y": 3590,
+      "width": 181.0,
+      "size": 30
+    },
+    {
+      "text": "20.08",
+      "x": 2960,
+      "y": 3501,
+      "width": 192.0,
+      "size": 70
+    },
+    {
+      "text": "秒 / 观众画面",
+      "x": 2960,
+      "y": 3590,
+      "width": 181.0,
+      "size": 30
+    },
+    {
+      "text": "演唱 40.96秒",
+      "x": 153,
+      "y": 3718,
+      "width": 163.0,
+      "size": 28
+    },
+    {
+      "text": "观众 20.08秒",
+      "x": 829,
+      "y": 3718,
+      "width": 163.0,
+      "size": 28
+    },
+    {
+      "text": "开场 / 收尾 17.44秒",
+      "x": 1505,
+      "y": 3718,
+      "width": 247.0,
+      "size": 28
+    },
+    {
+      "text": "衣纹 / 裁切 12.72秒",
+      "x": 2181,
+      "y": 3718,
+      "width": 247.0,
+      "size": 28
+    },
+    {
+      "text": "舞台 3.44秒",
+      "x": 2857,
+      "y": 3718,
+      "width": 147.0,
+      "size": 28
+    },
+    {
+      "text": "李白演唱  ·  69.10s",
+      "x": 120,
+      "y": 4281,
+      "width": 274.0,
+      "size": 31
+    },
+    {
+      "text": "杜甫演唱  ·  35.32s",
+      "x": 968,
+      "y": 4281,
+      "width": 274.0,
+      "size": 31
+    },
+    {
+      "text": "同场舞台  ·  61.32s",
+      "x": 1816,
+      "y": 4281,
+      "width": 274.0,
+      "size": 31
+    },
+    {
+      "text": "观众反打  ·  58.26s",
+      "x": 2664,
+      "y": 4281,
+      "width": 274.0,
+      "size": 31
+    },
+    {
+      "text": "04",
+      "x": 130,
+      "y": 4400,
+      "width": 38.0,
+      "size": 31
+    },
+    {
+      "text": "我们的价值：把一次出片，变成可复用的方法和证据",
+      "x": 208,
+      "y": 4390,
+      "width": 1242.0,
+      "size": 54
+    },
+    {
+      "text": "已经形成素材、输入、调度和剪辑的记录链；质量稳定性、量产效率与商业回报仍需更多项目验证。",
+      "x": 208,
+      "y": 4464,
+      "width": 1364.0,
+      "size": 31
+    },
+    {
+      "text": "01",
+      "x": 145,
+      "y": 4571,
+      "width": 42.0,
+      "size": 34
+    },
+    {
+      "text": "可复用的角色与镜头资产",
+      "x": 145,
+      "y": 4629,
+      "width": 407.0,
+      "size": 37
+    },
+    {
+      "text": "6张GPT人物 / 场景参考、完整音乐与切片、导演提示词、分镜和合",
+      "x": 145,
+      "y": 4701,
+      "width": 1004.0,
+      "size": 34
+    },
+    {
+      "text": "成程序，组成下一次制作的起点。舞台与观众保留，问题演唱可以局",
+      "x": 145,
+      "y": 4751,
+      "width": 1020.0,
+      "size": 34
+    },
+    {
+      "text": "部替换。",
+      "x": 145,
+      "y": 4801,
+      "width": 136.0,
+      "size": 34
+    },
+    {
+      "text": "02",
+      "x": 1283,
+      "y": 4571,
+      "width": 42.0,
+      "size": 34
+    },
+    {
+      "text": "可追溯的执行与费用",
+      "x": 1283,
+      "y": 4629,
+      "width": 333.0,
+      "size": 37
+    },
+    {
+      "text": "每条保留任务ID、原片、输入音频、歌曲时段、文件SHA和预算。把",
+      "x": 1283,
+      "y": 4701,
+      "width": 1024.0,
+      "size": 34
+    },
+    {
+      "text": "连接异常、任务等待与质量失败分开记录，减少重复付费与无依据重",
+      "x": 1283,
+      "y": 4751,
+      "width": 1020.0,
+      "size": 34
+    },
+    {
+      "text": "做。",
+      "x": 1283,
+      "y": 4801,
+      "width": 68.0,
+      "size": 34
+    },
+    {
+      "text": "03",
+      "x": 2421,
+      "y": 4571,
+      "width": 42.0,
+      "size": 34
+    },
+    {
+      "text": "可验证的质量边界",
+      "x": 2421,
+      "y": 4629,
+      "width": 296.0,
+      "size": 37
+    },
+    {
+      "text": "把文件完成、原曲内容保留、画面可用与用户口型验收分别记录。先",
+      "x": 2421,
+      "y": 4701,
+      "width": 1020.0,
+      "size": 34
+    },
+    {
+      "text": "用小样验证再扩展，留下失败原因，让后续迭代有明确目标。",
+      "x": 2421,
+      "y": 4751,
+      "width": 918.0,
+      "size": 34
+    },
+    {
+      "text": "05",
+      "x": 130,
+      "y": 4978,
+      "width": 38.0,
+      "size": 31
+    },
+    {
+      "text": "预算与验收：数字可核对，结论有范围",
+      "x": 208,
+      "y": 4968,
+      "width": 918.0,
+      "size": 54
+    },
+    {
+      "text": "004累计预算 / ChatArt钻石",
+      "x": 150,
+      "y": 5108,
+      "width": 461.02,
+      "size": 36
+    },
+    {
+      "text": "2375 / 2400",
+      "x": 150,
+      "y": 5180,
+      "width": 497.0,
+      "size": 83
+    },
+    {
+      "text": "预算占用（含预留）/ 授权上限",
+      "x": 150,
+      "y": 5290,
+      "width": 439.0,
+      "size": 32
+    },
+    {
+      "text": "2265",
+      "x": 150,
+      "y": 5362,
+      "width": 144.0,
+      "size": 59
+    },
+    {
+      "text": "累计已提交",
+      "x": 150,
+      "y": 5443,
+      "width": 155.0,
+      "size": 31
+    },
+    {
+      "text": "110",
+      "x": 665,
+      "y": 5362,
+      "width": 108.0,
+      "size": 59
+    },
+    {
+      "text": "未确认预留",
+      "x": 665,
+      "y": 5443,
+      "width": 155.0,
+      "size": 31
+    },
+    {
+      "text": "25",
+      "x": 1180,
+      "y": 5362,
+      "width": 72.0,
+      "size": 59
+    },
+    {
+      "text": "剩余额度",
+      "x": 1180,
+      "y": 5443,
+      "width": 124.0,
+      "size": 31
+    },
+    {
+      "text": "试片后的6条任务，官方费用回报合计615钻，已包含在累计2265钻中。110钻为图片50＋舞台尝试60的保守",
+      "x": 150,
+      "y": 5521,
+      "width": 1572.0,
+      "size": 33
+    },
+    {
+      "text": "预留。独立账单未核验，不把承诺或预留称为已核实实支。",
+      "x": 150,
+      "y": 5569,
+      "width": 858.0,
+      "size": 33
+    },
+    {
+      "text": "002 / 003历史费用不重复计入004。",
+      "x": 150,
+      "y": 5747,
+      "width": 493.0,
+      "size": 30
+    },
+    {
+      "text": "已证实与仍待确认",
+      "x": 1857,
+      "y": 5108,
+      "width": 288.0,
+      "size": 36
+    },
+    {
+      "text": "已完成",
+      "x": 1857,
+      "y": 5180,
+      "width": 99.0,
+      "size": 33
+    },
+    {
+      "text": "六条新源全帧审看；2366帧全解码；原曲完整原速。",
+      "x": 1857,
+      "y": 5234,
+      "width": 769.0,
+      "size": 33
+    },
+    {
+      "text": "22镜中点与21组切口检查；5秒试片由用户试听确认可用。",
+      "x": 1857,
+      "y": 5282,
+      "width": 854.0,
+      "size": 33
+    },
+    {
+      "text": "仍有边界",
+      "x": 1857,
+      "y": 5421,
+      "width": 132.0,
+      "size": 33
+    },
+    {
+      "text": "新整片尚未记录用户验收；代理未声称主观听音或逐音素检查通过。字幕有3条未确认内容省略；3处衣纹为旧",
+      "x": 1857,
+      "y": 5475,
+      "width": 1589.0,
+      "size": 33
+    },
+    {
+      "text": "视频1.78倍裁切。网页模型标签的后台实现未独立核验。",
+      "x": 1857,
+      "y": 5523,
+      "width": 824.0,
+      "size": 33
+    },
+    {
+      "text": "本版已导出并在本地网页展示，未发布公网。",
+      "x": 1857,
+      "y": 5747,
+      "width": 600.0,
+      "size": 30
+    },
+    {
+      "text": "画面归属：左上为上游作者作品（原字幕与水印保留）；其余为我们的实际修复成片截帧。没有新增模型生成或付费请求。",
+      "x": 120,
+      "y": 5890,
+      "width": 1512.0,
+      "size": 28
+    },
+    {
+      "text": "上游：github.com/10291124jcjc-dotcom/ancient-rap-battle  ·  固定提交 e5e40fa3612777133a141c8448122dd0fd45e4cc  ·  代码 MIT",
+      "x": 120,
+      "y": 5944,
+      "width": 1692.97,
+      "size": 27
+    },
+    {
+      "text": "依据：RESEARCH.md、实验001–004报告、004任务账本、pilot-acceptance.json、reedit-film-report.json；来源与截帧时间另存清单。",
+      "x": 120,
+      "y": 5997,
+      "width": 1666.95,
+      "size": 27
+    }
+  ],
+  "new_generation_calls": 0,
+  "new_credits": 0,
+  "full_film_user_accepted": false,
+  "outputs": [
+    {
+      "path": "assets/ancient-rap-battle-research-overview.png",
+      "sha256": "cbe55cde30b35917581c986454e7a86542ce4d3832711133cd421c2431a32990",
+      "bytes": 6591274
+    },
+    {
+      "path": "assets/ancient-rap-battle-research-overview.svg",
+      "sha256": "5bb81a3664cab6aba37f3f0d92b5c2966f02991df0a3c3d0d7e85ca617261838",
+      "bytes": 1204456
+    },
+    {
+      "path": "assets/ancient-rap-battle-research-overview-preview.jpg",
+      "sha256": "9a859820a7b4bcb574ca270b85d653ed869cae7a7b45c24beacfd3d9a8892006",
+      "bytes": 684881
+    }
+  ]
+}

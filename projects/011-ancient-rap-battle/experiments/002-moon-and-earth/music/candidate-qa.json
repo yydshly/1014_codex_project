@@ -1,0 +1,22 @@
+{
+  "source_byte_identity": true,
+  "source_sha256": "91f5993a91f49e455fe9c60f60cc799692a96a40afa78c6b80e0f35831dbe8c8",
+  "blocks": [
+    {
+      "id": "A-main",
+      "duration": 10.0,
+      "sr": 44100,
+      "channels": 2,
+      "sample_peak_dbfs": -0.8176672339342612,
+      "clipped_samples": 0
+    },
+    {
+      "id": "B-main",
+      "duration": 10.0,
+      "sr": 44100,
+      "channels": 2,
+      "sample_peak_dbfs": -0.5307850977662274,
+      "clipped_samples": 0
+    }
+  ]
+}

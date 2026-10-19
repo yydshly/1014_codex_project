@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-15",
+  "experiment_id": "003-stage-edition",
+  "url": "http://127.0.0.1:4184/1014_codex_project/011-ancient-rap-battle/#own-sample",
+  "film_sha256": "011c49f6527f84ca834ac319ad14bb97dd4a410b75a37729b00bf025382970d6",
+  "duration": 63.28,
+  "desktop": {
+    "viewport": {"width": 1280, "height": 900},
+    "full_play": {
+      "start": {"time": 0, "paused": false, "ended": false, "error": null},
+      "end": {"time": 63.28, "paused": true, "ended": true, "error": null}
+    },
+    "after_copy_edit_lyric_button": {"time": 18.538035, "paused": false, "ready_state": 4, "error": null},
+    "keyboard_pause": {"time": 34.737449, "paused": true},
+    "keyboard_home": {"time": 0, "paused": true, "ready_state": 4, "error": null},
+    "screenshot": "assets/own-sample-v3.png"
+  },
+  "mobile": {
+    "viewport": {"width": 390, "height": 844},
+    "document_client_width": 375,
+    "document_scroll_width": 375,
+    "video_css_width": 337.3333435058594,
+    "no_horizontal_overflow": true,
+    "reprise_button": {"time": 51.528488, "paused": false, "ready_state": 4, "error": null},
+    "to_end": {"time": 63.28, "paused": true, "ended": true, "error": null},
+    "screenshot": "assets/own-sample-v3-mobile.png"
+  },
+  "media_error": null,
+  "console_errors": [],
+  "screenshots_visually_reviewed": true,
+  "viewport_restored": true,
+  "lip_sync_passed": null,
+  "publicly_deployed": false
+}
