@@ -1,0 +1,692 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-15",
+  "platforms": [
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "url": "https://www.reddit.com/",
+      "category": "discussion",
+      "region": "global",
+      "audience": "按兴趣、职业、生活情境聚集的社区成员",
+      "observe": "围绕具体任务的求助、过程描述、反复追问和绕行办法。",
+      "discovery_question": "哪些小社区里的成员，在相似情境下反复为同一步骤求助？",
+      "signals": [
+        "反复求助",
+        "手工绕行",
+        "替代工具",
+        "工作过程"
+      ],
+      "access": "search_or_manual",
+      "access_note": "先使用可用的搜索索引与人工读帖；索引可能只覆盖部分正文或回复。Data API 需要符合当前接入要求，且官方正在调整接入方式。本目录不承诺接口或批量采集可用。",
+      "bias": "发帖者是自选样本；热门内容、推广帖与跨社区重复会放大某些问题。",
+      "reference_url": "https://support.reddithelp.com/hc/en-us/articles/14945211791892-Developer-Platform-Accessing-Reddit-Data",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "hacker-news",
+      "name": "Hacker News · Ask HN",
+      "url": "https://news.ycombinator.com/ask",
+      "category": "discussion",
+      "region": "global",
+      "audience": "开发者、创业者和技术从业者",
+      "observe": "Ask HN 的工作经验、工具选择、团队运营问题及评论中的具体经历。",
+      "discovery_question": "技术人群反复讨论的困难，是否对应一个更细的角色与任务？",
+      "signals": [
+        "工作经历",
+        "工具替代",
+        "团队流程",
+        "重复提问"
+      ],
+      "access": "public_api",
+      "access_note": "官方 HN API 提供公开条目与评论数据；它不是完整的关键词搜索服务。历史搜索与采样范围需另行设计，本项目尚未接入。",
+      "bias": "技术与创业人群较集中；高讨论量不等于广泛市场需求。",
+      "reference_url": "https://github.com/HackerNews/API",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "indie-hackers",
+      "name": "Indie Hackers",
+      "url": "https://www.indiehackers.com/groups",
+      "category": "discussion",
+      "region": "global",
+      "audience": "独立开发者、自举创业者和小团队",
+      "observe": "产品经营过程、获客尝试、收入阶段、求助和失败复盘。",
+      "discovery_question": "同一经营阶段的创业者，哪些任务反复需要外援或临时补救？",
+      "signals": [
+        "经营复盘",
+        "获客阻碍",
+        "阶段共性",
+        "付费尝试"
+      ],
+      "access": "search_or_manual",
+      "access_note": "官方分组入口与社区说明已通过官方搜索索引核对；本次主页直接读取受限。未验证可用于本产品的自动采集接口。",
+      "bias": "分享成功和推广产品的动机较强；开发者自己的需求容易被过度代表。",
+      "reference_url": "https://www.indiehackers.com/peer-groups",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "xiaohongshu",
+      "name": "小红书",
+      "url": "https://www.xiaohongshu.com/",
+      "category": "discussion",
+      "region": "china",
+      "audience": "按生活兴趣、职业经验、消费与经营场景聚集的人群",
+      "observe": "场景分享、求助评论、经验教程和使用某种办法前后的经历。",
+      "discovery_question": "哪些细分生活或经营活动里，人们反复询问做法、求模板或找人帮忙？",
+      "signals": [
+        "场景求助",
+        "求模板",
+        "经验教程",
+        "评论追问"
+      ],
+      "access": "manual",
+      "access_note": "本次主页读取超时，未读取到帖子样本。先作为人工研究候选入口；登录、搜索结果完整性、授权及自动采集能力均待核查。",
+      "bias": "推荐算法、商业内容和展示性表达会改变可见样本；中文问题需要另找海外证据。",
+      "reference_url": "https://www.xiaohongshu.com/",
+      "verification": "pending",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "zhihu",
+      "name": "知乎",
+      "url": "https://www.zhihu.com/",
+      "category": "discussion",
+      "region": "china",
+      "audience": "围绕职业、行业、学习和生活决策提问与分享经验的人群",
+      "observe": "具体问题的补充说明、回答中的工作经历以及评论追问。",
+      "discovery_question": "看似宽泛的问题下面，是否藏着某类人在具体步骤上反复受阻的经历？",
+      "signals": [
+        "长篇经历",
+        "问题补充",
+        "行业术语",
+        "追问细节"
+      ],
+      "access": "manual",
+      "access_note": "本次主页跳转至安全验证页，未读取问答正文。保留入口建议，实际可读范围和自动接入条件待核查。",
+      "bias": "回答可能偏观点、内容营销或理想做法；需要区分亲历行为与建议。",
+      "reference_url": "https://www.zhihu.com/",
+      "verification": "pending",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "v2ex",
+      "name": "V2EX",
+      "url": "https://www.v2ex.com/",
+      "category": "discussion",
+      "region": "china",
+      "audience": "中文开发者、独立创作者和互联网从业者",
+      "observe": "节点内的问与答、分享创造、外包和具体工具使用经历。",
+      "discovery_question": "哪些中文技术或小团队工作中的麻烦，会跨帖子重复出现？",
+      "signals": [
+        "节点聚集",
+        "工具抱怨",
+        "工作流程",
+        "外包求助"
+      ],
+      "access": "search_or_manual",
+      "access_note": "本次可读取官方首页、节点与主题入口。未验证本产品所需的完整历史采集接口；人工与索引研究优先。",
+      "bias": "技术人群和当前热点较集中；帖子热度与真实付费规模并不相同。",
+      "reference_url": "https://www.v2ex.com/",
+      "verification": "entry_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "g2",
+      "name": "G2",
+      "url": "https://www.g2.com/",
+      "category": "reviews",
+      "region": "global",
+      "audience": "购买和使用企业软件的业务人员与团队",
+      "observe": "按软件类别查使用场景、具体不足、替代动机以及用户角色。",
+      "discovery_question": "同类软件用户在什么条件下仍需手工补工作，或想换工具？",
+      "signals": [
+        "使用障碍",
+        "迁移动机",
+        "角色差异",
+        "功能缺口"
+      ],
+      "access": "search_or_manual",
+      "access_note": "官方评论平台与研究说明已核查；目录不意味着获得评论数据的批量使用许可。接口、授权、导出与展示条件需按后续用途确认。",
+      "bias": "只看到愿意评价且使用过现有产品的人；评价征集、产品定位与公司规模会影响样本。",
+      "reference_url": "https://research.g2.com/research-guidelines",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "capterra",
+      "name": "Capterra",
+      "url": "https://www.capterra.com/",
+      "category": "reviews",
+      "region": "global",
+      "audience": "按业务类别选择软件的小企业与专业团队",
+      "observe": "软件比较、具体使用经历、优缺点和所服务的业务流程。",
+      "discovery_question": "某类业务中，现有软件在哪些细分场景下仍然费力？",
+      "signals": [
+        "业务类别",
+        "具体不足",
+        "替代比较",
+        "使用情境"
+      ],
+      "access": "search_or_manual",
+      "access_note": "官方软件目录与评论入口已核对；尚未验证可用于需求发现产品的评论 API 或数据授权。",
+      "bias": "评论者未必代表未购买软件的人；比较内容会受到软件类别与入选产品范围影响。",
+      "reference_url": "https://www.capterra.com/",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "app-store",
+      "name": "Apple App Store",
+      "url": "https://apps.apple.com/",
+      "category": "reviews",
+      "region": "global",
+      "audience": "iPhone、iPad 与 Mac 应用的实际使用者",
+      "observe": "应用评论中的触发场景、任务失败、版本变化和具体功能诉求。",
+      "discovery_question": "用户试图完成什么任务，哪些障碍在不同应用或版本中重复出现？",
+      "signals": [
+        "任务失败",
+        "版本变化",
+        "功能请求",
+        "订阅顾虑"
+      ],
+      "access": "authorized",
+      "access_note": "App Store Connect 官方评论 API 面向有权限的自有应用。研究竞品先人工或索引读公开评论；不能由该接口推断可获取任意竞品评论。未运行授权采集。",
+      "bias": "评分常集中在强烈满意或不满的用户；设备、地区与版本差异需要保留。",
+      "reference_url": "https://developer.apple.com/documentation/appstoreconnectapi/customer-reviews",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "google-play",
+      "name": "Google Play",
+      "url": "https://play.google.com/store/apps",
+      "category": "reviews",
+      "region": "global",
+      "audience": "Android 应用的实际使用者",
+      "observe": "评论中的使用障碍、环境差异、缺失步骤和开发者回复。",
+      "discovery_question": "同一任务在哪些设备、地区或使用条件下持续失败？",
+      "signals": [
+        "环境差异",
+        "重复故障",
+        "开发者回复",
+        "功能请求"
+      ],
+      "access": "authorized",
+      "access_note": "官方 Reply to Reviews API 需要授权，面向开发者自己的正式发布应用；并非任意竞品评论接口。竞品研究需另外核查可用来源与权限。",
+      "bias": "地区、设备、版本、语言和评分情绪都可能混入问题判断。",
+      "reference_url": "https://developers.google.com/android-publisher/reply-to-reviews",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "trustpilot",
+      "name": "Trustpilot",
+      "url": "https://www.trustpilot.com/",
+      "category": "reviews",
+      "region": "global",
+      "audience": "使用线上服务、商家与品牌的消费者",
+      "observe": "完整服务过程中的等待、沟通、退款、支持和交付经历。",
+      "discovery_question": "用户真正受阻的是产品功能，还是服务流程中某个反复失效的环节？",
+      "signals": [
+        "服务经历",
+        "等待成本",
+        "沟通失效",
+        "退款原因"
+      ],
+      "access": "authorized",
+      "access_note": "已核查官方 Business API 文档存在认证与模块说明；具体评论访问、存储、再展示和商业用途的权限尚未验证。可先人工研究公开页面。",
+      "bias": "评论可能偏向强烈体验；服务纠纷与可独立开发的工具需求需分开判断。",
+      "reference_url": "https://developers.trustpilot.com/introduction",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "upwork",
+      "name": "Upwork",
+      "url": "https://www.upwork.com/",
+      "category": "jobs",
+      "region": "global",
+      "audience": "提出外包任务的企业与个人，以及承接任务的专业人员",
+      "observe": "任务要求、交付物、技能组合、时限、预算意向与重复岗位。",
+      "discovery_question": "哪些重复且边界清晰的工作，客户正在出预算请人完成？",
+      "signals": [
+        "预算意向",
+        "重复任务",
+        "交付要求",
+        "人工代办"
+      ],
+      "access": "search_or_manual",
+      "access_note": "官方任务发布流程与预算说明已核查。索引或人工可见范围不保证完整，未验证任务数据自动接入。预算或发帖本身不等于成交。",
+      "bias": "样本偏向适合外包且愿意发布的工作；虚假任务、未雇用和低价需求需要排除。",
+      "reference_url": "https://support.upwork.com/hc/en-us/articles/211063408-How-to-post-a-job",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "fiverr",
+      "name": "Fiverr",
+      "url": "https://www.fiverr.com/",
+      "category": "jobs",
+      "region": "global",
+      "audience": "购买标准化服务的个人与小企业，以及服务提供者",
+      "observe": "服务分类、交付套餐、买家评价及同类服务的细分承诺。",
+      "discovery_question": "哪些人反复购买某种人工服务，其中哪些步骤可能由工具辅助？",
+      "signals": [
+        "服务套餐",
+        "人工交付",
+        "细分任务",
+        "买家评价"
+      ],
+      "access": "search_or_manual",
+      "access_note": "已读取官方服务分类入口；服务页价格是卖方报价，不能直接推断实际购买量。未验证自动采集或买家数据访问。",
+      "bias": "供给展示不等于真实需求规模；人工服务还可能依赖审美、沟通与判断。",
+      "reference_url": "https://www.fiverr.com/",
+      "verification": "entry_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "freelancer",
+      "name": "Freelancer",
+      "url": "https://www.freelancer.com/jobs/",
+      "category": "jobs",
+      "region": "global",
+      "audience": "发布项目、竞赛和外包需求的雇主与承接者",
+      "observe": "项目描述、预算区间、技能要求和同类任务的重复出现。",
+      "discovery_question": "哪些跨行业反复出现的交付要求，说明同一基础任务仍需人工处理？",
+      "signals": [
+        "项目描述",
+        "预算意向",
+        "技能组合",
+        "重复交付"
+      ],
+      "access": "search_or_manual",
+      "access_note": "已读取官方任务列表入口；没有验证自动接入与项目成交状态，不能把预算、投标数或任务数直接当成付费市场规模。",
+      "bias": "项目可能未成交、重复发布或高度定制；应区分共性步骤与一次性交付。",
+      "reference_url": "https://www.freelancer.com/jobs/",
+      "verification": "entry_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "xianyu",
+      "name": "闲鱼",
+      "url": "https://www.goofish.com/",
+      "category": "jobs",
+      "region": "china",
+      "audience": "购买技能、代办与各类服务的个人，以及小型服务提供者",
+      "observe": "技能服务的任务边界、交付方式、重复服务供给与真实买家反馈。",
+      "discovery_question": "人们把哪些麻烦交给别人做，其中是否存在频繁、可描述的共性步骤？",
+      "signals": [
+        "技能服务",
+        "代办任务",
+        "交付方式",
+        "人工报价"
+      ],
+      "access": "manual",
+      "access_note": "本次读取到官方首页、搜索和技能分类入口；具体服务详情、成交与评论未核查。先人工观察，不推断开放采集接口。",
+      "bias": "标价可能是引流价，商品与服务供给不等于成交；中文需求不能直接外推海外。",
+      "reference_url": "https://www.goofish.com/",
+      "verification": "entry_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "github-issues",
+      "name": "GitHub Issues",
+      "url": "https://github.com/",
+      "category": "developer",
+      "region": "global",
+      "audience": "开源软件使用者、维护者和开发团队",
+      "observe": "问题复现、功能请求、工作环境、临时修复与维护者回应。",
+      "discovery_question": "哪些用户反复编写相似脚本或绕过同一个缺失环节？",
+      "signals": [
+        "复现步骤",
+        "功能请求",
+        "临时脚本",
+        "维护者回应"
+      ],
+      "access": "public_api",
+      "access_note": "官方 REST API 提供公开仓库 issue 与评论读取能力；认证、限流和仓库权限需按接口处理。issue 列表也可能包含拉取请求，采集时要区分。本项目未接入。",
+      "bias": "主要反映现有开源用户；issue 数量与产品付费意愿没有直接对应关系。",
+      "reference_url": "https://docs.github.com/en/rest/issues",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "stack-exchange",
+      "name": "Stack Exchange",
+      "url": "https://stackexchange.com/sites",
+      "category": "developer",
+      "region": "global",
+      "audience": "开发者以及各专业问答站点的实践者",
+      "observe": "按标签与专业站点观察具体任务、已尝试办法、限制条件和被接受的解法。",
+      "discovery_question": "哪些限制条件导致同一类任务不断被重新提问或需要复杂绕行？",
+      "signals": [
+        "任务约束",
+        "已尝试办法",
+        "标签聚集",
+        "重复提问"
+      ],
+      "access": "public_api",
+      "access_note": "已核查官方 API、搜索和限流说明。需遵守配额、backoff、缓存与内容许可/署名要求；并非无限采集。本项目未接入。",
+      "bias": "规范的问答倾向可明确回答的问题；关闭或重复标记需要结合原问题阅读。",
+      "reference_url": "https://api.stackexchange.com/docs",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "shopify-community",
+      "name": "Shopify Community",
+      "url": "https://community.shopify.com/",
+      "category": "vertical",
+      "region": "global",
+      "audience": "独立站商家、运营者、开发者与服务商",
+      "observe": "订单、库存、门店、物流、主题和应用集成中的具体经营步骤。",
+      "discovery_question": "哪一类店铺在什么业务条件下，总需要找应用、改代码或人工补流程？",
+      "signals": [
+        "经营步骤",
+        "系统衔接",
+        "应用求助",
+        "店铺条件"
+      ],
+      "access": "search_or_manual",
+      "access_note": "已读取官方社区分类，包含零售、应用和经营讨论入口。没有验证社区的批量读取接口与再使用授权。",
+      "bias": "服务商推荐和推广可能混入回复；店铺规模、地区和应用组合差异很大。",
+      "reference_url": "https://community.shopify.com/",
+      "verification": "entry_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "shopify-app-store",
+      "name": "Shopify App Store",
+      "url": "https://apps.shopify.com/",
+      "category": "vertical",
+      "region": "global",
+      "audience": "为具体经营任务寻找应用的 Shopify 商家",
+      "observe": "按任务分类的应用、公开评价、定价条件与开发者回复。",
+      "discovery_question": "现有应用在哪些店铺条件下仍不能把任务做完，商家因此如何补救？",
+      "signals": [
+        "任务分类",
+        "商家评价",
+        "集成障碍",
+        "计费条件"
+      ],
+      "access": "search_or_manual",
+      "access_note": "已读取官方应用目录与评价入口；尚未验证任意应用评论的自动采集渠道。应用存在、评分或安装选项都不能直接证明新产品机会。",
+      "bias": "只覆盖 Shopify 生态；评价、支持体验与实际功能问题需要分开判断。",
+      "reference_url": "https://apps.shopify.com/",
+      "verification": "entry_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "wordpress-support",
+      "name": "WordPress.org Support",
+      "url": "https://wordpress.org/support/forums/",
+      "category": "vertical",
+      "region": "global",
+      "audience": "站长、小企业网站维护者、插件与主题使用者",
+      "observe": "安装、迁移、插件兼容、网站维护、功能请求与反馈。",
+      "discovery_question": "非技术站长反复卡在哪些维护步骤，需要跨插件或跨工具补工作？",
+      "signals": [
+        "维护求助",
+        "兼容问题",
+        "迁移步骤",
+        "非技术用户"
+      ],
+      "access": "search_or_manual",
+      "access_note": "官方论坛分类与问题反馈入口可读；尚未验证适合本项目的批量论坛接入方式。WordPress 站点 REST API 不等于任意支持论坛数据接口。",
+      "bias": "大量求助可由修复现有插件或文档解决，不一定适合做独立新工具。",
+      "reference_url": "https://wordpress.org/support/forums/",
+      "verification": "entry_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "etsy-community",
+      "name": "Etsy Community",
+      "url": "https://community.etsy.com/",
+      "category": "vertical",
+      "region": "global",
+      "audience": "手工艺、设计和数字商品卖家",
+      "observe": "卖家的经营流程、产品上架、交付、客户沟通及平台变化。",
+      "discovery_question": "哪类卖家在商品或订单处理过程中重复花时间做同一件事？",
+      "signals": [
+        "卖家角色",
+        "订单流程",
+        "上架工作",
+        "客户沟通"
+      ],
+      "access": "manual",
+      "access_note": "官方社区说明已核查；页面明确提示使用 Etsy 店铺账户登录以访问完整卖家内容。本次只核查入口，不声称读取完整讨论或具备自动接入。",
+      "bias": "可见公开内容有限；卖家阶段、品类与平台规则可能主导问题。",
+      "reference_url": "https://community.etsy.com/",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "product-hunt",
+      "name": "Product Hunt",
+      "url": "https://www.producthunt.com/",
+      "category": "trends",
+      "region": "global",
+      "audience": "新产品开发者、早期使用者与技术产品爱好者",
+      "observe": "新产品定位、目标角色、评论提问和同类产品集中出现的主题。",
+      "discovery_question": "新产品正在服务哪些细分角色，这些角色的哪些问题还需要独立证据？",
+      "signals": [
+        "新产品定位",
+        "早期反馈",
+        "购买提问",
+        "细分角色"
+      ],
+      "access": "search_or_manual",
+      "access_note": "已核查官方 API 文档；文档明确限制 API 商业用途，需联系平台确认许可。不能直接把该 API 用作商业需求发现产品的数据源。本目录先作为人工与可用索引研究入口。",
+      "bias": "发布热度、投票与开发者推广会影响排序；新产品数量不是需求规模。",
+      "reference_url": "https://www.producthunt.com/v2/docs",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "appsumo",
+      "name": "AppSumo",
+      "url": "https://appsumo.com/",
+      "category": "trends",
+      "region": "global",
+      "audience": "购买软件优惠方案的小企业、营销人员与独立经营者",
+      "observe": "产品定位、公开评价、购买前问题及对功能和使用限制的追问。",
+      "discovery_question": "用户在付款前反复确认哪些条件，购买后又在哪些任务上失望？",
+      "signals": [
+        "购买顾虑",
+        "公开评价",
+        "功能追问",
+        "使用限制"
+      ],
+      "access": "search_or_manual",
+      "access_note": "已读取官方产品与评价入口。具体问答覆盖、自动采集与再展示许可未验证；优惠购买不能直接推断长期订阅意愿。",
+      "bias": "优惠与终身套餐人群有特定价格偏好，可能偏离持续订阅用户。",
+      "reference_url": "https://appsumo.com/",
+      "verification": "entry_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "google-trends",
+      "name": "Google Trends",
+      "url": "https://trends.google.com/",
+      "category": "trends",
+      "region": "global",
+      "audience": "通过搜索表达兴趣、信息需求或任务意图的人群",
+      "observe": "相关查询、地区差异、季节性和搜索兴趣随时间的变化。",
+      "discovery_question": "哪些任务词正在出现或反复增长，背后可能对应什么活动与角色？",
+      "signals": [
+        "相关查询",
+        "地区差异",
+        "季节变化",
+        "新任务词"
+      ],
+      "access": "search_or_manual",
+      "access_note": "官方 FAQ 已核查：趋势指数是归一化的相对搜索兴趣，不能当作绝对搜索量。本项目未核查或接入可用 API，先人工研究与合适的官方导出。",
+      "bias": "搜索兴趣可能来自新闻或好奇；不能仅凭曲线推断痛点、群体规模或付费意愿。",
+      "reference_url": "https://support.google.com/trends/answer/4365533?hl=en",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "url": "https://www.youtube.com/",
+      "category": "trends",
+      "region": "global",
+      "audience": "围绕教程、工作过程、产品评测与专业内容学习和交流的人群",
+      "observe": "教程中的重复手工步骤、评论求助、工具比较和具体使用条件。",
+      "discovery_question": "哪些教程不断教人手工补同一步骤，评论里又有哪些条件尚未被解决？",
+      "signals": [
+        "教程步骤",
+        "评论求助",
+        "工具比较",
+        "工作演示"
+      ],
+      "access": "authorized",
+      "access_note": "已核查官方 YouTube Data API 评论线程读取文档；请求需要相应项目凭据与配额，且评论可能被关闭，线程结果不一定包含所有回复。本项目尚未接入；字幕访问需单独核查。",
+      "bias": "内容推荐与创作者选题塑造可见样本；观看量、提问和购买意愿需要区分。",
+      "reference_url": "https://developers.google.com/youtube/v3/docs/commentThreads/list",
+      "verification": "official_checked",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "douyin",
+      "name": "抖音",
+      "url": "https://www.douyin.com/",
+      "category": "trends",
+      "region": "china",
+      "audience": "围绕生活、职业技能、经营和服务内容聚集的观看者与创作者",
+      "observe": "工作演示、经验教程与评论里的具体步骤追问。",
+      "discovery_question": "哪些看似日常的操作反复被教、被问，涉及哪些角色与使用情境？",
+      "signals": [
+        "操作演示",
+        "步骤追问",
+        "经验分享",
+        "服务供给"
+      ],
+      "access": "manual",
+      "access_note": "本次官方主页没有返回可研究的正文，未核查视频与评论样本。人工研究、登录范围和授权能力待确认；不承诺自动抓取。",
+      "bias": "推荐算法、商业内容和短视频表达容易放大情绪与个案。",
+      "reference_url": "https://www.douyin.com/",
+      "verification": "pending",
+      "checked_at": "2026-10-15"
+    },
+    {
+      "id": "bilibili",
+      "name": "哔哩哔哩",
+      "url": "https://www.bilibili.com/",
+      "category": "trends",
+      "region": "china",
+      "audience": "教程学习者、创作者、技术爱好者与细分兴趣群体",
+      "observe": "较完整的工作教程、工具比较、制作过程和评论中的失败经历。",
+      "discovery_question": "学习者或创作者在实际操作中，哪些步骤反复需要额外工具或人工补救？",
+      "signals": [
+        "完整教程",
+        "制作过程",
+        "评论求助",
+        "学习障碍"
+      ],
+      "access": "manual",
+      "access_note": "本次主页跳转至浏览器升级提示页，没有读取视频或评论正文。保留人工研究入口，数据获取能力与授权待核查。",
+      "bias": "教学难度可能来自技能门槛；高播放与大量评论不等于软件需求。",
+      "reference_url": "https://www.bilibili.com/",
+      "verification": "pending",
+      "checked_at": "2026-10-15"
+    }
+  ],
+  "references": [
+    {
+      "id": "reddit-access",
+      "title": "Reddit：开发者平台与数据访问",
+      "url": "https://support.reddithelp.com/hc/en-us/articles/14945211791892-Developer-Platform-Accessing-Reddit-Data",
+      "note": "数据访问条件与开发者用途；公开页面不等于已获得 API 使用权。"
+    },
+    {
+      "id": "reddit-changelog",
+      "title": "Reddit：2026 年 10 月 8 日更新说明",
+      "url": "https://support.reddithelp.com/hc/en-us/articles/54353370049684-Changelog-October-8-2026",
+      "note": "官方说明 RSS 与公共 Data API 的后续变化，接入计划不能依赖旧接口永久可用。"
+    },
+    {
+      "id": "hn-api",
+      "title": "Hacker News 官方 API",
+      "url": "https://github.com/HackerNews/API",
+      "note": "公开条目和评论数据的正式入口；不等同于关键词搜索接口。"
+    },
+    {
+      "id": "github-issues-api",
+      "title": "GitHub REST API：Issues",
+      "url": "https://docs.github.com/en/rest/issues",
+      "note": "issues、评论等数据入口；认证、限流与权限按具体接口处理。"
+    },
+    {
+      "id": "stack-exchange-api",
+      "title": "Stack Exchange API",
+      "url": "https://api.stackexchange.com/docs",
+      "note": "官方方法与鉴权说明；另需遵守配额、backoff 与内容署名要求。"
+    },
+    {
+      "id": "stack-exchange-throttle",
+      "title": "Stack Exchange API：限流",
+      "url": "https://api.stackexchange.com/docs/throttle",
+      "note": "配额、缓存与请求限制；不能把公开接口理解为无限采集。"
+    },
+    {
+      "id": "apple-reviews",
+      "title": "Apple：Customer Reviews",
+      "url": "https://developer.apple.com/documentation/appstoreconnectapi/customer-reviews",
+      "note": "App Store Connect 读取自有应用评论的权限边界；不是任意竞品评论接口。"
+    },
+    {
+      "id": "google-play-reviews",
+      "title": "Google Play：Reply to Reviews",
+      "url": "https://developers.google.com/android-publisher/reply-to-reviews",
+      "note": "授权访问开发者自己的正式发布应用评论。"
+    },
+    {
+      "id": "trustpilot-api",
+      "title": "Trustpilot Business API 入门",
+      "url": "https://developers.trustpilot.com/introduction",
+      "note": "模块与认证说明；具体数据使用和商业展示权限需要进一步确认。"
+    },
+    {
+      "id": "upwork-job-post",
+      "title": "Upwork：如何发布任务",
+      "url": "https://support.upwork.com/hc/en-us/articles/211063408-How-to-post-a-job",
+      "note": "任务描述与预算是招募意向；发布任务不等于实际雇用或成交。"
+    },
+    {
+      "id": "product-hunt-api",
+      "title": "Product Hunt API 文档",
+      "url": "https://www.producthunt.com/v2/docs",
+      "note": "官方文档限制 API 商业用途，商用接入需确认许可。"
+    },
+    {
+      "id": "google-trends-data",
+      "title": "Google Trends：数据常见问题",
+      "url": "https://support.google.com/trends/answer/4365533?hl=en",
+      "note": "趋势值是归一化的相对搜索兴趣，不能当作绝对搜索量或市场规模。"
+    },
+    {
+      "id": "youtube-comments",
+      "title": "YouTube Data API：评论线程",
+      "url": "https://developers.google.com/youtube/v3/docs/commentThreads/list",
+      "note": "凭据、配额、评论线程和回复覆盖需要分别处理。"
+    },
+    {
+      "id": "g2-guidelines",
+      "title": "G2：研究与评论准则",
+      "url": "https://research.g2.com/research-guidelines",
+      "note": "了解平台评论形成机制，不把评论当作无偏总体样本。"
+    },
+    {
+      "id": "pain-on-social",
+      "title": "同类产品：PainOnSocial",
+      "url": "https://painonsocial.com/",
+      "note": "官网展示按 Reddit 社区分析痛点并提供引文和链接的产品思路。本次只核查官方描述，未验证其采集效果、评分准确性或商业表现。"
+    }
+  ]
+}

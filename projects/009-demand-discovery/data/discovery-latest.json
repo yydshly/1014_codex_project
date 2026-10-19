@@ -1,0 +1,617 @@
+{
+  "schema_version": 1,
+  "id": "5e8f1bda-3f10-4745-be71-ebf0da5146ca",
+  "mode": "openai_codex_discovery",
+  "provider": "OpenAI · Codex 本地执行",
+  "model": "Codex 默认模型",
+  "input": {
+    "domain": "小型本地服务经营（local service businesses）",
+    "market": "英语市场，重点观察独立经营者与小团队",
+    "constraints": "个人开发者可以实现的网页工具；先发现具体人群与任务，不提前指定痛点；优先真实从业者经历。"
+  },
+  "status": "completed",
+  "message": "本轮完成：3 类人群、3 个问题候选、10 条来源。",
+  "created_at": "2026-10-15T03:35:18.891Z",
+  "people": [
+    {
+      "id": "p1",
+      "label": "管理少量承包清洁工的住宅清洁公司经营者／排班负责人",
+      "task": "把周期客户和一次性订单分配给清洁工，协调到访时间、指定团队、服务周期和行车距离。",
+      "context": "发帖者自述有5名承包清洁工，每月约160单，周期订单约占35%；已有Jobber和全职办公室经理。客户对时间及团队的偏好影响排班。",
+      "why": "能观察到具体调度工作与后续结果。发帖者后来通过限制服务周期、按地区和周期分组解决了原问题，应继续核实哪些情境仍需要人工处理。",
+      "source_urls": [
+        "https://reddit.com/r/sweatystartup/comments/1hbic3f/cleaning_company_owners_whats_your_process_for"
+      ],
+      "next_question": "采用每周、隔周、每4周的固定分组后，新增客户、病假和天气改期分别怎样处理，哪些步骤仍需重新协调？"
+    },
+    {
+      "id": "p2",
+      "label": "利用学校假期经营上门汽车精洗的单人兼职经营者",
+      "task": "获取初期客户、确定服务范围和价格、接受预约与付款，并在现场检查车辆、完成清洁及请求评价。",
+      "context": "发帖者是美国北卡罗来纳州教师，用小轿车携带设备，使用客户的水电；首批客户主要来自亲友和邻里。帖子描述了交付前后与客户检查车辆、使用作业清单等做法。",
+      "why": "提供从接单到现场验收的完整活动线索，也明确表示Square和Setmore已经很好用；值得观察现场信息如何进入预约及交付流程，尚无证据需要替换现有工具。",
+      "source_urls": [
+        "https://reddit.com/r/AutoDetailing/comments/wbmr8g"
+      ],
+      "next_question": "从熟人客户转向陌生客户时，如何在预约前确认车辆情况、水电条件和重点清洁部位，并将这些信息带到现场？"
+    },
+    {
+      "id": "p3",
+      "label": "保留办公室本职工作的早期擦窗经营者",
+      "task": "安排商业客户的擦窗路线，承接住宅订单，并通过明信片、转介绍和Google商家资料获取客户。",
+      "context": "专业擦窗论坛的发帖者自述创业尚不足一年，同时做办公室工作；当周商业路线尚待安排，也有住宅客户要求每年服务两次。",
+      "why": "体现本职工作、商业周期服务和住宅订单并存的经营情境。已有渠道带来订单，可继续观察其如何安排有限工作时间以及区分实际有效的获客渠道。",
+      "source_urls": [
+        "https://community.windowcleaner.com/t/1st-year-in-business-revenue/52965"
+      ],
+      "next_question": "经营者怎样把商业路线、半年一次的住宅服务和本职工作排进日历，又怎样记录客户最初来自哪个渠道？"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "c1",
+      "audience_id": "p1",
+      "audience": "管理周期住宅清洁订单的小团队经营者／排班负责人",
+      "problem": "周期订单已重复生成后，仍需人工结合客户时间偏好、团队及行车路线安排日程；相邻任务还包括前夜分配团队和重复发送任务信息。",
+      "context": "本轮打开Jobber社区原帖，确认约215名周期住宅客户的经营者每周按路线和偏好手排。另有5名员工的清洁经营者报告周期预约难以跟踪、客户被遗漏；管理3支各3人团队的经营者则在Google Calendar记客户信息，前夜填团队，再把地址、说明和时间发至群聊。",
+      "obstacle": "客户偏好写在任务说明中，需要人工判断；团队指派和任务传达分散在日历与聊天中。但周期重复、信息传达与多约束排班不是同一个问题。",
+      "impact": "215名客户的经营者称手动兼顾偏好已难以应付，未披露耗时或损失。5名员工的经营者明确报告遗漏客户，但不能将其错误率归给其他经营者。",
+      "evidence_urls": [
+        "https://community.getjobber.com/discussions/job-details-scheduling/scheduling-with-recurring-customers-and-new-customers-/2963",
+        "https://reddit.com/r/cleaning_business/comments/1bztyub/app_or_software_recommendations_for_my_cleaning",
+        "https://reddit.com/r/smallbusiness/comments/1bscjmy/scheduling_software_for_cleaning_houses",
+        "https://reddit.com/r/sweatystartup/comments/1hbic3f/cleaning_company_owners_whats_your_process_for"
+      ],
+      "existing_solutions": [
+        {
+          "name": "限制周期、按地区和周期分组",
+          "description": "原经营者实际改为每周、隔周、每4周，并预留调整日期，自述排班降至约每月1小时。本轮重新打开确认，是直接有效反例。",
+          "url": "https://reddit.com/r/sweatystartup/comments/1hbic3f/cleaning_company_owners_whats_your_process_for"
+        },
+        {
+          "name": "Google Workspace员工日历与周期预约",
+          "description": "回复者自述用此方法安排10名员工多年；业务类型和复杂偏好未说明，只能反驳基础员工周期排班必然需要专用新工具。",
+          "url": "https://reddit.com/r/smallbusiness/comments/1bscjmy/scheduling_software_for_cleaning_houses"
+        },
+        {
+          "name": "Google Calendar加团队群聊",
+          "description": "3支团队经营者正在使用的流程，能够传递任务，但其希望简化操作并要求英西双语；没有报告更换后的结果。",
+          "url": "https://reddit.com/r/cleaning_business/comments/1bztyub/app_or_software_recommendations_for_my_cleaning"
+        }
+      ],
+      "unknowns": [
+        "新增帖子支持相邻的周期排班及信息传达任务，尚缺更小团队同时处理路线、指定团队与时间偏好的完整交叉证据。",
+        "5名员工经营者试过哪些软件、为何只能设置整班时段，是否属于选型或配置问题，需要访谈。",
+        "哪些人工移动确实需要重新决策，哪些只是复制已有固定安排，尚未知。",
+        "周期限制对获客、客户留存和服务承诺的代价未知。",
+        "各账号身份、经营规模及相互独立性未核验；没有工具采用或付费验证。"
+      ],
+      "next_question": "访谈能提供最近一次实际排班记录的经营者，区分重复录入、配置问题和必须人工判断的约束冲突。",
+      "decision": "优先核实",
+      "reason": "人工分配和遗漏有补充经历，复杂偏好任务仅部分交叉对应；固定分组已有直接成功反例。"
+    },
+    {
+      "id": "c2",
+      "audience_id": "p1",
+      "audience": "处理客户临时取消及补约的住宅清洁经营者；新增交叉证据来自单人经营者",
+      "problem": "客户临近服务才取消时，经营者难以在短时间内填补空档；原本已满的日历又限制补约。",
+      "context": "上一轮经营者描述三名客户两周内反复取消或改期。本轮新增单人清洁经营者自述流感期间出现提前约5小时的取消，难以填补时段；没有披露其是否以周期客户为主。",
+      "obstacle": "短通知时间压缩补单机会；可联系的客户是否愿意、地点是否接近、空档是否足够尚未得到事件级证据。取消政策与实际填补空档是两种不同办法。",
+      "impact": "新增发帖者自报两周收入受影响约2000美元，币种、计算方法及最终追回情况未知；不能与上一轮自报损失相加或外推。",
+      "evidence_urls": [
+        "https://reddit.com/r/cleaningbusiness/comments/1wbs53d/cancellation_policys",
+        "https://reddit.com/r/housekeeping/comments/1sqnswb/residential_cleaner_needed_help_with",
+        "https://reddit.com/r/housekeeping/comments/1iqwf0w/cancelled_two_clients_dont_even_know_when_i_can"
+      ],
+      "existing_solutions": [
+        {
+          "name": "临时空档候补名单",
+          "description": "独立清洁工在发帖者回复中确认实际联系候补名单客户，但这些客户不接受固定清洁；没有披露填补率、响应时间或失败原因。",
+          "url": "https://reddit.com/r/housekeeping/comments/1iqwf0w/cancelled_two_clients_dont_even_know_when_i_can"
+        },
+        {
+          "name": "提前告知取消规则、保留付款方式或收订金",
+          "description": "新增讨论提供这些建议，部分回复带有服务推广或辅导业务背景；没有原发帖者实施结果，不能视为独立用户成功案例。",
+          "url": "https://reddit.com/r/cleaningbusiness/comments/1wbs53d/cancellation_policys"
+        }
+      ],
+      "unknowns": [
+        "新增对象为单人经营者，尚缺管理承包团队者在同类取消事件中的交叉证据。",
+        "两位受影响经营者是否已有候补名单、取消收费或付款方式留存，未知。",
+        "候补客户不接受的原因究竟是通知太晚、地点、时长还是价格，需要逐次复盘。",
+        "没有找到已实施取消政策且报告改善结果的同类经营者；建议不能替代结果。",
+        "工具能否增加可成交补单，而非仅更快发送消息，尚无证据。"
+      ],
+      "next_question": "复盘连续三次取消及每次候补联系结果；若无可接单客户或主要靠政策解决，应搁置工具方向。",
+      "decision": "继续调查",
+      "reason": "新增临时取消经历支持问题存在，但候补名单和收费政策的实际效果仍未知。"
+    },
+    {
+      "id": "c3",
+      "audience_id": "p1",
+      "audience": "因天气、病假或托育不可用而主动取消服务的清洁经营者",
+      "problem": "主动取消后，剩余工作时间已满，无法在下次固定服务前补约。",
+      "context": "本轮重新打开独立清洁工帖子，确认暴雪和家庭紧急事件减少可工作时间。其他从业者回复描述实际采用有空才补约、隔周客户通常等下次服务的流程。",
+      "obstacle": "缺少可工作时间；没有发现已存在可行替代团队或时段却因信息分散而未找到的证据。",
+      "impact": "原发帖者因不知道能排在哪里而延迟联系客户；确定收入损失及后续安排未知。",
+      "evidence_urls": [
+        "https://reddit.com/r/housekeeping/comments/1iqwf0w/cancelled_two_clients_dont_even_know_when_i_can",
+        "https://reddit.com/r/sweatystartup/comments/1hbic3f/cleaning_company_owners_whats_your_process_for"
+      ],
+      "existing_solutions": [
+        {
+          "name": "仅有余量时补约，否则保留下次服务",
+          "description": "其他从业者描述自己的天气流程：隔周客户通常等下次固定服务，月度客户进入下一个可用空档；未量化效果。",
+          "url": "https://reddit.com/r/housekeeping/comments/1iqwf0w/cancelled_two_clients_dont_even_know_when_i_can"
+        },
+        {
+          "name": "固定分组并预留调整日期",
+          "description": "团队经营者自报有效的日程规则，为天气及病假保留调整空间。",
+          "url": "https://reddit.com/r/sweatystartup/comments/1hbic3f/cleaning_company_owners_whats_your_process_for"
+        }
+      ],
+      "unknowns": [
+        "独立清洁工的流程不能直接推广到管理多个团队的经营者。",
+        "跳过服务后的收入、客户留存及满意度结果未知。",
+        "事件频率与实际协调耗时未知。",
+        "有可替代产能但协调失败的案例仍缺失。"
+      ],
+      "next_question": "仅在发现已有替代产能却因多轮协调未能使用的具体案例后重开调查。",
+      "decision": "暂时搁置",
+      "reason": "产能不足证据明确，并有接受跳过一次服务的实际流程。"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://reddit.com/r/sweatystartup/comments/1hbic3f/cleaning_company_owners_whats_your_process_for",
+      "title": "Cleaning Company Owners - what’s your process for scheduling jobs?",
+      "kind": "从业者讨论帖及后续回复",
+      "claim": "原发帖者通过限制周期、标题标注和地区分组解决大部分排班，后续仅因病假或雪天按需调整；另一账号仍描述周期重叠后的每周返工。",
+      "quote": "it cut the scheduling/re-planning/playing tetris every week down to like 1 hour/month",
+      "location": "发帖者回复，第151—152行；其他人的回复，第143—145行；发帖者回复，第106—109行",
+      "access": "page_excerpt",
+      "date_basis": "搜索结果标注首帖2024-12-11、关键后续回复2025-02-14；打开页仅显示相对时间。",
+      "phase": "problems",
+      "opened_in_trace": true,
+      "verification": "tool_read_excerpt",
+      "collected_at": "2026-10-15T03:38:28.960Z",
+      "local_read": {
+        "status": "unavailable",
+        "http_status": null,
+        "at": "2026-10-15T03:40:25.368Z"
+      },
+      "verification_note": "本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。"
+    },
+    {
+      "url": "https://reddit.com/r/AutoDetailing/comments/wbmr8g",
+      "title": "A Full Breakdown of How I Made a Profitable Mobile Car Detailing Business in One Month",
+      "kind": "从业者经营与交付记录",
+      "claim": "美国教师描述单人上门精洗的初期经营：使用客户水电，交付前后共同检查车辆，并使用清单；已有预约和支付工具获得其正面评价。",
+      "quote": "Have a checklist for yourself, so you force yourself not to miss any steps, especially in the interior of a vehicle.",
+      "location": "正文，第21行、第33—41行及第60—86行",
+      "access": "page_excerpt",
+      "date_basis": "确切发布日期未知；打开页面显示约4年前。",
+      "phase": "people",
+      "opened_in_trace": true,
+      "verification": "model_excerpt",
+      "collected_at": "2026-10-15T03:36:40.859Z"
+    },
+    {
+      "url": "https://community.windowcleaner.com/t/1st-year-in-business-revenue/52965",
+      "title": "1st year in business revenue",
+      "kind": "专业社区经营者讨论帖",
+      "claim": "发帖者同时做办公室工作和擦窗业务，需安排商业路线；其自述明信片、转介绍和Google商家资料已带来客户，包括每年清洗两次的住宅订单。",
+      "quote": "I still have my commercial route work to schedule for this upcoming week",
+      "location": "正文，首帖，第5—20行",
+      "access": "page_excerpt",
+      "date_basis": "页面首帖标注2021-05-03。",
+      "phase": "people",
+      "opened_in_trace": true,
+      "verification": "model_excerpt",
+      "collected_at": "2026-10-15T03:36:40.859Z"
+    },
+    {
+      "url": "https://community.getjobber.com/discussions/job-details-scheduling/scheduling-with-recurring-customers-and-new-customers-/2963",
+      "title": "Scheduling with recurring customers and new customers.",
+      "kind": "软件用户社区经营者求助帖",
+      "claim": "本轮实际打开正文，确认经营者有约215名周期住宅客户，时间偏好记在说明中，每周人工结合路线安排团队；页面未展示回复。",
+      "quote": "Each week, I layout the jobs manually on each of Team Leads day",
+      "location": "正文，第19—22行",
+      "access": "search_snippet",
+      "date_basis": "确切日期未知；页面显示1 year ago。",
+      "phase": "investigate",
+      "opened_in_trace": false,
+      "verification": "search_snippet",
+      "collected_at": "2026-10-15T03:40:25.292Z",
+      "local_read": {
+        "status": "unavailable",
+        "http_status": null,
+        "at": "2026-10-15T03:40:25.400Z"
+      },
+      "verification_note": "本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。"
+    },
+    {
+      "url": "https://reddit.com/r/housekeeping/comments/1sqnswb/residential_cleaner_needed_help_with",
+      "title": "Residential cleaner needed help with contract/cancellation policy",
+      "kind": "清洁经营者求助帖",
+      "claim": "经营者自述三名客户两周内反复取消或改期，影响超过500美元收入，满日历又缺乏补约空间；尚未报告新政策的效果。",
+      "quote": "My schedule is really full and they are aware of this and that doesn’t leave me with many open spots to move them to.",
+      "location": "正文，第20—23行；其他人的回复，第50—68行",
+      "access": "page_excerpt",
+      "date_basis": "搜索结果标注2026-04-20；打开页显示相对时间。",
+      "phase": "problems",
+      "opened_in_trace": true,
+      "verification": "tool_read_excerpt",
+      "collected_at": "2026-10-15T03:38:28.960Z",
+      "local_read": {
+        "status": "unavailable",
+        "http_status": null,
+        "at": "2026-10-15T03:40:25.368Z"
+      },
+      "verification_note": "本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。"
+    },
+    {
+      "url": "https://reddit.com/r/housekeeping/comments/1iqwf0w/cancelled_two_clients_dont_even_know_when_i_can",
+      "title": "Cancelled two clients, don’t even know when I can reschedule them",
+      "kind": "独立清洁工经历、候补实践与改期反例",
+      "claim": "本轮实际打开确认原发帖者受托育和天气限制，无空档且延迟联系；其实际维护候补名单。另一从业者描述隔周客户通常等下次服务、月度客户安排到下个空档的实际流程。",
+      "quote": "My biweekly clients typically just wait until their next service day for a cleaning.",
+      "location": "正文，第21—25行；发帖者回复，第152行；其他人的回复，第238—244行",
+      "access": "page_excerpt",
+      "date_basis": "确切日期未知；页面显示2y ago。",
+      "phase": "investigate",
+      "opened_in_trace": true,
+      "verification": "tool_read_excerpt",
+      "collected_at": "2026-10-15T03:40:25.292Z",
+      "local_read": {
+        "status": "unavailable",
+        "http_status": null,
+        "at": "2026-10-15T03:40:25.405Z"
+      },
+      "verification_note": "本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。"
+    },
+    {
+      "url": "https://help.getjobber.com/en/articles/visits",
+      "title": "Visits | Jobber Help Center",
+      "kind": "官方操作说明",
+      "claim": "现有软件提供移动访问日期及改期通知操作，应进一步核实真实流程缺口，不能将所有改期工作视为缺少功能。",
+      "quote": "When you reschedule a visit, Jobber automatically cancels any visit reminders tied to the previous schedule.",
+      "location": "任务说明，改期与提醒相关段落",
+      "access": "search_snippet",
+      "date_basis": "发布日期未知；已尝试打开，工具返回页面元数据，具体操作文字取自搜索摘要。",
+      "phase": "problems",
+      "opened_in_trace": false,
+      "verification": "model_excerpt",
+      "collected_at": "2026-10-15T03:38:28.960Z"
+    },
+    {
+      "url": "https://reddit.com/r/cleaning_business/comments/1bztyub/app_or_software_recommendations_for_my_cleaning",
+      "title": "app or software recommendations for my cleaning business",
+      "kind": "清洁团队经营者工作流程求助帖",
+      "claim": "经营者自述管理3支各3人团队，用日历记录客户资料，前夜指派团队，再在群聊发送地址、说明和时间，希望简化且支持英西双语。",
+      "quote": "I then the night before insert the cleaners name in the google calendar appointment",
+      "location": "正文，第18—20行",
+      "access": "page_excerpt",
+      "date_basis": "页面相关日期索引指向2024-04-09；正文未显示绝对发帖日期。",
+      "phase": "investigate",
+      "opened_in_trace": true,
+      "verification": "tool_read_excerpt",
+      "collected_at": "2026-10-15T03:40:25.292Z",
+      "local_read": {
+        "status": "unavailable",
+        "http_status": null,
+        "at": "2026-10-15T03:40:25.405Z"
+      },
+      "verification_note": "本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。"
+    },
+    {
+      "url": "https://reddit.com/r/smallbusiness/comments/1bscjmy/scheduling_software_for_cleaning_houses",
+      "title": "Scheduling software for cleaning houses?",
+      "kind": "清洁经营者求助及已有流程反例",
+      "claim": "5名员工的清洁经营者报告周期预约难跟踪并遗漏客户。另一回复者自述以Google Workspace员工日历安排10名员工多年，但未说明其行业和复杂约束。",
+      "quote": "I use this method to schedule 10 employees and have for years",
+      "location": "正文，第21—38行；其他人的回复，第105行",
+      "access": "search_snippet",
+      "date_basis": "页面相关日期索引指向2024-03-31；正文未显示绝对发帖日期。",
+      "phase": "investigate",
+      "opened_in_trace": false,
+      "verification": "search_snippet",
+      "collected_at": "2026-10-15T03:40:25.292Z",
+      "local_read": {
+        "status": "unavailable",
+        "http_status": null,
+        "at": "2026-10-15T03:40:25.405Z"
+      },
+      "verification_note": "本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。"
+    },
+    {
+      "url": "https://reddit.com/r/cleaningbusiness/comments/1wbs53d/cancellation_policys",
+      "title": "Cancellation policy’s",
+      "kind": "单人清洁经营者经历及政策讨论",
+      "claim": "发帖者自述流感期间客户提前约5小时取消，难以填补时段，两周收入受影响约2000美元。回复以政策和候补名单建议为主，部分明确带推广背景，没有实施结果。",
+      "quote": "leaving me with 5 hours notice I am struggling to fill the spots",
+      "location": "正文，第19—22行；其他人的回复，第49—51、66—82、91—127行",
+      "access": "search_snippet",
+      "date_basis": "确切日期未知；页面显示1mo ago，部分回复显示27或28天前。",
+      "phase": "investigate",
+      "opened_in_trace": false,
+      "verification": "search_snippet",
+      "collected_at": "2026-10-15T03:40:25.292Z",
+      "local_read": {
+        "status": "unavailable",
+        "http_status": null,
+        "at": "2026-10-15T03:40:25.407Z"
+      },
+      "verification_note": "本地页面未成功读取；引文保留为 AI 联网摘录，尚未独立逐字核验。"
+    }
+  ],
+  "actions": [
+    {
+      "id": "exec-6e8eb820-77b3-4610-bcff-b17ac79678ee",
+      "phase": "people",
+      "type": "search",
+      "queries": [
+        "site.reddit.com/r/sweatystartup solo cleaning business typical day scheduling customers",
+        "site.reddit.com/r/lawncare business owner weekly route customers solo",
+        "site.reddit.com/r/AutoDetailing mobile detailing business solo daily customers",
+        "site.reddit.com/r/sweatystartup solo cleaning business typical day scheduling customers ..."
+      ],
+      "urls": [],
+      "status": "completed",
+      "at": "2026-10-15T03:35:30.836Z"
+    },
+    {
+      "id": "exec-243daebe-fa01-435e-90cf-0e7d6ec6334d",
+      "phase": "people",
+      "type": "search",
+      "queries": [
+        "site.reddit.com/r/sweatystartup \"window cleaning\" \"quote\" \"I\" business"
+      ],
+      "urls": [],
+      "status": "completed",
+      "at": "2026-10-15T03:35:38.045Z"
+    },
+    {
+      "id": "exec-7300d3f5-6b23-4220-8ff3-06c7de02a035",
+      "phase": "people",
+      "type": "open_page",
+      "queries": [],
+      "urls": [
+        "https://reddit.com/r/AutoDetailing/comments/wbmr8g"
+      ],
+      "status": "completed",
+      "at": "2026-10-15T03:35:44.072Z"
+    },
+    {
+      "id": "exec-05b3ec7c-68f4-4ead-a902-cef0d9a12af5",
+      "phase": "people",
+      "type": "open_page",
+      "queries": [],
+      "urls": [
+        "https://community.windowcleaner.com/t/1st-year-in-business-revenue/52965"
+      ],
+      "status": "completed",
+      "at": "2026-10-15T03:35:51.278Z"
+    },
+    {
+      "id": "exec-3f373696-4885-43db-98f7-f6568781514a",
+      "phase": "problems",
+      "type": "search",
+      "queries": [
+        "site.reddit.com/r/sweatystartup/comments/1hbic3f cleaning scheduling",
+        "site.reddit.com cleaning business scheduling cancellations reschedule cleaners sick Jobber",
+        "site.reddit.com/r/sweatystartup/comments/1hbic3f cleaning scheduling ..."
+      ],
+      "urls": [],
+      "status": "completed",
+      "at": "2026-10-15T03:36:53.327Z"
+    },
+    {
+      "id": "exec-c7c8e4f9-8e65-4997-8e4a-1cb1d422b632",
+      "phase": "problems",
+      "type": "open_page",
+      "queries": [],
+      "urls": [
+        "https://reddit.com/r/sweatystartup/comments/1hbic3f/cleaning_company_owners_whats_your_process_for"
+      ],
+      "status": "completed",
+      "at": "2026-10-15T03:36:57.917Z"
+    },
+    {
+      "id": "exec-37713ec5-be7d-4ea9-9506-4b08d5115206",
+      "phase": "problems",
+      "type": "search",
+      "queries": [
+        "site.reddit.com/r/housekeeping cleaning business sick reschedule clients schedule owner",
+        "site.community.getjobber.com cleaning reschedule recurring visit next schedule",
+        "site.reddit.com/r/housekeeping cleaning business sick reschedule clients schedule owner ..."
+      ],
+      "urls": [],
+      "status": "completed",
+      "at": "2026-10-15T03:37:04.581Z"
+    },
+    {
+      "id": "exec-5daddb0c-7831-4fb1-ba7b-e2bd9c4edfe7",
+      "phase": "problems",
+      "type": "open_page",
+      "queries": [],
+      "urls": [
+        "https://reddit.com/r/housekeeping/comments/1sqnswb/residential_cleaner_needed_help_with"
+      ],
+      "status": "completed",
+      "at": "2026-10-15T03:37:10.598Z"
+    },
+    {
+      "id": "exec-31b7cb2e-aedd-4eab-8b7d-55f5fbdeeb65",
+      "phase": "investigate",
+      "type": "search",
+      "queries": [
+        "site.reddit.com cleaning business recurring scheduling Jobber schedule clients teams recurring",
+        "site.reddit.com cleaning business cancellations cancellation list policy filled spots",
+        "site.reddit.com cleaning business recurring scheduling Jobber schedule clients teams recurring ..."
+      ],
+      "urls": [],
+      "status": "completed",
+      "at": "2026-10-15T03:38:39.083Z"
+    },
+    {
+      "id": "exec-14de458c-ee62-467c-a802-deb3821e4f07",
+      "phase": "investigate",
+      "type": "open_page",
+      "queries": [],
+      "urls": [
+        "https://reddit.com/r/cleaning_business/comments/1bztyub/app_or_software_recommendations_for_my_cleaning"
+      ],
+      "status": "completed",
+      "at": "2026-10-15T03:38:44.237Z"
+    },
+    {
+      "id": "exec-c83d2dac-4321-455e-9b45-91cc40833130",
+      "phase": "investigate",
+      "type": "other",
+      "queries": [],
+      "urls": [],
+      "status": "completed",
+      "at": "2026-10-15T03:38:49.281Z"
+    },
+    {
+      "id": "exec-781555b4-738e-4f77-92ff-acb36e3b2ee2",
+      "phase": "investigate",
+      "type": "open_page",
+      "queries": [],
+      "urls": [
+        "https://reddit.com/r/housekeeping/comments/1iqwf0w/cancelled_two_clients_dont_even_know_when_i_can"
+      ],
+      "status": "completed",
+      "at": "2026-10-15T03:38:56.864Z"
+    }
+  ],
+  "decisions": [
+    {
+      "candidate_id": "c1",
+      "decision": "继续核实并收窄",
+      "reason": "人工分配和遗漏有补充经历，复杂偏好任务仅部分交叉对应；固定分组已有直接成功反例。",
+      "next_step": "访谈能提供最近一次实际排班记录的经营者，区分重复录入、配置问题和必须人工判断的约束冲突。"
+    },
+    {
+      "candidate_id": "c2",
+      "decision": "有条件继续调查",
+      "reason": "新增临时取消经历支持问题存在，但候补名单和收费政策的实际效果仍未知。",
+      "next_step": "复盘连续三次取消及每次候补联系结果；若无可接单客户或主要靠政策解决，应搁置工具方向。"
+    },
+    {
+      "candidate_id": "c3",
+      "decision": "维持搁置",
+      "reason": "产能不足证据明确，并有接受跳过一次服务的实际流程。",
+      "next_step": "仅在发现已有替代产能却因多轮协调未能使用的具体案例后重开调查。"
+    }
+  ],
+  "usage": [
+    {
+      "phase": "people",
+      "input_tokens": 154872,
+      "cached_input_tokens": 104576,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2414,
+      "reasoning_output_tokens": 58
+    },
+    {
+      "phase": "problems",
+      "input_tokens": 163737,
+      "cached_input_tokens": 112000,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3822,
+      "reasoning_output_tokens": 37
+    },
+    {
+      "phase": "investigate",
+      "input_tokens": 181046,
+      "cached_input_tokens": 124800,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 4739,
+      "reasoning_output_tokens": 20
+    }
+  ],
+  "limitations": [
+    "材料来自Reddit两个社区及一个专业擦窗论坛，角色是观察性归纳，不能代表英语市场整体。",
+    "经营规模、工作时间和工具效果均为发帖者自述，未独立核验；没有将帖子热度、营收或现有支出视为付费意愿及市场验证。",
+    "曾打开一篇2026年单人上门精洗流程帖，页面显示已被版主移除；未将搜索摘要中的流程作为最终角色依据，改用可读的历史帖子。",
+    "汽车精洗及擦窗材料较旧，现有经营状态和工具使用情况未知。",
+    "本轮仅发现人群及任务，没有证明具体网页工具的需求、可行性或购买意愿。",
+    "本轮执行4次搜索和7次打开，共11次动作；部分打开用于检查线索，未纳入最终证据。",
+    "Jobber排班冲突讨论页已打开，但未取得足以支撑清洁行业具体经历的片段，未作为候选证据。",
+    "公开账号的从业身份、地理市场和相互独立性未独立验证；英语帖子不等于已确认英语国家市场。",
+    "收入影响、订单规模和节省时间均为发帖者自报，不能视为审计数据或市场验证。",
+    "独立清洁工的经历作为p1相邻任务证据保留，其团队结构与上一轮p1不同。",
+    "本轮进行了2次搜索查询、9次页面打开，共11个搜索／打开动作；所有列入sources的页面均实际打开并读到相关片段。",
+    "匿名账号的身份、经营数据和相互独立性均未验证；不同账号不等于已确认的独立经营者。",
+    "搜索结果包含软件开发者、代理机构和辅导者推广，未将其推荐作为独立用户采用或成功证据。",
+    "新增取消案例来自单人经营者，周期排班反例回复者的行业未知，适用范围均有限。",
+    "Jobber官方周期任务页及上一轮取消政策帖已尝试打开，但本轮返回片段未展示相关正文，未增加其直接引文或据此形成新结论。",
+    "未取得候补填补率、政策实施前后对比或工具采用结果；收入影响为发帖者自述，不能据此推定市场规模、工具价值或付费意愿。",
+    "公开搜索与可读页面只能覆盖部分讨论；没有验证市场规模或付费意愿。",
+    "工具打开记录表示发生过访问；模型短引文与本地逐字核验分别标记。"
+  ],
+  "focus_ids": [
+    "c1",
+    "c2"
+  ],
+  "stages": [
+    {
+      "id": "people",
+      "label": "发现人群",
+      "status": "completed",
+      "search_count": 2,
+      "open_count": 2,
+      "started_at": "2026-10-15T03:35:18.899Z",
+      "question": "这个领域里，谁在什么情境下完成哪些任务？",
+      "reason": "从宽泛领域出发，先用真实活动发现角色，不提前指定痛点。",
+      "summary": "本轮识别3类具体经营角色，覆盖小团队周期服务排班、单人上门交付、兼职经营与获客三种情境。优先继续观察小型住宅清洁公司的排班负责人：帖子同时记录任务约束、现有软件和已奏效的内部办法，适合追查办法的适用边界；目前不能据此认定存在未满足的市场需求。",
+      "finished_at": "2026-10-15T03:36:40.859Z",
+      "source_count": 3
+    },
+    {
+      "id": "problems",
+      "label": "寻找问题",
+      "status": "completed",
+      "search_count": 2,
+      "open_count": 2,
+      "started_at": "2026-10-15T03:36:40.867Z",
+      "question": "固定周期与地区分组已经奏效后，新增客户及临时改期还会触发哪些人工操作，现有Jobber和内部规则分别承担什么工作？",
+      "reason": "同一讨论包含原始工作情境、软件使用经历及发帖者后续解决办法，能据此检验剩余任务，而不是把早期抱怨直接当成产品机会。",
+      "summary": "固定周期与地区分组确实已解决原发帖者大部分排班工作，但另一清洁公司仍每周手工结合路线和客户时间偏好安排团队。建议第三轮优先核实这类重复排班，以及客户临时取消后的空档处理；天气或人员缺勤后的补约也存在，但部分障碍是实际产能不足。",
+      "finished_at": "2026-10-15T03:38:28.961Z",
+      "source_count": 5
+    },
+    {
+      "id": "investigate",
+      "label": "追查证据",
+      "status": "completed",
+      "search_count": 1,
+      "open_count": 2,
+      "started_at": "2026-10-15T03:38:28.968Z",
+      "question": "最近一次周排班中，哪些订单必须从任务说明读取偏好后手工移动，哪些可以直接沿用上周，为什么？；最近三次客户取消后，经营者分别联系了谁、等待多久、最终填上了哪个时段；无法填补的具体原因是什么？",
+      "reason": "依据第二轮留下的问题，补独立经历、反例和已有有效办法。",
+      "summary": "本轮找到管理5名员工及3支清洁团队的经营者，补充了周期预约遗漏、前夜分配团队和重复发送任务信息的经历；但这些任务与c1的路线、客户偏好协调仅部分对应。原经营者通过限制周期和地区分组解决排班，以及另一回复者长期使用共享日历的经历，削弱了开发通用排班工具的理由。c1继续核实剩余人工判断。c2新增单人清洁经营者遭遇临时取消、难以补单的经历，但尚未证明候补匹配工具能改善结果，转为有条件继续调查。c3保留搁置：产能与托育限制仍是主要障碍，已有跳过本次服务的实际流程。以上均不构成需求或付费验证。",
+      "finished_at": "2026-10-15T03:40:25.292Z",
+      "source_count": 6
+    }
+  ],
+  "started_at": "2026-10-15T03:35:18.896Z",
+  "phase": "investigate",
+  "next_focus": {
+    "audience_id": "p1",
+    "question": "固定周期与地区分组已经奏效后，新增客户及临时改期还会触发哪些人工操作，现有Jobber和内部规则分别承担什么工作？",
+    "reason": "同一讨论包含原始工作情境、软件使用经历及发帖者后续解决办法，能据此检验剩余任务，而不是把早期抱怨直接当成产品机会。"
+  },
+  "summary": "本轮找到管理5名员工及3支清洁团队的经营者，补充了周期预约遗漏、前夜分配团队和重复发送任务信息的经历；但这些任务与c1的路线、客户偏好协调仅部分对应。原经营者通过限制周期和地区分组解决排班，以及另一回复者长期使用共享日历的经历，削弱了开发通用排班工具的理由。c1继续核实剩余人工判断。c2新增单人清洁经营者遭遇临时取消、难以补单的经历，但尚未证明候补匹配工具能改善结果，转为有条件继续调查。c3保留搁置：产能与托育限制仍是主要障碍，已有跳过本次服务的实际流程。以上均不构成需求或付费验证。",
+  "finished_at": "2026-10-15T03:40:25.409Z",
+  "quality": {
+    "searched": 5,
+    "opened": 6,
+    "trace_linked_sources": 6,
+    "quote_checked_sources": 0
+  },
+  "normalization_version": 2,
+  "normalization_note": "候选状态依据第三轮显式决策统一，保留原有公开决策摘要；没有重新生成或补造调查内容。"
+}

@@ -38,6 +38,18 @@
       "source_url": "https://x.com/xikhar/status/2110143242591510835"
     },
     {
+      "id": "009",
+      "slug": "demand-discovery",
+      "title": "个人主页启发与需求发现产品探索",
+      "repository": "https://github.com/yydshly/1014_codex_project",
+      "summary": "JasonZhu.AI 以博客、工具、项目、订阅与服务构成个人主页，并用 AI 管线更新快讯。我们的收获是研究沉淀、入口引导与复习更新，形成“研究→实践→记录→展示→接触用户→获得反馈→更新研究”；再延伸到 AI 发现需求、证据追查、验证和产品化。009 已跑通三轮本地探索，公开页展示真实档案，持续使用与付费待验证。",
+      "status": "研究中",
+      "preview": "assets/understanding-map.png",
+      "preview_caption": "009 理解全景图：原库个人主页与自动内容能力，沉淀、入口和复习更新的直接启发，已有探索，以及需求发现与产品化扩展；区分事实、实测和假设。",
+      "demo_url": null,
+      "source_url": "https://jasonzhu.ai/"
+    },
+    {
       "id": "010",
       "slug": "evidence-research-lab",
       "title": "从 Atypica 到数据驱动的需求调研",

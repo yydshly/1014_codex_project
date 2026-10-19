@@ -60,6 +60,24 @@
         "label": "B/C 实践与结论",
         "path": "010-evidence-research-lab/#experiment"
       }
+    ],
+    "009": [
+      {
+        "label": "理解摘要与主页启发",
+        "path": "009-demand-discovery/#synthesis"
+      },
+      {
+        "label": "沉淀、入口与复习",
+        "path": "009-demand-discovery/#accumulation"
+      },
+      {
+        "label": "一图总览与扩展",
+        "path": "009-demand-discovery/understanding.html"
+      },
+      {
+        "label": "真实探索档案",
+        "path": "009-demand-discovery/#explore"
+      }
     ]
   }
 }
