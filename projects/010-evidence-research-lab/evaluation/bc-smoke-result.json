@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "purpose": "synthetic_corpus_live_pipeline_smoke_not_efficacy_evaluation",
+  "run_id": "R-9397508f-3e8f-4ff6-a62b-0b37088fafbc",
+  "created_at": "2026-10-15T03:44:39.011Z",
+  "finished_at": "2026-10-15T03:46:45.046Z",
+  "status": "succeeded",
+  "runtime": {
+    "available": true,
+    "version": "codex-cli 0.162.0-alpha.17.2",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "auth": "本机已登录",
+    "snapshot_verified": false
+  },
+  "requested_model": "gpt-6.1-sol",
+  "reasoning": "medium",
+  "source_count": 4,
+  "cluster_count": 3,
+  "all_sources_synthetic": true,
+  "manifest_sha256": "58ea1e3194cd26868bc00fd4d1298cdbb2dd13aa452003897435da7bd6ec2755",
+  "corpus_sha256": "f333eda1300fb1a0bb4ceb3325ed57eb2ad4689be29b471d16c43cf5a6634b81",
+  "order": [
+    "C",
+    "B"
+  ],
+  "fairness": {
+    "same_corpus": true,
+    "same_requested_model": true,
+    "immutable_snapshot_verified": false,
+    "tool_calls": 0,
+    "independent_sessions": true,
+    "manual_workspace_evidence_used": false
+  },
+  "results": {
+    "C": {
+      "report_status": "draft",
+      "metrics": {
+        "attempted_findings": 4,
+        "accepted_findings": 4,
+        "citation_occurrences": 11,
+        "valid_citation_rate": 1,
+        "unique_source_clusters": 3,
+        "counter_citations": 6,
+        "semantic_accuracy": null,
+        "human_utility_score": null
+      },
+      "measurements": {
+        "total_tokens": 27337,
+        "total_usd": null,
+        "elapsed_seconds": 85.65,
+        "human_active_minutes": null,
+        "includes_all_pipeline_steps": true
+      },
+      "extracted_evidence": 5,
+      "invalid_extracted_quotes": 0
+    },
+    "B": {
+      "report_status": "draft",
+      "metrics": {
+        "attempted_findings": 3,
+        "accepted_findings": 3,
+        "citation_occurrences": 11,
+        "valid_citation_rate": 1,
+        "unique_source_clusters": 3,
+        "counter_citations": 4,
+        "semantic_accuracy": null,
+        "human_utility_score": null
+      },
+      "measurements": {
+        "total_tokens": 13062,
+        "total_usd": null,
+        "elapsed_seconds": 40.28,
+        "human_active_minutes": null,
+        "includes_all_pipeline_steps": true
+      },
+      "extracted_evidence": null,
+      "invalid_extracted_quotes": null
+    }
+  },
+  "calls": [
+    {
+      "arm": "C",
+      "stage": "extract",
+      "model_requested": "gpt-6.1-sol",
+      "reasoning": "medium",
+      "prompt_sha256": "8101d4851363b81e5703744da5f53fff4bf4379c42711fb056741587e510b344",
+      "schema_sha256": "80ca33e03a6dc146c061a36211674b4e937a6a6ced53ad9d25f54eee40b66d70",
+      "started_at": "2026-10-15T03:44:39.099Z",
+      "status": "succeeded",
+      "usage": {
+        "input_tokens": 11356,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1189,
+        "reasoning_output_tokens": 136
+      },
+      "model_returned": null,
+      "elapsed_seconds": 39.53
+    },
+    {
+      "arm": "C",
+      "stage": "analysis",
+      "model_requested": "gpt-6.1-sol",
+      "reasoning": "medium",
+      "prompt_sha256": "19496bc823367eaa055ccdb64888dc7205ab9ca9bf3bb66178feba686c9c6369",
+      "schema_sha256": "edfc9d5b12fff87901a46c1cc4c160a0bc485821e5b1412bef8c65d5fe8678b0",
+      "started_at": "2026-10-15T03:45:18.637Z",
+      "status": "succeeded",
+      "usage": {
+        "input_tokens": 12870,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1922,
+        "reasoning_output_tokens": 90
+      },
+      "model_returned": null,
+      "elapsed_seconds": 46.1
+    },
+    {
+      "arm": "B",
+      "stage": "analysis",
+      "model_requested": "gpt-6.1-sol",
+      "reasoning": "medium",
+      "prompt_sha256": "7e623d94def2a530bca841a1ac2bb9feb5b04a08045ac82047dbd5d8875f8359",
+      "schema_sha256": "edfc9d5b12fff87901a46c1cc4c160a0bc485821e5b1412bef8c65d5fe8678b0",
+      "started_at": "2026-10-15T03:46:04.757Z",
+      "status": "succeeded",
+      "usage": {
+        "input_tokens": 11452,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1610,
+        "reasoning_output_tokens": 149
+      },
+      "model_returned": null,
+      "elapsed_seconds": 40.28
+    }
+  ],
+  "conclusion": "Only the workflow has been verified. More findings or counter-citations do not demonstrate greater accuracy or utility. No human blind review or real demand study was performed.",
+  "limitations": [
+    "单次 B/C 是流程验证，不能据此判定产品增益。",
+    "B 直接推理 1 次，C 提取与分析 2 次；C 所有调用均计入成本。",
+    "token 上限为用量返回后的检查，CLI 不提供本应用可强制的费用或输出 token 上限。"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "template_only": true,
+  "answers_collected": false,
+  "kind": "stated_scenario_choices_not_payment_behavior",
+  "freeze_notes": [
+    "F205 的三个具体价格和服务条件在收集前固定，各组相同；不得让模型自行发明报价",
+    "每题选项展示顺序随机化但按稳定代码计分",
+    "F1 不得包含答案或近义复述，重复题应在运行前替换并重新冻结",
+    "经营者可选择资料不足或拒答，评测单独处理，不强填标签"
+  ],
+  "questions": [
+    {
+      "question_id": "F201",
+      "text": "在演示功能和结果相同的前提下，你更愿意用哪种方式提交每天订单？",
+      "options": [
+        "paste_chat",
+        "upload_sheet",
+        "customer_form",
+        "no_change"
+      ],
+      "ground_truth": null
+    },
+    {
+      "question_id": "F202",
+      "text": "下面哪份输出最值得你先试用？",
+      "options": [
+        "production_totals",
+        "customer_packing_list",
+        "both_outputs",
+        "neither"
+      ],
+      "ground_truth": null
+    },
+    {
+      "question_id": "F203",
+      "text": "遇到顾客先下单后修改数量，你更愿意怎样核对？",
+      "options": [
+        "review_change_summary",
+        "edit_cells_directly",
+        "reenter_order",
+        "keep_current_method"
+      ],
+      "ground_truth": null
+    },
+    {
+      "question_id": "F204",
+      "text": "如果订单信息不全，你希望工具怎样处理？",
+      "options": [
+        "flag_and_wait",
+        "make_editable_draft",
+        "skip_incomplete_order",
+        "do_not_use_tool"
+      ],
+      "ground_truth": null
+    },
+    {
+      "question_id": "F205",
+      "text": "假设每周确实省下相同的时间，下面哪种标明价格的收费方案你会优先考虑？",
+      "options": [
+        "monthly_offer",
+        "per_use_offer",
+        "one_time_offer",
+        "none"
+      ],
+      "ground_truth": null
+    },
+    {
+      "question_id": "F206",
+      "text": "在功能相同的情况下，你会先选择哪个试用流程？",
+      "options": [
+        "existing_sheet_import",
+        "sample_order_paste",
+        "guided_setup",
+        "no_trial"
+      ],
+      "ground_truth": null
+    },
+    {
+      "question_id": "F207",
+      "text": "如果只能先支持一项，你更愿意选择哪个？",
+      "options": [
+        "daily_product_totals",
+        "packing_group_rules",
+        "order_change_tracking",
+        "none"
+      ],
+      "ground_truth": null
+    },
+    {
+      "question_id": "F208",
+      "text": "下面哪种实际试用结果最可能让你停止使用？",
+      "options": [
+        "needs_frequent_corrections",
+        "input_too_slow",
+        "setup_too_complex",
+        "current_method_sufficient"
+      ],
+      "ground_truth": null
+    }
+  ]
+}

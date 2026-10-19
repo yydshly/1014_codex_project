@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-15",
+  "status": "candidate_links_only",
+  "sources": [
+    {
+      "source_id": "U001",
+      "kind": "user_discussion",
+      "url": "https://www.reddit.com/r/smallbusiness/comments/1ll3itm/small_family_bakery_overwhelmed_by_manual_orders/",
+      "stable_locator": "reddit:1ll3itm",
+      "observation": "家庭经营者自述聊天/电话订单、生产数量汇总与重复录入负担。",
+      "scope_note": "经营规模仍需确认；不能外推群体占比。",
+      "checked_at": "2026-10-15",
+      "check_method": "manual_web_review",
+      "permission_status": "unconfirmed",
+      "corpus_eligible": false,
+      "content_sha256": null,
+      "evidence_ids": []
+    },
+    {
+      "source_id": "U002",
+      "kind": "user_discussion",
+      "url": "https://www.reddit.com/r/smallbusiness/comments/1dfzscy/bakery_ordering_and_invoice_systems/",
+      "stable_locator": "reddit:1dfzscy",
+      "observation": "家庭批发业务将电话订单录入表格，再手算并重复输入。",
+      "scope_note": "目标人群资格待核。",
+      "checked_at": "2026-10-15",
+      "check_method": "manual_web_review",
+      "permission_status": "unconfirmed",
+      "corpus_eligible": false,
+      "content_sha256": null,
+      "evidence_ids": []
+    },
+    {
+      "source_id": "U003",
+      "kind": "user_discussion",
+      "url": "https://www.reddit.com/r/Baking/comments/1joxysv/best_platforms_to_automate_bakery_order_tracking/",
+      "stable_locator": "reddit:1joxysv",
+      "observation": "订单/活动信息在 Square 与表格之间手动同步。",
+      "scope_note": "规模可能超过微型业务，边界样本。",
+      "checked_at": "2026-10-15",
+      "check_method": "manual_web_review",
+      "permission_status": "unconfirmed",
+      "corpus_eligible": false,
+      "content_sha256": null,
+      "evidence_ids": []
+    },
+    {
+      "source_id": "U004",
+      "kind": "user_discussion",
+      "url": "https://www.reddit.com/r/googlesheets/comments/1r15miy/how_to_turn_my_sheet_of_baked_goods_orders_into_a/",
+      "stable_locator": "reddit:1r15miy",
+      "observation": "用户要求按包装规则生成分装清单，讨论内有公式方案。",
+      "scope_note": "反证/已解决线索；不访问或复制帖子中的私人表格。",
+      "checked_at": "2026-10-15",
+      "check_method": "manual_web_review",
+      "permission_status": "unconfirmed",
+      "corpus_eligible": false,
+      "content_sha256": null,
+      "evidence_ids": []
+    },
+    {
+      "source_id": "C001",
+      "kind": "vendor_documentation",
+      "url": "https://www.bakesy.app/pricing",
+      "stable_locator": "url",
+      "observation": "核对现有付费方案与功能范围。",
+      "scope_note": "定价动态，冻结前重新核查，不推断不存在未列出的功能。",
+      "checked_at": "2026-10-15",
+      "check_method": "manual_web_review",
+      "permission_status": "scope_review_required",
+      "corpus_eligible": false,
+      "content_sha256": null,
+      "evidence_ids": []
+    },
+    {
+      "source_id": "C002",
+      "kind": "vendor_documentation",
+      "url": "https://www.bakethatbatter.com/home-bakery-software",
+      "stable_locator": "url",
+      "observation": "已有表单与烘焙业务管理能力。",
+      "scope_note": "厂商自述；不代替独立试用。",
+      "checked_at": "2026-10-15",
+      "check_method": "manual_web_review",
+      "permission_status": "scope_review_required",
+      "corpus_eligible": false,
+      "content_sha256": null,
+      "evidence_ids": []
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+data/private/
+evaluation/holdout/
+evaluation/consents/
+runs/
+.env
+.env.*
+!.env.example
+web/.runtime/
+web/node_modules/
+web/index.html

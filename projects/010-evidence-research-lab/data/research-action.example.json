@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "purpose": "个人研究与行动记录的产品设计样例",
+  "recorded_at": "2026-10-19",
+  "record_type": "historical_retrospective",
+  "runtime_import_supported": false,
+  "scope_note": "回顾已执行的合成资料 B/C 试跑；不是新实验，不是真人研究，不是现有资料导入接口格式。",
+  "problem": {
+    "id": "P-010-01",
+    "title": "结构化证据流程的额外成本是否值得？",
+    "decision": "是否在本轮 B/C 原型上继续扩展研究流程与人设模拟",
+    "scope": "一份包含四份原创合成资料、三个事件簇的输入；同一请求模型标识 gpt-6.1-sol / medium",
+    "status": "closed_for_this_trial"
+  },
+  "sources": [
+    {"id": "SRC-010-RUN", "path": "data/bc-smoke-archive.json", "kind": "synthetic_corpus_and_model_outputs", "run_id": "R-9397508f-3e8f-4ff6-a62b-0b37088fafbc", "corpus_sha256": "f333eda1300fb1a0bb4ceb3325ed57eb2ad4689be29b471d16c43cf5a6634b81"},
+    {"id": "SRC-010-METRICS", "path": "evaluation/bc-smoke-result.json", "kind": "recorded_measurements"}
+  ],
+  "evidence": [
+    {"id": "EV-010-01", "source_id": "SRC-010-METRICS", "role": "observed", "claim": "B 一次调用，13062 token、40.28 秒；C 两次调用，27337 token、85.65 秒。", "measurements": {"B": {"model_calls": 1, "total_tokens": 13062, "elapsed_seconds": 40.28}, "C": {"model_calls": 2, "total_tokens": 27337, "elapsed_seconds": 85.65}}},
+    {"id": "EV-010-02", "source_id": "SRC-010-RUN", "role": "analysis", "claim": "两组核心判断基本一致，C 的额外发现主要将 B 已有建议拆分陈述。", "limitation": "报告复盘判断，不是独立真人盲评或语义准确率。"},
+    {"id": "EV-010-03", "source_id": "SRC-010-METRICS", "role": "observed", "claim": "两组各有 11 次引用，引文逐字存在率均为 100%。", "limitation": "引文存在不等于语义支持或结论正确。"}
+  ],
+  "judgment": {
+    "id": "J-010-01", "problem_id": "P-010-01", "version": 1,
+    "statement": "本轮小型合成资料试跑未显示足以解释额外用量的研究收益。",
+    "evidence_ids": ["EV-010-01", "EV-010-02", "EV-010-03"],
+    "unknowns": ["真实资料下的效果", "真人盲评", "节省的人工时间", "美元成本", "付费与留存", "不可变模型权重快照"]
+  },
+  "action_and_result": {
+    "id": "ACT-010-01", "problem_id": "P-010-01", "kind": "historical_decision",
+    "action": "停止本轮产品实验，保留代码、设计、来源与完整结果。",
+    "status": "recorded",
+    "expectation_before_run": null,
+    "expectation_note": "本回顾不补写未留存的事前预测；正式未执行评测协议与本次试跑分开。",
+    "observed_result": "工作流可运行；用户查看差异后决定停止本轮探索。",
+    "new_outreach_or_model_calls": false
+  },
+  "learning": {
+    "id": "L-010-01", "judgment_id": "J-010-01", "action_id": "ACT-010-01",
+    "statement": "扩展多阶段研究流程前，先保留同资料的强简单基线，计入全部处理成本，并逐个验证新增步骤。",
+    "applicability": "比较类似的研究流程增量；不作为所有任务或 Atypica 产品有效性的结论。",
+    "revisit_when": "有新的、获准的真实任务资料及相应效果验证，再决定是否重开原实验。",
+    "automatic_revisit_scheduled": false
+  }
+}

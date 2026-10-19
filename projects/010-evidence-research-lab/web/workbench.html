@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>010 · 原 B/C 实验工具</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body>
+  <header class="top"><a class="brand" href="/"><span class="mark">证</span><span>原 B/C 实验工具<small>010 / 点击返回研究归档</small></span></a><div id="model-status" class="status">正在连接本机模型…</div></header>
+  <main>
+    <div class="intro"><div><div class="eyebrow">从资料，到可以检查的判断</div><h1>先看证据，再做决定。</h1><p>用同一模型、同一份资料，比较直接分析与证据流程的差异。</p></div><button class="secondary" id="sample">载入合成样例 <span>↗</span></button></div>
+    <div id="notice" role="status" hidden></div>
+    <nav aria-label="工作区"><button class="tab active" data-tab="sources">01 资料库 <span id="source-count">0</span></button><button class="tab" data-tab="evidence">02 证据台 <span id="evidence-count">0</span></button><button class="tab" data-tab="compare">03 B/C 对照</button></nav>
+    <section id="sources" class="workspace">
+      <div class="panel import"><div class="panel-head"><h2>导入资料</h2><label class="file-button">选择文件<input id="files" type="file" accept=".txt,.md,.json,text/plain,text/markdown,application/json" multiple></label></div><p class="muted">粘贴正文，或选择 TXT / Markdown / JSON。链接用于回查，当前不抓取网页。</p>
+        <form id="source-form"><label>资料标题<input name="title" required maxlength="180" placeholder="例如：访谈记录 · 预售订单整理"></label><label>来源链接 <small>选填</small><input name="url" type="url" placeholder="https://…"></label><div class="form-row"><label>资料类型<select name="kind"><option value="user_self_report">用户自述</option><option value="vendor_claim">厂商说明</option><option value="observed">直接观察</option><option value="inferred">分析或推断</option></select></label><label>资料属性<select name="origin"><option value="provided">我提供的资料</option><option value="synthetic">合成测试资料</option></select></label></div><label>同一事件分组 <small>选填；转载填相同值</small><input name="cluster_key" maxlength="120" placeholder="例如：访谈-A"></label><label>正文<textarea name="text" rows="7" required placeholder="放入你有权使用的资料，保留原始表达。"></textarea></label><label>资料使用权说明<input name="permission_note" required maxlength="500" placeholder="例如：本人访谈记录，已获得研究使用同意"></label><button class="primary" type="submit">保存到资料库</button></form>
+      </div>
+      <div class="panel"><div class="panel-head"><h2>本轮资料</h2><span id="corpus-summary" class="muted"></span></div><div id="source-list" class="source-list"><p class="empty">还没有资料。先导入一份正文，或载入合成样例。</p></div></div>
+    </section>
+    <section id="evidence" class="workspace" hidden>
+      <div class="panel"><h2>整理一条证据</h2><p class="muted">人工卡片用于回查与笔记。公平对照会从原文重新生成 C 组证据，不读取这些笔记。</p><form id="evidence-form"><label>来源<select name="source_id" id="evidence-source" required></select></label><details class="original"><summary>展开所选原文</summary><pre id="evidence-original"></pre></details><label>逐字引文<textarea name="quote" rows="4" required placeholder="从原文复制一段，不改写、不加省略号。"></textarea></label><label>这条材料说明什么？<textarea name="summary" rows="3" required></textarea></label><label>证据作用<select name="role"><option value="support">支持线索</option><option value="counter">反例 / 冲突</option></select></label><button class="primary" type="submit">保存证据卡</button></form></div><div class="panel"><div class="panel-head"><h2>人工证据卡</h2><span class="muted">引文存在 ≠ 判断正确</span></div><div id="evidence-list"></div></div>
+    </section>
+    <section id="compare" hidden>
+      <div class="panel study"><div><div class="eyebrow">B / C · 同一份冻结资料</div><h2>把两种方法放在一起看</h2><p class="muted">B 直接读原文；C 先提取支持与反证，再读原文生成报告。全程不检索外部资料，C 的全部调用计入用量。</p></div><label>这次要做什么决定？<textarea id="question" rows="3">面向每周预售的微型烘焙店，订单整理到生产分装之间，有什么值得进一步验证的付费工具机会？</textarea></label><div class="run-controls"><button class="primary" id="run">运行 B/C 对照 <span>→</span></button><button class="secondary" id="cancel" hidden>取消本轮</button><span class="muted">使用本机登录的模型，会消耗账户用量。</span></div></div>
+      <div class="experiment-bar"><label>实验记录<select id="experiments"><option value="">尚无记录</option></select></label><span id="progress" role="status"></span></div>
+      <div id="comparison"></div><div id="reports" class="reports"></div>
+    </section>
+    <footer>资料保存在本机 · 报告发送给所选模型处理 · 人工复核后再作商业判断<span>v0.1 / B–C</span></footer>
+  </main>
+</body></html>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1540" viewBox="0 0 1600 1540" role="img" aria-labelledby="overview-title overview-desc" data-source-sha256="505589e6ca040465a774cb703371c500a6020e42b343b8d9cfd6af7d43a2c8c8">
+<title id="overview-title">从 Atypica 到数据驱动的需求调研</title>
+<desc id="overview-desc">目标是以数据和证据帮助理解需求、形成判断并验证产品；再通过实际使用与结果反馈，让资料成为可复用的经验。数据的数量、人设的数量和报告长度都不单独证明价值；真实需求、采用和付费仍需现实验证。010 原创理解总览；不是源产品架构图、网页截图或效果证明。原 B/C 实验及新项目实践均不因本次整理而重启。</desc>
+<rect width="1600" height="1540" fill="#f7f7f0"/>
+<text x="64" y="87" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="46" font-weight="600" fill="#253d32">从 Atypica 到数据驱动的需求调研</text>
+<text x="66" y="138" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="25" font-weight="400" fill="#536c5d">AI 提出解释与假设；真实资料提供依据；反馈校正判断。</text>
+<rect x="64" y="180" width="744" height="222" rx="14" fill="#fffef9" stroke="#ccd8c4" stroke-width="2"/>
+<rect x="832" y="180" width="704" height="222" rx="14" fill="#edf2e3" stroke="#ccd8c4" stroke-width="2"/>
+<text x="90" y="228" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="30" font-weight="600" fill="#245e49">01  源产品：期望提供什么</text>
+<text x="90" y="281" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="25" font-weight="400" fill="#253d32">Atypica：资料研究 → 用户视角模拟</text>
+<text x="90" y="318" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="25" font-weight="400" fill="#253d32">→ 需求洞察、研究报告与建议</text>
+<text x="90" y="356" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="22" font-weight="400" fill="#536c5d">用于辅助需求与市场调研。</text>
+<text x="90" y="387" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="22" font-weight="400" fill="#536c5d">产品主张；私有实现及独特增益待确认。</text>
+<text x="858" y="229" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="30" font-weight="600" fill="#245e49">我们实际做过什么</text>
+<text x="858" y="281" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="25" font-weight="400" fill="#253d32">B/C：同资料 · 同请求模型 · 合成输入</text>
+<text x="858" y="318" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="25" font-weight="400" fill="#253d32">流程跑通；C 未显示明显新增收益。</text>
+<text x="858" y="357" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="22" font-weight="400" fill="#536c5d">C 的 token 与耗时约为 B 的 2.1 倍。</text>
+<text x="858" y="387" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="22" font-weight="400" fill="#536c5d">这不是对 Atypica 产品的效果验证。</text>
+<polyline points="800,407 800,434" fill="none" stroke="#8fa382" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="800.00,434.00 806.00,423.00 794.00,423.00" fill="#8fa382"/>
+<rect x="64" y="447" width="474" height="153" rx="14" fill="#f0f3e9" stroke="#ccd8c4" stroke-width="2"/>
+<text x="89" y="494" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="29" font-weight="600" fill="#245e49">模型，还是资料？</text>
+<text x="89" y="539" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="24" font-weight="400" fill="#536c5d">结果来自更强推理，</text>
+<text x="89" y="572" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="24" font-weight="400" fill="#536c5d">还是更相关的数据？</text>
+<rect x="563" y="447" width="474" height="153" rx="14" fill="#f0f3e9" stroke="#ccd8c4" stroke-width="2"/>
+<text x="588" y="494" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="29" font-weight="600" fill="#245e49">身份，还是证据？</text>
+<text x="588" y="539" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="24" font-weight="400" fill="#536c5d">角色帮助换视角，</text>
+<text x="588" y="572" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="24" font-weight="400" fill="#536c5d">但能新增真人反馈吗？</text>
+<rect x="1062" y="447" width="474" height="153" rx="14" fill="#f0f3e9" stroke="#ccd8c4" stroke-width="2"/>
+<text x="1087" y="494" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="29" font-weight="600" fill="#245e49">流程，还是收益？</text>
+<text x="1087" y="539" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="24" font-weight="400" fill="#536c5d">相比直接分析，</text>
+<text x="1087" y="572" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="24" font-weight="400" fill="#536c5d">是否更可靠、更省工？</text>
+<polyline points="800,605 800,626" fill="none" stroke="#8fa382" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="800.00,626.00 806.00,615.00 794.00,615.00" fill="#8fa382"/>
+<rect x="64" y="640" width="1472" height="144" rx="14" fill="#fffef9" stroke="#ccd8c4" stroke-width="2"/>
+<text x="93" y="686" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="29" font-weight="600" fill="#245e49">02  本质：以模型为基础组织研究</text>
+<text x="93" y="732" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="30" font-weight="600" fill="#253d32">相关数据 ＋ 角色约束 ＋ 证据流程 ＋ 真实验证</text>
+<text x="93" y="770" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="22" font-weight="400" fill="#536c5d">身份引导视角，模拟产生假设，研究判断需要现实依据。</text>
+<polyline points="800,789 800,812" fill="none" stroke="#8fa382" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="800.00,812.00 806.00,801.00 794.00,801.00" fill="#8fa382"/>
+<rect x="64" y="826" width="1472" height="169" rx="14" fill="#245e49" stroke="#245e49" stroke-width="2"/>
+<text x="94" y="881" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="36" font-weight="600" fill="#fffef9">03  核心认识：数据是产品调研的事实基础</text>
+<text x="95" y="934" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="25" font-weight="400" fill="#edf2e3">围绕具体问题，积累相关、可信、可追溯的数据与真实反馈。</text>
+<text x="95" y="971" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="25" font-weight="400" fill="#edf2e3">数据库负责保存；判断与验证决定资料能否支持行动。</text>
+<text x="65" y="1057" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="29" font-weight="600" fill="#245e49">04  从数据走向调研与产品</text>
+<rect x="64" y="1086" width="227" height="103" rx="14" fill="#fffef9" stroke="#ccd8c4" stroke-width="2"/>
+<text x="82" y="1126" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="28" font-weight="600" fill="#253d32">界定问题</text>
+<text x="82" y="1166" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="19" font-weight="400" fill="#536c5d">谁 · 场景 · 决策</text>
+<polyline points="294,1137 309,1137" fill="none" stroke="#8fa382" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="309.00,1137.00 298.00,1131.00 298.00,1143.00" fill="#8fa382"/>
+<rect x="313" y="1086" width="227" height="103" rx="14" fill="#fffef9" stroke="#ccd8c4" stroke-width="2"/>
+<text x="331" y="1126" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="28" font-weight="600" fill="#253d32">获取与沉淀</text>
+<text x="331" y="1166" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="19" font-weight="400" fill="#536c5d">来源 · 时间 · 背景</text>
+<polyline points="543,1137 558,1137" fill="none" stroke="#8fa382" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="558.00,1137.00 547.00,1131.00 547.00,1143.00" fill="#8fa382"/>
+<rect x="562" y="1086" width="227" height="103" rx="14" fill="#fffef9" stroke="#ccd8c4" stroke-width="2"/>
+<text x="580" y="1126" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="28" font-weight="600" fill="#253d32">证据处理</text>
+<text x="580" y="1167" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="19" font-weight="400" fill="#536c5d">去重 · 支持 · 反证</text>
+<polyline points="792,1137 807,1137" fill="none" stroke="#8fa382" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="807.00,1137.00 796.00,1131.00 796.00,1143.00" fill="#8fa382"/>
+<rect x="811" y="1086" width="227" height="103" rx="14" fill="#fffef9" stroke="#ccd8c4" stroke-width="2"/>
+<text x="829" y="1127" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="28" font-weight="600" fill="#253d32">需求判断</text>
+<text x="829" y="1166" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="19" font-weight="400" fill="#536c5d">假设 · 未知 · 取舍</text>
+<polyline points="1041,1137 1056,1137" fill="none" stroke="#8fa382" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1056.00,1137.00 1045.00,1131.00 1045.00,1143.00" fill="#8fa382"/>
+<rect x="1060" y="1086" width="227" height="103" rx="14" fill="#fffef9" stroke="#ccd8c4" stroke-width="2"/>
+<text x="1078" y="1126" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="28" font-weight="600" fill="#253d32">验证与产品</text>
+<text x="1078" y="1166" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="19" font-weight="400" fill="#536c5d">试验 · 实现 · 使用</text>
+<polyline points="1290,1137 1305,1137" fill="none" stroke="#8fa382" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1305.00,1137.00 1294.00,1131.00 1294.00,1143.00" fill="#8fa382"/>
+<rect x="1309" y="1086" width="227" height="103" rx="14" fill="#fffef9" stroke="#ccd8c4" stroke-width="2"/>
+<text x="1327" y="1126" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="28" font-weight="600" fill="#253d32">行为反馈</text>
+<text x="1327" y="1167" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="19" font-weight="400" fill="#536c5d">结果 · 成本 · 修正</text>
+<polyline points="1422,1196 1422,1234 427,1234 427,1196" fill="none" stroke="#8fa382" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="427.00,1196.00 421.00,1207.00 433.00,1207.00" fill="#8fa382"/>
+<rect x="611" y="1211" width="671" height="45" rx="0" fill="#f7f7f0" stroke="#f7f7f0" stroke-width="2"/>
+<text x="626" y="1239" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="23" font-weight="400" fill="#245e49">结果回流，修正数据、判断与下一步行动</text>
+<rect x="64" y="1290" width="474" height="150" rx="14" fill="#edf2e3" stroke="#ccd8c4" stroke-width="2"/>
+<text x="89" y="1334" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="28" font-weight="600" fill="#245e49">面向调研的产品</text>
+<text x="89" y="1380" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="23" font-weight="400" fill="#536c5d">需求整理 · 证据回查</text>
+<text x="89" y="1413" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="23" font-weight="400" fill="#536c5d">研究报告 · 验证管理</text>
+<rect x="563" y="1290" width="474" height="150" rx="14" fill="#edf2e3" stroke="#ccd8c4" stroke-width="2"/>
+<text x="588" y="1334" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="28" font-weight="600" fill="#245e49">基于数据的扩展</text>
+<text x="588" y="1380" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="23" font-weight="400" fill="#536c5d">变化观察 · 经验检索</text>
+<text x="588" y="1413" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="23" font-weight="400" fill="#536c5d">特定领域与场景助手</text>
+<rect x="1062" y="1290" width="474" height="150" rx="14" fill="#edf2e3" stroke="#ccd8c4" stroke-width="2"/>
+<text x="1087" y="1334" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="28" font-weight="600" fill="#245e49">保留的思考分支</text>
+<text x="1087" y="1379" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="23" font-weight="400" fill="#536c5d">角色模拟 · 娱乐社区</text>
+<text x="1087" y="1413" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="23" font-weight="400" fill="#536c5d">分别验证效果与体验</text>
+<text x="65" y="1493" font-family="Microsoft YaHei,Noto Sans SC,sans-serif" font-size="20" font-weight="400" fill="#536c5d">010 · 理解总览 · 2026-10-19  |  研究判断，不是效果证明；详细依据与限制见网页。</text>
+</svg>

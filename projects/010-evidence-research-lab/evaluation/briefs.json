@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "split": "development",
+  "domain": "micro_bakery_order_workflow",
+  "briefs": [
+    {
+      "brief_id": "DEV01",
+      "category": "重复问题",
+      "question": "聊天或电话收单后的哪些重复工作有具体经历支持？",
+      "acceptance_focus": "指出谁在何种场景重复操作、当前办法和来源独立性；不把抱怨量当市场规模。",
+      "split": "development",
+      "eligible_for_final_claim": false
+    },
+    {
+      "brief_id": "DEV02",
+      "category": "反证",
+      "question": "哪些案例用现有表格、公式或订购表单已经足够解决？",
+      "acceptance_focus": "保留已解决案例与不需要新软件的理由。",
+      "split": "development",
+      "eligible_for_final_claim": false
+    },
+    {
+      "brief_id": "DEV03",
+      "category": "替代方案",
+      "question": "现有烘焙工具已经覆盖哪些任务，哪些缺口仍需实测？",
+      "acceptance_focus": "厂商能力与用户使用经历分开，未知功能不能判为缺失。",
+      "split": "development",
+      "eligible_for_final_claim": false
+    },
+    {
+      "brief_id": "DEV04",
+      "category": "人群边界",
+      "question": "订单来源和操作方式不同的经营者，问题是否不同？",
+      "acceptance_focus": "只按可见工作方式分组，不补造年龄、收入和市场占比。",
+      "split": "development",
+      "eligible_for_final_claim": false
+    },
+    {
+      "brief_id": "DEV05",
+      "category": "工作量",
+      "question": "哪些资料包含明确的频率、耗时或返工信息？",
+      "acceptance_focus": "保留原始单位和自述性质；无法量化则未知。",
+      "split": "development",
+      "eligible_for_final_claim": false
+    },
+    {
+      "brief_id": "DEV06",
+      "category": "生产汇总",
+      "question": "生产数量汇总与逐客户分装是同一个任务吗？",
+      "acceptance_focus": "列出各自输入、规则、错误后果和独立证据。",
+      "split": "development",
+      "eligible_for_final_claim": false
+    },
+    {
+      "brief_id": "DEV07",
+      "category": "迁移阻力",
+      "question": "经营者为什么可能继续使用聊天和表格？",
+      "acceptance_focus": "寻找免费替代、设置、客户习惯、数据迁移等证据；不强行推荐开发。",
+      "split": "development",
+      "eligible_for_final_claim": false
+    },
+    {
+      "brief_id": "DEV08",
+      "category": "最小输入",
+      "question": "粘贴聊天、上传表格、重新填表，各有哪些已知负担？",
+      "acceptance_focus": "形成待真人比较的输入方案，不能声称哪种一定更好。",
+      "split": "development",
+      "eligible_for_final_claim": false
+    },
+    {
+      "brief_id": "DEV09",
+      "category": "功能范围",
+      "question": "只做订单到清单，有哪些必要信息可能缺失？",
+      "acceptance_focus": "区分数据缺口、可设规则和需要新系统的功能。",
+      "split": "development",
+      "eligible_for_final_claim": false
+    },
+    {
+      "brief_id": "DEV10",
+      "category": "付费线索",
+      "question": "现有资料能支持什么程度的付费判断？",
+      "acceptance_focus": "明确表达、自述购买、实际付款和模拟回答分别报告。",
+      "split": "development",
+      "eligible_for_final_claim": false
+    },
+    {
+      "brief_id": "DEV11",
+      "category": "验证动作",
+      "question": "先做一个人工辅助试点，最应观察哪些真实行为？",
+      "acceptance_focus": "给出任务、成功/失败信号与推翻条件，不虚构试点结果。",
+      "split": "development",
+      "eligible_for_final_claim": false
+    },
+    {
+      "brief_id": "DEV12",
+      "category": "停止条件",
+      "question": "出现哪些证据，应放弃、缩小或改变这个工具方向？",
+      "acceptance_focus": "基于免费替代、频率、覆盖、收益和资料不足提出可检验条件。",
+      "split": "development",
+      "eligible_for_final_claim": false
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "project": "010-evidence-research-lab",
+  "status": "prepared",
+  "platform": "GitHub Pages",
+  "scope": "五项研究摘要、原创理解总览、完整讨论与材料；不包含本机 B/C 服务或模型运行",
+  "guide_image": "assets/understanding-map.png",
+  "expected_url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/",
+  "url": null,
+  "public_verification": null,
+  "browser_visual_verification": "not_performed_due_to_browser_policy"
+}

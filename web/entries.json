@@ -46,6 +46,20 @@
         "label": "我的发现",
         "path": "004-jasonzhu-ai/index.html#discoveries"
       }
+    ],
+    "010": [
+      {
+        "label": "研究摘要与理解总览",
+        "path": "010-evidence-research-lab/#synthesis"
+      },
+      {
+        "label": "完整问题与来源",
+        "path": "010-evidence-research-lab/#discussion"
+      },
+      {
+        "label": "B/C 实践与结论",
+        "path": "010-evidence-research-lab/#experiment"
+      }
     ]
   }
 }

@@ -38,6 +38,18 @@
       "source_url": "https://x.com/xikhar/status/2110143242591510835"
     },
     {
+      "id": "010",
+      "slug": "evidence-research-lab",
+      "title": "从 Atypica 到数据驱动的需求调研",
+      "repository": "https://github.com/yydshly/1014_codex_project",
+      "summary": "Atypica 以资料研究、用户视角模拟与报告辅助需求和市场调研。我们自建导入、证据与报告原型，同模型同合成资料 B/C 未证明额外流程增益；由此追问模型、身份和流程价值，收束为数据→证据→需求→产品验证→反馈沉淀。可扩展需求雷达、调研工作台和领域助手，效果与付费待验证。",
+      "status": "已归档",
+      "preview": "assets/understanding-map.png",
+      "preview_caption": "010 原创理解总览图：从 Atypica 研究用途、模型与身份的追问，收束到数据、需求判断、产品验证和反馈；概念总结，非源产品架构或效果证明。",
+      "demo_url": null,
+      "source_url": "https://x.com/gkxspace/status/2109970698303373750"
+    },
+    {
       "id": "014",
       "slug": "cyber-xiaoya-study",
       "title": "赛博小雅：真人拟人化效果与模型依赖研究",

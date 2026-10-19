@@ -1,0 +1,9 @@
+{
+  "question": "面向每周预售的微型烘焙店，订单整理到生产分装之间，有什么值得进一步验证的付费工具机会？请比较当前办法、现有方案和反例。",
+  "sources": [
+    {"title":"合成访谈 A：多渠道预售","kind":"user_self_report","origin":"synthetic","url":"","cluster_key":"synthetic-a","permission_note":"本项目原创合成测试资料；非真实访谈，不得作为真实需求依据。","text":"[合成样例，不是真实用户]\n我一个人每周五做预售，订单分别来自群消息和一张表。\n我现在把每个口味手动加总，再按顾客分装；临时改数量时，生产表和分装表常常对不上。\n收款本身用现有二维码就够了，我不想迁移支付。\n我愿意先试试能否把现有表格变成生产清单，但还没决定付费。"},
+    {"title":"合成访谈 A 的转述：同一事件","kind":"user_self_report","origin":"synthetic","url":"","cluster_key":"synthetic-a","permission_note":"原创合成转述，与 A 属同一事件，用于测试来源去重。","text":"[合成样例，同一位 A 的经历转述，不新增独立用户]\nA 的主要困难是临时改订单后生产汇总和按人分装不一致。她不准备更换已有的收款方式，也没有作出购买承诺。"},
+    {"title":"合成访谈 B：表格已解决","kind":"user_self_report","origin":"synthetic","url":"","cluster_key":"synthetic-b","permission_note":"原创合成反例，仅用于程序测试。","text":"[合成样例，不是真实用户]\n我每周不到十份订单，固定三个口味。用数据透视表和一个勾选列就能统计生产、分装。\n表格设好以后我没有觉得这是个问题，暂时不需要额外软件。\n如果以后口味和订单更多，再考虑工具。"},
+    {"title":"合成产品说明：Bake Demo","kind":"vendor_claim","origin":"synthetic","url":"","cluster_key":"synthetic-vendor","permission_note":"虚构品牌与功能说明，无真实官网或价格。","text":"[虚构产品，用于测试厂商宣传的证据类型]\nBake Demo 声称提供在线菜单、统一下单和支付记录。\n该样例说明没有介绍从第三方表格导入订单、临时改单后更新生产分装清单。\n没有介绍不代表产品不支持，仍需查证。\n本资料不含价格、用户数量或满意度信息。"}
+  ]
+}

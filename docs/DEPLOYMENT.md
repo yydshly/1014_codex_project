@@ -1,6 +1,6 @@
 # Web 展示与部署
 
-本站通过 GitHub Actions 汇总并发布静态研究网页。当前发布清单为 004、006、007 与 014，其他项目保留各自本地环境；正式清单见 `web/pages.json`，上线验证记录见 [Pages 说明](PAGES.md)。
+本站通过 GitHub Actions 汇总并发布静态研究网页。发布清单包含 004、006、007、010 与 014，其他项目保留各自本地环境；正式清单见 `web/pages.json`，上线验证记录见 [Pages 说明](PAGES.md)。
 
 ## 一个站点，多个子项目入口
 
@@ -70,3 +70,11 @@ _site/
 004 发布 `research.html` 产品总览与 `index.html` 研究工作区，沿用 `assets/product-overview.png` 引导图。总览解释能力、原理、价值、产品目标、适用方向和十类扩展构想；工作区提供 10 个网站入口、历史样本、浏览器采集计划与发现库。
 
 `web/build.mjs` 执行依赖安装、检查与测试，再以静态模式构建。公开版本不请求本地研究 API，不包含服务器、环境文件或 `.runtime`；自动联网研究仍需本机 Node 服务和 Codex。发布与公网验证记录见 [004 部署记录](../projects/004-jasonzhu-ai/deployment.json)。
+
+### 010 数据驱动的需求调研档案
+
+010 汇总 Atypica 的研究用途、使用场景、模型/身份/流程的价值，以及我们通过合成资料 B/C 对照形成的理解。主线为“数据是产品调研的事实基础 → 证据整理 → 需求判断 → 产品验证 → 反馈沉淀”，可扩展需求雷达、调研工作台和领域助手。保留原实验与停止决定，不把模拟当作真人反馈。
+
+引导图沿用已生成的 `assets/understanding-map.png`，同时发布 SVG 和结构化图源。`projects/010-evidence-research-lab/web/build.mjs` 执行检查、测试与公开构建，完整产物复制到 `_site/010-evidence-research-lab/`。公开版本仅提供研究阅读、搜索与导出，不包含本机 `/workbench/`、模型服务、环境文件或 `.runtime`。
+
+发布准备已加入 `web/pages.json`，与 004、006、007 和 014 一起构建。只有 Actions 发布及公网核验成功后登记正式 `demo_url`，验证记录保存在项目 `deployment.json`。

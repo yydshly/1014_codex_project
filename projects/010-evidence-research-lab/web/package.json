@@ -1,0 +1,15 @@
+{
+  "name": "evidence-research-lab-010",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.15.0" },
+  "scripts": {
+    "build": "node scripts/build-archive.mjs",
+    "dev": "node scripts/build-archive.mjs && node server.mjs",
+    "start": "node scripts/build-archive.mjs && node server.mjs",
+    "test": "node scripts/build-archive.mjs && node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "smoke:live": "node scripts/live.mjs"
+  }
+}

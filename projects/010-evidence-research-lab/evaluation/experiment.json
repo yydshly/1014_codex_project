@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "experiment_id": "ERL-design-v0.1",
+  "created_at": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "execution_ready": false,
+  "status": "design_only",
+  "domain": "micro_bakery_order_workflow",
+  "hypotheses": {
+    "H1": "完整产品优于同一模型直接联网",
+    "H2": "同资料的证据流程优于直接分析",
+    "H3": "人设模拟在证据流程之上有增益"
+  },
+  "model": {
+    "provider": null,
+    "exact_snapshot": null,
+    "temperature": null,
+    "reasoning_setting": null,
+    "pricing_version": null
+  },
+  "arms": [
+    {
+      "arm_id": "A_live_web",
+      "live_web": true,
+      "shared_f1": true,
+      "frozen_public_corpus": false,
+      "structured_pipeline": false,
+      "persona_module": false
+    },
+    {
+      "arm_id": "B_same_corpus",
+      "live_web": false,
+      "shared_f1": true,
+      "frozen_public_corpus": true,
+      "structured_pipeline": false,
+      "persona_module": false
+    },
+    {
+      "arm_id": "C_evidence",
+      "live_web": false,
+      "shared_f1": true,
+      "frozen_public_corpus": true,
+      "structured_pipeline": true,
+      "persona_module": false
+    },
+    {
+      "arm_id": "D_simulation",
+      "live_web": false,
+      "shared_f1": true,
+      "frozen_public_corpus": true,
+      "structured_pipeline": true,
+      "persona_module": true
+    }
+  ],
+  "limits": {
+    "input_output_tokens_per_run": 30000,
+    "max_model_calls_per_run": 12,
+    "max_report_output_tokens": 3000,
+    "max_findings": 8,
+    "max_personas": 5,
+    "max_questions_per_persona_batch": 4,
+    "max_live_searches": 8,
+    "max_live_fetches": 12,
+    "max_run_usd": 0.5,
+    "transport_retries": 1
+  },
+  "phases": [
+    {
+      "phase_id": "development",
+      "briefs_file": "briefs.json",
+      "brief_count": 12,
+      "arms": 4,
+      "repetitions": 3,
+      "max_runs": 144,
+      "max_phase_usd": 72,
+      "human_validation": false
+    },
+    {
+      "phase_id": "holdout",
+      "briefs_file": null,
+      "brief_count": 12,
+      "arms": 4,
+      "repetitions": 3,
+      "max_runs": 144,
+      "max_phase_usd": 72,
+      "human_validation": true,
+      "independent_participants": 12,
+      "questions_per_participant": 8
+    }
+  ],
+  "sampling": {
+    "source_units_target_min": 20,
+    "source_units_target_max": 30,
+    "counterexample_target_min": 5,
+    "calibration_participants": 6,
+    "holdout_participants": 12
+  },
+  "gates": {
+    "citation_support_min": 0.95,
+    "invented_quotes_max": 0,
+    "evidence_relative_findings_gain_min": 0.2,
+    "evidence_absolute_findings_gain_min": 1,
+    "alternative_human_time_reduction_min": 0.25,
+    "simulation_macro_f1_gain_min": 0.1,
+    "prediction_coverage_min": 0.8,
+    "simulation_relative_cost_increase_max": 0.3
+  },
+  "pilot": {
+    "target_product_users": 5,
+    "actual_paid_users_min": 2,
+    "proposed_usd_per_report": 9,
+    "payments_observed": 0
+  },
+  "prerequisites": [
+    "锁定精确模型、设置与计价",
+    "获取适用数据使用权限",
+    "冻结资料和提示词哈希",
+    "完成评审分工",
+    "正式轮冻结新问题与受限 F2",
+    "运行前反算预算并预检"
+  ],
+  "results": null
+}
