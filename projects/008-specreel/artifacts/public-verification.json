@@ -1,0 +1,353 @@
+{
+  "status": "published-and-verified",
+  "verifiedAt": "2026-10-19T11:00:55.323456+00:00",
+  "commit": "af32fc47329898d061efce6c91add615d253b643",
+  "url": "https://yydshly.github.io/1014_codex_project/008-specreel/#synthesis",
+  "researchProjects": 15,
+  "publishedApplications": 11,
+  "assetChecks": [
+    {
+      "path": "RESEARCH.md",
+      "status": 200,
+      "bytes": 16355,
+      "sha256": "a2875f304b7acf3b93c350f4ff48fa268e61d1edd5a2d014885c5c329a24f994",
+      "contentMatches": true
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 11441,
+      "sha256": "72423d7f1951c713cced104f9195c8097255ee89adadbc0311edc91e468a849b",
+      "contentMatches": true
+    },
+    {
+      "path": "artifacts/sources.json",
+      "status": 200,
+      "bytes": 2549,
+      "sha256": "ac20d6804aefb0465e5aa05867268c5a467426af4b1648a3687b54beffe2cda8",
+      "contentMatches": true
+    },
+    {
+      "path": "artifacts/understanding-layout.json",
+      "status": 200,
+      "bytes": 346,
+      "sha256": "b5c475cac12218e3f78da802c4ba3de70ab9ca22c7f82ffbed92e27b9dc5ede7",
+      "contentMatches": true
+    },
+    {
+      "path": "artifacts/verification.json",
+      "status": 200,
+      "bytes": 5515,
+      "sha256": "f4ba4d55164fe06aacba61afb9fd7342d4c02e2dfb076dccd0caa8fa92868549",
+      "contentMatches": true
+    },
+    {
+      "path": "assets/chinese-title.png",
+      "status": 200,
+      "bytes": 73356,
+      "sha256": "fa04861fe7120b9caa9f1ce45ea8302ca4c8edd61c0c86ad1470f9892a9da285",
+      "contentMatches": true
+    },
+    {
+      "path": "assets/specreel-understanding.png",
+      "status": 200,
+      "bytes": 1626828,
+      "sha256": "c41a3cbee258271b807d4a26ad595497549db93ad7d218708f5ba813a4c8827c",
+      "contentMatches": true
+    },
+    {
+      "path": "assets/specreel-understanding.svg",
+      "status": 200,
+      "bytes": 41857,
+      "sha256": "d5c7af46407174dec8b5532f5550db5f4d8bf3e01cc256c33131d7dac726af89",
+      "contentMatches": true
+    },
+    {
+      "path": "demo.html",
+      "status": 200,
+      "bytes": 8286,
+      "sha256": "0a99c0653d045fdd720a35ce3fe58d35760c29bb44338accd6883de8a1e8d63d",
+      "contentMatches": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 23215,
+      "sha256": "9e1cf10c18a30db1a8ce7e7a278162ccba549e0bf5e0c27efbd4cf0626db5e9f",
+      "contentMatches": true
+    },
+    {
+      "path": "native/01-reddit-evidence/demo.html",
+      "status": 200,
+      "bytes": 1159083,
+      "sha256": "5be9c638877892cea5448f9a94b6cc6a700f6c4b2cc7463fe8622f650212ac93",
+      "contentMatches": true
+    },
+    {
+      "path": "native/01-reddit-evidence/demo.mp4",
+      "status": 200,
+      "bytes": 362447,
+      "sha256": "807c4ab3815af92bef014ac9ac8bbe16d1e3bb20beee32b45a7370c62ab419dc",
+      "contentMatches": true,
+      "ranges": [
+        {
+          "range": "bytes=0-1023",
+          "status": 206,
+          "contentRange": "bytes 0-1023/362447"
+        },
+        {
+          "range": "bytes=361423-362446",
+          "status": 206,
+          "contentRange": "bytes 361423-362446/362447"
+        }
+      ]
+    },
+    {
+      "path": "native/02-search-plan/demo.html",
+      "status": 200,
+      "bytes": 3082416,
+      "sha256": "f12fc0442be3f0a9911d4f0a3ba16728f5fb873abe376776a35ca8c374bfe16b",
+      "contentMatches": true
+    },
+    {
+      "path": "native/02-search-plan/demo.mp4",
+      "status": 200,
+      "bytes": 585413,
+      "sha256": "d133daef8efe88c56ac15c50d7b64d57d591d23887c03c1bed3a326614ffa87b",
+      "contentMatches": true,
+      "ranges": [
+        {
+          "range": "bytes=0-1023",
+          "status": 206,
+          "contentRange": "bytes 0-1023/585413"
+        },
+        {
+          "range": "bytes=584389-585412",
+          "status": 206,
+          "contentRange": "bytes 584389-585412/585413"
+        }
+      ]
+    },
+    {
+      "path": "native/03-source-filter/demo.html",
+      "status": 200,
+      "bytes": 2145580,
+      "sha256": "2d8b9b2c6eac9c8f1985d720ad49a55de3acfcca98a8d7051d6e8c12ba6db8da",
+      "contentMatches": true
+    },
+    {
+      "path": "native/03-source-filter/demo.mp4",
+      "status": 200,
+      "bytes": 436980,
+      "sha256": "56eecf2aa8ead713030cecfcdd698e0a4f820157e9e6c105fa2de3a4a11d9e74",
+      "contentMatches": true,
+      "ranges": [
+        {
+          "range": "bytes=0-1023",
+          "status": 206,
+          "contentRange": "bytes 0-1023/436980"
+        },
+        {
+          "range": "bytes=435956-436979",
+          "status": 206,
+          "contentRange": "bytes 435956-436979/436980"
+        }
+      ]
+    },
+    {
+      "path": "native/gallery.html",
+      "status": 200,
+      "bytes": 3242285,
+      "sha256": "1b497d4672e7e56fbfaac9ca9c6b405ceaca4792c7ea86c4d98f53e59cc78eee",
+      "contentMatches": true
+    },
+    {
+      "path": "native/index.html",
+      "status": 200,
+      "bytes": 201000,
+      "sha256": "f014bf9950d205cb78d29931944155d50f8d58f466f6fe93030bdbc8e429d0b9",
+      "contentMatches": true
+    },
+    {
+      "path": "native/manifest.json",
+      "status": 200,
+      "bytes": 1407,
+      "sha256": "2ae1d1c0ec8ce5eb0091a50b3f0ed82833edcc2dfe1256eb09922d9e2c6ed440",
+      "contentMatches": true
+    },
+    {
+      "path": "styles.css",
+      "status": 200,
+      "bytes": 10196,
+      "sha256": "1635a485182c4fc990f9d5497d953c10a8c30f5befb16a8c39d3d7cd35abb3ef",
+      "contentMatches": true
+    },
+    {
+      "path": "vendor/SPECREEL-LICENSE.txt",
+      "status": 200,
+      "bytes": 34523,
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "contentMatches": true
+    },
+    {
+      "path": "vendor/specreel-0d3aa13.py",
+      "status": 200,
+      "bytes": 262266,
+      "sha256": "fcc608617e413cf4e60a856b5d1f55d81e200e7651a7d16c748d07cacea488d5",
+      "contentMatches": true
+    },
+    {
+      "path": "zh/01-reddit-evidence/demo.html",
+      "status": 200,
+      "bytes": 1159370,
+      "sha256": "ac7828715ca340d9e18f5ba846e6d999d9fa078d9581733d6d862736d7a959ff",
+      "contentMatches": true
+    },
+    {
+      "path": "zh/01-reddit-evidence/demo.mp4",
+      "status": 200,
+      "bytes": 359330,
+      "sha256": "de3724f25fb8f10236bc4656d426d08ce3345cfbd2db64d3caf7eff173f389c2",
+      "contentMatches": true,
+      "ranges": [
+        {
+          "range": "bytes=0-1023",
+          "status": 206,
+          "contentRange": "bytes 0-1023/359330"
+        },
+        {
+          "range": "bytes=358306-359329",
+          "status": 206,
+          "contentRange": "bytes 358306-359329/359330"
+        }
+      ]
+    },
+    {
+      "path": "zh/02-search-plan/demo.html",
+      "status": 200,
+      "bytes": 3082694,
+      "sha256": "2790607dd6076cd35a3e87cc6f59ac0d49932ddbdf081d6ad13c70acb9cb3ade",
+      "contentMatches": true
+    },
+    {
+      "path": "zh/02-search-plan/demo.mp4",
+      "status": 200,
+      "bytes": 617384,
+      "sha256": "0fcd8c9f34f282201d04e1b8bbd7d78b7f64fda4581f671e1bd2bede96aacfcc",
+      "contentMatches": true,
+      "ranges": [
+        {
+          "range": "bytes=0-1023",
+          "status": 206,
+          "contentRange": "bytes 0-1023/617384"
+        },
+        {
+          "range": "bytes=616360-617383",
+          "status": 206,
+          "contentRange": "bytes 616360-617383/617384"
+        }
+      ]
+    },
+    {
+      "path": "zh/03-source-filter/demo.html",
+      "status": 200,
+      "bytes": 2145719,
+      "sha256": "fdf702163b614375d2a2326a25af30da235fbd3dec572377b996ec0878eb6578",
+      "contentMatches": true
+    },
+    {
+      "path": "zh/03-source-filter/demo.mp4",
+      "status": 200,
+      "bytes": 442987,
+      "sha256": "76a4520406998dc49ff481917f85ac7aa118b36d5a31ae674b8ecd6fd2e6dbd2",
+      "contentMatches": true,
+      "ranges": [
+        {
+          "range": "bytes=0-1023",
+          "status": 206,
+          "contentRange": "bytes 0-1023/442987"
+        },
+        {
+          "range": "bytes=441963-442986",
+          "status": 206,
+          "contentRange": "bytes 441963-442986/442987"
+        }
+      ]
+    },
+    {
+      "path": "zh/gallery.html",
+      "status": 200,
+      "bytes": 3243257,
+      "sha256": "2d0c02a405debede16e74edee4dcb4c2b7d9938ba57bbc34980bd8a614b3bf7a",
+      "contentMatches": true
+    },
+    {
+      "path": "zh/index.html",
+      "status": 200,
+      "bytes": 201075,
+      "sha256": "5d24ca0681dd3c075247f21260d1c4966fc6ac9b5cb46c161982d17dc5e14cfb",
+      "contentMatches": true
+    },
+    {
+      "path": "zh/manifest.json",
+      "status": 200,
+      "bytes": 1404,
+      "sha256": "f9aca94856dfade1e9f16c7f82f696e206cf0f621a179d5369f7de38127908b5",
+      "contentMatches": true
+    },
+    {
+      "path": "zh/provenance.json",
+      "status": 200,
+      "bytes": 449,
+      "sha256": "c34bafb51c291468eb098d0eb283deb28b975f1e556a27a4da8fa593e35535a9",
+      "contentMatches": true
+    }
+  ],
+  "applicationEntrypoints": [
+    {
+      "project": "002-rainy-ghost",
+      "status": 200
+    },
+    {
+      "project": "004-jasonzhu-ai",
+      "status": 200
+    },
+    {
+      "project": "006-random-doors",
+      "status": 200
+    },
+    {
+      "project": "007-autumn-courtyard-blender",
+      "status": 200
+    },
+    {
+      "project": "008-specreel",
+      "status": 200
+    },
+    {
+      "project": "009-demand-discovery",
+      "status": 200
+    },
+    {
+      "project": "010-evidence-research-lab",
+      "status": 200
+    },
+    {
+      "project": "011-ancient-rap-battle",
+      "status": 200
+    },
+    {
+      "project": "012-edgechat",
+      "status": 200
+    },
+    {
+      "project": "013-crawl-hive",
+      "status": 200
+    },
+    {
+      "project": "014-cyber-xiaoya-study",
+      "status": 200
+    }
+  ],
+  "scope": "Actual HTTP content comparison, all six MP4 first/last byte ranges, complete catalog and published application entrypoints. Browser visual and interaction checks are recorded separately in deployment.json. No Agent or model workflow executed."
+}

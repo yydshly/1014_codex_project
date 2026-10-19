@@ -120,3 +120,5 @@ node scripts/build_pages.mjs
 008 新增完整理解汇总、交互原理链路、六类使用场景、无人值守边界及一张原创 PNG / SVG 总图；保留 2026-10-15 的三条原生与中文适配回放及 MP4。固定研究版本为 0.2.0 / `0d3aa13241b3714f32f93fdc705100150e6c42af`。源码支持的可选 Agent / MCP / 模型组织层与本轮实际验证的脚本、记录和成品分别说明。
 
 `projects/008-specreel/web/build.mjs` 仅检查并打包已有静态成果、来源和 AGPL 许可，不运行浏览器自动操作、模型或付费任务。新增 `008-specreel` 编号子路径，保留其他公开项目；正式部署、验证和入口登记以 [008 发布记录](../projects/008-specreel/deployment.json) 为准，公网核验后才填写 `demo_url`。
+
+008 于 2026-10-19 通过 Actions 发布并完成公网核验后，已登记[正式理解汇总](https://yydshly.github.io/1014_codex_project/008-specreel/#synthesis)。32 份内容资源、六段视频的 12 组首尾 Range、11 项应用入口与全量目录的 99 个资源地址通过检查；浏览器确认正式页面、原图与视频元信息。本地另外验证播放推进、流程与场景切换、逐步回放、原理键盘操作及 390px 手机布局，范围见 [008 部署记录](../projects/008-specreel/deployment.json)。这次只发布已有成果和理解，没有新增 Agent 或模型任务。

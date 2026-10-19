@@ -12,10 +12,11 @@
 | 实测与整理日期 | 2026-10-15 实测；2026-10-19 归纳对话、核读固定源码、整理研究网页与原创总图 |
 | 已验证范围 | 脚本录制、HTML 回放、MP4 导出、中文适配、输入改变后重跑及更新标记 |
 | 源码支持、未实测 | MCP / Agent 接入、自然语言流程生成与验证修复、AI 旁白、TTS、Cloud、上游 CI 工作流 |
-| 发布状态 | 本次整理的静态产物以实际发布记录和公网验收为准；构建或本地验收不等于已上线 |
+| 发布状态 | 2026-10-19 已通过 Actions 发布并完成公网核验，见 [部署记录](deployment.json) |
 
 ## 查看研究网页与实际结果
 
+- [正式理解汇总](https://yydshly.github.io/1014_codex_project/008-specreel/#synthesis) · [实际效果](https://yydshly.github.io/1014_codex_project/008-specreel/#results) · [一图总结](https://yydshly.github.io/1014_codex_project/008-specreel/#overview-map)。
 - [理解汇总网页](web/index.html)：能力、原理、Agent 组合、自动化边界、实际成品、录屏对比、使用场景与当前取舍。
 - [原生 / 中文比较入口](web/demo.html)：切换流程与生成模式。
 - [中文采集计划分步回放](web/zh/02-search-plan/demo.html) · [对应 MP4](web/zh/02-search-plan/demo.mp4)：同一份真实记录；视频 31.77 秒、1280 × 948、H.264、无音轨。

@@ -1,6 +1,6 @@
 {
   "project": "008-specreel",
-  "status": "prepared-for-public-verification",
+  "status": "published-and-verified",
   "url": "https://yydshly.github.io/1014_codex_project/008-specreel/#synthesis",
   "preparedAt": "2026-10-19",
   "sourceCommit": "0d3aa13241b3714f32f93fdc705100150e6c42af",
@@ -42,5 +42,39 @@
       "posterLoaded": true
     },
     "scope": "Existing saved outputs only. No new capture, model, TTS, Cloud or autonomous Agent run."
+  },
+  "firstPublishedCommit": "af32fc47329898d061efce6c91add615d253b643",
+  "workflow": {
+    "runId": 39241276873,
+    "url": "https://github.com/yydshly/1014_codex_project/actions/runs/39241276873",
+    "conclusion": "success"
+  },
+  "public": {
+    "verifiedAt": "2026-10-19T11:00:55.323456+00:00",
+    "assetChecks": 32,
+    "mp4RangeChecks": 12,
+    "publishedApplications": 11,
+    "catalogResourcesChecked": 99,
+    "researchProjects": 15,
+    "report": "artifacts/public-verification.json",
+    "browser": {
+      "desktop": true,
+      "posterLoaded": true,
+      "posterWidth": 2400,
+      "videoDuration": 31.766667,
+      "scope": "Public page content and summary image loaded. Playback, interaction and 390px mobile checks were performed against the identical local page."
+    },
+    "screenshots": [
+      {
+        "path": "assets/research-page-desktop.png",
+        "bytes": 76673,
+        "sha256": "0b8658c43415fd76eea4f923d9d9fb9d91ebce41494314314c9d3f815990472a"
+      },
+      {
+        "path": "assets/research-map-browser.png",
+        "bytes": 76405,
+        "sha256": "8fe4970948b24f9b3b6272a2bf5f32494f4b8425717518cb1ce35f8fc680ef8c"
+      }
+    ]
   }
 }

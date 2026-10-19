@@ -10,6 +10,8 @@
 
 ## 2026-10-15 实测配图
 
+2026-10-19 公网验收截图另存为 `research-page-desktop.png`（正式首屏）和 `research-map-browser.png`（正式页面的总结图模块）。来自已发布页面的实际浏览器画面，用于验收留证，不是另外生成的设计稿。
+
 - preview.png：2026-10-15 本地浏览器实际截图，展示比较入口与 Specreel 生成的 004 回放。
 - native-video-frame.png：从原生 MP4 第 3 秒抽取，保留默认操作字幕。
 - native-title.png：原生 MP4 第 0.6 秒，展示 Windows 默认字体缺少中文字形。

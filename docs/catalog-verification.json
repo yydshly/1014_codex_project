@@ -48,11 +48,11 @@
   },
   "scope": "补齐全部研究索引，以及五项此前未提交的研究文档、来源和证据配图；保留九项已有应用发布。五项运行工程仍保存在本地，未声明已全量提交或上线。",
   "public": {
-    "verifiedAt": "2026-10-19T10:07:47.864718+00:00",
+    "verifiedAt": "2026-10-19T11:00:47.146379+00:00",
     "url": "https://yydshly.github.io/1014_codex_project/",
     "researchProjects": 15,
-    "publishedApplications": 9,
-    "recordsOnly": 6,
+    "publishedApplications": 11,
+    "recordsOnly": 4,
     "ids": [
       "001",
       "002",
@@ -70,25 +70,31 @@
       "014",
       "015"
     ],
-    "resourcesChecked": 95,
+    "resourcesChecked": 99,
     "checks": [
       {
         "url": "https://yydshly.github.io/1014_codex_project/",
         "status": 200,
-        "bytes": 7559,
-        "sha256": "ed2a8595865c7ce8b1e78cd3810de3c227098ab0f3e6570dd5e7fbea629baa32"
+        "bytes": 7980,
+        "sha256": "ae6f37067be122f360a359c6b7f4fbd3cd8223eb9500bd5df11b318096263ba9"
       },
       {
         "url": "https://yydshly.github.io/1014_codex_project/projects.json",
         "status": 200,
-        "bytes": 12231,
-        "sha256": "779584759dd01b0a56fd061d01a08d1f1a79a06a9ad5330192e77cfcf45a4021"
+        "bytes": 12853,
+        "sha256": "6b78181a2c5dde191afc3f43103e3a89761dde0b27647492387db830664b0e8c"
       },
       {
         "url": "https://yydshly.github.io/1014_codex_project/entries.json",
         "status": 200,
-        "bytes": 3732,
-        "sha256": "2bdc7e29b7ab5d90120939e83a98b7da8baf3e966d31d091a2b2129069035d3b"
+        "bytes": 4473,
+        "sha256": "27a479cac23e00511c55dbcdbd925ff2e364d0175c75531e6f0aa6e512ad12df"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/records.json",
+        "status": 200,
+        "bytes": 137544,
+        "sha256": "09c5749901be252268a5daf0041241312ab4e9dc176cf0fa3c0403e2acc88a15"
       },
       {
         "url": "https://yydshly.github.io/1014_codex_project/projects/001-archify/README.md",
@@ -128,36 +134,36 @@
       {
         "url": "https://yydshly.github.io/1014_codex_project/projects/002-rainy-ghost/README.md",
         "status": 200,
-        "bytes": 13484,
-        "sha256": "a629527259f3c40c945faa22794e6f491779aa2134a1fdfb9238bf4e3a351d41",
+        "bytes": 14081,
+        "sha256": "caa73d4c7f2d4d9b52da3ad191dc53c74df9a21a6ff97cabeb2d233c8272e5c8",
         "contentMatches": true
       },
       {
         "url": "https://yydshly.github.io/1014_codex_project/projects/002-rainy-ghost/RESEARCH.md",
         "status": 200,
-        "bytes": 47644,
-        "sha256": "358a14473a6b2d5767af32092e503a4ff76b4f945496986ebb8c977aba47fbdf",
+        "bytes": 48638,
+        "sha256": "c213e78a633d43962a9af053a71286e207edc07bdbf273f00c11b129e75a3add",
         "contentMatches": true
       },
       {
         "url": "https://yydshly.github.io/1014_codex_project/projects/002-rainy-ghost/assets/README.md",
         "status": 200,
-        "bytes": 9975,
-        "sha256": "9fcc96988a61b4e6bc67a84276d9bae35f21e2c9c0e143b0d4ccc587b02ee85f",
+        "bytes": 10385,
+        "sha256": "33521d05247cb6097e2fa274580993698308d9ead7e7276171c0fbf77dd9ab4f",
         "contentMatches": true
       },
       {
         "url": "https://yydshly.github.io/1014_codex_project/projects/002-rainy-ghost/web/README.md",
         "status": 200,
-        "bytes": 19905,
-        "sha256": "687da85b93f35420ac8e62fa23d59c97247fb0bbcccc87a838a8d43b60c3335e",
+        "bytes": 19953,
+        "sha256": "f81350ca0bde16e98529db1c8c156cb9e3d7366665947ca5e04370608c8ac540",
         "contentMatches": true
       },
       {
-        "url": "https://yydshly.github.io/1014_codex_project/projects/002-rainy-ghost/assets/rain-impact.jpg",
+        "url": "https://yydshly.github.io/1014_codex_project/projects/002-rainy-ghost/assets/pet/farewell/desktop.jpg",
         "status": 200,
-        "bytes": 46390,
-        "sha256": "b3b42305062c4b8466e30dd582895478569eaacf3e2a1fb34de0cf333c9c86d0",
+        "bytes": 47613,
+        "sha256": "cbe8858dd2388956b77b3215ad581386764db5be7ee43cbda3feb37a2ee86b5d",
         "contentMatches": true
       },
       {
@@ -338,36 +344,36 @@
       {
         "url": "https://yydshly.github.io/1014_codex_project/projects/008-specreel/README.md",
         "status": 200,
-        "bytes": 3037,
-        "sha256": "648ea4d1310d5c9bc63bac0dcd5f31983b21c1409660ed8472c1f6d4c3f0c172",
+        "bytes": 6313,
+        "sha256": "14ef8eb4843c7a2b3a2827e53ff6818d39ff8b43d201055172fa430910a0c4e1",
         "contentMatches": true
       },
       {
         "url": "https://yydshly.github.io/1014_codex_project/projects/008-specreel/RESEARCH.md",
         "status": 200,
-        "bytes": 6159,
-        "sha256": "c3b6b5055b33c341a553f485675a7477402f407a232002f118cbce1a67ede576",
+        "bytes": 16355,
+        "sha256": "a2875f304b7acf3b93c350f4ff48fa268e61d1edd5a2d014885c5c329a24f994",
         "contentMatches": true
       },
       {
         "url": "https://yydshly.github.io/1014_codex_project/projects/008-specreel/assets/README.md",
         "status": 200,
-        "bytes": 612,
-        "sha256": "71afecd91a041740b96f0f419ec1fd00314315bbbd363858724ea83163830f53",
+        "bytes": 2173,
+        "sha256": "5d46906c4bb3ff1141b2802daf846e7b4d1b8ba3b3f685287002883676d55156",
         "contentMatches": true
       },
       {
         "url": "https://yydshly.github.io/1014_codex_project/projects/008-specreel/web/README.md",
         "status": 200,
-        "bytes": 2206,
-        "sha256": "8c26d8d741309e727ceabd31db967dcc864a0e955aeaedc4a1c3159fa394a208",
+        "bytes": 5319,
+        "sha256": "611851d53a6fdecfa1b9cfdaca2b50494d32b0cac6b05cbac821bfb8be9784fb",
         "contentMatches": true
       },
       {
-        "url": "https://yydshly.github.io/1014_codex_project/projects/008-specreel/assets/preview.png",
+        "url": "https://yydshly.github.io/1014_codex_project/projects/008-specreel/assets/specreel-understanding.png",
         "status": 200,
-        "bytes": 79769,
-        "sha256": "321e656ff5f8d626321ffaf337f7d6d278270b8ca3c8d055f68eb918fa50a2bf",
+        "bytes": 1626828,
+        "sha256": "c41a3cbee258271b807d4a26ad595497549db93ad7d218708f5ba813a4c8827c",
         "contentMatches": true
       },
       {
@@ -616,6 +622,18 @@
         "contentMatches": true
       },
       {
+        "url": "https://yydshly.github.io/1014_codex_project/002-rainy-ghost/research.html",
+        "status": 200,
+        "bytes": 11256,
+        "sha256": "dd48c7cdd683e03dee6f388b0091fea56ffbc87197841214d95ecfa6274d8327"
+      },
+      {
+        "url": "https://yydshly.github.io/1014_codex_project/002-rainy-ghost/",
+        "status": 200,
+        "bytes": 14603,
+        "sha256": "f72f32e1b5b6fe840c6758d6c903c0507914702f246031ebbb050c716e5884b2"
+      },
+      {
         "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html",
         "status": 200,
         "bytes": 17841,
@@ -670,6 +688,12 @@
         "sha256": "d287cd225deee21c1500e7f155bcf56a32ab91575d98a37071804bace4e33247"
       },
       {
+        "url": "https://yydshly.github.io/1014_codex_project/008-specreel/",
+        "status": 200,
+        "bytes": 23215,
+        "sha256": "9e1cf10c18a30db1a8ce7e7a278162ccba549e0bf5e0c27efbd4cf0626db5e9f"
+      },
+      {
         "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/",
         "status": 200,
         "bytes": 43002,
@@ -718,14 +742,7 @@
         "sha256": "f75f36b747b39b91a88631706f8ee6d3abe283492d23b4567fc26dd6e52f882d"
       }
     ],
-    "scope": "Actual HTTP content checks; application runtimes and unpublished local engineering were not deployed or re-tested.",
-    "browser": {
-      "cards": 15,
-      "idsOrdered": true,
-      "countText": "15项研究9项网页已发布6项仅研究记录",
-      "horizontalOverflow": false,
-      "screenshot": "verification/catalog-public.jpg"
-    }
+    "scope": "Actual HTTP content checks; application runtimes and unpublished local engineering were not deployed or re-tested."
   },
   "sourceCommit": "a3af21af1a7a04e6b8eb54733017efdf52669627",
   "workflow": {
