@@ -73,6 +73,17 @@
       "demo_url": "https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/"
     },
     {
+      "id": "013",
+      "slug": "crawl-hive",
+      "title": "CrawlHive：跨平台信息监控的能力与本质",
+      "repository": "https://github.com/h100envy/crawl-hive",
+      "summary": "CrawlHive以X、公开频道、网页和行情构建监控；我们提炼来源接入与持续处理经验，自建AI方向工作台，整理21项来源接法，以规则筛选、证据留存和收藏导出支持动态跟进、产品发现与开源研究。",
+      "status": "研究中",
+      "preview": "assets/understanding-overview.jpg",
+      "preview_caption": "013 CrawlHive 理解总览：从原库监控链路到通用AI探索，区分源码实现、原型实测和来源接入候选。",
+      "demo_url": null
+    },
+    {
       "id": "014",
       "slug": "cyber-xiaoya-study",
       "title": "赛博小雅：真人拟人化效果与模型依赖研究",

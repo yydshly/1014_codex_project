@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1320" viewBox="0 0 1600 1320" role="img" aria-labelledby="map-title map-desc" xml:lang="zh-CN">
+  <title id="map-title">从 CrawlHive 到个人 AI 信息工作台：能力、原理、思考、来源、扩展与价值总图</title>
+  <desc id="map-desc">原库是面向币圈的私有信息监控应用。四类原生来源是经 Grok x_search 搜索的 X、读取 t.me/s 公开预览的 Telegram、比较 HTML 新增文本的公开网页，以及请求公开接口的 DexScreener。处理链为设定目标、周期调度与增量、分源采集、规则及可选 AI 提取、代币关联与去重风险检查、私有保存与交付、后续价格追踪。我们认为可迁移的是来源接入经验与持续处理流程，来源名单容易复制，钱包积分与行情评价强烈依赖领域，尚无独占数据或算法壁垒的证据，上游运行效果待验证。通用化应按方向、目的、来源和规则组织，增加普通身份、原始记录、事件证据、跨源关联和用户反馈。本仓库独立实现的知向原型于 2026 年 10 月 15 日实测四个公开来源：Hugging Face Blog、Google AI Blog、GitHub AI 与机器学习博客，以及 GitHub 公开仓库。支持真实快照、规则筛选、收藏和导出，没有模型与定时任务，静态页读快照，本地可按需刷新。候选来源还包括官方动态、Hugging Face 模型与 Spaces、arXiv、GitHub Releases、Hacker News、Product Hunt、中文媒体、YouTube、Reddit 与 X 官方 API。个人价值是减少逐站查找、控制关注范围、保留原文依据与研究线索；有用率、漏报重复、节省时间和费用仍需真实任务评价。图中分别标明原库源码确认、本仓库实测和候选规划。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="m1 1 5 3-5 3" fill="none" stroke="#809278" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="flow-arrow" markerWidth="11" markerHeight="11" refX="8" refY="5.5" orient="auto" markerUnits="userSpaceOnUse"><path d="m2 2 6 3.5L2 9" fill="none" stroke="#a2b296" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>
+      text{font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif;fill:#233e30}
+      .title{font-size:40px;font-weight:700;letter-spacing:-1px}
+      .subtitle{font-size:22px;fill:#74816b}
+      .section-title{font-size:26px;font-weight:700;letter-spacing:-.4px}
+      .source-title{font-size:23px;font-weight:700}
+      .body{font-size:20px;fill:#6f7f66}
+      .lead{font-size:20px;font-weight:700}
+      .node-title{font-size:21px;font-weight:700}
+      .node-note{font-size:20px;fill:#76856b}
+      .pill-label{font-size:22px;font-weight:700}
+      .legend{font-size:20px;fill:#7b876f}
+      .footer{font-size:20px;fill:#8b947f}
+      .line{fill:none;stroke:#a2b296;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+      .stage-line{fill:none;stroke:#809278;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+      .solid-panel{fill:#fff;stroke:#dfe6d7;stroke-width:1.4}
+      .soft-panel{fill:#eef2e7;stroke:#dbe4d1;stroke-width:1.4}
+      .planned-panel{fill:#f8f9f5;stroke:#ccd6c1;stroke-width:1.4;stroke-dasharray:7 7}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1320" fill="#f8f9f5"/>
+  <path d="M48 35h7v73h-7z" fill="#d2f477"/>
+  <text class="title" x="75" y="67">从 CrawlHive 到个人 AI 信息工作台</text>
+  <text class="subtitle" x="75" y="106">理解原库 → 拆出流程 → 形成判断 → 构建通用产品 → 验证个人价值</text>
+  <g aria-label="证据状态图例">
+    <rect x="1192" y="28" width="14" height="14" rx="3" fill="#e5ecde" stroke="#9cad8d"/>
+    <text class="legend" x="1217" y="44">原库已有 · 源码确认</text>
+    <rect x="1192" y="60" width="14" height="14" rx="3" fill="#d2f477" stroke="#b0ce68"/>
+    <text class="legend" x="1217" y="76">本仓库独立实现 · 实测</text>
+    <rect x="1192" y="92" width="14" height="14" rx="3" fill="none" stroke="#a7b399" stroke-dasharray="3 2"/>
+    <text class="legend" x="1217" y="108">候选规划 · 尚未接入</text>
+  </g>
+
+  <g aria-label="原库能力与运行原理">
+    <rect class="solid-panel" x="48" y="140" width="1504" height="316" rx="20"/>
+    <rect x="48" y="140" width="7" height="316" rx="3" fill="#a7b992"/>
+    <text class="section-title" x="74" y="182">01 / 原库：面向币圈的私有信息监控应用</text>
+    <rect x="1276" y="158" width="250" height="34" rx="17" fill="#eef2e8"/>
+    <text class="body" x="1401" y="182" text-anchor="middle">固定源码 77cfe1c · MIT</text>
+    <text class="body" x="74" y="216">一个任务对应一种来源；用户设置目标、周期与规则。上游服务未部署，实际运行效果待验证。</text>
+
+    <g aria-label="四类原生来源及获取方式">
+      <rect x="72" y="236" width="346" height="80" rx="11" fill="#f3f6ee" stroke="#e2e8d9"/>
+      <text class="source-title" x="93" y="266">X</text>
+      <text class="body" x="93" y="296">Grok x_search · 账号 / 查询词</text>
+      <rect x="442" y="236" width="346" height="80" rx="11" fill="#f3f6ee" stroke="#e2e8d9"/>
+      <text class="source-title" x="463" y="266">Telegram</text>
+      <text class="body" x="463" y="296">t.me/s · 指定频道公开预览</text>
+      <rect x="812" y="236" width="346" height="80" rx="11" fill="#f3f6ee" stroke="#e2e8d9"/>
+      <text class="source-title" x="833" y="266">公开网页</text>
+      <text class="body" x="833" y="296">指定 URL · HTML 新增文本</text>
+      <rect x="1182" y="236" width="346" height="80" rx="11" fill="#f3f6ee" stroke="#e2e8d9"/>
+      <text class="source-title" x="1203" y="266">DexScreener</text>
+      <text class="body" x="1203" y="296">公开接口 · 列表 / 搜索 / 行情</text>
+      <path class="line" d="M245 316v12h1110v-12M615 316v12M985 316v12M586 328v17" marker-end="url(#flow-arrow)"/>
+    </g>
+
+    <g aria-label="从目标设置到私有交付和后续追踪的处理链">
+      <rect x="72" y="347" width="188" height="83" rx="10" fill="#eef2e7"/>
+      <text class="node-title" x="166" y="378" text-anchor="middle">设定监控目标</text>
+      <text class="node-note" x="166" y="408" text-anchor="middle">目标、来源、周期</text>
+      <path class="stage-line" d="M264 389h13" marker-end="url(#arrow)"/>
+
+      <rect x="282" y="347" width="188" height="83" rx="10" fill="#eef2e7"/>
+      <text class="node-title" x="376" y="378" text-anchor="middle">调度 / 增量</text>
+      <text class="node-note" x="376" y="408" text-anchor="middle">到期任务、游标</text>
+      <path class="stage-line" d="M474 389h13" marker-end="url(#arrow)"/>
+
+      <rect x="492" y="347" width="188" height="83" rx="10" fill="#eef2e7"/>
+      <text class="node-title" x="586" y="378" text-anchor="middle">分源采集</text>
+      <text class="node-note" x="586" y="408" text-anchor="middle">读取各来源更新</text>
+      <path class="stage-line" d="M684 389h13" marker-end="url(#arrow)"/>
+
+      <rect x="702" y="347" width="188" height="83" rx="10" fill="#e1ebd3"/>
+      <text class="node-title" x="796" y="378" text-anchor="middle">规则 / 可选 AI</text>
+      <text class="node-note" x="796" y="408" text-anchor="middle">提取摘要与候选</text>
+      <path class="stage-line" d="M894 389h13" marker-end="url(#arrow)"/>
+
+      <rect x="912" y="347" width="188" height="83" rx="10" fill="#eef2e7"/>
+      <text class="node-title" x="1006" y="378" text-anchor="middle">代币关联与检查</text>
+      <text class="node-note" x="1006" y="408" text-anchor="middle">身份、去重、风险</text>
+      <path class="stage-line" d="M1104 389h13" marker-end="url(#arrow)"/>
+
+      <rect x="1122" y="347" width="188" height="83" rx="10" fill="#eef2e7"/>
+      <text class="node-title" x="1216" y="378" text-anchor="middle">私有保存与交付</text>
+      <text class="node-note" x="1216" y="408" text-anchor="middle">收件箱 / TG / MCP</text>
+      <path class="stage-line" d="M1314 389h13" marker-end="url(#arrow)"/>
+
+      <rect x="1332" y="347" width="188" height="83" rx="10" fill="#eef2e7"/>
+      <text class="node-title" x="1426" y="378" text-anchor="middle">结果回看</text>
+      <text class="node-note" x="1426" y="408" text-anchor="middle">价格、命中与声誉</text>
+    </g>
+  </g>
+
+  <path class="line" d="M421 457v16" marker-end="url(#flow-arrow)"/>
+  <path class="line" d="M1188 457v16" marker-end="url(#flow-arrow)"/>
+
+  <g aria-label="我们对价值与边界的判断">
+    <rect class="soft-panel" x="48" y="478" width="746" height="222" rx="18"/>
+    <text class="section-title" x="74" y="519">02 / 我们的判断</text>
+    <text class="lead" x="74" y="558">可迁移</text><text class="body" x="161" y="558">来源接入经验 + 持续处理流程</text>
+    <text class="lead" x="74" y="591">易复制</text><text class="body" x="161" y="591">来源名单；未见独占数据与算法壁垒证据</text>
+    <text class="lead" x="74" y="624">强耦合</text><text class="body" x="161" y="624">钱包、积分、代币身份与行情评价</text>
+    <text class="lead" x="74" y="657">待验证</text><text class="body" x="161" y="657">上游运行效果，以及准确性、稳定性和费用</text>
+  </g>
+
+  <path class="line" d="M798 586h21" marker-end="url(#flow-arrow)"/>
+
+  <g aria-label="通用化的产品模型与新增能力">
+    <rect class="solid-panel" x="824" y="478" width="728" height="222" rx="18"/>
+    <text class="section-title" x="850" y="519">03 / 扩展为按方向探索的产品</text>
+    <rect x="850" y="538" width="140" height="42" rx="8" fill="#eaf0e2"/><text class="pill-label" x="920" y="567" text-anchor="middle">方向</text>
+    <text class="body" x="1001" y="567">×</text>
+    <rect x="1014" y="538" width="140" height="42" rx="8" fill="#eaf0e2"/><text class="pill-label" x="1084" y="567" text-anchor="middle">目的</text>
+    <text class="body" x="1165" y="567">×</text>
+    <rect x="1178" y="538" width="140" height="42" rx="8" fill="#eaf0e2"/><text class="pill-label" x="1248" y="567" text-anchor="middle">来源</text>
+    <text class="body" x="1329" y="567">×</text>
+    <rect x="1342" y="538" width="140" height="42" rx="8" fill="#eaf0e2"/><text class="pill-label" x="1412" y="567" text-anchor="middle">规则</text>
+    <text class="body" x="850" y="616">普通身份 → 原始记录 → 事件与证据 → 用户反馈</text>
+    <text class="body" x="850" y="649">新增：跨源关联、别名、进展识别与原文证据。</text>
+    <text class="body" x="850" y="681">需改数据模型、判断标准与评价方式。</text>
+  </g>
+
+  <path class="line" d="M421 701v21" marker-end="url(#flow-arrow)"/>
+  <path class="line" d="M1188 701v21" marker-end="url(#flow-arrow)"/>
+
+  <g aria-label="本仓库独立原型及已经实测的四类公开来源">
+    <rect class="solid-panel" x="48" y="728" width="746" height="320" rx="18"/>
+    <rect x="48" y="728" width="7" height="320" rx="3" fill="#d2f477"/>
+    <text class="section-title" x="74" y="770">04 / 已做：AI 探索工作台</text>
+    <rect x="525" y="747" width="243" height="34" rx="17" fill="#d2f477"/>
+    <text class="lead" x="646" y="771" text-anchor="middle">2026-10-15 实测</text>
+    <text class="body" x="74" y="803">本仓库独立新增采集器，未运行上游币圈逻辑。</text>
+
+    <rect x="74" y="821" width="337" height="65" rx="9" fill="#f0f5e7"/>
+    <text class="node-title" x="90" y="848">Hugging Face Blog</text>
+    <text class="body" x="90" y="876">RSS · 原文标题、链接与日期</text>
+    <rect x="429" y="821" width="339" height="65" rx="9" fill="#f0f5e7"/>
+    <text class="node-title" x="445" y="848">Google AI Blog</text>
+    <text class="body" x="445" y="876">RSS · 官方发布与产品线索</text>
+    <rect x="74" y="902" width="337" height="65" rx="9" fill="#f0f5e7"/>
+    <text class="node-title" x="90" y="929">GitHub AI &amp; ML Blog</text>
+    <text class="body" x="90" y="957">RSS · 官方文章与教程</text>
+    <rect x="429" y="902" width="339" height="65" rx="9" fill="#f0f5e7"/>
+    <text class="node-title" x="445" y="929">GitHub 公开仓库</text>
+    <text class="body" x="445" y="957">REST API · 固定 topic 搜索</text>
+
+    <text class="lead" x="74" y="997">真实公开快照 · 规则筛选 · 收藏 · 导出</text>
+    <text class="body" x="74" y="1030">未接模型、没有定时；静态页读快照，本地可按需刷新。</text>
+  </g>
+
+  <g aria-label="待逐个验证和实现的候选扩展来源">
+    <rect class="planned-panel" x="824" y="728" width="728" height="320" rx="18"/>
+    <text class="section-title" x="850" y="770">05 / 候选来源与获取方式</text>
+    <rect x="1334" y="748" width="190" height="34" rx="17" fill="#f0f2eb"/>
+    <text class="body" x="1429" y="772" text-anchor="middle">规划 / 尚未接入</text>
+    <circle cx="854" cy="809" r="3" fill="#9dac8e"/>
+    <text class="body" x="870" y="816">官方动态 / HF 模型与 Spaces：公告、RSS / API</text>
+    <circle cx="854" cy="849" r="3" fill="#9dac8e"/>
+    <text class="body" x="870" y="856">arXiv / GitHub Releases：论文与版本公开接口</text>
+    <circle cx="854" cy="889" r="3" fill="#9dac8e"/>
+    <text class="body" x="870" y="896">HN / Product Hunt：社区及产品接口，待确认</text>
+    <circle cx="854" cy="929" r="3" fill="#9dac8e"/>
+    <text class="body" x="870" y="936">中文媒体 / YouTube / Reddit：网页 / 受控接口</text>
+    <circle cx="854" cy="969" r="3" fill="#9dac8e"/>
+    <text class="body" x="870" y="976">X 官方 API：替代接入候选；原库采用 Grok</text>
+    <path d="M850 995h676" fill="none" stroke="#dde4d3"/>
+    <text class="body" x="850" y="1030">逐个验证权限、覆盖、限流、时效与获取成本。</text>
+  </g>
+
+  <path class="line" d="M421 1049v21" marker-end="url(#flow-arrow)"/>
+  <path class="line" d="M1188 1049v21" marker-end="url(#flow-arrow)"/>
+
+  <g aria-label="个人价值及真实任务评价方式">
+    <rect x="48" y="1076" width="1504" height="172" rx="18" fill="#eaf0e2" stroke="#d5dfc8" stroke-width="1.4"/>
+    <text class="section-title" x="74" y="1118">06 / 个人价值与验证</text>
+    <text class="body" x="407" y="1116">把分散动态，变成可以继续研究的线索</text>
+    <rect x="74" y="1138" width="345" height="44" rx="8" fill="#fff" fill-opacity=".72"/>
+    <text class="pill-label" x="246" y="1168" text-anchor="middle">减少逐站查找</text>
+    <rect x="444" y="1138" width="345" height="44" rx="8" fill="#fff" fill-opacity=".72"/>
+    <text class="pill-label" x="616" y="1168" text-anchor="middle">控制关注范围</text>
+    <rect x="814" y="1138" width="345" height="44" rx="8" fill="#fff" fill-opacity=".72"/>
+    <text class="pill-label" x="986" y="1168" text-anchor="middle">原始来源可追溯</text>
+    <rect x="1184" y="1138" width="342" height="44" rx="8" fill="#d2f477"/>
+    <text class="pill-label" x="1355" y="1168" text-anchor="middle">保留研究线索</text>
+    <text class="body" x="74" y="1220">评价方式：有用率、漏报与重复、节省时间、费用；需用真实任务实测。</text>
+  </g>
+
+  <text class="footer" x="48" y="1288">依据：固定源码、RESEARCH.md 与原型 SOURCES.md · 原创结构梳理 · 实测状态截至 2026-10-15 · 非实时数据图</text>
+</svg>

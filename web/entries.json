@@ -92,6 +92,28 @@
         "label": "思考与可扩展方向",
         "path": "011-ancient-rap-battle/#reflection"
       }
+    ],
+    "013": [
+      {
+        "label": "理解摘要与使用场景",
+        "path": "013-crawl-hive/index.html#synthesis"
+      },
+      {
+        "label": "理解总图与价值",
+        "path": "013-crawl-hive/index.html#understanding-map"
+      },
+      {
+        "label": "来源与接入目录",
+        "path": "013-crawl-hive/index.html#source-access-catalog"
+      },
+      {
+        "label": "研究网页",
+        "path": "013-crawl-hive/index.html"
+      },
+      {
+        "label": "AI 探索工作台",
+        "path": "013-crawl-hive/explore/index.html"
+      }
     ]
   }
 }

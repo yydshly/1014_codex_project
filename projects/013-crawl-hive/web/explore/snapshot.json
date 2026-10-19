@@ -1,0 +1,2019 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "504a28fcb44d1a3d50f6",
+      "title": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
+      "url": "https://huggingface.co/blog/allenai/hiro-acev2",
+      "summary": "",
+      "sourceId": "huggingface",
+      "sourceName": "Hugging Face Blog",
+      "kind": "news",
+      "publishedAt": "2026-10-14T16:12:42.000Z",
+      "collectedAt": "2026-10-15T07:22:31.519Z",
+      "topics": [
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "官方站点包含社区作者；文章观点属于原作者。来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "7a679d710e8c186b4153",
+      "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
+      "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
+      "summary": "GitHub’s context-aware secret classifier improves detection quality, raises weighted acceptance by 11.5%, and reduces median scan execution time by 86%. The post GitHub’s model for secret detection: F",
+      "sourceId": "github-blog",
+      "sourceName": "GitHub AI & ML Blog",
+      "kind": "news",
+      "publishedAt": "2026-10-13T17:56:33.000Z",
+      "collectedAt": "2026-10-15T07:22:33.774Z",
+      "topics": [
+        "llm-tools",
+        "ai-news"
+      ],
+      "author": "Batu Ozturkler",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "模型与开发工具",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "53911f98c21c784fce1a",
+      "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+      "summary": "",
+      "sourceId": "huggingface",
+      "sourceName": "Hugging Face Blog",
+      "kind": "news",
+      "publishedAt": "2026-10-13T17:05:48.000Z",
+      "collectedAt": "2026-10-15T07:22:31.519Z",
+      "topics": [
+        "coding-agents",
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "官方站点包含社区作者；文章观点属于原作者。来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "74c9e10c02543c499970",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "kind": "product",
+      "publishedAt": "2026-10-13T16:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:32.677Z",
+      "topics": [
+        "llm-tools",
+        "ai-products",
+        "ai-news"
+      ],
+      "author": "Koray Kavukcuoglu SVP, Google DeepMind and Chief AI Architect, Google",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "模型与开发工具",
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "23216cfbe10c8c92d859",
+      "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
+      "summary": "Learn how to add custom instructions and skills to your repository, use custom agents, and connect MCP servers like Playwright. The post GitHub Copilot app for Beginners: How to teach Copilot about yo",
+      "sourceId": "github-blog",
+      "sourceName": "GitHub AI & ML Blog",
+      "kind": "product",
+      "publishedAt": "2026-10-12T17:43:59.000Z",
+      "collectedAt": "2026-10-15T07:22:33.774Z",
+      "topics": [
+        "coding-agents",
+        "ai-products",
+        "ai-news"
+      ],
+      "author": "Christopher Harrison",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "ffd2818196374b7e8d98",
+      "title": "The model that didn't exist, so you made it yourself",
+      "url": "https://huggingface.co/blog/building-with-ml-intern",
+      "summary": "",
+      "sourceId": "huggingface",
+      "sourceName": "Hugging Face Blog",
+      "kind": "news",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:31.519Z",
+      "topics": [
+        "llm-tools",
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "官方站点包含社区作者；文章观点属于原作者。来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "模型与开发工具",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "c6fb2b313984d9d24e98",
+      "title": "Secret protection must scale with software",
+      "url": "https://github.blog/ai-and-ml/github-copilot/secret-protection-must-scale-with-software/",
+      "summary": "Developers aren’t becoming more careless; they’re being outpaced. The tools that let developers create more software should also take on more of the work of protecting it. The post Secret protection m",
+      "sourceId": "github-blog",
+      "sourceName": "GitHub AI & ML Blog",
+      "kind": "news",
+      "publishedAt": "2026-10-07T17:45:34.000Z",
+      "collectedAt": "2026-10-15T07:22:33.774Z",
+      "topics": [
+        "ai-news"
+      ],
+      "author": "Erin Havens",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "16b7810afb00bdc03cf9",
+      "title": "Introducing Falcon ASR",
+      "url": "https://huggingface.co/blog/tiiuae/falcon-asr",
+      "summary": "",
+      "sourceId": "huggingface",
+      "sourceName": "Hugging Face Blog",
+      "kind": "product",
+      "publishedAt": "2026-10-07T13:21:03.000Z",
+      "collectedAt": "2026-10-15T07:22:31.519Z",
+      "topics": [
+        "ai-products",
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "官方站点包含社区作者；文章观点属于原作者。按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "67f5f61696a2949df273",
+      "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
+      "summary": "",
+      "sourceId": "huggingface",
+      "sourceName": "Hugging Face Blog",
+      "kind": "news",
+      "publishedAt": "2026-10-07T12:45:31.000Z",
+      "collectedAt": "2026-10-15T07:22:31.519Z",
+      "topics": [
+        "llm-tools",
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "官方站点包含社区作者；文章观点属于原作者。来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "模型与开发工具",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "b6aec8c05cfc3e2f0fe3",
+      "title": "Introducing Playground: Create and play custom games",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "kind": "product",
+      "publishedAt": "2026-10-07T12:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:32.677Z",
+      "topics": [
+        "ai-products",
+        "ai-news"
+      ],
+      "author": "Maryam Karimzadehgan Software Engineer AI Innovation + Research",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "6f397884428e9f0f14f3",
+      "title": "ReviewBench: An open benchmark for AI code review",
+      "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
+      "summary": "We’re launching ReviewBench, a benchmark for code review agents built on representative GitHub pull requests, multi-source ground truth, calibrated evaluation, and production-aligned metrics. The post",
+      "sourceId": "github-blog",
+      "sourceName": "GitHub AI & ML Blog",
+      "kind": "product",
+      "publishedAt": "2026-10-05T15:59:40.000Z",
+      "collectedAt": "2026-10-15T07:22:33.774Z",
+      "topics": [
+        "coding-agents",
+        "llm-tools",
+        "ai-products",
+        "ai-news"
+      ],
+      "author": "Michelle Zhou",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "模型与开发工具",
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "bd1136d0fcfd6f1357de",
+      "title": "The Agent Said It Was Done. The Database Disagreed.",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+      "summary": "",
+      "sourceId": "huggingface",
+      "sourceName": "Hugging Face Blog",
+      "kind": "news",
+      "publishedAt": "2026-10-03T22:56:48.000Z",
+      "collectedAt": "2026-10-15T07:22:31.519Z",
+      "topics": [
+        "coding-agents",
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "官方站点包含社区作者；文章观点属于原作者。来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "6a7bb4e3e69d69f535f5",
+      "title": "The latest AI news we announced in September 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "kind": "product",
+      "publishedAt": "2026-10-02T15:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:32.677Z",
+      "topics": [
+        "ai-products",
+        "ai-news"
+      ],
+      "author": "Blog Team",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "afd517ff06180871c64e",
+      "title": "AI is changing developer work. Here are three skills to strengthen.",
+      "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
+      "summary": "Learn to direct AI agents, critically review their output, and keep technical judgment at the center of your workflow. The post AI is changing developer work. Here are three skills to strengthen. appe",
+      "sourceId": "github-blog",
+      "sourceName": "GitHub AI & ML Blog",
+      "kind": "news",
+      "publishedAt": "2026-10-02T15:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:33.774Z",
+      "topics": [
+        "coding-agents",
+        "ai-news"
+      ],
+      "author": "Gwen Davis",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "56c490db040147f1def4",
+      "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+      "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+      "summary": "",
+      "sourceId": "huggingface",
+      "sourceName": "Hugging Face Blog",
+      "kind": "news",
+      "publishedAt": "2026-10-02T04:01:31.000Z",
+      "collectedAt": "2026-10-15T07:22:31.519Z",
+      "topics": [
+        "coding-agents",
+        "llm-tools",
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "官方站点包含社区作者；文章观点属于原作者。来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "模型与开发工具",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "74c2ff7e2707d1f61043",
+      "title": "Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning",
+      "url": "https://huggingface.co/blog/open-tts-leaderboard",
+      "summary": "",
+      "sourceId": "huggingface",
+      "sourceName": "Hugging Face Blog",
+      "kind": "news",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:31.519Z",
+      "topics": [
+        "multimodal",
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "官方站点包含社区作者；文章观点属于原作者。来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "多模态",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "afa8c33f8eb7996a3941",
+      "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+      "summary": "",
+      "sourceId": "huggingface",
+      "sourceName": "Hugging Face Blog",
+      "kind": "news",
+      "publishedAt": "2026-09-29T13:07:00.000Z",
+      "collectedAt": "2026-10-15T07:22:31.519Z",
+      "topics": [
+        "coding-agents",
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "官方站点包含社区作者；文章观点属于原作者。来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "db713ef86bd59ea8f7ba",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "kind": "news",
+      "publishedAt": "2026-09-28T19:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:32.677Z",
+      "topics": [
+        "multimodal",
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "多模态",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "09d1d26fa19dd694ec40",
+      "title": "Holo4: powering generalist computer-use agents",
+      "url": "https://huggingface.co/blog/Hcompany/holo4",
+      "summary": "",
+      "sourceId": "huggingface",
+      "sourceName": "Hugging Face Blog",
+      "kind": "news",
+      "publishedAt": "2026-09-28T09:44:05.000Z",
+      "collectedAt": "2026-10-15T07:22:31.519Z",
+      "topics": [
+        "coding-agents",
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "官方站点包含社区作者；文章观点属于原作者。来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "eb916b5190e379580afd",
+      "title": "Welcome RL Environments to the hub",
+      "url": "https://huggingface.co/blog/rl-environments",
+      "summary": "",
+      "sourceId": "huggingface",
+      "sourceName": "Hugging Face Blog",
+      "kind": "news",
+      "publishedAt": "2026-09-28T00:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:31.519Z",
+      "topics": [
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "官方站点包含社区作者；文章观点属于原作者。来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "a2908e03cf24041e9ff5",
+      "title": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
+      "summary": "Describe the interface you need in plain English, then let the agent build a live surface you can both use and update—so you spend less time adapting to tools and more time getting work done. The post",
+      "sourceId": "github-blog",
+      "sourceName": "GitHub AI & ML Blog",
+      "kind": "product",
+      "publishedAt": "2026-09-25T18:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:33.774Z",
+      "topics": [
+        "coding-agents",
+        "ai-products",
+        "ai-news"
+      ],
+      "author": "Kayla Cinnamon",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "3d14844898469c56a41e",
+      "title": "When chat is the wrong UI",
+      "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+      "summary": "What is a developer to do when they need something more tangible than a chat box? Enter canvases. The post When chat is the wrong UI appeared first on The GitHub Blog .",
+      "sourceId": "github-blog",
+      "sourceName": "GitHub AI & ML Blog",
+      "kind": "news",
+      "publishedAt": "2026-09-24T20:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:33.774Z",
+      "topics": [
+        "coding-agents",
+        "ai-news"
+      ],
+      "author": "Burke Holland",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "4431c738b4b1e8a1a89c",
+      "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
+      "url": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/",
+      "summary": "In this blog post, I explain how to use the new fuzzing taskflow based on the GitHub Security Lab Taskflow Agent AI framework. The post AI-powered fuzzing with the GitHub Security Lab Taskflow Agent a",
+      "sourceId": "github-blog",
+      "sourceName": "GitHub AI & ML Blog",
+      "kind": "product",
+      "publishedAt": "2026-09-24T18:26:12.000Z",
+      "collectedAt": "2026-10-15T07:22:33.774Z",
+      "topics": [
+        "coding-agents",
+        "llm-tools",
+        "ai-products",
+        "ai-news"
+      ],
+      "author": "Antonio Morales",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "模型与开发工具",
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "0f1a07da5479caba4ade",
+      "title": "Rendering huge pull requests in the GitHub Copilot app",
+      "url": "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/",
+      "summary": "How we rebuilt the diff surface in the GitHub Copilot app to open a million-line pull request with hundreds of inline review comments. The post Rendering huge pull requests in the GitHub Copilot app a",
+      "sourceId": "github-blog",
+      "sourceName": "GitHub AI & ML Blog",
+      "kind": "product",
+      "publishedAt": "2026-09-23T18:29:49.000Z",
+      "collectedAt": "2026-10-15T07:22:33.774Z",
+      "topics": [
+        "coding-agents",
+        "ai-products",
+        "ai-news"
+      ],
+      "author": "Alberto Gimeno",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "1ccf342131e2aeec4f4f",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "url": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+      "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "kind": "product",
+      "publishedAt": "2026-09-23T18:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:32.677Z",
+      "topics": [
+        "ai-products",
+        "ai-news"
+      ],
+      "author": "Aaron Luber Director, Business Development Google Beam",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "e9f63aa1f7aaa02f4024",
+      "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
+      "url": "https://huggingface.co/blog/evaleval-aisi",
+      "summary": "",
+      "sourceId": "huggingface",
+      "sourceName": "Hugging Face Blog",
+      "kind": "news",
+      "publishedAt": "2026-09-22T00:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:31.519Z",
+      "topics": [
+        "llm-tools",
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "官方站点包含社区作者；文章观点属于原作者。来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "模型与开发工具",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "18bdedfb0c5ed6fd316c",
+      "title": "Should you read the code, is RAG dead, and did Skills kill MCP?",
+      "url": "https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/",
+      "summary": "We dive into these questions and other AI hot takes on the latest episode of the GitHub Podcast. The post Should you read the code, is RAG dead, and did Skills kill MCP? appeared first on The GitHub B",
+      "sourceId": "github-blog",
+      "sourceName": "GitHub AI & ML Blog",
+      "kind": "news",
+      "publishedAt": "2026-09-18T15:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:33.774Z",
+      "topics": [
+        "coding-agents",
+        "ai-news"
+      ],
+      "author": "GPS",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "d92122e53ec9d4f7bc6f",
+      "title": "New experts join Google’s AI & Economy team",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+      "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "kind": "product",
+      "publishedAt": "2026-09-18T14:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:32.677Z",
+      "topics": [
+        "ai-products",
+        "ai-news"
+      ],
+      "author": "Scott Strand Head of StratOps and Special Projects Technology & Society",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "44ec3a3d6fdc7de7b05f",
+      "title": "Co-creating the future of fashion with Google",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+      "summary": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NYFW.",
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "kind": "news",
+      "publishedAt": "2026-09-18T13:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:32.677Z",
+      "topics": [
+        "ai-news"
+      ],
+      "author": "Yeawon Choi UX Designer Envisioning Studio",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "590df77dc8c3726e2134",
+      "title": "Making global data easier to explore",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
+      "summary": "Google and the UN system have launched the UN System Data Commons, a new open platform making global statistics accessible and easy to search.",
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "kind": "product",
+      "publishedAt": "2026-09-17T20:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:32.677Z",
+      "topics": [
+        "ai-products",
+        "ai-news"
+      ],
+      "author": "Prem Ramaswami Head of Data Commons",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "970c94673769027aa8a4",
+      "title": "AI for Societal Impact",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+      "summary": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share the opportunity of AI.",
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "kind": "news",
+      "publishedAt": "2026-09-15T16:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:32.677Z",
+      "topics": [
+        "ai-news"
+      ],
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "6fff55fdf7cb614f4288",
+      "title": "Building AI to accelerate science and improve lives",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+      "summary": "The true measure of AI is who it helps. Here’s how it’s impacting lives today. We're focused on key areas where advanced technology can help make extraordinary progress …",
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "kind": "news",
+      "publishedAt": "2026-09-15T16:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:32.677Z",
+      "topics": [
+        "ai-news"
+      ],
+      "author": "James Manyika SVP Research, Labs, Technology & Society",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "50f1fa34d3c31e122438",
+      "title": "AI for everyone in every language",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+      "summary": "We’re moving beyond traditional text translation to build models that understand the world’s rich, living languages exactly as they are expressed.",
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "kind": "news",
+      "publishedAt": "2026-09-15T16:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:32.677Z",
+      "topics": [
+        "ai-news"
+      ],
+      "author": "James Manyika SVP Research, Labs, Technology & Society",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "来源报道，未独立核验全部主张。",
+      "topicLabels": [
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "b21c5e1ffc812be885ba",
+      "title": "New insights from Google’s AI & Economy ATLAS",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/",
+      "summary": "We’ve translated ATLAS’s millions of global data points into an interactive, open-access experience.",
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "kind": "product",
+      "publishedAt": "2026-09-15T13:00:00.000Z",
+      "collectedAt": "2026-10-15T07:22:32.677Z",
+      "topics": [
+        "ai-products",
+        "ai-news"
+      ],
+      "author": "Zanna Iscenko AI & Economy Lead Chief Economist's Office",
+      "evidence": "官方来源",
+      "summaryMethod": "来源原文摘录",
+      "stale": false,
+      "note": "按标题与原文关键词识别为产品线索，尚未试用。",
+      "topicLabels": [
+        "AI 产品",
+        "AI 新闻"
+      ]
+    },
+    {
+      "id": "6813645d2edf1c359780",
+      "title": "simonlin1212/a-stock-data",
+      "url": "https://github.com/simonlin1212/a-stock-data",
+      "summary": "A股全栈数据工具包：行情K线·当日逐笔·研报·信号·资金面·新闻·财务·公告·打板·ETF期权·舆情·宏观利率·期货大宗(含大商所日K)·事件驱动·可转债 | 15层·87端点·34数据源·除iwencai外免Key | A-share data for AI agents: K-lines, ticks, reports, fund flow, news, financials, filings",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2026-05-11T01:08:15.000Z",
+      "updatedAt": "2026-10-15T06:24:42.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "llm-tools",
+        "coding-agents",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "simonlin1212",
+      "searchGroups": [
+        "llm-tools"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "simonlin1212/a-stock-data",
+        "stars": 10875,
+        "language": "Python",
+        "license": "Apache-2.0",
+        "pushedAt": "2026-10-11T13:08:34.000Z",
+        "createdAt": "2026-05-11T01:08:15.000Z",
+        "topics": [
+          "a-share",
+          "ai-agent",
+          "ai-skill",
+          "china-stocks",
+          "claude-code",
+          "financial-data",
+          "fintech",
+          "investment-research",
+          "llm-tools",
+          "market-data",
+          "python",
+          "quantitative-finance",
+          "stock-market",
+          "trading"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "模型与开发工具",
+        "AI 编程与智能体",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "b5590ec052a4f7711c96",
+      "title": "esengine/DeepSeek-Reasonix",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "summary": "A reliable coding agent for complex software engineering tasks.",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2026-04-21T08:27:02.000Z",
+      "updatedAt": "2026-10-15T06:45:04.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "coding-agents",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "esengine",
+      "searchGroups": [
+        "coding-agents"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "esengine/DeepSeek-Reasonix",
+        "stars": 35802,
+        "language": "Go",
+        "license": "MIT",
+        "pushedAt": "2026-10-15T07:19:19.000Z",
+        "createdAt": "2026-04-21T08:27:02.000Z",
+        "topics": [
+          "agent",
+          "agent-framework",
+          "ai-agent",
+          "ai-coding",
+          "cli",
+          "coding-agent",
+          "deepseek",
+          "developer-tools",
+          "dsh",
+          "dsh-plugin",
+          "ink",
+          "llm",
+          "prompt-caching",
+          "r1",
+          "terminal",
+          "tool-use",
+          "tui",
+          "typescript"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "66b92a445ef3d2f9b5f4",
+      "title": "sergebulaev/linkedin-skills",
+      "url": "https://github.com/sergebulaev/linkedin-skills",
+      "summary": "Claude skills for LinkedIn. 12 Claude Code and Codex skills that write human-sounding LinkedIn posts, craft comments that get noticed, analyze your feed, and build a publishing cadence, all from your ",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2026-04-14T16:35:45.000Z",
+      "updatedAt": "2026-10-15T07:15:06.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "llm-tools",
+        "coding-agents",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "sergebulaev",
+      "searchGroups": [
+        "llm-tools"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "sergebulaev/linkedin-skills",
+        "stars": 4722,
+        "language": "Python",
+        "license": "MIT",
+        "pushedAt": "2026-10-14T17:21:00.000Z",
+        "createdAt": "2026-04-14T16:35:45.000Z",
+        "topics": [
+          "agent-skill",
+          "agent-skills",
+          "ai-agents",
+          "ai-content",
+          "ai-marketing",
+          "anthropic",
+          "awesome-claude",
+          "claude-code",
+          "claude-skills",
+          "content-creation",
+          "content-engineering",
+          "linkedin",
+          "linkedin-automation",
+          "linkedin-engineering",
+          "llm-tools",
+          "openclaw-skill",
+          "personal-branding",
+          "prompt-engineering",
+          "skill-md",
+          "social-media-automation"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "模型与开发工具",
+        "AI 编程与智能体",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "541318303a272608b59c",
+      "title": "agentscope-ai/QwenPaw",
+      "url": "https://github.com/agentscope-ai/QwenPaw",
+      "summary": "Your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2026-02-24T03:42:56.000Z",
+      "updatedAt": "2026-10-15T07:18:42.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "llm-tools",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "agentscope-ai",
+      "searchGroups": [
+        "llm-tools"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "agentscope-ai/QwenPaw",
+        "stars": 35708,
+        "language": "TypeScript",
+        "license": "Apache-2.0",
+        "pushedAt": "2026-10-15T07:11:31.000Z",
+        "createdAt": "2026-02-24T03:42:56.000Z",
+        "topics": [
+          "agent",
+          "agent-harness",
+          "agentscope",
+          "ai-agent",
+          "ai-agents",
+          "chatbot",
+          "harness-engineering",
+          "llm-tools",
+          "llms",
+          "loop-engineering",
+          "mcp",
+          "personal-ai-assistant",
+          "self-hosted",
+          "skills",
+          "super-agent",
+          "webui"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "模型与开发工具",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "b6bb9341088f095442de",
+      "title": "Panniantong/Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "summary": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2026-02-24T02:10:24.000Z",
+      "updatedAt": "2026-10-15T07:19:28.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "llm-tools",
+        "coding-agents",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "Panniantong",
+      "searchGroups": [
+        "llm-tools"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "Panniantong/Agent-Reach",
+        "stars": 97488,
+        "language": "Python",
+        "license": "MIT",
+        "pushedAt": "2026-10-08T08:31:08.000Z",
+        "createdAt": "2026-02-24T02:10:24.000Z",
+        "topics": [
+          "agent-infrastructure",
+          "ai-agent",
+          "ai-search",
+          "automation",
+          "bilibili",
+          "claude-code",
+          "cli",
+          "cursor",
+          "free-api",
+          "llm-tools",
+          "mcp",
+          "python",
+          "reddit-scraper",
+          "twitter-scraper",
+          "web-scraper",
+          "xiaohongshu",
+          "youtube-transcript"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "模型与开发工具",
+        "AI 编程与智能体",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "c72f4d09f7e1695ffdaa",
+      "title": "codewhale-hq/Codewhale",
+      "url": "https://github.com/codewhale-hq/Codewhale",
+      "summary": "Open-source Rust agent engine and terminal client for Codewhale, with provider choice, tools, approvals and receipts.",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2026-01-19T18:21:01.000Z",
+      "updatedAt": "2026-10-15T04:41:36.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "coding-agents",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "codewhale-hq",
+      "searchGroups": [
+        "coding-agents"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "codewhale-hq/Codewhale",
+        "stars": 41091,
+        "language": "Rust",
+        "license": "MIT",
+        "pushedAt": "2026-10-15T04:41:27.000Z",
+        "createdAt": "2026-01-19T18:21:01.000Z",
+        "topics": [
+          "agent-orchestration",
+          "ai-agent",
+          "cli",
+          "codewhale",
+          "coding-agent",
+          "developer-tools",
+          "local-first",
+          "mcp",
+          "multi-agent",
+          "multi-model",
+          "open-source",
+          "rust",
+          "terminal",
+          "tui"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "2e2562d0bda4e0975ef6",
+      "title": "bojieli/ai-agent-book",
+      "url": "https://github.com/bojieli/ai-agent-book",
+      "summary": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2025-09-09T02:41:44.000Z",
+      "updatedAt": "2026-10-15T07:22:01.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "coding-agents",
+        "ai-news",
+        "ai-products",
+        "multimodal"
+      ],
+      "author": "bojieli",
+      "searchGroups": [
+        "coding-agents",
+        "multimodal"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "bojieli/ai-agent-book",
+        "stars": 54313,
+        "language": "Python",
+        "license": "Apache-2.0",
+        "pushedAt": "2026-10-08T15:06:27.000Z",
+        "createdAt": "2025-09-09T02:41:44.000Z",
+        "topics": [
+          "agent",
+          "agent-memory",
+          "ai-agent",
+          "book",
+          "coding-agent",
+          "context-engineering",
+          "large-language-models",
+          "llm",
+          "mcp",
+          "multi-agent",
+          "multimodal",
+          "rag",
+          "reinforcement-learning"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻",
+        "AI 产品",
+        "多模态"
+      ]
+    },
+    {
+      "id": "1922d9d520f9ceba156c",
+      "title": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "summary": "An open-source AI coding agent that lives in your terminal.",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2025-06-26T01:37:46.000Z",
+      "updatedAt": "2026-10-15T07:18:27.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "coding-agents",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "QwenLM",
+      "searchGroups": [
+        "coding-agents"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "QwenLM/qwen-code",
+        "stars": 28487,
+        "language": "TypeScript",
+        "license": "Apache-2.0",
+        "pushedAt": "2026-10-15T07:19:08.000Z",
+        "createdAt": "2025-06-26T01:37:46.000Z",
+        "topics": [
+          "agentic",
+          "ai",
+          "ai-agent",
+          "ai-coding",
+          "cli",
+          "coding-agent",
+          "developer-tools",
+          "llm",
+          "mcp",
+          "qwen",
+          "terminal",
+          "typescript"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "7765e623bebd57da6be9",
+      "title": "hesreallyhim/awesome-claude-code",
+      "url": "https://github.com/hesreallyhim/awesome-claude-code",
+      "summary": "A hand-picked collection of the finest of resources for the most awesome of agents, Claude Code, the undisputed champion of coding companions, from the unstoppable team at Anthropic PBC (no affiliatio",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2025-04-19T20:55:59.000Z",
+      "updatedAt": "2026-10-15T07:20:25.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "coding-agents",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "hesreallyhim",
+      "searchGroups": [
+        "coding-agents"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "hesreallyhim/awesome-claude-code",
+        "stars": 55724,
+        "language": "Python",
+        "license": null,
+        "pushedAt": "2026-10-15T07:11:07.000Z",
+        "createdAt": "2025-04-19T20:55:59.000Z",
+        "topics": [
+          "agent-skills",
+          "agentic-code",
+          "agentic-coding",
+          "ai-workflow-optimization",
+          "ai-workflows",
+          "anthropic",
+          "anthropic-claude",
+          "awesome",
+          "awesome-claude-code",
+          "awesome-list",
+          "awesome-lists",
+          "awesome-resources",
+          "claude",
+          "claude-code",
+          "coding-agent",
+          "coding-agents",
+          "coding-assistant",
+          "coding-assistants",
+          "llm"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "76a435bcb8eeb8bd3d6f",
+      "title": "bytedance/UI-TARS-desktop",
+      "url": "https://github.com/bytedance/UI-TARS-desktop",
+      "summary": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2025-01-19T09:04:43.000Z",
+      "updatedAt": "2026-10-15T04:35:14.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "multimodal",
+        "coding-agents",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "bytedance",
+      "searchGroups": [
+        "multimodal"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "bytedance/UI-TARS-desktop",
+        "stars": 39279,
+        "language": "TypeScript",
+        "license": "Apache-2.0",
+        "pushedAt": "2026-10-09T01:29:53.000Z",
+        "createdAt": "2025-01-19T09:04:43.000Z",
+        "topics": [
+          "agent",
+          "agent-tars",
+          "browser-use",
+          "computer-use",
+          "cowork",
+          "gui-agent",
+          "gui-operator",
+          "mcp",
+          "mcp-server",
+          "multimodal",
+          "tars",
+          "ui-tars",
+          "vision",
+          "vlm"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "多模态",
+        "AI 编程与智能体",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "96f88187cd30be2a5914",
+      "title": "firecrawl/firecrawl-mcp-server",
+      "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+      "summary": "🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients.",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2024-12-06T07:50:27.000Z",
+      "updatedAt": "2026-10-15T04:56:08.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "llm-tools",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "firecrawl",
+      "searchGroups": [
+        "llm-tools"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "firecrawl/firecrawl-mcp-server",
+        "stars": 7607,
+        "language": "JavaScript",
+        "license": "MIT",
+        "pushedAt": "2026-10-15T06:40:08.000Z",
+        "createdAt": "2024-12-06T07:50:27.000Z",
+        "topics": [
+          "batch-processing",
+          "claude",
+          "content-extraction",
+          "data-collection",
+          "firecrawl",
+          "firecrawl-ai",
+          "gemini-cli-extension",
+          "javascript-rendering",
+          "llm-tools",
+          "mcp",
+          "mcp-server",
+          "model-context-protocol",
+          "search-api",
+          "web-crawler",
+          "web-scraping"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "模型与开发工具",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "0826c8d03385ffe2900a",
+      "title": "latitude-dev/latitude-llm",
+      "url": "https://github.com/latitude-dev/latitude-llm",
+      "summary": "Open-source observability for AI agents. Find where your agents fail, dispatch your coding agent to fix it, and verify the fix against real traces.",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2024-06-28T11:16:02.000Z",
+      "updatedAt": "2026-10-14T16:11:24.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "llm-tools",
+        "coding-agents",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "latitude-dev",
+      "searchGroups": [
+        "llm-tools"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "latitude-dev/latitude-llm",
+        "stars": 4722,
+        "language": "TypeScript",
+        "license": "MIT",
+        "pushedAt": "2026-10-14T10:13:33.000Z",
+        "createdAt": "2024-06-28T11:16:02.000Z",
+        "topics": [
+          "agent-monitoring",
+          "agent-observability",
+          "ai-error-monitor",
+          "ai-monitoring",
+          "ai-observability",
+          "llm-error-tracing",
+          "llm-observability",
+          "llm-tools"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "模型与开发工具",
+        "AI 编程与智能体",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "d4e77acaf4b7cf191056",
+      "title": "screenpipe/screenpipe",
+      "url": "https://github.com/screenpipe/screenpipe",
+      "summary": "YC (S26) | Open Computer History | Continuously record your company computer work, map your workflows, help you find work worth automating, and power your agents' context",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2024-06-19T13:23:56.000Z",
+      "updatedAt": "2026-10-15T06:15:57.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "multimodal",
+        "coding-agents",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "screenpipe",
+      "searchGroups": [
+        "multimodal"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "screenpipe/screenpipe",
+        "stars": 21946,
+        "language": "Rust",
+        "license": null,
+        "pushedAt": "2026-10-15T03:11:26.000Z",
+        "createdAt": "2024-06-19T13:23:56.000Z",
+        "topics": [
+          "agents",
+          "agi",
+          "ai",
+          "ai-memory",
+          "audio-recording",
+          "computer-vision",
+          "hermes",
+          "hermes-agent",
+          "llm",
+          "local-ai",
+          "local-first",
+          "machine-learning",
+          "mcp",
+          "multimodal",
+          "openclaw",
+          "privacy",
+          "rewind",
+          "screen-recording",
+          "speech-to-text",
+          "ycombinator"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "多模态",
+        "AI 编程与智能体",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "517eac85218e64f63ff7",
+      "title": "openinterpreter/openinterpreter",
+      "url": "https://github.com/openinterpreter/openinterpreter",
+      "summary": "A coding agent for open models like Kimi K3 and GLM 5.3",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2023-07-14T07:10:44.000Z",
+      "updatedAt": "2026-10-15T06:44:36.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "coding-agents",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "openinterpreter",
+      "searchGroups": [
+        "coding-agents"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "openinterpreter/openinterpreter",
+        "stars": 68581,
+        "language": "Rust",
+        "license": "Apache-2.0",
+        "pushedAt": "2026-10-11T00:56:06.000Z",
+        "createdAt": "2023-07-14T07:10:44.000Z",
+        "topics": [
+          "acp",
+          "coding-agent",
+          "deepseek",
+          "kimi",
+          "python",
+          "qwen",
+          "rust"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "AI 编程与智能体",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "85b23a6c94bb0832d062",
+      "title": "Mintplex-Labs/anything-llm",
+      "url": "https://github.com/Mintplex-Labs/anything-llm",
+      "summary": "Stop renting your intelligence. Own it with AnythingLLM. Everything you need for a powerful local-first agent experience",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2023-06-04T02:29:14.000Z",
+      "updatedAt": "2026-10-15T07:10:31.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "multimodal",
+        "coding-agents",
+        "llm-tools",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "Mintplex-Labs",
+      "searchGroups": [
+        "multimodal"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "Mintplex-Labs/anything-llm",
+        "stars": 67111,
+        "language": "JavaScript",
+        "license": "MIT",
+        "pushedAt": "2026-10-15T01:37:24.000Z",
+        "createdAt": "2023-06-04T02:29:14.000Z",
+        "topics": [
+          "agent-computer",
+          "agent-harness",
+          "agent-orchestration",
+          "agentic-ai",
+          "agentic-workflow",
+          "ai-agents",
+          "computer-use",
+          "hermes-agent",
+          "llm",
+          "local-ai",
+          "localai",
+          "multimodal",
+          "rag",
+          "self-hosted-ai",
+          "vector-database"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "多模态",
+        "AI 编程与智能体",
+        "模型与开发工具",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "1a2626f6f0017a4062ac",
+      "title": "haotian-liu/LLaVA",
+      "url": "https://github.com/haotian-liu/LLaVA",
+      "summary": "[NeurIPS'23 Oral] Visual Instruction Tuning (LLaVA) built towards GPT-4V level capabilities and beyond.",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2023-04-17T16:13:11.000Z",
+      "updatedAt": "2026-10-15T03:38:48.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "multimodal",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "haotian-liu",
+      "searchGroups": [
+        "multimodal"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "haotian-liu/LLaVA",
+        "stars": 25067,
+        "language": "Python",
+        "license": "Apache-2.0",
+        "pushedAt": "2024-08-12T09:52:38.000Z",
+        "createdAt": "2023-04-17T16:13:11.000Z",
+        "topics": [
+          "chatbot",
+          "chatgpt",
+          "foundation-models",
+          "gpt-4",
+          "instruction-tuning",
+          "llama",
+          "llama-2",
+          "llama2",
+          "llava",
+          "multi-modality",
+          "multimodal",
+          "vision-language-model",
+          "visual-language-learning"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "多模态",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    },
+    {
+      "id": "2196f9315f8a47c5eb8b",
+      "title": "microsoft/unilm",
+      "url": "https://github.com/microsoft/unilm",
+      "summary": "Large-scale Self-supervised Pre-training Across Tasks, Languages, and Modalities",
+      "sourceId": "github-repos",
+      "sourceName": "GitHub 公开仓库",
+      "kind": "repo",
+      "publishedAt": "2019-07-23T04:15:28.000Z",
+      "updatedAt": "2026-10-15T06:19:07.000Z",
+      "collectedAt": "2026-10-15T07:22:34.897Z",
+      "topics": [
+        "multimodal",
+        "llm-tools",
+        "ai-news",
+        "ai-products"
+      ],
+      "author": "microsoft",
+      "searchGroups": [
+        "multimodal"
+      ],
+      "evidence": "仓库信息",
+      "summaryMethod": "仓库 description 原文",
+      "stale": false,
+      "repo": {
+        "fullName": "microsoft/unilm",
+        "stars": 22235,
+        "language": "Python",
+        "license": "MIT",
+        "pushedAt": "2026-09-21T03:27:00.000Z",
+        "createdAt": "2019-07-23T04:15:28.000Z",
+        "topics": [
+          "beit",
+          "beit-3",
+          "bitnet",
+          "deepnet",
+          "document-ai",
+          "foundation-models",
+          "kosmos",
+          "kosmos-1",
+          "layoutlm",
+          "layoutxlm",
+          "llm",
+          "minilm",
+          "mllm",
+          "multimodal",
+          "nlp",
+          "pre-trained-model",
+          "textdiffuser",
+          "trocr",
+          "unilm",
+          "xlm-e"
+        ]
+      },
+      "note": "星数是采集时总数，不是增长量；发布日期显示仓库创建时间，更新时间不等于发布；尚未运行或试用。",
+      "topicLabels": [
+        "多模态",
+        "模型与开发工具",
+        "AI 新闻",
+        "AI 产品"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "huggingface",
+      "name": "Hugging Face Blog",
+      "kind": "rss",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "description": "Hugging Face 官方站点博客订阅，包含官方及社区作者文章；取最近 12 条。",
+      "checkedAt": "2026-10-15T07:22:31.518Z",
+      "status": "ready",
+      "itemCount": 12,
+      "lastSuccessAt": "2026-10-15T07:22:32.673Z",
+      "stale": false
+    },
+    {
+      "id": "google-ai",
+      "name": "Google AI Blog",
+      "kind": "rss",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+      "description": "Google 官方 AI 新闻与产品更新；取最近 12 条。",
+      "checkedAt": "2026-10-15T07:22:32.677Z",
+      "status": "ready",
+      "itemCount": 12,
+      "lastSuccessAt": "2026-10-15T07:22:33.768Z",
+      "stale": false
+    },
+    {
+      "id": "github-blog",
+      "name": "GitHub AI & ML Blog",
+      "kind": "rss",
+      "url": "https://github.blog/ai-and-ml/feed/",
+      "description": "GitHub 官方 AI 与机器学习博客；取最近 12 条。",
+      "checkedAt": "2026-10-15T07:22:33.774Z",
+      "status": "ready",
+      "itemCount": 10,
+      "lastSuccessAt": "2026-10-15T07:22:34.894Z",
+      "stale": false
+    },
+    {
+      "id": "github-repos",
+      "name": "GitHub 公开仓库",
+      "kind": "github",
+      "url": "https://api.github.com/search/repositories",
+      "description": "固定搜索 coding-agent、multimodal、llm-tools 三个 topic；每组按当前总星数取前 6 项，不代表新增或趋势。",
+      "queries": [
+        {
+          "id": "coding-agents",
+          "label": "AI 编程智能体",
+          "query": "topic:coding-agent archived:false"
+        },
+        {
+          "id": "multimodal",
+          "label": "多模态项目",
+          "query": "topic:multimodal archived:false"
+        },
+        {
+          "id": "llm-tools",
+          "label": "LLM 开发工具",
+          "query": "topic:llm-tools archived:false"
+        }
+      ],
+      "checkedAt": "2026-10-15T07:22:34.897Z",
+      "status": "ready",
+      "itemCount": 17,
+      "lastSuccessAt": "2026-10-15T07:22:37.122Z",
+      "stale": false
+    }
+  ],
+  "lastUpdated": "2026-10-15T07:22:37.122Z",
+  "runs": [
+    {
+      "id": "fc5b3513-94fb-4a74-b094-79a576db3e71",
+      "startedAt": "2026-10-15T07:22:31.507Z",
+      "finishedAt": "2026-10-15T07:22:37.125Z",
+      "status": "ready",
+      "sourceIds": [
+        "huggingface",
+        "google-ai",
+        "github-blog",
+        "github-repos"
+      ],
+      "results": [
+        {
+          "sourceId": "huggingface",
+          "checkedAt": "2026-10-15T07:22:31.518Z",
+          "status": "ready",
+          "count": 12,
+          "requests": [
+            {
+              "url": "https://huggingface.co/blog/feed.xml",
+              "finalUrl": "https://huggingface.co/blog/feed.xml",
+              "status": "ready",
+              "bytes": 258626
+            }
+          ]
+        },
+        {
+          "sourceId": "google-ai",
+          "checkedAt": "2026-10-15T07:22:32.677Z",
+          "status": "ready",
+          "count": 12,
+          "requests": [
+            {
+              "url": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+              "finalUrl": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+              "status": "ready",
+              "bytes": 30434
+            }
+          ]
+        },
+        {
+          "sourceId": "github-blog",
+          "checkedAt": "2026-10-15T07:22:33.774Z",
+          "status": "ready",
+          "count": 10,
+          "requests": [
+            {
+              "url": "https://github.blog/ai-and-ml/feed/",
+              "finalUrl": "https://github.blog/ai-and-ml/feed/",
+              "status": "ready",
+              "bytes": 1902921
+            }
+          ]
+        },
+        {
+          "sourceId": "github-repos",
+          "checkedAt": "2026-10-15T07:22:34.897Z",
+          "status": "ready",
+          "count": 17,
+          "requests": [
+            {
+              "group": "coding-agents",
+              "query": "topic:coding-agent archived:false",
+              "url": "https://api.github.com/search/repositories?q=topic%3Acoding-agent+archived%3Afalse&sort=stars&order=desc&per_page=6",
+              "status": "ready",
+              "count": 6,
+              "bytes": 34566
+            },
+            {
+              "group": "multimodal",
+              "query": "topic:multimodal archived:false",
+              "url": "https://api.github.com/search/repositories?q=topic%3Amultimodal+archived%3Afalse&sort=stars&order=desc&per_page=6",
+              "status": "ready",
+              "count": 6,
+              "bytes": 33648
+            },
+            {
+              "group": "llm-tools",
+              "query": "topic:llm-tools archived:false",
+              "url": "https://api.github.com/search/repositories?q=topic%3Allm-tools+archived%3Afalse&sort=stars&order=desc&per_page=6",
+              "status": "ready",
+              "count": 6,
+              "bytes": 35515
+            }
+          ]
+        }
+      ],
+      "itemCount": 51
+    },
+    {
+      "id": "617aaba5-90f6-46f1-af47-f1ffc1e9fb58",
+      "startedAt": "2026-10-15T07:14:53.890Z",
+      "finishedAt": "2026-10-15T07:15:04.172Z",
+      "status": "ready",
+      "sourceIds": [
+        "huggingface",
+        "google-ai",
+        "github-blog",
+        "github-repos"
+      ],
+      "results": [
+        {
+          "sourceId": "huggingface",
+          "checkedAt": "2026-10-15T07:14:53.895Z",
+          "status": "ready",
+          "count": 12,
+          "requests": [
+            {
+              "url": "https://huggingface.co/blog/feed.xml",
+              "finalUrl": "https://huggingface.co/blog/feed.xml",
+              "status": "ready",
+              "bytes": 258626
+            }
+          ]
+        },
+        {
+          "sourceId": "google-ai",
+          "checkedAt": "2026-10-15T07:14:55.384Z",
+          "status": "ready",
+          "count": 12,
+          "requests": [
+            {
+              "url": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+              "finalUrl": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+              "status": "ready",
+              "bytes": 30434
+            }
+          ]
+        },
+        {
+          "sourceId": "github-blog",
+          "checkedAt": "2026-10-15T07:14:57.260Z",
+          "status": "ready",
+          "count": 10,
+          "requests": [
+            {
+              "url": "https://github.blog/ai-and-ml/feed/",
+              "finalUrl": "https://github.blog/ai-and-ml/feed/",
+              "status": "ready",
+              "bytes": 1902921
+            }
+          ]
+        },
+        {
+          "sourceId": "github-repos",
+          "checkedAt": "2026-10-15T07:14:59.717Z",
+          "status": "ready",
+          "count": 17,
+          "requests": [
+            {
+              "group": "coding-agents",
+              "query": "topic:coding-agent archived:false",
+              "url": "https://api.github.com/search/repositories?q=topic%3Acoding-agent+archived%3Afalse&sort=stars&order=desc&per_page=6",
+              "status": "ready",
+              "count": 6,
+              "bytes": 34566
+            },
+            {
+              "group": "multimodal",
+              "query": "topic:multimodal archived:false",
+              "url": "https://api.github.com/search/repositories?q=topic%3Amultimodal+archived%3Afalse&sort=stars&order=desc&per_page=6",
+              "status": "ready",
+              "count": 6,
+              "bytes": 33648
+            },
+            {
+              "group": "llm-tools",
+              "query": "topic:llm-tools archived:false",
+              "url": "https://api.github.com/search/repositories?q=topic%3Allm-tools+archived%3Afalse&sort=stars&order=desc&per_page=6",
+              "status": "ready",
+              "count": 6,
+              "bytes": 35515
+            }
+          ]
+        }
+      ],
+      "itemCount": 51
+    }
+  ],
+  "capabilities": {
+    "live": true,
+    "analysis": "rules"
+  }
+}

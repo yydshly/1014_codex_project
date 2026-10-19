@@ -1,0 +1,14 @@
+{
+  "name": "research-013-crawl-hive",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CrawlHive 中文交互研究：能力、价值、原理、本质与通用化改造",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs && node --test explore/engine.test.mjs",
+    "refresh:data": "node scripts/refresh-explore.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
