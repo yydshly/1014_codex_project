@@ -73,5 +73,59 @@
     "历史快照不是持续实时监控",
     "没有模型摘要、事实核查或语义聚类",
     "个人省时、覆盖和费用尚未评测"
-  ]
+  ],
+  "latestRevision": {
+    "sourceCommit": "8e981cd4b3381766f00741a7651eeb2ff35693ab",
+    "workflow": {
+      "runId": 39227395106,
+      "url": "https://github.com/yydshly/1014_codex_project/actions/runs/39227395106",
+      "conclusion": "success",
+      "completedAt": "2026-10-19T09:06:27Z"
+    },
+    "changes": [
+      "首屏沿用既有理解总图，提供放大与下载导航",
+      "首页八项摘要明确能力、原理、思考、探索、来源、处理、扩展意义和使用价值",
+      "同步总站013摘要和入口名称"
+    ],
+    "guide": {
+      "svg": "web/media/understanding-map.svg",
+      "preview": "assets/understanding-overview.jpg",
+      "unchanged": true,
+      "svgGitAndPublishedSha256": "01d30d65dd959816230966b026bf5f5f347a2a4a44f6bed41c4516f769c63390",
+      "previewSha256": "b0ae95f0330371b04ddca75fafa8cc4ea67ffb54123cbeebb32ea7d482d04323"
+    },
+    "verification": {
+      "checkedAt": "2026-10-19T09:07:17.738Z",
+      "staticFiles": 28,
+      "routes": 19,
+      "pageIds": 102,
+      "publishedProjectIds": [
+        "004",
+        "006",
+        "007",
+        "009",
+        "010",
+        "011",
+        "013",
+        "014"
+      ],
+      "command": "node projects/013-crawl-hive/web/scripts/verify-public.mjs",
+      "browser": {
+        "summaryCards": 8,
+        "guideLoaded": true,
+        "heroMapDialog": true,
+        "mainEntryNavigation": true,
+        "desktopWidth": 1280,
+        "mobileWidth": 390,
+        "pageOverflow": false
+      },
+      "tests": 17,
+      "screenshots": [
+        "assets/public-guide-home.jpg",
+        "assets/public-summary.jpg",
+        "assets/public-summary-mobile.jpg"
+      ]
+    },
+    "scope": "本次整理与部署不改变来源接入、上游研究版本和2026-10-15历史快照；文件与入口HTTP复核可重复运行。原verification字段保留首发历史。"
+  }
 }

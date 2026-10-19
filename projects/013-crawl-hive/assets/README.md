@@ -38,3 +38,8 @@
 ## 2026-10-19 公网部署验收
 
 `public-summary.jpg`与`public-summary-mobile.jpg`为正式GitHub Pages摘要的浏览器实际截图，分别使用1280px桌面和390px手机视口。只证明摘要显示与布局；历史快照仍为10-15数据，不能据此证明上游已运行或候选已接通。
+
+
+## 八项摘要与既有引导图的发布更新
+
+`public-guide-home.jpg` 是正式站点首屏的实际浏览器截图，展示沿用的理解总图及四环节入口。`public-summary.jpg` 与 `public-summary-mobile.jpg` 更新为八项摘要版本的实际截图，分别使用 1280px 桌面和 390px 手机视口。沿用的 `web/media/understanding-map.svg`、`understanding-overview.jpg` 内容未改动，原图字节摘要见部署记录 `latestRevision.guide`。这些截图只说明研究网页的显示与导航，不代表重新运行上游、采集新数据或接入候选。
