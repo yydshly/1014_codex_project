@@ -1,0 +1,468 @@
+{
+  "verified_at": "2026-10-19T08:05:59.977390+00:00",
+  "base_url": "https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/",
+  "static_files": 67,
+  "files": [
+    {
+      "path": "app.js",
+      "status": 200,
+      "expected_bytes": 91803,
+      "sha256_matched": true
+    },
+    {
+      "path": "data/004-h3-audio-pilot-pending-0856.json",
+      "status": 200,
+      "expected_bytes": 3616,
+      "sha256_matched": true
+    },
+    {
+      "path": "data/004-h3-audio-pilot.json",
+      "status": 200,
+      "expected_bytes": 6535,
+      "sha256_matched": true
+    },
+    {
+      "path": "data/004-h3-pilot-acceptance.json",
+      "status": 200,
+      "expected_bytes": 1786,
+      "sha256_matched": true
+    },
+    {
+      "path": "data/004-pilot-demo.json",
+      "status": 200,
+      "expected_bytes": 16097,
+      "sha256_matched": true
+    },
+    {
+      "path": "data/004-repaired-film.json",
+      "status": 200,
+      "expected_bytes": 12458,
+      "sha256_matched": true
+    },
+    {
+      "path": "data/004-stage-film.json",
+      "status": 200,
+      "expected_bytes": 54188,
+      "sha256_matched": true
+    },
+    {
+      "path": "data/own-sample-run.json",
+      "status": 200,
+      "expected_bytes": 442592,
+      "sha256_matched": true
+    },
+    {
+      "path": "data/research-overview-sources.json",
+      "status": 200,
+      "expected_bytes": 26432,
+      "sha256_matched": true
+    },
+    {
+      "path": "data/source-register.json",
+      "status": 200,
+      "expected_bytes": 427991,
+      "sha256_matched": true
+    },
+    {
+      "path": "docs/README.md",
+      "status": 200,
+      "expected_bytes": 19801,
+      "sha256_matched": true
+    },
+    {
+      "path": "docs/RESEARCH.md",
+      "status": 200,
+      "expected_bytes": 37559,
+      "sha256_matched": true
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "status": 200,
+      "expected_bytes": 17708,
+      "sha256_matched": true
+    },
+    {
+      "path": "docs/UNDERSTANDING.md",
+      "status": 200,
+      "expected_bytes": 8558,
+      "sha256_matched": true
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "status": 200,
+      "expected_bytes": 35432,
+      "sha256_matched": true
+    },
+    {
+      "path": "favicon.svg",
+      "status": 200,
+      "expected_bytes": 230,
+      "sha256_matched": true
+    },
+    {
+      "path": "h3-pilot-report.mjs",
+      "status": 200,
+      "expected_bytes": 4326,
+      "sha256_matched": true
+    },
+    {
+      "path": "history/001-full-four-line-demo.mp4",
+      "status": 200,
+      "expected_bytes": 6374421,
+      "sha256_matched": true,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "history/001-full-run.json",
+      "status": 200,
+      "expected_bytes": 4382,
+      "sha256_matched": true
+    },
+    {
+      "path": "history/001-poets.png",
+      "status": 200,
+      "expected_bytes": 2301814,
+      "sha256_matched": true
+    },
+    {
+      "path": "history/001-run.json",
+      "status": 200,
+      "expected_bytes": 8310,
+      "sha256_matched": true
+    },
+    {
+      "path": "history/001-three-line-demo.mp4",
+      "status": 200,
+      "expected_bytes": 5606286,
+      "sha256_matched": true,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "history/002-jing-feng-shuang-v2.mp4",
+      "status": 200,
+      "expected_bytes": 18110087,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "history/002-poets-v2.png",
+      "status": 200,
+      "expected_bytes": 2340087,
+      "sha256_matched": true
+    },
+    {
+      "path": "history/002-run.json",
+      "status": 200,
+      "expected_bytes": 475608,
+      "sha256_matched": true
+    },
+    {
+      "path": "history/003-jing-feng-shuang-stage-v3.mp4",
+      "status": 200,
+      "expected_bytes": 25573442,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "history/003-run.json",
+      "status": 200,
+      "expected_bytes": 442592,
+      "sha256_matched": true
+    },
+    {
+      "path": "history/003-stage-v3.png",
+      "status": 200,
+      "expected_bytes": 2457087,
+      "sha256_matched": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "expected_bytes": 65464,
+      "sha256_matched": true
+    },
+    {
+      "path": "licenses/UPSTREAM-MIT.txt",
+      "status": 200,
+      "expected_bytes": 1091,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/cover-16x9.jpg",
+      "status": 200,
+      "expected_bytes": 441172,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/demo-github.mp4",
+      "status": 200,
+      "expected_bytes": 9381327,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "media/frame-1.jpg",
+      "status": 200,
+      "expected_bytes": 64218,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/frame-2.jpg",
+      "status": 200,
+      "expected_bytes": 67758,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/h3-audio-pilot-004/accepted.png",
+      "status": 200,
+      "expected_bytes": 101972,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/h3-audio-pilot-004/before-submit.png",
+      "status": 200,
+      "expected_bytes": 136072,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/h3-audio-pilot-004/model-first-frame.jpg",
+      "status": 200,
+      "expected_bytes": 60228,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/h3-audio-pilot-004/model-original.mp4",
+      "status": 200,
+      "expected_bytes": 3342437,
+      "sha256_matched": true,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "media/h3-audio-pilot-004/reference-9.4-14.4.wav",
+      "status": 200,
+      "expected_bytes": 960078,
+      "sha256_matched": true,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "media/h3-audio-pilot-004/reference-listen-only.mp4",
+      "status": 200,
+      "expected_bytes": 3359104,
+      "sha256_matched": true,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "media/h3-audio-pilot-004/typed-inputs.png",
+      "status": 200,
+      "expected_bytes": 55185,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/own-libai-dufu-v1.mp4",
+      "status": 200,
+      "expected_bytes": 25573442,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "media/own-poets-v1.png",
+      "status": 200,
+      "expected_bytes": 2457087,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/pilot-004/R01-MASTER.png",
+      "status": 200,
+      "expected_bytes": 2352715,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/pilot-004/R02-LIBAI.png",
+      "status": 200,
+      "expected_bytes": 2068459,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/pilot-004/R03-DUFU.png",
+      "status": 200,
+      "expected_bytes": 2133385,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/pilot-004/R04-STAGE.png",
+      "status": 200,
+      "expected_bytes": 2214849,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/pilot-004/R05-CROWD.png",
+      "status": 200,
+      "expected_bytes": 2352432,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/pilot-004/R06-DETAIL.png",
+      "status": 200,
+      "expected_bytes": 2318516,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/pilot-004/singing-original.mp4",
+      "status": 200,
+      "expected_bytes": 2749170,
+      "sha256_matched": true,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "media/pilot-004/singing-reference-diagnostic.mp4",
+      "status": 200,
+      "expected_bytes": 2766463,
+      "sha256_matched": true,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "media/pilot-004/stage-original.mp4",
+      "status": 200,
+      "expected_bytes": 7202655,
+      "sha256_matched": true,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "media/pilot-004/stage-song-preview.mp4",
+      "status": 200,
+      "expected_bytes": 6252638,
+      "sha256_matched": true,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "media/pilot-004/ya-zhou-ren-jian.mp3",
+      "status": 200,
+      "expected_bytes": 2276894,
+      "sha256_matched": true,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "media/repaired-film-004/ya-zhou-ren-jian-audio-driven.jpg",
+      "status": 200,
+      "expected_bytes": 125704,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/repaired-film-004/ya-zhou-ren-jian-audio-driven.mp4",
+      "status": 200,
+      "expected_bytes": 45964902,
+      "sha256_matched": true,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "media/research-overview-011-preview.jpg",
+      "status": 200,
+      "expected_bytes": 684881,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/research-overview-011.png",
+      "status": 200,
+      "expected_bytes": 6591274,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/research-overview-011.svg",
+      "status": 200,
+      "expected_bytes": 1204456,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/stage-film-004/poster.jpg",
+      "status": 200,
+      "expected_bytes": 203056,
+      "sha256_matched": true
+    },
+    {
+      "path": "media/stage-film-004/ya-zhou-ren-jian-stage.mp4",
+      "status": 200,
+      "expected_bytes": 57372869,
+      "first_last_ranges_matched": true
+    },
+    {
+      "path": "performance-report.mjs",
+      "status": 200,
+      "expected_bytes": 13631,
+      "sha256_matched": true
+    },
+    {
+      "path": "pilot-report.mjs",
+      "status": 200,
+      "expected_bytes": 3251,
+      "sha256_matched": true
+    },
+    {
+      "path": "repaired-film-report.mjs",
+      "status": 200,
+      "expected_bytes": 3418,
+      "sha256_matched": true
+    },
+    {
+      "path": "sample-report.mjs",
+      "status": 200,
+      "expected_bytes": 10448,
+      "sha256_matched": true
+    },
+    {
+      "path": "stage-film-report.mjs",
+      "status": 200,
+      "expected_bytes": 7890,
+      "sha256_matched": true
+    },
+    {
+      "path": "styles.css",
+      "status": 200,
+      "expected_bytes": 61661,
+      "sha256_matched": true
+    }
+  ],
+  "existing_entries_and_guide": [
+    {
+      "name": "site-index",
+      "url": "https://yydshly.github.io/1014_codex_project/",
+      "status": 200
+    },
+    {
+      "name": "004",
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html",
+      "status": 200
+    },
+    {
+      "name": "006",
+      "url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html",
+      "status": 200
+    },
+    {
+      "name": "007",
+      "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html",
+      "status": 200
+    },
+    {
+      "name": "009",
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/",
+      "status": 200
+    },
+    {
+      "name": "010",
+      "url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/",
+      "status": 200
+    },
+    {
+      "name": "014",
+      "url": "https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/",
+      "status": 200
+    },
+    {
+      "name": "011-index-guide",
+      "url": "https://yydshly.github.io/1014_codex_project/projects/011-ancient-rap-battle/assets/ancient-rap-battle-research-overview.png",
+      "status": 200,
+      "original_guide_sha256_matched": true
+    }
+  ],
+  "unique_html_ids": 163,
+  "valid_anchor_links": 25,
+  "catalog_guide_and_summary_verified": true,
+  "checks": "HTTP, exact bytes/SHA for small assets and final film, all media first/last ranges, anchors and preserved site entries",
+  "limits": "Does not constitute subjective audio or complete lip-sync acceptance; browser review recorded separately."
+}

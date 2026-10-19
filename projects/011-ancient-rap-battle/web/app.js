@@ -766,6 +766,7 @@ async function loadRepairedFilm() {
     byId("main-film-action").href = "#repaired-film-004";
     byId("main-film-action").textContent = "查看新的修复版 ↓";
     byId("stage-film-nav").href = "#repaired-film-004";
+    byId("stage-film-nav").textContent = "压轴人间";
     byId("stage-film-nav").hidden = false;
     byId("pilot-back-to-film").href = "#repaired-film-004";
     document.querySelector('meta[name="description"]').content = "古人说唱制作流程研究：源库能力、我们的94.64秒《压轴人间》、原曲驱动修复、价值判断及扩展方向。";

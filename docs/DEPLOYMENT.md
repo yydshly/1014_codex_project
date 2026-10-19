@@ -86,3 +86,12 @@ _site/
 发布理解摘要、沉淀与复习方法、既有全景图、27 平台目录及首轮真实探索档案。`projects/009-demand-discovery/web/build.mjs` 执行检查、10 项测试、公开构建和静态白名单校验；公开页只读保存的实验，不请求本机 API，不执行模型。新探索继续依赖本地服务与 Codex 登录。未将服务器、运行目录或凭据打包上线。
 
 009 已于 2026-10-19 通过完整站点 Actions 发布，35 个公网地址与资源、摘要及锚点核对通过，保留既有五个项目。正式入口为 [理解摘要](https://yydshly.github.io/1014_codex_project/009-demand-discovery/#synthesis)，完整记录见 [009 发布验收](../projects/009-demand-discovery/deployment.json)。本轮未进行新的浏览器视觉点击验收。
+
+
+## 011 古人说唱机制与舞台成果（2026-10-19已发布）
+
+公开入口：[研究摘要与引导图](https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/)、[《压轴人间》完整舞台版](https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/#repaired-film-004)。摘要解释源库能力与效果、我们的真实探索、音频驱动修复、价值判断及扩展方向，引导图沿用已生成的原始PNG/SVG，页面加载已有JPEG预览。
+
+项目`web/build.mjs`打包67份已有静态文件并检查来源、哈希与媒体分段播放；总构建保留004、006、007、009、010、014，静态站点约320 MiB。不运行模型或新增付费任务，不发布模型缓存、账号配置或制作中间文件。
+
+首次Actions成功后，67份公网产物、163个唯一页内编号、25处锚点、新成片全文件SHA、全部媒体首尾Range及既有六个项目入口均核验通过，随后才登记`demo_url`。浏览器确认引导图、摘要和新片模块加载；5秒试片确认与整片带声验收保持独立。固定提交、工作流及检查范围见[011部署记录](../projects/011-ancient-rap-battle/deployment.json)。原图中的未发布描述保留为制图时快照，以当前部署记录为准。

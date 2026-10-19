@@ -9,6 +9,7 @@
 - 007 Atlas 研究页：<https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html>
 - 009 个人主页启发与需求发现：<https://yydshly.github.io/1014_codex_project/009-demand-discovery/#synthesis>
 - 010 数据与需求调研：<https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/#synthesis>
+- 011 古人说唱机制与舞台成果：<https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/>
 - 014 研究页：<https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/>
 - 工作流：`.github/workflows/pages.yml`。
 - 发布清单：`web/pages.json`。每次重新构建清单中的全部项目，避免发布单个项目时覆盖已有入口。
@@ -38,6 +39,12 @@ node scripts/build_pages.mjs
 014沿用我们生成的 `assets/overview.png` 作为首页引导图和总索引配图，保留原始SVG和来源登记。页面是能力、原理、价值与扩展方向的研究展示，不运行真人数字人模型。原片按需从第三方媒体地址加载，源站可能不可达；本地保存的原封面和能力图不依赖它。
 
 [返回部署约定](DEPLOYMENT.md)
+
+## 011 古人说唱机制研究与原曲驱动舞台版
+
+011以已经生成的`assets/ancient-rap-battle-research-overview.png`为引导图，首页摘要明确说明源库效果与能力、我们的探索、原曲驱动修复、引发的思考及可扩展方向。保留源库周瑜×诸葛亮原作、我们的94.64秒《压轴人间》、失败样片和5秒获确认试片；新成片与历史拒收分别标明。
+
+2026-10-19经既有Actions发布，67份静态文件、公网正文与锚点、新成片完整SHA、全部媒体首尾Range以及原有六个项目入口通过核验。构建只打包既有结果，不调用模型；模型缓存、账号配置和制作中间文件不公开。5秒试片确认不外推为整片口型验收，精确范围见[011发布记录](../projects/011-ancient-rap-battle/deployment.json)。
 
 ## 006 随机门研究与原型
 

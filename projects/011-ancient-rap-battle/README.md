@@ -1,5 +1,7 @@
 # 011 · 古人说唱 Battle：AI 视频制作流程研究
 
+**已发布并完成公网核验（2026-10-19）：[研究网页与引导图](https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/) · [完整舞台版](https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/#repaired-film-004) · [价值与扩展](https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/#reflection)**。发布详情见[deployment.json](deployment.json)；下文早期未部署描述为历史阶段记录。
+
 研究 [ancient-rap-battle](https://github.com/10291124jcjc-dotcom/ancient-rap-battle) 如何将歌曲、人物参考图、远端逐句视频与剪辑组织成完整短片；同时保留我们从24秒基线到94.64秒《压轴人间》的真实探索。关键修正是让对应原曲音频参与演唱生成，而非只生成画面后配回音乐。
 
 这个上游项目是一套 **Claude Code Skill、创作模板和 Python 脚本**：把历史人物选题、说唱歌曲、角色参考图、逐句视频生成、质检与后期连接起来。它的核心价值是把一条容易反复返工的视频制作过程，拆成可以检查、替换和局部重做的步骤。
@@ -51,7 +53,7 @@
 
 [一图总览：源库效果、探索过程、最终舞台版与价值](assets/ancient-rap-battle-research-overview.png)（3600×6120，可放大）已整理源库机制、六个探索阶段、真实效果截帧、预算与验证边界；[可编辑SVG](assets/ancient-rap-battle-research-overview.svg)和[来源清单](assets/ancient-rap-battle-research-overview-sources.json)一并保留。网页新成片区可展开与下载。
 
-[新完整视频](experiments/004-performance-film/work/audio-driven-repair/full-reedit/final/压轴人间-原曲驱动舞台版.mp4)已导出并接入本地网页 `#repaired-film-004`：94.64秒、1280×720、25fps、2366帧、45,964,902字节，SHA-256为`97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6`。22个镜头中对应原曲的人物演唱40.96秒、观众20.08秒，其余为动态开场、收尾、舞台和无脸服装细节。没有MV调用、本地生成模型、静图运镜或画面变速。
+[新完整视频](web/public/media/repaired-film-004/ya-zhou-ren-jian-audio-driven.mp4)已导出并接入本地网页 `#repaired-film-004`：94.64秒、1280×720、25fps、2366帧、45,964,902字节，SHA-256为`97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6`。22个镜头中对应原曲的人物演唱40.96秒、观众20.08秒，其余为动态开场、收尾、舞台和无脸服装细节。没有MV调用、本地生成模型、静图运镜或画面变速。
 
 五条新演唱视频均明确提交锁定人物图、舞台图和对应原曲WAV，按同一歌曲时段剪入；新舞台细节及已有观众/无脸片段独立登记来源。完整原歌不裁切、不变速，仅一次−1.5dB和不足一帧尾静音。全2366帧解码、原曲内容核验、22镜中点与21组切口画面检查完成。用户只验收过原5秒试片，未把该反馈或音频相关性当作整片逐字口型验收；代理没有声称主观听音或浏览器全片播放通过。字幕仍有三条未确认内容省略。
 
@@ -67,7 +69,7 @@
 
 ## 历史视觉样片：压轴人间，演唱口型未通过
 
-[已导出视觉样片](experiments/004-performance-film/work/stage-film-20261016/final/压轴人间-完整舞台版.mp4)实测94.64秒、1280×720、25fps、2366帧、57,372,869字节，SHA-256为`525c42dfe2bbe7bf0fe0dff77f122451464927e5aede6488a1b19f9691a0cb45`。本轮9条新远端普通视频与2条既有004试片组成11个真实源，剪成28个镜头；舞台、细节与观众素材保留可复用，观众画面约18.04秒。媒体原文件名仅作历史保留，不代表用户验收通过。
+[已导出视觉样片](web/public/media/stage-film-004/ya-zhou-ren-jian-stage.mp4)实测94.64秒、1280×720、25fps、2366帧、57,372,869字节，SHA-256为`525c42dfe2bbe7bf0fe0dff77f122451464927e5aede6488a1b19f9691a0cb45`。本轮9条新远端普通视频与2条既有004试片组成11个真实源，剪成28个镜头；舞台、细节与观众素材保留可复用，观众画面约18.04秒。媒体原文件名仅作历史保留，不代表用户验收通过。
 
 新增9条只提交图片和提示词，没有提交原曲音频驱动；现片将画面配回原曲，嘴部没有跟随歌曲，未达到演唱目标。播放与整曲检查通过只证明文件可播放，不能替代演唱验收。应先验证远端模型能否按5秒同一原曲驱动演唱，通过后再重做主角镜头，舞台与观众可复用。[用户拒收记录](experiments/004-performance-film/work/stage-film-20261016/user-rejection.json)、[实际制作报告](experiments/004-performance-film/work/stage-film-20261016/stage-film-report.json)、[网页展示记录](web/public/data/004-stage-film.json)保留具体事实。
 
@@ -99,7 +101,7 @@ ChatArt两条新原片均已下载，各10.125秒；四句独立歌词安排为�
 
 [实验003](experiments/003-stage-edition/README.md)回应场景单一的反馈：新增四张同一演出世界的舞台图，串联全景、双人对峙、观众反打与鼓阵细节，并调整灯光、薄雾和字幕。人物演唱沿用002两条视频，本轮新增视频模型调用为0；002原视频标价300钻石是既有素材费用，不重复记成本次新支出。
 
-[舞台成片](experiments/003-stage-edition/final/jing-feng-shuang-stage-v3.mp4)已接入本地网页主播放器：63.28秒、1280×720、25fps、1582帧、25,573,442字节，SHA-256为`011c49f6527f84ca834ac319ad14bb97dd4a410b75a37729b00bf025382970d6`。四句歌词仍为五次演唱，取用24.6秒；十七段新舞台图像运镜占38.68秒，合计22个视觉段。[完成报告](experiments/003-stage-edition/work/final-report.json)与[发布记录](experiments/003-stage-edition/work/publish-report.json)保存实际参数和来源，001两版与002完整原版均保留可看。
+[舞台成片](web/public/history/003-jing-feng-shuang-stage-v3.mp4)已接入本地网页主播放器：63.28秒、1280×720、25fps、1582帧、25,573,442字节，SHA-256为`011c49f6527f84ca834ac319ad14bb97dd4a410b75a37729b00bf025382970d6`。四句歌词仍为五次演唱，取用24.6秒；十七段新舞台图像运镜占38.68秒，合计22个视觉段。[完成报告](experiments/003-stage-edition/work/final-report.json)与[发布记录](experiments/003-stage-edition/work/publish-report.json)保存实际参数和来源，001两版与002完整原版均保留可看。
 
 原歌完整保留，不裁切、不变速，播放响度仍为−1.5dB；开场、停拍与结尾补少量合成掌声和空间声，非现场录音。主歌与重唱范围没有叠加氛围声。[最终混音核验](experiments/003-stage-edition/work/final-audio-verification.json)相对“完整原歌＋批准氛围声”的预期混音测得零偏移、全覆盖、相关性0.998536，浮点样本峰值−0.9149dBFS、未检出样本削波。1582帧全段解码完成、未检出黑场，16帧成片接触表经人工看过接受舞台效果；这些检查不证明逐音素口型准确。浏览器实测统一见[验证记录](VERIFICATION.md)，未部署公网。
 

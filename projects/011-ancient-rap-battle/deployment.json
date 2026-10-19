@@ -1,0 +1,70 @@
+{
+  "project_id": "011",
+  "status": "published-and-publicly-verified",
+  "site_url": "https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/",
+  "content_commit": "12eb3da22135b93a1251d08b751c9865ab1403b6",
+  "workflow_run": "https://github.com/yydshly/1014_codex_project/actions/runs/39220118545",
+  "workflow_conclusion": "success",
+  "verified_at": "2026-10-19T08:05:59.977390+00:00",
+  "verification_snapshot": "verification/public-20261019-initial.json",
+  "verified_static_manifest": "verification/static-manifest-initial.json",
+  "scope": "Initial public deployment verified before registering demo_url; subsequent documentation and navigation-label updates use the same full-site workflow.",
+  "public_entries": {
+    "understanding": "https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/#synthesis",
+    "final_film": "https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/#repaired-film-004",
+    "source_example": "https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/#source-effect",
+    "reflection": "https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/#reflection",
+    "extensions": "https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/#extensions"
+  },
+  "guide": {
+    "original_path": "assets/ancient-rap-battle-research-overview.png",
+    "original_sha256": "cbe55cde30b35917581c986454e7a86542ce4d3832711133cd421c2431a32990",
+    "unchanged": true,
+    "size": [
+      3600,
+      6120
+    ],
+    "display_preview": "assets/ancient-rap-battle-research-overview-preview.jpg",
+    "note": "Publication-status wording in the already generated image is an immutable historical snapshot."
+  },
+  "final_video": {
+    "sha256": "97a08f79cdeba756fb35280652445343be25219b2cc1ded532e3c62e3ccad4a6",
+    "duration": 94.64,
+    "width": 1280,
+    "height": 720,
+    "fps": 25,
+    "shots": 22,
+    "public_bytes": 45964902,
+    "full_public_sha256_verified": true
+  },
+  "checks": {
+    "static_files": 67,
+    "unique_html_ids": 163,
+    "valid_anchor_links": 25,
+    "all_media_first_last_ranges": true,
+    "full_site_build": true,
+    "previous_projects_preserved": [
+      "004",
+      "006",
+      "007",
+      "009",
+      "010",
+      "014"
+    ],
+    "new_generation_calls": 0,
+    "models_or_credentials_published": false,
+    "curated_work_reports": 44,
+    "secret_pattern_findings": 0,
+    "immutable_git_blob_mismatches": 0
+  },
+  "browser_review": {
+    "public_dom_and_final_module_loaded": true,
+    "guide_natural_width": 1440,
+    "source_code_errors_observed": 0,
+    "final_film_screenshot": "verification/public-film.png",
+    "overview_screenshot": "verification/public-overview.png",
+    "subjective_audio_listening": false,
+    "full_film_human_lip_acceptance": false
+  },
+  "remaining_quality_scope": "5秒试片由用户确认可用；整片仍待带声效果验收，公开部署不改变此结论。"
+}

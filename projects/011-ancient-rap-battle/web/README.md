@@ -96,4 +96,8 @@ npm run dev
 
 ## 发布状态
 
-当前仅提供本地构建与预览，**尚未发布**。规划路径为 `/1014_codex_project/011-ancient-rap-battle/`，部署须遵守 [统一部署约定](../../../docs/DEPLOYMENT.md)。只有发布并验证可访问后，才在根目录 `projects.json` 登记 `demo_url` 并同步总索引。
+2026-10-19已通过现有GitHub Actions部署并完成公网核验：[研究网页与引导图](https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/) · [完整舞台版](https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/#repaired-film-004)。67份静态文件、163个唯一页内编号、25处锚点链接、新片完整SHA和全部媒体首尾分段请求核对通过，原有六个项目保留。详情见[发布记录](../deployment.json)。
+
+统一发布入口为`node web/build.mjs`（在项目目录执行），只打包已有文件并运行检查；总构建器使用完整`web/pages.json`，不重新生成歌曲、图像或视频。引导图沿用已有PNG/SVG；首页使用同一图片的已有JPEG预览，可打开原始高清图。源码、公开媒体与精选文字证据进入Git；模型缓存、环境、账号配置和制作中间产物不发布。冻结资料保留原字节，防止跨平台换行转换破坏SHA校验。
+
+本地路径和全量工作目录留在历史制作记录中用于追溯，不表示这些中间文件已全部随公开站点分发。网页不是远端视频生成服务，不会提交任务或扣费。5秒试片确认和整片效果验收保持独立，公网可播放不等于整片口型通过。

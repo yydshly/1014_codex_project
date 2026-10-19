@@ -2,15 +2,15 @@
   "date": "2026-10-19",
   "public_project": "011-ancient-rap-battle",
   "static_files": 67,
-  "bytes": 257903480,
+  "bytes": 257903910,
   "runtime_model_calls": false,
   "local_generation_models_published": false,
   "original_guide_preserved": true,
   "files": [
     {
       "path": "app.js",
-      "bytes": 91803,
-      "sha256": "eb8eeecd5e565eee27b1906d18f549801bf78dbbce660f3a3fab799b7cc4b2f7"
+      "bytes": 91860,
+      "sha256": "29e6c38d279c6c01ff5da7d1d7dafc35f644f0913f0f27469c3f2fa2c7986aaf"
     },
     {
       "path": "data/004-h3-audio-pilot-pending-0856.json",
@@ -59,8 +59,8 @@
     },
     {
       "path": "docs/README.md",
-      "bytes": 19801,
-      "sha256": "d5bb7e5816e1d4f2651dd3fc900ad0e9b9cff7e4230a9832029751fbcea0b075"
+      "bytes": 20174,
+      "sha256": "8cf2fa802ef4e682facf4e110bcd715d374f171d339e43c1ba6de61468b28f98"
     },
     {
       "path": "docs/RESEARCH.md",
