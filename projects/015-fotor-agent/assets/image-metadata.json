@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "created_on": "2026-10-19",
+  "generator": "built-in image_gen.imagegen",
+  "mode": "generate",
+  "prompt_file": "image-prompt.txt",
+  "image_file": "understanding-overview.png",
+  "purpose": "原创理解引导图，根 README 与项目简介共用同一原图",
+  "evidence_basis": [
+    {
+      "url": "https://www.fotor.com/agent/",
+      "accessed_on": "2026-10-19"
+    },
+    {
+      "url": "https://www.fotor.com/ai-video-generator/motion-graphics/",
+      "accessed_on": "2026-10-19"
+    }
+  ],
+  "scope": "基于官方能力说明与本次讨论；不是官网截图、源码架构或效果实测。",
+  "visual_review": "已核对中文文本、布局、流程方向、价值取舍与未实测说明。",
+  "width": 1536,
+  "height": 1024,
+  "bytes": 1450442,
+  "sha256": "d87f52b03ebecb10007be6b9f3b1d83a57850d385261f04d06a4df9387f8d99a"
+}

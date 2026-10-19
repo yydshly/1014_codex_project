@@ -60,6 +60,18 @@
       "preview_caption": "014 原创能力总览图：引用原视频画面，串起真人效果、听想说动模型、实时交互工程、产品价值与证据边界。",
       "demo_url": "https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/",
       "source_url": "https://x.com/huoshan007/status/2109919568617484522"
+    },
+    {
+      "id": "015",
+      "slug": "fotor-agent",
+      "title": "Fotor Agent：视觉创作平台的能力、价值与我们的取舍",
+      "repository": null,
+      "summary": "Fotor 将图片与视频模型、Agent 编排和代码动画整合成视觉创作平台，价值在降低制作与修改门槛。对会用 Agent 和代码的我们，主要参考工作流与编辑体验，是否采用取决于省时和成品成本；后续可探索多模态 Agent 的工具协作、局部修改与质量评估。本轮仅整理归档，未做效果实测。",
+      "status": "已归档",
+      "preview": "assets/understanding-overview.png",
+      "preview_caption": "015 原创理解引导图：Fotor 的图片、设计与视频能力，平台降低制作门槛的价值，对我们的取舍，以及多模态 Agent 的可扩展研究方向；效果与成本未实测。",
+      "demo_url": null,
+      "source_url": "https://www.fotor.com/agent/"
     }
   ]
 }

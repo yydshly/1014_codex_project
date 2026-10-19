@@ -1,0 +1,30 @@
+Use case: infographic-diagram.
+Asset type: One finished Chinese editorial infographic for a GitHub research archive. This image itself will be the repository's lead image, not a mockup.
+Primary request: Create a polished, spacious, highly legible Simplified Chinese visual summary of Fotor Agent's capabilities, value, value to technically capable users, questions raised, and possible future Agent research. Landscape approximately 3:2, high resolution. Clean warm-white background, deep navy text, restrained teal, soft blue and small amber accents. Crisp modern Chinese sans-serif typography. Small purposeful line illustrations of an image, a video timeline, and connected tools. Editorial information design, clear hierarchy, generous padding. No photorealistic background, no busy decoration, no fake interface, no watermark. Render all Chinese accurately and use ONLY the text listed below. Preserve qualified wording: this is our interpretation based on official descriptions, NOT tested product performance or confirmed internal architecture.
+Layout:
+Top: small archive badge; large title; subtitle.
+Then a horizontal concept workflow with clear arrows. Under its third node, show two equal branches for media generation and graphic animation, emphasizing they cooperate and not every video is generated with code. These nodes represent our conceptual abstraction.
+Middle: three generously spaced columns for capabilities, platform value, and value to us. The third column should be visually emphasized with a subtle teal tint.
+Bottom: a compact questions panel and a future exploration panel, connected conceptually to the value-to-us column.
+Small footer with evidence boundary and date.
+Text (verbatim, in this reading order):
+Badge: "015 · 理解归档"
+Title: "Fotor Agent"
+Subtitle: "从模型能力到视觉创作产品"
+Workflow section label: "我们的理解"
+Workflow nodes: "创意与素材" → "Agent 编排" → "生成与制作" → "编辑与导出"
+Branch labels under 生成与制作: "图片／视频模型" and "代码动画"
+Final output label: "图片 · 设计图 · 视频成品"
+Middle column 1 title: "能做什么"
+Column 1 lines: "图片生成与编辑" / "海报与商品视觉" / "脚本、分镜与视频" / "配音、字幕与动态图形"
+Middle column 2 title: "平台价值"
+Column 2 lines: "降低制作门槛" / "串联工具与素材" / "支持预览和修改" / "减少重复操作"
+Middle column 3 title: "对我们的价值"
+Column 3 lines: "会用 Agent 与代码" / "可自建常用制作流程" / "参考编排与编辑体验" / "按省时与成品成本取舍"
+Questions title: "引发的思考"
+Questions: "模型生成能力与产品增益如何区分？" / "工作流能否减少返工、降低交付成本？"
+Future panel title: "可扩展探索：多模态 Agent"
+Future panel flow: "任务规划 → 工具调用 → 局部修改 → 质量评估"
+Future panel conclusion: "沉淀可复用流程，比较直接调用与 Agent 编排"
+Footer: "本轮仅整理归档 · 官方能力说明，效果与成本未实测 · 2026-10-19"
+Constraints: Keep all text inside the image, no spelling errors, no overlapping arrows or labels, no invented benchmarks or logos. Make title and all three core columns readable when embedded in a GitHub README. This is one coherent infographic, with no duplicated headings or text.
