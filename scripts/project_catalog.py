@@ -162,7 +162,7 @@ def render_summary(project):
     if details is None:
         return markdown_text(project["summary"])
     return "<br>".join(
-        f"**{label}：**{markdown_text(details[field])}"
+        f"<strong>{label}：</strong>{markdown_text(details[field])}"
         for field, label in SUMMARY_LABELS.items()
     )
 
