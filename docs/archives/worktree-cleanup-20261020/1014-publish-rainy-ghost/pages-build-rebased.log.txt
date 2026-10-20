@@ -1,0 +1,1338 @@
+
+> research-002-rainy-ghost@1.0.0 check
+> node --check src/main.js && node --check src/scene.js && node --check src/shaders.js && node --check src/audio.js && node --check src/ghost-voice.js && node --check src/sound-ui.js && node --check src/rain-reaction.js && node --check src/wet-cloth.js && node --check src/hem-drips.js && node --check src/adaptive-quality.js && node --check src/focus-session.js && node --check src/focus-ui.js && node --check src/focus-lights.js && node --check src/companion-memory.js && node --check src/companion-motion.js && node --check src/companion-ui.js && node --check src/cheek-blush.js && node --check src/head-stroke.js && node --check scripts/smoke.mjs && node --check scripts/voice-preview.mjs
+
+
+> research-002-rainy-ghost@1.0.0 check:publish
+> node --check build.mjs && node --check scripts/prepare-research.mjs && node --check scripts/validate-static.mjs
+
+
+> research-002-rainy-ghost@1.0.0 test
+> node --test scripts/*.test.mjs
+
+TAP version 13
+# Subtest: phone starts conservatively; every tier retains rain, bloom and reflection within its pixel budget
+ok 1 - phone starts conservatively; every tier retains rain, bloom and reflection within its pixel budget
+  ---
+  duration_ms: 4.2669
+  type: 'test'
+  ...
+# Subtest: sustained slow RAF intervals downshift one tier at a time with a cooldown
+ok 2 - sustained slow RAF intervals downshift one tier at a time with a cooldown
+  ---
+  duration_ms: 1.3416
+  type: 'test'
+  ...
+# Subtest: mobile presentation targets 60 fps on 60/90/120/144 Hz displays without a false 45 fps cap
+ok 3 - mobile presentation targets 60 fps on 60/90/120/144 Hz displays without a false 45 fps cap
+  ---
+  duration_ms: 1.9684
+  type: 'test'
+  ...
+# Subtest: mobile recovery requires sustained headroom and does not count paused or hidden time
+ok 4 - mobile recovery requires sustained headroom and does not count paused or hidden time
+  ---
+  duration_ms: 2.7306
+  type: 'test'
+  ...
+# Subtest: a single hitch does not lower quality; a failed recovery probe backs off for a minute
+ok 5 - a single hitch does not lower quality; a failed recovery probe backs off for a minute
+  ---
+  duration_ms: 4.4048
+  type: 'test'
+  ...
+# Subtest: controller downshifts propagate to renderer, postprocessing, reflector and matching GPU/CPU rain count
+ok 6 - controller downshifts propagate to renderer, postprocessing, reflector and matching GPU/CPU rain count
+  ---
+  duration_ms: 3.6408
+  type: 'test'
+  ...
+# Subtest: 默认静音不创建音频上下文；角色与雨声分别主动开启
+ok 7 - 默认静音不创建音频上下文；角色与雨声分别主动开启
+  ---
+  duration_ms: 40.332
+  type: 'test'
+  ...
+# Subtest: 暂停、后台和安静模式抑制自动回应，主动招呼在安静模式可用
+ok 8 - 暂停、后台和安静模式抑制自动回应，主动招呼在安静模式可用
+  ---
+  duration_ms: 117.1433
+  type: 'test'
+  ...
+# Subtest: 连点不会堆叠鸣叫，缓存有上限，播放完释放节点
+ok 9 - 连点不会堆叠鸣叫，缓存有上限，播放完释放节点
+  ---
+  duration_ms: 68.1177
+  type: 'test'
+  ...
+# Subtest: 异步恢复期间关闭声音，不会延迟播放旧回应
+ok 10 - 异步恢复期间关闭声音，不会延迟播放旧回应
+  ---
+  duration_ms: 1.0958
+  type: 'test'
+  ...
+# Subtest: 音量限制与关闭有效，雨量改变仍能联动雨声
+ok 11 - 音量限制与关闭有效，雨量改变仍能联动雨声
+  ---
+  duration_ms: 11.8123
+  type: 'test'
+  ...
+# Subtest: 不同设备采样率下的音色无削波、无异常样本，首尾平滑
+ok 12 - 不同设备采样率下的音色无削波、无异常样本，首尾平滑
+  ---
+  duration_ms: 185.0385
+  type: 'test'
+  ...
+# Subtest: 打招呼总是开心，熟悉程度不再覆盖指定情绪
+ok 13 - 打招呼总是开心，熟悉程度不再覆盖指定情绪
+  ---
+  duration_ms: 6.8671
+  type: 'test'
+  ...
+# Subtest: 摸头和招呼共用三秒叫声间隔，自动回应更稀疏，试听仍可主动比较
+ok 14 - 摸头和招呼共用三秒叫声间隔，自动回应更稀疏，试听仍可主动比较
+  ---
+  duration_ms: 8.2688
+  type: 'test'
+  ...
+# Subtest: 开心有两次柔软弹跳，害羞更轻，安心更长且更低
+ok 15 - 开心有两次柔软弹跳，害羞更轻，安心更长且更低
+  ---
+  duration_ms: 75.1165
+  type: 'test'
+  ...
+# Subtest: 音色微变可复现，试听导出为真实单声道 PCM WAV
+ok 16 - 音色微变可复现，试听导出为真实单声道 PCM WAV
+  ---
+  duration_ms: 10.0106
+  type: 'test'
+  ...
+# Subtest: 脸红贴合实际布料，布料变形与角色转身缩放后仍附着在脸上
+ok 17 - 脸红贴合实际布料，布料变形与角色转身缩放后仍附着在脸上
+  ---
+  duration_ms: 68.4035
+  type: 'test'
+  ...
+# Subtest: 自然陪伴只累计可见时间，暂停式离开不累计，睡眠长间隔有上限
+ok 18 - 自然陪伴只累计可见时间，暂停式离开不累计，睡眠长间隔有上限
+  ---
+  duration_ms: 3.3784
+  type: 'test'
+  ...
+# Subtest: 熟悉的招呼、安静偏好和小记刷新后保留，原专注数据不变
+ok 19 - 熟悉的招呼、安静偏好和小记刷新后保留，原专注数据不变
+  ---
+  duration_ms: 1.0392
+  type: 'test'
+  ...
+# Subtest: 小记按天有界，累计时间不会随旧日子移出而丢失
+ok 20 - 小记按天有界，累计时间不会随旧日子移出而丢失
+  ---
+  duration_ms: 0.9199
+  type: 'test'
+  ...
+# Subtest: 损坏数据不覆盖，写入失败仍保留页面内相处
+ok 21 - 损坏数据不覆盖，写入失败仍保留页面内相处
+  ---
+  duration_ms: 0.3975
+  type: 'test'
+  ...
+# Subtest: 靠近需停留，视线平滑跟随，离开后自然回落；冻结时间不继续动作
+ok 22 - 靠近需停留，视线平滑跟随，离开后自然回落；冻结时间不继续动作
+  ---
+  duration_ms: 5.8562
+  type: 'test'
+  ...
+# Subtest: 熟悉后的点头与抬灯有限时，重置不留下姿势偏移
+ok 23 - 熟悉后的点头与抬灯有限时，重置不留下姿势偏移
+  ---
+  duration_ms: 0.4318
+  type: 'test'
+  ...
+# Subtest: 摸头会平滑缩身眯眼，暂停冻结，之后完整恢复
+ok 24 - 摸头会平滑缩身眯眼，暂停冻结，之后完整恢复
+  ---
+  duration_ms: 0.5446
+  type: 'test'
+  ...
+# Subtest: 安静待着才偶尔缓慢眯眼，输入会唤醒，拖动和冻结不会启动待机动作
+ok 25 - 安静待着才偶尔缓慢眯眼，输入会唤醒，拖动和冻结不会启动待机动作
+  ---
+  duration_ms: 0.3259
+  type: 'test'
+  ...
+# Subtest: 轻抚方向有柔和延迟，反向时不跳动；持续轻抚才会安心眯眼
+ok 26 - 轻抚方向有柔和延迟，反向时不跳动；持续轻抚才会安心眯眼
+  ---
+  duration_ms: 4.0842
+  type: 'test'
+  ...
+# Subtest: 静止按住、悬停抖动和断续抚摸不会累积出安心眯眼
+ok 27 - 静止按住、悬停抖动和断续抚摸不会累积出安心眯眼
+  ---
+  duration_ms: 14.787
+  type: 'test'
+  ...
+# Subtest: 停手后轻轻目送离开方向，稍留片刻后完整恢复待机，冻结时不推进
+ok 28 - 停手后轻轻目送离开方向，稍留片刻后完整恢复待机，冻结时不推进
+  ---
+  duration_ms: 6.6454
+  type: 'test'
+  ...
+# Subtest: 没有抬起事件的停手也只目送一次，短暂停顿不会误结束，再轻抚可平滑接回
+ok 29 - 没有抬起事件的停手也只目送一次，短暂停顿不会误结束，再轻抚可平滑接回
+  ---
+  duration_ms: 1.3824
+  type: 'test'
+  ...
+# Subtest: 暂停和刷新保留已经专注的时间，恢复不计入休息时长
+ok 30 - 暂停和刷新保留已经专注的时间，恢复不计入休息时长
+  ---
+  duration_ms: 4.4032
+  type: 'test'
+  ...
+# Subtest: 后台和关闭后按真实时间完成，只点亮一次且不超过目标时长
+ok 31 - 后台和关闭后按真实时间完成，只点亮一次且不超过目标时长
+  ---
+  duration_ms: 1.3644
+  type: 'test'
+  ...
+# Subtest: 期限边界点击暂停或提前结束仍算完成；暂停期间不自动完成
+ok 32 - 期限边界点击暂停或提前结束仍算完成；暂停期间不自动完成
+  ---
+  duration_ms: 0.5316
+  type: 'test'
+  ...
+# Subtest: 非完整分钟和空任务处理、并行任务保护与累计记录
+ok 33 - 非完整分钟和空任务处理、并行任务保护与累计记录
+  ---
+  duration_ms: 0.3868
+  type: 'test'
+  ...
+# Subtest: 本地保存失败仍可使用；损坏的旧记录不会被覆盖
+ok 34 - 本地保存失败仍可使用；损坏的旧记录不会被覆盖
+  ---
+  duration_ms: 0.4686
+  type: 'test'
+  ...
+# Subtest: 刷新中的时钟回拨不会产生负时长，记录按唯一编号去重
+ok 35 - 刷新中的时钟回拨不会产生负时长，记录按唯一编号去重
+  ---
+  duration_ms: 0.2904
+  type: 'test'
+  ...
+# Subtest: 奖励灯实例固定容量、空记录不改变原场景、同一计数不重复更新
+ok 36 - 奖励灯实例固定容量、空记录不改变原场景、同一计数不重复更新
+  ---
+  duration_ms: 9.5935
+  type: 'test'
+  ...
+# Subtest: 旋转、缩身后的头顶仍按角色局部位置识别；点击头顶摸头，点身体打招呼
+ok 37 - 旋转、缩身后的头顶仍按角色局部位置识别；点击头顶摸头，点身体打招呼
+  ---
+  duration_ms: 9.5344
+  type: 'test'
+  ...
+# Subtest: 轻微触摸不挪动角色，身体越过阈值仍可拖动，松手不会误打招呼或摸头
+ok 38 - 轻微触摸不挪动角色，身体越过阈值仍可拖动，松手不会误打招呼或摸头
+  ---
+  duration_ms: 2.4916
+  type: 'test'
+  ...
+# Subtest: 鼠标不按键在头顶慢慢来回能轻抚，单次掠过不会摸头
+ok 39 - 鼠标不按键在头顶慢慢来回能轻抚，单次掠过不会摸头
+  ---
+  duration_ms: 5.1026
+  type: 'test'
+  ...
+# Subtest: 单指在头顶轻抚期间会回应，角色与镜头都不会被拖走，松手不重复摸头
+ok 40 - 单指在头顶轻抚期间会回应，角色与镜头都不会被拖走，松手不重复摸头
+  ---
+  duration_ms: 1.0761
+  type: 'test'
+  ...
+# Subtest: 离开头部、快速滑动、多指和暂停会阻断未完成的轻抚
+ok 41 - 离开头部、快速滑动、多指和暂停会阻断未完成的轻抚
+  ---
+  duration_ms: 3.5324
+  type: 'test'
+  ...
+# Subtest: 人物各部位提供不同鼠标目标：头部、身体、衣角、提灯和背景
+ok 42 - 人物各部位提供不同鼠标目标：头部、身体、衣角、提灯和背景
+  ---
+  duration_ms: 1.7429
+  type: 'test'
+  ...
+# Subtest: 按住头顶轻抚期间允许害羞动作，身体拖动中则不被陪伴动作打断
+ok 43 - 按住头顶轻抚期间允许害羞动作，身体拖动中则不被陪伴动作打断
+  ---
+  duration_ms: 1.786
+  type: 'test'
+  ...
+# Subtest: 触屏轻点可摸头，取消、多指和位移后的松手都不会误触
+ok 44 - 触屏轻点可摸头，取消、多指和位移后的松手都不会误触
+  ---
+  duration_ms: 1.5127
+  type: 'test'
+  ...
+# Subtest: 摸头有动作冷却，暂停、后台或拖动中不触发；键盘 H 不响应按住连发
+ok 45 - 摸头有动作冷却，暂停、后台或拖动中不触发；键盘 H 不响应按住连发
+  ---
+  duration_ms: 1.3571
+  type: 'test'
+  ...
+# Subtest: 真实节奏的鼠标与单指来回轻抚会从害羞变安心，一段只轻叫一次
+ok 46 - 真实节奏的鼠标与单指来回轻抚会从害羞变安心，一段只轻叫一次
+  ---
+  duration_ms: 21.8113
+  type: 'test'
+  ...
+# Subtest: 重新轻抚的叫声至少间隔十二秒，按钮仍使用原来的主动回应
+ok 47 - 重新轻抚的叫声至少间隔十二秒，按钮仍使用原来的主动回应
+  ---
+  duration_ms: 1.13
+  type: 'test'
+  ...
+# Subtest: 转过镜头后仍向屏幕中手势的方向轻歪与轻蹭，不改变身体拖动目标
+ok 48 - 转过镜头后仍向屏幕中手势的方向轻歪与轻蹭，不改变身体拖动目标
+  ---
+  duration_ms: 3.3609
+  type: 'test'
+  ...
+# Subtest: 害羞缩身不会把头顶从手下移走，离开原头部区域仍会结束；新按身体仍拖动
+ok 49 - 害羞缩身不会把头顶从手下移走，离开原头部区域仍会结束；新按身体仍拖动
+  ---
+  duration_ms: 0.6435
+  type: 'test'
+  ...
+# Subtest: 鼠标离开头部时轻轻目送最后离开的方向，后续移动不会重启，也不新增声音事件
+ok 50 - 鼠标离开头部时轻轻目送最后离开的方向，后续移动不会重启，也不新增声音事件
+  ---
+  duration_ms: 1.7362
+  type: 'test'
+  ...
+# Subtest: 单指抬起沿最后轻抚方向目送；取消、多指、暂停和后台不产生目送
+ok 51 - 单指抬起沿最后轻抚方向目送；取消、多指、暂停和后台不产生目送
+  ---
+  duration_ms: 4.2979
+  type: 'test'
+  ...
+# Subtest: 目送时注意力不会被旧的鼠标位置留住；重新抓取身体会退出目送
+ok 52 - 目送时注意力不会被旧的鼠标位置留住；重新抓取身体会退出目送
+  ---
+  duration_ms: 0.8524
+  type: 'test'
+  ...
+# Subtest: 目送的偏头幅度比轻抚更小，换视角后方向一致；暂停清除输入而不跳姿势
+ok 53 - 目送的偏头幅度比轻抚更小，换视角后方向一致；暂停清除输入而不跳姿势
+  ---
+  duration_ms: 1.471
+  type: 'test'
+  ...
+# Subtest: 不同头部尺寸的慢速来回轻抚都能触发，单向悬停滑过不会触发
+ok 54 - 不同头部尺寸的慢速来回轻抚都能触发，单向悬停滑过不会触发
+  ---
+  duration_ms: 2.3227
+  type: 'test'
+  ...
+# Subtest: 轻抚可以竖向进行，明确按住头顶时单次慢滑也可以
+ok 55 - 轻抚可以竖向进行，明确按住头顶时单次慢滑也可以
+  ---
+  duration_ms: 0.7175
+  type: 'test'
+  ...
+# Subtest: 微小抖动、快速挥过和短促左右甩动都不算轻抚
+ok 56 - 微小抖动、快速挥过和短促左右甩动都不算轻抚
+  ---
+  duration_ms: 2.8478
+  type: 'test'
+  ...
+# Subtest: 离开、久停和重新接触不会继承上一次尚未完成的来回动作
+ok 57 - 离开、久停和重新接触不会继承上一次尚未完成的来回动作
+  ---
+  duration_ms: 0.6009
+  type: 'test'
+  ...
+# Subtest: a falling drop collides with the actual mesh once and is stopped until its next fall
+ok 58 - a falling drop collides with the actual mesh once and is stopped until its next fall
+  ---
+  duration_ms: 46.9778
+  type: 'test'
+  ...
+# Subtest: collision follows the translated and rotated character
+ok 59 - collision follows the translated and rotated character
+  ---
+  duration_ms: 8.2593
+  type: 'test'
+  ...
+# Subtest: weather intensity gates collisions with the same seed threshold as the rain shader
+ok 60 - weather intensity gates collisions with the same seed threshold as the rain shader
+  ---
+  duration_ms: 6.3005
+  type: 'test'
+  ...
+# Subtest: quality limits collisions to the same active prefix used by the GPU draw range
+ok 61 - quality limits collisions to the same active prefix used by the GPU draw range
+  ---
+  duration_ms: 4.4722
+  type: 'test'
+  ...
+# Subtest: wetness and local response freeze with simulation time and reset completely
+ok 62 - wetness and local response freeze with simulation time and reset completely
+  ---
+  duration_ms: 12.3049
+  type: 'test'
+  ...
+# Subtest: wet patches remain local, wrap around the cloth seam and freeze without simulation time
+ok 63 - wet patches remain local, wrap around the cloth seam and freeze without simulation time
+  ---
+  duration_ms: 10.6808
+  type: 'test'
+  ...
+# Subtest: runoff travels downward from the hit, collects at the hem and resets completely
+ok 64 - runoff travels downward from the hit, collects at the hem and resets completely
+  ---
+  duration_ms: 102.4915
+  type: 'test'
+  ...
+# Subtest: drips start at the current deformed and transformed hem, freeze and land exactly once
+ok 65 - drips start at the current deformed and transformed hem, freeze and land exactly once
+  ---
+  duration_ms: 8.3152
+  type: 'test'
+  ...
+1..65
+# tests 65
+# suites 0
+# pass 65
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 801.2733
+
+> research-002-rainy-ghost@1.0.0 prebuild
+> node scripts/prepare-research.mjs
+
+002：理解摘要使用现有最终截图的原始字节，运行资源不包含用户记录。
+
+> research-002-rainy-ghost@1.0.0 build
+> vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 38 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/research.html                  11.25 kB │ gzip:   5.84 kB
+dist/index.html                     14.60 kB │ gzip:   5.19 kB
+dist/assets/research-DK_usfk5.css    3.82 kB │ gzip:   1.45 kB
+dist/assets/scene-XDnoSaq4.css      23.90 kB │ gzip:   6.08 kB
+dist/assets/scene-Dn2Q9SZs.js      141.44 kB │ gzip:  40.94 kB
+dist/assets/three-x3sbRK8t.js      571.23 kB │ gzip: 141.81 kB
+
+✓ built in 2.64s
+002：双入口、页内章节、13 份静态文件、原图哈希与发布白名单检查通过。
+
+> check
+> node --check app.js && node --check plan-merge.js && node --check entries.js && node --check findings.js && node --check findings-model.js && node --check auto-research.js && node --check reddit.js && node --check server/config.mjs && node --check server/research.mjs && node --check server/auto-research.mjs && node --check server/auto-runner.mjs && node --check server/auto-schema.mjs && node --check server/auto-grounding.mjs && node --check server/auto-verify.mjs && node --check scripts/build.mjs && node --check scripts/serve.mjs
+
+
+> test
+> node --test server/*.test.mjs scripts/*.test.mjs
+
+TAP version 13
+# Subtest: 自动入库重复链接不覆盖用户修改，也不复活回收站记录
+ok 1 - 自动入库重复链接不覆盖用户修改，也不复活回收站记录
+  ---
+  duration_ms: 7.4287
+  type: 'test'
+  ...
+# Subtest: 自动入库可重放且整批校验，失败不改变原库
+ok 2 - 自动入库可重放且整批校验，失败不改变原库
+  ---
+  duration_ms: 23.8699
+  type: 'test'
+  ...
+# Subtest: 来源网址规范化且保留用于定位评论的查询和片段
+ok 3 - 来源网址规范化且保留用于定位评论的查询和片段
+  ---
+  duration_ms: 0.5743
+  type: 'test'
+  ...
+# Subtest: 拒绝不安全协议、账号密码、控制字符和无效网址
+ok 4 - 拒绝不安全协议、账号密码、控制字符和无效网址
+  ---
+  duration_ms: 0.8451
+  type: 'test'
+  ...
+# Subtest: 记录只保留白名单字段，可选文字缺省为空且原话格式保留
+ok 5 - 记录只保留白名单字段，可选文字缺省为空且原话格式保留
+  ---
+  duration_ms: 0.3243
+  type: 'test'
+  ...
+# Subtest: 非法类型、状态、必填内容及非文字可选字段均被拒绝
+ok 6 - 非法类型、状态、必填内容及非文字可选字段均被拒绝
+  ---
+  duration_ms: 0.9944
+  type: 'test'
+  ...
+# Subtest: 各文本字段按上限校验而不截断资料
+ok 7 - 各文本字段按上限校验而不截断资料
+  ---
+  duration_ms: 0.5188
+  type: 'test'
+  ...
+# Subtest: 时间必须为有效 ISO 日期，拒绝自动滚动的无效日期
+ok 8 - 时间必须为有效 ISO 日期，拒绝自动滚动的无效日期
+  ---
+  duration_ms: 0.4641
+  type: 'test'
+  ...
+# Subtest: 导出再导入同构，并保留同网址的不同观察与回收站资料
+ok 9 - 导出再导入同构，并保留同网址的不同观察与回收站资料
+  ---
+  duration_ms: 0.7701
+  type: 'test'
+  ...
+# Subtest: 损坏库、错误版本、重复编号、非数组和超过1000条均拒绝
+ok 10 - 损坏库、错误版本、重复编号、非数组和超过1000条均拒绝
+  ---
+  duration_ms: 6.275
+  type: 'test'
+  ...
+# Subtest: 同编号只接受较新修改并保留本地原始创建时间
+ok 11 - 同编号只接受较新修改并保留本地原始创建时间
+  ---
+  duration_ms: 0.7007
+  type: 'test'
+  ...
+# Subtest: 旧修改和同一时间冲突不能覆盖已有资料
+ok 12 - 旧修改和同一时间冲突不能覆盖已有资料
+  ---
+  duration_ms: 0.5731
+  type: 'test'
+  ...
+# Subtest: 同网址不同编号独立保留，较新删除状态也能合并
+ok 13 - 同网址不同编号独立保留，较新删除状态也能合并
+  ---
+  duration_ms: 0.3562
+  type: 'test'
+  ...
+# Subtest: 合并先拒绝重复编号或超量资料，失败不会改写输入库
+ok 14 - 合并先拒绝重复编号或超量资料，失败不会改写输入库
+  ---
+  duration_ms: 42.0159
+  type: 'test'
+  ...
+# Subtest: adding an entry preserves every populated field and the original source text
+ok 15 - adding an entry preserves every populated field and the original source text
+  ---
+  duration_ms: 2.3313
+  type: 'test'
+  ...
+# Subtest: an entry fills only empty audience and task and does not invent other plan fields
+ok 16 - an entry fills only empty audience and task and does not invent other plan fields
+  ---
+  duration_ms: 1.2958
+  type: 'test'
+  ...
+# Subtest: browsing without a task keeps the plan task empty while preserving the selected entry
+ok 17 - browsing without a task keeps the plan task empty while preserving the selected entry
+  ---
+  duration_ms: 0.2434
+  type: 'test'
+  ...
+# Subtest: loading an example fills blanks and appends its source without replacing existing research
+ok 18 - loading an example fills blanks and appends its source without replacing existing research
+  ---
+  duration_ms: 0.2661
+  type: 'test'
+  ...
+# Subtest: adding the same entry or loading the same example twice does not duplicate sources
+ok 19 - adding the same entry or loading the same example twice does not duplicate sources
+  ---
+  duration_ms: 0.2203
+  type: 'test'
+  ...
+# Subtest: a full source field rejects the entire merge without truncating or partially filling the plan
+ok 20 - a full source field rejects the entire merge without truncating or partially filling the plan
+  ---
+  duration_ms: 0.1561
+  type: 'test'
+  ...
+# Subtest: source limits allow an exact fit and long additions never truncate field values
+ok 21 - source limits allow an exact fit and long additions never truncate field values
+  ---
+  duration_ms: 0.2058
+  type: 'test'
+  ...
+# Subtest: 只有关联到打开记录的短引文才进入发现，摘要不能冒充原文
+ok 22 - 只有关联到打开记录的短引文才进入发现，摘要不能冒充原文
+  ---
+  duration_ms: 10.9401
+  type: 'test'
+  ...
+# Subtest: 推广不能充当真实需求，重复主来源和无效字段被排除
+ok 23 - 推广不能充当真实需求，重复主来源和无效字段被排除
+  ---
+  duration_ms: 2.408
+  type: 'test'
+  ...
+# Subtest: GitHub与AI产品分类可保存，同时保留未试用边界
+ok 24 - GitHub与AI产品分类可保存，同时保留未试用边界
+  ---
+  duration_ms: 1.187
+  type: 'test'
+  ...
+# Subtest: 公开链接和IPv4校验拒绝本机、私网、认证信息与非HTTPS
+ok 25 - 公开链接和IPv4校验拒绝本机、私网、认证信息与非HTTPS
+  ---
+  duration_ms: 0.5935
+  type: 'test'
+  ...
+# Subtest: 引文长度、去重与逐字匹配不将HTML脚本或近似句当证据
+ok 26 - 引文长度、去重与逐字匹配不将HTML脚本或近似句当证据
+  ---
+  duration_ms: 1.7919
+  type: 'test'
+  ...
+# Subtest: 公开动作只记录完成的web搜索，不混入推理与私有工具输出
+ok 27 - 公开动作只记录完成的web搜索，不混入推理与私有工具输出
+  ---
+  duration_ms: 2.1171
+  type: 'test'
+  ...
+# Subtest: 本地无法读取时保留未独立核验标签，不声称引文核对成功
+ok 28 - 本地无法读取时保留未独立核验标签，不声称引文核对成功
+  ---
+  duration_ms: 0.811
+  type: 'test'
+  ...
+# Subtest: HTTP提交→实际动作→候选→运行落盘→重启可读完整链路
+ok 29 - HTTP提交→实际动作→候选→运行落盘→重启可读完整链路
+  ---
+  duration_ms: 176.1184
+  type: 'test'
+  ...
+# Subtest: 无搜索或模型失败不会产出假记录
+ok 30 - 无搜索或模型失败不会产出假记录
+  ---
+  duration_ms: 154.3553
+  type: 'test'
+  ...
+# Subtest: 重复提交被挡住，取消可结束任务并保留过程
+ok 31 - 重复提交被挡住，取消可结束任务并保留过程
+  ---
+  duration_ms: 61.7328
+  type: 'test'
+  ...
+# Subtest: 跨站调用、无效输入、超长输入和未连接状态均不启动模型
+ok 32 - 跨站调用、无效输入、超长输入和未连接状态均不启动模型
+  ---
+  duration_ms: 26.1677
+  type: 'test'
+  ...
+# Subtest: 重启后未完成运行标记中断，不自动再次消费模型额度
+ok 33 - 重启后未完成运行标记中断，不自动再次消费模型额度
+  ---
+  duration_ms: 48.2381
+  type: 'test'
+  ...
+# Subtest: 只允许真实 Reddit HTTPS 帖子，拒绝相似域名和携带认证信息的地址
+ok 34 - 只允许真实 Reddit HTTPS 帖子，拒绝相似域名和携带认证信息的地址
+  ---
+  duration_ms: 3.2066
+  type: 'test'
+  ...
+# Subtest: 模型添加的未取得来源不能混入结果
+ok 35 - 模型添加的未取得来源不能混入结果
+  ---
+  duration_ms: 1.3472
+  type: 'test'
+  ...
+# Subtest: 问题引文必须存在于采集片段，排除生成的原话
+ok 36 - 问题引文必须存在于采集片段，排除生成的原话
+  ---
+  duration_ms: 0.6038
+  type: 'test'
+  ...
+# Subtest: 没有证据支持的解决建议被排除，真实办法保留
+ok 37 - 没有证据支持的解决建议被排除，真实办法保留
+  ---
+  duration_ms: 0.8641
+  type: 'test'
+  ...
+# Subtest: 同一帖子不同链接只计算一次；API 引用不会标为原话已核对
+ok 38 - 同一帖子不同链接只计算一次；API 引用不会标为原话已核对
+  ---
+  duration_ms: 3.8609
+  type: 'test'
+  ...
+# Subtest: 本次保存的两条分析都能回到原始片段
+ok 39 - 本次保存的两条分析都能回到原始片段
+  ---
+  duration_ms: 1.5472
+  type: 'test'
+  ...
+1..39
+# tests 39
+# suites 0
+# pass 39
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 752.081
+004 页面已构建：F:\codex_project\1014-publish-rainy-ghost\projects\004-jasonzhu-ai\web\dist
+产品总览、原始全景图、10 个研究入口与工作区已复制；公开展示模式。
+
+> research-006-random-doors@0.9.0 check
+> node --check src/research.js && node --check src/doors.js && node --check src/scene-art.js && node --check src/encounters.js && node --check src/variations.js && node --check src/encounter-views.js && node --check src/main.js && node --check src/scene.js && node --check src/shaders.js && node --check src/experience.js && node --check src/audio.js && node --check src/view.js && node --check src/world-engine.js && node --check src/world-art.js && node --check src/worlds.js && node --check src/train-engine.js && node --check src/train-view.js && node --check src/train-audio.js
+
+
+> research-006-random-doors@0.9.0 test
+> node --test tests/*.test.js
+
+TAP version 13
+# Subtest: random next door avoids the immediately previous weather
+ok 1 - random next door avoids the immediately previous weather
+  ---
+  duration_ms: 3.3217
+  type: 'test'
+  ...
+# Subtest: an explicit weather is respected even when it matches the previous visit
+ok 2 - an explicit weather is respected even when it matches the previous visit
+  ---
+  duration_ms: 0.2513
+  type: 'test'
+  ...
+# Subtest: boat appears after natural waiting without sitting or catching rain
+ok 3 - boat appears after natural waiting without sitting or catching rain
+  ---
+  duration_ms: 0.3457
+  type: 'test'
+  ...
+# Subtest: waiting and actions do not reroll the weather or natural boat time
+ok 4 - waiting and actions do not reroll the weather or natural boat time
+  ---
+  duration_ms: 0.8944
+  type: 'test'
+  ...
+# Subtest: a saved encounter restores the same weather and schedule with a fresh visit
+ok 5 - a saved encounter restores the same weather and schedule with a fresh visit
+  ---
+  duration_ms: 0.2497
+  type: 'test'
+  ...
+# Subtest: previewing the boat makes it visible without changing the saved encounter
+ok 6 - previewing the boat makes it visible without changing the saved encounter
+  ---
+  duration_ms: 0.1735
+  type: 'test'
+  ...
+# Subtest: invalid persisted weather, timing and seed are rejected
+ok 7 - invalid persisted weather, timing and seed are rejected
+  ---
+  duration_ms: 0.2779
+  type: 'test'
+  ...
+# Subtest: each unrestricted round visits six different encounters and avoids an immediate repeat
+ok 8 - each unrestricted round visits six different encounters and avoids an immediate repeat
+  ---
+  duration_ms: 21.5747
+  type: 'test'
+  ...
+# Subtest: a chosen range gives both encounters before repeating, without exposing unrelated kinds
+ok 9 - a chosen range gives both encounters before repeating, without exposing unrelated kinds
+  ---
+  duration_ms: 0.708
+  type: 'test'
+  ...
+# Subtest: refreshing a closed door preserves the pending encounter, seed and remaining round
+ok 10 - refreshing a closed door preserves the pending encounter, seed and remaining round
+  ---
+  duration_ms: 2.3283
+  type: 'test'
+  ...
+# Subtest: revisiting preserves a choice and unfinished progress without consuming a pending door
+ok 11 - revisiting preserves a choice and unfinished progress without consuming a pending door
+  ---
+  duration_ms: 1.6167
+  type: 'test'
+  ...
+# Subtest: all postcard responses retain their own letter and corresponding return note
+ok 12 - all postcard responses retain their own letter and corresponding return note
+  ---
+  duration_ms: 1.4966
+  type: 'test'
+  ...
+# Subtest: both wooden bird choices create stable outcomes and different return notes
+ok 13 - both wooden bird choices create stable outcomes and different return notes
+  ---
+  duration_ms: 0.4694
+  type: 'test'
+  ...
+# Subtest: quiet events arrive without actions and persist with paper notes on return
+ok 14 - quiet events arrive without actions and persist with paper notes on return
+  ---
+  duration_ms: 0.9964
+  type: 'test'
+  ...
+# Subtest: both mirror layouts have a visible causal light path and solve in either order
+ok 15 - both mirror layouts have a visible causal light path and solve in either order
+  ---
+  duration_ms: 1.2848
+  type: 'test'
+  ...
+# Subtest: every seeded star puzzle starts unsolved and can be solved with at most nine turns
+ok 16 - every seeded star puzzle starts unsolved and can be solved with at most nine turns
+  ---
+  duration_ms: 3.2165
+  type: 'test'
+  ...
+# Subtest: all six encounters render, escape user notes and reject broken persisted records
+ok 17 - all six encounters render, escape user notes and reject broken persisted records
+  ---
+  duration_ms: 2.6706
+  type: 'test'
+  ...
+# Subtest: all train identities complete every seeded owner and item through their own physical route
+ok 18 - all train identities complete every seeded owner and item through their own physical route
+  ---
+  duration_ms: 31.7757
+  type: 'test'
+  ...
+# Subtest: bodies enforce inaccessible spaces and generic car shortcuts cannot bypass them
+ok 19 - bodies enforce inaccessible spaces and generic car shortcuts cannot bypass them
+  ---
+  duration_ms: 0.9823
+  type: 'test'
+  ...
+# Subtest: a cat must crouch and crawl to reach an object; staff actions grant it no human privileges
+ok 20 - a cat must crouch and crawl to reach an object; staff actions grant it no human privileges
+  ---
+  duration_ms: 0.4877
+  type: 'test'
+  ...
+# Subtest: passengers piece together two situated memories; conductors actually control lamps and doors
+ok 21 - passengers piece together two situated memories; conductors actually control lamps and doors
+  ---
+  duration_ms: 0.6143
+  type: 'test'
+  ...
+# Subtest: every body renders a distinct first-person scene, situated actions and an awakening
+ok 22 - every body renders a distinct first-person scene, situated actions and an awakening
+  ---
+  duration_ms: 2.413
+  type: 'test'
+  ...
+# Subtest: old memories retain completed results and new private-space progress survives refresh
+ok 23 - old memories retain completed results and new private-space progress survives refresh
+  ---
+  duration_ms: 2.7303
+  type: 'test'
+  ...
+# Subtest: every scene exhausts its own variation pool before repeating, across several rounds
+ok 24 - every scene exhausts its own variation pool before repeating, across several rounds
+  ---
+  duration_ms: 19.091
+  type: 'test'
+  ...
+# Subtest: all eighteen postcard responses match their person, letter and later card
+ok 25 - all eighteen postcard responses match their person, letter and later card
+  ---
+  duration_ms: 3.8693
+  type: 'test'
+  ...
+# Subtest: repair shop circumstances retain the matching reasons and followup
+ok 26 - repair shop circumstances retain the matching reasons and followup
+  ---
+  duration_ms: 0.8016
+  type: 'test'
+  ...
+# Subtest: natural variations present different events with no required action
+ok 27 - natural variations present different events with no required action
+  ---
+  duration_ms: 2.3492
+  type: 'test'
+  ...
+# Subtest: quiet arrivals do not reveal a future event in their labels or illustration descriptions
+ok 28 - quiet arrivals do not reveal a future event in their labels or illustration descriptions
+  ---
+  duration_ms: 0.5271
+  type: 'test'
+  ...
+# Subtest: the paper plane can be read only after landing, and old paper notes survive a new encounter
+ok 29 - the paper plane can be read only after landing, and old paper notes survive a new encounter
+  ---
+  duration_ms: 0.2422
+  type: 'test'
+  ...
+# Subtest: six different light paths are solvable and only the correct pair of mirror orientations wins
+ok 30 - six different light paths are solvable and only the correct pair of mirror orientations wins
+  ---
+  duration_ms: 2.3913
+  type: 'test'
+  ...
+# Subtest: refresh and revisit never reroll a waiting same-scene encounter or mutate the old story
+ok 31 - refresh and revisit never reroll a waiting same-scene encounter or mutate the old story
+  ---
+  duration_ms: 1.3132
+  type: 'test'
+  ...
+# Subtest: 0.3 records migrate to their original story, event and light path without losing progress
+ok 32 - 0.3 records migrate to their original story, event and light path without losing progress
+  ---
+  duration_ms: 0.6158
+  type: 'test'
+  ...
+# Subtest: unpinning a known location returns to random doors; incompatible stored choices are rejected
+ok 33 - unpinning a known location returns to random doors; incompatible stored choices are rejected
+  ---
+  duration_ms: 0.5538
+  type: 'test'
+  ...
+# Subtest: the drip point stays reachable in wide, narrow desktop and portrait windows
+ok 34 - the drip point stays reachable in wide, narrow desktop and portrait windows
+  ---
+  duration_ms: 6.6287
+  type: 'test'
+  ...
+# Subtest: reaching brings the hand back toward view after looking away in a narrow window
+ok 35 - reaching brings the hand back toward view after looking away in a narrow window
+  ---
+  duration_ms: 0.654
+  type: 'test'
+  ...
+# Subtest: worlds rotate without replacement and avoid an immediate repeat at the round boundary
+ok 36 - worlds rotate without replacement and avoid an immediate repeat at the round boundary
+  ---
+  duration_ms: 2.3169
+  type: 'test'
+  ...
+# Subtest: reentering one world keeps its seed, changes identity, and preserves the old actions
+ok 37 - reentering one world keeps its seed, changes identity, and preserves the old actions
+  ---
+  duration_ms: 2.8612
+  type: 'test'
+  ...
+# Subtest: refresh restores the active identity, exact progress and pending random door
+ok 38 - refresh restores the active identity, exact progress and pending random door
+  ---
+  duration_ms: 1.5422
+  type: 'test'
+  ...
+# Subtest: all role/world combinations are compatible; malformed saves are sanitized
+ok 39 - all role/world combinations are compatible; malformed saves are sanitized
+  ---
+  duration_ms: 0.4959
+  type: 'test'
+  ...
+# Subtest: museum objectives are reachable for both identities across layout and weather variants
+ok 40 - museum objectives are reachable for both identities across layout and weather variants
+  ---
+  duration_ms: 42.3594
+  type: 'test'
+  ...
+# Subtest: museum identity changes actual movement; blocked jumps do not consume a charge
+ok 41 - museum identity changes actual movement; blocked jumps do not consume a charge
+  ---
+  duration_ms: 0.291
+  type: 'test'
+  ...
+# Subtest: actions are deterministic; waiting advances a visible patrol without fresh randomness
+ok 42 - actions are deterministic; waiting advances a visible patrol without fresh randomness
+  ---
+  duration_ms: 0.2805
+  type: 'test'
+  ...
+# Subtest: creator goals always match identity permissions; every goal has an observable solution
+ok 43 - creator goals always match identity permissions; every goal has an observable solution
+  ---
+  duration_ms: 3.291
+  type: 'test'
+  ...
+# Subtest: a keeper cannot alter gravity; a new law replaces rather than stacks the old one
+ok 44 - a keeper cannot alter gravity; a new law replaces rather than stacks the old one
+  ---
+  duration_ms: 0.8584
+  type: 'test'
+  ...
+# Subtest: unmet creator goals can be saved as an honest incomplete outcome; finished worlds do not mutate
+ok 45 - unmet creator goals can be saved as an honest incomplete outcome; finished worlds do not mutate
+  ---
+  duration_ms: 0.895
+  type: 'test'
+  ...
+1..45
+# tests 45
+# suites 0
+# pass 45
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 262.8398
+
+> research-006-random-doors@0.9.0 prebuild
+> node prepare-assets.mjs
+
+
+> research-006-random-doors@0.9.0 build
+> vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 32 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                   2.22 kB │ gzip:   1.21 kB
+dist/worlds.html                                  2.23 kB │ gzip:   1.30 kB
+dist/seaside.html                                 5.64 kB │ gzip:   2.34 kB
+dist/research.html                               42.20 kB │ gzip:  15.80 kB
+dist/assets/seaside-wtf8Gdec.css                  7.57 kB │ gzip:   2.54 kB
+dist/assets/main-B_zFLUde.css                    25.14 kB │ gzip:   7.09 kB
+dist/assets/worlds-DnxJqIt6.css                  37.81 kB │ gzip:   9.52 kB
+dist/assets/research-CeejEKJE.css                37.91 kB │ gzip:   8.33 kB
+dist/assets/modulepreload-polyfill-P2Xu9kJm.js    0.67 kB │ gzip:   0.38 kB
+dist/assets/experience-DuOlEMWS.js                2.16 kB │ gzip:   1.19 kB
+dist/assets/research-CsfDOJTl.js                  9.93 kB │ gzip:   4.78 kB
+dist/assets/seaside-CqEquysf.js                  31.70 kB │ gzip:  11.80 kB
+dist/assets/main-G50kdZQq.js                     51.56 kB │ gzip:  21.25 kB
+dist/assets/worlds-DK6JzXTH.js                   51.74 kB │ gzip:  21.40 kB
+dist/assets/three-CiHlRa7Z.js                   584.43 kB │ gzip: 147.11 kB
+
+✓ built in 596ms
+Built: F:\codex_project\1014-publish-rainy-ghost\projects\007-autumn-courtyard-blender\web\dist
+Files: 57
+{"nodes": 31, "triangles": 499936, "source_objects_preserved": 1038, "model_bytes": 3623960, "external_images": 0, "source_unchanged": true, "dependencies_verified": 14, "local_resources_verified": 43, "overview_size": [4000, 9001], "unmodified_evidence_images": 3, "html_anchors_verified": true, "http_model_verified": false}
+TAP version 13
+# Subtest: 来源链接拒绝本机、私有地址字面量、凭据和非HTTPS，清除追踪字段
+ok 1 - 来源链接拒绝本机、私有地址字面量、凭据和非HTTPS，清除追踪字段
+  ---
+  duration_ms: 4.6817
+  type: 'test'
+  ...
+# Subtest: 只保留公开搜索工具动作，不读取内部推理或命令内容
+ok 2 - 只保留公开搜索工具动作，不读取内部推理或命令内容
+  ---
+  duration_ms: 7.5069
+  type: 'test'
+  ...
+# Subtest: 模型报告的URL没有打开记录时降为待核查，不冒充完整页面
+ok 3 - 模型报告的URL没有打开记录时降为待核查，不冒充完整页面
+  ---
+  duration_ms: 1.486
+  type: 'test'
+  ...
+# Subtest: 拒绝没有已记录来源的人群与候选，拒绝未发现的人群关联
+ok 4 - 拒绝没有已记录来源的人群与候选，拒绝未发现的人群关联
+  ---
+  duration_ms: 4.5452
+  type: 'test'
+  ...
+# Subtest: 最终搁置决策覆盖早期继续调查状态，未知决策不会默认推荐继续
+ok 5 - 最终搁置决策覆盖早期继续调查状态，未知决策不会默认推荐继续
+  ---
+  duration_ms: 2.9593
+  type: 'test'
+  ...
+# Subtest: 逐字核验允许排版差异，拒绝仅意思相近的改写
+ok 6 - 逐字核验允许排版差异，拒绝仅意思相近的改写
+  ---
+  duration_ms: 5.4131
+  type: 'test'
+  ...
+# Subtest: 本地页面提取不执行脚本，解码引文实体
+ok 7 - 本地页面提取不执行脚本，解码引文实体
+  ---
+  duration_ms: 4.7915
+  type: 'test'
+  ...
+# Subtest: 仅接受可解析的结构化对象，允许JSON代码围栏
+ok 8 - 仅接受可解析的结构化对象，允许JSON代码围栏
+  ---
+  duration_ms: 1.9167
+  type: 'test'
+  ...
+# Subtest: 公开档案只读静态快照，显示结果，禁用执行且无 API 请求或轮询
+ok 9 - 公开档案只读静态快照，显示结果，禁用执行且无 API 请求或轮询
+  ---
+  duration_ms: 241.3474
+  type: 'test'
+  ...
+# Subtest: 公开快照缺失时说明失败，不回退到服务或启动模型
+ok 10 - 公开快照缺失时说明失败，不回退到服务或启动模型
+  ---
+  duration_ms: 21.0967
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 576.845
+理解全景图已生成：2000 × 4375，23 个内容节点。
+009 公开档案已构建：27 个平台入口，2 条已有研究案例，完整研究与产品说明。
+009 公开产物检查通过：23 个文件，摘要、锚点、资源、图像尺寸和静态边界有效。
+语法检查通过：20 个文件
+010 研究归档已构建：34 条来源、24 份完整材料、28 个讨论问题、7 个专题；1537677 bytes。
+TAP version 13
+# (node:65004) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: Windows CRLF、单独 CR 与混合换行的 CSP 匹配浏览器规范化文本
+ok 1 - Windows CRLF、单独 CR 与混合换行的 CSP 匹配浏览器规范化文本
+  ---
+  duration_ms: 3.6384
+  type: 'test'
+  ...
+# Subtest: 单文件完整保存每份研究材料原文与哈希，涵盖全部来源和讨论
+ok 2 - 单文件完整保存每份研究材料原文与哈希，涵盖全部来源和讨论
+  ---
+  duration_ms: 20.7324
+  type: 'test'
+  ...
+# Subtest: 新增专题与完整理解记录、JSON 和 Markdown 使用同一内容，保留已做与设想边界
+ok 3 - 新增专题与完整理解记录、JSON 和 Markdown 使用同一内容，保留已做与设想边界
+  ---
+  duration_ms: 6.9176
+  type: 'test'
+  ...
+# Subtest: 总览图与图源、网页和导出一致，保持原试跑及未验证边界
+ok 4 - 总览图与图源、网页和导出一致，保持原试跑及未验证边界
+  ---
+  duration_ms: 9.5559
+  type: 'test'
+  ...
+# Subtest: 研究行动样例沿用实际历史计量与来源，不补写事前预期或新增模型执行
+ok 5 - 研究行动样例沿用实际历史计量与来源，不补写事前预期或新增模型执行
+  ---
+  duration_ms: 1.1343
+  type: 'test'
+  ...
+# Subtest: 归档试跑仅有原始合成资料，每条引用和提示哈希均可回查
+ok 6 - 归档试跑仅有原始合成资料，每条引用和提示哈希均可回查
+  ---
+  duration_ms: 1.0289
+  type: 'test'
+  ...
+# Subtest: 归档为无远程资源依赖的独立 HTML，引用锚点有效
+ok 7 - 归档为无远程资源依赖的独立 HTML，引用锚点有效
+  ---
+  duration_ms: 26.4808
+  type: 'test'
+  ...
+# Subtest: HTTP 归档和编号入口均可用、CSP 与实际内联内容匹配，阅读不触发模型
+ok 8 - HTTP 归档和编号入口均可用、CSP 与实际内联内容匹配，阅读不触发模型
+  ---
+  duration_ms: 368.0396
+  type: 'test'
+  ...
+# (node:30152) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 导入原文规范化、转载分簇和重复正文去重；无效批次全部回滚
+ok 9 - 导入原文规范化、转载分簇和重复正文去重；无效批次全部回滚
+  ---
+  duration_ms: 81.8322
+  type: 'test'
+  ...
+# Subtest: 证据记录原文 UTF-16 区段与行号；拒绝改写引文
+ok 10 - 证据记录原文 UTF-16 区段与行号；拒绝改写引文
+  ---
+  duration_ms: 79.6821
+  type: 'test'
+  ...
+# Subtest: B/C 原文逐字相同，独立调用，C 两阶段全计量，不读取人工笔记
+ok 11 - B/C 原文逐字相同，独立调用，C 两阶段全计量，不读取人工笔记
+  ---
+  duration_ms: 214.9572
+  type: 'test'
+  ...
+# Subtest: 无效引文从发现中拒绝并标记 partial，不能被当作成功事实
+ok 12 - 无效引文从发现中拒绝并标记 partial，不能被当作成功事实
+  ---
+  duration_ms: 163.4777
+  type: 'test'
+  ...
+# Subtest: 预算超额保留消耗记录并停止；大资料不截断后偷偷运行
+ok 13 - 预算超额保留消耗记录并停止；大资料不截断后偷偷运行
+  ---
+  duration_ms: 91.952
+  type: 'test'
+  ...
+# Subtest: C 的虚构提取引文被隔离，不能进入下一步分析提示词
+ok 14 - C 的虚构提取引文被隔离，不能进入下一步分析提示词
+  ---
+  duration_ms: 156.7967
+  type: 'test'
+  ...
+# Subtest: 取消和模型失败保留阶段记录，不生成假完成状态
+ok 15 - 取消和模型失败保留阶段记录，不生成假完成状态
+  ---
+  duration_ms: 105.7261
+  type: 'test'
+  ...
+# Subtest: 撤回来源传播到人工证据、冻结实验与原文导出文件
+ok 16 - 撤回来源传播到人工证据、冻结实验与原文导出文件
+  ---
+  duration_ms: 146.2886
+  type: 'test'
+  ...
+# Subtest: HTTP 完整流程：CSRF、导入、证据、对照、持久化读取和导出
+ok 17 - HTTP 完整流程：CSRF、导入、证据、对照、持久化读取和导出
+  ---
+  duration_ms: 317.2929
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1590.2664
+010 研究归档已构建：34 条来源、24 份完整材料、28 个讨论问题、7 个专题；1537769 bytes。
+010 公开静态产物检查通过：摘要、锚点、原引导图、资料与发布范围一致；不含本地 API。
+已构建 67 个静态文件：F:\codex_project\1014-publish-rainy-ghost\projects\011-ancient-rap-battle\web\dist
+自制成片及真实任务记录已接入。
+此命令只打包已有静态结果；页面不调用生成服务或付费接口，公网状态见部署记录。
+004早期试片快照独立保留：4个视频版本、完整原曲、6张GPT参考；历史口型结论不变。
+004舞台视觉样片可播放；演唱口型未通过，不作为合格演唱成果。
+H3试片已绑定可信用户试听确认；新整片尚未验收，不外推通过。
+新修复版独立接入，原拒收样片继续保留。
+检查通过：JavaScript 语法、67 个产物、固定来源 e5e40fa3612777133a141c8448122dd0fd45e4cc、两种入口、MP4 签名与字节范围播放均有效。
+自制成片：状态记录、制作来源、PNG/MP4 与两入口分段播放均有效。
+首次两版、完整歌曲原版与舞台重剪版：原字节校验通过，四条历史视频支持两入口分段播放。
+004早期快照：试片状态、费用预留、11份媒体SHA，以及4条视频和原曲的两入口首尾Range请求均通过。
+004视觉样片：来源、导出、原曲、预算与播放检查通过；用户验收演唱口型未通过，拒收结论保留。
+H3试片：可信用户试听反馈与真实SHA匹配，仅该试片的用户确认保留；代理主观听音仍未主张。
+新94.64秒修复版：实际视频、封面、来源和两入口Range检查通过；整片用户验收另行记录。
+012 研究页已构建：web/dist/；standalone.html 可直接离线打开。
+012：语法、61 个页内编号、资源与静态白名单检查通过。
+工作台检查通过：51 个页面标识，4 个来源，51 条带时间与原文链接的快照。
+理解汇总检查通过：一张可下载总图、六个议题、21 项分层来源与完整接入字段。
+检查通过：102 个页面标识、12 项能力、8 步链路、3 个示例、26 条固定版本来源；资源与文档齐全。
+TAP version 13
+# Subtest: 中英文逗号和换行都能分隔词表，去掉空白、空项和重复项
+ok 1 - 中英文逗号和换行都能分隔词表，去掉空白、空项和重复项
+  ---
+  duration_ms: 2.0743
+  type: 'test'
+  ...
+# Subtest: AI 匹配英文词边界，避免 chain、OpenAI 等子串误报
+ok 2 - AI 匹配英文词边界，避免 chain、OpenAI 等子串误报
+  ---
+  duration_ms: 1.1735
+  type: 'test'
+  ...
+# Subtest: 通用资讯标签不会让 AI 关键词误命中所有条目
+ok 3 - 通用资讯标签不会让 AI 关键词误命中所有条目
+  ---
+  duration_ms: 2.1692
+  type: 'test'
+  ...
+# Subtest: 中文词仍可匹配组合词，英文技术名中的符号按字面匹配
+ok 4 - 中文词仍可匹配组合词，英文技术名中的符号按字面匹配
+  ---
+  duration_ms: 0.3625
+  type: 'test'
+  ...
+# Subtest: 排除词优先于包含词和匹配度，不被任何包含模式覆盖
+ok 5 - 排除词优先于包含词和匹配度，不被任何包含模式覆盖
+  ---
+  duration_ms: 0.4994
+  type: 'test'
+  ...
+# Subtest: any 只需包含一词，all 要求所有词；空包含词不限制内容
+ok 6 - any 只需包含一词，all 要求所有词；空包含词不限制内容
+  ---
+  duration_ms: 0.4876
+  type: 'test'
+  ...
+# Subtest: 匹配可使用摘要、主题和仓库名，不要求所有线索都出现在标题
+ok 7 - 匹配可使用摘要、主题和仓库名，不要求所有线索都出现在标题
+  ---
+  duration_ms: 0.3135
+  type: 'test'
+  ...
+# Subtest: 方向筛选只留下该方向内容，全部方向不额外要求匹配词
+ok 8 - 方向筛选只留下该方向内容，全部方向不额外要求匹配词
+  ---
+  duration_ms: 0.6227
+  type: 'test'
+  ...
+# Subtest: 新闻、产品和仓库类型分别筛选，综合探索保留所有类型
+ok 9 - 新闻、产品和仓库类型分别筛选，综合探索保留所有类型
+  ---
+  duration_ms: 0.5798
+  type: 'test'
+  ...
+# Subtest: 已停用来源和暂时隐藏的条目被排除，停用全部来源不回退成全选
+ok 10 - 已停用来源和暂时隐藏的条目被排除，停用全部来源不回退成全选
+  ---
+  duration_ms: 0.6365
+  type: 'test'
+  ...
+# Subtest: 快速搜索的多个词必须全部匹配，AI 也不在搜索中误命中 chain
+ok 11 - 快速搜索的多个词必须全部匹配，AI 也不在搜索中误命中 chain
+  ---
+  duration_ms: 0.4335
+  type: 'test'
+  ...
+# Subtest: 时间筛选保留边界当天，排除过期、无有效日期和明显未来日期
+ok 12 - 时间筛选保留边界当天，排除过期、无有效日期和明显未来日期
+  ---
+  duration_ms: 0.2766
+  type: 'test'
+  ...
+# Subtest: 开源项目按最近推送时间判断活跃度，缺失时回退更新时间与发布时间
+ok 13 - 开源项目按最近推送时间判断活跃度，缺失时回退更新时间与发布时间
+  ---
+  duration_ms: 0.1815
+  type: 'test'
+  ...
+# Subtest: URL 去掉跟踪参数与锚点、统一参数顺序，但保留实质不同的页面参数
+ok 14 - URL 去掉跟踪参数与锚点、统一参数顺序，但保留实质不同的页面参数
+  ---
+  duration_ms: 2.733
+  type: 'test'
+  ...
+# Subtest: 同一 URL 合并为一项并保留独立来源，同来源重复出现不重复计数
+ok 15 - 同一 URL 合并为一项并保留独立来源，同来源重复出现不重复计数
+  ---
+  duration_ms: 1.0065
+  type: 'test'
+  ...
+# Subtest: 相关优先按词命中排序，同等相关时较新内容靠前
+ok 16 - 相关优先按词命中排序，同等相关时较新内容靠前
+  ---
+  duration_ms: 0.5621
+  type: 'test'
+  ...
+# Subtest: 最新优先忽略相关分高低，并使用仓库最近推送时间
+ok 17 - 最新优先忽略相关分高低，并使用仓库最近推送时间
+  ---
+  duration_ms: 0.2292
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 153.6086
+已构建 dist/；可部署至 /1014_codex_project/013-crawl-hive/。
+公开构建通过：28 份静态文件，51条历史快照；不发布采集服务或运行缓存。
+静态阅读页已生成：12章、8张研究表格；没有模型调用。
+Pages完整站点已生成：15 项研究全部收录，10 项静态应用发布：002-rainy-ghost、004-jasonzhu-ai、006-random-doors、007-autumn-courtyard-blender、009-demand-discovery、010-evidence-research-lab、011-ancient-rap-battle、012-edgechat、013-crawl-hive、014-cyber-xiaoya-study。

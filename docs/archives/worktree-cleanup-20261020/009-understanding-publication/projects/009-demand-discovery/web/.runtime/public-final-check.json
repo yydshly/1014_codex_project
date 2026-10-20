@@ -1,0 +1,343 @@
+{
+  "project": "009-demand-discovery",
+  "verified_at": "2026-10-19T06:24:08.359300+00:00",
+  "source_commit": "6b3d0fd851dcb8204299d18343e2a6f62c03fe09",
+  "workflow": {
+    "id": 39209216688,
+    "url": "https://github.com/yydshly/1014_codex_project/actions/runs/39209216688",
+    "conclusion": "success"
+  },
+  "public_url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/#synthesis",
+  "map_url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/understanding.html",
+  "checks": {
+    "http_urls": 35,
+    "local_file_comparisons": 34,
+    "html_ids": 77,
+    "internal_anchor_links": 31,
+    "existing_projects_retained": 5,
+    "summary_and_cycle_present": true,
+    "public_static_mode": true,
+    "saved_people": 3,
+    "saved_candidates": 3,
+    "saved_sources": 10,
+    "tests_passed": 10,
+    "full_site_build": "passed",
+    "image_size": [
+      2000,
+      4375
+    ]
+  },
+  "verification_limits": [
+    "本轮浏览器接入被 URL 安全策略拒绝，未做新的视觉与点击验收。",
+    "公开静态模式的执行禁用、快照读取与失败路径通过隔离脚本行为测试；HTTP 与字节核对不等于真实浏览器交互。",
+    "实验001的10条来源中6条可关联页面打开动作，本地独立逐字核验成功0条，需求与付费未验证。"
+  ],
+  "results": [
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/app.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=utf-8",
+      "bytes": 25810,
+      "sha256": "7a49adada4bddf6170080af1c961e239ba80ad017a44d30be8619b7c75073edd",
+      "exact_bytes_equal": false,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/assets/understanding-map.png",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1261860,
+      "sha256": "8c357a33256081a8db04f244a60bb8cd1fbdaf6a5cb1ced0d55ceecea6ea6f21",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/assets/understanding-map.svg",
+      "status": 200,
+      "content_type": "image/svg+xml",
+      "bytes": 36953,
+      "sha256": "2a1888e4f20c4ca45c1ff678615cee969840ed66ec2ef2230977d608d5ed73d1",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/content.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=utf-8",
+      "bytes": 14043,
+      "sha256": "41a14153d1c81016b7218b53beb4e7cdbf7de2362aec8b91fafff5a4e4ae6904",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/data/cases.json",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 4776,
+      "sha256": "ffea5d01503eec8aede6f23f39980e3df83a86d7e4543077157eea30059d21f2",
+      "exact_bytes_equal": false,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/data/discovery-latest.json",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 37050,
+      "sha256": "0ce3bf28cab3ede9c0e12a6733cdbf3a8cd0b07e650b0790aa349b34fbf8a5e3",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/data/platforms.json",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 32775,
+      "sha256": "f4ba6568a65445aa3363d7c7aed0b1e8b962964d4d2f38aca3560fc1607dcd5c",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/index.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43002,
+      "sha256": "14af86967ba10e055848b72da304cf508ea11523fa8ff1654a85568f2a39e337",
+      "exact_bytes_equal": false,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/live.css",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "bytes": 11527,
+      "sha256": "4bc4d858e6c6ba0d62ea237e77ab8172ce028cf9442bf1957edcd46ad75e21f7",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/live.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=utf-8",
+      "bytes": 19289,
+      "sha256": "b12b85c7677072d3ddc71fb43d07d49b3f5687ec15c2aa4cc5d5cd4694d3b347",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/mark.svg",
+      "status": 200,
+      "content_type": "image/svg+xml",
+      "bytes": 322,
+      "sha256": "8b898605c80dd0f503aff14b0a356a62a046935b13e350e0ea65cd1495eecc3e",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/mode.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=utf-8",
+      "bytes": 33,
+      "sha256": "2e83e76eeb7bbb50c29d94190843e4cceb91ce06cfebf4cc3393bbd228df0da0",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/notes/EXPERIMENT-001.md",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 6560,
+      "sha256": "d5888d6f103b68f0dc7ab3dc7ae95a867a6b8051999ab503ce4a417a9af786a4",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/notes/ORIGIN-004.md",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 12369,
+      "sha256": "f5926b3b6e6fb3c6a0df82e26a58269a9f55b4a60f363ce77a9d2d82b6b9761a",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/notes/PRODUCT.md",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 9545,
+      "sha256": "901f835f121f939fdcda594b72d8fabf829d6edd02c89f023cddde64ddb681b9",
+      "exact_bytes_equal": false,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/notes/RESEARCH.md",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 11407,
+      "sha256": "5dd3ebeb8571ea4fcc86e7cde46f8161f1b21ec3c49e529a5c272e045537879e",
+      "exact_bytes_equal": false,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/notes/RUNNING.md",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 6523,
+      "sha256": "8bb379ff31fbe03564c79201682a6dede93c3496db203f5f088c930151f116f6",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/notes/SOURCES.md",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 12603,
+      "sha256": "07f12e5eb3442265989f72135a7d1e474a5de2a143400517f90d30705faaa5b2",
+      "exact_bytes_equal": false,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/notes/UNDERSTANDING.md",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 13633,
+      "sha256": "69418657bda0abc1a59a808b41e2a520c7112c6215eba849734f6d9300ac36fd",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/styles.css",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "bytes": 39167,
+      "sha256": "04e4cd3fb7810d3d65a44c1d3e8c94c817b6ae5699457be8ad1a40ce25435948",
+      "exact_bytes_equal": false,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/understanding.css",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "bytes": 4738,
+      "sha256": "0c8e1bbd91a5aed8ba8aaa863446b93e5fe964cc837e3d24473f0d612e09e26e",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/understanding.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 1934,
+      "sha256": "9aba81a7f948180805542f5aab371ffb94f62248992c388c0286de19924d3667",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/understanding.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=utf-8",
+      "bytes": 1341,
+      "sha256": "bed2c56ae0701b2e47dafe43e353284ec9f128039f34f265c7dd5100a4550b9b",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/index.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 4961,
+      "sha256": "999c9c20e1877bc5cc72fcf8dd320086fce3f6c97fc54115c60ca473cbcea24b",
+      "exact_bytes_equal": false,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/projects.json",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 5924,
+      "sha256": "23b59703d0561d1bf463e22760ebe9af23669934782fa9ee68ff3872878e76f7",
+      "exact_bytes_equal": false,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/entries.json",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 2121,
+      "sha256": "7fb5382ab4caecdc0a32a8ab4243aadcf61913bddef1515fa9e9f645fd036a7a",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/projects/009-demand-discovery/README.md",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 7483,
+      "sha256": "5c7cdf26758fd955358d392be3e44a09a7f6ff8365d3d7dec55889135de2b974",
+      "exact_bytes_equal": false,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/projects/009-demand-discovery/RESEARCH.md",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 11407,
+      "sha256": "5dd3ebeb8571ea4fcc86e7cde46f8161f1b21ec3c49e529a5c272e045537879e",
+      "exact_bytes_equal": false,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/projects/009-demand-discovery/assets/understanding-map.png",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1261860,
+      "sha256": "8c357a33256081a8db04f244a60bb8cd1fbdaf6a5cb1ced0d55ceecea6ea6f21",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 17841,
+      "sha256": "d611401e5417e15e85b87b56c9be9e3708d8a128664c8b0b1286836f79bd2341",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 42204,
+      "sha256": "8bb067d603f621f3b457f26e957521daabc3fc66c4117d8bf25f62267a909770",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 51457,
+      "sha256": "b9c34c98be80add19d0df0725fa91b958ddf99a6b8efcc610852bfe603b5c30f",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/index.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 1537769,
+      "sha256": "b308a90e5131ffb10a0356b9191ae476acd4e609dcf662b7a3fa5c2ef5fe513e",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/index.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 30966,
+      "sha256": "f75f36b747b39b91a88631706f8ee6d3abe283492d23b4567fc26dd6e52f882d",
+      "exact_bytes_equal": true,
+      "text_normalized_equal": true
+    }
+  ]
+}

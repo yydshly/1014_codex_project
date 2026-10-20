@@ -6,3 +6,8 @@
 *.webp binary
 projects/012-edgechat/assets/edgechat-summary.svg -text
 projects/008-specreel/assets/specreel-understanding.svg -text whitespace=cr-at-eol
+# Historical evidence and locked upstream assets must retain their original bytes.
+docs/archives/worktree-cleanup-20261020/** -text -whitespace
+projects/008-specreel/artifacts/recommended-flows.mjs -text whitespace=cr-at-eol
+projects/008-specreel/artifacts/recommended-flows.py -text whitespace=cr-at-eol
+projects/005-cyber-companion/web/public/** -text whitespace=cr-at-eol

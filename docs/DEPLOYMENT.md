@@ -12,7 +12,7 @@ https://yydshly.github.io/1014_codex_project/001-project-name/    # 子项目 00
 https://yydshly.github.io/1014_codex_project/002-another-project/ # 子项目 002
 ```
 
-这些路径用于统一发布；项目只有发布并验证后才在`projects.json`登记demo_url。
+上述 001、002 为路径示例；已上线项目以 `web/pages.json` 为准。正式访问并验证后，才将链接登记到 `projects.json`。
 
 ## 源码与构建结果
 
@@ -34,12 +34,28 @@ _site/
 
 ## 资源路径与页面路由
 
+本地已提供 `web/index.html` 项目首页，003 服务将根 `projects.json`、配图、研究说明与其他已有构建映射到同一编号站点。003 的 `?view=room` 和 `?view=workspace` 分别进入原房间与 Agent 工作室。静态发布时除各项目 `dist/` 外，还需复制首页、`projects.json` 及首页引用的 `projects/NNN-slug/assets/` 和研究说明；统一构建脚本 `scripts/build_pages.mjs` 已包含上述首页与资料复制步骤。真实 Agent 与动态语音仍需要独立服务端，静态页面只运行预设协作与已生成录音。
+
 - 原生页面优先使用相对资源路径。
 - 使用打包框架时，将资源基础路径设为 `/1014_codex_project/NNN-slug/`。
 - 单页应用优先使用 hash 路由，或使用框架支持的静态导出方案；检查刷新深层页面的行为。
 - 后端服务需要独立部署，再由前端访问；Pages 只承载静态产物。
 
 ## 后续启用发布
+
+### 010 数据驱动的需求调研档案
+
+010 汇总 Atypica 的研究用途、使用场景、模型/身份/流程的价值，以及我们通过合成资料 B/C 对照形成的理解。主线为“数据是产品调研的事实基础 → 证据整理 → 需求判断 → 产品验证 → 反馈沉淀”，可扩展需求雷达、调研工作台和领域助手。保留原实验与停止决定，不把模拟当作真人反馈。
+
+引导图沿用已生成的 `assets/understanding-map.png`，同时发布 SVG 和结构化图源。`projects/010-evidence-research-lab/web/build.mjs` 执行检查、测试与公开构建，完整产物复制到 `_site/010-evidence-research-lab/`。公开版本仅提供研究阅读、搜索与导出，不包含本机 `/workbench/`、模型服务、环境文件或 `.runtime`。
+
+已加入 `web/pages.json`，与 004、006、007 和 014 一起构建。2026-10-19 Actions 发布及公网核验成功后，已登记正式 `demo_url`；入口、工作流、原图哈希与验证范围见 [010 发布记录](../projects/010-evidence-research-lab/deployment.json)。
+
+### 011 古人说唱 Battle：构建与本地运行
+
+011 为无第三方运行依赖的静态中文研究网页。在 `projects/011-ancient-rap-battle/web/` 执行 `npm run build`，产物为 `dist/`；本地运行 `npm run dev`，端口 `4184`，支持根路径和 `/1014_codex_project/011-ancient-rap-battle/`。003 现有的通用项目映射可读取该 `dist/`，项目首页通过总索引自动呈现新入口。
+
+静态发布时把整个 `dist/` 复制到 `_site/011-ancient-rap-battle/`。页面使用相对资源路径，示例图片、研究资料、来源登记和许可证随产物分发。上游固定版本的原作分享视频（约 9.38MB、102 秒、540p）保留原字节并随产物分发，通过 HTML `video` 直接播放；011 本地服务与 003 通用映射支持 `video/mp4`、HEAD 和字节范围请求，以支持按需读取与跳转。预算、制作清单和机制示意在浏览器本地运行，不包含模型服务、任务提交或付费调用。发布状态与验收范围见下文「011 古人说唱 Battle」。
 
 有真实 Web 项目后，按照 [GitHub Pages 自定义工作流文档](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)配置：
 
@@ -71,14 +87,6 @@ _site/
 
 `web/build.mjs` 执行依赖安装、检查与测试，再以静态模式构建。公开版本不请求本地研究 API，不包含服务器、环境文件或 `.runtime`；自动联网研究仍需本机 Node 服务和 Codex。发布与公网验证记录见 [004 部署记录](../projects/004-jasonzhu-ai/deployment.json)。
 
-### 010 数据驱动的需求调研档案
-
-010 汇总 Atypica 的研究用途、使用场景、模型/身份/流程的价值，以及我们通过合成资料 B/C 对照形成的理解。主线为“数据是产品调研的事实基础 → 证据整理 → 需求判断 → 产品验证 → 反馈沉淀”，可扩展需求雷达、调研工作台和领域助手。保留原实验与停止决定，不把模拟当作真人反馈。
-
-引导图沿用已生成的 `assets/understanding-map.png`，同时发布 SVG 和结构化图源。`projects/010-evidence-research-lab/web/build.mjs` 执行检查、测试与公开构建，完整产物复制到 `_site/010-evidence-research-lab/`。公开版本仅提供研究阅读、搜索与导出，不包含本机 `/workbench/`、模型服务、环境文件或 `.runtime`。
-
-已加入 `web/pages.json`，与 004、006、007 和 014 一起构建。2026-10-19 Actions 发布及公网核验成功后，已登记正式 `demo_url`；入口、工作流、原图哈希与验证范围见 [010 发布记录](../projects/010-evidence-research-lab/deployment.json)。
-
 ## 009 个人主页启发与需求发现产品探索
 
 009 先解释 JasonZhu.AI 的博客、工具、项目、订阅与服务展示，以及固定源码的自动快讯管线；再总结值得参考的研究沉淀、入口引导与复习更新。简要路径为“研究 → 实践 → 记录 → 展示 → 接触用户 → 获得反馈 → 更新研究”。在此基础上，向上游扩展到 AI 发现人群与需求、证据追查、真实任务验证和产品化。
@@ -86,7 +94,6 @@ _site/
 发布理解摘要、沉淀与复习方法、既有全景图、27 平台目录及首轮真实探索档案。`projects/009-demand-discovery/web/build.mjs` 执行检查、10 项测试、公开构建和静态白名单校验；公开页只读保存的实验，不请求本机 API，不执行模型。新探索继续依赖本地服务与 Codex 登录。未将服务器、运行目录或凭据打包上线。
 
 009 已于 2026-10-19 通过完整站点 Actions 发布，35 个公网地址与资源、摘要及锚点核对通过，保留既有五个项目。正式入口为 [理解摘要](https://yydshly.github.io/1014_codex_project/009-demand-discovery/#synthesis)，完整记录见 [009 发布验收](../projects/009-demand-discovery/deployment.json)。本轮未进行新的浏览器视觉点击验收。
-
 
 ## 011 古人说唱机制与舞台成果（2026-10-19已发布）
 
@@ -96,11 +103,9 @@ _site/
 
 首次Actions成功后，67份公网产物、163个唯一页内编号、25处锚点、新成片全文件SHA、全部媒体首尾Range及既有六个项目入口均核验通过，随后才登记`demo_url`。浏览器确认引导图、摘要和新片模块加载；5秒试片确认与整片带声验收保持独立。固定提交、工作流及检查范围见[011部署记录](../projects/011-ancient-rap-battle/deployment.json)。原图中的未发布描述保留为制图时快照，以当前部署记录为准。
 
-
 ### 013 CrawlHive理解摘要与独立AI探索
 
 沿用既有GitHub Pages发布流程，新增013理解摘要、总图、21项来源接法和工作台，保留已发布项目。统一构建入口为`projects/013-crawl-hive/web/build.mjs`；公开产物不包含采集服务或运行缓存，只读历史快照。2026-10-19 已完成Actions及公网核验，正式入口为[理解摘要](https://yydshly.github.io/1014_codex_project/013-crawl-hive/#synthesis)，范围见[部署记录](../projects/013-crawl-hive/deployment.json)。
-
 
 ### 012 EdgeChat：能力、原理与价值理解
 
@@ -113,7 +118,6 @@ _site/
 发布现有 `index.html` 雨夜体验与 `research.html` 理解摘要，明确区分原帖效果、Three.js 技术上游、我们的环境反应/陪伴/声音/计时扩展，以及暂停、手势、手机与自动画质优化。引导图直接沿用 `assets/pet/farewell/desktop.jpg` 的原始字节，不重新生成；角色已按用户决定保留当前版本。
 
 `projects/002-rainy-ghost/web/build.mjs` 执行语法、现有测试、双入口构建、资源和章节检查、静态白名单与截图 SHA-256 核对。加入 `web/pages.json`，每次重建既有九个项目和 002，不覆盖其他入口。默认静音，记录保留在当前浏览器，不上传个人任务、相处数据或偏好。正式发布与公网验收记录见 [002 部署记录](../projects/002-rainy-ghost/deployment.json)，验证后才登记 `demo_url`。
-
 
 002 于 2026-10-19 首次 Actions 发布及公网核验通过后，已登记 [理解摘要](https://yydshly.github.io/1014_codex_project/002-rainy-ghost/research.html#synthesis) 与 [雨夜体验](https://yydshly.github.io/1014_codex_project/002-rainy-ghost/)。13 份静态资源、原引导图哈希和既有九个项目入口均通过；15 项研究索引保留，静态应用共十项。见 [002 发布记录](../projects/002-rainy-ghost/deployment.json)。
 

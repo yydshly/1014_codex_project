@@ -1,0 +1,472 @@
+{
+  "date": "2026-10-20",
+  "purpose": "删除已合并的旧发布工作区前，保留独有验收记录、脚本和说明。",
+  "policy": "跟踪文件由原提交和 main 保留；依赖与构建副本可重建；其他忽略文件逐一核对并归档。未清理 Git 快照或共享对象。",
+  "worktrees": [
+    {
+      "path": "F:\\codex_project\\.codex-worktrees\\009-understanding-publication",
+      "branch": "refs/heads/codex/009-understanding-publication",
+      "commit": "766ef800a532dade221a893efbaf6448128ca4f5",
+      "preserved": [
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.sources.json",
+          "bytes": 23637,
+          "sha256": "51511ca4f8b11ad514e8dac2b26d6b4d888a211c8809d1aeee3dd0c2d0aadb90",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/009-understanding-publication/projects/006-random-doors/web/public/research/understanding-overview.sources.json"
+        },
+        {
+          "original_path": "projects/009-demand-discovery/web/.runtime/pages-build.log",
+          "bytes": 30677,
+          "sha256": "eb4c8a76437376bdf2d77df4a0a27403f0d7d1f16c642d04c1e88a257facb05a",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/009-understanding-publication/projects/009-demand-discovery/web/.runtime/pages-build.log.txt"
+        },
+        {
+          "original_path": "projects/009-demand-discovery/web/.runtime/public-final-check.json",
+          "bytes": 13886,
+          "sha256": "2aa89f63591cf0eae8a217b1e54b8a2df34d48b33dd5bb799dd94900ffecdb1b",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/009-understanding-publication/projects/009-demand-discovery/web/.runtime/public-final-check.json"
+        },
+        {
+          "original_path": "projects/009-demand-discovery/web/.runtime/verify-public.py",
+          "bytes": 4644,
+          "sha256": "aa7f2b85b7015c57f9b957cde31e00352f6eabdd0f0a41abf17fa55efde7951c",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/009-understanding-publication/projects/009-demand-discovery/web/.runtime/verify-public.py"
+        }
+      ],
+      "existing_main_copies": [
+        {
+          "original_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg",
+          "bytes": 536684,
+          "sha256": "0b14daf362cc43dcfd1fe695c3a4f28c69429560f7bab542f84ea0f08043e841",
+          "retained_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.png",
+          "bytes": 2831140,
+          "sha256": "b67412ba4689669fca923837971504bb3bd0a6e9f0201a90d62785d282ccfba8",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.png"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.svg",
+          "bytes": 1458377,
+          "sha256": "a55590c23a7c9c84cea986e1e5254ff732f7ad0720c69333ecdd2455cb565882",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.svg"
+        },
+        {
+          "original_path": "projects/010-evidence-research-lab/web/index.html",
+          "bytes": 1537677,
+          "sha256": "eda361a832cc342233d717617413cac439bd752ee19859e57ba4d79af3c3b9ac",
+          "retained_path": "projects/010-evidence-research-lab/web/index.html"
+        }
+      ],
+      "regenerable_bytes": 207943714,
+      "bytes": 333237433,
+      "files": 4873,
+      "previous_size_including_link_targets": 333237433,
+      "junctions": []
+    },
+    {
+      "path": "F:\\codex_project\\.codex-worktrees\\011-understanding-publication",
+      "branch": "refs/heads/codex/011-understanding-publication",
+      "commit": "12e79e97593c23bd7b7f18704d2d10a50cdd47a9",
+      "preserved": [
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.sources.json",
+          "bytes": 23637,
+          "sha256": "51511ca4f8b11ad514e8dac2b26d6b4d888a211c8809d1aeee3dd0c2d0aadb90",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/011-understanding-publication/projects/006-random-doors/web/public/research/understanding-overview.sources.json"
+        }
+      ],
+      "existing_main_copies": [
+        {
+          "original_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg",
+          "bytes": 536684,
+          "sha256": "0b14daf362cc43dcfd1fe695c3a4f28c69429560f7bab542f84ea0f08043e841",
+          "retained_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.png",
+          "bytes": 2831140,
+          "sha256": "b67412ba4689669fca923837971504bb3bd0a6e9f0201a90d62785d282ccfba8",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.png"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.svg",
+          "bytes": 1458377,
+          "sha256": "a55590c23a7c9c84cea986e1e5254ff732f7ad0720c69333ecdd2455cb565882",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.svg"
+        },
+        {
+          "original_path": "projects/010-evidence-research-lab/web/index.html",
+          "bytes": 1537677,
+          "sha256": "eda361a832cc342233d717617413cac439bd752ee19859e57ba4d79af3c3b9ac",
+          "retained_path": "projects/010-evidence-research-lab/web/index.html"
+        },
+        {
+          "original_path": "projects/011-ancient-rap-battle/experiments/004-performance-film/handoff-source/audio-manifest.json",
+          "bytes": 52113,
+          "sha256": "4de6d9a87a23654ca0dfbadd9e83dc774b0a29fa06c17d2b00e27d6427e22240",
+          "retained_path": "projects/011-ancient-rap-battle/experiments/004-performance-film/handoff-source/audio-manifest.json"
+        },
+        {
+          "original_path": "projects/011-ancient-rap-battle/experiments/004-performance-film/handoff-source/director-package.json",
+          "bytes": 97638,
+          "sha256": "e93ecf4efec2264a5e71f6c5da317c5d8f9d94ba23e2a6cf7c5187292a393aef",
+          "retained_path": "projects/011-ancient-rap-battle/experiments/004-performance-film/handoff-source/director-package.json"
+        }
+      ],
+      "regenerable_bytes": 730398474,
+      "bytes": 1160198390,
+      "files": 5275,
+      "previous_size_including_link_targets": 1160198390,
+      "junctions": []
+    },
+    {
+      "path": "F:\\codex_project\\.codex-worktrees\\013-understanding-publication",
+      "branch": "refs/heads/codex/013-understanding-publication",
+      "commit": "05d051e1fc935c88d3b39d02477f5fcd5fe03a3b",
+      "preserved": [
+        {
+          "original_path": ".git-013-final-build.log",
+          "bytes": 4559,
+          "sha256": "afe06877e9d69e3a47c49646cb0de3e2feb7a130de319e771c89888213914c50",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/013-understanding-publication/.git-013-final-build.log.txt"
+        },
+        {
+          "original_path": ".git-013-final-watch.log",
+          "bytes": 3696,
+          "sha256": "86f288f715b97977dded528d08d2d0b30b1779f2b02fb387030bda7b2e3d27e2",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/013-understanding-publication/.git-013-final-watch.log.txt"
+        },
+        {
+          "original_path": ".git-013-publish-watch.log",
+          "bytes": 5421,
+          "sha256": "e2f47f3a8474507031075a39b27e851609f15fe93bc5b1a84fd5d0f0e4efef84",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/013-understanding-publication/.git-013-publish-watch.log.txt"
+        },
+        {
+          "original_path": ".git-pages-build.log",
+          "bytes": 36765,
+          "sha256": "1b68a0f0f684b71fe4c3f4b3007c79e574f329170a59379465116ed7b5a91508",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/013-understanding-publication/.git-pages-build.log.txt"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.sources.json",
+          "bytes": 23637,
+          "sha256": "51511ca4f8b11ad514e8dac2b26d6b4d888a211c8809d1aeee3dd0c2d0aadb90",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/013-understanding-publication/projects/006-random-doors/web/public/research/understanding-overview.sources.json"
+        }
+      ],
+      "existing_main_copies": [
+        {
+          "original_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg",
+          "bytes": 536684,
+          "sha256": "0b14daf362cc43dcfd1fe695c3a4f28c69429560f7bab542f84ea0f08043e841",
+          "retained_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.png",
+          "bytes": 2831140,
+          "sha256": "b67412ba4689669fca923837971504bb3bd0a6e9f0201a90d62785d282ccfba8",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.png"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.svg",
+          "bytes": 1458377,
+          "sha256": "a55590c23a7c9c84cea986e1e5254ff732f7ad0720c69333ecdd2455cb565882",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.svg"
+        },
+        {
+          "original_path": "projects/010-evidence-research-lab/web/index.html",
+          "bytes": 1537677,
+          "sha256": "eda361a832cc342233d717617413cac439bd752ee19859e57ba4d79af3c3b9ac",
+          "retained_path": "projects/010-evidence-research-lab/web/index.html"
+        }
+      ],
+      "regenerable_bytes": 734241613,
+      "bytes": 1166793908,
+      "files": 5388,
+      "previous_size_including_link_targets": 1166793908,
+      "junctions": []
+    },
+    {
+      "path": "F:\\codex_project\\1014-publish-rainy-ghost",
+      "branch": "refs/heads/codex/publish-rainy-ghost",
+      "commit": "fb6f41c0c08413465f2a3961c10ddd4e7eb40dd3",
+      "preserved": [
+        {
+          "original_path": "metadata-build-final.log",
+          "bytes": 808,
+          "sha256": "3d32341d46158ab90f8720eb2dcb90b98e6fbe566f907e3e7444f4270b90d630",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/1014-publish-rainy-ghost/metadata-build-final.log.txt"
+        },
+        {
+          "original_path": "metadata-build.log",
+          "bytes": 808,
+          "sha256": "c94d4ff92bbcd5d244d28df81ffb1168688d76aa4639cdd7ca2027e578930334",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/1014-publish-rainy-ghost/metadata-build.log.txt"
+        },
+        {
+          "original_path": "pages-build-final.log",
+          "bytes": 54303,
+          "sha256": "a18c1c5465fb03b98886a7bef5aaec033ca62bae113a24e58f1c072c7beb23ba",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/1014-publish-rainy-ghost/pages-build-final.log.txt"
+        },
+        {
+          "original_path": "pages-build-rebased.log",
+          "bytes": 54313,
+          "sha256": "4672814e0635a1e35fafed69fe37f12544cf7c62abcc788f4f66ad1084eb40a2",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/1014-publish-rainy-ghost/pages-build-rebased.log.txt"
+        },
+        {
+          "original_path": "pages-build.log",
+          "bytes": 54295,
+          "sha256": "0432a402481cbc3892932c73230e6ed8c3c6f16a31e72d0df434b913bad1cc46",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/1014-publish-rainy-ghost/pages-build.log.txt"
+        },
+        {
+          "original_path": "payload-build.log",
+          "bytes": 808,
+          "sha256": "5937eb926ed3f3548e316cc5ebd6e5efaf27cb7a7fed9f39f78f3d700cf75468",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/1014-publish-rainy-ghost/payload-build.log.txt"
+        },
+        {
+          "original_path": "projects/002-rainy-ghost/web/payload-build.log",
+          "bytes": 808,
+          "sha256": "22cc26840051d89a1b8002704360eff6380dc35eff0e4199d03a1130dd98f4b5",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/1014-publish-rainy-ghost/projects/002-rainy-ghost/web/payload-build.log.txt"
+        },
+        {
+          "original_path": "projects/002-rainy-ghost/web/public/research/README.md",
+          "bytes": 14081,
+          "sha256": "caa73d4c7f2d4d9b52da3ad191dc53c74df9a21a6ff97cabeb2d233c8272e5c8",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/1014-publish-rainy-ghost/projects/002-rainy-ghost/web/public/research/README.md"
+        },
+        {
+          "original_path": "projects/002-rainy-ghost/web/public/research/RESEARCH.md",
+          "bytes": 48638,
+          "sha256": "c213e78a633d43962a9af053a71286e207edc07bdbf273f00c11b129e75a3add",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/1014-publish-rainy-ghost/projects/002-rainy-ghost/web/public/research/RESEARCH.md"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.sources.json",
+          "bytes": 23637,
+          "sha256": "51511ca4f8b11ad514e8dac2b26d6b4d888a211c8809d1aeee3dd0c2d0aadb90",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/1014-publish-rainy-ghost/projects/006-random-doors/web/public/research/understanding-overview.sources.json"
+        }
+      ],
+      "existing_main_copies": [
+        {
+          "original_path": "projects/002-rainy-ghost/web/public/research/THIRD_PARTY_NOTICES.md",
+          "bytes": 1545,
+          "sha256": "dce4d16bcf5ba91eeafb50d4f42d9a0e3163102eeef792c0ebe04b870256167d",
+          "retained_path": "projects/002-rainy-ghost/web/public/research/THIRD_PARTY_NOTICES.md"
+        },
+        {
+          "original_path": "projects/002-rainy-ghost/web/public/research/final-effect.jpg",
+          "bytes": 47613,
+          "sha256": "cbe8858dd2388956b77b3215ad581386764db5be7ee43cbda3feb37a2ee86b5d",
+          "retained_path": "projects/002-rainy-ghost/web/public/research/final-effect.jpg"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg",
+          "bytes": 536684,
+          "sha256": "0b14daf362cc43dcfd1fe695c3a4f28c69429560f7bab542f84ea0f08043e841",
+          "retained_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.png",
+          "bytes": 2831140,
+          "sha256": "b67412ba4689669fca923837971504bb3bd0a6e9f0201a90d62785d282ccfba8",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.png"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.svg",
+          "bytes": 1458377,
+          "sha256": "a55590c23a7c9c84cea986e1e5254ff732f7ad0720c69333ecdd2455cb565882",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.svg"
+        },
+        {
+          "original_path": "projects/010-evidence-research-lab/web/index.html",
+          "bytes": 1537677,
+          "sha256": "eda361a832cc342233d717617413cac439bd752ee19859e57ba4d79af3c3b9ac",
+          "retained_path": "projects/010-evidence-research-lab/web/index.html"
+        }
+      ],
+      "regenerable_bytes": 814105801,
+      "bytes": 1117161749,
+      "files": 1731,
+      "previous_size_including_link_targets": 1256750565,
+      "junctions": [
+        {
+          "path": "F:\\codex_project\\1014-publish-rainy-ghost\\projects\\002-rainy-ghost\\web\\node_modules",
+          "target": "F:\\codex_project\\1014_codex_project\\projects\\002-rainy-ghost\\web\\node_modules"
+        },
+        {
+          "path": "F:\\codex_project\\1014-publish-rainy-ghost\\projects\\004-jasonzhu-ai\\web\\node_modules",
+          "target": "F:\\codex_project\\1014_codex_project\\projects\\004-jasonzhu-ai\\web\\node_modules"
+        },
+        {
+          "path": "F:\\codex_project\\1014-publish-rainy-ghost\\projects\\006-random-doors\\web\\node_modules",
+          "target": "F:\\codex_project\\1014_codex_project\\projects\\006-random-doors\\web\\node_modules"
+        }
+      ]
+    },
+    {
+      "path": "F:\\codex_project\\edgechat-publish-012",
+      "branch": "refs/heads/codex/publish-edgechat-012",
+      "commit": "7ee55572cc03da7d98489ca9253b5c2a93cbb403",
+      "preserved": [
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.sources.json",
+          "bytes": 23637,
+          "sha256": "51511ca4f8b11ad514e8dac2b26d6b4d888a211c8809d1aeee3dd0c2d0aadb90",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/edgechat-publish-012/projects/006-random-doors/web/public/research/understanding-overview.sources.json"
+        }
+      ],
+      "existing_main_copies": [
+        {
+          "original_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg",
+          "bytes": 536684,
+          "sha256": "0b14daf362cc43dcfd1fe695c3a4f28c69429560f7bab542f84ea0f08043e841",
+          "retained_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.png",
+          "bytes": 2831140,
+          "sha256": "b67412ba4689669fca923837971504bb3bd0a6e9f0201a90d62785d282ccfba8",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.png"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.svg",
+          "bytes": 1458377,
+          "sha256": "a55590c23a7c9c84cea986e1e5254ff732f7ad0720c69333ecdd2455cb565882",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.svg"
+        },
+        {
+          "original_path": "projects/010-evidence-research-lab/web/index.html",
+          "bytes": 1537677,
+          "sha256": "eda361a832cc342233d717617413cac439bd752ee19859e57ba4d79af3c3b9ac",
+          "retained_path": "projects/010-evidence-research-lab/web/index.html"
+        }
+      ],
+      "regenerable_bytes": 748970255,
+      "bytes": 1183704090,
+      "files": 5434,
+      "previous_size_including_link_targets": 1183704090,
+      "junctions": []
+    },
+    {
+      "path": "F:\\codex_project\\research-index-complete",
+      "branch": "refs/heads/codex/complete-research-index",
+      "commit": "dab92585dd82955b967ea1ed5c0051528b1f3920",
+      "preserved": [
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.sources.json",
+          "bytes": 23637,
+          "sha256": "51511ca4f8b11ad514e8dac2b26d6b4d888a211c8809d1aeee3dd0c2d0aadb90",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/research-index-complete/projects/006-random-doors/web/public/research/understanding-overview.sources.json"
+        }
+      ],
+      "existing_main_copies": [
+        {
+          "original_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg",
+          "bytes": 536684,
+          "sha256": "0b14daf362cc43dcfd1fe695c3a4f28c69429560f7bab542f84ea0f08043e841",
+          "retained_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.png",
+          "bytes": 2831140,
+          "sha256": "b67412ba4689669fca923837971504bb3bd0a6e9f0201a90d62785d282ccfba8",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.png"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.svg",
+          "bytes": 1458377,
+          "sha256": "a55590c23a7c9c84cea986e1e5254ff732f7ad0720c69333ecdd2455cb565882",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.svg"
+        },
+        {
+          "original_path": "projects/010-evidence-research-lab/web/index.html",
+          "bytes": 1537677,
+          "sha256": "eda361a832cc342233d717617413cac439bd752ee19859e57ba4d79af3c3b9ac",
+          "retained_path": "projects/010-evidence-research-lab/web/index.html"
+        }
+      ],
+      "regenerable_bytes": 751287968,
+      "bytes": 1193030684,
+      "files": 5616,
+      "previous_size_including_link_targets": 1193030684,
+      "junctions": []
+    },
+    {
+      "path": "F:\\codex_project\\specreel-summary-008",
+      "branch": "refs/heads/codex/specreel-understanding-008",
+      "commit": "3735247b457eca4e4cb18d6356fcb0d0668e58c4",
+      "preserved": [
+        {
+          "original_path": "projects/002-rainy-ghost/web/public/research/README.md",
+          "bytes": 14081,
+          "sha256": "caa73d4c7f2d4d9b52da3ad191dc53c74df9a21a6ff97cabeb2d233c8272e5c8",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/specreel-summary-008/projects/002-rainy-ghost/web/public/research/README.md"
+        },
+        {
+          "original_path": "projects/002-rainy-ghost/web/public/research/RESEARCH.md",
+          "bytes": 48638,
+          "sha256": "c213e78a633d43962a9af053a71286e207edc07bdbf273f00c11b129e75a3add",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/specreel-summary-008/projects/002-rainy-ghost/web/public/research/RESEARCH.md"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.sources.json",
+          "bytes": 23637,
+          "sha256": "51511ca4f8b11ad514e8dac2b26d6b4d888a211c8809d1aeee3dd0c2d0aadb90",
+          "archived_path": "docs/archives/worktree-cleanup-20261020/specreel-summary-008/projects/006-random-doors/web/public/research/understanding-overview.sources.json"
+        }
+      ],
+      "existing_main_copies": [
+        {
+          "original_path": "projects/002-rainy-ghost/web/public/research/THIRD_PARTY_NOTICES.md",
+          "bytes": 1545,
+          "sha256": "dce4d16bcf5ba91eeafb50d4f42d9a0e3163102eeef792c0ebe04b870256167d",
+          "retained_path": "projects/002-rainy-ghost/web/public/research/THIRD_PARTY_NOTICES.md"
+        },
+        {
+          "original_path": "projects/002-rainy-ghost/web/public/research/final-effect.jpg",
+          "bytes": 47613,
+          "sha256": "cbe8858dd2388956b77b3215ad581386764db5be7ee43cbda3feb37a2ee86b5d",
+          "retained_path": "projects/002-rainy-ghost/web/public/research/final-effect.jpg"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg",
+          "bytes": 536684,
+          "sha256": "0b14daf362cc43dcfd1fe695c3a4f28c69429560f7bab542f84ea0f08043e841",
+          "retained_path": "projects/006-random-doors/web/public/research/four-seasons-reference.jpg"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.png",
+          "bytes": 2831140,
+          "sha256": "b67412ba4689669fca923837971504bb3bd0a6e9f0201a90d62785d282ccfba8",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.png"
+        },
+        {
+          "original_path": "projects/006-random-doors/web/public/research/understanding-overview.svg",
+          "bytes": 1458377,
+          "sha256": "a55590c23a7c9c84cea986e1e5254ff732f7ad0720c69333ecdd2455cb565882",
+          "retained_path": "projects/006-random-doors/web/public/research/understanding-overview.svg"
+        },
+        {
+          "original_path": "projects/010-evidence-research-lab/web/index.html",
+          "bytes": 1537677,
+          "sha256": "eda361a832cc342233d717617413cac439bd752ee19859e57ba4d79af3c3b9ac",
+          "retained_path": "projects/010-evidence-research-lab/web/index.html"
+        }
+      ],
+      "regenerable_bytes": 859879163,
+      "bytes": 1327092899,
+      "files": 7343,
+      "previous_size_including_link_targets": 1327092899,
+      "junctions": []
+    }
+  ]
+}
