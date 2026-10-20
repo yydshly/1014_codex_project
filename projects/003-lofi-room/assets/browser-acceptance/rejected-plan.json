@@ -1,0 +1,681 @@
+{
+  "plan": {
+    "cases": [
+      {
+        "criterion": 1,
+        "title": "清空草稿后名称/需求/验收三项均为空",
+        "kind": "browser",
+        "path": "/1014_codex_project/003-lofi-room/?view=workspace",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "text": "＋ GitHub 任务",
+              "exact": true
+            },
+            "description": "打开新任务表单"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "测试任务名称",
+            "description": "填写任务名称"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-brief",
+              "exact": true
+            },
+            "value": "这是测试需求内容",
+            "description": "填写具体需求"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-criteria",
+              "exact": true
+            },
+            "value": "第一行验收标准\n第二行验收标准",
+            "description": "填写验收要求"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#repository-clear-draft",
+              "exact": true
+            },
+            "description": "点击清空草稿按钮"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "",
+            "description": "断言任务名称已清空"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-brief",
+              "exact": true
+            },
+            "value": "",
+            "description": "断言具体需求已清空"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-criteria",
+              "exact": true
+            },
+            "value": "",
+            "description": "断言验收要求已清空"
+          }
+        ]
+      },
+      {
+        "criterion": 2,
+        "title": "清空后仓库/代码来源/执行方式保持原选择",
+        "kind": "browser",
+        "path": "/1014_codex_project/003-lofi-room/?view=workspace",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "text": "＋ GitHub 任务",
+              "exact": true
+            },
+            "description": "打开新任务表单"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-input",
+              "exact": true
+            },
+            "value": "https://github.com/test/repo",
+            "description": "填写GitHub仓库地址"
+          },
+          {
+            "action": "select",
+            "target": {
+              "selector": "#repository-source",
+              "exact": true
+            },
+            "value": "current-workspace",
+            "description": "选择代码来源为当前工作区"
+          },
+          {
+            "action": "select",
+            "target": {
+              "selector": "#repository-execution",
+              "exact": true
+            },
+            "value": "independent-demo",
+            "description": "选择执行方式为独立离线Demo"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#repository-clear-draft",
+              "exact": true
+            },
+            "description": "点击清空草稿按钮"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-input",
+              "exact": true
+            },
+            "value": "https://github.com/test/repo",
+            "description": "断言GitHub地址保持不变"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-source",
+              "exact": true
+            },
+            "value": "current-workspace",
+            "description": "断言代码来源保持原选择"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-execution",
+              "exact": true
+            },
+            "value": "independent-demo",
+            "description": "断言执行方式保持原选择"
+          }
+        ]
+      },
+      {
+        "criterion": 3,
+        "title": "清空不启动任务，功能开发模板可重新填充",
+        "kind": "browser",
+        "path": "/1014_codex_project/003-lofi-room/?view=workspace",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "text": "＋ GitHub 任务",
+              "exact": true
+            },
+            "description": "打开新任务表单"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "测试任务名称",
+            "description": "填写任务名称"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-brief",
+              "exact": true
+            },
+            "value": "这是测试需求",
+            "description": "填写具体需求"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#repository-clear-draft",
+              "exact": true
+            },
+            "description": "点击清空草稿按钮"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "",
+            "description": "断言草稿已清空"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-brief",
+              "exact": true
+            },
+            "value": "",
+            "description": "断言草稿已清空"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-submit",
+              "exact": true
+            },
+            "value": "disabled",
+            "description": "断言提交按钮未启用（验证未启动任务）"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#repository-template-feature-dev",
+              "exact": true
+            },
+            "description": "点击功能开发模板按钮"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "",
+            "description": "验证点击模板后名称字段可编辑"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-brief",
+              "exact": true
+            },
+            "value": "",
+            "description": "验证点击模板后需求字段可继续编辑"
+          }
+        ]
+      }
+    ],
+    "goal": "在003独立副本的新任务表单新增“清空草稿”按钮（type=button，id=repository-clear-draft）：点击只清空名称、需求、验收三项，保留仓库、代码来源和执行方式，不提交任务，之后仍可点击模板重新填充并编辑。只改相关UI源码，不改package脚本、旧测试、后台或浏览器验收器。选择projects/003-lofi-room/web，保留原preview入口；configure_demo用preview、path=/1014_codex_project/003-lofi-room/?view=workspace、args=[--host,0.0.0.0,--port,3000,--strictPort]。验证员必须在实际Demo按原需求操作，有失败按固定用例返工。",
+    "criteria": [
+      "打开新任务，填名称需求验收，点击“清空草稿”后三项均为空",
+      "清空后GitHub地址、代码来源和执行方式保持原选择",
+      "清空不启动任务；点击“功能开发”仍可重新填入模板并编辑"
+    ],
+    "createdAt": "2026-10-20T03:28:12.747Z"
+  },
+  "attempts": [
+    {
+      "round": 1,
+      "passed": false,
+      "cases": [
+        {
+          "criterion": 1,
+          "title": "清空草稿后名称/需求/验收三项均为空",
+          "kind": "browser",
+          "path": "/1014_codex_project/003-lofi-room/?view=workspace",
+          "steps": [
+            {
+              "id": "f2a2ec8b-3499-4758-bbd3-e09728317843",
+              "kind": "browser",
+              "label": "打开新任务表单",
+              "action": "click",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "text": "＋ GitHub 任务",
+                "exact": true
+              },
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:13.067Z",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/7f58ac45-51cf-421e-aaea-1d57054297a1.jpg",
+              "screenshotFile": "7f58ac45-51cf-421e-aaea-1d57054297a1.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n打开新任务表单\nPASS",
+              "endedAt": "2026-10-20T03:28:16.437Z"
+            },
+            {
+              "id": "6f37afe5-f85d-4d25-b784-ac53ba63e445",
+              "kind": "browser",
+              "label": "填写任务名称",
+              "action": "fill",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "expected": "测试任务名称",
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:16.437Z",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/47f30252-854b-468a-b6f0-411420eb70ad.jpg",
+              "screenshotFile": "47f30252-854b-468a-b6f0-411420eb70ad.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收1\n填写任务名称\nPASS\n预期：\"测试任务名称\"",
+              "endedAt": "2026-10-20T03:28:17.120Z"
+            },
+            {
+              "id": "ec622478-2db6-4e64-bfe4-0df9030a81fe",
+              "kind": "browser",
+              "label": "填写具体需求",
+              "action": "fill",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-brief",
+                "exact": true
+              },
+              "expected": "这是测试需求内容",
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:17.120Z",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/6c2d857a-f26a-4f32-9a1b-dac6c24d5aea.jpg",
+              "screenshotFile": "6c2d857a-f26a-4f32-9a1b-dac6c24d5aea.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收1\n填写具体需求\nPASS\n预期：\"这是测试需求内容\"",
+              "endedAt": "2026-10-20T03:28:17.645Z"
+            },
+            {
+              "id": "bce2644b-5454-46c3-9a62-6286737df6cc",
+              "kind": "browser",
+              "label": "填写验收要求",
+              "action": "fill",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-criteria",
+                "exact": true
+              },
+              "expected": "第一行验收标准\n第二行验收标准",
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:17.646Z",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/218a5e9c-73aa-4ed8-a140-85a464abd21a.jpg",
+              "screenshotFile": "218a5e9c-73aa-4ed8-a140-85a464abd21a.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收1\n填写验收要求\nPASS\n预期：\"第一行验收标准\\n第二行验收标准\"",
+              "endedAt": "2026-10-20T03:28:18.078Z"
+            },
+            {
+              "id": "5a83b219-4b84-4544-bd25-e49c925ac364",
+              "kind": "browser",
+              "label": "点击清空草稿按钮",
+              "action": "click",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-clear-draft",
+                "exact": true
+              },
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:18.078Z",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/4479187e-fe2a-40e3-9e11-38d99b81c5ad.jpg",
+              "screenshotFile": "4479187e-fe2a-40e3-9e11-38d99b81c5ad.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n点击清空草稿按钮\nPASS",
+              "endedAt": "2026-10-20T03:28:19.120Z"
+            },
+            {
+              "id": "18886d37-44ef-415a-9512-b536401fc6a6",
+              "kind": "browser",
+              "label": "断言任务名称已清空",
+              "action": "assertValue",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:19.121Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/9f195438-b246-48da-9b2a-ab867c93bd7d.jpg",
+              "screenshotFile": "9f195438-b246-48da-9b2a-ab867c93bd7d.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收1\n断言任务名称已清空\nPASS\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T03:28:19.384Z"
+            },
+            {
+              "id": "bdd3a1a3-c1e1-4b25-9b37-eb81719c0fc0",
+              "kind": "browser",
+              "label": "断言具体需求已清空",
+              "action": "assertValue",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-brief",
+                "exact": true
+              },
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:19.384Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/8c05fd78-e34b-4423-95cc-1f77be305a5d.jpg",
+              "screenshotFile": "8c05fd78-e34b-4423-95cc-1f77be305a5d.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收1\n断言具体需求已清空\nPASS\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T03:28:19.713Z"
+            },
+            {
+              "id": "6f0f87df-594a-4c9c-8888-58369ed71791",
+              "kind": "browser",
+              "label": "断言验收要求已清空",
+              "action": "assertValue",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-criteria",
+                "exact": true
+              },
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:19.713Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/2436a0b0-f429-4107-802b-974baf7370ec.jpg",
+              "screenshotFile": "2436a0b0-f429-4107-802b-974baf7370ec.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收1\n断言验收要求已清空\nPASS\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T03:28:20.159Z"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 2,
+          "title": "清空后仓库/代码来源/执行方式保持原选择",
+          "kind": "browser",
+          "path": "/1014_codex_project/003-lofi-room/?view=workspace",
+          "steps": [
+            {
+              "id": "f03d3cc9-5eed-4aa0-8dc8-fea65e29b2ef",
+              "kind": "browser",
+              "label": "打开新任务表单",
+              "action": "click",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "text": "＋ GitHub 任务",
+                "exact": true
+              },
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:20.544Z",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/d4c3fe1e-4022-4c4f-8e4f-62e04c12c60c.jpg",
+              "screenshotFile": "d4c3fe1e-4022-4c4f-8e4f-62e04c12c60c.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n打开新任务表单\nPASS",
+              "endedAt": "2026-10-20T03:28:23.932Z"
+            },
+            {
+              "id": "ebfff261-4f2f-42d8-894b-e15c120dbd6f",
+              "kind": "browser",
+              "label": "填写GitHub仓库地址",
+              "action": "fill",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-input",
+                "exact": true
+              },
+              "expected": "https://github.com/test/repo",
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:23.932Z",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/f5b37e8e-b9d3-4c8d-a20b-d9cf652b9781.jpg",
+              "screenshotFile": "f5b37e8e-b9d3-4c8d-a20b-d9cf652b9781.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写GitHub仓库地址\nPASS\n预期：\"https://github.com/test/repo\"",
+              "endedAt": "2026-10-20T03:28:24.414Z"
+            },
+            {
+              "id": "01a5286a-f302-4e87-9968-2ce3711f7487",
+              "kind": "browser",
+              "label": "选择代码来源为当前工作区",
+              "action": "select",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-source",
+                "exact": true
+              },
+              "expected": "current-workspace",
+              "status": "failed",
+              "startedAt": "2026-10-20T03:28:24.414Z",
+              "passed": false,
+              "error": "locator.selectOption: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#repository-source')\u001b[22m\n\u001b[2m    - locator resolved to <select id=\"repository-source\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    9 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/8ac2898b-4fc7-4e74-bfb7-ffea7a4171ab.jpg",
+              "screenshotFile": "8ac2898b-4fc7-4e74-bfb7-ffea7a4171ab.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "select · 验收2\n选择代码来源为当前工作区\nFAIL\n预期：\"current-workspace\"\nlocator.selectOption: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#repository-source')\u001b[22m\n\u001b[2m    - locator resolved to <select id=\"repository-source\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    9 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+              "endedAt": "2026-10-20T03:28:29.883Z"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "criterion": 3,
+          "title": "清空不启动任务，功能开发模板可重新填充",
+          "kind": "browser",
+          "path": "/1014_codex_project/003-lofi-room/?view=workspace",
+          "steps": [
+            {
+              "id": "feb0495d-c8ed-4d4f-ab6b-5ad40429ac36",
+              "kind": "browser",
+              "label": "打开新任务表单",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "text": "＋ GitHub 任务",
+                "exact": true
+              },
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:30.148Z",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/fc756044-5538-414a-b36e-5c358cb77966.jpg",
+              "screenshotFile": "fc756044-5538-414a-b36e-5c358cb77966.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n打开新任务表单\nPASS",
+              "endedAt": "2026-10-20T03:28:33.367Z"
+            },
+            {
+              "id": "92e45cd9-b9cb-4dde-9217-60dafce04bf9",
+              "kind": "browser",
+              "label": "填写任务名称",
+              "action": "fill",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "expected": "测试任务名称",
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:33.368Z",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/e199e610-9dca-4dff-9858-ee9a2d57eda0.jpg",
+              "screenshotFile": "e199e610-9dca-4dff-9858-ee9a2d57eda0.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收3\n填写任务名称\nPASS\n预期：\"测试任务名称\"",
+              "endedAt": "2026-10-20T03:28:33.650Z"
+            },
+            {
+              "id": "df6abe62-ba3b-47d2-aa14-06ea146c51e9",
+              "kind": "browser",
+              "label": "填写具体需求",
+              "action": "fill",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-brief",
+                "exact": true
+              },
+              "expected": "这是测试需求",
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:33.651Z",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/b6f0ca78-d862-422a-b4d9-08463d01bf66.jpg",
+              "screenshotFile": "b6f0ca78-d862-422a-b4d9-08463d01bf66.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收3\n填写具体需求\nPASS\n预期：\"这是测试需求\"",
+              "endedAt": "2026-10-20T03:28:33.966Z"
+            },
+            {
+              "id": "b6ceaa48-ed25-4323-9306-4db66d14f696",
+              "kind": "browser",
+              "label": "点击清空草稿按钮",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-clear-draft",
+                "exact": true
+              },
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:33.967Z",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/5131e3d5-d739-4a5e-b536-028e50df6066.jpg",
+              "screenshotFile": "5131e3d5-d739-4a5e-b536-028e50df6066.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n点击清空草稿按钮\nPASS",
+              "endedAt": "2026-10-20T03:28:35.101Z"
+            },
+            {
+              "id": "2c0a3a94-d1f4-469c-ab32-3cc1754392be",
+              "kind": "browser",
+              "label": "断言草稿已清空",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:35.101Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/64dba67d-0496-4969-a7d8-ae7d55f0c7b3.jpg",
+              "screenshotFile": "64dba67d-0496-4969-a7d8-ae7d55f0c7b3.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n断言草稿已清空\nPASS\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T03:28:35.449Z"
+            },
+            {
+              "id": "7d8a9110-3a99-4ab9-a3c6-5452300db0ea",
+              "kind": "browser",
+              "label": "断言草稿已清空",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-brief",
+                "exact": true
+              },
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T03:28:35.449Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/58b19659-7431-43c6-a275-aaf21497d371.jpg",
+              "screenshotFile": "58b19659-7431-43c6-a275-aaf21497d371.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n断言草稿已清空\nPASS\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T03:28:35.729Z"
+            },
+            {
+              "id": "d4b7352a-683c-4d69-afc4-0c1353776ac7",
+              "kind": "browser",
+              "label": "断言提交按钮未启用（验证未启动任务）",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-submit",
+                "exact": true
+              },
+              "expected": "disabled",
+              "status": "failed",
+              "startedAt": "2026-10-20T03:28:35.730Z",
+              "passed": false,
+              "error": "locator.inputValue: Error: Node is not an <input>, <textarea> or <select> element\nCall log:\n\u001b[2m  - waiting for locator('#repository-submit')\u001b[22m\n",
+              "screenshot": "api/source/runs/2ac4400b-8c0d-4f6f-a511-47e2a67ea8e4/browser/c65672bf-d3ce-44d1-afec-7e91fe51290c.jpg",
+              "screenshotFile": "c65672bf-d3ce-44d1-afec-7e91fe51290c.jpg",
+              "url": "http://127.0.0.1:64470/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n断言提交按钮未启用（验证未启动任务）\nFAIL\n预期：\"disabled\"\nlocator.inputValue: Error: Node is not an <input>, <textarea> or <select> element\nCall log:\n\u001b[2m  - waiting for locator('#repository-submit')\u001b[22m\n",
+              "endedAt": "2026-10-20T03:28:36.049Z"
+            }
+          ],
+          "passed": false
+        }
+      ],
+      "logs": [],
+      "completedAt": "2026-10-20T03:28:36.049Z"
+    }
+  ]
+}

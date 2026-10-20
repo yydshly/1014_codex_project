@@ -1,0 +1,77 @@
+{
+  "provider": "MiniMax",
+  "model": "speech-2.8-turbo",
+  "generatedAt": "2026-10-14T12:57:13.230Z",
+  "clips": [
+    {
+      "id": "plan",
+      "actor": "mori",
+      "text": "目标已收到。阿橘先整理证据，小蓝据此出方案，月白和桃桃并行检查，最后交给栗子归档。",
+      "voiceId": "male-qn-jingying",
+      "file": "plan.mp3"
+    },
+    {
+      "id": "research",
+      "actor": "amber",
+      "text": "证据整理好了。每个人物要绑定身份、任务和产物，语音需要通过服务端调用。我把研究结果交给小蓝。",
+      "voiceId": "male-qn-daxuesheng",
+      "file": "research.mp3"
+    },
+    {
+      "id": "review_issue",
+      "actor": "luna",
+      "text": "我发现一个问题：两个人同时播报会互相覆盖。请增加发言队列，并让字幕跟随当前说话的人。",
+      "voiceId": "female-chengshu",
+      "file": "review_issue.mp3"
+    },
+    {
+      "id": "draft",
+      "actor": "indigo",
+      "text": "第一版方案已提交。角色状态和交接事件都接好了，请月白和桃桃一起检查。",
+      "voiceId": "male-qn-qingse",
+      "file": "draft.mp3"
+    },
+    {
+      "id": "revised",
+      "actor": "indigo",
+      "text": "我已补充串行播报、字幕同步和停止清理。第二版方案已提交，请重新检查。",
+      "voiceId": "male-qn-qingse",
+      "file": "revised.mp3"
+    },
+    {
+      "id": "test_issue",
+      "actor": "momo",
+      "text": "验证发现停止演示后仍可能继续发声。我建议同时取消任务和语音队列，把这个问题一起退回小蓝。",
+      "voiceId": "female-shaonv",
+      "file": "test_issue.mp3"
+    },
+    {
+      "id": "test_pass",
+      "actor": "momo",
+      "text": "方案检查通过。发言队列、停止清理和六位角色映射都已满足约定，可以交给栗子。",
+      "voiceId": "female-shaonv",
+      "file": "test_pass.mp3"
+    },
+    {
+      "id": "review_pass",
+      "actor": "luna",
+      "text": "第二版审阅通过。角色职责明确，交接可追踪，发言和字幕的规则也完整了。",
+      "voiceId": "female-chengshu",
+      "file": "review_pass.mp3"
+    },
+    {
+      "id": "finish",
+      "actor": "mori",
+      "text": "这轮协作完成。六个身份共同交付了一份方案，任务经过研究、开发、并行检查、返工和归档。",
+      "voiceId": "male-qn-jingying",
+      "file": "finish.mp3"
+    },
+    {
+      "id": "record",
+      "actor": "sleepy",
+      "text": "最终方案、审阅意见和验证记录已经归档。点击产物可以查看内容，也可以导出这次协作记录。",
+      "voiceId": "female-yujie",
+      "file": "record.mp3"
+    }
+  ]
+}

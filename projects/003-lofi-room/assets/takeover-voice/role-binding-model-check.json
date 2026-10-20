@@ -1,0 +1,49 @@
+{
+  "scope": "独立调用最新方案生成器，不创建/修改任务，不运行源码工具",
+  "updates": [
+    {
+      "status": "ready",
+      "participants": [
+        "indigo",
+        "mori"
+      ],
+      "plan": {
+        "title": "003 help-dialog「执行中接管」条目文字补充（最终方案）",
+        "speech": "已按你的纠正重排分工：源码只由小蓝（indigo）改，月白（luna）审阅，桃桃（momo）验证，小森（mori）只协调不再写代码，桃桃与momo不重复。本次只核对方案，尚未改动任何文件，等你点击继续再执行。",
+        "steps": [
+          {
+            "kind": "develop",
+            "owner": "indigo",
+            "change": "仅改 index.html 中 help-dialog 已有「执行中接管」条目文字，追加语音回应、伙伴讨论、白板展示调整方案、点击继续后才回工位执行；原说明与自由观察/第一人称表述全留",
+            "verify": "打开操作说明弹窗读该条目，四项要点齐全且原文字未删"
+          },
+          {
+            "kind": "review",
+            "owner": "luna",
+            "change": "审阅 diff：确认只改这一条文案，未触及执行器或其它模块，无新增页面与依赖，原验收与测试不变",
+            "verify": "对照原条目与原验收逐句复核，标注仍需调整处"
+          },
+          {
+            "kind": "test",
+            "owner": "momo",
+            "change": "沿现有 preview 工作室入口跑原 build/test，并关闭重开操作说明弹窗确认新说明仍在",
+            "verify": "原 build/test 通过、81 项测试全留通过，弹窗重开仍见新说明"
+          }
+        ],
+        "partner": null,
+        "question": ""
+      },
+      "line": {
+        "actor": "indigo",
+        "to": null,
+        "text": "已按你的纠正重排分工：源码只由小蓝（indigo）改，月白（luna）审阅，桃桃（momo）验证，小森（mori）只协调不再写代码，桃桃与momo不重复。本次只核对方案，尚未改动任何文件，等你点击继续再执行。",
+        "kind": "takeover",
+        "purpose": "adjustment",
+        "clip": null,
+        "version": 2,
+        "time": 1792480421875
+      }
+    }
+  ],
+  "verified": true
+}

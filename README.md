@@ -4,6 +4,8 @@
 
 这里是总入口：按编号浏览项目摘要，进入各子项目查看研究笔记、运行方式、界面截图与演示。每个子项目独立保存代码和依赖，适合同时研究不同技术栈。
 
+本地可从 [项目首页](http://127.0.0.1:4175/1014_codex_project/) 浏览全部项目。启动 `projects/003-lofi-room/web/start.ps1` 后，001、002 的已有构建和 003 的两个场景共用这个入口；003 同时保留 [夜半小屋](http://127.0.0.1:4175/1014_codex_project/003-lofi-room/?view=room) 与 [Agent 工作室](http://127.0.0.1:4175/1014_codex_project/003-lofi-room/?view=workspace)。这些是本地真实服务地址；003 的公开 Pages 版提供研究摘要和预设体验，实时任务继续本地运行。
+
 网页入口：[研究总览](https://yydshly.github.io/1014_codex_project/) · [014 赛博小雅研究](https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/)。发布与验证见[部署说明](docs/PAGES.md)。
 
 ## 项目索引
@@ -18,7 +20,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | 001 | [Archify：交互式代码库图解](projects/001-archify/README.md) | 已本地复现中英文交互式代码库导览，展示 Archify 的生成链路、组件讲解和固定版本源码证据。 | 已复现 | [研究笔记](projects/001-archify/RESEARCH.md) | [GitHub](https://github.com/tt-a1i/archify) | — |
 | 002 | [夜航：雨夜小幽灵与非语言陪伴](projects/002-rainy-ghost/README.md) | 原帖以白布幽灵、暖灯和雨夜水面营造氛围；我们用 Three.js 独立复现，扩展雨滴命中、局部湿布与滴水、非语言叫声、轻抚脸红/安心/目送、本地陪伴与可选计时，并优化暂停、手势、手机布局和自动画质。当前保留这一版，不再细化。 | 已完成 | [研究笔记](projects/002-rainy-ghost/RESEARCH.md) | [原帖](https://x.com/chetanankola/status/2110225806849122363) | [演示](https://yydshly.github.io/1014_codex_project/002-rainy-ghost/research.html#synthesis) |
-| 003 | [夜半小屋与 Agent 工作室：3D 协作空间](projects/003-lofi-room/README.md) | 人物随目标到白板讨论、电脑入座、桌边检查与当面交接；MiniMax 驱动真实角色、语音与交付，保留原房间及目标验收。 | 已完成 | [研究笔记](projects/003-lofi-room/RESEARCH.md) | [GitHub](https://github.com/mrdoob/three.js) | — |
+| 003 | [从3D小屋到可接管的Agent工作室](projects/003-lofi-room/README.md) | 原帖展示3D lo-fi房间与方块人物，源场景仓库待确认。我们独立探索身份绑定、语音、场景工作、真实编码测试、浏览器返工与执行中接管，形成可观察的Agent工作室；可扩展持久执行、多模型工具和多人协作。Pages提供预设体验，真实任务本地运行。 | 已完成 | [研究笔记](projects/003-lofi-room/RESEARCH.md) | [原帖](https://x.com/fe_yukichi/status/2110271992041750752) | — |
 | 004 | [从网站入口研究到 AI 研究工作台](projects/004-jasonzhu-ai/README.md) | 从 X 帖子中的网站链接出发，评估并补充寻找需求、GitHub 项目和 AI 产品的入口，逐步扩展为“问题 → 搜索原文 → 分析筛选 → 保存发现”的研究工作台。帮助个人开发者扩大观察范围、积累研究依据，可继续探索工具评估、需求雷达等产品；自动研究需本地 Codex。 | 研究中 | [研究笔记](projects/004-jasonzhu-ai/RESEARCH.md) | [原帖](https://x.com/shenxiankk/status/2107493081146691700) | [演示](https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html) |
 | 005 | [小汐：AI 虚拟角色互动实验](projects/005-cyber-companion/README.md) | 已跑通 Live2D 中文对话、语音、表情与打断；真人实时闭环仍缺数字人服务，尚未达到真人目标。保留本地原型、失败与边界记录。 | 研究中 | [研究笔记](projects/005-cyber-companion/RESEARCH.md) | [GitHub](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) | — |
 | 006 | [随机门：世界身份实验、源库原理与作品馆](projects/006-random-doors/README.md) | 阶段归档：Four-Seasons 以固定种子与参数联动三维场景；我们保留六地点偶遇、三世界八身份与列车第一人称样本，汇总随机价值、原画与人物深度的不足及完整游戏的投入边界。随机作品馆真实接入留待后续立项。 | 已归档 | [研究笔记](projects/006-random-doors/RESEARCH.md) | [原帖](https://x.com/techartist_/status/2109737086601556195) | [演示](https://yydshly.github.io/1014_codex_project/006-random-doors/research.html) |
@@ -50,11 +52,11 @@
 
 [查看项目](projects/002-rainy-ghost/README.md)
 
-#### 003 · 夜半小屋与 Agent 工作室：3D 协作空间
+#### 003 · 从3D小屋到可接管的Agent工作室
 
-![003 真实 Agent 协作运行截图：开发员走到窗边电脑并入座处理任务，人物动作随目标推进，同项目保留原房间。](projects/003-lofi-room/assets/workspace-actions-computer.png)
+![003 理解总览：来源能力、运行原理、独立扩展、探索过程、三张实际截图、当前能力、验证与后续方向。](projects/003-lofi-room/assets/understanding-overview/agent-studio-understanding.png)
 
-003 真实 Agent 协作运行截图：开发员走到窗边电脑并入座处理任务，人物动作随目标推进，同项目保留原房间。
+003 理解总览：来源能力、运行原理、独立扩展、探索过程、三张实际截图、当前能力、验证与后续方向。
 
 [查看项目](projects/003-lofi-room/README.md)
 

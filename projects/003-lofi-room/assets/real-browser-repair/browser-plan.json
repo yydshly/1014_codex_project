@@ -1,0 +1,303 @@
+{
+  "cases": [
+    {
+      "criterion": 1,
+      "title": "新建未保存草稿时归档目标按钮禁用",
+      "kind": "browser",
+      "steps": [
+        {
+          "action": "click",
+          "target": {
+            "selector": "#mission-history",
+            "exact": true
+          },
+          "comparison": "equals",
+          "description": "打开任务记录进入目标看板"
+        },
+        {
+          "action": "click",
+          "target": {
+            "selector": "#new-goal",
+            "exact": true
+          },
+          "comparison": "equals",
+          "description": "点击新建目标进入空白草稿"
+        },
+        {
+          "action": "assertValue",
+          "target": {
+            "selector": "#goal-title",
+            "exact": true
+          },
+          "value": "",
+          "comparison": "equals",
+          "description": "草稿标题为空"
+        },
+        {
+          "action": "assertEnabled",
+          "target": {
+            "selector": "#archive-goal",
+            "exact": true
+          },
+          "checked": false,
+          "comparison": "equals",
+          "description": "未保存草稿时归档目标按钮必须禁用"
+        },
+        {
+          "action": "assertText",
+          "target": {
+            "selector": "#archive-goal",
+            "exact": true
+          },
+          "value": "归档目标",
+          "comparison": "equals",
+          "description": "草稿状态下按钮文案仍为归档目标"
+        }
+      ]
+    },
+    {
+      "criterion": 2,
+      "title": "新建并保存有效目标后归档可用并可归档再恢复",
+      "kind": "browser",
+      "steps": [
+        {
+          "action": "click",
+          "target": {
+            "selector": "#mission-history",
+            "exact": true
+          },
+          "comparison": "equals",
+          "description": "打开目标看板"
+        },
+        {
+          "action": "click",
+          "target": {
+            "selector": "#new-goal",
+            "exact": true
+          },
+          "comparison": "equals",
+          "description": "新建目标草稿"
+        },
+        {
+          "action": "fill",
+          "target": {
+            "selector": "#goal-title",
+            "exact": true
+          },
+          "value": "验收用新目标",
+          "comparison": "equals",
+          "description": "填写目标名称"
+        },
+        {
+          "action": "fill",
+          "target": {
+            "selector": "#goal-brief",
+            "exact": true
+          },
+          "value": "用于验证归档按钮在保存后恢复可用的新目标描述",
+          "comparison": "equals",
+          "description": "填写目标描述"
+        },
+        {
+          "action": "fill",
+          "target": {
+            "selector": "#goal-criteria",
+            "exact": true
+          },
+          "value": "归档按钮保存后可用",
+          "comparison": "equals",
+          "description": "填写验收要求"
+        },
+        {
+          "action": "click",
+          "target": {
+            "selector": "#goal-form button[type=\"submit\"]",
+            "exact": true
+          },
+          "comparison": "equals",
+          "description": "保存目标"
+        },
+        {
+          "action": "assertValue",
+          "target": {
+            "selector": "#goal-title",
+            "exact": true
+          },
+          "value": "验收用新目标",
+          "comparison": "equals",
+          "description": "保存后标题保留"
+        },
+        {
+          "action": "assertEnabled",
+          "target": {
+            "selector": "#archive-goal",
+            "exact": true
+          },
+          "checked": true,
+          "comparison": "equals",
+          "description": "保存后归档目标按钮启用"
+        },
+        {
+          "action": "click",
+          "target": {
+            "selector": "#archive-goal",
+            "exact": true
+          },
+          "comparison": "equals",
+          "description": "点击归档该新目标"
+        },
+        {
+          "action": "assertText",
+          "target": {
+            "selector": "#archive-goal",
+            "exact": true
+          },
+          "value": "恢复",
+          "comparison": "contains",
+          "description": "归档后按钮变为可恢复状态"
+        },
+        {
+          "action": "assertEnabled",
+          "target": {
+            "selector": "#archive-goal",
+            "exact": true
+          },
+          "checked": true,
+          "comparison": "equals",
+          "description": "归档后仍可点击恢复"
+        },
+        {
+          "action": "click",
+          "target": {
+            "selector": "#archive-goal",
+            "exact": true
+          },
+          "comparison": "equals",
+          "description": "点击恢复该目标"
+        },
+        {
+          "action": "assertText",
+          "target": {
+            "selector": "#archive-goal",
+            "exact": true
+          },
+          "value": "归档目标",
+          "comparison": "equals",
+          "description": "恢复后按钮回到归档目标"
+        },
+        {
+          "action": "assertEnabled",
+          "target": {
+            "selector": "#archive-goal",
+            "exact": true
+          },
+          "checked": true,
+          "comparison": "equals",
+          "description": "恢复后归档按钮仍启用"
+        }
+      ]
+    },
+    {
+      "criterion": 3,
+      "title": "关闭再打开看板后恢复原目标内容且归档按钮可用",
+      "kind": "browser",
+      "steps": [
+        {
+          "action": "click",
+          "target": {
+            "selector": "#mission-history",
+            "exact": true
+          },
+          "comparison": "equals",
+          "description": "打开目标看板"
+        },
+        {
+          "action": "click",
+          "target": {
+            "selector": "#new-goal",
+            "exact": true
+          },
+          "comparison": "equals",
+          "description": "新建未保存草稿"
+        },
+        {
+          "action": "fill",
+          "target": {
+            "selector": "#goal-title",
+            "exact": true
+          },
+          "value": "不应保存的草稿",
+          "comparison": "equals",
+          "description": "草稿里填入内容但不保存"
+        },
+        {
+          "action": "click",
+          "target": {
+            "selector": "[data-close=\"goals-dialog\"]",
+            "exact": true
+          },
+          "comparison": "equals",
+          "description": "关闭目标看板"
+        },
+        {
+          "action": "click",
+          "target": {
+            "selector": "#mission-history",
+            "exact": true
+          },
+          "comparison": "equals",
+          "description": "再次打开目标看板"
+        },
+        {
+          "action": "assertValue",
+          "target": {
+            "selector": "#goal-title",
+            "exact": true
+          },
+          "value": "把小屋变成协作工作室",
+          "comparison": "equals",
+          "description": "重新打开后显示原有目标名称"
+        },
+        {
+          "action": "assertValue",
+          "target": {
+            "selector": "#goal-brief",
+            "exact": true
+          },
+          "value": "为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。",
+          "comparison": "equals",
+          "description": "重新打开后显示原有目标描述"
+        },
+        {
+          "action": "assertText",
+          "target": {
+            "selector": "#archive-goal",
+            "exact": true
+          },
+          "value": "归档目标",
+          "comparison": "equals",
+          "description": "按钮文案为归档目标"
+        },
+        {
+          "action": "assertEnabled",
+          "target": {
+            "selector": "#archive-goal",
+            "exact": true
+          },
+          "checked": true,
+          "comparison": "equals",
+          "description": "重新打开已有目标后归档按钮可用"
+        }
+      ]
+    }
+  ],
+  "goal": "修复003目标看板的真实缺陷：点“新建目标”进入未保存草稿时，归档按钮仍可用，可能误归档旧目标。使用当前003工程独立副本。先保持原版，让桃桃在真实Demo复现失败，再与小蓝讨论后修复；禁止预先改坏代码。修复后未保存草稿禁用归档，保存或重新打开已有目标后恢复可用，已有归档/恢复正常。只改相关源码，可新增针对性测试，禁止改旧测试、build/test脚本和验收器；沿用原preview子路径与动态端口。",
+  "criteria": [
+    "打开目标看板点“新建目标”，空白未保存草稿下“归档目标”按钮必须禁用，不能操作旧目标",
+    "新建并填有效名称、描述、验收后保存，归档按钮启用，点击可归档再恢复这个新目标",
+    "新建未保存草稿后关闭再打开看板，恢复原有目标内容，归档按钮重新启用且仍为“归档目标”"
+  ],
+  "createdAt": "2026-10-20T04:46:42.828Z",
+  "entryPath": "/1014_codex_project/003-lofi-room/?view=workspace",
+  "resumedFromRunId": "84047db7-5300-4384-a0cf-14c8016b5a89"
+}

@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-20",
+  "scope": "本地后台任务所有权、刷新重连、显式取消、当前人物阶段恢复与真实副本交付",
+  "implementation": "操作者在主工作区实现；下述MiniMax任务只用于验证真实执行生命周期，不代表后台能力由模型任务自行开发",
+  "studio": "http://127.0.0.1:4176/1014_codex_project/003-lofi-room/?view=workspace",
+  "ports": {
+    "original": 4175,
+    "current": 4176,
+    "reason": "自动审批拒绝停止旧4175预览进程（blocked by policy），保留原服务，另开新版验证",
+    "storage": "浏览器本地目标历史按端口区分；原入口和原历史未清理，后台记录保存在服务端目录"
+  },
+  "automatedVerification": {
+    "mainSuite": 68,
+    "background": 11,
+    "props": 18,
+    "traffic": 10,
+    "workbench": 8,
+    "screens": 4,
+    "templates": 6,
+    "totalPassed": 125,
+    "buildPassed": true,
+    "newDependencies": false
+  },
+  "tasks": [
+    {
+      "taskId": "eccfbe80-cbca-42b3-a838-d9906e502124",
+      "sourceRunId": "535049e8-7d45-4126-a4b1-20dc9c7a3450",
+      "status": "cancelled",
+      "rawEvents": 504,
+      "observations": [
+        "刷新前后任务编号一致，接回游标10",
+        "离开房间前游标103，离开后后台记录推进至173、276和375",
+        "返回后接回真实开发、审阅和测试记录",
+        "构建与测试通过，Demo HTTP检查失败，进入真实返工",
+        "页面主动停止，后台由取消中转为已取消，保存源码及工具记录"
+      ],
+      "limitation": "Demo端口配置错误，模型返工引入忽略动态端口的脚本，操作者停止此轮；不记为成功交付"
+    },
+    {
+      "taskId": "223bb053-8503-42d0-85b9-863c7c8d3e06",
+      "sourceRunId": "b41c781e-142e-4af2-9004-f55db7ddcf2a",
+      "snapshotCommit": "fbff9810c71685cb5c5e587beb8e57bd0b7806d9",
+      "status": "completed",
+      "rawEvents": 206,
+      "artifacts": 6,
+      "observations": [
+        "刷新前后任务编号一致，接回游标71",
+        "暂停房间时游标71，后台继续写入源码并推进至116",
+        "原npm依赖安装、构建与68项测试退出码0，启动原预览服务，7/7执行器检查通过",
+        "完成后真实执行标识回到无任务，房间交付入口关联同一目标",
+        "实际打开独立Demo并渲染工作室；浏览器警告和错误记录为空"
+      ],
+      "demoUrlAtVerification": "http://127.0.0.1:49251/1014_codex_project/003-lofi-room/?view=workspace",
+      "demoExpiresAt": "2026-10-19T22:25:56.190Z",
+      "humanAcceptance": false,
+      "qualityFinding": "模型改动的两处文案位置未完整命中原问题；构建、测试和HTTP通过不能据此认定需求完成。人工验收保持未勾选。主工作区的原电脑面板提示由操作者另行修正，未混入模型交付包。",
+      "sourceArchive": "delivered-source.zip",
+      "manifest": "delivery.json"
+    }
+  ],
+  "rawEvidence": "execution-evidence.json",
+  "boundaries": [
+    "本地Node服务保持运行时，刷新、关页、离开房间或观察断线不会取消任务",
+    "服务进程重启后未完成任务标为中断并保留证据，不自动续跑外部命令",
+    "人物与语音独立展示，重连对齐当前阶段，不逐句重播历史对白",
+    "当前仍是本机独立目录执行，不提供系统或网络隔离",
+    "自动检查通过与人工功能验收分别记录"
+  ],
+  "mediaProvenance": "截图来自本机实际页面，无裁切、合成或图像生成；源码和命令记录来自实际执行。归档检查未发现API密钥、.env、node_modules或.cache。"
+}

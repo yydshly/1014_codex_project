@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-10-20T05:11:27.079Z",
+  "studioUrl": "http://127.0.0.1:4182/1014_codex_project/003-lofi-room/?view=workspace",
+  "replayCompleted": true,
+  "replayButtonEnabled": true,
+  "executionLabel": "当前无真实任务执行",
+  "demoArchiveEnabled": false,
+  "mainArchiveEnabled": false,
+  "audioObservedDuringSecondDiscussion": {
+    "currentTime": 8.443426,
+    "duration": 15.104594,
+    "paused": false
+  },
+  "humanAcceptance": "交付页三个验收框仍未勾选，确认完成按钮禁用。"
+}

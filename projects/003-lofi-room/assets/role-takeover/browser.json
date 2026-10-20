@@ -1,0 +1,780 @@
+{
+  "plan": {
+    "cases": [
+      {
+        "criterion": 1,
+        "title": "打开操作说明，可见“执行中接管”条目且包含继续同一任务",
+        "kind": "browser",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "selector": "#help-button",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "点击页头操作说明按钮"
+          },
+          {
+            "action": "assertVisible",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "checked": true,
+            "comparison": "equals",
+            "description": "说明弹窗已打开"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "value": "执行中接管",
+            "comparison": "contains",
+            "description": "弹窗内可见“执行中接管”说明条目"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "value": "继续同一任务",
+            "comparison": "contains",
+            "description": "新条目内容包含“继续同一任务”"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "value": "点击人物进入工作台",
+            "comparison": "contains",
+            "description": "新条目说明点击人物进入工作台"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "value": "提交修改意见",
+            "comparison": "contains",
+            "description": "新条目说明提交修改意见"
+          }
+        ]
+      },
+      {
+        "criterion": 2,
+        "title": "新条目区分暂停回放与暂停执行，且原自由观察、第一人称说明保留",
+        "kind": "browser",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "selector": "#help-button",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "点击页头操作说明按钮"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "value": "暂停回放只暂停场景",
+            "comparison": "contains",
+            "description": "区分暂停回放只暂停场景"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "value": "暂停执行会拦住后续工具步骤",
+            "comparison": "contains",
+            "description": "区分暂停执行会拦住后续工具步骤"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "value": "当前命令收尾后暂停",
+            "comparison": "contains",
+            "description": "说明暂停执行在当前命令收尾后暂停"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "value": "接管意见保留在本轮记录中",
+            "comparison": "contains",
+            "description": "说明接管意见保留在本轮记录中"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "value": "自由观察",
+            "comparison": "contains",
+            "description": "原“自由观察”说明仍保留"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "value": "第一人称",
+            "comparison": "contains",
+            "description": "原“第一人称”说明仍保留"
+          }
+        ]
+      },
+      {
+        "criterion": 3,
+        "title": "关闭说明回到工作室，并可再次打开说明弹窗",
+        "kind": "browser",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "selector": "#help-button",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "点击页头操作说明按钮"
+          },
+          {
+            "action": "assertVisible",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "checked": true,
+            "comparison": "equals",
+            "description": "弹窗已打开"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#close-help",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "关闭操作说明弹窗"
+          },
+          {
+            "action": "assertVisible",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "checked": false,
+            "comparison": "equals",
+            "description": "说明弹窗已关闭"
+          },
+          {
+            "action": "assertVisible",
+            "target": {
+              "selector": "#mission-card",
+              "exact": true
+            },
+            "checked": true,
+            "comparison": "equals",
+            "description": "回到工作室的任务与成果区域"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#mission-title",
+              "exact": true
+            },
+            "value": "把小屋变成协作工作室",
+            "comparison": "contains",
+            "description": "工作室任务区仍正常显示"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#help-button",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "再次点击页头操作说明按钮"
+          },
+          {
+            "action": "assertVisible",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "checked": true,
+            "comparison": "equals",
+            "description": "说明弹窗可再次打开"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "value": "执行中接管",
+            "comparison": "contains",
+            "description": "再次打开后仍能看到新增说明条目"
+          }
+        ]
+      }
+    ],
+    "entryPath": "/1014_codex_project/003-lofi-room/?view=workspace",
+    "goal": "在003工程现有操作说明弹窗 help-dialog 的说明列表中新增“执行中接管”条目，说明点击人物进入工作台、暂停执行、提交修改意见、继续同一任务。保留现有说明和功能，只做这处小改动；本轮会由使用者在执行中补充具体说明内容，请落实最新意见。沿用现有 preview 及工作室入口。禁止修改原测试、build/test 脚本。无需新增页面或依赖。",
+    "criteria": [
+      "点击页头操作说明按钮，弹窗中可见新增的“执行中接管”说明条目，内容包含继续同一任务",
+      "新增说明能够区分暂停回放与暂停执行，且原自由观察、第一人称说明仍保留",
+      "关闭说明后回到工作室，可以再次打开说明弹窗"
+    ],
+    "createdAt": "2026-10-20T06:35:46.615Z"
+  },
+  "attempts": [
+    {
+      "round": 1,
+      "passed": true,
+      "cases": [
+        {
+          "criterion": 1,
+          "title": "打开操作说明，可见“执行中接管”条目且包含继续同一任务",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "448cd565-1d41-46fa-996e-8652dfd8c4f5",
+              "kind": "browser",
+              "label": "点击页头操作说明按钮",
+              "action": "click",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#help-button",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:47.206Z",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/0a246925-9683-4c74-a767-67ba78950ca0.jpg",
+              "screenshotFile": "0a246925-9683-4c74-a767-67ba78950ca0.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n点击页头操作说明按钮\nPASS",
+              "endedAt": "2026-10-20T06:35:50.531Z"
+            },
+            {
+              "id": "c7a54e37-07fa-4c2f-a3cf-302e9ae51a89",
+              "kind": "browser",
+              "label": "说明弹窗已打开",
+              "action": "assertVisible",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:50.533Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/7dfcf7f3-62c1-4f03-a77a-109ff105c570.jpg",
+              "screenshotFile": "7dfcf7f3-62c1-4f03-a77a-109ff105c570.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertVisible · 验收1\n说明弹窗已打开\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T06:35:51.194Z"
+            },
+            {
+              "id": "1ed3e29e-692a-46cd-8606-0b0d9be9350e",
+              "kind": "browser",
+              "label": "弹窗内可见“执行中接管”说明条目",
+              "action": "assertText",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "执行中接管",
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:51.195Z",
+              "actual": "×\nMAKE YOURSELF AT HOME\n欢迎来到 Agent 工作室。\n\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\n\n协作演示\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\n人物与产物\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\n自由观察\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\n认识住客\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\n第一人称\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\n执行中接管\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\n夜晚的声音\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\n好，慢慢来\n↗",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/a2850311-6141-4fcf-95fa-97f294da1444.jpg",
+              "screenshotFile": "a2850311-6141-4fcf-95fa-97f294da1444.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收1\n弹窗内可见“执行中接管”说明条目\nPASS · 包含匹配\n预期：\"执行中接管\"\n实际：\"×\\nMAKE YOURSELF AT HOME\\n欢迎来到 Agent 工作室。\\n\\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\\n\\n协作演示\\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\\n人物与产物\\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\\n自由观察\\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\\n认识住客\\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\\n第一人称\\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\\n执行中接管\\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\\n夜晚的声音\\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\\n好，慢慢来\\n↗\"",
+              "endedAt": "2026-10-20T06:35:51.655Z"
+            },
+            {
+              "id": "12da89eb-99f6-4b2b-9869-583de5a60692",
+              "kind": "browser",
+              "label": "新条目内容包含“继续同一任务”",
+              "action": "assertText",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "继续同一任务",
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:51.656Z",
+              "actual": "×\nMAKE YOURSELF AT HOME\n欢迎来到 Agent 工作室。\n\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\n\n协作演示\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\n人物与产物\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\n自由观察\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\n认识住客\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\n第一人称\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\n执行中接管\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\n夜晚的声音\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\n好，慢慢来\n↗",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/04b5ef66-ad2d-4cb9-a943-37e44c349f25.jpg",
+              "screenshotFile": "04b5ef66-ad2d-4cb9-a943-37e44c349f25.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收1\n新条目内容包含“继续同一任务”\nPASS · 包含匹配\n预期：\"继续同一任务\"\n实际：\"×\\nMAKE YOURSELF AT HOME\\n欢迎来到 Agent 工作室。\\n\\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\\n\\n协作演示\\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\\n人物与产物\\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\\n自由观察\\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\\n认识住客\\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\\n第一人称\\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\\n执行中接管\\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\\n夜晚的声音\\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\\n好，慢慢来\\n↗\"",
+              "endedAt": "2026-10-20T06:35:52.125Z"
+            },
+            {
+              "id": "cf0fe6bb-e971-441e-bd57-3900f9db0beb",
+              "kind": "browser",
+              "label": "新条目说明点击人物进入工作台",
+              "action": "assertText",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "点击人物进入工作台",
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:52.126Z",
+              "actual": "×\nMAKE YOURSELF AT HOME\n欢迎来到 Agent 工作室。\n\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\n\n协作演示\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\n人物与产物\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\n自由观察\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\n认识住客\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\n第一人称\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\n执行中接管\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\n夜晚的声音\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\n好，慢慢来\n↗",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/c05988cc-d355-45a8-b954-adb860bd8e96.jpg",
+              "screenshotFile": "c05988cc-d355-45a8-b954-adb860bd8e96.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收1\n新条目说明点击人物进入工作台\nPASS · 包含匹配\n预期：\"点击人物进入工作台\"\n实际：\"×\\nMAKE YOURSELF AT HOME\\n欢迎来到 Agent 工作室。\\n\\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\\n\\n协作演示\\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\\n人物与产物\\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\\n自由观察\\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\\n认识住客\\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\\n第一人称\\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\\n执行中接管\\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\\n夜晚的声音\\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\\n好，慢慢来\\n↗\"",
+              "endedAt": "2026-10-20T06:35:52.743Z"
+            },
+            {
+              "id": "b8c3f82d-79ec-48cd-b689-4b0b00e73eef",
+              "kind": "browser",
+              "label": "新条目说明提交修改意见",
+              "action": "assertText",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "提交修改意见",
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:52.744Z",
+              "actual": "×\nMAKE YOURSELF AT HOME\n欢迎来到 Agent 工作室。\n\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\n\n协作演示\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\n人物与产物\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\n自由观察\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\n认识住客\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\n第一人称\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\n执行中接管\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\n夜晚的声音\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\n好，慢慢来\n↗",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/23628b23-b790-41a4-b500-c6655da9586e.jpg",
+              "screenshotFile": "23628b23-b790-41a4-b500-c6655da9586e.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收1\n新条目说明提交修改意见\nPASS · 包含匹配\n预期：\"提交修改意见\"\n实际：\"×\\nMAKE YOURSELF AT HOME\\n欢迎来到 Agent 工作室。\\n\\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\\n\\n协作演示\\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\\n人物与产物\\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\\n自由观察\\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\\n认识住客\\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\\n第一人称\\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\\n执行中接管\\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\\n夜晚的声音\\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\\n好，慢慢来\\n↗\"",
+              "endedAt": "2026-10-20T06:35:53.327Z"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 2,
+          "title": "新条目区分暂停回放与暂停执行，且原自由观察、第一人称说明保留",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "b4dead55-2f0a-4ff1-a13f-416ce629da0a",
+              "kind": "browser",
+              "label": "点击页头操作说明按钮",
+              "action": "click",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-button",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:53.785Z",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/f15720b3-9044-437c-8fda-bda44d65eb6a.jpg",
+              "screenshotFile": "f15720b3-9044-437c-8fda-bda44d65eb6a.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n点击页头操作说明按钮\nPASS",
+              "endedAt": "2026-10-20T06:35:57.162Z"
+            },
+            {
+              "id": "83df429f-c7e0-426e-9937-8178f9902a02",
+              "kind": "browser",
+              "label": "区分暂停回放只暂停场景",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "暂停回放只暂停场景",
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:57.163Z",
+              "actual": "×\nMAKE YOURSELF AT HOME\n欢迎来到 Agent 工作室。\n\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\n\n协作演示\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\n人物与产物\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\n自由观察\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\n认识住客\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\n第一人称\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\n执行中接管\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\n夜晚的声音\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\n好，慢慢来\n↗",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/bb6f86bb-02c7-4caf-a1c8-1471098e3b05.jpg",
+              "screenshotFile": "bb6f86bb-02c7-4caf-a1c8-1471098e3b05.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n区分暂停回放只暂停场景\nPASS · 包含匹配\n预期：\"暂停回放只暂停场景\"\n实际：\"×\\nMAKE YOURSELF AT HOME\\n欢迎来到 Agent 工作室。\\n\\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\\n\\n协作演示\\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\\n人物与产物\\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\\n自由观察\\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\\n认识住客\\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\\n第一人称\\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\\n执行中接管\\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\\n夜晚的声音\\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\\n好，慢慢来\\n↗\"",
+              "endedAt": "2026-10-20T06:35:57.539Z"
+            },
+            {
+              "id": "a7d043c6-a31d-4a75-83fd-5f8303f06760",
+              "kind": "browser",
+              "label": "区分暂停执行会拦住后续工具步骤",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "暂停执行会拦住后续工具步骤",
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:57.540Z",
+              "actual": "×\nMAKE YOURSELF AT HOME\n欢迎来到 Agent 工作室。\n\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\n\n协作演示\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\n人物与产物\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\n自由观察\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\n认识住客\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\n第一人称\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\n执行中接管\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\n夜晚的声音\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\n好，慢慢来\n↗",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/df053ed5-6f41-439d-b235-79d3f7bc9901.jpg",
+              "screenshotFile": "df053ed5-6f41-439d-b235-79d3f7bc9901.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n区分暂停执行会拦住后续工具步骤\nPASS · 包含匹配\n预期：\"暂停执行会拦住后续工具步骤\"\n实际：\"×\\nMAKE YOURSELF AT HOME\\n欢迎来到 Agent 工作室。\\n\\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\\n\\n协作演示\\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\\n人物与产物\\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\\n自由观察\\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\\n认识住客\\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\\n第一人称\\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\\n执行中接管\\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\\n夜晚的声音\\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\\n好，慢慢来\\n↗\"",
+              "endedAt": "2026-10-20T06:35:58.182Z"
+            },
+            {
+              "id": "11cb4437-8a0b-4bd7-8b57-6d21e12fdfc5",
+              "kind": "browser",
+              "label": "说明暂停执行在当前命令收尾后暂停",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "当前命令收尾后暂停",
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:58.183Z",
+              "actual": "×\nMAKE YOURSELF AT HOME\n欢迎来到 Agent 工作室。\n\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\n\n协作演示\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\n人物与产物\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\n自由观察\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\n认识住客\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\n第一人称\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\n执行中接管\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\n夜晚的声音\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\n好，慢慢来\n↗",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/b7f0f957-1ee9-4f99-81f9-54dae6fae13d.jpg",
+              "screenshotFile": "b7f0f957-1ee9-4f99-81f9-54dae6fae13d.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n说明暂停执行在当前命令收尾后暂停\nPASS · 包含匹配\n预期：\"当前命令收尾后暂停\"\n实际：\"×\\nMAKE YOURSELF AT HOME\\n欢迎来到 Agent 工作室。\\n\\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\\n\\n协作演示\\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\\n人物与产物\\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\\n自由观察\\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\\n认识住客\\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\\n第一人称\\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\\n执行中接管\\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\\n夜晚的声音\\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\\n好，慢慢来\\n↗\"",
+              "endedAt": "2026-10-20T06:35:58.493Z"
+            },
+            {
+              "id": "716fa45d-b0d7-4845-a95a-c8bb93375654",
+              "kind": "browser",
+              "label": "说明接管意见保留在本轮记录中",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "接管意见保留在本轮记录中",
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:58.494Z",
+              "actual": "×\nMAKE YOURSELF AT HOME\n欢迎来到 Agent 工作室。\n\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\n\n协作演示\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\n人物与产物\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\n自由观察\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\n认识住客\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\n第一人称\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\n执行中接管\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\n夜晚的声音\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\n好，慢慢来\n↗",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/22b2c4a8-5e09-470b-b4d2-d32645528719.jpg",
+              "screenshotFile": "22b2c4a8-5e09-470b-b4d2-d32645528719.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n说明接管意见保留在本轮记录中\nPASS · 包含匹配\n预期：\"接管意见保留在本轮记录中\"\n实际：\"×\\nMAKE YOURSELF AT HOME\\n欢迎来到 Agent 工作室。\\n\\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\\n\\n协作演示\\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\\n人物与产物\\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\\n自由观察\\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\\n认识住客\\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\\n第一人称\\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\\n执行中接管\\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\\n夜晚的声音\\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\\n好，慢慢来\\n↗\"",
+              "endedAt": "2026-10-20T06:35:58.808Z"
+            },
+            {
+              "id": "82b0f22a-f6cd-4cd1-999c-95b7bf22a944",
+              "kind": "browser",
+              "label": "原“自由观察”说明仍保留",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "自由观察",
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:58.809Z",
+              "actual": "×\nMAKE YOURSELF AT HOME\n欢迎来到 Agent 工作室。\n\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\n\n协作演示\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\n人物与产物\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\n自由观察\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\n认识住客\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\n第一人称\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\n执行中接管\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\n夜晚的声音\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\n好，慢慢来\n↗",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/63c66b8b-cef8-4a01-9150-55feb96fa253.jpg",
+              "screenshotFile": "63c66b8b-cef8-4a01-9150-55feb96fa253.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n原“自由观察”说明仍保留\nPASS · 包含匹配\n预期：\"自由观察\"\n实际：\"×\\nMAKE YOURSELF AT HOME\\n欢迎来到 Agent 工作室。\\n\\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\\n\\n协作演示\\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\\n人物与产物\\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\\n自由观察\\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\\n认识住客\\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\\n第一人称\\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\\n执行中接管\\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\\n夜晚的声音\\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\\n好，慢慢来\\n↗\"",
+              "endedAt": "2026-10-20T06:35:59.254Z"
+            },
+            {
+              "id": "c70732b3-a536-4bba-8fc2-dd6f39da8dc2",
+              "kind": "browser",
+              "label": "原“第一人称”说明仍保留",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "第一人称",
+              "status": "done",
+              "startedAt": "2026-10-20T06:35:59.255Z",
+              "actual": "×\nMAKE YOURSELF AT HOME\n欢迎来到 Agent 工作室。\n\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\n\n协作演示\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\n人物与产物\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\n自由观察\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\n认识住客\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\n第一人称\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\n执行中接管\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\n夜晚的声音\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\n好，慢慢来\n↗",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/e543b6ea-583b-4ba4-baf3-6dabd2c83a7e.jpg",
+              "screenshotFile": "e543b6ea-583b-4ba4-baf3-6dabd2c83a7e.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n原“第一人称”说明仍保留\nPASS · 包含匹配\n预期：\"第一人称\"\n实际：\"×\\nMAKE YOURSELF AT HOME\\n欢迎来到 Agent 工作室。\\n\\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\\n\\n协作演示\\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\\n人物与产物\\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\\n自由观察\\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\\n认识住客\\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\\n第一人称\\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\\n执行中接管\\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\\n夜晚的声音\\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\\n好，慢慢来\\n↗\"",
+              "endedAt": "2026-10-20T06:35:59.841Z"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 3,
+          "title": "关闭说明回到工作室，并可再次打开说明弹窗",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "39acd7a7-aa01-4110-83bb-6f8bc652be81",
+              "kind": "browser",
+              "label": "点击页头操作说明按钮",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#help-button",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T06:36:00.345Z",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/f626ce69-87f3-4713-9d45-edb8a4dd94d1.jpg",
+              "screenshotFile": "f626ce69-87f3-4713-9d45-edb8a4dd94d1.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n点击页头操作说明按钮\nPASS",
+              "endedAt": "2026-10-20T06:36:03.425Z"
+            },
+            {
+              "id": "a60b91e4-ed2b-4d68-af6a-bae8ba0ebf7a",
+              "kind": "browser",
+              "label": "弹窗已打开",
+              "action": "assertVisible",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T06:36:03.426Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/1144d870-4bfa-4021-ab1f-347a4ad2e846.jpg",
+              "screenshotFile": "1144d870-4bfa-4021-ab1f-347a4ad2e846.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertVisible · 验收3\n弹窗已打开\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T06:36:04.053Z"
+            },
+            {
+              "id": "3d517365-425f-4c48-b86e-4fa70f5c32cb",
+              "kind": "browser",
+              "label": "关闭操作说明弹窗",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#close-help",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T06:36:04.054Z",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/b8fe84c5-a214-4526-b46a-bca23638b7ab.jpg",
+              "screenshotFile": "b8fe84c5-a214-4526-b46a-bca23638b7ab.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n关闭操作说明弹窗\nPASS",
+              "endedAt": "2026-10-20T06:36:04.756Z"
+            },
+            {
+              "id": "a9252e18-bc65-4ab8-9e51-79989f9cad36",
+              "kind": "browser",
+              "label": "说明弹窗已关闭",
+              "action": "assertVisible",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": false,
+              "status": "done",
+              "startedAt": "2026-10-20T06:36:04.756Z",
+              "actual": false,
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/5dfbc77d-ccdc-4314-9bd1-3def96c8f0af.jpg",
+              "screenshotFile": "5dfbc77d-ccdc-4314-9bd1-3def96c8f0af.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertVisible · 验收3\n说明弹窗已关闭\nPASS\n预期：false\n实际：false",
+              "endedAt": "2026-10-20T06:36:05.689Z"
+            },
+            {
+              "id": "52550e23-ba7e-42fc-b04d-9bb60a0e4ee7",
+              "kind": "browser",
+              "label": "回到工作室的任务与成果区域",
+              "action": "assertVisible",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#mission-card",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T06:36:05.689Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/814e2ac1-8184-41bf-a857-238165a79045.jpg",
+              "screenshotFile": "814e2ac1-8184-41bf-a857-238165a79045.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertVisible · 验收3\n回到工作室的任务与成果区域\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T06:36:06.661Z"
+            },
+            {
+              "id": "0e83ee3d-33bf-40ba-94a8-444ed893a0d5",
+              "kind": "browser",
+              "label": "工作室任务区仍正常显示",
+              "action": "assertText",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#mission-title",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "把小屋变成协作工作室",
+              "status": "done",
+              "startedAt": "2026-10-20T06:36:06.662Z",
+              "actual": "把小屋变成协作工作室",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/e78a237b-d2b0-44ce-a302-dbc7979875fe.jpg",
+              "screenshotFile": "e78a237b-d2b0-44ce-a302-dbc7979875fe.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收3\n工作室任务区仍正常显示\nPASS · 包含匹配\n预期：\"把小屋变成协作工作室\"\n实际：\"把小屋变成协作工作室\"",
+              "endedAt": "2026-10-20T06:36:07.541Z"
+            },
+            {
+              "id": "cca8719d-2d07-4e68-b0de-73d8c208243c",
+              "kind": "browser",
+              "label": "再次点击页头操作说明按钮",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#help-button",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T06:36:07.542Z",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/56ebbeb5-41f9-450c-b609-4654cde798c7.jpg",
+              "screenshotFile": "56ebbeb5-41f9-450c-b609-4654cde798c7.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n再次点击页头操作说明按钮\nPASS",
+              "endedAt": "2026-10-20T06:36:09.609Z"
+            },
+            {
+              "id": "b75126c8-e914-403e-8154-e09a8c6bbe05",
+              "kind": "browser",
+              "label": "说明弹窗可再次打开",
+              "action": "assertVisible",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T06:36:09.610Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/38923104-2eb9-4bb4-8c34-c2b634ee246b.jpg",
+              "screenshotFile": "38923104-2eb9-4bb4-8c34-c2b634ee246b.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertVisible · 验收3\n说明弹窗可再次打开\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T06:36:10.384Z"
+            },
+            {
+              "id": "765db581-7ac9-4bec-b932-95440f01e80d",
+              "kind": "browser",
+              "label": "再次打开后仍能看到新增说明条目",
+              "action": "assertText",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "执行中接管",
+              "status": "done",
+              "startedAt": "2026-10-20T06:36:10.385Z",
+              "actual": "×\nMAKE YOURSELF AT HOME\n欢迎来到 Agent 工作室。\n\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\n\n协作演示\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\n人物与产物\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\n自由观察\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\n认识住客\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\n第一人称\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\n执行中接管\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\n夜晚的声音\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\n好，慢慢来\n↗",
+              "passed": true,
+              "screenshot": "api/source/runs/7f5de5c1-2e83-4723-ab3e-8551483d1645/browser/ee405ab6-07c9-4cb2-a03b-129b40376599.jpg",
+              "screenshotFile": "ee405ab6-07c9-4cb2-a03b-129b40376599.jpg",
+              "url": "http://127.0.0.1:49241/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收3\n再次打开后仍能看到新增说明条目\nPASS · 包含匹配\n预期：\"执行中接管\"\n实际：\"×\\nMAKE YOURSELF AT HOME\\n欢迎来到 Agent 工作室。\\n\\n每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。\\n\\n协作演示\\n预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax 预先生成。真实模式会调用六位角色 Agent 生成并检查方案。\\n人物与产物\\n点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。\\n自由观察\\n拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\\n认识住客\\n点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。\\n第一人称\\nWASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\\n执行中接管\\n点击人物进入工作台查看它的任务与日志。暂停回放只暂停场景，暂停执行会拦住后续工具步骤。 暂停执行会在当前命令收尾后暂停，不会打断正在运行的这一步。 需要调整方向时，先在成果页或工作台提交修改意见，接管意见保留在本轮记录中。调整完成后继续同一任务，伙伴会带着已有产物接着做。\\n夜晚的声音\\n点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。\\n好，慢慢来\\n↗\"",
+              "endedAt": "2026-10-20T06:36:10.892Z"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "logs": [],
+      "completedAt": "2026-10-20T06:36:10.892Z"
+    }
+  ]
+}

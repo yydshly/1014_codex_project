@@ -1,0 +1,22 @@
+{
+  "sourceRunId": "30b89d02-a24f-433f-8d68-dc9ba675f22b",
+  "appliedAt": "2026-10-20T05:05:46.294Z",
+  "scope": "仅同步实际交付的三个相关文件，不替换执行器与场景代码。",
+  "files": [
+    {
+      "path": "projects/003-lofi-room/web/shared/goal-draft.js",
+      "before": null,
+      "after": "0cc9ae1929b6723bd820c75d52c5ad6fa82be809ac93f70a34454da29e641055"
+    },
+    {
+      "path": "projects/003-lofi-room/web/src/workspace.js",
+      "before": "7f140fd21ddfab9dde004002e346ec2393b93d04b015cac170c8734505e0ed77",
+      "after": "2166bcb6e0cac75884b9bedde486144afb23384e18f03562970f9f30f0f85d6f"
+    },
+    {
+      "path": "projects/003-lofi-room/web/tests/goal-archive-draft.test.js",
+      "before": null,
+      "after": "7e00fefefd53415b9efda2337c8c7d7c0ca11501e7bdbd5d69f8791c2ff403f8"
+    }
+  ]
+}

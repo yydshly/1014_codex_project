@@ -1,0 +1,1090 @@
+{
+  "plan": {
+    "cases": [
+      {
+        "criterion": 1,
+        "title": "填三项后点清空草稿，三项为空且表单仍打开",
+        "kind": "browser",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "selector": "#open-repository",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "打开 GitHub 任务表单"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "为待办应用增加搜索与分类筛选",
+            "comparison": "equals",
+            "description": "填写任务名称"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-brief",
+              "exact": true
+            },
+            "value": "给待办列表增加搜索框并支持按分类筛选。",
+            "comparison": "equals",
+            "description": "填写具体需求"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-criteria",
+              "exact": true
+            },
+            "value": "输入关键词后只显示匹配的待办\n筛选分类时保留搜索条件",
+            "comparison": "equals",
+            "description": "填写逐行验收要求"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "为待办应用增加搜索与分类筛选",
+            "comparison": "equals",
+            "description": "确认名称已填入"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#repository-clear-draft",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "点击清空草稿"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "",
+            "comparison": "equals",
+            "description": "名称被完全清空"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-brief",
+              "exact": true
+            },
+            "value": "",
+            "comparison": "equals",
+            "description": "需求被完全清空"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-criteria",
+              "exact": true
+            },
+            "value": "",
+            "comparison": "equals",
+            "description": "验收被完全清空"
+          },
+          {
+            "action": "assertVisible",
+            "target": {
+              "selector": "#repository-dialog",
+              "exact": true
+            },
+            "checked": true,
+            "comparison": "equals",
+            "description": "任务表单仍保持打开"
+          }
+        ]
+      },
+      {
+        "criterion": 2,
+        "title": "GitHub 固定版本+离线 Demo+地址在清空后保持不变",
+        "kind": "browser",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "selector": "#open-repository",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "打开 GitHub 任务表单"
+          },
+          {
+            "action": "select",
+            "target": {
+              "selector": "#repository-source",
+              "exact": true
+            },
+            "value": "github",
+            "comparison": "equals",
+            "description": "选择代码来源为 GitHub 固定版本"
+          },
+          {
+            "action": "select",
+            "target": {
+              "selector": "#repository-execution",
+              "exact": true
+            },
+            "value": "offline",
+            "comparison": "equals",
+            "description": "选择执行方式为独立离线 Demo"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-input",
+              "exact": true
+            },
+            "value": "https://github.com/developit/mitt",
+            "comparison": "equals",
+            "description": "填写 GitHub 地址"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "为 mitt 增加筛选能力",
+            "comparison": "equals",
+            "description": "填写任务名称"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-brief",
+              "exact": true
+            },
+            "value": "在 mitt 基础上增加可演示的筛选功能。",
+            "comparison": "equals",
+            "description": "填写具体需求"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-criteria",
+              "exact": true
+            },
+            "value": "筛选结果符合条件\n原项目构建与测试通过",
+            "comparison": "equals",
+            "description": "填写逐行验收要求"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#repository-clear-draft",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "点击清空草稿"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-source",
+              "exact": true
+            },
+            "value": "github",
+            "comparison": "equals",
+            "description": "清空后来源仍为 github"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-execution",
+              "exact": true
+            },
+            "value": "offline",
+            "comparison": "equals",
+            "description": "清空后执行方式仍为 offline"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-input",
+              "exact": true
+            },
+            "value": "https://github.com/developit/mitt",
+            "comparison": "equals",
+            "description": "清空后 GitHub 地址保持原值"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "",
+            "comparison": "equals",
+            "description": "名称仍被清空"
+          }
+        ]
+      },
+      {
+        "criterion": 3,
+        "title": "清空后无真实任务执行，功能开发模板名称为“为…增加新功能”且可手改",
+        "kind": "browser",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "selector": "#open-repository",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "打开 GitHub 任务表单"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "临时任务名称",
+            "comparison": "equals",
+            "description": "填写任务名称"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-brief",
+              "exact": true
+            },
+            "value": "临时需求描述。",
+            "comparison": "equals",
+            "description": "填写具体需求"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-criteria",
+              "exact": true
+            },
+            "value": "临时验收一条",
+            "comparison": "equals",
+            "description": "填写逐行验收要求"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#repository-clear-draft",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "点击清空草稿"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#execution-label",
+              "exact": true
+            },
+            "value": "当前无真实任务执行",
+            "comparison": "equals",
+            "description": "清空后仍显示当前无真实任务执行"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#repository-template-feature-dev",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "点击功能开发模板"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "为…增加新功能",
+            "comparison": "equals",
+            "description": "模板填充的任务名称完全等于为…增加新功能"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "为待办应用增加搜索",
+            "comparison": "equals",
+            "description": "手工修改任务名称"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#repository-title",
+              "exact": true
+            },
+            "value": "为待办应用增加搜索",
+            "comparison": "equals",
+            "description": "手改后的名称生效"
+          }
+        ]
+      }
+    ],
+    "goal": "在003当前源码的干净独立副本新增type=button、id=repository-clear-draft、文字“清空草稿”的按钮，只清空名称、需求、验收，保留仓库配置，不提交任务。保留原功能开发模板名称“为…增加新功能”，之后可手改名称。仅改index.html、src/workspace.js及必要样式，禁止改模板定义、旧测试、package脚本和验收器。使用projects/003-lofi-room/web，沿用preview子路径与动态端口。只验收下面三项，不加额外文案或空提示区可见性要求。",
+    "criteria": [
+      "填名称需求验收后点“清空草稿”，三项完全为空，任务表单仍打开",
+      "选择GitHub固定版本与独立离线Demo，填GitHub地址，清空后来源github、方式offline、地址原值不变",
+      "清空后仍显示“当前无真实任务执行”；点功能开发模板名称完全等于“为…增加新功能”，之后可手改名称"
+    ],
+    "createdAt": "2026-10-20T04:27:14.581Z"
+  },
+  "attempts": [
+    {
+      "round": 1,
+      "passed": true,
+      "cases": [
+        {
+          "criterion": 1,
+          "title": "填三项后点清空草稿，三项为空且表单仍打开",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "c71ae3bd-cb2b-4882-9b89-26ea9af0bf30",
+              "kind": "browser",
+              "label": "打开 GitHub 任务表单",
+              "action": "click",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#open-repository",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:15.473Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/9f8b82f6-514d-44a0-a411-dc5863afa007.jpg",
+              "screenshotFile": "9f8b82f6-514d-44a0-a411-dc5863afa007.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n打开 GitHub 任务表单\nPASS",
+              "endedAt": "2026-10-20T04:27:18.611Z"
+            },
+            {
+              "id": "b8742769-ca29-4e25-b5b1-a467f1e9040a",
+              "kind": "browser",
+              "label": "填写任务名称",
+              "action": "fill",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "为待办应用增加搜索与分类筛选",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:18.612Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/05bbe908-306f-4419-ab63-53a206934cf3.jpg",
+              "screenshotFile": "05bbe908-306f-4419-ab63-53a206934cf3.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收1\n填写任务名称\nPASS\n预期：\"为待办应用增加搜索与分类筛选\"",
+              "endedAt": "2026-10-20T04:27:19.381Z"
+            },
+            {
+              "id": "ec30d502-22d6-4137-82ad-fc16827f22f4",
+              "kind": "browser",
+              "label": "填写具体需求",
+              "action": "fill",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-brief",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "给待办列表增加搜索框并支持按分类筛选。",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:19.382Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/8d8bd390-f0ab-49a8-999a-f091fe794c92.jpg",
+              "screenshotFile": "8d8bd390-f0ab-49a8-999a-f091fe794c92.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收1\n填写具体需求\nPASS\n预期：\"给待办列表增加搜索框并支持按分类筛选。\"",
+              "endedAt": "2026-10-20T04:27:19.862Z"
+            },
+            {
+              "id": "91c39382-63a6-498e-9258-9f4c54486438",
+              "kind": "browser",
+              "label": "填写逐行验收要求",
+              "action": "fill",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-criteria",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "输入关键词后只显示匹配的待办\n筛选分类时保留搜索条件",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:19.862Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/f25c7143-e818-423c-bec8-b20d47f59dd5.jpg",
+              "screenshotFile": "f25c7143-e818-423c-bec8-b20d47f59dd5.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收1\n填写逐行验收要求\nPASS\n预期：\"输入关键词后只显示匹配的待办\\n筛选分类时保留搜索条件\"",
+              "endedAt": "2026-10-20T04:27:20.436Z"
+            },
+            {
+              "id": "ba61f805-e6a8-4c89-ae53-57649d3c7faf",
+              "kind": "browser",
+              "label": "确认名称已填入",
+              "action": "assertValue",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "为待办应用增加搜索与分类筛选",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:20.437Z",
+              "actual": "为待办应用增加搜索与分类筛选",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/0ed06d77-0b42-4645-90f6-d94649d71b4e.jpg",
+              "screenshotFile": "0ed06d77-0b42-4645-90f6-d94649d71b4e.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收1\n确认名称已填入\nPASS · 完全相等\n预期：\"为待办应用增加搜索与分类筛选\"\n实际：\"为待办应用增加搜索与分类筛选\"",
+              "endedAt": "2026-10-20T04:27:20.738Z"
+            },
+            {
+              "id": "577604e6-01f7-41ab-bf96-f24d0402ea5c",
+              "kind": "browser",
+              "label": "点击清空草稿",
+              "action": "click",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-clear-draft",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:20.739Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/72634a78-daeb-46d3-ab5f-06900bd77f2e.jpg",
+              "screenshotFile": "72634a78-daeb-46d3-ab5f-06900bd77f2e.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n点击清空草稿\nPASS",
+              "endedAt": "2026-10-20T04:27:21.432Z"
+            },
+            {
+              "id": "c810b4ac-2535-43ed-baba-83c88516896f",
+              "kind": "browser",
+              "label": "名称被完全清空",
+              "action": "assertValue",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:21.432Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/c3f4803a-b2fd-474e-b9d3-d11cdbca10b4.jpg",
+              "screenshotFile": "c3f4803a-b2fd-474e-b9d3-d11cdbca10b4.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收1\n名称被完全清空\nPASS · 完全相等\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T04:27:21.955Z"
+            },
+            {
+              "id": "7e2f9094-9613-492c-8dbe-389e078fe16f",
+              "kind": "browser",
+              "label": "需求被完全清空",
+              "action": "assertValue",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-brief",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:21.955Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/56822a70-a1f9-4c09-a65b-95c625a8ea43.jpg",
+              "screenshotFile": "56822a70-a1f9-4c09-a65b-95c625a8ea43.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收1\n需求被完全清空\nPASS · 完全相等\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T04:27:22.238Z"
+            },
+            {
+              "id": "7abf8c1c-02c9-42f7-82d3-84b0243f731a",
+              "kind": "browser",
+              "label": "验收被完全清空",
+              "action": "assertValue",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-criteria",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:22.238Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/387d9811-a930-4f06-ac72-94f72a76e74d.jpg",
+              "screenshotFile": "387d9811-a930-4f06-ac72-94f72a76e74d.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收1\n验收被完全清空\nPASS · 完全相等\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T04:27:22.510Z"
+            },
+            {
+              "id": "bd40e46b-bf64-4d70-9812-dc3c9acec2a8",
+              "kind": "browser",
+              "label": "任务表单仍保持打开",
+              "action": "assertVisible",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#repository-dialog",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:22.510Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/b04ffc18-c1a7-49ad-9ed4-47de0acd7bf6.jpg",
+              "screenshotFile": "b04ffc18-c1a7-49ad-9ed4-47de0acd7bf6.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertVisible · 验收1\n任务表单仍保持打开\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:27:22.811Z"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 2,
+          "title": "GitHub 固定版本+离线 Demo+地址在清空后保持不变",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "3673bc6a-bbc3-4b28-b81c-d3a1ed01cab8",
+              "kind": "browser",
+              "label": "打开 GitHub 任务表单",
+              "action": "click",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#open-repository",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:23.036Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/8e8e50a0-d266-4dde-8454-48eeebeb34af.jpg",
+              "screenshotFile": "8e8e50a0-d266-4dde-8454-48eeebeb34af.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n打开 GitHub 任务表单\nPASS",
+              "endedAt": "2026-10-20T04:27:25.946Z"
+            },
+            {
+              "id": "820667cb-0d72-4c2d-9b41-53bb62eb0e21",
+              "kind": "browser",
+              "label": "选择代码来源为 GitHub 固定版本",
+              "action": "select",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-source",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "github",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:25.947Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/6e39b6de-29d1-4dc1-9666-1187a9d6a86a.jpg",
+              "screenshotFile": "6e39b6de-29d1-4dc1-9666-1187a9d6a86a.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "select · 验收2\n选择代码来源为 GitHub 固定版本\nPASS\n预期：\"github\"",
+              "endedAt": "2026-10-20T04:27:26.610Z"
+            },
+            {
+              "id": "93e4e5d9-5911-4034-9c77-ff6a521b7e34",
+              "kind": "browser",
+              "label": "选择执行方式为独立离线 Demo",
+              "action": "select",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-execution",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "offline",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:26.610Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/5a187a87-0303-4708-8d3d-7310109072f9.jpg",
+              "screenshotFile": "5a187a87-0303-4708-8d3d-7310109072f9.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "select · 验收2\n选择执行方式为独立离线 Demo\nPASS\n预期：\"offline\"",
+              "endedAt": "2026-10-20T04:27:27.084Z"
+            },
+            {
+              "id": "bcc4477e-404e-4c01-b7b0-5230cb5e0e94",
+              "kind": "browser",
+              "label": "填写 GitHub 地址",
+              "action": "fill",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-input",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "https://github.com/developit/mitt",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:27.084Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/59e5ac85-788f-4f48-acf4-5805d135734c.jpg",
+              "screenshotFile": "59e5ac85-788f-4f48-acf4-5805d135734c.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写 GitHub 地址\nPASS\n预期：\"https://github.com/developit/mitt\"",
+              "endedAt": "2026-10-20T04:27:27.419Z"
+            },
+            {
+              "id": "ba05d11a-8972-48e0-a7d8-b2eeb320365b",
+              "kind": "browser",
+              "label": "填写任务名称",
+              "action": "fill",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "为 mitt 增加筛选能力",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:27.419Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/a66f8b0a-7a43-4844-af7a-cc167e69c142.jpg",
+              "screenshotFile": "a66f8b0a-7a43-4844-af7a-cc167e69c142.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写任务名称\nPASS\n预期：\"为 mitt 增加筛选能力\"",
+              "endedAt": "2026-10-20T04:27:27.745Z"
+            },
+            {
+              "id": "92e4df64-b549-4077-b379-fd9b5b0a68f7",
+              "kind": "browser",
+              "label": "填写具体需求",
+              "action": "fill",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-brief",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "在 mitt 基础上增加可演示的筛选功能。",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:27.745Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/e5407b3a-c7ce-414d-b711-2b00404a8be4.jpg",
+              "screenshotFile": "e5407b3a-c7ce-414d-b711-2b00404a8be4.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写具体需求\nPASS\n预期：\"在 mitt 基础上增加可演示的筛选功能。\"",
+              "endedAt": "2026-10-20T04:27:28.031Z"
+            },
+            {
+              "id": "f233506c-0e3e-4ee2-82fb-d18eb796bce5",
+              "kind": "browser",
+              "label": "填写逐行验收要求",
+              "action": "fill",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-criteria",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "筛选结果符合条件\n原项目构建与测试通过",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:28.031Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/f153b768-36e1-4c0a-8735-4764ba2b007c.jpg",
+              "screenshotFile": "f153b768-36e1-4c0a-8735-4764ba2b007c.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写逐行验收要求\nPASS\n预期：\"筛选结果符合条件\\n原项目构建与测试通过\"",
+              "endedAt": "2026-10-20T04:27:28.413Z"
+            },
+            {
+              "id": "aca7dc34-9172-4ce8-9ff0-0a0b9b118c47",
+              "kind": "browser",
+              "label": "点击清空草稿",
+              "action": "click",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-clear-draft",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:28.413Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/296d2ede-3869-4369-a0e2-c3bcfd9b263c.jpg",
+              "screenshotFile": "296d2ede-3869-4369-a0e2-c3bcfd9b263c.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n点击清空草稿\nPASS",
+              "endedAt": "2026-10-20T04:27:29.394Z"
+            },
+            {
+              "id": "488af5ed-6b6e-42b6-86d5-297b1d4491ac",
+              "kind": "browser",
+              "label": "清空后来源仍为 github",
+              "action": "assertValue",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-source",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "github",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:29.395Z",
+              "actual": "github",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/eee9cdff-8c7f-4ad2-a86d-dca8290ace42.jpg",
+              "screenshotFile": "eee9cdff-8c7f-4ad2-a86d-dca8290ace42.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收2\n清空后来源仍为 github\nPASS · 完全相等\n预期：\"github\"\n实际：\"github\"",
+              "endedAt": "2026-10-20T04:27:29.970Z"
+            },
+            {
+              "id": "f402ea9c-26fb-4d35-9cb9-8200f119f62d",
+              "kind": "browser",
+              "label": "清空后执行方式仍为 offline",
+              "action": "assertValue",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-execution",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "offline",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:29.971Z",
+              "actual": "offline",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/9820c7ff-bf18-4910-9469-b9daee5bb236.jpg",
+              "screenshotFile": "9820c7ff-bf18-4910-9469-b9daee5bb236.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收2\n清空后执行方式仍为 offline\nPASS · 完全相等\n预期：\"offline\"\n实际：\"offline\"",
+              "endedAt": "2026-10-20T04:27:30.282Z"
+            },
+            {
+              "id": "25207833-b5a9-46f7-b685-ec67825956e8",
+              "kind": "browser",
+              "label": "清空后 GitHub 地址保持原值",
+              "action": "assertValue",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-input",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "https://github.com/developit/mitt",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:30.283Z",
+              "actual": "https://github.com/developit/mitt",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/e28bf799-5ad8-4814-ac41-5b2db89a5869.jpg",
+              "screenshotFile": "e28bf799-5ad8-4814-ac41-5b2db89a5869.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收2\n清空后 GitHub 地址保持原值\nPASS · 完全相等\n预期：\"https://github.com/developit/mitt\"\n实际：\"https://github.com/developit/mitt\"",
+              "endedAt": "2026-10-20T04:27:30.619Z"
+            },
+            {
+              "id": "60a2510d-25a7-4a5f-a345-9a564aa051ad",
+              "kind": "browser",
+              "label": "名称仍被清空",
+              "action": "assertValue",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:30.619Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/228a2780-6d9b-45d2-9465-6bcea08674c8.jpg",
+              "screenshotFile": "228a2780-6d9b-45d2-9465-6bcea08674c8.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收2\n名称仍被清空\nPASS · 完全相等\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T04:27:31.010Z"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 3,
+          "title": "清空后无真实任务执行，功能开发模板名称为“为…增加新功能”且可手改",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "2161b56f-e13c-4191-9c27-f06f44973945",
+              "kind": "browser",
+              "label": "打开 GitHub 任务表单",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#open-repository",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:31.322Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/fa9d3465-5cd0-4b5b-af29-04f4ba9adfe3.jpg",
+              "screenshotFile": "fa9d3465-5cd0-4b5b-af29-04f4ba9adfe3.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n打开 GitHub 任务表单\nPASS",
+              "endedAt": "2026-10-20T04:27:36.567Z"
+            },
+            {
+              "id": "927a084a-7c0f-487f-9a6e-39ae025330c2",
+              "kind": "browser",
+              "label": "填写任务名称",
+              "action": "fill",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "临时任务名称",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:36.568Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/5a9f30c8-418a-4710-997e-77aa7f078f6d.jpg",
+              "screenshotFile": "5a9f30c8-418a-4710-997e-77aa7f078f6d.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收3\n填写任务名称\nPASS\n预期：\"临时任务名称\"",
+              "endedAt": "2026-10-20T04:27:36.934Z"
+            },
+            {
+              "id": "0446b725-5a18-471f-9233-441cd01d69a2",
+              "kind": "browser",
+              "label": "填写具体需求",
+              "action": "fill",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-brief",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "临时需求描述。",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:36.935Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/5f16b588-9544-4053-8892-f4f016c83041.jpg",
+              "screenshotFile": "5f16b588-9544-4053-8892-f4f016c83041.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收3\n填写具体需求\nPASS\n预期：\"临时需求描述。\"",
+              "endedAt": "2026-10-20T04:27:37.374Z"
+            },
+            {
+              "id": "cb27aa92-bedd-467d-abc1-e1d0a9d3e2ab",
+              "kind": "browser",
+              "label": "填写逐行验收要求",
+              "action": "fill",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-criteria",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "临时验收一条",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:37.374Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/d966380c-a464-4612-b879-54343ced57d5.jpg",
+              "screenshotFile": "d966380c-a464-4612-b879-54343ced57d5.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收3\n填写逐行验收要求\nPASS\n预期：\"临时验收一条\"",
+              "endedAt": "2026-10-20T04:27:37.737Z"
+            },
+            {
+              "id": "a00a3dd1-d5ab-403d-9ca9-48984a0165c4",
+              "kind": "browser",
+              "label": "点击清空草稿",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-clear-draft",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:37.738Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/741b7033-70de-4e50-99f1-4c87b5f285e4.jpg",
+              "screenshotFile": "741b7033-70de-4e50-99f1-4c87b5f285e4.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n点击清空草稿\nPASS",
+              "endedAt": "2026-10-20T04:27:38.738Z"
+            },
+            {
+              "id": "6325c047-c718-41c6-96db-065889e51edb",
+              "kind": "browser",
+              "label": "清空后仍显示当前无真实任务执行",
+              "action": "assertText",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#execution-label",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "当前无真实任务执行",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:38.739Z",
+              "actual": "当前无真实任务执行",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/d86ec21f-3fee-4bc2-bb1a-d5a182ff6b47.jpg",
+              "screenshotFile": "d86ec21f-3fee-4bc2-bb1a-d5a182ff6b47.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收3\n清空后仍显示当前无真实任务执行\nPASS · 完全相等\n预期：\"当前无真实任务执行\"\n实际：\"当前无真实任务执行\"",
+              "endedAt": "2026-10-20T04:27:39.591Z"
+            },
+            {
+              "id": "23b4124f-a7ae-4197-8ba6-27f4ceec1e06",
+              "kind": "browser",
+              "label": "点击功能开发模板",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-template-feature-dev",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:39.592Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/56e24741-af86-44bd-9d14-bfef67824de7.jpg",
+              "screenshotFile": "56e24741-af86-44bd-9d14-bfef67824de7.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n点击功能开发模板\nPASS",
+              "endedAt": "2026-10-20T04:27:40.767Z"
+            },
+            {
+              "id": "a798c02b-f8e6-44cf-86c8-461f5755d172",
+              "kind": "browser",
+              "label": "模板填充的任务名称完全等于为…增加新功能",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "为…增加新功能",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:40.768Z",
+              "actual": "为…增加新功能",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/82fbe655-68d6-48a5-b7c3-408c3cadf6cb.jpg",
+              "screenshotFile": "82fbe655-68d6-48a5-b7c3-408c3cadf6cb.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n模板填充的任务名称完全等于为…增加新功能\nPASS · 完全相等\n预期：\"为…增加新功能\"\n实际：\"为…增加新功能\"",
+              "endedAt": "2026-10-20T04:27:41.573Z"
+            },
+            {
+              "id": "920b5718-ee68-43ba-8cf8-e0cc2d9be218",
+              "kind": "browser",
+              "label": "手工修改任务名称",
+              "action": "fill",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "为待办应用增加搜索",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:41.574Z",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/34e407ae-3719-40b5-9a24-7707f804c608.jpg",
+              "screenshotFile": "34e407ae-3719-40b5-9a24-7707f804c608.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收3\n手工修改任务名称\nPASS\n预期：\"为待办应用增加搜索\"",
+              "endedAt": "2026-10-20T04:27:42.046Z"
+            },
+            {
+              "id": "34023693-9732-4afb-9745-f7f99ea075a6",
+              "kind": "browser",
+              "label": "手改后的名称生效",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#repository-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "为待办应用增加搜索",
+              "status": "done",
+              "startedAt": "2026-10-20T04:27:42.047Z",
+              "actual": "为待办应用增加搜索",
+              "passed": true,
+              "screenshot": "api/source/runs/16cdf601-8a21-4de4-9349-492e5c8d843f/browser/64cb3783-8cf5-4984-b5d7-2b080d62fb2d.jpg",
+              "screenshotFile": "64cb3783-8cf5-4984-b5d7-2b080d62fb2d.jpg",
+              "url": "http://127.0.0.1:64707/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n手改后的名称生效\nPASS · 完全相等\n预期：\"为待办应用增加搜索\"\n实际：\"为待办应用增加搜索\"",
+              "endedAt": "2026-10-20T04:27:42.941Z"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "logs": [],
+      "completedAt": "2026-10-20T04:27:42.942Z"
+    }
+  ]
+}

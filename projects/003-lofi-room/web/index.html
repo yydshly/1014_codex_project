@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111820" />
+    <meta
+      name="description"
+      content="六位角色、六种 MiniMax 音色，一起完成任务。观察多 Agent 的分工、交接、并行检查和产物。"
+    />
+    <link rel="icon" type="image/svg+xml" href="./moon.svg" />
+    <title>夜半小屋与 Agent 工作室 · 003</title>
+  </head>
+  <body>
+    <canvas
+      id="scene"
+      aria-label="可以自由观察和第一人称漫游的三维房间"
+      tabindex="0"
+    ></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div id="labels" aria-label="房间里的住客"></div>
+    <header class="header">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">☾</span>
+        <div>
+          <p class="eyebrow">AGENT WORKSPACE / ROOM 003</p>
+          <h1 id="page-title">Agent 工作室<span class="title-dot">.</span></h1>
+          <p id="page-subtitle" class="subtitle">
+            围绕同一个目标，讨论、交接，一起交付。
+          </p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <span class="live-badge"><i></i> 六个身份 · 一起交付</span
+        ><button
+          id="help-button"
+          class="icon-button"
+          aria-label="查看操作说明"
+          title="操作说明"
+        >
+          ?
+        </button>
+      </div>
+    </header>
+    <nav class="project-navigation" aria-label="项目与场景入口">
+      <a href="/1014_codex_project/">← 项目首页</a>
+      <a href="./research.html#synthesis">理解与总览</a>
+      <a id="room-entry" href="?view=room">夜半小屋</a>
+      <a id="workspace-entry" href="?view=workspace">Agent 工作室</a>
+    </nav>
+    <aside id="execution-indicator" class="execution-indicator glass" data-kind="unknown" role="status" aria-live="polite" aria-atomic="true" aria-label="真实任务执行状态">
+      <span class="execution-dot" aria-hidden="true"></span><div><strong id="execution-label">正在核对真实任务状态</strong><span id="execution-detail">正在读取后台执行状态…</span></div>
+    </aside>
+    <div id="dialogue-bubble" class="dialogue-bubble" hidden></div>
+    <div class="stage-bar glass" aria-label="场景协作进度">
+      <span class="stage-dot" aria-hidden="true"></span>
+      <div class="stage-copy">
+        <strong id="stage-goal">当前协作目标</strong
+        ><span id="stage-caption" role="status"
+          >准备开始 · 人物会走到白板前分工</span
+        >
+      </div>
+      <button
+        id="room-sound"
+        aria-pressed="false"
+        title="开启 MiniMax 人物互动语音"
+      >
+        开启房间语音
+      </button>
+      <button id="stage-pause" disabled>暂停</button>
+      <button id="stage-stop" disabled>停止</button>
+    </div>
+    <aside class="scene-note">
+      <span class="small-line"></span>
+      <p>一盏灯，一首歌<br />和几个还没睡的朋友。</p>
+      <span class="note-coordinate">23:48 · SOMEWHERE QUIET</span>
+    </aside>
+    <button id="mobile-start" class="primary-button mobile-action">
+      开始协作
+    </button>
+    <button id="toggle-workspace" class="mobile-action">任务与产物</button>
+    <section id="mission-card" class="mission-card glass" aria-label="当前任务与成果">
+      <div class="mission-heading"><span id="mission-status">准备下发</span><button id="mission-new">＋ 新任务</button><button id="mission-history">任务记录</button><button id="mission-expand" aria-expanded="false" aria-controls="mission-details">展开</button></div>
+      <h2 id="mission-title">把一个任务交给房间里的团队</h2>
+      <div id="mission-details" hidden>
+      <p id="mission-brief"></p>
+      <div class="mission-meta"><span id="mission-repository"></span><span id="mission-round"></span></div>
+      <ol id="mission-steps" aria-label="任务执行阶段"></ol>
+      </div>
+      <p id="mission-activity" role="status"></p>
+      <div id="mission-actors" aria-label="正在处理任务的伙伴"></div>
+      <div class="mission-actions"><button id="mission-primary" class="small-primary">下发任务</button><button id="mission-evidence">查看执行记录</button></div>
+    </section>
+    <section
+      id="team-workspace"
+      class="team-panel glass"
+      aria-label="协作任务与记录"
+    >
+      <div class="team-panel-top">
+        <span class="eyebrow">ONE GOAL, SIX AGENTS</span
+        ><span id="run-kind">预设协作演示</span>
+      </div>
+      <div class="goal-switch">
+        <select id="goal-select" aria-label="选择协作目标"></select
+        ><button id="manage-goals">目标看板 ↗</button>
+      </div>
+      <label class="goal-label" for="team-goal">这次一起完成什么？</label>
+      <textarea
+        id="team-goal"
+        rows="3"
+        maxlength="400"
+        aria-label="协作目标"
+      ></textarea>
+      <select id="team-mode" aria-label="协作运行方式">
+        <option id="repository-option" value="repository" disabled>
+          真实项目 · 研究、编码、测试、交付
+        </option>
+        <option value="demo">预设流程 · 完整效果演示</option>
+        <option id="live-option" value="live" disabled>
+          真实 Agent · MiniMax 模型
+        </option>
+      </select>
+      <label id="repository-url-field" hidden
+        >GitHub 项目地址<input
+          id="repository-url"
+          type="url"
+          placeholder="https://github.com/作者/项目"
+          aria-label="本轮 GitHub 项目地址"
+      /></label>
+      <label id="repository-execution-field" hidden>项目任务类型
+        <select id="repository-execution-mode">
+          <option value="upstream">原仓库 · 克隆、安装、修改、构建测试、启动</option>
+          <option value="offline">独立离线 Demo · 无需完整原项目环境</option>
+        </select>
+      </label>
+      <p id="mode-description" class="mode-description"></p>
+      <div class="voice-options">
+        <label
+          ><input id="voice-enabled" type="checkbox" checked />角色语音</label
+        ><label
+          ><input
+            id="follow-speaker"
+            type="checkbox"
+            checked
+          />关注发言者</label
+        >
+      </div>
+      <span id="voice-connection" class="voice-connection"
+        >MiniMax 预生成语音</span
+      >
+      <div class="team-buttons">
+        <button id="start-team" class="primary-button">
+          开始协作 <span>↗</span></button
+        ><button id="pause-team" disabled>暂停回放</button
+        ><button id="stop-team" disabled>停止</button>
+      </div>
+      <div class="team-progress">
+        <i></i><strong id="team-progress">等待开始</strong
+        ><button id="export-team" disabled title="导出本轮协作记录">
+          导出
+        </button>
+      </div>
+      <p id="team-notice" class="team-notice" role="status"></p>
+      <div class="workspace-tabs">
+        <span>协作动态</span><span>产物 <b id="artifact-count">0</b></span>
+      </div>
+      <div
+        id="artifact-list"
+        class="artifact-list"
+        aria-label="已生成产物"
+      ></div>
+      <div id="event-log" class="event-log" aria-label="协作事件记录">
+        <div class="event-empty">开始后，你会看到分工、交接、审阅与返工。</div>
+      </div>
+    </section>
+    <section class="resident-card glass" aria-label="当前住客">
+      <div class="card-top">
+        <span class="eyebrow">MEET YOUR AGENTS</span
+        ><span id="resident-index">01 / 06</span>
+      </div>
+      <div class="agent-badges">
+        <span id="agent-role">协调员</span
+        ><span id="agent-state" data-status="idle">待命</span>
+      </div>
+      <p id="agent-instance" class="agent-instance">mori / 演示角色</p>
+      <div class="resident-info">
+        <canvas
+          id="portrait"
+          width="96"
+          height="96"
+          aria-label="住客像素头像"
+        ></canvas>
+        <div>
+          <h2 id="resident-name">小森</h2>
+          <p id="resident-activity">在房间里散步</p>
+        </div>
+      </div>
+      <p id="resident-description" class="resident-description">
+        把今天的烦恼留在门外，绕着小屋走一走。
+      </p>
+      <div
+        id="resident-picker"
+        class="resident-picker"
+        aria-label="选择住客"
+      ></div>
+      <div class="agent-actions">
+        <button id="open-agent-output">查看角色任务 ↗</button
+        ><button id="preview-voice" title="试听这位角色的 MiniMax 音色">
+          试听音色 ♪
+        </button>
+      </div>
+      <button id="talk-agent" class="talk-button">和小森对话 ↗</button>
+      <button id="enter-resident" class="primary-button">
+        从小森的视角出发 <span aria-hidden="true">↗</span>
+      </button>
+    </section>
+    <div id="workspace-toolbar" class="workspace-toolbar">
+    <nav class="world-tools glass" aria-label="协作空间">
+      <button id="open-repository" class="repository-entry">
+        ＋ GitHub 任务
+      </button>
+      <button id="open-board">▤ 共享白板</button
+      ><button id="open-computer">▣ 协作电脑</button
+      ><button id="open-discussion">◎ 围绕目标讨论</button>
+    </nav>
+    </div>
+    <section
+      id="speech-bar"
+      class="speech-bar glass"
+      hidden
+      aria-label="当前角色发言"
+    >
+      <div class="speech-top">
+        <span class="speech-pulse" aria-hidden="true"
+          ><i></i><i></i><i></i></span
+        ><strong id="speaker-name"></strong
+        ><span id="speech-origin">MiniMax</span
+        ><button id="skip-speech" title="跳过当前发言">跳过本句 ↠</button>
+      </div>
+      <p id="speech-text" aria-live="polite"></p>
+    </section>
+    <div id="walk-banner" class="walk-banner glass" hidden>
+      <span class="walk-dot"></span
+      ><strong id="walk-name">正在小屋里漫游</strong
+      ><span>拖动环顾 · WASD 走动 · Shift 跑步</span
+      ><button id="exit-walk">退出 <kbd>Esc</kbd></button>
+    </div>
+    <footer class="bottom-bar">
+      <section class="music-player glass" aria-label="背景音乐播放器">
+        <button
+          id="music-toggle"
+          class="music-toggle"
+          aria-label="播放背景音乐"
+          aria-pressed="false"
+        >
+          <svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m9 6 10 6-10 6z" />
+          </svg>
+        </button>
+        <div class="track-info">
+          <span class="eyebrow">LO-FI RADIO · ORIGINAL</span
+          ><strong id="track-name">窗边的晚安</strong
+          ><span id="music-status">点一下，让夜晚有声音</span>
+        </div>
+        <div class="equalizer" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <button
+          id="next-track"
+          class="icon-button"
+          aria-label="下一首背景音乐"
+          title="下一首"
+        >
+          ↠
+        </button>
+        <label class="volume-control"
+          ><span class="sr-only">背景音乐音量</span
+          ><input
+            id="volume"
+            type="range"
+            min="0"
+            max="100"
+            value="40"
+            aria-label="背景音乐音量"
+        /></label>
+      </section>
+      <nav class="view-controls glass" aria-label="观察方式">
+        <button id="orbit-mode" class="mode-button active" aria-pressed="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <ellipse cx="12" cy="12" rx="10" ry="5" />
+            <circle cx="12" cy="12" r="3" /></svg
+          >自由观察</button
+        ><button id="walk-mode" class="mode-button" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="13" cy="4" r="2" />
+            <path d="m8 21 3-7 2-5 4 4 3 1M6 11l4-3 4 1m-2 6 5 6" /></svg
+          >走进房间</button
+        ><span class="control-divider"></span
+        ><button
+          id="reset-view"
+          class="icon-button"
+          aria-label="重置观察视角"
+          title="重置视角"
+        >
+          ⟲
+        </button>
+      </nav>
+      <div class="atmosphere glass">
+        <span class="eyebrow">窗外</span
+        ><button id="rain-mode" class="active" aria-pressed="true">雨夜</button
+        ><button id="moon-mode" aria-pressed="false">月夜</button>
+      </div>
+    </footer>
+    <p id="control-hint" class="control-hint">
+      拖动旋转 · 滚轮缩放 · 点击住客认识新朋友
+    </p>
+    <div
+      id="touch-controls"
+      class="touch-controls"
+      hidden
+      aria-label="触屏漫游方向键"
+    >
+      <button data-move="forward" aria-label="向前走">↑</button>
+      <div>
+        <button data-move="left" aria-label="向左走">←</button
+        ><button data-move="backward" aria-label="向后走">↓</button
+        ><button data-move="right" aria-label="向右走">→</button>
+      </div>
+    </div>
+    <dialog id="goals-dialog" class="glass workspace-dialog">
+      <button
+        class="icon-button dialog-close"
+        data-close="goals-dialog"
+        aria-label="关闭目标看板"
+      >
+        ×
+      </button>
+      <span class="eyebrow">GOALS / TEAM / DELIVERY</span>
+      <h2>管理协作目标</h2>
+      <p id="goal-storage-info">目标和每轮交付保存在当前浏览器。</p>
+      <div class="goal-layout">
+        <section>
+          <button id="new-goal" class="small-primary">＋ 新建目标</button>
+          <div id="goal-list" aria-label="目标列表"></div>
+        </section>
+        <section>
+          <form id="goal-form">
+            <label
+              >目标名称<input id="goal-title" maxlength="80" required /></label
+            ><label
+              >目标描述<textarea
+                id="goal-brief"
+                maxlength="400"
+                rows="3"
+                required
+              ></textarea></label
+            ><label
+              >验收要求，一行一条<textarea
+                id="goal-criteria"
+                rows="3"
+                placeholder="分工明确&#10;交接可追踪&#10;交付可查看"
+              ></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="small-primary" type="submit">保存目标</button
+              ><button id="archive-goal" type="button">归档目标</button
+              ><button id="export-goals" type="button">导出目标记录</button>
+            </div>
+          </form>
+          <p id="goal-form-notice" role="status"></p>
+          <h3>角色任务</h3>
+          <div id="goal-tasks" class="task-grid"></div>
+          <h3>每轮交付</h3>
+          <div id="goal-history"></div>
+        </section>
+      </div>
+    </dialog>
+    <dialog id="board-dialog" class="glass workspace-dialog">
+      <button
+        class="icon-button dialog-close"
+        data-close="board-dialog"
+        aria-label="关闭共享白板"
+      >
+        ×</button
+      ><span class="eyebrow">SHARED WHITEBOARD</span>
+      <h2 id="board-title">共享白板</h2>
+      <p id="board-brief"></p>
+      <section id="board-adjustment" class="board-adjustment" aria-label="本轮接管调整方案" hidden></section>
+      <div id="board-tasks" class="task-grid"></div>
+      <h3>验收要求</h3>
+      <div id="board-criteria"></div>
+      <button id="accept-delivery" class="small-primary" disabled>
+        确认验收
+      </button>
+      <h3>讨论与反馈</h3>
+      <div id="board-notes" class="note-grid"></div>
+      <form id="note-form">
+        <label
+          >补充白板意见<textarea
+            id="board-note"
+            rows="2"
+            maxlength="500"
+            required
+            placeholder="把新的约束或修改意见留给团队…"
+          ></textarea></label
+        ><button class="small-primary" type="submit">贴到白板</button>
+      </form>
+      <p class="storage-hint">新意见会进入下一轮真实协作的上下文。</p>
+    </dialog>
+    <aside
+      id="delivery-card"
+      class="delivery-card glass"
+      hidden
+      aria-label="本轮 Demo 交付"
+    >
+      <span class="eyebrow">READY TO TRY</span
+      ><strong id="delivery-title">Demo 已通过验证</strong
+      ><span id="delivery-evidence"></span>
+      <div>
+        <a id="delivery-demo" target="_blank" rel="noopener">打开 Demo ↗</a
+        ><a id="delivery-download" download>下载源码包</a
+        ><button id="delivery-details">查看验证记录</button>
+      </div>
+    </aside>
+    <dialog
+      id="repository-dialog"
+      class="glass workspace-dialog repository-dialog"
+    >
+      <button
+        class="icon-button dialog-close"
+        data-close="repository-dialog"
+        aria-label="关闭 GitHub 任务"
+      >
+        ×
+      </button>
+      <span class="eyebrow">A REAL PROJECT, A WORKING DEMO</span>
+      <h2>这次要让团队做出什么？</h2>
+      <p>
+        六位伙伴会克隆源码、分工修改、运行原有构建与测试，带着失败日志回白板讨论，最后交付可打开的 Demo。
+      </p>
+      <form id="repository-form">
+        <label>任务名称<input id="repository-title" maxlength="80" required placeholder="例如：为待办应用增加搜索与分类筛选" /></label>
+        <label>代码来源<select id="repository-source"><option value="github">GitHub 固定版本</option><option value="workspace" id="workspace-source-option" disabled>当前工作区 · 003 工程的独立副本</option></select></label>
+        <label>执行方式<select id="repository-execution">
+          <option value="upstream">运行原仓库 · 独立目录完整执行</option>
+          <option value="offline">独立离线 Demo · 核心能力演示</option>
+        </select></label>
+        <label
+          >公开 GitHub 仓库<input
+            id="repository-input"
+            type="url"
+            required
+            maxlength="250"
+            placeholder="https://github.com/developit/mitt"
+        /></label>
+        <label
+          >具体要完成什么？<textarea
+            id="repository-brief"
+            rows="3"
+            maxlength="400"
+            required
+            placeholder="描述要修改的功能和操作效果。团队会围绕这个需求研究、编码、测试并交付。"
+          ></textarea>
+        </label>
+        <label>怎样才算完成？一行一条<textarea id="repository-criteria" rows="3" required placeholder="输入关键词后只显示匹配的待办&#10;筛选分类时保留搜索条件&#10;原项目构建与测试通过"></textarea></label>
+        <p id="repository-scope" class="storage-hint">
+          原仓库执行：公开 Node.js 项目，须已有 build/test 脚本。默认本机独立目录，以当前用户权限执行。最多自动返工三轮，Demo 使用独立本机地址。
+        </p>
+        <p id="repository-notice" role="status"></p>
+        <button id="repository-submit" type="submit" class="small-primary">
+          交给团队，开始真实任务 ↗
+        </button>
+      </form>
+    </dialog>
+    <dialog id="result-dialog" class="glass result-dialog" aria-labelledby="result-title">
+      <header class="result-header"><div><span class="eyebrow">本轮任务 / 实际成果</span><h2 id="result-title"></h2><p id="result-brief"></p></div><button data-close="result-dialog" class="small-primary">返回房间</button></header>
+      <div class="result-layout">
+        <section class="result-preview"><div class="result-toolbar"><strong id="result-state"></strong><a id="result-external" target="_blank" rel="noopener">独立窗口打开 ↗</a></div><p id="result-preview-hint"></p><button id="result-restart" hidden>启动已交付的成果</button><iframe id="result-frame" title="当前任务的可运行成果" sandbox="allow-scripts allow-same-origin allow-forms" referrerpolicy="no-referrer" hidden></iframe></section>
+        <section class="result-context"><h3>对照原需求验收</h3><p id="result-provenance"></p><div id="result-criteria"></div><button id="result-accept" class="small-primary">确认完成这项任务</button><h3>这轮实际做了什么</h3><div id="result-work"></div><details><summary>构建与测试证据</summary><pre id="result-tests" class="computer-terminal"></pre></details><a id="result-download" download>下载本轮源码与运行说明</a><form id="result-feedback-form"><label>体验后还需要改什么？<textarea id="result-feedback" rows="3" maxlength="450" required placeholder="例如：搜索没有结果时增加空状态提示，保留已完成的筛选功能。"></textarea></label><p id="result-feedback-scope"></p><button id="result-feedback-submit" class="small-primary" type="submit">把修改意见交回团队</button></form><p id="result-notice" role="status"></p></section>
+      </div>
+    </dialog>
+    <dialog id="computer-dialog" class="glass workspace-dialog">
+      <button
+        class="icon-button dialog-close"
+        data-close="computer-dialog"
+        aria-label="关闭协作电脑"
+      >
+        ×</button
+      ><span class="eyebrow">TEAM COMPUTER / SHARED RESULTS</span>
+      <h2>团队协作电脑</h2>
+      <p id="computer-goal"></p>
+      <a id="computer-source-logs" hidden target="_blank" rel="noopener">打开原仓库完整命令日志 ↗</a>
+      <a id="computer-source-snapshot" hidden download>下载中断时的源码快照（克隆成功后保存）</a>
+      <section id="computer-delivery" hidden>
+        <h3>可运行 Demo</h3>
+        <p id="computer-delivery-summary"></p>
+        <a id="computer-demo" target="_blank" rel="noopener">打开 Demo ↗</a> ·
+        <a id="computer-download" download>下载源码与运行说明</a>
+        <pre id="computer-test-log" class="computer-terminal"></pre>
+      </section>
+      <div id="computer-tasks" class="task-grid"></div>
+      <h3>当前目标的产物</h3>
+      <div id="computer-artifacts"></div>
+      <h3>交接记录</h3>
+      <pre id="computer-events" class="computer-terminal"></pre>
+    </dialog>
+    <dialog
+      id="discussion-dialog"
+      class="glass workspace-dialog discussion-dialog"
+    >
+      <button
+        class="icon-button dialog-close"
+        data-close="discussion-dialog"
+        aria-label="关闭人物对话"
+      >
+        ×</button
+      ><span class="eyebrow">TALK TO YOUR TEAM</span>
+      <h2 id="discussion-title">围绕目标讨论</h2>
+      <p id="discussion-goal"></p>
+      <div class="discussion-controls">
+        <label
+          >先和谁讨论<select
+            id="discussion-actor"
+            aria-label="对话人物"
+          ></select></label
+        ><label
+          >邀请伙伴<select id="discussion-partner" aria-label="讨论伙伴">
+            <option value="">一对一</option>
+          </select></label
+        >
+      </div>
+      <p id="discussion-mode"></p>
+      <div
+        id="discussion-log"
+        class="discussion-log"
+        aria-label="人物对话记录"
+      ></div>
+      <form id="discussion-form">
+        <label
+          >你的问题<textarea
+            id="discussion-question"
+            rows="2"
+            maxlength="400"
+            required
+            placeholder="这个目标怎么分工？请一起讨论可能遗漏的问题。"
+          ></textarea></label
+        ><label class="note-option"
+          ><input
+            id="discussion-note"
+            type="checkbox"
+            checked
+          />把这次讨论加入白板，供下一轮协作参考</label
+        >
+        <div class="form-actions">
+          <button id="send-discussion" class="small-primary" type="submit">
+            发起对话</button
+          ><button id="watch-discussion" type="button" disabled>
+            看人物讨论</button
+          ><button id="pause-discussion" type="button" disabled>暂停播报</button
+          ><button id="stop-discussion" type="button" disabled>停止对话</button
+          ><span id="discussion-notice" role="status"></span>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="help-dialog" class="glass">
+      <button
+        id="close-help"
+        class="icon-button dialog-close"
+        aria-label="关闭操作说明"
+      >
+        ×</button
+      ><span class="eyebrow">MAKE YOURSELF AT HOME</span>
+      <h2>欢迎来到 Agent 工作室。</h2>
+      <p>
+        每个人物代表一种分工。开始一次协作，观察真实事件如何驱动人物、语音、交接和产物。
+      </p>
+      <dl>
+        <dt>协作演示</dt>
+        <dd>
+          预设模式包含并行审阅与验证、返回修改和交付；语音由 MiniMax
+          预先生成。真实模式会调用六位角色 Agent 生成并检查方案。
+        </dd>
+        <dt>人物与产物</dt>
+        <dd>
+          点击人物查看身份、状态和产物。发言按顺序播放，可暂停、跳过或停止。
+        </dd>
+        <dt>自由观察</dt>
+        <dd>拖动旋转，滚轮或双指捏合缩放；方向键调整视角。</dd>
+        <dt>认识住客</dt>
+        <dd>点击角色、名字或右侧头像，再选择「从 TA 的视角出发」。</dd>
+        <dt>第一人称</dt>
+        <dd>
+          WASD / 方向键走动，Shift 跑步，拖动环顾，Esc
+          返回；手机使用屏幕方向键。
+        </dd>
+        <dt>执行中接管</dt>
+        <dd>
+          点击人物进入工作台，查看代码、修改差异和执行命令。暂停回放只暂停场景；暂停执行会在当前命令收尾后拦住后续工具步骤。
+          暂停后提交修改意见，角色会语音回应，必要时邀请伙伴到白板讨论；白板同步展示修改方案、分工与验证方法。接管意见与方案保留在本轮记录中；点击“按方案继续”后才回工位执行同一任务。
+        </dd>
+        <dt>夜晚的声音</dt>
+        <dd>点播放器开启原创合成 lo-fi。切换雨夜 / 月夜会改变窗外和环境声。</dd>
+      </dl>
+      <button id="help-done" class="primary-button">
+        好，慢慢来 <span>↗</span>
+      </button>
+    </dialog>
+    <dialog id="artifact-dialog" class="glass artifact-dialog">
+      <button
+        id="close-artifact"
+        class="icon-button dialog-close"
+        aria-label="关闭产物"
+      >
+        ×</button
+      ><span class="eyebrow">COLLABORATION ARTIFACT</span>
+      <h2 id="artifact-title"></h2>
+      <p id="artifact-meta"></p>
+      <pre id="artifact-content"></pre>
+    </dialog>
+    <div id="loading" class="loading">
+      <span class="loading-moon">☾</span>
+      <p>正在为你留一盏灯…</p>
+    </div>
+    <div id="error" class="error glass" hidden>
+      <h2>小屋暂时没有亮灯</h2>
+      <p id="error-message">
+        请使用支持 WebGL 2 的浏览器，并开启硬件加速后重试。
+      </p>
+      <button id="reload-button" class="primary-button">重新打开</button>
+    </div>
+    <noscript
+      ><p class="noscript">请开启 JavaScript 后走进夜半小屋。</p></noscript
+    >
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

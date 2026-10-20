@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#19383b">
+  <meta name="description" content="从3D lo-fi房间到可接管的Agent工作室：来源能力、事件驱动原理、真实任务与浏览器返工、语音接管，以及当前效果与扩展方向。">
+  <title>003 · 从 3D 小屋到可接管的 Agent 工作室</title>
+  <link rel="icon" href="./moon.svg"><script type="module" src="./src/research.js"></script>
+</head>
+<body class="research-page">
+  <header class="research-nav"><a href="../">← 项目总览</a><a href="#synthesis">理解摘要</a><a href="#overview">理解总图</a><a href="#evidence">实测证据</a><a href="#deployment">部署与运行</a><a class="nav-experience" href="./?view=workspace">体验工作室 ↗</a></header>
+  <main>
+    <section class="research-hero" id="synthesis">
+      <div><p class="eyebrow">003 / LO-FI ROOM → AGENT WORKSPACE</p><h1>从 3D 小屋，<br>到可接管的<br><em>Agent 工作室。</em></h1>
+      <p class="lead">把每个人物绑定到一个工作身份，让任务、电脑、白板、声音和交付共用同一条执行主线。</p>
+      <p class="hero-status">V1 研究原型 · Pages 预设演示 / 本地真实执行</p>
+      <div class="actions"><a class="primary" href="./?view=workspace">进入 Agent 工作室</a><a href="./?view=room">观察夜半小屋</a></div>
+      <p class="note">公网可观察人物、漫游、体验预设协作并听已有 MiniMax 录音。真实编码、测试、动态对话及执行接管在本地 Node 服务中运行。</p></div>
+      <a class="overview-cover" data-asset="png" href="#overview"><img src="../assets/understanding-overview/agent-studio-understanding.png" width="2560" height="5580" alt="我们生成的理解总览图，含来源、原理、扩展、实拍效果、能力与后续方向"><span>沿用既有引导图 · 点击打开 2560 × 5580 高清原图 ↗</span></a>
+    </section>
+
+    <section id="source"><div class="section-heading"><p class="eyebrow">01 / SOURCE & VALUE</p><h2>源能力是什么？我们看到了什么价值？</h2></div>
+      <div class="two-column"><article class="card"><span class="tag">原演示与技术上游</span><h3>可交互的 3D lo-fi 房间</h3><p>原作者演示房间、方块人物与动画，提及 Three.js、Opus、Midjourney。<strong>原场景仓库、固定版本、资产许可及内部实现仍待确认。</strong>当前能确认的技术上游是 Three.js；我们使用其场景、相机、材质、灯光与观察控制能力。</p><p>本项目独立实现几何、纹理、人物、界面与合成音乐，未复制原作者图片、视频、模型或音乐。这里记录的是从原演示获得启发后的独立探索。</p><p><a href="https://x.com/fe_yukichi/status/2110271992041750752" target="_blank" rel="noopener">原始演示帖 ↗</a> · <a href="https://github.com/mrdoob/three.js" target="_blank" rel="noopener">Three.js ↗</a></p></article>
+      <article class="card accent"><span class="tag">我们的判断</span><h3>人物是身份，也是进入工作的入口</h3><dl><dt>谁在做什么</dt><dd>角色、工位、电脑和真实执行状态。</dd><dt>如何协作</dt><dd>白板分工、伙伴对话、产物交接与问题返工。</dd><dt>如何干预</dt><dd>进入工作台查看代码、差异与命令，暂停后提出修改。</dd><dt>如何判断结果</dt><dd>打开同一任务的 Demo，对照需求查看测试、截图和源码。</dd></dl><p>价值落在观察进展、定位问题、介入协作和核对交付。</p></article></div>
+    </section>
+
+    <section id="principle"><div class="section-heading"><p class="eyebrow">02 / HOW IT WORKS</p><h2>后台产生执行事实，房间表达工作过程。</h2></div>
+      <div class="three-column"><article class="card"><h3>身份与编排</h3><p>六个角色分别负责协调、研究、开发、审阅、验证和记录。AI SDK 按角色与阶段调用 MiniMax，结构化产物由 Zod 校验，并传给下一位伙伴。</p></article><article class="card"><h3>真实工具与证据</h3><p>本地 Node 在独立目录固定源码、安装依赖、读写文件，运行原构建测试。Playwright 操作实际 Demo，输出按需求编号的结果与截图。</p></article><article class="card"><h3>事件与场景映射</h3><p>有序事件关联任务、角色与产物，驱动行走、入座、打字、交接、电脑和白板。MiniMax TTS 播报公开回应，音频能量驱动口型。</p></article></div>
+      <p class="flow">目标与任务 ID → 角色 Agent → 实际工具事件 → 房间、工作台与语音 → 可核验交付</p><p class="note">场景回放与后台执行解耦。刷新可接回当前阶段；人物日常活动不推进真实任务，也不代表模型正在执行。角色按阶段创建执行实例，尚无跨任务长期个人记忆。</p>
+    </section>
+
+    <section id="exploration"><div class="section-heading"><p class="eyebrow">03 / OUR EXPLORATIONS</p><h2>从“可看见的房间”，走到可介入的任务闭环。</h2></div>
+      <ol class="journey"><li><h3>场景与身份</h3><p>独立实现房间、自由观察和第一人称，把六个人物绑定到职责、工位与音色。</p></li><li><h3>自然工作与互动</h3><p>白板讨论、坐电脑前工作、面对面交接；阅读、喝水和笔记有内容，拿放道具连续，改进入座、脚底支撑与减速避让。</p></li><li><h3>真实仓库与可运行结果</h3><p>从文字方案、离线 QuickJS Demo，扩展到克隆原仓库、依赖安装、修改源码、原构建测试和本机 Demo。</p></li><li><h3>浏览器发现问题后返工</h3><p>验证员按需求操作实际页面，失败后找开发员讨论、修改，再用冻结的原用例重测，通过后才交付。</p></li><li><h3>后台持续执行与观察</h3><p>持久化任务和事件，区分真实执行、历史记录和预设演示；角色工作台呈现实际代码、前后差异和命令输出。</p></li><li><h3>执行中接管与语音方案</h3><p>当前操作收尾后暂停；提交意见，角色回应并邀请相关伙伴讨论，白板形成调整方案。用户点击继续后，沿用同一任务回工位执行。</p></li></ol>
+    </section>
+
+    <section id="overview"><div class="section-heading"><p class="eyebrow">04 / UNDERSTANDING MAP</p><h2>把我们的理解放在同一张图里。</h2><p>直接使用已生成的总览图，原始字节保留。图中的“未发布、未提交”是制图时状态；当前发布状态以本页及部署记录为准。</p></div>
+      <div class="actions"><a data-asset="png" class="primary">打开高清 PNG ↗</a><a data-asset="svg">打开可编辑 SVG ↗</a></div>
+      <details class="full-overview"><summary>展开完整总览图</summary><img loading="lazy" src="../assets/understanding-overview/agent-studio-understanding.png" width="2560" height="5580" alt="完整项目理解总览长图"></details>
+    </section>
+
+    <section id="capabilities"><div class="section-heading"><p class="eyebrow">05 / CURRENT CAPABILITIES</p><h2>现在支持什么？在哪一端可用？</h2></div>
+      <div class="table-scroll"><table><thead><tr><th>能力</th><th>Pages 公开体验</th><th>本地 Node 服务</th></tr></thead><tbody>
+        <tr><th>房间与人物</th><td>自由观察、第一人称、雨夜/月夜、日常动作</td><td>同样支持</td></tr>
+        <tr><th>目标与协作</th><td>浏览器本地目标、预设分工、交接、返工与既有录音</td><td>真实模型生成方案、伙伴对话和语音</td></tr>
+        <tr><th>角色工作台</th><td>观察预设产物与演示记录，明确标识来源</td><td>实际源码片段、修改差异、执行命令与输出</td></tr>
+        <tr><th>仓库任务闭环</th><td>本页查看实测过程与结果</td><td>克隆/本地快照、依赖、源码修改、原构建测试与浏览器验收</td></tr>
+        <tr><th>执行中接管</th><td>阅读操作说明与真实证据</td><td>工具边界暂停、意见版本、语音讨论、白板方案、同任务继续</td></tr>
+        <tr><th>交付与恢复</th><td>导出演示记录，数据留在当前浏览器</td><td>Demo、源码 ZIP、命令/截图、刷新重连、反馈续轮</td></tr>
+      </tbody></table></div>
+      <div class="callout">公开 Node.js 项目需已有 build / test；目录执行使用当前用户权限，无系统隔离。服务崩溃后标记中断，尚不自动续跑外部命令。浏览器验收覆盖固定 DOM 用例，不能外推为全部业务与三维视觉已验收。</div>
+    </section>
+
+    <section id="evidence"><div class="section-heading"><p class="eyebrow">06 / OBSERVED RESULTS</p><h2>效果有真实任务记录，也保留失败与纠正。</h2></div>
+      <div class="three-column"><article class="card"><span class="tag">外部真实仓库</span><h3>mitt 中文事件实验室</h3><p>固定上游源码，安装、修改、运行原 build/test；19 个 Mocha 用例与类型检查、lint 通过，交付消费真实构建产物的 Demo。</p><p>保留两次返工和工具误判修正，不将模型口头声明作为测试结果。</p></article><article class="card"><span class="tag">本库真实缺陷</span><h3>新草稿误归档旧目标</h3><p>浏览器复现原版失败，桃桃找小蓝讨论。首次修复漏导入又被页面报错拦下，再次修复与同用例重测后交付。</p><p>原77项测试、新4项测试和三场景28步浏览器操作通过，修复同步回本项目。</p></article><article class="card"><span class="tag">真实执行接管</span><h3>意见进入源码与交付</h3><p>小蓝语音回应、桃桃提出建议、白板修正分工；等操作者点击继续后，原任务完成修改、审阅与独立验证。</p><p>81项原项目测试、三场景20步浏览器操作、8项交付检查通过；接管实现专项58/58通过。</p></article></div>
+      <div class="screens"><figure><img loading="lazy" src="../assets/takeover-voice/02-waiting-for-continue.jpg" width="1280" height="720" alt="真实接管任务中人物在白板前等待继续"><figcaption>实际截图：方案形成后保持暂停，用户明确继续才执行。</figcaption></figure><figure><img loading="lazy" src="../assets/takeover-voice/04-delivery-and-browser-results.jpg" width="1280" height="720" alt="同一真实任务的成果、自动检查与人工验收"><figcaption>同一任务交付：可操作成果、角色记录和浏览器验收关联。</figcaption></figure></div>
+      <p class="note">不同范围的测试数字不相加。截图是本地实测记录，不是当前公网正在执行的新任务；最终人工体验验收由用户确认。</p><p><a data-asset="proof">本轮验证摘要 JSON ↗</a> · <a href="https://github.com/yydshly/1014_codex_project/tree/main/projects/003-lofi-room/assets" target="_blank" rel="noopener">完整来源与证据目录 ↗</a></p>
+    </section>
+
+    <section id="future"><div class="section-heading"><p class="eyebrow">07 / NEXT DIRECTIONS</p><h2>后续方向：先可靠，再扩大能力。</h2><p>以下为可扩展方向，尚未实现或尚未完整验证。</p></div><div class="two-column"><article class="card"><h3>可靠执行与可控运行</h3><p>断点续跑、幂等重试、多任务队列、资源与成本控制；受控隔离、权限边界与云端持久运行。</p></article><article class="card"><h3>更强的 Agent 与项目知识</h3><p>接入 MCP、多模型、更多技术栈；角色长期记忆、技能复用与跨项目知识。</p></article><article class="card"><h3>多人共同工作</h3><p>多人在线、跨设备观察、语音输入、角色权限和共同接管，让办公室成为团队协作入口。</p></article><article class="card"><h3>生产交付与更完整验收</h3><p>Git 分支、PR、CI、正式部署，以及截图、无障碍与三维场景的视觉验收，形成长期可运营的交付工作流。</p></article></div></section>
+
+    <section id="deployment"><div class="section-heading"><p class="eyebrow">08 / DEPLOYMENT & LOCAL EXECUTION</p><h2>GitHub 能保存 MiniMax 密钥，Pages 承载演示。</h2></div><div class="two-column"><article class="card"><h3>本次公开发布范围</h3><p>理解摘要、原始总览图、3D 房间、预设协作与已有 MiniMax 录音。公开构建不包含 Node 后端、环境文件、运行缓存与 API 密钥；无需配置 MiniMax 即可体验。</p><p>实时模型、动态语音、仓库执行与接管保留本地运行。公网入口不会轮询本地接口，也不会把预设流程冒充真实编码。</p></article><article class="card"><h3>Secrets 的作用与后续接法</h3><p>GitHub Actions Secrets 可以将 <code>MINIMAX_API_KEY</code> 提供给构建、预生成语音或验证工作流；它不会让 Pages 获得常驻 API 服务。</p><p>未来线上实时运行需单独部署受保护的 Node 后台，在后台配置密钥。不能把密钥写成 <code>VITE_*</code> 变量编进浏览器代码。</p><p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener">Pages 官方说明 ↗</a> · <a href="https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets" target="_blank" rel="noopener">Actions Secrets ↗</a></p></article></div>
+      <h3>启动本地真实工作室</h3><pre><code>cd projects/003-lofi-room/web
+npm ci
+# 在 web/.env.local 设置 MINIMAX_API_KEY
+# 或设置 MINIMAX_ENV_FILE 指向已有私有配置
+npm run dev</code></pre><p>本地默认入口：<code>http://127.0.0.1:4175/1014_codex_project/003-lofi-room/?view=workspace</code>。Node 需 ≥22.12.0；首次浏览器验收需执行 <code>npm run browser:install</code>。详细范围、来源与启动方式见 <a href="https://github.com/yydshly/1014_codex_project/blob/main/projects/003-lofi-room/web/README.md" target="_blank" rel="noopener">运行说明 ↗</a>。</p>
+    </section>
+  </main>
+  <footer><p>003 · V1 研究原型 / 独立实现 / 本地真实验证</p><p>基础版本：Three.js 0.186.1 · AI SDK 7.0.140 · Zod 4.6.7 · Playwright 1.64.1。作者原场景仓库与资产许可仍待确认。</p><a href="../">返回总入口</a> · <a href="./?view=workspace">体验工作室</a> · <a href="https://github.com/yydshly/1014_codex_project/tree/main/projects/003-lofi-room">代码与研究记录</a></footer>
+</body></html>

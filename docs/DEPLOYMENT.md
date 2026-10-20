@@ -122,3 +122,11 @@ _site/
 沿用统一 GitHub Pages 流程，发布能力、原理、效果、场景、价值和自动化边界。主入口 `008-specreel/#synthesis`，实际回放与视频在 `#results`，原创总结图在 `#overview-map`。图文准确说明 Agent 可选组织、Playwright 实际控制浏览器、Specreel 加工记录；准备好的流程可以无人值守执行，并不据此承诺任意任务全过程零人工。
 
 构建入口为 `projects/008-specreel/web/build.mjs`，采用已有 HTML、MP4、PNG / SVG、固定引擎源码与许可的静态白名单，保留其他发布项目。页面不调用模型、不启动自动操作、不发布账号或原始 trace。部署状态与公网验证范围见 [008 部署记录](../projects/008-specreel/deployment.json)。
+
+## 003 可接管的 Agent 工作室
+
+公开 research.html 理解摘要、既有理解总览图、夜半小屋和预设协作。摘要区分原演示/Three.js技术上游、本项目独立扩展、真实任务验证、当前能力与后续方向。原场景仓库和资产许可待确认；引导图原字节不变。
+
+项目 web/build.mjs 检查与测试后将静态产物写入 web/.cache/pages-dist/，由 web/pages.json 的 outputs 指定，保留本地真实预览的 dist/。全站发布仍重建并保留全部既有项目。公开版跳过后台API，实时MiniMax、仓库执行与接管继续由本地Node服务承担。GitHub Actions Secrets只向工作流提供环境值，Pages不能运行常驻Node API；本次发布不需要上传密钥。
+
+部署与公网验收记录见 [003发布记录](../projects/003-lofi-room/deployment.json)；验证后才登记 demo_url。

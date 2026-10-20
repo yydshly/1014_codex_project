@@ -1,0 +1,28 @@
+.screen-viewer { position: fixed; z-index: 16; left: 50%; bottom: 110px; transform: translateX(-50%); display: flex; align-items: center; gap: 7px; width: max-content; max-width: calc(100vw - 40px); padding: 12px 16px; border-radius: 12px; background: #111e26f2; }
+.screen-viewer[hidden] { display: none; }
+.screen-viewer-copy { min-width: 180px; margin-right: 12px; }
+.screen-viewer strong { display: block; color: #e2e8d1; font-size: 13px; }
+.screen-viewer span { display: block; color: #a7baa7; font-size: 10px; margin-top: 4px; }
+.screen-viewer button { background: #ffffff09; color: #ced9c5; border: 1px solid #ffffff20; border-radius: 6px; padding: 8px 10px; font-size: 11px; cursor: pointer; white-space: nowrap; }
+.screen-viewer button[aria-pressed=true] { background: #bccba0; color: #253b30; }
+.screen-viewer button:focus-visible { outline: 2px solid #d8dca9; outline-offset: 2px; }
+.screen-viewer button:disabled { opacity: .45; cursor: default; }
+.viewing-screen .mission-card, .viewing-screen .resident-label, .viewing-screen .world-tools, .viewing-screen .stage-bar, .viewing-screen .observer-dock, .viewing-screen .team-panel, .viewing-screen .resident-card, .viewing-screen #toggle-workspace { visibility: hidden; }
+.viewing-props .mission-card, .viewing-props .resident-label, .viewing-props .world-tools, .viewing-props .stage-bar, .viewing-props .observer-dock, .viewing-props .team-panel, .viewing-props .resident-card, .viewing-props #toggle-workspace { visibility: hidden; }
+.personal-viewer select { background: #24352e; color: #d6e0c9; border: 1px solid #ffffff20; border-radius: 6px; padding: 7px; }
+@media (max-width: 800px) { .screen-viewer { bottom: 108px; flex-wrap: wrap; justify-content: center; width: calc(100vw - 48px); } .screen-viewer-copy { flex: 1 0 100%; text-align: center; margin: 0 0 3px; } .screen-viewer button { padding: 7px; font-size: 10px; } }
+.viewing-props .header .brand, .viewing-props .bottom-bar, .viewing-props #control-hint { visibility: hidden; }
+.viewing-props .project-navigation { top: 25px; }
+.personal-viewer { width: min(900px, calc(100vw - 40px)); box-sizing: border-box; bottom: 22px; flex-wrap: wrap; justify-content: center; }
+.personal-viewer .screen-viewer-copy { flex: 1 0 100%; text-align: center; margin: 0 0 4px; }
+.personal-viewer .personal-camera-status { color: #a5b6c5; }
+.personal-viewer button, .personal-viewer select { min-height: 34px; font-size: 12px; }
+.personal-viewer [hidden] { display: none; }
+.personal-text { flex: 1 0 100%; color: #d7dfce; font-size: 12px; }
+.personal-text summary { cursor: pointer; width: fit-content; margin: 4px auto; padding: 5px 10px; }
+.personal-text p { white-space: pre-wrap; line-height: 1.8; max-height: min(220px, 25vh); overflow: auto; background: #0d1923; padding: 12px; border-radius: 7px; margin: 6px 0 0; }
+@media (max-width: 620px) {
+  .viewing-props .project-navigation { visibility: hidden; }
+  .viewing-props .execution-indicator { top: 20px; left: 20px; right: 76px; width: auto; }
+  .personal-viewer { max-width: calc(100vw - 24px); width: calc(100vw - 24px); padding: 10px; bottom: 12px; }
+}

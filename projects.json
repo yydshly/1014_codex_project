@@ -27,13 +27,14 @@
     {
       "id": "003",
       "slug": "lofi-room",
-      "title": "夜半小屋与 Agent 工作室：3D 协作空间",
+      "title": "从3D小屋到可接管的Agent工作室",
       "repository": "https://github.com/mrdoob/three.js",
-      "summary": "人物随目标到白板讨论、电脑入座、桌边检查与当面交接；MiniMax 驱动真实角色、语音与交付，保留原房间及目标验收。",
+      "summary": "原帖展示3D lo-fi房间与方块人物，源场景仓库待确认。我们独立探索身份绑定、语音、场景工作、真实编码测试、浏览器返工与执行中接管，形成可观察的Agent工作室；可扩展持久执行、多模型工具和多人协作。Pages提供预设体验，真实任务本地运行。",
       "status": "已完成",
-      "preview": "assets/workspace-actions-computer.png",
-      "preview_caption": "003 真实 Agent 协作运行截图：开发员走到窗边电脑并入座处理任务，人物动作随目标推进，同项目保留原房间。",
-      "demo_url": null
+      "preview": "assets/understanding-overview/agent-studio-understanding.png",
+      "preview_caption": "003 理解总览：来源能力、运行原理、独立扩展、探索过程、三张实际截图、当前能力、验证与后续方向。",
+      "demo_url": null,
+      "source_url": "https://x.com/fe_yukichi/status/2110271992041750752"
     },
     {
       "id": "004",

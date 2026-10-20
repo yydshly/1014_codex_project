@@ -21,6 +21,26 @@
 - 分别保留原文于 `AI-SDK-LICENSE.txt` 与 `OPENAI-COMPATIBLE-LICENSE.txt`；用于本地服务端角色 Agent 和 MiniMax 兼容接口，未修改上游文件。
 - Zod 仓库：<https://github.com/colinhacks/zod>；固定 `4.6.7`，MIT，原文保留在 `ZOD-LICENSE.txt`；用于工具产物校验。
 
+## QuickJS 与 ZIP 交付
+
+- quickjs-emscripten：<https://github.com/justjake/quickjs-emscripten>，固定 `0.32.0`，MIT。用公开 API 在限时、限内存的 WASM 环境执行核心功能测试，未改上游；原文见 `QUICKJS-EMSCRIPTEN-LICENSE.txt`。包内 QuickJS 引擎许可保留于 `QUICKJS-ENGINE-LICENSE.txt`。
+- fflate：<https://github.com/101arrowz/fflate>，固定 `0.8.3`，MIT。生成本地源码交付 ZIP，未改上游；原文见 `FFLATE-LICENSE.txt`。
+
+## 可选项目兼容运行时
+
+- 官方来源：<https://nodejs.org/dist/v20.18.3/>；Node20.18.3 Windows x64 ZIP SHA256固定为 `11d483dfba711bc7c9bcb513e80a2941be0c2e7cbf62753755785b9a6e80a731`。
+- 仅按需下载到被忽略的项目缓存，用于旧esm加载器兼容；不修改系统Node、不随源码ZIP分发二进制。Node的MIT及附带第三方许可证保留在官方包内LICENSE，未修改上游程序。
+
+## Vercel Sandbox（可选）
+
+- 仓库：<https://github.com/vercel/sandbox>；npm 固定 `@vercel/sandbox 3.8.0`，Apache-2.0；原文见 `VERCEL-SANDBOX-LICENSE.txt`。
+- 用公开 SDK 创建、运行、限制出站网络与关闭隔离VM，未修改上游代码。Docker 适配另调用用户本机 Docker CLI，使用官方 `node:22-bookworm` 镜像；镜像实际摘要由 Docker 拉取记录确定，目前尚无实机记录，不伪造固定摘要。
+
+## Playwright 与浏览器功能验收
+
+- 仓库：<https://github.com/microsoft/playwright>；npm 固定 `playwright 1.64.1` 与 `playwright-core 1.64.1`，Apache-2.0，未修改上游文件。原文及NOTICE保留为 `PLAYWRIGHT-LICENSE.txt`、`PLAYWRIGHT-NOTICE.txt`。
+- 用公开API启动独立无登录态的 Chromium 会话，执行页面操作与断言。安装说明：<https://playwright.dev/docs/browsers>。浏览器由官方安装器下载到本机缓存，不随前端或交付源码ZIP打包；其上游第三方许可随官方浏览器分发保存。
+
 ## MiniMax 生成语音
 
 - 服务：<https://platform.minimax.cn>；`speech-2.8-turbo`，六种官方系统音色。

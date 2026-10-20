@@ -29,7 +29,8 @@ for (const {name, item} of published) {
   const build = resolve(project, 'web/build.mjs');
   const result = spawnSync(process.execPath, [build], { cwd: root, stdio: 'inherit' });
   if (result.status !== 0) throw new Error(`构建失败：${name}`);
-  const dist = resolve(project, 'web/dist');
+  const dist = resolve(project, manifest.outputs?.[name] || 'web/dist');
+  if (!dist.startsWith(project + sep)) throw new Error(`构建产物目录越界：${name}`);
   if (!(await stat(resolve(dist, 'index.html'))).isFile()) throw new Error(`缺少入口：${name}`);
   await cp(dist, resolve(output, name), { recursive: true });
 }

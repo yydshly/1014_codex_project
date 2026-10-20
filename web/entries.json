@@ -156,6 +156,24 @@
         "label": "一张图理解自动演示",
         "path": "008-specreel/#overview-map"
       }
+    ],
+    "003": [
+      {
+        "label": "理解摘要与扩展方向",
+        "path": "003-lofi-room/research.html#synthesis"
+      },
+      {
+        "label": "理解总览图",
+        "path": "003-lofi-room/research.html#overview"
+      },
+      {
+        "label": "Agent工作室 · 预设演示",
+        "path": "003-lofi-room/?view=workspace"
+      },
+      {
+        "label": "夜半小屋 · 观察与漫游",
+        "path": "003-lofi-room/?view=room"
+      }
     ]
   }
 }

@@ -1,0 +1,42 @@
+{
+  "name": "research-003-lofi-room",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4175 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4175 --strictPort",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/navigation.test.js tests/residents.test.js tests/workflow.test.js tests/speech.test.js tests/api.test.js tests/goals.test.js tests/catalog.test.js tests/discussion.test.js tests/choreography.test.js tests/social.test.js tests/repository.test.js tests/source-project.test.js tests/local-runner.test.js",
+    "voices": "node scripts/render-demo-voices.mjs",
+    "room-voices": "node scripts/render-room-voices.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "test:templates": "node --test tests/task-templates.test.js",
+    "test:workbench": "node --test tests/workbench.test.js tests/workbench-stream.test.js",
+    "test:screens": "node --test tests/workstation.test.js",
+    "test:props": "node --test tests/resident-content.test.js tests/book-actions.test.js",
+    "test:traffic": "node --test tests/traffic.test.js",
+    "test:ground": "node --test tests/ground-contact.test.js",
+    "test:background": "node --test tests/background-tasks.test.js",
+    "test:takeover": "node --test tests/execution-control.test.js tests/takeover-discussion.test.js tests/background-tasks.test.js tests/workbench.test.js tests/workbench-stream.test.js tests/workstation.test.js tests/choreography.test.js --test-concurrency=1",
+    "test:browser": "node --test tests/browser-acceptance.test.js",
+    "browser:install": "playwright install chromium --only-shell"
+  },
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "3.0.68",
+    "@vercel/sandbox": "3.8.0",
+    "ai": "7.0.140",
+    "fflate": "0.8.3",
+    "playwright": "1.64.1",
+    "quickjs-emscripten": "0.32.0",
+    "three": "0.186.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "vite": "8.3.4"
+  }
+}

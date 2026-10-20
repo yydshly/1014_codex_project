@@ -1,0 +1,714 @@
+{
+  "plan": {
+    "cases": [
+      {
+        "criterion": 1,
+        "title": "操作说明“执行中接管”说明语音回应、伙伴讨论与白板方案",
+        "kind": "browser",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "selector": "#help-button",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "打开操作说明"
+          },
+          {
+            "action": "assertVisible",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "checked": true,
+            "comparison": "equals",
+            "description": "弹窗可见"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog dl > dt:nth-of-type(6)",
+              "exact": true
+            },
+            "value": "执行中接管",
+            "comparison": "equals",
+            "description": "确认条目名称"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog dl > dd:nth-of-type(6)",
+              "exact": true
+            },
+            "value": "语音回应",
+            "comparison": "contains",
+            "description": "包含语音回应"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog dl > dd:nth-of-type(6)",
+              "exact": true
+            },
+            "value": "伙伴讨论",
+            "comparison": "contains",
+            "description": "包含伙伴讨论"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog dl > dd:nth-of-type(6)",
+              "exact": true
+            },
+            "value": "白板显示调整方案",
+            "comparison": "contains",
+            "description": "包含白板展示调整方案"
+          }
+        ]
+      },
+      {
+        "criterion": 2,
+        "title": "说明点击继续后才回工位执行，且自由观察/第一人称条目保留",
+        "kind": "browser",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "selector": "#help-button",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "打开操作说明"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog dl > dd:nth-of-type(6)",
+              "exact": true
+            },
+            "value": "点击继续后才回工位执行",
+            "comparison": "contains",
+            "description": "明确点击继续后才回工位执行"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog dl > dt:nth-of-type(3)",
+              "exact": true
+            },
+            "value": "自由观察",
+            "comparison": "equals",
+            "description": "自由观察条目保留"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog dl > dd:nth-of-type(3)",
+              "exact": true
+            },
+            "value": "拖动旋转",
+            "comparison": "contains",
+            "description": "自由观察说明内容保留"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog dl > dt:nth-of-type(5)",
+              "exact": true
+            },
+            "value": "第一人称",
+            "comparison": "equals",
+            "description": "第一人称条目保留"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog dl > dd:nth-of-type(5)",
+              "exact": true
+            },
+            "value": "Shift 跑步",
+            "comparison": "contains",
+            "description": "第一人称说明内容保留"
+          },
+          {
+            "action": "assertCount",
+            "target": {
+              "selector": "#help-dialog dl > dt",
+              "exact": true
+            },
+            "count": 7,
+            "comparison": "equals",
+            "description": "说明条目数量未减少"
+          }
+        ]
+      },
+      {
+        "criterion": 3,
+        "title": "操作说明可关闭并重新打开，新增说明仍在",
+        "kind": "browser",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "selector": "#help-button",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "打开操作说明"
+          },
+          {
+            "action": "assertVisible",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "checked": true,
+            "comparison": "equals",
+            "description": "弹窗已打开"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#close-help",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "关闭操作说明"
+          },
+          {
+            "action": "assertVisible",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "checked": false,
+            "comparison": "equals",
+            "description": "弹窗已关闭"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#help-button",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "重新打开操作说明"
+          },
+          {
+            "action": "assertVisible",
+            "target": {
+              "selector": "#help-dialog",
+              "exact": true
+            },
+            "checked": true,
+            "comparison": "equals",
+            "description": "弹窗重新可见"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#help-dialog dl > dd:nth-of-type(6)",
+              "exact": true
+            },
+            "value": "角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。",
+            "comparison": "contains",
+            "description": "新增说明仍在"
+          }
+        ]
+      }
+    ],
+    "entryPath": "/1014_codex_project/003-lofi-room/?view=workspace",
+    "goal": "在003现有 help-dialog 操作说明的“执行中接管”条目中，补充语音回应、伙伴讨论、白板调整方案及点击继续后回工位执行的说明。只改这个已有条目的文字，不改执行器或其它模块，不新增页面和依赖。本轮会由使用者在接管时补充具体文字，请先读取本轮最新意见与讨论方案再修改。保留现有说明、原 build/test 和所有测试；沿用现有 preview 工作室入口。",
+    "criteria": [
+      "打开操作说明，“执行中接管”条目说明语音回应和伙伴讨论，白板展示调整方案",
+      "说明明确点击继续后才回工位执行，原自由观察和第一人称说明仍保留",
+      "操作说明弹窗可关闭并重新打开，新增说明仍在"
+    ],
+    "createdAt": "2026-10-20T07:14:08.624Z"
+  },
+  "attempts": [
+    {
+      "round": 1,
+      "passed": true,
+      "cases": [
+        {
+          "criterion": 1,
+          "title": "操作说明“执行中接管”说明语音回应、伙伴讨论与白板方案",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "c8cf90c4-6f5e-4a76-bfc5-527bd330ee05",
+              "kind": "browser",
+              "label": "打开操作说明",
+              "action": "click",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#help-button",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:09.016Z",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/99fa182a-9a12-4114-8fa8-8dd4d07baba7.jpg",
+              "screenshotFile": "99fa182a-9a12-4114-8fa8-8dd4d07baba7.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n打开操作说明\nPASS",
+              "endedAt": "2026-10-20T07:14:11.809Z"
+            },
+            {
+              "id": "ffe7cfd9-2ec0-4677-8c70-da4324327bf4",
+              "kind": "browser",
+              "label": "弹窗可见",
+              "action": "assertVisible",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:11.810Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/398b2a1f-2de9-4298-b858-41213a4d88ca.jpg",
+              "screenshotFile": "398b2a1f-2de9-4298-b858-41213a4d88ca.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertVisible · 验收1\n弹窗可见\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T07:14:12.313Z"
+            },
+            {
+              "id": "831a1e09-9439-4a37-a6df-6bce2ac23ee1",
+              "kind": "browser",
+              "label": "确认条目名称",
+              "action": "assertText",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog dl > dt:nth-of-type(6)",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "执行中接管",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:12.314Z",
+              "actual": "执行中接管",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/bf9cb60c-85be-426f-852f-a90ff139eb3c.jpg",
+              "screenshotFile": "bf9cb60c-85be-426f-852f-a90ff139eb3c.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收1\n确认条目名称\nPASS · 完全相等\n预期：\"执行中接管\"\n实际：\"执行中接管\"",
+              "endedAt": "2026-10-20T07:14:12.819Z"
+            },
+            {
+              "id": "0fb45d93-7ec4-4f41-ad33-e21cba14c13a",
+              "kind": "browser",
+              "label": "包含语音回应",
+              "action": "assertText",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog dl > dd:nth-of-type(6)",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "语音回应",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:12.819Z",
+              "actual": "点击人物进入工作台，查看代码、修改差异和执行命令。暂停回放只暂停场景；暂停执行会在当前命令收尾后拦住后续工具步骤。 暂停后提交修改意见，再继续同一任务；接管意见保留在本轮记录中。伙伴会到白板前听取指导，继续后回工位工作。角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/dfbe3356-d27d-45ca-80e2-427f54e692c9.jpg",
+              "screenshotFile": "dfbe3356-d27d-45ca-80e2-427f54e692c9.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收1\n包含语音回应\nPASS · 包含匹配\n预期：\"语音回应\"\n实际：\"点击人物进入工作台，查看代码、修改差异和执行命令。暂停回放只暂停场景；暂停执行会在当前命令收尾后拦住后续工具步骤。 暂停后提交修改意见，再继续同一任务；接管意见保留在本轮记录中。伙伴会到白板前听取指导，继续后回工位工作。角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。\"",
+              "endedAt": "2026-10-20T07:14:13.133Z"
+            },
+            {
+              "id": "1d9c61ad-4f31-4df8-9dff-9f2353106f07",
+              "kind": "browser",
+              "label": "包含伙伴讨论",
+              "action": "assertText",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog dl > dd:nth-of-type(6)",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "伙伴讨论",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:13.135Z",
+              "actual": "点击人物进入工作台，查看代码、修改差异和执行命令。暂停回放只暂停场景；暂停执行会在当前命令收尾后拦住后续工具步骤。 暂停后提交修改意见，再继续同一任务；接管意见保留在本轮记录中。伙伴会到白板前听取指导，继续后回工位工作。角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/1a48cef2-ca2a-480c-bbbb-1ef367d41352.jpg",
+              "screenshotFile": "1a48cef2-ca2a-480c-bbbb-1ef367d41352.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收1\n包含伙伴讨论\nPASS · 包含匹配\n预期：\"伙伴讨论\"\n实际：\"点击人物进入工作台，查看代码、修改差异和执行命令。暂停回放只暂停场景；暂停执行会在当前命令收尾后拦住后续工具步骤。 暂停后提交修改意见，再继续同一任务；接管意见保留在本轮记录中。伙伴会到白板前听取指导，继续后回工位工作。角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。\"",
+              "endedAt": "2026-10-20T07:14:13.445Z"
+            },
+            {
+              "id": "446a53ed-eb96-4dc8-a4e2-618ad5ffc005",
+              "kind": "browser",
+              "label": "包含白板展示调整方案",
+              "action": "assertText",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog dl > dd:nth-of-type(6)",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "白板显示调整方案",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:13.445Z",
+              "actual": "点击人物进入工作台，查看代码、修改差异和执行命令。暂停回放只暂停场景；暂停执行会在当前命令收尾后拦住后续工具步骤。 暂停后提交修改意见，再继续同一任务；接管意见保留在本轮记录中。伙伴会到白板前听取指导，继续后回工位工作。角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/677184a1-5f0b-464e-88d8-ef66235fbc68.jpg",
+              "screenshotFile": "677184a1-5f0b-464e-88d8-ef66235fbc68.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收1\n包含白板展示调整方案\nPASS · 包含匹配\n预期：\"白板显示调整方案\"\n实际：\"点击人物进入工作台，查看代码、修改差异和执行命令。暂停回放只暂停场景；暂停执行会在当前命令收尾后拦住后续工具步骤。 暂停后提交修改意见，再继续同一任务；接管意见保留在本轮记录中。伙伴会到白板前听取指导，继续后回工位工作。角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。\"",
+              "endedAt": "2026-10-20T07:14:13.858Z"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 2,
+          "title": "说明点击继续后才回工位执行，且自由观察/第一人称条目保留",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "f5ce4fe5-05dc-4b27-ac0c-70b93565d30d",
+              "kind": "browser",
+              "label": "打开操作说明",
+              "action": "click",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-button",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:14.242Z",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/2240e559-bb0b-4e76-bdc8-693add62e539.jpg",
+              "screenshotFile": "2240e559-bb0b-4e76-bdc8-693add62e539.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n打开操作说明\nPASS",
+              "endedAt": "2026-10-20T07:14:17.393Z"
+            },
+            {
+              "id": "944b5fbd-c7e1-4a07-a263-2a71794fd655",
+              "kind": "browser",
+              "label": "明确点击继续后才回工位执行",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog dl > dd:nth-of-type(6)",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "点击继续后才回工位执行",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:17.394Z",
+              "actual": "点击人物进入工作台，查看代码、修改差异和执行命令。暂停回放只暂停场景；暂停执行会在当前命令收尾后拦住后续工具步骤。 暂停后提交修改意见，再继续同一任务；接管意见保留在本轮记录中。伙伴会到白板前听取指导，继续后回工位工作。角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/c23331e2-bf45-43dc-91ff-68bb6d34a90a.jpg",
+              "screenshotFile": "c23331e2-bf45-43dc-91ff-68bb6d34a90a.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n明确点击继续后才回工位执行\nPASS · 包含匹配\n预期：\"点击继续后才回工位执行\"\n实际：\"点击人物进入工作台，查看代码、修改差异和执行命令。暂停回放只暂停场景；暂停执行会在当前命令收尾后拦住后续工具步骤。 暂停后提交修改意见，再继续同一任务；接管意见保留在本轮记录中。伙伴会到白板前听取指导，继续后回工位工作。角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。\"",
+              "endedAt": "2026-10-20T07:14:17.694Z"
+            },
+            {
+              "id": "b95941a9-d0b4-4792-84bd-c1e93df754aa",
+              "kind": "browser",
+              "label": "自由观察条目保留",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog dl > dt:nth-of-type(3)",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "自由观察",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:17.695Z",
+              "actual": "自由观察",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/414b059c-1962-4c92-a84a-5049a3887389.jpg",
+              "screenshotFile": "414b059c-1962-4c92-a84a-5049a3887389.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n自由观察条目保留\nPASS · 完全相等\n预期：\"自由观察\"\n实际：\"自由观察\"",
+              "endedAt": "2026-10-20T07:14:18.129Z"
+            },
+            {
+              "id": "ee3d0282-d16b-47d9-8b4c-1128e090d299",
+              "kind": "browser",
+              "label": "自由观察说明内容保留",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog dl > dd:nth-of-type(3)",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "拖动旋转",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:18.130Z",
+              "actual": "拖动旋转，滚轮或双指捏合缩放；方向键调整视角。",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/0f7e182a-be41-4b85-b34a-a97a37de8542.jpg",
+              "screenshotFile": "0f7e182a-be41-4b85-b34a-a97a37de8542.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n自由观察说明内容保留\nPASS · 包含匹配\n预期：\"拖动旋转\"\n实际：\"拖动旋转，滚轮或双指捏合缩放；方向键调整视角。\"",
+              "endedAt": "2026-10-20T07:14:18.869Z"
+            },
+            {
+              "id": "e1190a69-c18b-42b9-ad9c-fca9112fac6d",
+              "kind": "browser",
+              "label": "第一人称条目保留",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog dl > dt:nth-of-type(5)",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "第一人称",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:18.869Z",
+              "actual": "第一人称",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/7cf370aa-f6df-47bc-aa86-fa6989c6f2ca.jpg",
+              "screenshotFile": "7cf370aa-f6df-47bc-aa86-fa6989c6f2ca.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n第一人称条目保留\nPASS · 完全相等\n预期：\"第一人称\"\n实际：\"第一人称\"",
+              "endedAt": "2026-10-20T07:14:19.244Z"
+            },
+            {
+              "id": "4c00c46a-6a44-4300-b69e-c19f1bef9e1b",
+              "kind": "browser",
+              "label": "第一人称说明内容保留",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog dl > dd:nth-of-type(5)",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "Shift 跑步",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:19.244Z",
+              "actual": "WASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/2090f391-1da6-4230-9f50-46725ea08d6b.jpg",
+              "screenshotFile": "2090f391-1da6-4230-9f50-46725ea08d6b.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n第一人称说明内容保留\nPASS · 包含匹配\n预期：\"Shift 跑步\"\n实际：\"WASD / 方向键走动，Shift 跑步，拖动环顾，Esc 返回；手机使用屏幕方向键。\"",
+              "endedAt": "2026-10-20T07:14:19.712Z"
+            },
+            {
+              "id": "d4a55b1c-bb5f-48e5-8ca1-3073cf352629",
+              "kind": "browser",
+              "label": "说明条目数量未减少",
+              "action": "assertCount",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog dl > dt",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": 7,
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:19.712Z",
+              "actual": 7,
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/0998d50d-9ead-4766-976f-dd4ab8f55c32.jpg",
+              "screenshotFile": "0998d50d-9ead-4766-976f-dd4ab8f55c32.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertCount · 验收2\n说明条目数量未减少\nPASS\n预期：7\n实际：7",
+              "endedAt": "2026-10-20T07:14:20.375Z"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 3,
+          "title": "操作说明可关闭并重新打开，新增说明仍在",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "06fe9422-6435-4a7c-8a1a-0a4cca2a3d7c",
+              "kind": "browser",
+              "label": "打开操作说明",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#help-button",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:20.724Z",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/8b3a3651-801b-4531-9b71-0107d7bef394.jpg",
+              "screenshotFile": "8b3a3651-801b-4531-9b71-0107d7bef394.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n打开操作说明\nPASS",
+              "endedAt": "2026-10-20T07:14:23.383Z"
+            },
+            {
+              "id": "d7322e3a-f3b1-4681-b9af-75a0e1be08f1",
+              "kind": "browser",
+              "label": "弹窗已打开",
+              "action": "assertVisible",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:23.384Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/c4f710ef-28e4-4220-9c79-81e59d35fc50.jpg",
+              "screenshotFile": "c4f710ef-28e4-4220-9c79-81e59d35fc50.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertVisible · 验收3\n弹窗已打开\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T07:14:23.729Z"
+            },
+            {
+              "id": "68880fc9-1da8-456c-9961-30e61a821b66",
+              "kind": "browser",
+              "label": "关闭操作说明",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#close-help",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:23.730Z",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/8409cd8f-e7da-4fab-b553-f73272258f62.jpg",
+              "screenshotFile": "8409cd8f-e7da-4fab-b553-f73272258f62.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n关闭操作说明\nPASS",
+              "endedAt": "2026-10-20T07:14:24.452Z"
+            },
+            {
+              "id": "93d040c3-4673-4de4-a48b-e0be00a975dc",
+              "kind": "browser",
+              "label": "弹窗已关闭",
+              "action": "assertVisible",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": false,
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:24.452Z",
+              "actual": false,
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/5022e6ba-bf78-4c7b-b7db-0007926bd0ab.jpg",
+              "screenshotFile": "5022e6ba-bf78-4c7b-b7db-0007926bd0ab.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertVisible · 验收3\n弹窗已关闭\nPASS\n预期：false\n实际：false",
+              "endedAt": "2026-10-20T07:14:25.322Z"
+            },
+            {
+              "id": "60f1196a-7677-476e-be8b-9da44bada7ac",
+              "kind": "browser",
+              "label": "重新打开操作说明",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#help-button",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:25.322Z",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/dbbfa945-1b7f-45b8-9ed9-025f0276b013.jpg",
+              "screenshotFile": "dbbfa945-1b7f-45b8-9ed9-025f0276b013.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n重新打开操作说明\nPASS",
+              "endedAt": "2026-10-20T07:14:27.116Z"
+            },
+            {
+              "id": "1dc8510c-748c-48e4-adf4-5e80501acc86",
+              "kind": "browser",
+              "label": "弹窗重新可见",
+              "action": "assertVisible",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:27.117Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/0e48feb9-c3b3-4c54-9d49-3a329353f202.jpg",
+              "screenshotFile": "0e48feb9-c3b3-4c54-9d49-3a329353f202.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertVisible · 验收3\n弹窗重新可见\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T07:14:27.657Z"
+            },
+            {
+              "id": "7f2d72fc-8b8c-418f-b8fd-4d42be919ffb",
+              "kind": "browser",
+              "label": "新增说明仍在",
+              "action": "assertText",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#help-dialog dl > dd:nth-of-type(6)",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。",
+              "status": "done",
+              "startedAt": "2026-10-20T07:14:27.659Z",
+              "actual": "点击人物进入工作台，查看代码、修改差异和执行命令。暂停回放只暂停场景；暂停执行会在当前命令收尾后拦住后续工具步骤。 暂停后提交修改意见，再继续同一任务；接管意见保留在本轮记录中。伙伴会到白板前听取指导，继续后回工位工作。角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。",
+              "passed": true,
+              "screenshot": "api/source/runs/99ba8fb6-6610-4966-a80e-6c7fb5a90769/browser/8ab4422d-7a87-4d5a-a56c-928bb0371705.jpg",
+              "screenshotFile": "8ab4422d-7a87-4d5a-a56c-928bb0371705.jpg",
+              "url": "http://127.0.0.1:58947/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收3\n新增说明仍在\nPASS · 包含匹配\n预期：\"角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。\"\n实际：\"点击人物进入工作台，查看代码、修改差异和执行命令。暂停回放只暂停场景；暂停执行会在当前命令收尾后拦住后续工具步骤。 暂停后提交修改意见，再继续同一任务；接管意见保留在本轮记录中。伙伴会到白板前听取指导，继续后回工位工作。角色会语音回应并和伙伴讨论，白板显示调整方案；点击继续后才回工位执行。\"",
+              "endedAt": "2026-10-20T07:14:28.371Z"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "logs": [],
+      "completedAt": "2026-10-20T07:14:28.371Z"
+    }
+  ]
+}

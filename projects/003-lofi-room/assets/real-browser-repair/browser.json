@@ -1,0 +1,3185 @@
+{
+  "plan": {
+    "cases": [
+      {
+        "criterion": 1,
+        "title": "新建未保存草稿时归档目标按钮禁用",
+        "kind": "browser",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "selector": "#mission-history",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "打开任务记录进入目标看板"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#new-goal",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "点击新建目标进入空白草稿"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#goal-title",
+              "exact": true
+            },
+            "value": "",
+            "comparison": "equals",
+            "description": "草稿标题为空"
+          },
+          {
+            "action": "assertEnabled",
+            "target": {
+              "selector": "#archive-goal",
+              "exact": true
+            },
+            "checked": false,
+            "comparison": "equals",
+            "description": "未保存草稿时归档目标按钮必须禁用"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#archive-goal",
+              "exact": true
+            },
+            "value": "归档目标",
+            "comparison": "equals",
+            "description": "草稿状态下按钮文案仍为归档目标"
+          }
+        ]
+      },
+      {
+        "criterion": 2,
+        "title": "新建并保存有效目标后归档可用并可归档再恢复",
+        "kind": "browser",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "selector": "#mission-history",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "打开目标看板"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#new-goal",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "新建目标草稿"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#goal-title",
+              "exact": true
+            },
+            "value": "验收用新目标",
+            "comparison": "equals",
+            "description": "填写目标名称"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#goal-brief",
+              "exact": true
+            },
+            "value": "用于验证归档按钮在保存后恢复可用的新目标描述",
+            "comparison": "equals",
+            "description": "填写目标描述"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#goal-criteria",
+              "exact": true
+            },
+            "value": "归档按钮保存后可用",
+            "comparison": "equals",
+            "description": "填写验收要求"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#goal-form button[type=\"submit\"]",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "保存目标"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#goal-title",
+              "exact": true
+            },
+            "value": "验收用新目标",
+            "comparison": "equals",
+            "description": "保存后标题保留"
+          },
+          {
+            "action": "assertEnabled",
+            "target": {
+              "selector": "#archive-goal",
+              "exact": true
+            },
+            "checked": true,
+            "comparison": "equals",
+            "description": "保存后归档目标按钮启用"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#archive-goal",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "点击归档该新目标"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#archive-goal",
+              "exact": true
+            },
+            "value": "恢复",
+            "comparison": "contains",
+            "description": "归档后按钮变为可恢复状态"
+          },
+          {
+            "action": "assertEnabled",
+            "target": {
+              "selector": "#archive-goal",
+              "exact": true
+            },
+            "checked": true,
+            "comparison": "equals",
+            "description": "归档后仍可点击恢复"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#archive-goal",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "点击恢复该目标"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#archive-goal",
+              "exact": true
+            },
+            "value": "归档目标",
+            "comparison": "equals",
+            "description": "恢复后按钮回到归档目标"
+          },
+          {
+            "action": "assertEnabled",
+            "target": {
+              "selector": "#archive-goal",
+              "exact": true
+            },
+            "checked": true,
+            "comparison": "equals",
+            "description": "恢复后归档按钮仍启用"
+          }
+        ]
+      },
+      {
+        "criterion": 3,
+        "title": "关闭再打开看板后恢复原目标内容且归档按钮可用",
+        "kind": "browser",
+        "steps": [
+          {
+            "action": "click",
+            "target": {
+              "selector": "#mission-history",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "打开目标看板"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#new-goal",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "新建未保存草稿"
+          },
+          {
+            "action": "fill",
+            "target": {
+              "selector": "#goal-title",
+              "exact": true
+            },
+            "value": "不应保存的草稿",
+            "comparison": "equals",
+            "description": "草稿里填入内容但不保存"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "[data-close=\"goals-dialog\"]",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "关闭目标看板"
+          },
+          {
+            "action": "click",
+            "target": {
+              "selector": "#mission-history",
+              "exact": true
+            },
+            "comparison": "equals",
+            "description": "再次打开目标看板"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#goal-title",
+              "exact": true
+            },
+            "value": "把小屋变成协作工作室",
+            "comparison": "equals",
+            "description": "重新打开后显示原有目标名称"
+          },
+          {
+            "action": "assertValue",
+            "target": {
+              "selector": "#goal-brief",
+              "exact": true
+            },
+            "value": "为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。",
+            "comparison": "equals",
+            "description": "重新打开后显示原有目标描述"
+          },
+          {
+            "action": "assertText",
+            "target": {
+              "selector": "#archive-goal",
+              "exact": true
+            },
+            "value": "归档目标",
+            "comparison": "equals",
+            "description": "按钮文案为归档目标"
+          },
+          {
+            "action": "assertEnabled",
+            "target": {
+              "selector": "#archive-goal",
+              "exact": true
+            },
+            "checked": true,
+            "comparison": "equals",
+            "description": "重新打开已有目标后归档按钮可用"
+          }
+        ]
+      }
+    ],
+    "goal": "修复003目标看板的真实缺陷：点“新建目标”进入未保存草稿时，归档按钮仍可用，可能误归档旧目标。使用当前003工程独立副本。先保持原版，让桃桃在真实Demo复现失败，再与小蓝讨论后修复；禁止预先改坏代码。修复后未保存草稿禁用归档，保存或重新打开已有目标后恢复可用，已有归档/恢复正常。只改相关源码，可新增针对性测试，禁止改旧测试、build/test脚本和验收器；沿用原preview子路径与动态端口。",
+    "criteria": [
+      "打开目标看板点“新建目标”，空白未保存草稿下“归档目标”按钮必须禁用，不能操作旧目标",
+      "新建并填有效名称、描述、验收后保存，归档按钮启用，点击可归档再恢复这个新目标",
+      "新建未保存草稿后关闭再打开看板，恢复原有目标内容，归档按钮重新启用且仍为“归档目标”"
+    ],
+    "createdAt": "2026-10-20T04:46:42.828Z",
+    "entryPath": "/1014_codex_project/003-lofi-room/?view=workspace",
+    "resumedFromRunId": "84047db7-5300-4384-a0cf-14c8016b5a89"
+  },
+  "attempts": [
+    {
+      "round": 1,
+      "passed": false,
+      "cases": [
+        {
+          "criterion": 1,
+          "title": "新建未保存草稿时归档目标按钮禁用",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "816dee53-eaef-490e-8765-0060a15d7715",
+              "kind": "browser",
+              "label": "打开任务记录进入目标看板",
+              "action": "click",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:46:43.089Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/ebca1e22-2b29-41bd-b7dc-06f6594ca195.jpg",
+              "screenshotFile": "ebca1e22-2b29-41bd-b7dc-06f6594ca195.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n打开任务记录进入目标看板\nPASS",
+              "endedAt": "2026-10-20T04:46:46.313Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/ebca1e22-2b29-41bd-b7dc-06f6594ca195.jpg"
+            },
+            {
+              "id": "e8daa057-3840-4654-b64c-7168c64ecbb6",
+              "kind": "browser",
+              "label": "点击新建目标进入空白草稿",
+              "action": "click",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:46:46.313Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/2dda5c1a-c72c-4669-b5f1-05e454d49a8b.jpg",
+              "screenshotFile": "2dda5c1a-c72c-4669-b5f1-05e454d49a8b.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n点击新建目标进入空白草稿\nPASS",
+              "endedAt": "2026-10-20T04:46:47.075Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/2dda5c1a-c72c-4669-b5f1-05e454d49a8b.jpg"
+            },
+            {
+              "id": "562a7586-5097-475e-a973-b1b8351ee01a",
+              "kind": "browser",
+              "label": "草稿标题为空",
+              "action": "assertValue",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T04:46:47.076Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/edc223db-3b45-4507-8cbc-b4c7d78f23a6.jpg",
+              "screenshotFile": "edc223db-3b45-4507-8cbc-b4c7d78f23a6.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收1\n草稿标题为空\nPASS · 完全相等\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T04:46:47.608Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/edc223db-3b45-4507-8cbc-b4c7d78f23a6.jpg"
+            },
+            {
+              "id": "d13204b2-833a-4455-88e2-372e4622f984",
+              "kind": "browser",
+              "label": "未保存草稿时归档目标按钮必须禁用",
+              "action": "assertEnabled",
+              "criterion": 1,
+              "round": 1,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": false,
+              "status": "failed",
+              "startedAt": "2026-10-20T04:46:47.608Z",
+              "actual": true,
+              "passed": false,
+              "error": "预期 false，实际 true",
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/522b9257-acc7-4d2b-b699-d35d87c24c80.jpg",
+              "screenshotFile": "522b9257-acc7-4d2b-b699-d35d87c24c80.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收1\n未保存草稿时归档目标按钮必须禁用\nFAIL\n预期：false\n实际：true\n预期 false，实际 true",
+              "endedAt": "2026-10-20T04:46:53.222Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/522b9257-acc7-4d2b-b699-d35d87c24c80.jpg"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "criterion": 2,
+          "title": "新建并保存有效目标后归档可用并可归档再恢复",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "fec88f4c-67f1-4fc3-a567-e16b159db9bd",
+              "kind": "browser",
+              "label": "打开目标看板",
+              "action": "click",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:46:53.478Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/fcc2d8f3-1b70-4420-925d-debde8e7836f.jpg",
+              "screenshotFile": "fcc2d8f3-1b70-4420-925d-debde8e7836f.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n打开目标看板\nPASS",
+              "endedAt": "2026-10-20T04:46:55.980Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/fcc2d8f3-1b70-4420-925d-debde8e7836f.jpg"
+            },
+            {
+              "id": "46193191-3edd-45da-996f-e15f7628fc9c",
+              "kind": "browser",
+              "label": "新建目标草稿",
+              "action": "click",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:46:55.980Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/ee3a649f-4eed-404c-871c-af03aa1694a5.jpg",
+              "screenshotFile": "ee3a649f-4eed-404c-871c-af03aa1694a5.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n新建目标草稿\nPASS",
+              "endedAt": "2026-10-20T04:46:56.617Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/ee3a649f-4eed-404c-871c-af03aa1694a5.jpg"
+            },
+            {
+              "id": "79af6531-2eee-4463-a040-504346596e0b",
+              "kind": "browser",
+              "label": "填写目标名称",
+              "action": "fill",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "验收用新目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:46:56.618Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/0b792978-4e2f-4365-9a31-872aadc865af.jpg",
+              "screenshotFile": "0b792978-4e2f-4365-9a31-872aadc865af.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写目标名称\nPASS\n预期：\"验收用新目标\"",
+              "endedAt": "2026-10-20T04:46:57.174Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/0b792978-4e2f-4365-9a31-872aadc865af.jpg"
+            },
+            {
+              "id": "c36f2f09-cfe2-4893-9091-88507dc21850",
+              "kind": "browser",
+              "label": "填写目标描述",
+              "action": "fill",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#goal-brief",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "用于验证归档按钮在保存后恢复可用的新目标描述",
+              "status": "done",
+              "startedAt": "2026-10-20T04:46:57.174Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/de765d8e-8b57-4f9e-ae27-f7e8ad1eba95.jpg",
+              "screenshotFile": "de765d8e-8b57-4f9e-ae27-f7e8ad1eba95.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写目标描述\nPASS\n预期：\"用于验证归档按钮在保存后恢复可用的新目标描述\"",
+              "endedAt": "2026-10-20T04:46:57.665Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/de765d8e-8b57-4f9e-ae27-f7e8ad1eba95.jpg"
+            },
+            {
+              "id": "eacc1377-bfb3-4e36-9ed5-6dc5e05ddf55",
+              "kind": "browser",
+              "label": "填写验收要求",
+              "action": "fill",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#goal-criteria",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档按钮保存后可用",
+              "status": "done",
+              "startedAt": "2026-10-20T04:46:57.666Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/781b9a03-cca5-451c-933b-e463ffa297a4.jpg",
+              "screenshotFile": "781b9a03-cca5-451c-933b-e463ffa297a4.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写验收要求\nPASS\n预期：\"归档按钮保存后可用\"",
+              "endedAt": "2026-10-20T04:46:57.984Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/781b9a03-cca5-451c-933b-e463ffa297a4.jpg"
+            },
+            {
+              "id": "358b3b69-066d-4ac8-b08c-cca2b69b1c80",
+              "kind": "browser",
+              "label": "保存目标",
+              "action": "click",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#goal-form button[type=\"submit\"]",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:46:57.984Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/4ffb141a-51ed-43f8-9c67-b04916c7b8b5.jpg",
+              "screenshotFile": "4ffb141a-51ed-43f8-9c67-b04916c7b8b5.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n保存目标\nPASS",
+              "endedAt": "2026-10-20T04:46:58.950Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/4ffb141a-51ed-43f8-9c67-b04916c7b8b5.jpg"
+            },
+            {
+              "id": "7f68416b-9673-49f7-b2ae-4181d32d2af0",
+              "kind": "browser",
+              "label": "保存后标题保留",
+              "action": "assertValue",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "验收用新目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:46:58.951Z",
+              "actual": "验收用新目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/07d9b5ee-b09d-4f94-9b7d-d7a14db54214.jpg",
+              "screenshotFile": "07d9b5ee-b09d-4f94-9b7d-d7a14db54214.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收2\n保存后标题保留\nPASS · 完全相等\n预期：\"验收用新目标\"\n实际：\"验收用新目标\"",
+              "endedAt": "2026-10-20T04:46:59.434Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/07d9b5ee-b09d-4f94-9b7d-d7a14db54214.jpg"
+            },
+            {
+              "id": "642b3485-b962-47fd-a2c6-b047fa37b7c2",
+              "kind": "browser",
+              "label": "保存后归档目标按钮启用",
+              "action": "assertEnabled",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:46:59.435Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/6c4451cc-8a5d-428a-a150-9abee87666d5.jpg",
+              "screenshotFile": "6c4451cc-8a5d-428a-a150-9abee87666d5.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收2\n保存后归档目标按钮启用\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:46:59.931Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/6c4451cc-8a5d-428a-a150-9abee87666d5.jpg"
+            },
+            {
+              "id": "0c459ffd-ba86-402a-9ae4-f5fbe4284de6",
+              "kind": "browser",
+              "label": "点击归档该新目标",
+              "action": "click",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:46:59.931Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/c1927f93-8074-4ba6-9394-c3243a76d8ec.jpg",
+              "screenshotFile": "c1927f93-8074-4ba6-9394-c3243a76d8ec.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n点击归档该新目标\nPASS",
+              "endedAt": "2026-10-20T04:47:00.765Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/c1927f93-8074-4ba6-9394-c3243a76d8ec.jpg"
+            },
+            {
+              "id": "721002d4-4b85-4e63-9776-6c133e10cb54",
+              "kind": "browser",
+              "label": "归档后按钮变为可恢复状态",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "恢复",
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:00.765Z",
+              "actual": "恢复目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/6571cc85-1ca0-4d8e-a942-1685c94d02bd.jpg",
+              "screenshotFile": "6571cc85-1ca0-4d8e-a942-1685c94d02bd.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n归档后按钮变为可恢复状态\nPASS · 包含匹配\n预期：\"恢复\"\n实际：\"恢复目标\"",
+              "endedAt": "2026-10-20T04:47:01.367Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/6571cc85-1ca0-4d8e-a942-1685c94d02bd.jpg"
+            },
+            {
+              "id": "f582883e-8245-42e6-9e19-52c7b0be782a",
+              "kind": "browser",
+              "label": "归档后仍可点击恢复",
+              "action": "assertEnabled",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:01.367Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/5379d88c-1e6d-4f2e-8dc2-1b18511fac26.jpg",
+              "screenshotFile": "5379d88c-1e6d-4f2e-8dc2-1b18511fac26.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收2\n归档后仍可点击恢复\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:47:01.666Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/5379d88c-1e6d-4f2e-8dc2-1b18511fac26.jpg"
+            },
+            {
+              "id": "d13e2737-8190-42b3-90c6-6a4dd8f9daf6",
+              "kind": "browser",
+              "label": "点击恢复该目标",
+              "action": "click",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:01.666Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/ee11fe4d-8270-43d5-ae50-acfe811d24f2.jpg",
+              "screenshotFile": "ee11fe4d-8270-43d5-ae50-acfe811d24f2.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n点击恢复该目标\nPASS",
+              "endedAt": "2026-10-20T04:47:02.598Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/ee11fe4d-8270-43d5-ae50-acfe811d24f2.jpg"
+            },
+            {
+              "id": "5e36e477-a60d-4a2a-8260-4dee50937c83",
+              "kind": "browser",
+              "label": "恢复后按钮回到归档目标",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:02.598Z",
+              "actual": "归档目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/fc856680-afc8-4a70-b643-120522718e86.jpg",
+              "screenshotFile": "fc856680-afc8-4a70-b643-120522718e86.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n恢复后按钮回到归档目标\nPASS · 完全相等\n预期：\"归档目标\"\n实际：\"归档目标\"",
+              "endedAt": "2026-10-20T04:47:03.089Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/fc856680-afc8-4a70-b643-120522718e86.jpg"
+            },
+            {
+              "id": "130d960c-c77c-4875-81d3-ceb96899e168",
+              "kind": "browser",
+              "label": "恢复后归档按钮仍启用",
+              "action": "assertEnabled",
+              "criterion": 2,
+              "round": 1,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:03.090Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/71a4bdac-29cc-4e49-bf42-413531453814.jpg",
+              "screenshotFile": "71a4bdac-29cc-4e49-bf42-413531453814.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收2\n恢复后归档按钮仍启用\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:47:03.610Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/71a4bdac-29cc-4e49-bf42-413531453814.jpg"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 3,
+          "title": "关闭再打开看板后恢复原目标内容且归档按钮可用",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "48a5f912-6253-43f2-bd2a-1bd5cd0e8c33",
+              "kind": "browser",
+              "label": "打开目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:03.941Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/2b88e005-79f7-4085-befb-9b5b83db5ffa.jpg",
+              "screenshotFile": "2b88e005-79f7-4085-befb-9b5b83db5ffa.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n打开目标看板\nPASS",
+              "endedAt": "2026-10-20T04:47:06.670Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/2b88e005-79f7-4085-befb-9b5b83db5ffa.jpg"
+            },
+            {
+              "id": "19506f77-4c15-4b33-93cf-70bc5a299968",
+              "kind": "browser",
+              "label": "新建未保存草稿",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:06.670Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/ced6eb50-efde-409a-bbcb-12e220114f07.jpg",
+              "screenshotFile": "ced6eb50-efde-409a-bbcb-12e220114f07.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n新建未保存草稿\nPASS",
+              "endedAt": "2026-10-20T04:47:07.419Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/ced6eb50-efde-409a-bbcb-12e220114f07.jpg"
+            },
+            {
+              "id": "50c3a328-ab14-4aaf-957d-fd8d5aa3700b",
+              "kind": "browser",
+              "label": "草稿里填入内容但不保存",
+              "action": "fill",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "不应保存的草稿",
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:07.419Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/f7f8feff-5ccd-4ed1-b795-2ab873188ed3.jpg",
+              "screenshotFile": "f7f8feff-5ccd-4ed1-b795-2ab873188ed3.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收3\n草稿里填入内容但不保存\nPASS\n预期：\"不应保存的草稿\"",
+              "endedAt": "2026-10-20T04:47:07.989Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/f7f8feff-5ccd-4ed1-b795-2ab873188ed3.jpg"
+            },
+            {
+              "id": "26aab430-9fe3-4732-9c12-88b9a19ef1f9",
+              "kind": "browser",
+              "label": "关闭目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "[data-close=\"goals-dialog\"]",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:07.989Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/093cb76f-90d7-475a-b4e8-b1022ef0640e.jpg",
+              "screenshotFile": "093cb76f-90d7-475a-b4e8-b1022ef0640e.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n关闭目标看板\nPASS",
+              "endedAt": "2026-10-20T04:47:08.611Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/093cb76f-90d7-475a-b4e8-b1022ef0640e.jpg"
+            },
+            {
+              "id": "faae0f77-0471-46d6-ba2d-b25c3d357941",
+              "kind": "browser",
+              "label": "再次打开目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:08.611Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/de1f9e50-aee4-4117-88ee-2def609e2e3f.jpg",
+              "screenshotFile": "de1f9e50-aee4-4117-88ee-2def609e2e3f.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n再次打开目标看板\nPASS",
+              "endedAt": "2026-10-20T04:47:10.581Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/de1f9e50-aee4-4117-88ee-2def609e2e3f.jpg"
+            },
+            {
+              "id": "4428dae3-5fdd-441e-8541-b721ba89ecdf",
+              "kind": "browser",
+              "label": "重新打开后显示原有目标名称",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "把小屋变成协作工作室",
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:10.581Z",
+              "actual": "把小屋变成协作工作室",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/ce3eb8d9-f5ee-4bb3-975c-6fa58256631c.jpg",
+              "screenshotFile": "ce3eb8d9-f5ee-4bb3-975c-6fa58256631c.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n重新打开后显示原有目标名称\nPASS · 完全相等\n预期：\"把小屋变成协作工作室\"\n实际：\"把小屋变成协作工作室\"",
+              "endedAt": "2026-10-20T04:47:11.201Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/ce3eb8d9-f5ee-4bb3-975c-6fa58256631c.jpg"
+            },
+            {
+              "id": "172ee09e-578d-4085-91f0-86987164bf2e",
+              "kind": "browser",
+              "label": "重新打开后显示原有目标描述",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#goal-brief",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。",
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:11.202Z",
+              "actual": "为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/4370c9e5-2748-461e-91f6-3ce3977ca7a5.jpg",
+              "screenshotFile": "4370c9e5-2748-461e-91f6-3ce3977ca7a5.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n重新打开后显示原有目标描述\nPASS · 完全相等\n预期：\"为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。\"\n实际：\"为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。\"",
+              "endedAt": "2026-10-20T04:47:11.690Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/4370c9e5-2748-461e-91f6-3ce3977ca7a5.jpg"
+            },
+            {
+              "id": "300aab9d-fd97-4061-8857-682be471241a",
+              "kind": "browser",
+              "label": "按钮文案为归档目标",
+              "action": "assertText",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:11.690Z",
+              "actual": "归档目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/467decb4-9630-42db-84f8-66bdf849e2b5.jpg",
+              "screenshotFile": "467decb4-9630-42db-84f8-66bdf849e2b5.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收3\n按钮文案为归档目标\nPASS · 完全相等\n预期：\"归档目标\"\n实际：\"归档目标\"",
+              "endedAt": "2026-10-20T04:47:12.138Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/467decb4-9630-42db-84f8-66bdf849e2b5.jpg"
+            },
+            {
+              "id": "b2651b37-f0e2-4631-a54d-7c52ab7d812f",
+              "kind": "browser",
+              "label": "重新打开已有目标后归档按钮可用",
+              "action": "assertEnabled",
+              "criterion": 3,
+              "round": 1,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:47:12.139Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/940518f6-f36f-4a3c-ad17-04dd6c6b0ef9.jpg",
+              "screenshotFile": "940518f6-f36f-4a3c-ad17-04dd6c6b0ef9.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收3\n重新打开已有目标后归档按钮可用\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:47:12.758Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/940518f6-f36f-4a3c-ad17-04dd6c6b0ef9.jpg"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "logs": [],
+      "completedAt": "2026-10-20T04:47:12.759Z",
+      "originalRunId": "84047db7-5300-4384-a0cf-14c8016b5a89"
+    },
+    {
+      "round": 2,
+      "passed": false,
+      "cases": [
+        {
+          "criterion": 1,
+          "title": "新建未保存草稿时归档目标按钮禁用",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "3120e9cc-cc0e-484b-9025-2322362c91ae",
+              "kind": "browser",
+              "label": "打开任务记录进入目标看板",
+              "action": "click",
+              "criterion": 1,
+              "round": 2,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:49:38.428Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/12ed58e6-10f4-4043-ab52-22b29b7b611f.jpg",
+              "screenshotFile": "12ed58e6-10f4-4043-ab52-22b29b7b611f.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n打开任务记录进入目标看板\nPASS",
+              "endedAt": "2026-10-20T04:49:38.649Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/12ed58e6-10f4-4043-ab52-22b29b7b611f.jpg"
+            },
+            {
+              "id": "02f58c49-8f68-409e-8c3c-42710f0362a5",
+              "kind": "browser",
+              "label": "点击新建目标进入空白草稿",
+              "action": "click",
+              "criterion": 1,
+              "round": 2,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "failed",
+              "startedAt": "2026-10-20T04:49:38.649Z",
+              "passed": false,
+              "error": "locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('#new-goal')\n    - locator resolved to <button id=\"new-goal\" class=\"small-primary\">＋ 新建目标</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    9 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 500ms\n",
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/2569cb6d-bc3d-4e46-97e7-d64d456e8ac4.jpg",
+              "screenshotFile": "2569cb6d-bc3d-4e46-97e7-d64d456e8ac4.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n点击新建目标进入空白草稿\nFAIL\nlocator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('#new-goal')\n    - locator resolved to <button id=\"new-goal\" class=\"small-primary\">＋ 新建目标</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    9 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 500ms\n",
+              "endedAt": "2026-10-20T04:49:43.726Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/2569cb6d-bc3d-4e46-97e7-d64d456e8ac4.jpg"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "criterion": 2,
+          "title": "新建并保存有效目标后归档可用并可归档再恢复",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "0daa9a03-ebe3-4582-8c5a-075335054e08",
+              "kind": "browser",
+              "label": "打开目标看板",
+              "action": "click",
+              "criterion": 2,
+              "round": 2,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:49:43.892Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/8b066c0d-98c1-4bd5-9a3a-be493ade7b42.jpg",
+              "screenshotFile": "8b066c0d-98c1-4bd5-9a3a-be493ade7b42.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n打开目标看板\nPASS",
+              "endedAt": "2026-10-20T04:49:44.077Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/8b066c0d-98c1-4bd5-9a3a-be493ade7b42.jpg"
+            },
+            {
+              "id": "6fb2fb1a-a9cf-476e-9e4d-8c84cc276469",
+              "kind": "browser",
+              "label": "新建目标草稿",
+              "action": "click",
+              "criterion": 2,
+              "round": 2,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "failed",
+              "startedAt": "2026-10-20T04:49:44.077Z",
+              "passed": false,
+              "error": "locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('#new-goal')\n    - locator resolved to <button id=\"new-goal\" class=\"small-primary\">＋ 新建目标</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    9 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 500ms\n",
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/dba6be76-00a5-49a9-9658-fde23d68d80a.jpg",
+              "screenshotFile": "dba6be76-00a5-49a9-9658-fde23d68d80a.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n新建目标草稿\nFAIL\nlocator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('#new-goal')\n    - locator resolved to <button id=\"new-goal\" class=\"small-primary\">＋ 新建目标</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    9 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 500ms\n",
+              "endedAt": "2026-10-20T04:49:49.135Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/dba6be76-00a5-49a9-9658-fde23d68d80a.jpg"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "criterion": 3,
+          "title": "关闭再打开看板后恢复原目标内容且归档按钮可用",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "03e67064-e8f6-453d-a312-98bb92334ebf",
+              "kind": "browser",
+              "label": "打开目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 2,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:49:49.307Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/a71dbeb0-8544-4e6c-be6e-6a176ab4a9c3.jpg",
+              "screenshotFile": "a71dbeb0-8544-4e6c-be6e-6a176ab4a9c3.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n打开目标看板\nPASS",
+              "endedAt": "2026-10-20T04:49:49.434Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/a71dbeb0-8544-4e6c-be6e-6a176ab4a9c3.jpg"
+            },
+            {
+              "id": "a10ab2c8-f568-4876-b138-8b03ba821813",
+              "kind": "browser",
+              "label": "新建未保存草稿",
+              "action": "click",
+              "criterion": 3,
+              "round": 2,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "failed",
+              "startedAt": "2026-10-20T04:49:49.434Z",
+              "passed": false,
+              "error": "locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('#new-goal')\n    - locator resolved to <button id=\"new-goal\" class=\"small-primary\">＋ 新建目标</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    9 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 500ms\n",
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/d90b93a8-c90f-444e-94c4-9282397c7643.jpg",
+              "screenshotFile": "d90b93a8-c90f-444e-94c4-9282397c7643.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n新建未保存草稿\nFAIL\nlocator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('#new-goal')\n    - locator resolved to <button id=\"new-goal\" class=\"small-primary\">＋ 新建目标</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    9 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 500ms\n",
+              "endedAt": "2026-10-20T04:49:54.479Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/d90b93a8-c90f-444e-94c4-9282397c7643.jpg"
+            }
+          ],
+          "passed": false
+        }
+      ],
+      "logs": [
+        {
+          "type": "console",
+          "message": "ReferenceError: canArchiveGoal is not defined\n    at fn.render (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:17:3487)\n    at fn.selectGoal (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:15:6120)\n    at new fn (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:15:2258)\n    at Kn (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:42:29328)\n    at http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:42:14461"
+        },
+        {
+          "type": "pageerror",
+          "message": "canArchiveGoal is not defined"
+        },
+        {
+          "type": "console",
+          "message": "ReferenceError: canArchiveGoal is not defined\n    at fn.render (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:17:3487)\n    at fn.selectGoal (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:15:6120)\n    at new fn (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:15:2258)\n    at Kn (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:42:29328)\n    at http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:42:14461"
+        },
+        {
+          "type": "pageerror",
+          "message": "canArchiveGoal is not defined"
+        },
+        {
+          "type": "pageerror",
+          "message": "canArchiveGoal is not defined"
+        },
+        {
+          "type": "console",
+          "message": "ReferenceError: canArchiveGoal is not defined\n    at fn.render (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:17:3487)\n    at fn.selectGoal (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:15:6120)\n    at new fn (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:15:2258)\n    at Kn (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:42:29328)\n    at http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:42:14461"
+        },
+        {
+          "type": "pageerror",
+          "message": "canArchiveGoal is not defined"
+        },
+        {
+          "type": "pageerror",
+          "message": "canArchiveGoal is not defined"
+        },
+        {
+          "type": "console",
+          "message": "ReferenceError: canArchiveGoal is not defined\n    at fn.render (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:17:3487)\n    at fn.selectGoal (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:15:6120)\n    at new fn (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:15:2258)\n    at Kn (http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:42:29328)\n    at http://127.0.0.1:49675/1014_codex_project/003-lofi-room/assets/index-C2p52Owt.js:42:14461"
+        },
+        {
+          "type": "pageerror",
+          "message": "canArchiveGoal is not defined"
+        },
+        {
+          "type": "pageerror",
+          "message": "canArchiveGoal is not defined"
+        }
+      ],
+      "error": "canArchiveGoal is not defined\ncanArchiveGoal is not defined\ncanArchiveGoal is not defined\ncanArchiveGoal is not defined\ncanArchiveGoal is not defined\ncanArchiveGoal is not defined\ncanArchiveGoal is not defined",
+      "completedAt": "2026-10-20T04:49:54.481Z",
+      "originalRunId": "84047db7-5300-4384-a0cf-14c8016b5a89"
+    },
+    {
+      "round": 3,
+      "passed": true,
+      "cases": [
+        {
+          "criterion": 1,
+          "title": "新建未保存草稿时归档目标按钮禁用",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "70cd9177-2c71-4df5-a912-a0b614254f65",
+              "kind": "browser",
+              "label": "打开任务记录进入目标看板",
+              "action": "click",
+              "criterion": 1,
+              "round": 3,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:51:53.133Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/07ae67e4-e4dd-47e5-918e-37a703c6fd31.jpg",
+              "screenshotFile": "07ae67e4-e4dd-47e5-918e-37a703c6fd31.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n打开任务记录进入目标看板\nPASS",
+              "endedAt": "2026-10-20T04:51:56.174Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/07ae67e4-e4dd-47e5-918e-37a703c6fd31.jpg"
+            },
+            {
+              "id": "1edffb7e-95ad-4333-bb60-cf7f4dead352",
+              "kind": "browser",
+              "label": "点击新建目标进入空白草稿",
+              "action": "click",
+              "criterion": 1,
+              "round": 3,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:51:56.175Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/a5b01f25-db1c-4204-8a74-511088dfca99.jpg",
+              "screenshotFile": "a5b01f25-db1c-4204-8a74-511088dfca99.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n点击新建目标进入空白草稿\nPASS",
+              "endedAt": "2026-10-20T04:51:57.015Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/a5b01f25-db1c-4204-8a74-511088dfca99.jpg"
+            },
+            {
+              "id": "f9f44a8b-7e7e-4210-a60e-1d05dbf68b46",
+              "kind": "browser",
+              "label": "草稿标题为空",
+              "action": "assertValue",
+              "criterion": 1,
+              "round": 3,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T04:51:57.015Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/17d47bf0-df36-4152-90c1-265373cdb9c0.jpg",
+              "screenshotFile": "17d47bf0-df36-4152-90c1-265373cdb9c0.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收1\n草稿标题为空\nPASS · 完全相等\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T04:51:57.627Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/17d47bf0-df36-4152-90c1-265373cdb9c0.jpg"
+            },
+            {
+              "id": "eb8b2e32-fc60-4646-9e90-661087764037",
+              "kind": "browser",
+              "label": "未保存草稿时归档目标按钮必须禁用",
+              "action": "assertEnabled",
+              "criterion": 1,
+              "round": 3,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": false,
+              "status": "done",
+              "startedAt": "2026-10-20T04:51:57.629Z",
+              "actual": false,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/6edda730-358f-4435-b8dd-5f99abf5b066.jpg",
+              "screenshotFile": "6edda730-358f-4435-b8dd-5f99abf5b066.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收1\n未保存草稿时归档目标按钮必须禁用\nPASS\n预期：false\n实际：false",
+              "endedAt": "2026-10-20T04:51:58.062Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/6edda730-358f-4435-b8dd-5f99abf5b066.jpg"
+            },
+            {
+              "id": "b99c139f-9abb-407e-9c92-141efd9912a1",
+              "kind": "browser",
+              "label": "草稿状态下按钮文案仍为归档目标",
+              "action": "assertText",
+              "criterion": 1,
+              "round": 3,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:51:58.063Z",
+              "actual": "归档目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/2db45a53-dd1c-4ae9-a6e8-e7bcc564cda0.jpg",
+              "screenshotFile": "2db45a53-dd1c-4ae9-a6e8-e7bcc564cda0.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收1\n草稿状态下按钮文案仍为归档目标\nPASS · 完全相等\n预期：\"归档目标\"\n实际：\"归档目标\"",
+              "endedAt": "2026-10-20T04:51:58.545Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/2db45a53-dd1c-4ae9-a6e8-e7bcc564cda0.jpg"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 2,
+          "title": "新建并保存有效目标后归档可用并可归档再恢复",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "6c76a6f5-8979-4182-9dde-d93ca05f30ba",
+              "kind": "browser",
+              "label": "打开目标看板",
+              "action": "click",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:51:58.804Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/e8d8bc8e-b82e-4bf2-a26e-04efce512f99.jpg",
+              "screenshotFile": "e8d8bc8e-b82e-4bf2-a26e-04efce512f99.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n打开目标看板\nPASS",
+              "endedAt": "2026-10-20T04:52:01.785Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/e8d8bc8e-b82e-4bf2-a26e-04efce512f99.jpg"
+            },
+            {
+              "id": "98e2b2fa-cf27-47b3-8fa6-32a6326904e8",
+              "kind": "browser",
+              "label": "新建目标草稿",
+              "action": "click",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:01.785Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/6b6c545f-56eb-4786-b307-1b83a8828bba.jpg",
+              "screenshotFile": "6b6c545f-56eb-4786-b307-1b83a8828bba.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n新建目标草稿\nPASS",
+              "endedAt": "2026-10-20T04:52:02.751Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/6b6c545f-56eb-4786-b307-1b83a8828bba.jpg"
+            },
+            {
+              "id": "94c04c83-0d49-4010-9db8-9d4690856bbe",
+              "kind": "browser",
+              "label": "填写目标名称",
+              "action": "fill",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "验收用新目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:02.751Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/444c9fe7-b072-42e9-8d56-168bdb711dce.jpg",
+              "screenshotFile": "444c9fe7-b072-42e9-8d56-168bdb711dce.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写目标名称\nPASS\n预期：\"验收用新目标\"",
+              "endedAt": "2026-10-20T04:52:03.401Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/444c9fe7-b072-42e9-8d56-168bdb711dce.jpg"
+            },
+            {
+              "id": "7747c68c-c867-4fe0-af89-5f30f6b020e9",
+              "kind": "browser",
+              "label": "填写目标描述",
+              "action": "fill",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#goal-brief",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "用于验证归档按钮在保存后恢复可用的新目标描述",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:03.401Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/b2f22ab7-b495-4fee-a3db-b4035c610c21.jpg",
+              "screenshotFile": "b2f22ab7-b495-4fee-a3db-b4035c610c21.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写目标描述\nPASS\n预期：\"用于验证归档按钮在保存后恢复可用的新目标描述\"",
+              "endedAt": "2026-10-20T04:52:03.718Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/b2f22ab7-b495-4fee-a3db-b4035c610c21.jpg"
+            },
+            {
+              "id": "88fa6417-8fba-4bf4-b5a2-74fecada00a3",
+              "kind": "browser",
+              "label": "填写验收要求",
+              "action": "fill",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#goal-criteria",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档按钮保存后可用",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:03.719Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/9b7df17a-0d46-4f34-ab59-a8c0bf7b855a.jpg",
+              "screenshotFile": "9b7df17a-0d46-4f34-ab59-a8c0bf7b855a.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写验收要求\nPASS\n预期：\"归档按钮保存后可用\"",
+              "endedAt": "2026-10-20T04:52:04.035Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/9b7df17a-0d46-4f34-ab59-a8c0bf7b855a.jpg"
+            },
+            {
+              "id": "006e2d34-f292-44c7-8304-16fc52682899",
+              "kind": "browser",
+              "label": "保存目标",
+              "action": "click",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#goal-form button[type=\"submit\"]",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:04.036Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/d3a82c9f-161b-4396-a33a-25f3cd7ba312.jpg",
+              "screenshotFile": "d3a82c9f-161b-4396-a33a-25f3cd7ba312.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n保存目标\nPASS",
+              "endedAt": "2026-10-20T04:52:04.923Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/d3a82c9f-161b-4396-a33a-25f3cd7ba312.jpg"
+            },
+            {
+              "id": "ad3422f0-6fee-44c1-8069-745d4188164e",
+              "kind": "browser",
+              "label": "保存后标题保留",
+              "action": "assertValue",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "验收用新目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:04.924Z",
+              "actual": "验收用新目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/99219b96-5d91-43fe-9748-d9d6da2344a8.jpg",
+              "screenshotFile": "99219b96-5d91-43fe-9748-d9d6da2344a8.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收2\n保存后标题保留\nPASS · 完全相等\n预期：\"验收用新目标\"\n实际：\"验收用新目标\"",
+              "endedAt": "2026-10-20T04:52:05.430Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/99219b96-5d91-43fe-9748-d9d6da2344a8.jpg"
+            },
+            {
+              "id": "0967c88f-520b-4584-97e7-99bd92317963",
+              "kind": "browser",
+              "label": "保存后归档目标按钮启用",
+              "action": "assertEnabled",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:05.430Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/d7079def-f29a-4897-9eb9-fbe0cf3c0381.jpg",
+              "screenshotFile": "d7079def-f29a-4897-9eb9-fbe0cf3c0381.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收2\n保存后归档目标按钮启用\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:52:05.908Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/d7079def-f29a-4897-9eb9-fbe0cf3c0381.jpg"
+            },
+            {
+              "id": "68e2e3f0-3c70-404e-924f-b9eb10e9b94b",
+              "kind": "browser",
+              "label": "点击归档该新目标",
+              "action": "click",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:05.909Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/59ee1538-3aba-493c-8be9-dd55614bff89.jpg",
+              "screenshotFile": "59ee1538-3aba-493c-8be9-dd55614bff89.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n点击归档该新目标\nPASS",
+              "endedAt": "2026-10-20T04:52:06.810Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/59ee1538-3aba-493c-8be9-dd55614bff89.jpg"
+            },
+            {
+              "id": "ff16552c-f389-4bd5-b10a-b0b5ab9e870b",
+              "kind": "browser",
+              "label": "归档后按钮变为可恢复状态",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "恢复",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:06.811Z",
+              "actual": "恢复目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/476a4f25-38ea-424c-9e1e-d96a7f1dc86c.jpg",
+              "screenshotFile": "476a4f25-38ea-424c-9e1e-d96a7f1dc86c.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n归档后按钮变为可恢复状态\nPASS · 包含匹配\n预期：\"恢复\"\n实际：\"恢复目标\"",
+              "endedAt": "2026-10-20T04:52:07.452Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/476a4f25-38ea-424c-9e1e-d96a7f1dc86c.jpg"
+            },
+            {
+              "id": "a01ae0de-942f-44f0-b981-c1a8ee617814",
+              "kind": "browser",
+              "label": "归档后仍可点击恢复",
+              "action": "assertEnabled",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:07.452Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/aadddff4-48de-4704-9513-78e0bdfc9d82.jpg",
+              "screenshotFile": "aadddff4-48de-4704-9513-78e0bdfc9d82.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收2\n归档后仍可点击恢复\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:52:07.901Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/aadddff4-48de-4704-9513-78e0bdfc9d82.jpg"
+            },
+            {
+              "id": "5c6ad076-f3ff-472d-a819-27c11ed24003",
+              "kind": "browser",
+              "label": "点击恢复该目标",
+              "action": "click",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:07.901Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/df3059c5-f1fc-475b-9056-ef03644b4304.jpg",
+              "screenshotFile": "df3059c5-f1fc-475b-9056-ef03644b4304.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n点击恢复该目标\nPASS",
+              "endedAt": "2026-10-20T04:52:08.862Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/df3059c5-f1fc-475b-9056-ef03644b4304.jpg"
+            },
+            {
+              "id": "1847d958-512f-4832-adcc-8550b4f3c35f",
+              "kind": "browser",
+              "label": "恢复后按钮回到归档目标",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:08.863Z",
+              "actual": "归档目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/ce39bae3-ff7c-44c9-8590-c9ac30e0ce09.jpg",
+              "screenshotFile": "ce39bae3-ff7c-44c9-8590-c9ac30e0ce09.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n恢复后按钮回到归档目标\nPASS · 完全相等\n预期：\"归档目标\"\n实际：\"归档目标\"",
+              "endedAt": "2026-10-20T04:52:09.337Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/ce39bae3-ff7c-44c9-8590-c9ac30e0ce09.jpg"
+            },
+            {
+              "id": "550b3b6d-9e87-480a-a0c7-f490b83dbe5f",
+              "kind": "browser",
+              "label": "恢复后归档按钮仍启用",
+              "action": "assertEnabled",
+              "criterion": 2,
+              "round": 3,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:09.337Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/6646fe65-3f65-4322-80d6-1d4955eaa19c.jpg",
+              "screenshotFile": "6646fe65-3f65-4322-80d6-1d4955eaa19c.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收2\n恢复后归档按钮仍启用\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:52:09.860Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/6646fe65-3f65-4322-80d6-1d4955eaa19c.jpg"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 3,
+          "title": "关闭再打开看板后恢复原目标内容且归档按钮可用",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "fbb7754c-e0cf-40d5-b1b9-32b1fb02ffc3",
+              "kind": "browser",
+              "label": "打开目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 3,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:10.123Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/b30a71a8-1be7-43ca-98bf-b75b8a4ec1f3.jpg",
+              "screenshotFile": "b30a71a8-1be7-43ca-98bf-b75b8a4ec1f3.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n打开目标看板\nPASS",
+              "endedAt": "2026-10-20T04:52:13.006Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/b30a71a8-1be7-43ca-98bf-b75b8a4ec1f3.jpg"
+            },
+            {
+              "id": "32da631c-729d-4d04-ba26-0ba42ece5c76",
+              "kind": "browser",
+              "label": "新建未保存草稿",
+              "action": "click",
+              "criterion": 3,
+              "round": 3,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:13.006Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/841f6bfe-8e62-4ac2-8e97-53817ce0a97d.jpg",
+              "screenshotFile": "841f6bfe-8e62-4ac2-8e97-53817ce0a97d.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n新建未保存草稿\nPASS",
+              "endedAt": "2026-10-20T04:52:13.779Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/841f6bfe-8e62-4ac2-8e97-53817ce0a97d.jpg"
+            },
+            {
+              "id": "f137713d-3c2e-4ba7-8201-2e1936254b48",
+              "kind": "browser",
+              "label": "草稿里填入内容但不保存",
+              "action": "fill",
+              "criterion": 3,
+              "round": 3,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "不应保存的草稿",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:13.779Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/cf999f5a-86b9-45d5-8eca-5199aa71d02f.jpg",
+              "screenshotFile": "cf999f5a-86b9-45d5-8eca-5199aa71d02f.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收3\n草稿里填入内容但不保存\nPASS\n预期：\"不应保存的草稿\"",
+              "endedAt": "2026-10-20T04:52:14.367Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/cf999f5a-86b9-45d5-8eca-5199aa71d02f.jpg"
+            },
+            {
+              "id": "3d30d874-a5c3-468f-96ab-220f7b2f9693",
+              "kind": "browser",
+              "label": "关闭目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 3,
+              "target": {
+                "selector": "[data-close=\"goals-dialog\"]",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:14.368Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/e3dc9c9d-850b-4ebe-a869-b1f5f8c6a3b2.jpg",
+              "screenshotFile": "e3dc9c9d-850b-4ebe-a869-b1f5f8c6a3b2.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n关闭目标看板\nPASS",
+              "endedAt": "2026-10-20T04:52:14.983Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/e3dc9c9d-850b-4ebe-a869-b1f5f8c6a3b2.jpg"
+            },
+            {
+              "id": "de294fe2-4127-47aa-a39b-43e4589c3be9",
+              "kind": "browser",
+              "label": "再次打开目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 3,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:14.983Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/3ac2707e-2ff5-42b0-93bd-8e9cd778ef77.jpg",
+              "screenshotFile": "3ac2707e-2ff5-42b0-93bd-8e9cd778ef77.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n再次打开目标看板\nPASS",
+              "endedAt": "2026-10-20T04:52:16.819Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/3ac2707e-2ff5-42b0-93bd-8e9cd778ef77.jpg"
+            },
+            {
+              "id": "45b68966-cbda-4603-ada1-5ac46dab236b",
+              "kind": "browser",
+              "label": "重新打开后显示原有目标名称",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 3,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "把小屋变成协作工作室",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:16.820Z",
+              "actual": "把小屋变成协作工作室",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/0faf6aac-f547-4074-a607-9dfefd838502.jpg",
+              "screenshotFile": "0faf6aac-f547-4074-a607-9dfefd838502.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n重新打开后显示原有目标名称\nPASS · 完全相等\n预期：\"把小屋变成协作工作室\"\n实际：\"把小屋变成协作工作室\"",
+              "endedAt": "2026-10-20T04:52:17.421Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/0faf6aac-f547-4074-a607-9dfefd838502.jpg"
+            },
+            {
+              "id": "34a6eefb-e70d-4b2b-b8b3-b862c0179e7f",
+              "kind": "browser",
+              "label": "重新打开后显示原有目标描述",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 3,
+              "target": {
+                "selector": "#goal-brief",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:17.421Z",
+              "actual": "为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/d24a1994-9c70-48ef-b72f-1348208e744d.jpg",
+              "screenshotFile": "d24a1994-9c70-48ef-b72f-1348208e744d.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n重新打开后显示原有目标描述\nPASS · 完全相等\n预期：\"为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。\"\n实际：\"为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。\"",
+              "endedAt": "2026-10-20T04:52:17.987Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/d24a1994-9c70-48ef-b72f-1348208e744d.jpg"
+            },
+            {
+              "id": "ff5a1c06-dd92-4e0d-a482-a781d5194e85",
+              "kind": "browser",
+              "label": "按钮文案为归档目标",
+              "action": "assertText",
+              "criterion": 3,
+              "round": 3,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:17.987Z",
+              "actual": "归档目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/e202c6c4-083c-43bb-bac2-19af14ab034b.jpg",
+              "screenshotFile": "e202c6c4-083c-43bb-bac2-19af14ab034b.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收3\n按钮文案为归档目标\nPASS · 完全相等\n预期：\"归档目标\"\n实际：\"归档目标\"",
+              "endedAt": "2026-10-20T04:52:18.534Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/e202c6c4-083c-43bb-bac2-19af14ab034b.jpg"
+            },
+            {
+              "id": "c5442fd1-98a6-4a86-a48d-e85960ced31c",
+              "kind": "browser",
+              "label": "重新打开已有目标后归档按钮可用",
+              "action": "assertEnabled",
+              "criterion": 3,
+              "round": 3,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:52:18.534Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/4efb65b3-8361-4f40-9c59-f3b0ac8fee2f.jpg",
+              "screenshotFile": "4efb65b3-8361-4f40-9c59-f3b0ac8fee2f.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收3\n重新打开已有目标后归档按钮可用\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:52:19.012Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/4efb65b3-8361-4f40-9c59-f3b0ac8fee2f.jpg"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "logs": [],
+      "completedAt": "2026-10-20T04:52:19.012Z",
+      "originalRunId": "84047db7-5300-4384-a0cf-14c8016b5a89"
+    },
+    {
+      "round": 4,
+      "passed": true,
+      "cases": [
+        {
+          "criterion": 1,
+          "title": "新建未保存草稿时归档目标按钮禁用",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "0dac6aba-6e19-4534-903e-04f707bffb97",
+              "kind": "browser",
+              "label": "打开任务记录进入目标看板",
+              "action": "click",
+              "criterion": 1,
+              "round": 4,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:40.503Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/2ad3a18a-268f-40d7-b86f-375265047800.jpg",
+              "screenshotFile": "2ad3a18a-268f-40d7-b86f-375265047800.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n打开任务记录进入目标看板\nPASS",
+              "endedAt": "2026-10-20T04:53:43.923Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/2ad3a18a-268f-40d7-b86f-375265047800.jpg"
+            },
+            {
+              "id": "ff6e1dbd-7bee-4a95-ad0f-15d00e6c10e1",
+              "kind": "browser",
+              "label": "点击新建目标进入空白草稿",
+              "action": "click",
+              "criterion": 1,
+              "round": 4,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:43.923Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/e9e7982f-6f27-49c5-ace0-d9b8d8e90e75.jpg",
+              "screenshotFile": "e9e7982f-6f27-49c5-ace0-d9b8d8e90e75.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n点击新建目标进入空白草稿\nPASS",
+              "endedAt": "2026-10-20T04:53:44.918Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/e9e7982f-6f27-49c5-ace0-d9b8d8e90e75.jpg"
+            },
+            {
+              "id": "c47f1e47-d9f7-410f-b8d6-8e85f529e3a6",
+              "kind": "browser",
+              "label": "草稿标题为空",
+              "action": "assertValue",
+              "criterion": 1,
+              "round": 4,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:44.919Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/cf661895-a9b8-4823-a93c-38bd923bf8c2.jpg",
+              "screenshotFile": "cf661895-a9b8-4823-a93c-38bd923bf8c2.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收1\n草稿标题为空\nPASS · 完全相等\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T04:53:45.425Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/cf661895-a9b8-4823-a93c-38bd923bf8c2.jpg"
+            },
+            {
+              "id": "94ca15da-e5ac-45e2-be0f-85ff48f0355c",
+              "kind": "browser",
+              "label": "未保存草稿时归档目标按钮必须禁用",
+              "action": "assertEnabled",
+              "criterion": 1,
+              "round": 4,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": false,
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:45.425Z",
+              "actual": false,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/af1d114f-8165-432f-bddf-66a6f28728f1.jpg",
+              "screenshotFile": "af1d114f-8165-432f-bddf-66a6f28728f1.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收1\n未保存草稿时归档目标按钮必须禁用\nPASS\n预期：false\n实际：false",
+              "endedAt": "2026-10-20T04:53:45.925Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/af1d114f-8165-432f-bddf-66a6f28728f1.jpg"
+            },
+            {
+              "id": "8c0f0be1-cca7-4fff-b5a6-4240757a52c3",
+              "kind": "browser",
+              "label": "草稿状态下按钮文案仍为归档目标",
+              "action": "assertText",
+              "criterion": 1,
+              "round": 4,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:45.926Z",
+              "actual": "归档目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/54e0cf1b-8fd1-4e28-9d52-11e257e028b9.jpg",
+              "screenshotFile": "54e0cf1b-8fd1-4e28-9d52-11e257e028b9.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收1\n草稿状态下按钮文案仍为归档目标\nPASS · 完全相等\n预期：\"归档目标\"\n实际：\"归档目标\"",
+              "endedAt": "2026-10-20T04:53:46.473Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/54e0cf1b-8fd1-4e28-9d52-11e257e028b9.jpg"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 2,
+          "title": "新建并保存有效目标后归档可用并可归档再恢复",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "9d1d0a57-fdcf-4663-8324-11b55469218c",
+              "kind": "browser",
+              "label": "打开目标看板",
+              "action": "click",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:46.745Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/d07210c9-330c-4186-a7c2-f0f900251d14.jpg",
+              "screenshotFile": "d07210c9-330c-4186-a7c2-f0f900251d14.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n打开目标看板\nPASS",
+              "endedAt": "2026-10-20T04:53:49.114Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/d07210c9-330c-4186-a7c2-f0f900251d14.jpg"
+            },
+            {
+              "id": "5a645e21-7cc3-495d-9c7a-13511bd4a0d0",
+              "kind": "browser",
+              "label": "新建目标草稿",
+              "action": "click",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:49.115Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/6276cd78-bf10-4558-b65f-ef7ee73e9ae3.jpg",
+              "screenshotFile": "6276cd78-bf10-4558-b65f-ef7ee73e9ae3.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n新建目标草稿\nPASS",
+              "endedAt": "2026-10-20T04:53:49.985Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/6276cd78-bf10-4558-b65f-ef7ee73e9ae3.jpg"
+            },
+            {
+              "id": "367a5845-ff77-4244-b9b8-9ee072045777",
+              "kind": "browser",
+              "label": "填写目标名称",
+              "action": "fill",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "验收用新目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:49.986Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/28c8390e-f092-4b9d-805a-e024c7cd10f3.jpg",
+              "screenshotFile": "28c8390e-f092-4b9d-805a-e024c7cd10f3.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写目标名称\nPASS\n预期：\"验收用新目标\"",
+              "endedAt": "2026-10-20T04:53:50.533Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/28c8390e-f092-4b9d-805a-e024c7cd10f3.jpg"
+            },
+            {
+              "id": "d6c3afa1-aa1e-4e42-a7a4-f86d9b1cb9df",
+              "kind": "browser",
+              "label": "填写目标描述",
+              "action": "fill",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#goal-brief",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "用于验证归档按钮在保存后恢复可用的新目标描述",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:50.533Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/47825010-a248-4fcd-9bfb-25c63d3d06b2.jpg",
+              "screenshotFile": "47825010-a248-4fcd-9bfb-25c63d3d06b2.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写目标描述\nPASS\n预期：\"用于验证归档按钮在保存后恢复可用的新目标描述\"",
+              "endedAt": "2026-10-20T04:53:51.186Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/47825010-a248-4fcd-9bfb-25c63d3d06b2.jpg"
+            },
+            {
+              "id": "f0145524-2420-4790-83e4-c9b366d4500d",
+              "kind": "browser",
+              "label": "填写验收要求",
+              "action": "fill",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#goal-criteria",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档按钮保存后可用",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:51.186Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/2710dbda-5f2c-44d6-9efb-59fe4472089a.jpg",
+              "screenshotFile": "2710dbda-5f2c-44d6-9efb-59fe4472089a.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写验收要求\nPASS\n预期：\"归档按钮保存后可用\"",
+              "endedAt": "2026-10-20T04:53:51.677Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/2710dbda-5f2c-44d6-9efb-59fe4472089a.jpg"
+            },
+            {
+              "id": "8307d668-d1c2-40d7-a4c1-9405e5eab186",
+              "kind": "browser",
+              "label": "保存目标",
+              "action": "click",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#goal-form button[type=\"submit\"]",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:51.678Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/de1f31e1-6e86-4e70-a29d-990dc09387ce.jpg",
+              "screenshotFile": "de1f31e1-6e86-4e70-a29d-990dc09387ce.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n保存目标\nPASS",
+              "endedAt": "2026-10-20T04:53:52.772Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/de1f31e1-6e86-4e70-a29d-990dc09387ce.jpg"
+            },
+            {
+              "id": "68577771-6c10-4897-9a97-46904450fafc",
+              "kind": "browser",
+              "label": "保存后标题保留",
+              "action": "assertValue",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "验收用新目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:52.772Z",
+              "actual": "验收用新目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/4cb78891-98d5-4603-a4ad-0d8a05847ef8.jpg",
+              "screenshotFile": "4cb78891-98d5-4603-a4ad-0d8a05847ef8.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收2\n保存后标题保留\nPASS · 完全相等\n预期：\"验收用新目标\"\n实际：\"验收用新目标\"",
+              "endedAt": "2026-10-20T04:53:53.225Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/4cb78891-98d5-4603-a4ad-0d8a05847ef8.jpg"
+            },
+            {
+              "id": "e14182f9-545b-464f-8e12-8048f4681b51",
+              "kind": "browser",
+              "label": "保存后归档目标按钮启用",
+              "action": "assertEnabled",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:53.225Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/7c666aa6-ba88-4641-be01-f47b6a6e292d.jpg",
+              "screenshotFile": "7c666aa6-ba88-4641-be01-f47b6a6e292d.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收2\n保存后归档目标按钮启用\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:53:53.854Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/7c666aa6-ba88-4641-be01-f47b6a6e292d.jpg"
+            },
+            {
+              "id": "1deecd9a-50bd-4e14-b5c8-ee07107f0463",
+              "kind": "browser",
+              "label": "点击归档该新目标",
+              "action": "click",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:53.855Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/087230f4-38c3-4f85-8733-482b057783c1.jpg",
+              "screenshotFile": "087230f4-38c3-4f85-8733-482b057783c1.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n点击归档该新目标\nPASS",
+              "endedAt": "2026-10-20T04:53:54.733Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/087230f4-38c3-4f85-8733-482b057783c1.jpg"
+            },
+            {
+              "id": "e3bca5a6-81f4-452f-baa3-168762da1d88",
+              "kind": "browser",
+              "label": "归档后按钮变为可恢复状态",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "恢复",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:54.733Z",
+              "actual": "恢复目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/ec2caf5d-6cea-4642-95e5-2ab07fc013da.jpg",
+              "screenshotFile": "ec2caf5d-6cea-4642-95e5-2ab07fc013da.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n归档后按钮变为可恢复状态\nPASS · 包含匹配\n预期：\"恢复\"\n实际：\"恢复目标\"",
+              "endedAt": "2026-10-20T04:53:55.179Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/ec2caf5d-6cea-4642-95e5-2ab07fc013da.jpg"
+            },
+            {
+              "id": "7a9ca64e-fbfc-4427-b9e7-0f950bb55267",
+              "kind": "browser",
+              "label": "归档后仍可点击恢复",
+              "action": "assertEnabled",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:55.180Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/0f2746a9-ae2c-4e4d-b999-89ac0cc2bbf6.jpg",
+              "screenshotFile": "0f2746a9-ae2c-4e4d-b999-89ac0cc2bbf6.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收2\n归档后仍可点击恢复\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:53:55.508Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/0f2746a9-ae2c-4e4d-b999-89ac0cc2bbf6.jpg"
+            },
+            {
+              "id": "54583b38-abe9-4a53-8467-5035ea9d4aca",
+              "kind": "browser",
+              "label": "点击恢复该目标",
+              "action": "click",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:55.508Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/48e3ab49-a79e-4ac6-8ec9-e6a510f9c7e8.jpg",
+              "screenshotFile": "48e3ab49-a79e-4ac6-8ec9-e6a510f9c7e8.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n点击恢复该目标\nPASS",
+              "endedAt": "2026-10-20T04:53:56.406Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/48e3ab49-a79e-4ac6-8ec9-e6a510f9c7e8.jpg"
+            },
+            {
+              "id": "94e518b8-0769-43f0-a276-a579ef910e61",
+              "kind": "browser",
+              "label": "恢复后按钮回到归档目标",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:56.406Z",
+              "actual": "归档目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/0b45263b-0283-4003-b731-bbcb9412b7b2.jpg",
+              "screenshotFile": "0b45263b-0283-4003-b731-bbcb9412b7b2.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n恢复后按钮回到归档目标\nPASS · 完全相等\n预期：\"归档目标\"\n实际：\"归档目标\"",
+              "endedAt": "2026-10-20T04:53:56.691Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/0b45263b-0283-4003-b731-bbcb9412b7b2.jpg"
+            },
+            {
+              "id": "e814fe9a-62ba-4f96-9ba5-299279484c9a",
+              "kind": "browser",
+              "label": "恢复后归档按钮仍启用",
+              "action": "assertEnabled",
+              "criterion": 2,
+              "round": 4,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:56.692Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/89dbcc06-4dde-49f5-ab67-f19f3b88c502.jpg",
+              "screenshotFile": "89dbcc06-4dde-49f5-ab67-f19f3b88c502.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收2\n恢复后归档按钮仍启用\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:53:57.021Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/89dbcc06-4dde-49f5-ab67-f19f3b88c502.jpg"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 3,
+          "title": "关闭再打开看板后恢复原目标内容且归档按钮可用",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "7a49d97b-3d57-4f96-b106-9489b5f3eaa1",
+              "kind": "browser",
+              "label": "打开目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 4,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:53:57.247Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/ad8af8d4-fb2e-496f-b1c3-cc692c501451.jpg",
+              "screenshotFile": "ad8af8d4-fb2e-496f-b1c3-cc692c501451.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n打开目标看板\nPASS",
+              "endedAt": "2026-10-20T04:54:00.103Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/ad8af8d4-fb2e-496f-b1c3-cc692c501451.jpg"
+            },
+            {
+              "id": "4d15a350-9303-456b-b831-689034d5b196",
+              "kind": "browser",
+              "label": "新建未保存草稿",
+              "action": "click",
+              "criterion": 3,
+              "round": 4,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:54:00.103Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/5b54d1b7-40b2-47da-ab16-8462df2f5bc9.jpg",
+              "screenshotFile": "5b54d1b7-40b2-47da-ab16-8462df2f5bc9.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n新建未保存草稿\nPASS",
+              "endedAt": "2026-10-20T04:54:00.971Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/5b54d1b7-40b2-47da-ab16-8462df2f5bc9.jpg"
+            },
+            {
+              "id": "87476923-fa67-419e-874c-b35c49d39cc1",
+              "kind": "browser",
+              "label": "草稿里填入内容但不保存",
+              "action": "fill",
+              "criterion": 3,
+              "round": 4,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "不应保存的草稿",
+              "status": "done",
+              "startedAt": "2026-10-20T04:54:00.971Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/79367719-54d7-40bc-ab09-2f90f6c425bb.jpg",
+              "screenshotFile": "79367719-54d7-40bc-ab09-2f90f6c425bb.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收3\n草稿里填入内容但不保存\nPASS\n预期：\"不应保存的草稿\"",
+              "endedAt": "2026-10-20T04:54:01.646Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/79367719-54d7-40bc-ab09-2f90f6c425bb.jpg"
+            },
+            {
+              "id": "cb41a2e0-347e-4036-9237-fbb3bcf34333",
+              "kind": "browser",
+              "label": "关闭目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 4,
+              "target": {
+                "selector": "[data-close=\"goals-dialog\"]",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:54:01.646Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/1270c776-5284-4304-9a6a-93008c0881d6.jpg",
+              "screenshotFile": "1270c776-5284-4304-9a6a-93008c0881d6.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n关闭目标看板\nPASS",
+              "endedAt": "2026-10-20T04:54:02.388Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/1270c776-5284-4304-9a6a-93008c0881d6.jpg"
+            },
+            {
+              "id": "61e43b90-2619-41f8-9683-08936c937fff",
+              "kind": "browser",
+              "label": "再次打开目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 4,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T04:54:02.389Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/3099e53c-93c2-47be-91ff-417da4976c97.jpg",
+              "screenshotFile": "3099e53c-93c2-47be-91ff-417da4976c97.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n再次打开目标看板\nPASS",
+              "endedAt": "2026-10-20T04:54:04.251Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/3099e53c-93c2-47be-91ff-417da4976c97.jpg"
+            },
+            {
+              "id": "d513851b-837d-4b2a-8b63-769342bcad0a",
+              "kind": "browser",
+              "label": "重新打开后显示原有目标名称",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 4,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "把小屋变成协作工作室",
+              "status": "done",
+              "startedAt": "2026-10-20T04:54:04.251Z",
+              "actual": "把小屋变成协作工作室",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/5d8c570b-aeda-4b9c-bd73-ca0f419d5827.jpg",
+              "screenshotFile": "5d8c570b-aeda-4b9c-bd73-ca0f419d5827.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n重新打开后显示原有目标名称\nPASS · 完全相等\n预期：\"把小屋变成协作工作室\"\n实际：\"把小屋变成协作工作室\"",
+              "endedAt": "2026-10-20T04:54:04.688Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/5d8c570b-aeda-4b9c-bd73-ca0f419d5827.jpg"
+            },
+            {
+              "id": "f6fe1950-fb26-468b-89d6-6261f2639faa",
+              "kind": "browser",
+              "label": "重新打开后显示原有目标描述",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 4,
+              "target": {
+                "selector": "#goal-brief",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。",
+              "status": "done",
+              "startedAt": "2026-10-20T04:54:04.688Z",
+              "actual": "为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/d25d2f2c-a43f-46b7-b6fc-ea4e27a11524.jpg",
+              "screenshotFile": "d25d2f2c-a43f-46b7-b6fc-ea4e27a11524.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n重新打开后显示原有目标描述\nPASS · 完全相等\n预期：\"为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。\"\n实际：\"为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。\"",
+              "endedAt": "2026-10-20T04:54:05.216Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/d25d2f2c-a43f-46b7-b6fc-ea4e27a11524.jpg"
+            },
+            {
+              "id": "183ad860-179c-4a3b-a9c1-5eb33d4f98c2",
+              "kind": "browser",
+              "label": "按钮文案为归档目标",
+              "action": "assertText",
+              "criterion": 3,
+              "round": 4,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档目标",
+              "status": "done",
+              "startedAt": "2026-10-20T04:54:05.216Z",
+              "actual": "归档目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/ad38e1a1-ccd5-4139-9a08-976d2b282db3.jpg",
+              "screenshotFile": "ad38e1a1-ccd5-4139-9a08-976d2b282db3.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收3\n按钮文案为归档目标\nPASS · 完全相等\n预期：\"归档目标\"\n实际：\"归档目标\"",
+              "endedAt": "2026-10-20T04:54:05.930Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/ad38e1a1-ccd5-4139-9a08-976d2b282db3.jpg"
+            },
+            {
+              "id": "8d066e1b-9538-46b4-9de4-73b22b847aff",
+              "kind": "browser",
+              "label": "重新打开已有目标后归档按钮可用",
+              "action": "assertEnabled",
+              "criterion": 3,
+              "round": 4,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T04:54:05.930Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/234cbd85-c338-4dea-b74a-a4adfe279d4e.jpg",
+              "screenshotFile": "234cbd85-c338-4dea-b74a-a4adfe279d4e.jpg",
+              "url": "http://127.0.0.1:49675/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收3\n重新打开已有目标后归档按钮可用\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T04:54:06.513Z",
+              "originalScreenshot": "api/source/runs/84047db7-5300-4384-a0cf-14c8016b5a89/browser/234cbd85-c338-4dea-b74a-a4adfe279d4e.jpg"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "logs": [],
+      "completedAt": "2026-10-20T04:54:06.513Z",
+      "originalRunId": "84047db7-5300-4384-a0cf-14c8016b5a89"
+    },
+    {
+      "round": 5,
+      "passed": true,
+      "cases": [
+        {
+          "criterion": 1,
+          "title": "新建未保存草稿时归档目标按钮禁用",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "d4a137a4-4f51-48f6-8db9-5ffae76551ab",
+              "kind": "browser",
+              "label": "打开任务记录进入目标看板",
+              "action": "click",
+              "criterion": 1,
+              "round": 5,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T05:04:53.989Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/71c176ca-b677-4106-a3b4-ba83c6f0eec2.jpg",
+              "screenshotFile": "71c176ca-b677-4106-a3b4-ba83c6f0eec2.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n打开任务记录进入目标看板\nPASS",
+              "endedAt": "2026-10-20T05:04:57.254Z"
+            },
+            {
+              "id": "086b9a70-66ac-497d-a6f6-da5a600f7753",
+              "kind": "browser",
+              "label": "点击新建目标进入空白草稿",
+              "action": "click",
+              "criterion": 1,
+              "round": 5,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T05:04:57.254Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/b85b3990-250c-4a9a-8378-2cc9a3bfc696.jpg",
+              "screenshotFile": "b85b3990-250c-4a9a-8378-2cc9a3bfc696.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收1\n点击新建目标进入空白草稿\nPASS",
+              "endedAt": "2026-10-20T05:04:58.261Z"
+            },
+            {
+              "id": "9da4dfc2-6861-4348-934a-2892fa53cebd",
+              "kind": "browser",
+              "label": "草稿标题为空",
+              "action": "assertValue",
+              "criterion": 1,
+              "round": 5,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "",
+              "status": "done",
+              "startedAt": "2026-10-20T05:04:58.261Z",
+              "actual": "",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/38a2716f-6020-4ef9-88fd-cbdc67f859a3.jpg",
+              "screenshotFile": "38a2716f-6020-4ef9-88fd-cbdc67f859a3.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收1\n草稿标题为空\nPASS · 完全相等\n预期：\"\"\n实际：\"\"",
+              "endedAt": "2026-10-20T05:04:58.948Z"
+            },
+            {
+              "id": "30442817-0e8e-414b-8158-e6cb8e22c816",
+              "kind": "browser",
+              "label": "未保存草稿时归档目标按钮必须禁用",
+              "action": "assertEnabled",
+              "criterion": 1,
+              "round": 5,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": false,
+              "status": "done",
+              "startedAt": "2026-10-20T05:04:58.949Z",
+              "actual": false,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/7e2d3193-ec4a-4a8a-8792-e5365cc8f151.jpg",
+              "screenshotFile": "7e2d3193-ec4a-4a8a-8792-e5365cc8f151.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收1\n未保存草稿时归档目标按钮必须禁用\nPASS\n预期：false\n实际：false",
+              "endedAt": "2026-10-20T05:04:59.519Z"
+            },
+            {
+              "id": "ff8b0d4e-47d3-44f8-8d74-7b7ed972c1de",
+              "kind": "browser",
+              "label": "草稿状态下按钮文案仍为归档目标",
+              "action": "assertText",
+              "criterion": 1,
+              "round": 5,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档目标",
+              "status": "done",
+              "startedAt": "2026-10-20T05:04:59.520Z",
+              "actual": "归档目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/7be3528f-8bb4-4165-b39f-997dba8b38c4.jpg",
+              "screenshotFile": "7be3528f-8bb4-4165-b39f-997dba8b38c4.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收1\n草稿状态下按钮文案仍为归档目标\nPASS · 完全相等\n预期：\"归档目标\"\n实际：\"归档目标\"",
+              "endedAt": "2026-10-20T05:05:00.368Z"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 2,
+          "title": "新建并保存有效目标后归档可用并可归档再恢复",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "e8ae91c8-8ee0-4cad-86f0-233a39e71dc1",
+              "kind": "browser",
+              "label": "打开目标看板",
+              "action": "click",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:00.871Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/7ad44506-e6dd-49d9-be73-02d679dd0dda.jpg",
+              "screenshotFile": "7ad44506-e6dd-49d9-be73-02d679dd0dda.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n打开目标看板\nPASS",
+              "endedAt": "2026-10-20T05:05:04.245Z"
+            },
+            {
+              "id": "bcaacf90-bf19-4614-96db-83609c9475bb",
+              "kind": "browser",
+              "label": "新建目标草稿",
+              "action": "click",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:04.246Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/f3bcd4e7-a633-4da9-9f0e-c67e515e0d99.jpg",
+              "screenshotFile": "f3bcd4e7-a633-4da9-9f0e-c67e515e0d99.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n新建目标草稿\nPASS",
+              "endedAt": "2026-10-20T05:05:05.373Z"
+            },
+            {
+              "id": "97a5f9ed-7089-46d2-a111-0bff5ef52a0f",
+              "kind": "browser",
+              "label": "填写目标名称",
+              "action": "fill",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "验收用新目标",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:05.374Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/9af1dfec-f9b9-4d67-8fd4-adb46f0db70e.jpg",
+              "screenshotFile": "9af1dfec-f9b9-4d67-8fd4-adb46f0db70e.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写目标名称\nPASS\n预期：\"验收用新目标\"",
+              "endedAt": "2026-10-20T05:05:06.222Z"
+            },
+            {
+              "id": "f624cc39-dc85-4e4a-85d4-964e77334eb0",
+              "kind": "browser",
+              "label": "填写目标描述",
+              "action": "fill",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#goal-brief",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "用于验证归档按钮在保存后恢复可用的新目标描述",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:06.222Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/4f0b04be-b337-4190-be6d-f1c0e13ede22.jpg",
+              "screenshotFile": "4f0b04be-b337-4190-be6d-f1c0e13ede22.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写目标描述\nPASS\n预期：\"用于验证归档按钮在保存后恢复可用的新目标描述\"",
+              "endedAt": "2026-10-20T05:05:06.641Z"
+            },
+            {
+              "id": "3c068524-e3ac-4429-9205-33a9fbba4d44",
+              "kind": "browser",
+              "label": "填写验收要求",
+              "action": "fill",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#goal-criteria",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档按钮保存后可用",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:06.642Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/b37100e0-3870-4500-83ed-9c46e859cef4.jpg",
+              "screenshotFile": "b37100e0-3870-4500-83ed-9c46e859cef4.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收2\n填写验收要求\nPASS\n预期：\"归档按钮保存后可用\"",
+              "endedAt": "2026-10-20T05:05:07.036Z"
+            },
+            {
+              "id": "7113fe58-6bea-4fcc-942d-eadc170664f6",
+              "kind": "browser",
+              "label": "保存目标",
+              "action": "click",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#goal-form button[type=\"submit\"]",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:07.036Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/e64f4962-65c7-449b-8413-5573a0563f8c.jpg",
+              "screenshotFile": "e64f4962-65c7-449b-8413-5573a0563f8c.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n保存目标\nPASS",
+              "endedAt": "2026-10-20T05:05:08.222Z"
+            },
+            {
+              "id": "bc94576e-c9ed-4ee2-8748-f3e44b70a489",
+              "kind": "browser",
+              "label": "保存后标题保留",
+              "action": "assertValue",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "验收用新目标",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:08.223Z",
+              "actual": "验收用新目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/83083cd1-ce32-49bc-a2ba-d4c551659992.jpg",
+              "screenshotFile": "83083cd1-ce32-49bc-a2ba-d4c551659992.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收2\n保存后标题保留\nPASS · 完全相等\n预期：\"验收用新目标\"\n实际：\"验收用新目标\"",
+              "endedAt": "2026-10-20T05:05:08.787Z"
+            },
+            {
+              "id": "e84a5b3a-5721-4302-80b6-eb7b661bc562",
+              "kind": "browser",
+              "label": "保存后归档目标按钮启用",
+              "action": "assertEnabled",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:08.787Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/b0f599f5-a95e-43cc-a548-ea5d40e3488d.jpg",
+              "screenshotFile": "b0f599f5-a95e-43cc-a548-ea5d40e3488d.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收2\n保存后归档目标按钮启用\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T05:05:09.593Z"
+            },
+            {
+              "id": "7dd7956c-a2a8-4563-9440-eccea15f2b39",
+              "kind": "browser",
+              "label": "点击归档该新目标",
+              "action": "click",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:09.593Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/d4041ad2-c4f4-4849-8164-35124a3f817d.jpg",
+              "screenshotFile": "d4041ad2-c4f4-4849-8164-35124a3f817d.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n点击归档该新目标\nPASS",
+              "endedAt": "2026-10-20T05:05:10.563Z"
+            },
+            {
+              "id": "b2717b27-35bb-4941-b5cf-c69ffd33952c",
+              "kind": "browser",
+              "label": "归档后按钮变为可恢复状态",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "contains",
+              "expected": "恢复",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:10.563Z",
+              "actual": "恢复目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/f81fe074-54a1-426c-a6ae-1d74406cd5df.jpg",
+              "screenshotFile": "f81fe074-54a1-426c-a6ae-1d74406cd5df.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n归档后按钮变为可恢复状态\nPASS · 包含匹配\n预期：\"恢复\"\n实际：\"恢复目标\"",
+              "endedAt": "2026-10-20T05:05:11.263Z"
+            },
+            {
+              "id": "31c5eec0-2903-408a-94c5-751b24a31144",
+              "kind": "browser",
+              "label": "归档后仍可点击恢复",
+              "action": "assertEnabled",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:11.263Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/762a8985-c0b4-4b99-8fab-66480034bc62.jpg",
+              "screenshotFile": "762a8985-c0b4-4b99-8fab-66480034bc62.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收2\n归档后仍可点击恢复\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T05:05:11.792Z"
+            },
+            {
+              "id": "ad81447c-24ef-4b7c-998f-32de532221d7",
+              "kind": "browser",
+              "label": "点击恢复该目标",
+              "action": "click",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:11.792Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/e4b5cfaf-3945-4c69-a486-35163761528d.jpg",
+              "screenshotFile": "e4b5cfaf-3945-4c69-a486-35163761528d.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收2\n点击恢复该目标\nPASS",
+              "endedAt": "2026-10-20T05:05:12.838Z"
+            },
+            {
+              "id": "d795e555-d426-4bba-a929-2e21f10eae67",
+              "kind": "browser",
+              "label": "恢复后按钮回到归档目标",
+              "action": "assertText",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档目标",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:12.839Z",
+              "actual": "归档目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/e17ba88d-6646-4719-be7a-fb2a5ac3a9ca.jpg",
+              "screenshotFile": "e17ba88d-6646-4719-be7a-fb2a5ac3a9ca.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收2\n恢复后按钮回到归档目标\nPASS · 完全相等\n预期：\"归档目标\"\n实际：\"归档目标\"",
+              "endedAt": "2026-10-20T05:05:13.355Z"
+            },
+            {
+              "id": "0960fe34-44ce-4cd7-8a0e-a06e08e0a4a9",
+              "kind": "browser",
+              "label": "恢复后归档按钮仍启用",
+              "action": "assertEnabled",
+              "criterion": 2,
+              "round": 5,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:13.356Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/5e51619a-69b2-4be7-8067-fb8b78df6b6d.jpg",
+              "screenshotFile": "5e51619a-69b2-4be7-8067-fb8b78df6b6d.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收2\n恢复后归档按钮仍启用\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T05:05:13.972Z"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "criterion": 3,
+          "title": "关闭再打开看板后恢复原目标内容且归档按钮可用",
+          "kind": "browser",
+          "steps": [
+            {
+              "id": "3398a68f-c057-4b96-aff4-83c0d0e635da",
+              "kind": "browser",
+              "label": "打开目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 5,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:14.394Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/42657a1b-d608-422f-adbd-5b5aa6f1916c.jpg",
+              "screenshotFile": "42657a1b-d608-422f-adbd-5b5aa6f1916c.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n打开目标看板\nPASS",
+              "endedAt": "2026-10-20T05:05:17.459Z"
+            },
+            {
+              "id": "72de377e-b3d6-43d4-abc3-aa3a943c2fa6",
+              "kind": "browser",
+              "label": "新建未保存草稿",
+              "action": "click",
+              "criterion": 3,
+              "round": 5,
+              "target": {
+                "selector": "#new-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:17.459Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/ec648c12-9a8b-4fa6-bc71-f1279e08f047.jpg",
+              "screenshotFile": "ec648c12-9a8b-4fa6-bc71-f1279e08f047.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n新建未保存草稿\nPASS",
+              "endedAt": "2026-10-20T05:05:18.461Z"
+            },
+            {
+              "id": "3179a0a3-f760-403a-96d0-25fa369af2c7",
+              "kind": "browser",
+              "label": "草稿里填入内容但不保存",
+              "action": "fill",
+              "criterion": 3,
+              "round": 5,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "不应保存的草稿",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:18.461Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/c10c0d4f-fc0c-4abb-a776-bf7082023a0b.jpg",
+              "screenshotFile": "c10c0d4f-fc0c-4abb-a776-bf7082023a0b.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "fill · 验收3\n草稿里填入内容但不保存\nPASS\n预期：\"不应保存的草稿\"",
+              "endedAt": "2026-10-20T05:05:19.071Z"
+            },
+            {
+              "id": "f8eb7c68-3a77-43bf-8913-c1f9e226e157",
+              "kind": "browser",
+              "label": "关闭目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 5,
+              "target": {
+                "selector": "[data-close=\"goals-dialog\"]",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:19.071Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/8244dff2-c95b-4ca0-b761-51a7d98c441e.jpg",
+              "screenshotFile": "8244dff2-c95b-4ca0-b761-51a7d98c441e.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n关闭目标看板\nPASS",
+              "endedAt": "2026-10-20T05:05:19.955Z"
+            },
+            {
+              "id": "c05956bf-2be7-41c0-b252-454608192388",
+              "kind": "browser",
+              "label": "再次打开目标看板",
+              "action": "click",
+              "criterion": 3,
+              "round": 5,
+              "target": {
+                "selector": "#mission-history",
+                "exact": true
+              },
+              "comparison": "equals",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:19.955Z",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/f7ff868b-927d-4132-928b-9cf5e8da46ed.jpg",
+              "screenshotFile": "f7ff868b-927d-4132-928b-9cf5e8da46ed.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "click · 验收3\n再次打开目标看板\nPASS",
+              "endedAt": "2026-10-20T05:05:21.708Z"
+            },
+            {
+              "id": "38e5cc8a-ad40-4acf-90bd-489effb5c8f0",
+              "kind": "browser",
+              "label": "重新打开后显示原有目标名称",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 5,
+              "target": {
+                "selector": "#goal-title",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "把小屋变成协作工作室",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:21.708Z",
+              "actual": "把小屋变成协作工作室",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/81b88710-d6da-48a6-9fa6-79f647ede31e.jpg",
+              "screenshotFile": "81b88710-d6da-48a6-9fa6-79f647ede31e.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n重新打开后显示原有目标名称\nPASS · 完全相等\n预期：\"把小屋变成协作工作室\"\n实际：\"把小屋变成协作工作室\"",
+              "endedAt": "2026-10-20T05:05:22.072Z"
+            },
+            {
+              "id": "0dd0eb72-b97a-4e84-8e55-f70d7dfa3420",
+              "kind": "browser",
+              "label": "重新打开后显示原有目标描述",
+              "action": "assertValue",
+              "criterion": 3,
+              "round": 5,
+              "target": {
+                "selector": "#goal-brief",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:22.072Z",
+              "actual": "为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/517531ef-70e1-4dc5-a6f8-cf350931a3b8.jpg",
+              "screenshotFile": "517531ef-70e1-4dc5-a6f8-cf350931a3b8.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertValue · 验收3\n重新打开后显示原有目标描述\nPASS · 完全相等\n预期：\"为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。\"\n实际：\"为这个 3D 小屋设计一套有语音、任务交接和可查看产物的多 Agent 协作展示方案。\"",
+              "endedAt": "2026-10-20T05:05:22.447Z"
+            },
+            {
+              "id": "b7eb4870-3e57-47db-9ca4-7a4c3d5e577f",
+              "kind": "browser",
+              "label": "按钮文案为归档目标",
+              "action": "assertText",
+              "criterion": 3,
+              "round": 5,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": "归档目标",
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:22.448Z",
+              "actual": "归档目标",
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/b4013cce-cd47-4027-a50c-122c2ebee074.jpg",
+              "screenshotFile": "b4013cce-cd47-4027-a50c-122c2ebee074.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertText · 验收3\n按钮文案为归档目标\nPASS · 完全相等\n预期：\"归档目标\"\n实际：\"归档目标\"",
+              "endedAt": "2026-10-20T05:05:23.003Z"
+            },
+            {
+              "id": "70b8fd1c-363d-43cb-871a-3f1961fd6ef5",
+              "kind": "browser",
+              "label": "重新打开已有目标后归档按钮可用",
+              "action": "assertEnabled",
+              "criterion": 3,
+              "round": 5,
+              "target": {
+                "selector": "#archive-goal",
+                "exact": true
+              },
+              "comparison": "equals",
+              "expected": true,
+              "status": "done",
+              "startedAt": "2026-10-20T05:05:23.004Z",
+              "actual": true,
+              "passed": true,
+              "screenshot": "api/source/runs/30b89d02-a24f-433f-8d68-dc9ba675f22b/browser/8e24ecf6-5305-45bd-836f-7e4bf16e68b8.jpg",
+              "screenshotFile": "8e24ecf6-5305-45bd-836f-7e4bf16e68b8.jpg",
+              "url": "http://127.0.0.1:55376/1014_codex_project/003-lofi-room/?view=workspace",
+              "output": "assertEnabled · 验收3\n重新打开已有目标后归档按钮可用\nPASS\n预期：true\n实际：true",
+              "endedAt": "2026-10-20T05:05:23.447Z"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "logs": [],
+      "completedAt": "2026-10-20T05:05:23.448Z"
+    }
+  ]
+}

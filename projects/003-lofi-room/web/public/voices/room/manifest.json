@@ -1,0 +1,367 @@
+{
+  "provider": "MiniMax",
+  "model": "speech-2.8-turbo",
+  "generatedAt": "2026-10-15T04:00:28.016Z",
+  "clips": [
+    {
+      "id": "amber_greet",
+      "actor": "amber",
+      "text": "嗨，出来活动一下呀？",
+      "clip": "amber_greet",
+      "collection": "room",
+      "category": "greet",
+      "voiceId": "male-qn-daxuesheng",
+      "file": "amber_greet.mp3"
+    },
+    {
+      "id": "mori_greet",
+      "actor": "mori",
+      "text": "嗨，路过看看你，忙得怎么样？",
+      "clip": "mori_greet",
+      "collection": "room",
+      "category": "greet",
+      "voiceId": "male-qn-jingying",
+      "file": "mori_greet.mp3"
+    },
+    {
+      "id": "indigo_greet",
+      "actor": "indigo",
+      "text": "嗨，刚好碰见你，歇口气吧。",
+      "clip": "indigo_greet",
+      "collection": "room",
+      "category": "greet",
+      "voiceId": "male-qn-qingse",
+      "file": "indigo_greet.mp3"
+    },
+    {
+      "id": "luna_greet",
+      "actor": "luna",
+      "text": "嗨，眼睛累了就休息一下。",
+      "clip": "luna_greet",
+      "collection": "room",
+      "category": "greet",
+      "voiceId": "female-chengshu",
+      "file": "luna_greet.mp3"
+    },
+    {
+      "id": "momo_greet",
+      "actor": "momo",
+      "text": "嗨，肩膀放松一点呀。",
+      "clip": "momo_greet",
+      "collection": "room",
+      "category": "greet",
+      "voiceId": "female-shaonv",
+      "file": "momo_greet.mp3"
+    },
+    {
+      "id": "sleepy_greet",
+      "actor": "sleepy",
+      "text": "嗨，我起来走走，你也别坐太久。",
+      "clip": "sleepy_greet",
+      "collection": "room",
+      "category": "greet",
+      "voiceId": "female-yujie",
+      "file": "sleepy_greet.mp3"
+    },
+    {
+      "id": "mori_greet_reply",
+      "actor": "mori",
+      "text": "还挺顺利的，你也慢慢来。",
+      "clip": "mori_greet_reply",
+      "collection": "room",
+      "category": "greet_reply",
+      "voiceId": "male-qn-jingying",
+      "file": "mori_greet_reply.mp3"
+    },
+    {
+      "id": "amber_greet_reply",
+      "actor": "amber",
+      "text": "嗯，正好换换脑子，待会儿再继续。",
+      "clip": "amber_greet_reply",
+      "collection": "room",
+      "category": "greet_reply",
+      "voiceId": "male-qn-daxuesheng",
+      "file": "amber_greet_reply.mp3"
+    },
+    {
+      "id": "indigo_greet_reply",
+      "actor": "indigo",
+      "text": "好呀，我也正想活动一下。",
+      "clip": "indigo_greet_reply",
+      "collection": "room",
+      "category": "greet_reply",
+      "voiceId": "male-qn-qingse",
+      "file": "indigo_greet_reply.mp3"
+    },
+    {
+      "id": "luna_greet_reply",
+      "actor": "luna",
+      "text": "谢谢提醒，我看完这页就歇一会儿。",
+      "clip": "luna_greet_reply",
+      "collection": "room",
+      "category": "greet_reply",
+      "voiceId": "female-chengshu",
+      "file": "luna_greet_reply.mp3"
+    },
+    {
+      "id": "momo_greet_reply",
+      "actor": "momo",
+      "text": "好，等会儿一起继续。",
+      "clip": "momo_greet_reply",
+      "collection": "room",
+      "category": "greet_reply",
+      "voiceId": "female-shaonv",
+      "file": "momo_greet_reply.mp3"
+    },
+    {
+      "id": "sleepy_greet_reply",
+      "actor": "sleepy",
+      "text": "嗯，起来走两步舒服多了。",
+      "clip": "sleepy_greet_reply",
+      "collection": "room",
+      "category": "greet_reply",
+      "voiceId": "female-yujie",
+      "file": "sleepy_greet_reply.mp3"
+    },
+    {
+      "id": "mori_chat",
+      "actor": "mori",
+      "text": "我准备歇口气，一起聊两句？",
+      "clip": "mori_chat",
+      "collection": "room",
+      "category": "chat",
+      "voiceId": "male-qn-jingying",
+      "file": "mori_chat.mp3"
+    },
+    {
+      "id": "amber_chat",
+      "actor": "amber",
+      "text": "资料看久了，聊两句换换脑子吧。",
+      "clip": "amber_chat",
+      "collection": "room",
+      "category": "chat",
+      "voiceId": "male-qn-daxuesheng",
+      "file": "amber_chat.mp3"
+    },
+    {
+      "id": "indigo_chat",
+      "actor": "indigo",
+      "text": "盯屏幕有点久了，我出来透透气。",
+      "clip": "indigo_chat",
+      "collection": "room",
+      "category": "chat",
+      "voiceId": "male-qn-qingse",
+      "file": "indigo_chat.mp3"
+    },
+    {
+      "id": "luna_chat",
+      "actor": "luna",
+      "text": "先放下文档，休息一下眼睛吧。",
+      "clip": "luna_chat",
+      "collection": "room",
+      "category": "chat",
+      "voiceId": "female-chengshu",
+      "file": "luna_chat.mp3"
+    },
+    {
+      "id": "momo_chat",
+      "actor": "momo",
+      "text": "坐一会儿，放松一下肩膀吧。",
+      "clip": "momo_chat",
+      "collection": "room",
+      "category": "chat",
+      "voiceId": "female-shaonv",
+      "file": "momo_chat.mp3"
+    },
+    {
+      "id": "sleepy_chat",
+      "actor": "sleepy",
+      "text": "手记先放一放，和你聊两句。",
+      "clip": "sleepy_chat",
+      "collection": "room",
+      "category": "chat",
+      "voiceId": "female-yujie",
+      "file": "sleepy_chat.mp3"
+    },
+    {
+      "id": "mori_chat_reply",
+      "actor": "mori",
+      "text": "好呀，缓一缓，有精神了再接着忙。",
+      "clip": "mori_chat_reply",
+      "collection": "room",
+      "category": "chat_reply",
+      "voiceId": "male-qn-jingying",
+      "file": "mori_chat_reply.mp3"
+    },
+    {
+      "id": "amber_chat_reply",
+      "actor": "amber",
+      "text": "好，休息一下，思路也会清楚些。",
+      "clip": "amber_chat_reply",
+      "collection": "room",
+      "category": "chat_reply",
+      "voiceId": "male-qn-daxuesheng",
+      "file": "amber_chat_reply.mp3"
+    },
+    {
+      "id": "luna_chat_reply",
+      "actor": "luna",
+      "text": "好呀，刚好让脑子放松一下。",
+      "clip": "luna_chat_reply",
+      "collection": "room",
+      "category": "chat_reply",
+      "voiceId": "female-chengshu",
+      "file": "luna_chat_reply.mp3"
+    },
+    {
+      "id": "indigo_chat_reply",
+      "actor": "indigo",
+      "text": "嗯，稍微歇一会儿，再回去继续。",
+      "clip": "indigo_chat_reply",
+      "collection": "room",
+      "category": "chat_reply",
+      "voiceId": "male-qn-qingse",
+      "file": "indigo_chat_reply.mp3"
+    },
+    {
+      "id": "momo_chat_reply",
+      "actor": "momo",
+      "text": "嗯，这会儿正适合歇口气。",
+      "clip": "momo_chat_reply",
+      "collection": "room",
+      "category": "chat_reply",
+      "voiceId": "female-shaonv",
+      "file": "momo_chat_reply.mp3"
+    },
+    {
+      "id": "sleepy_chat_reply",
+      "actor": "sleepy",
+      "text": "好，我也刚好想放松一下。",
+      "clip": "sleepy_chat_reply",
+      "collection": "room",
+      "category": "chat_reply",
+      "voiceId": "female-yujie",
+      "file": "sleepy_chat_reply.mp3"
+    },
+    {
+      "id": "mori_work_start",
+      "actor": "mori",
+      "text": "先和你对齐一下，再安排下一步。",
+      "clip": "mori_work_start",
+      "collection": "room",
+      "category": "work_start",
+      "voiceId": "male-qn-jingying",
+      "file": "mori_work_start.mp3"
+    },
+    {
+      "id": "amber_work_start",
+      "actor": "amber",
+      "text": "我先和你确认一下资料的重点。",
+      "clip": "amber_work_start",
+      "collection": "room",
+      "category": "work_start",
+      "voiceId": "male-qn-daxuesheng",
+      "file": "amber_work_start.mp3"
+    },
+    {
+      "id": "luna_work_start",
+      "actor": "luna",
+      "text": "我准备开始审阅，先核对一下交接内容。",
+      "clip": "luna_work_start",
+      "collection": "room",
+      "category": "work_start",
+      "voiceId": "female-chengshu",
+      "file": "luna_work_start.mp3"
+    },
+    {
+      "id": "indigo_work_start",
+      "actor": "indigo",
+      "text": "我准备接着做方案，先和你确认一下重点。",
+      "clip": "indigo_work_start",
+      "collection": "room",
+      "category": "work_start",
+      "voiceId": "male-qn-qingse",
+      "file": "indigo_work_start.mp3"
+    },
+    {
+      "id": "momo_work_start",
+      "actor": "momo",
+      "text": "我准备开始检查，先确认一下要点。",
+      "clip": "momo_work_start",
+      "collection": "room",
+      "category": "work_start",
+      "voiceId": "female-shaonv",
+      "file": "momo_work_start.mp3"
+    },
+    {
+      "id": "sleepy_work_start",
+      "actor": "sleepy",
+      "text": "我准备整理交付记录，先和你核对一下内容。",
+      "clip": "sleepy_work_start",
+      "collection": "room",
+      "category": "work_start",
+      "voiceId": "female-yujie",
+      "file": "sleepy_work_start.mp3"
+    },
+    {
+      "id": "amber_work_ack",
+      "actor": "amber",
+      "text": "收到，我先核对这份资料，有问题再找你。",
+      "clip": "amber_work_ack",
+      "collection": "room",
+      "category": "work_ack",
+      "voiceId": "male-qn-daxuesheng",
+      "file": "amber_work_ack.mp3"
+    },
+    {
+      "id": "mori_work_ack",
+      "actor": "mori",
+      "text": "收到，我们按交接资料继续，有问题再一起确认。",
+      "clip": "mori_work_ack",
+      "collection": "room",
+      "category": "work_ack",
+      "voiceId": "male-qn-jingying",
+      "file": "mori_work_ack.mp3"
+    },
+    {
+      "id": "indigo_work_ack",
+      "actor": "indigo",
+      "text": "收到，我会按交接的内容继续推进。",
+      "clip": "indigo_work_ack",
+      "collection": "room",
+      "category": "work_ack",
+      "voiceId": "male-qn-qingse",
+      "file": "indigo_work_ack.mp3"
+    },
+    {
+      "id": "luna_work_ack",
+      "actor": "luna",
+      "text": "收到，我先核对内容，再看需要补充的地方。",
+      "clip": "luna_work_ack",
+      "collection": "room",
+      "category": "work_ack",
+      "voiceId": "female-chengshu",
+      "file": "luna_work_ack.mp3"
+    },
+    {
+      "id": "momo_work_ack",
+      "actor": "momo",
+      "text": "收到，我会重点留意刚才提到的约束。",
+      "clip": "momo_work_ack",
+      "collection": "room",
+      "category": "work_ack",
+      "voiceId": "female-shaonv",
+      "file": "momo_work_ack.mp3"
+    },
+    {
+      "id": "sleepy_work_ack",
+      "actor": "sleepy",
+      "text": "收到，我先把这些内容整理清楚。",
+      "clip": "sleepy_work_ack",
+      "collection": "room",
+      "category": "work_ack",
+      "voiceId": "female-yujie",
+      "file": "sleepy_work_ack.mp3"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "units": "scene metres",
+  "durationPerCaseSeconds": 4,
+  "before": {
+    "speed": 0.8,
+    "frameSeconds": 0.016666666666666666,
+    "minimumGap": 0.04315290294886805,
+    "maximumGap": 0.04338324664531954,
+    "maximumSlide": 0.029916085063667337,
+    "source": "本次修改前，600 帧复现记录"
+  },
+  "after": [
+    {
+      "speed": 0.25,
+      "frameSeconds": 0.016666666666666666,
+      "minimumGap": 0.0029999999999998223,
+      "maximumGap": 0.0030000000000002316,
+      "maximumSlide": 9.155133597044475e-16,
+      "unsupportedFrames": 0,
+      "landings": 13
+    },
+    {
+      "speed": 0.25,
+      "frameSeconds": 0.05,
+      "minimumGap": 0.0029999999999998153,
+      "maximumGap": 0.0030000000000002316,
+      "maximumSlide": 4.440892098500626e-16,
+      "unsupportedFrames": 0,
+      "landings": 13
+    },
+    {
+      "speed": 0.25,
+      "frameSeconds": 0.16,
+      "minimumGap": 0.0029999999999998847,
+      "maximumGap": 0.0030000000000001553,
+      "maximumSlide": 4.965068306494546e-16,
+      "unsupportedFrames": 0,
+      "landings": 13
+    },
+    {
+      "speed": 0.8,
+      "frameSeconds": 0.016666666666666666,
+      "minimumGap": 0.0029999999999996765,
+      "maximumGap": 0.0030000000000002178,
+      "maximumSlide": 9.155133597044475e-16,
+      "unsupportedFrames": 0,
+      "landings": 15
+    },
+    {
+      "speed": 0.8,
+      "frameSeconds": 0.05,
+      "minimumGap": 0.0029999999999998223,
+      "maximumGap": 0.003000000000000176,
+      "maximumSlide": 4.965068306494546e-16,
+      "unsupportedFrames": 0,
+      "landings": 14
+    },
+    {
+      "speed": 0.8,
+      "frameSeconds": 0.16,
+      "minimumGap": 0.002999999999999836,
+      "maximumGap": 0.00300000000000019,
+      "maximumSlide": 3.1401849173675503e-16,
+      "unsupportedFrames": 0,
+      "landings": 14
+    },
+    {
+      "speed": 1.08,
+      "frameSeconds": 0.016666666666666666,
+      "minimumGap": 0.0029999999999998223,
+      "maximumGap": 0.003000000000000169,
+      "maximumSlide": 4.440892098500626e-16,
+      "unsupportedFrames": 0,
+      "landings": 15
+    },
+    {
+      "speed": 1.08,
+      "frameSeconds": 0.05,
+      "minimumGap": 0.0029999999999998223,
+      "maximumGap": 0.0030000000000001623,
+      "maximumSlide": 4.965068306494546e-16,
+      "unsupportedFrames": 0,
+      "landings": 15
+    },
+    {
+      "speed": 1.08,
+      "frameSeconds": 0.16,
+      "minimumGap": 0.002999999999999857,
+      "maximumGap": 0.0030000000000001345,
+      "maximumSlide": 3.1401849173675503e-16,
+      "unsupportedFrames": 0,
+      "landings": 15
+    }
+  ]
+}

@@ -2,6 +2,7 @@
   "version": 1,
   "projects": [
     "002-rainy-ghost",
+    "003-lofi-room",
     "004-jasonzhu-ai",
     "006-random-doors",
     "007-autumn-courtyard-blender",
@@ -12,5 +13,6 @@
     "012-edgechat",
     "013-crawl-hive",
     "014-cyber-xiaoya-study"
-  ]
+  ],
+  "outputs": { "003-lofi-room": "web/.cache/pages-dist" }
 }

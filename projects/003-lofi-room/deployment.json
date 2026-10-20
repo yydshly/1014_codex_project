@@ -1,0 +1,29 @@
+{
+  "project": "003-lofi-room",
+  "status": "prepared",
+  "date": "2026-10-20",
+  "hosting": "GitHub Pages via .github/workflows/pages.yml",
+  "scope": "理解摘要、既有引导图、3D房间、预设协作与MiniMax已有录音；实时模型和真实任务保留本地Node服务",
+  "planned_urls": [
+    "https://yydshly.github.io/1014_codex_project/003-lofi-room/research.html#synthesis",
+    "https://yydshly.github.io/1014_codex_project/003-lofi-room/?view=workspace",
+    "https://yydshly.github.io/1014_codex_project/003-lofi-room/?view=room"
+  ],
+  "build": "node projects/003-lofi-room/web/build.mjs",
+  "output": "projects/003-lofi-room/web/.cache/pages-dist/",
+  "runtimeAPI": false,
+  "requiresMiniMaxSecret": false,
+  "localVerification": {
+    "mainTests": {
+      "passed": 82,
+      "failed": 0
+    },
+    "controlAndDeploymentTests": {
+      "passed": 33,
+      "failed": 0
+    },
+    "note": "测试范围分别记录，不相加。公开浏览器已启动预设流程，实际录音播放，后台任务编号为空，错误日志为空。",
+    "guideSHA256": "63832d25f31c29249acf8afad560cbf05227d6be9a05c3885a253076e975d58f"
+  },
+  "publicVerification": null
+}
