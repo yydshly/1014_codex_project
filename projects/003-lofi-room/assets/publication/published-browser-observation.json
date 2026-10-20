@@ -1,0 +1,49 @@
+{
+  "state": {
+    "mode": "demo",
+    "running": true,
+    "paused": false,
+    "eventCount": 24,
+    "artifactCount": 3,
+    "statuses": {
+      "mori": {
+        "status": "done",
+        "task": "已拆分六位角色的任务与依赖。"
+      },
+      "amber": {
+        "status": "done",
+        "task": "整理场景能力、语音接口和展示约束。"
+      },
+      "indigo": {
+        "status": "done",
+        "task": "产出角色状态与交接方案，等待并行检查。"
+      },
+      "luna": {
+        "status": "queued",
+        "task": "等待前序产物"
+      },
+      "momo": {
+        "status": "queued",
+        "task": "等待前序产物"
+      },
+      "sleepy": {
+        "status": "queued",
+        "task": "等待前序产物"
+      }
+    },
+    "speaker": null,
+    "backendTaskId": null,
+    "backendStatus": null,
+    "executionControl": null,
+    "connection": "idle",
+    "cursor": 0
+  },
+  "indicator": "Pages 预设演示中 · 无真实任务\n在线体验人物、场景与已有 MiniMax 录音；真实编码、测试和实时语音需要本地 Node 服务。",
+  "audio": {
+    "duration": 10.356125,
+    "paused": true,
+    "src": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/demo/research.mp3",
+    "time": 10.356125
+  },
+  "errors": []
+}

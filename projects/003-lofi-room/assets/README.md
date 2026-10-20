@@ -1,5 +1,7 @@
 # 配图与录音来源
 
+2026-10-20 [Pages发布证据](publication/README.md)：四张浏览器原始JPEG分别记录本地静态摘要、预设协作、公网摘要与公网工作室；没有生成、裁切或合成。公网63份资源与引导图原字节已核验，发布清单中的12个应用入口可访问；实际范围、音频观察与本地预设完整结束状态见同目录JSON。
+
 2026-10-20 新增 [项目理解总览图](understanding-overview/agent-studio-understanding.png) 与 [矢量源图](understanding-overview/agent-studio-understanding.svg)，汇总来源、原理、扩展、探索、能力、验证及后续方向。信息图使用可编辑文字与矢量流程，并按原比例嵌入三张本项目实际截图，没有图像生成或改写截图内容。来源待确认事项、截图所涉两次不同任务和统计范围见 [制作与来源说明](understanding-overview/README.md)。
 
 2026-10-20原项目目录执行验收：`workspace-local-source-delivery.png` 是原仓库build/test通过、12份产物归档后的真实工作室画面；`workspace-local-source-revision.png` 是首轮真实测试失败后，开发、审阅及验证前往白板核对的实际画面；`original-repository-demo-browser.png` 是加载原项目dist/mitt.mjs，完成浏览器交互验收后的一键示例。均为实际浏览器截图，场景及界面由代码生成，未合成图像。

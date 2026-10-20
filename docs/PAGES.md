@@ -3,6 +3,7 @@
 本站使用一个 GitHub Pages 站点和编号子路径，发布来源为 `main` 分支的 GitHub Actions 工作流。2026-10-15首次发布已成功，公网入口、正文、引导图、章节导航与来源文件均已验证，记录见[014验证文件](../projects/014-cyber-xiaoya-study/sources/verification.json)。
 
 - 总入口：<https://yydshly.github.io/1014_codex_project/>
+- 003 Agent 工作室：[理解摘要](https://yydshly.github.io/1014_codex_project/003-lofi-room/research.html#synthesis) · [预设协作](https://yydshly.github.io/1014_codex_project/003-lofi-room/?view=workspace)；真实执行保留本地。
 - 002 雨夜小幽灵：理解摘要与原交互场景，发布记录见项目 deployment.json。
 - 004 产品总览：<https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html>
 - 006 研究页：<https://yydshly.github.io/1014_codex_project/006-random-doors/research.html>

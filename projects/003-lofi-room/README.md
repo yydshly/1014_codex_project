@@ -16,7 +16,7 @@
 
 **可扩展方向。** 优先推进断点续跑、幂等重试、队列与资源控制；再探索受控隔离、MCP/多模型、更多技术栈、角色长期记忆、多人观察与语音输入，最终接入分支/PR/CI、部署和视觉验收。这些方向不计作已实现能力。
 
-网页入口：`003-lofi-room/research.html#synthesis`（理解摘要）· `003-lofi-room/?view=workspace`（工作室演示）· `003-lofi-room/?view=room`（观察与漫游）。发布后验证正式地址才登记总索引。
+已发布并完成公网核验：[理解摘要](https://yydshly.github.io/1014_codex_project/003-lofi-room/research.html#synthesis) · [工作室预设演示](https://yydshly.github.io/1014_codex_project/003-lofi-room/?view=workspace) · [夜半小屋](https://yydshly.github.io/1014_codex_project/003-lofi-room/?view=room)。原引导图SHA一致、63份资源与84个HTTP请求通过；全部15项研究和12个应用入口保留。[发布记录](deployment.json) · [验收范围](assets/publication/README.md)。
 
 把 3D lo-fi 房间变成可观察的 Agent 工作室。六个人物分别代表协调、研究、开发、审阅、验证和记录，任务状态、交接、发言与产物都直接映射到房间里的角色。
 

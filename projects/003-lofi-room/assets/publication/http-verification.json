@@ -1,0 +1,533 @@
+{
+  "checkedAt": "2026-10-20T08:16:27.630Z",
+  "entry": "https://yydshly.github.io/1014_codex_project/003-lofi-room/",
+  "sourceCommit": "17d5a52ae9f69dc6031851150415e85b01792be7",
+  "workflowRun": "https://github.com/yydshly/1014_codex_project/actions/runs/39391918519",
+  "mode": "static-demo",
+  "runtimeAPI": false,
+  "guideSHA256": "63832d25f31c29249acf8afad560cbf05227d6be9a05c3885a253076e975d58f",
+  "guidePreserved": true,
+  "resourceCount": 63,
+  "projectCount": 15,
+  "publishedProjects": [
+    "002-rainy-ghost",
+    "003-lofi-room",
+    "004-jasonzhu-ai",
+    "006-random-doors",
+    "007-autumn-courtyard-blender",
+    "008-specreel",
+    "009-demand-discovery",
+    "010-evidence-research-lab",
+    "011-ancient-rap-battle",
+    "012-edgechat",
+    "013-crawl-hive",
+    "014-cyber-xiaoya-study"
+  ],
+  "apiAndPrivateFilesNotPublished": true,
+  "checks": [
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/publication.json",
+      "status": 200,
+      "bytes": 10622,
+      "sha256": "f8db5f1d4ad1ede00bb552a2044f5e0c969672f2f3821f0a58a9562013d2b83b"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/assets/02-waiting-for-continue-D1Ox_tn_.jpg",
+      "status": 200,
+      "bytes": 127996,
+      "sha256": "bb078ab54eb059bdd5a2265a0ebc0afa1a7751155898d16daace72337568a37f"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/assets/research-DrBOZnU2.js",
+      "status": 200,
+      "bytes": 518,
+      "sha256": "4e31c8aad09a6a6e534cb2c041c2663a228419aa699bbd48ce0f788dd5f77b2d"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/assets/04-delivery-and-browser-results-DEJA7Hq5.jpg",
+      "status": 200,
+      "bytes": 115673,
+      "sha256": "9e55591452b78ac70e288386b789a15dce4fcc1abc2c20c349aa3a30e21524ce"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/assets/modulepreload-polyfill-P2Xu9kJm.js",
+      "status": 200,
+      "bytes": 670,
+      "sha256": "418c206484b89b68ef5f067277831e583fc9193a62aadf4de269acaaeb12a85f"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/assets/room-C45kQ92M.js",
+      "status": 200,
+      "bytes": 272677,
+      "sha256": "2388202e8f8fd8a3bf8e800385b048873dd4e9bc7948383f475d14494ae227c9"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/assets/research-DGD0OtGV.css",
+      "status": 200,
+      "bytes": 4722,
+      "sha256": "fb62dbe53c8277073a7e2045ac1e28acb5a73befcb100a4e8e3754a613f76e06"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/assets/room-kGUR8Km7.css",
+      "status": 200,
+      "bytes": 46611,
+      "sha256": "dea55703f3be6711f5fb5aeff27cc253dbdf024939f9feb78b734a0ccee804f4"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/assets/verification-D5wejgbw.json",
+      "status": 200,
+      "bytes": 7310,
+      "sha256": "34421428aa91847a71d752e92c476e6be74c116c75cde3cbde088a631b5ba3d5"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/index.html",
+      "status": 200,
+      "bytes": 27876,
+      "sha256": "a38b864bcdfab149d5141df3f2000aa77622d32bf1cc2e75030c957c35eaa769"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/assets/three-DHXD8pfe.js",
+      "status": 200,
+      "bytes": 556187,
+      "sha256": "cd697d44dfb835f608c4be3d1c36b627a077f4bdb047ee2cb588f80af9941d5c"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/licenses/THREE-LICENSE.txt",
+      "status": 200,
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/moon.svg",
+      "status": 200,
+      "bytes": 252,
+      "sha256": "3f52285ac0a9e9991ea49ac51c092e40b0fea293649627cf011273dcbed81323"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/research.html",
+      "status": 200,
+      "bytes": 15013,
+      "sha256": "bf2c257c578179b797074741a1d85320150b2776e438f566c45ae6cbfb387ab0"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/demo/manifest.json",
+      "status": 200,
+      "bytes": 2738,
+      "sha256": "99bc81edbc2cf26edfa7245acd08232aef2ef74bb305794678f8ff1c65ed91f3"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/demo/draft.mp3",
+      "status": 200,
+      "bytes": 124980,
+      "sha256": "cc71759aa6f104823db7e3de5708b7ef546b79517b4424c8321a2ad1d1e63465"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/demo/plan.mp3",
+      "status": 200,
+      "bytes": 145140,
+      "sha256": "c0fb5d0bdf547c1441a45e99483fc1515e448e0e952f3edb5b0ddfef6b9a365f"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/demo/finish.mp3",
+      "status": 200,
+      "bytes": 126708,
+      "sha256": "b34ebf02f47caebaa28a452316c2e08700a50ab0fab19f329fadaff2ac13af45"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/assets/agent-studio-understanding-D9BWVoix.svg",
+      "status": 200,
+      "bytes": 517258,
+      "sha256": "01f81fb4b41aa17830f9f3b0fd8ec945932b2eaa38050413375d799c470905b9"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/assets/agent-studio-understanding-DIf0AgCi.png",
+      "status": 200,
+      "bytes": 3474255,
+      "sha256": "63832d25f31c29249acf8afad560cbf05227d6be9a05c3885a253076e975d58f"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/demo/review_issue.mp3",
+      "status": 200,
+      "bytes": 142836,
+      "sha256": "116048d32ae2406313a84531af74119154ef16040daeb023698b3932a53dec77"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/demo/record.mp3",
+      "status": 200,
+      "bytes": 172212,
+      "sha256": "f1bd1d30a6b27359a0b3ca639d0c72621c89072eda5ad0869eae8fcb6e77f8ca"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/demo/review_pass.mp3",
+      "status": 200,
+      "bytes": 121524,
+      "sha256": "a84e28aa99f87b461755ef1f22e56b8c101324da5961d3f7c1c9980e302e0c76"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/demo/test_pass.mp3",
+      "status": 200,
+      "bytes": 123252,
+      "sha256": "b68082d464dfbfac85f23af110c45bae3f9bf18b0c1abffdd4e476a21fe2ca33"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/demo/research.mp3",
+      "status": 200,
+      "bytes": 168180,
+      "sha256": "d472d0368322ab6017109bfe24cbb4717e5d324daf40d025312c64a3f3308aff"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/amber_chat.mp3",
+      "status": 200,
+      "bytes": 52980,
+      "sha256": "5fba9092e865facafb0f8fdbcc7b422fa05d4a5b502cc66cd4dd755e58f3cfd0"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/demo/test_issue.mp3",
+      "status": 200,
+      "bytes": 129012,
+      "sha256": "78c58c160e139ff6e34959729fff3b49d815074a348e70ede6d8a821f470c373"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/demo/revised.mp3",
+      "status": 200,
+      "bytes": 127860,
+      "sha256": "3508d6f97911d118a8141c9ad91a14fa09a4d98ae971d624ac72b9d3a40fe926"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/amber_greet.mp3",
+      "status": 200,
+      "bytes": 40884,
+      "sha256": "c4154a9491cbb77032caad1cda148a73ba059b3f38562a2f69fb7eea7c1cf511"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/amber_chat_reply.mp3",
+      "status": 200,
+      "bytes": 62772,
+      "sha256": "6954c1592b144947dbd5cb47d5dd4433237b2c0fd630be3e559dbdbbf39f62d1"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/amber_greet_reply.mp3",
+      "status": 200,
+      "bytes": 55860,
+      "sha256": "2074234b87ba296357200cd567a670438f760f83f1274fdeabc644a53c855ca5"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/indigo_greet.mp3",
+      "status": 200,
+      "bytes": 53556,
+      "sha256": "a5f52f3f6e3bf93c509327c32bc9f0bb48d9fc54e53112f2a6a8fe5a56a83494"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/amber_work_start.mp3",
+      "status": 200,
+      "bytes": 38004,
+      "sha256": "6ab548b7e8b77eeabb5c077273e6da5008e3514578671005b6a8fbd6449049f1"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/indigo_greet_reply.mp3",
+      "status": 200,
+      "bytes": 45492,
+      "sha256": "1bfc134c8f68c4c6f266fb0ec152da2513c1ae983146c2b1e1f52495fb7b514d"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/indigo_chat.mp3",
+      "status": 200,
+      "bytes": 58740,
+      "sha256": "8e041d60930eb4d77606e803b323ff055b9122201f4bbcf12ec95ea37f617709"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/indigo_chat_reply.mp3",
+      "status": 200,
+      "bytes": 55284,
+      "sha256": "e4df1e85f1283bcc5014426f4520ff4efb4e3028dc7e980d7bea7718e46983ca"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/amber_work_ack.mp3",
+      "status": 200,
+      "bytes": 69684,
+      "sha256": "855fc4e2b844d58a07cbc5a650478f097ec6126d9ee26d28cef77137ac7be7ce"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/indigo_work_ack.mp3",
+      "status": 200,
+      "bytes": 59316,
+      "sha256": "6a5efc84b43c2486902c908a7495639aa7983e13a36db74966244d1c0c40d8c8"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/luna_chat.mp3",
+      "status": 200,
+      "bytes": 46068,
+      "sha256": "667fb9e0558f9466268c4018516ce6727e7ccc32f5fa9da9fcb333de09ec960d"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/indigo_work_start.mp3",
+      "status": 200,
+      "bytes": 65076,
+      "sha256": "21678719221bd904233d4651af88de114a5380be619bd5b9f39149716079e6d5"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/luna_greet.mp3",
+      "status": 200,
+      "bytes": 51252,
+      "sha256": "221547f317d9c08cad3ad9dde9f397abd14d2608aeddd3e9169ec982e336a40c"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/luna_chat_reply.mp3",
+      "status": 200,
+      "bytes": 48372,
+      "sha256": "d1ae9e7a483ab2362bbfbcf3cac7b5545e0415927635692f9d6ca6a3e08757e9"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/luna_greet_reply.mp3",
+      "status": 200,
+      "bytes": 55860,
+      "sha256": "9a25820aa7832ddd76eb2857ccb0adc3368f6fdc9312d07fdc8c2206a0845ffd"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/manifest.json",
+      "status": 200,
+      "bytes": 10528,
+      "sha256": "100c26b82f1a911c0b2e2a9038729ae5d0a759863a7182405c82b5bbbe9122a0"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/luna_work_ack.mp3",
+      "status": 200,
+      "bytes": 73140,
+      "sha256": "1b2ddfc87ac32747c5662035ef2b153a1d5ca7b22fff7cb7fb50b56ac4cd8fca"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/luna_work_start.mp3",
+      "status": 200,
+      "bytes": 62196,
+      "sha256": "b8f51fedad1e556523a24b8f6cfd3a3381165be3165a20a9364e7ea5a1f259e9"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/momo_chat.mp3",
+      "status": 200,
+      "bytes": 38004,
+      "sha256": "c2670e15d94c0e58169085ecb3ba85b3c5964c757185342991780891147ef69c"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/momo_greet_reply.mp3",
+      "status": 200,
+      "bytes": 32820,
+      "sha256": "d893c4e62f4644ea414146dfa601b048047a8f6d1a5f7235d261fefabae756d5"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/momo_chat_reply.mp3",
+      "status": 200,
+      "bytes": 48372,
+      "sha256": "c661772dca99fe128627a906245335c555f1b44051566af34983d08f1d524bb2"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/momo_greet.mp3",
+      "status": 200,
+      "bytes": 38004,
+      "sha256": "a621e2e4433280cc82d14d72e771b47ac6bec60bd1d7bb46788a5a79316a9401"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/mori_chat.mp3",
+      "status": 200,
+      "bytes": 54708,
+      "sha256": "4810433ca104754c3bb756ba3754cb364b713a02db7956edc0f0d998ea1de20c"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/momo_work_start.mp3",
+      "status": 200,
+      "bytes": 50100,
+      "sha256": "57d7b9bcd464102371a3ee1834059ba30d30315a62fe71ee51b4fdecd0ad15e2"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/momo_work_ack.mp3",
+      "status": 200,
+      "bytes": 52404,
+      "sha256": "bb05da9b3f5d33216d05aa95aa616eb5b62e9c254aa82f750aafce0afcd4da45"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/mori_chat_reply.mp3",
+      "status": 200,
+      "bytes": 54132,
+      "sha256": "7103e0dec69675f889edcb224a1509c1ebf1e6dc4c09ef050dfbcc7492d4b874"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/mori_greet_reply.mp3",
+      "status": 200,
+      "bytes": 35700,
+      "sha256": "74822d470c34c8ace9db4d098ce1b241ceffdd50f8ba3bf9bce31f0076ba9a99"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/mori_greet.mp3",
+      "status": 200,
+      "bytes": 40308,
+      "sha256": "f667ef93630f0b46229fb6c185f4d2f97632008e8ac03abb1d1012fbec0b09a5"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/mori_work_ack.mp3",
+      "status": 200,
+      "bytes": 68532,
+      "sha256": "1f11650182af53a374f98c71882d1e38083910d4c160cb6ec085a011e217b648"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/mori_work_start.mp3",
+      "status": 200,
+      "bytes": 42036,
+      "sha256": "8aefb4798a534430b22e1f3cf0cc4e0aa2bad7f3a62ca9b8f29b8aa4c295ec5c"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/sleepy_greet.mp3",
+      "status": 200,
+      "bytes": 62772,
+      "sha256": "15f61fc5e4b7e2196eafd81d5d20434578abe20903d787f96456b9454ca1559d"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/sleepy_work_ack.mp3",
+      "status": 200,
+      "bytes": 54708,
+      "sha256": "055fd9981128d55244314d5ed6ee227d93946023452e9ef2e6d2db4538f00b3f"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/sleepy_chat_reply.mp3",
+      "status": 200,
+      "bytes": 56436,
+      "sha256": "bedef483538143e646e3e207acdb4f4c3ebf2928df354ea29a73e33c93a9f1a1"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/sleepy_work_start.mp3",
+      "status": 200,
+      "bytes": 68532,
+      "sha256": "c41464c317f6f05417da4578e4117e3b4a2f44128cbfa96029bb94c13beb21f5"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/sleepy_chat.mp3",
+      "status": 200,
+      "bytes": 55860,
+      "sha256": "491fd72e7fd9e403b71a2ef34ab47226a973471ed5e683d575f1b7545a75ba4e"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/voices/room/sleepy_greet_reply.mp3",
+      "status": 200,
+      "bytes": 50676,
+      "sha256": "50e883ddedeeea6c8bd8e3f04da8a5325cfccde72b0553e939a874bd48a5f8fa"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/research.html",
+      "status": 200,
+      "bytes": 15013,
+      "sha256": "bf2c257c578179b797074741a1d85320150b2776e438f566c45ae6cbfb387ab0"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/projects.json",
+      "status": 200,
+      "bytes": 13173,
+      "sha256": "7cdc8b4ae5101c7bc0fccccfcd9a6b97613a19bb72131ed65ad869b582022cf9"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/entries.json",
+      "status": 200,
+      "bytes": 4970,
+      "sha256": "ac5e52ace2f7cdbfce973197cd64635d05c7c90b7e16e208308ac97099aeb0ec"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/002-rainy-ghost/",
+      "status": 200,
+      "bytes": 14603,
+      "sha256": "f72f32e1b5b6fe840c6758d6c903c0507914702f246031ebbb050c716e5884b2"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/",
+      "status": 200,
+      "bytes": 27876,
+      "sha256": "a38b864bcdfab149d5141df3f2000aa77622d32bf1cc2e75030c957c35eaa769"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/",
+      "status": 200,
+      "bytes": 42338,
+      "sha256": "796a24b9d65afdfb75820d6acd2d4928164192a2d356102402c15138b5a38ab3"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/006-random-doors/",
+      "status": 200,
+      "bytes": 2227,
+      "sha256": "9aa372fe6b0ba7ea781f46f9217f0e5b5d644f0e5b111456fb304135609789eb"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/",
+      "status": 200,
+      "bytes": 23455,
+      "sha256": "d287cd225deee21c1500e7f155bcf56a32ab91575d98a37071804bace4e33247"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/008-specreel/",
+      "status": 200,
+      "bytes": 23215,
+      "sha256": "9e1cf10c18a30db1a8ce7e7a278162ccba549e0bf5e0c27efbd4cf0626db5e9f"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/009-demand-discovery/",
+      "status": 200,
+      "bytes": 43002,
+      "sha256": "14af86967ba10e055848b72da304cf508ea11523fa8ff1654a85568f2a39e337"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/010-evidence-research-lab/",
+      "status": 200,
+      "bytes": 1537769,
+      "sha256": "b308a90e5131ffb10a0356b9191ae476acd4e609dcf662b7a3fa5c2ef5fe513e"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/011-ancient-rap-battle/",
+      "status": 200,
+      "bytes": 65464,
+      "sha256": "0c3dc4aa5c65e7fced49741f48825d6b1c04ecd948a222768b27e048894c41f2"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/012-edgechat/",
+      "status": 200,
+      "bytes": 27836,
+      "sha256": "d21c515fa7cacc33151bc4dbee299f5b0177a0eb324073547b8c02493f64c349"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/013-crawl-hive/",
+      "status": 200,
+      "bytes": 69828,
+      "sha256": "a913e3b0a0bcda63de4ad3764381ffd3df5008adc09907bcb567e5f571d17513"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/",
+      "status": 200,
+      "bytes": 30966,
+      "sha256": "f75f36b747b39b91a88631706f8ee6d3abe283492d23b4567fc26dd6e52f882d"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/",
+      "status": 200,
+      "bytes": 7980,
+      "sha256": "ae6f37067be122f360a359c6b7f4fbd3cd8223eb9500bd5df11b318096263ba9"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/api/status",
+      "status": 404,
+      "bytes": 9379,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/api/tasks",
+      "status": 404,
+      "bytes": 9379,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/.env.local",
+      "status": 404,
+      "bytes": 9379,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "url": "https://yydshly.github.io/1014_codex_project/003-lofi-room/server/config.js",
+      "status": 404,
+      "bytes": 9379,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    }
+  ]
+}
