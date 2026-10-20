@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Archify：从数据到交互网页",
+    "locale": "zh-CN",
+    "output": "dist/diagrams/archify-zh.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/tt-a1i/archify.git",
+      "revision": "1c2b42d660e4a7571813fb43839c79e3e9ca7720"
+    }
+  },
+  "components": [
+    {
+      "id": "input",
+      "type": "database",
+      "label": "图解数据",
+      "sublabel": "结构化 JSON",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "archify/renderers/shared/cli.mjs",
+          "line": 47,
+          "end_line": 81
+        }
+      ]
+    },
+    {
+      "id": "cli",
+      "type": "backend",
+      "label": "命令行入口",
+      "sublabel": "选择图解类型",
+      "pos": [
+        340,
+        40
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "archify/bin/archify.mjs",
+          "line": 4233,
+          "end_line": 4249
+        }
+      ]
+    },
+    {
+      "id": "validation",
+      "type": "security",
+      "label": "读取与校验",
+      "sublabel": "格式与源码证据",
+      "pos": [
+        640,
+        40
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "archify/renderers/shared/cli.mjs",
+          "line": 79,
+          "end_line": 101
+        }
+      ]
+    },
+    {
+      "id": "renderer",
+      "type": "backend",
+      "label": "架构渲染器",
+      "sublabel": "布局校验与 SVG",
+      "pos": [
+        640,
+        235
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "archify/renderers/architecture/render-architecture.mjs",
+          "line": 1194,
+          "end_line": 1204
+        }
+      ]
+    },
+    {
+      "id": "writer",
+      "type": "backend",
+      "label": "网页组装",
+      "sublabel": "模板与交互脚本",
+      "pos": [
+        340,
+        235
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "archify/renderers/shared/cli.mjs",
+          "line": 233,
+          "end_line": 280
+        }
+      ]
+    },
+    {
+      "id": "html",
+      "type": "database",
+      "label": "独立 HTML",
+      "sublabel": "可离线打开",
+      "pos": [
+        40,
+        235
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "archify/renderers/shared/cli.mjs",
+          "line": 233,
+          "end_line": 280
+        }
+      ]
+    },
+    {
+      "id": "viewer",
+      "type": "frontend",
+      "label": "浏览器阅读器",
+      "sublabel": "节点与路径探索",
+      "pos": [
+        40,
+        430
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "viewer/focus.js",
+          "line": 6,
+          "end_line": 36
+        }
+      ]
+    },
+    {
+      "id": "export",
+      "type": "frontend",
+      "label": "图像导出",
+      "sublabel": "SVG 与 PNG",
+      "pos": [
+        340,
+        430
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "viewer/template.source.html",
+          "line": 238,
+          "end_line": 267
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "input-cli",
+      "from": "input",
+      "to": "cli",
+      "label": "JSON",
+      "variant": "emphasis"
+    },
+    {
+      "id": "cli-validation",
+      "from": "cli",
+      "to": "validation",
+      "label": "读取",
+      "variant": "emphasis"
+    },
+    {
+      "id": "validation-renderer",
+      "from": "validation",
+      "to": "renderer",
+      "label": "通过校验",
+      "variant": "emphasis"
+    },
+    {
+      "id": "renderer-writer",
+      "from": "renderer",
+      "to": "writer",
+      "label": "SVG",
+      "variant": "emphasis"
+    },
+    {
+      "id": "writer-html",
+      "from": "writer",
+      "to": "html",
+      "label": "写入",
+      "variant": "emphasis"
+    },
+    {
+      "id": "html-viewer",
+      "from": "html",
+      "to": "viewer",
+      "label": "打开",
+      "variant": "emphasis"
+    },
+    {
+      "id": "viewer-export",
+      "from": "viewer",
+      "to": "export",
+      "label": "导出",
+      "variant": "emphasis"
+    }
+  ]
+}

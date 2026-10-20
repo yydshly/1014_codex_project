@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Archify: from JSON to an interactive page",
+    "locale": "en",
+    "output": "dist/diagrams/archify-en.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/tt-a1i/archify.git",
+      "revision": "1c2b42d660e4a7571813fb43839c79e3e9ca7720"
+    }
+  },
+  "components": [
+    {
+      "id": "input",
+      "type": "database",
+      "label": "Diagram data",
+      "sublabel": "Typed JSON",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "archify/renderers/shared/cli.mjs",
+          "line": 47,
+          "end_line": 81
+        }
+      ]
+    },
+    {
+      "id": "cli",
+      "type": "backend",
+      "label": "CLI entry",
+      "sublabel": "Select diagram type",
+      "pos": [
+        340,
+        40
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "archify/bin/archify.mjs",
+          "line": 4233,
+          "end_line": 4249
+        }
+      ]
+    },
+    {
+      "id": "validation",
+      "type": "security",
+      "label": "Read & validate",
+      "sublabel": "Schema & evidence",
+      "pos": [
+        640,
+        40
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "archify/renderers/shared/cli.mjs",
+          "line": 79,
+          "end_line": 101
+        }
+      ]
+    },
+    {
+      "id": "renderer",
+      "type": "backend",
+      "label": "Architecture renderer",
+      "sublabel": "Layout checks & SVG",
+      "pos": [
+        640,
+        235
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "archify/renderers/architecture/render-architecture.mjs",
+          "line": 1194,
+          "end_line": 1204
+        }
+      ]
+    },
+    {
+      "id": "writer",
+      "type": "backend",
+      "label": "HTML assembly",
+      "sublabel": "Template & viewer",
+      "pos": [
+        340,
+        235
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "archify/renderers/shared/cli.mjs",
+          "line": 233,
+          "end_line": 280
+        }
+      ]
+    },
+    {
+      "id": "html",
+      "type": "database",
+      "label": "Standalone HTML",
+      "sublabel": "Open locally",
+      "pos": [
+        40,
+        235
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "archify/renderers/shared/cli.mjs",
+          "line": 233,
+          "end_line": 280
+        }
+      ]
+    },
+    {
+      "id": "viewer",
+      "type": "frontend",
+      "label": "Browser viewer",
+      "sublabel": "Focus & explore",
+      "pos": [
+        40,
+        430
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "viewer/focus.js",
+          "line": 6,
+          "end_line": 36
+        }
+      ]
+    },
+    {
+      "id": "export",
+      "type": "frontend",
+      "label": "Image export",
+      "sublabel": "SVG & PNG",
+      "pos": [
+        340,
+        430
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "viewer/template.source.html",
+          "line": 238,
+          "end_line": 267
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "input-cli",
+      "from": "input",
+      "to": "cli",
+      "label": "JSON",
+      "variant": "emphasis"
+    },
+    {
+      "id": "cli-validation",
+      "from": "cli",
+      "to": "validation",
+      "label": "Load",
+      "variant": "emphasis"
+    },
+    {
+      "id": "validation-renderer",
+      "from": "validation",
+      "to": "renderer",
+      "label": "Valid input",
+      "variant": "emphasis"
+    },
+    {
+      "id": "renderer-writer",
+      "from": "renderer",
+      "to": "writer",
+      "label": "SVG",
+      "variant": "emphasis"
+    },
+    {
+      "id": "writer-html",
+      "from": "writer",
+      "to": "html",
+      "label": "Write",
+      "variant": "emphasis"
+    },
+    {
+      "id": "html-viewer",
+      "from": "html",
+      "to": "viewer",
+      "label": "Open",
+      "variant": "emphasis"
+    },
+    {
+      "id": "viewer-export",
+      "from": "viewer",
+      "to": "export",
+      "label": "Export",
+      "variant": "emphasis"
+    }
+  ]
+}

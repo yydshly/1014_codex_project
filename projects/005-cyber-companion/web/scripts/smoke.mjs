@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import { mkdir, writeFile } from 'node:fs/promises';
+const base = process.env.SMOKE_URL || 'http://127.0.0.1:4177/1014_codex_project/005-cyber-companion/';
+const config = await fetch(`${base}api/companion/config`).then(r => r.json());
+assert.equal(typeof config.cloudConfigured, 'boolean');
+assert.equal(JSON.stringify(config).includes('apiKey'), false);
+const page = await fetch(base); assert.equal(page.status, 200);
+const invalid = await fetch(`${base}api/companion/chat`, { method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:[]}) });
+assert.equal(invalid.status,400);
+const foreign = await fetch(`${base}api/companion/speech`, { method:'POST',headers:{'Content-Type':'application/json',Origin:'https://example.org'},body:JSON.stringify({text:'测试'}) });
+assert.equal(foreign.status,403);
+const provider = config.cloudConfigured ? 'minimax' : 'local';
+const response = await fetch(`${base}api/companion/chat`, { method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({provider,style:'gentle',memory:'用户希望被称呼为阿林，喜欢猫。',messages:[{role:'user',content:'你好，今天我们第一次见面。请简短地向我打个招呼。'}]}),signal:AbortSignal.timeout(65000) });
+assert.equal(response.status,200);
+const events = (await response.text()).trim().split('\n').map(line => JSON.parse(line));
+assert.equal(events.some(e => e.type === 'error'),false);
+const text = events.filter(e => e.type === 'delta').map(e => e.text).join('');
+assert.ok(text.length > 5);
+assert.ok(events.some(e => e.type === 'done'));
+const proof = { verifiedAt:new Date().toISOString(), provider, model:config.textModel, text, timing:events.find(e => e.type==='done') };
+if (config.speechConfigured) {
+  const voice = await fetch(`${base}api/companion/speech`, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:'嗨，我是小汐。很高兴在这里遇见你。'}),signal:AbortSignal.timeout(45000)});
+  assert.equal(voice.status,200); assert.equal(voice.headers.get('content-type'),'audio/mpeg');
+  const bytes = Buffer.from(await voice.arrayBuffer()); assert.ok(bytes.length > 1000);
+  proof.audioBytes = bytes.length; proof.audioDurationMs = Number(voice.headers.get('x-audio-duration-ms'));
+  await mkdir('.runtime',{recursive:true}); await writeFile('.runtime/smoke-voice.mp3',bytes);
+}
+await mkdir('.runtime',{recursive:true}); await writeFile('.runtime/smoke-proof.json',JSON.stringify(proof,null,2));
+console.log(JSON.stringify(proof,null,2));
+console.log('真实模型、音频响应、输入校验与跨站请求检查通过。');

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="001 项目研究：通过交互式架构图、生成流程和源码证据，理解 Archify。">
+  <meta name="color-scheme" content="light dark">
+  <title>001 · Archify 项目导览</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#explore" data-i18n="skip">跳到图解</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="001 Archify 首页"><span class="brand-mark" aria-hidden="true">a.</span><span>Archify<span class="brand-sub" data-i18n="brandSub">项目导览</span></span></a>
+    <span class="collection" data-i18n="collection">GITHUB 项目研究集 <span>/ 001</span></span>
+    <div class="header-actions">
+      <button class="quiet" id="language" type="button" aria-label="Switch to English">EN <span aria-hidden="true">↗</span></button>
+      <button class="icon-button" id="theme" type="button" aria-label="切换为深色主题" title="切换主题">◐</button>
+      <a class="github-link" href="https://github.com/tt-a1i/archify" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main>
+    <section class="intro">
+      <div>
+        <div class="eyebrow"><span class="small-line"></span><span data-i18n="eyebrow">一个真实代码库 · 一张可探索的地图</span></div>
+        <h1 data-i18n="headline">把代码，读成一张地图。</h1>
+        <p class="intro-copy" data-i18n="intro">从图解数据到交互网页，沿着一条生成链路看懂 Archify。点击组件，看解释，也看源码。</p>
+      </div>
+      <div class="release">
+        <span class="release-label" data-i18n="researchVersion">本次研究版本</span>
+        <div><strong>v3.1.0</strong><span class="license-badge">MIT</span></div>
+        <a href="https://github.com/tt-a1i/archify/tree/1c2b42d660e4a7571813fb43839c79e3e9ca7720" target="_blank" rel="noreferrer">1c2b42d <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <div class="workspace-top" id="explore">
+      <div class="tabs" role="tablist" aria-label="项目导览">
+        <button class="tab active" id="tab-map" role="tab" type="button" aria-selected="true" aria-controls="panel-map" data-panel="map"><span aria-hidden="true">⌘</span> <span data-i18n="mapTab">结构地图</span></button>
+        <button class="tab" id="tab-flow" role="tab" type="button" aria-selected="false" aria-controls="panel-flow" data-panel="flow" tabindex="-1"><span aria-hidden="true">⇢</span> <span data-i18n="flowTab">生成链路</span></button>
+        <button class="tab" id="tab-sources" role="tab" type="button" aria-selected="false" aria-controls="panel-sources" data-panel="sources" tabindex="-1"><span aria-hidden="true">⌥</span> <span data-i18n="sourceTab">源码证据</span></button>
+      </div>
+      <span class="local-badge"><span class="status-dot"></span><span data-i18n="demoBadge">本地演示</span></span>
+    </div>
+    <section class="tab-panel" id="panel-map" role="tabpanel" aria-labelledby="tab-map">
+      <div class="explorer-grid">
+        <div class="diagram-card">
+          <div class="diagram-topline"><span class="mono">ARCHIFY / RENDER PIPELINE</span><a id="open-diagram" href="./diagrams/archify-zh.html" target="_blank" rel="noreferrer"><span data-i18n="openReader">独立打开图解</span> ↗</a></div>
+          <div class="iframe-wrap"><iframe id="diagram" title="Archify 交互式结构图"></iframe><p class="frame-loading" id="frame-loading" data-i18n="loading">正在打开交互图解…</p></div>
+          <div class="diagram-footer"><span class="status-dot"></span><span data-i18n="diagramHint">点击节点查看关系与源码；图内工具栏可导出 SVG / PNG。</span></div>
+        </div>
+        <aside class="inspector" aria-label="组件讲解">
+          <div class="inspector-head"><span data-i18n="inspectorTitle">从这里开始</span><span class="mono" id="step-count">01 / 08</span></div>
+          <div class="node-nav" id="node-nav"></div>
+          <div class="node-detail" aria-live="polite">
+            <span class="detail-kicker" data-i18n="componentDetail">组件讲解</span>
+            <h2 id="detail-title"></h2><p id="detail-copy"></p>
+            <a id="detail-source" class="source-link" target="_blank" rel="noreferrer"><span data-i18n="viewSource">查看对应源码</span> ↗</a>
+          </div>
+          <div class="inspector-foot"><button id="trace" class="primary" type="button"><span data-i18n="trace">探索完整生成路径</span> <span aria-hidden="true">→</span></button><p data-i18n="traceNote">从输入到导出，沿已声明的连接行走。</p></div>
+        </aside>
+      </div>
+    </section>
+    <section class="tab-panel" id="panel-flow" role="tabpanel" aria-labelledby="tab-flow" hidden>
+      <div class="section-heading"><div><span class="eyebrow" data-i18n="flowEyebrow">从输入到产物</span><h2 data-i18n="flowTitle">一张图是怎么生成的？</h2><p data-i18n="flowIntro">这里跟随 architecture 的 render 分支；每一步都可以回到结构图里查看。</p></div><button class="outline" id="flow-trace" type="button" data-i18n="showPath">在图中探索路径 →</button></div>
+      <ol class="flow-list" id="flow-list"></ol>
+      <div class="scope-note"><strong data-i18n="scopeTitle">生成与查看是两件事。</strong><p data-i18n="scopeCopy">本页展示根据固定版本源码整理的图解。Archify 渲染器将结构化数据生成 HTML；自然语言或任意仓库分析需要 AI 编程代理提供输入。</p></div>
+    </section>
+    <section class="tab-panel" id="panel-sources" role="tabpanel" aria-labelledby="tab-sources" hidden>
+      <div class="section-heading"><div><span class="eyebrow" data-i18n="sourceEyebrow">每一个结论，都有出处</span><h2 data-i18n="sourceTitle">让图解可以被核对。</h2><p data-i18n="sourceIntro">所有链接固定到同一提交。这个版本之后的变化，不属于本次图解。</p></div><span class="commit-pill mono">1c2b42d · v3.1.0</span></div>
+      <div class="source-table-wrap"><table class="source-table"><thead><tr><th data-i18n="component">组件</th><th data-i18n="sourceFile">源码文件</th><th data-i18n="sourceLines">行号</th><th><span class="sr-only" data-i18n="viewSource">查看对应源码</span></th></tr></thead><tbody id="source-rows"></tbody></table></div>
+      <div class="scope-note"><strong data-i18n="licenseTitle">来源与许可</strong><p data-i18n="licenseCopy">交互阅读器来自 Archify v3.1.0，采用 MIT 许可证。本项目新增中文 / 英文导览、图解数据与网页外壳；上游渲染器保持原样。</p><a href="./ARCHIFY-LICENSE.txt" target="_blank" data-i18n="licenseLink">查看 MIT 许可原文 ↗</a> <a href="./THIRD_PARTY_NOTICES.md" target="_blank" data-i18n="thirdParty">第三方来源说明 ↗</a></div>
+    </section>
+    <section class="takeaways">
+      <div><span class="detail-kicker" data-i18n="takeawayLabel">这次研究的收获</span><h2 data-i18n="takeawayTitle">代码研究，也可以是一种阅读体验。</h2></div>
+      <p data-i18n="takeawayCopy">图解帮助读者建立结构感，源码链接提供核对依据，独立 HTML 让成果更容易分享。这也是“开源项目导览”值得继续验证的方向。</p>
+      <div class="downloads"><a id="download-html" href="./diagrams/archify-zh.html" download><span data-i18n="downloadHtml">下载图解 HTML</span> ↓</a><a id="download-json" href="./diagrams/archify-zh.json" download><span data-i18n="downloadJson">下载图解 JSON</span> ↓</a></div>
+    </section>
+  </main>
+  <footer><span data-i18n="footer">001 · GitHub 项目研究集</span><span><a href="https://agentskillshub.top/skill/tt-a1i/archify/" target="_blank" rel="noreferrer">Agent Skills Hub ↗</a><span class="footer-separator">/</span><span data-i18n="footerNote">本地复现 · 商业需求待验证</span></span></footer>
+  <div id="app-error" class="error-message" role="alert" hidden></div>
+</body>
+</html>
