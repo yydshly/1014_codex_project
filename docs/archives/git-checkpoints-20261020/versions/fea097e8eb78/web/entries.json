@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "projects": {
+    "004": [
+      {"label": "产品能力与方向", "path": "004-jasonzhu-ai/research.html"},
+      {"label": "研究入口与工作区", "path": "004-jasonzhu-ai/index.html#directory"},
+      {"label": "我的发现", "path": "004-jasonzhu-ai/index.html#discoveries"}
+    ],
+    "003": [
+      {
+        "label": "夜半小屋 · 原房间",
+        "path": "003-lofi-room/?view=room"
+      },
+      {
+        "label": "Agent 工作室",
+        "path": "003-lofi-room/?view=workspace"
+      }
+    ],
+    "013": [
+      {
+        "label": "研究网页",
+        "path": "013-crawl-hive/index.html"
+      },
+      {
+        "label": "AI 探索工作台",
+        "path": "013-crawl-hive/explore/index.html"
+      }
+    ],
+    "006": [
+      {
+        "label": "阅读研究总览",
+        "path": "006-random-doors/research.html"
+      },
+      {
+        "label": "随机世界与身份",
+        "path": "006-random-doors/worlds.html"
+      },
+      {
+        "label": "体验连续开门",
+        "path": "006-random-doors/"
+      },
+      {
+        "label": "3D 候车亭",
+        "path": "006-random-doors/seaside.html"
+      }
+    ],
+    "007": [
+      {
+        "label": "能力与价值一图总览",
+        "path": "007-autumn-courtyard-blender/overview.html"
+      },
+      {
+        "label": "完整研究",
+        "path": "007-autumn-courtyard-blender/research.html"
+      },
+      {
+        "label": "真实 3D 场景",
+        "path": "007-autumn-courtyard-blender/#scene"
+      }
+    ]
+  }
+}

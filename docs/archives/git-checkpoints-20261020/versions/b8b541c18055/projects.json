@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "projects": [
+    {
+      "id": "001",
+      "slug": "archify",
+      "title": "Archify：交互式代码库图解",
+      "repository": "https://github.com/tt-a1i/archify",
+      "summary": "已本地复现中英文交互式代码库导览，展示 Archify 的生成链路、组件讲解和固定版本源码证据。",
+      "status": "已复现",
+      "preview": "assets/preview.png",
+      "preview_caption": "001 Archify 本地演示：交互式结构图、组件讲解与固定版本源码证据。",
+      "demo_url": null
+    },
+    {
+      "id": "002",
+      "slug": "rainy-ghost",
+      "title": "雨夜提灯小幽灵：Three.js 交互场景",
+      "repository": "https://github.com/mrdoob/three.js",
+      "summary": "已本地复现雨夜提灯小幽灵，支持雨滴碰撞与渐湿、镜头环绕、拖拽回弹和水面提灯交互。",
+      "status": "已复现",
+      "preview": "assets/rain-impact.jpg",
+      "preview_caption": "002 雨夜小幽灵实际运行截图：雨滴命中斗篷、湿润材质、暖色提灯与水面倒影。",
+      "demo_url": null
+    },
+    {
+      "id": "003",
+      "slug": "lofi-room",
+      "title": "夜半小屋与 Agent 工作室：3D 协作空间",
+      "repository": "https://github.com/mrdoob/three.js",
+      "summary": "人物随目标到白板讨论、电脑入座、桌边检查与当面交接；MiniMax 驱动真实角色、语音与交付，保留原房间及目标验收。",
+      "status": "已完成",
+      "preview": "assets/workspace-actions-computer.png",
+      "preview_caption": "003 真实 Agent 协作运行截图：开发员走到窗边电脑并入座处理任务，人物动作随目标推进，同项目保留原房间。",
+      "demo_url": null
+    },
+    {
+      "id": "004",
+      "slug": "jasonzhu-ai",
+      "title": "从网站入口研究到 AI 研究工作台",
+      "repository": "https://github.com/yydshly/1014_codex_project",
+      "summary": "从 X 帖子中的网站链接出发，评估并补充寻找需求、GitHub 项目和 AI 产品的入口，逐步扩展为“问题 → 搜索原文 → 分析筛选 → 保存发现”的研究工作台。帮助个人开发者扩大观察范围、积累研究依据，可继续探索工具评估、需求雷达等产品；自动研究需本地 Codex。",
+      "status": "研究中",
+      "preview": "assets/product-overview.png",
+      "preview_caption": "004 产品全景图：问题、来源、搜索读取、分析筛选、发现库、人工验证，以及适用方向、扩展产品与当前边界。",
+      "demo_url": "https://yydshly.github.io/1014_codex_project/004-jasonzhu-ai/research.html",
+      "source_url": "https://x.com/shenxiankk/status/2107493081146691700"
+    },
+    {
+      "id": "005",
+      "slug": "cyber-companion",
+      "title": "小汐：AI 虚拟角色互动实验",
+      "repository": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber",
+      "summary": "已跑通真实中文对话、MiniMax 语音、Live2D 嘴型与表情、打断重听和模拟弹幕；全本地推理及真实直播接入待验证。",
+      "status": "研究中",
+      "preview": "assets/preview.jpg",
+      "preview_caption": "005 小汐实际运行截图：Live2D 角色、真实模型聊天、中文语音与音频驱动嘴型。",
+      "demo_url": null
+    },
+    {
+      "id": "006",
+      "slug": "random-doors",
+      "title": "随机门：世界身份实验、源库原理与作品馆",
+      "repository": "https://github.com/yydshly/1014_codex_project",
+      "summary": "阶段归档：Four-Seasons 以固定种子与参数联动三维场景；我们保留六地点偶遇、三世界八身份与列车第一人称样本，汇总随机价值、原画与人物深度的不足及完整游戏的投入边界。随机作品馆真实接入留待后续立项。",
+      "status": "已归档",
+      "preview": "assets/understanding-overview-20261016.png",
+      "preview_caption": "006 我们整理的完整理解总览图：原作与独立源码参考、能力原理、实际效果、三类体验、价值及扩展方向。",
+      "demo_url": "https://yydshly.github.io/1014_codex_project/006-random-doors/research.html",
+      "source_url": "https://x.com/techartist_/status/2109737086601556195"
+    },
+    {
+      "id": "007",
+      "slug": "autumn-courtyard-blender",
+      "title": "Atlas：模型驱动的资产工作流与月门水庭实证",
+      "repository": "https://github.com/xikhar/atlas",
+      "summary": "Atlas 以技能规范和辅助脚本组织 2D/3D 资产生成、验证与引擎接入，底层依赖模型和建模工具；价值在可编辑资产与可重复交付。以月门水庭验证 Blender 脚本路线，探索展陈、教学、产品展示和游戏，流程增益仍待评测。",
+      "status": "研究中",
+      "preview": "web/assets/atlas-overview.png",
+      "preview_caption": "007 专门制作的 Atlas 研究总览图：能力、原理、月门水庭实际效果、价值与意义、应用、边界及扩展方向。",
+      "demo_url": "https://yydshly.github.io/1014_codex_project/007-autumn-courtyard-blender/research.html",
+      "source_url": "https://x.com/xikhar/status/2110143242591510835"
+    },
+    {
+      "id": "008",
+      "slug": "specreel",
+      "title": "Specreel：004 需求采集页面演示生成实测",
+      "repository": "https://github.com/specreel/specreel",
+      "summary": "已用004真实操作生成三条原生与中文回放及MP4，验证更新标记；记录网址推荐、中文字体与播放节奏的限制。",
+      "status": "已复现",
+      "preview": "assets/preview.png",
+      "preview_caption": "008 实际回放：004 需求采集计划的截图、操作步骤与中文说明，可切换原生结果。",
+      "demo_url": null
+    },
+    {
+      "id": "009",
+      "slug": "demand-discovery",
+      "title": "需求发现：从个人网站到 AI 研究工具",
+      "repository": "https://github.com/yydshly/1014_codex_project",
+      "summary": "已用本机OpenAI跑通三轮自动探索：从宽泛领域识别人群、追查问题与反例，展示真实查询和来源，支持停止、历史及导出。",
+      "status": "研究中",
+      "preview": "assets/openai-discovery.png",
+      "preview_caption": "009 OpenAI自动探索实测：从小型本地服务经营识别3类人群、3个问题候选和10条来源链接，保留调查过程与证据边界。",
+      "demo_url": null
+    },
+    {
+      "id": "010",
+      "slug": "evidence-research-lab",
+      "title": "从 Atypica 到 AI 社区：研究与思考档案",
+      "repository": "https://github.com/yydshly/1014_codex_project",
+      "summary": "整理真实数据、角色社区与玩法，新增信息沉淀和行动产品方案：7个专题、26个问题、34条来源、23份材料；保留B/C结果与停止决定。",
+      "status": "已归档",
+      "preview": "assets/archive-cover.svg",
+      "preview_caption": "010 早期归档导览示意图（2026-10-15，非当前页面截图）；完整理解已更新至2026-10-19。",
+      "demo_url": null
+    },
+    {
+      "id": "011",
+      "slug": "ancient-rap-battle",
+      "title": "古人说唱 Battle：AI 视频制作流程研究",
+      "repository": "https://github.com/10291124jcjc-dotcom/ancient-rap-battle",
+      "summary": "已制作《敬风霜》63.28秒舞台版：完整用户歌曲、双人舞台与观众反打，结合既有人物表演、灯光运镜及合成现场声；保留原版对照。",
+      "status": "研究中",
+      "preview": "assets/own-sample-v3.png",
+      "preview_caption": "011《敬风霜》舞台重剪实际网页截图：圆形舞台、观众、双人站位与灯光；人物表演沿用002，本轮未新增视频请求。",
+      "demo_url": null
+    },
+    {
+      "id": "012",
+      "slug": "edgechat",
+      "title": "EdgeChat：自部署聊天系统原理研究",
+      "repository": "https://github.com/aozorae/Edgechat",
+      "summary": "已整理能力、架构、网页模块化与六类产品扩展假设，补充成熟方案下的价值判断；保留研究，暂不推进通用聊天产品。",
+      "status": "研究中",
+      "preview": "assets/preview.jpg",
+      "preview_caption": "012 EdgeChat 研究页实际截图：从完整聊天应用的本质出发，展示 Cloudflare 架构、消息流转及能力边界。",
+      "demo_url": null
+    },
+    {
+      "id": "013",
+      "slug": "crawl-hive",
+      "title": "CrawlHive：跨平台信息监控的能力与本质",
+      "repository": "https://github.com/h100envy/crawl-hive",
+      "summary": "保留四环节源码研究，新增知向AI探索工作台：4个公开来源、真实采集快照、方向与关键词筛选、规则分析、收藏导出及采集记录。",
+      "status": "研究中",
+      "preview": "assets/preview.jpg",
+      "preview_caption": "013 CrawlHive 四环节研究网页：来源控制、信息搜索、信息过滤与信息呈现，附关键词交互及源码依据。",
+      "demo_url": null
+    },
+    {
+      "id": "014",
+      "slug": "cyber-xiaoya-study",
+      "title": "赛博小雅：真人拟人化效果与模型依赖研究",
+      "repository": null,
+      "summary": "真人互动角色研究：识别、语言、声音与视觉模型提供听想说动，工程负责同步和打断；价值在在场感，扩展到陪练、讲解、直播与角色记忆。原作源码及完整闭环待核验。",
+      "status": "研究中",
+      "preview": "assets/overview.png",
+      "preview_caption": "014 原创能力总览图：引用原视频画面，串起真人效果、听想说动模型、实时交互工程、产品价值与证据边界。",
+      "demo_url": "https://yydshly.github.io/1014_codex_project/014-cyber-xiaoya-study/",
+      "source_url": "https://x.com/huoshan007/status/2109919568617484522"
+    }
+  ]
+}

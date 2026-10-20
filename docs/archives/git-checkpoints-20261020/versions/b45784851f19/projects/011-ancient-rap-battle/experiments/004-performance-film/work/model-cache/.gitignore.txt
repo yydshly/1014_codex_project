@@ -1,0 +1,3 @@
+# Official model weights are local cache; provenance is recorded in work/.
+*
+!.gitignore

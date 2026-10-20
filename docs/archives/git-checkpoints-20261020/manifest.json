@@ -1,0 +1,821 @@
+{
+  "date": "2026-10-20",
+  "purpose": "清理三个大型本地 Git 快照前，保留独有旧文档和代码。仅历史归档，不替换当前源码。",
+  "original_main": "46ecf66d93a71d3cd5086f734744e305303b564c",
+  "snapshots": [
+    {
+      "ref": "refs/codex/turn-diffs/checkpoints/101bb208ed3abd5babcea7cca44eede9/c1473539e9eeaab129a1e601947ba0aa/1792383063690/1e4395b8-85bd-4d74-b6b2-58a85fc15baf",
+      "tree": "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+      "timestamp_from_ref": "2026-10-19T12:11:03.690000+08:00"
+    },
+    {
+      "ref": "refs/codex/turn-diffs/checkpoints/9648db32688ad5623df1c4e497fd5e1b/d06ad6cb8b1ee72f646cdd1b90f01732/1792152460352/b4afce80-4dc9-4947-9c31-482257a102ce",
+      "tree": "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+      "timestamp_from_ref": "2026-10-16T20:07:40.352000+08:00"
+    },
+    {
+      "ref": "refs/codex/turn-diffs/checkpoints/a7323053669e36f1bff57f58b2f514e4/c549c29be58c01f755479208055b2140/1792201128596/2199b00d-787b-4092-8635-d9465c2c1337",
+      "tree": "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2",
+      "timestamp_from_ref": "2026-10-17T09:38:48.596000+08:00"
+    }
+  ],
+  "versions": [
+    {
+      "git_blob": "3f75ee3c90079e5c112809dd74e1d37aca8d67bd",
+      "bytes": 54619,
+      "sha256": "29e939a0bf431468e07ec43f4673754bcc90a54e46abe5b7ffdf10bdff150933",
+      "original_paths": [
+        "projects/011-ancient-rap-battle/web/index.html"
+      ],
+      "archive_path": "versions/3f75ee3c9007/projects/011-ancient-rap-battle/web/index.html",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "1d70343075ce89419f630b1ed8727aae67334176",
+      "bytes": 9334,
+      "sha256": "eadf88c7663dedeef8c3c8eb341f19f1078a67ab03cd93580c561d0a02d7a010",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/archive/template.html"
+      ],
+      "archive_path": "versions/1d70343075ce/projects/010-evidence-research-lab/web/archive/template.html",
+      "source_trees": [
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "9cf6f311bdd8406e4688019de87dc6601a496a44",
+      "bytes": 15383,
+      "sha256": "2e85e243be2852b1037b45794e93cefcd2228de0e69f1676ab133030939de43d",
+      "original_paths": [
+        "README.md"
+      ],
+      "archive_path": "versions/9cf6f311bdd8/README.md",
+      "source_trees": [
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "aca474feb9026d8481ab0e2b04227b1d823fab4d",
+      "bytes": 8808,
+      "sha256": "89fff9c71820da87e39f96bcfadc16cec894122ed3d3b35a487dc29a3d69305f",
+      "original_paths": [
+        "docs/DEPLOYMENT.md"
+      ],
+      "archive_path": "versions/aca474feb902/docs/DEPLOYMENT.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "771ca138a7559517da2eed985ddd1c31047584d7",
+      "bytes": 20382,
+      "sha256": "3027956eeeba6ebbe56f493d9c1d77a8b008923edf238cd99c8ee407a1912c57",
+      "original_paths": [
+        "projects/011-ancient-rap-battle/web/scripts/build.mjs"
+      ],
+      "archive_path": "versions/771ca138a755/projects/011-ancient-rap-battle/web/scripts/build.mjs",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "b8b541c18055bdb36aeb4b68dc68181eec5e05af",
+      "bytes": 9903,
+      "sha256": "61ea71ab3c30c88ae67ed0761fffc4973920d1d02c3d291e9d692b6c57d5cdc1",
+      "original_paths": [
+        "projects.json"
+      ],
+      "archive_path": "versions/b8b541c18055/projects.json",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "2e2a2d2a7ecdbe0cb3d60e5e014560ea3a7e53cb",
+      "bytes": 2137,
+      "sha256": "bd9ec095e3439e8c3a23cfbb041324edf8df4ae44d00ff7c7259e85f776eb1d8",
+      "original_paths": [
+        "projects/013-crawl-hive/assets/README.md"
+      ],
+      "archive_path": "versions/2e2a2d2a7ecd/projects/013-crawl-hive/assets/README.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "fee786b4c190c837638f85d012705477cec52644",
+      "bytes": 24946,
+      "sha256": "0ccc1d5076ca8b6309c0f58f10a2b3cf10345928d29e1726f3942b5014b55642",
+      "original_paths": [
+        "projects/012-edgechat/web/index.html"
+      ],
+      "archive_path": "versions/fee786b4c190/projects/012-edgechat/web/index.html",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "9525070cd4ffff20ac2d16efcedd98228c021f0e",
+      "bytes": 23251,
+      "sha256": "12ad9ed279d684813494fbff85501a0a539eaea04ef0777b8047cf73979f6532",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/archive/content.mjs"
+      ],
+      "archive_path": "versions/9525070cd4ff/projects/010-evidence-research-lab/web/archive/content.mjs",
+      "source_trees": [
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "784487f13a72b3659495590a79d66ad37c9703f5",
+      "bytes": 6414,
+      "sha256": "a22211a249d66030f4f0df44b8d11dd73eab34130a571c1e77575ba2c039d315",
+      "original_paths": [
+        "projects/010-evidence-research-lab/README.md"
+      ],
+      "archive_path": "versions/784487f13a72/projects/010-evidence-research-lab/README.md",
+      "source_trees": [
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "bf9e3086f290ab5a80cba3e2087e255ee31ae0f7",
+      "bytes": 14613,
+      "sha256": "74e575b1fbb82744f78c6a5b17df5995e5ee8043bfabe0f5fbe410a974b207aa",
+      "original_paths": [
+        "README.md"
+      ],
+      "archive_path": "versions/bf9e3086f290/README.md",
+      "source_trees": [
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f"
+      ]
+    },
+    {
+      "git_blob": "c3e2f79b05e74d13ea45922839520099d1a415b2",
+      "bytes": 34037,
+      "sha256": "6843f6a37c37d5f2dde595b9a56d742947a850a30875ba18e0b0848ac0c9a618",
+      "original_paths": [
+        "projects/011-ancient-rap-battle/VERIFICATION.md"
+      ],
+      "archive_path": "versions/c3e2f79b05e7/projects/011-ancient-rap-battle/VERIFICATION.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "ba2d2164d6e704e2347625ec41e87f82486fd640",
+      "bytes": 9115,
+      "sha256": "c3058e900ba3cbce4978fe8c7dc6a417223b49e482232eb463575597cfb28a52",
+      "original_paths": [
+        "projects.json"
+      ],
+      "archive_path": "versions/ba2d2164d6e7/projects.json",
+      "source_trees": [
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f"
+      ]
+    },
+    {
+      "git_blob": "7224a5041fe8c8a42648f6619d097a1dc67fbed1",
+      "bytes": 40754,
+      "sha256": "6195bcd7c2a5b96f974521abd22214bfc8f47eb102f68a9000d2ed79ae23d822",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/archive/content.mjs"
+      ],
+      "archive_path": "versions/7224a5041fe8/projects/010-evidence-research-lab/web/archive/content.mjs",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "1b14cb5857017e583828933c12af494f673f379d",
+      "bytes": 15372,
+      "sha256": "f318499bc8d4b69ad7fdcdcd56330ef1baa4537fc2f73c8d31e4228bf59c6c72",
+      "original_paths": [
+        "README.md"
+      ],
+      "archive_path": "versions/1b14cb585701/README.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "3a92ef20b695481516bfd3d271808c66e022fae9",
+      "bytes": 878,
+      "sha256": "c67cd726e286fbcc800e508ea3ddc6e579e600128968674e312c0b2c6d1116ed",
+      "original_paths": [
+        "projects/010-evidence-research-lab/assets/README.md"
+      ],
+      "archive_path": "versions/3a92ef20b695/projects/010-evidence-research-lab/assets/README.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "2e49f2e2e6483be28e405734cea220140a154862",
+      "bytes": 17507,
+      "sha256": "cf36254a9087fd7155ede7f3fde92ac3cc6a74b149a311fb1da336cfbfe2385b",
+      "original_paths": [
+        "projects/011-ancient-rap-battle/README.md"
+      ],
+      "archive_path": "versions/2e49f2e2e648/projects/011-ancient-rap-battle/README.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "114174a06a4c8ccb560227ca9b6fe01acadbb508",
+      "bytes": 9819,
+      "sha256": "72dac1c46fd3668f6a3f7228cdd2d8c8dab4b87a54130ef11195e3da560a48ef",
+      "original_paths": [
+        "projects.json"
+      ],
+      "archive_path": "versions/114174a06a4c/projects.json",
+      "source_trees": [
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "622fd781f594ab614dd68ea2598e01a7298ff3ba",
+      "bytes": 7068,
+      "sha256": "adf4da27c404c18d3d0ab4ff5e8cac936b9a1051a36d3a3f0407a0848a0fe2d2",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/README.md"
+      ],
+      "archive_path": "versions/622fd781f594/projects/010-evidence-research-lab/web/README.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "ca7b25ce5447adef1ed1fb40b28d74db35816757",
+      "bytes": 49203,
+      "sha256": "f01f48a5251ba05ddcf98d9a6699edd20e1dc930233061315e5f564c710e71a4",
+      "original_paths": [
+        "projects/013-crawl-hive/web/index.html"
+      ],
+      "archive_path": "versions/ca7b25ce5447/projects/013-crawl-hive/web/index.html",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "c6b1d8f1c100c59e0eef8832afa0da6e0aeeb65d",
+      "bytes": 7933,
+      "sha256": "08648e528ccda2b3d4947d187bf28c3369ea0f6585aec8f04b49a909519acd36",
+      "original_paths": [
+        "projects/010-evidence-research-lab/README.md"
+      ],
+      "archive_path": "versions/c6b1d8f1c100/projects/010-evidence-research-lab/README.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "7c1b898e98a43be14e9577453a3fb97c3a209047",
+      "bytes": 59514,
+      "sha256": "7369c0a53dd0383c082a2727154d1c9a4178b3c834e96c41264bb1f41caf9b96",
+      "original_paths": [
+        "projects/010-evidence-research-lab/DISCUSSION.md"
+      ],
+      "archive_path": "versions/7c1b898e98a4/projects/010-evidence-research-lab/DISCUSSION.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "b065ed1ad093a4507333ca1ca2dbb43cd611e936",
+      "bytes": 34060,
+      "sha256": "6940b9db508ff0ba566e9c773dc91fcebdd996685f1f10f21bb4e992e5c476f0",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/archive/journey.mjs"
+      ],
+      "archive_path": "versions/b065ed1ad093/projects/010-evidence-research-lab/web/archive/journey.mjs",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "1aacb8ca856af89c14ea2957c94ac0279fd4af7f",
+      "bytes": 10073,
+      "sha256": "f8a9b8797c7c53d4a3936ffccbacd179a96a9d163f8e8d06f146cdbee5277acd",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/archive/template.html"
+      ],
+      "archive_path": "versions/1aacb8ca856a/projects/010-evidence-research-lab/web/archive/template.html",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "bc11830b6bf666e67ea7856ca72f73c1d7b96cbb",
+      "bytes": 10610,
+      "sha256": "7834adf3b7f7ed197dbc48d41432fea963ada9bb66d56b694e5b866f5fe3c9e2",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/scripts/build-archive.mjs"
+      ],
+      "archive_path": "versions/bc11830b6bf6/projects/010-evidence-research-lab/web/scripts/build-archive.mjs",
+      "source_trees": [
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "902cb0e7d9507850ebc0771457fa3c6aafb11ef6",
+      "bytes": 7965,
+      "sha256": "836d6c4b9d7890930317b6c8fc35d939e7b9d5748ac9092047ce5b8b70775391",
+      "original_paths": [
+        "projects/013-crawl-hive/README.md"
+      ],
+      "archive_path": "versions/902cb0e7d950/projects/013-crawl-hive/README.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "e2a30617108291ab1320751e2d4e2df5c1a30fe1",
+      "bytes": 5262,
+      "sha256": "8d9eed56511dbe51e8b7c6c92c3dff09ac1c75110552ff40030238ac2d44d8ae",
+      "original_paths": [
+        "projects/012-edgechat/README.md"
+      ],
+      "archive_path": "versions/e2a306171082/projects/012-edgechat/README.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "f468b6ecc8ca906f38f2166530b423f2efeb9827",
+      "bytes": 10849,
+      "sha256": "0b5d18c03b21e3b1a7a7fe99269491333d86bea3aaf27f3b4017b2cf401c7dca",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/archive/action-plan.mjs"
+      ],
+      "archive_path": "versions/f468b6ecc8ca/projects/010-evidence-research-lab/web/archive/action-plan.mjs",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "bb9584035f5c48bde6b799df75507ad98a39a104",
+      "bytes": 5568,
+      "sha256": "3bd2158e71aaa074528bda4362f9d3934509098b572da3fbb1eff42bb2266d16",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/archive/app.js"
+      ],
+      "archive_path": "versions/bb9584035f5c/projects/010-evidence-research-lab/web/archive/app.js",
+      "source_trees": [
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "df1a7b177c2c9fa5bb3a70ef99a5bd79211fa9c3",
+      "bytes": 91311,
+      "sha256": "7a4be64c155b9f547d94ff7ad53a1de4fc6496dd0c4bcecf89bc38e69f3f0ac5",
+      "original_paths": [
+        "projects/011-ancient-rap-battle/web/app.js"
+      ],
+      "archive_path": "versions/df1a7b177c2c/projects/011-ancient-rap-battle/web/app.js",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "61d1b6aaf87431c00c4a5192ff17327be591bf7d",
+      "bytes": 13548,
+      "sha256": "648830e877a8880ec013b8834f32110b20c4d77c438a6a3751413d191eae9ddd",
+      "original_paths": [
+        "projects/013-crawl-hive/web/explore/index.html"
+      ],
+      "archive_path": "versions/61d1b6aaf874/projects/013-crawl-hive/web/explore/index.html",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "55d9141f45161f992166ac72296b5b2ca37d64a2",
+      "bytes": 2669,
+      "sha256": "23c7a495083108bc2f7bf91fbf33807dc627fb7e92c75c76ad9a5e14755b67c0",
+      "original_paths": [
+        "projects/012-edgechat/web/README.md"
+      ],
+      "archive_path": "versions/55d9141f4516/projects/012-edgechat/web/README.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "b23a59c39da60356058ee3aa463d2cca581b0255",
+      "bytes": 59295,
+      "sha256": "d130eed94d961135a30f780876a356491c4aacba397eae9acacd74cc4044ae0f",
+      "original_paths": [
+        "projects/011-ancient-rap-battle/web/styles.css"
+      ],
+      "archive_path": "versions/b23a59c39da6/projects/011-ancient-rap-battle/web/styles.css",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "fea097e8eb7811e507611d114749897818cac8a7",
+      "bytes": 1548,
+      "sha256": "e4a0371e8e47ea0f728d250fbed6cb8c5c35da687f48c90edbc991169f6586f5",
+      "original_paths": [
+        "web/entries.json"
+      ],
+      "archive_path": "versions/fea097e8eb78/web/entries.json",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "f75fee1a7ec865eb72b303bfd19caf84e61a9fc2",
+      "bytes": 12891,
+      "sha256": "3424bb4e4b432de3bf19b63f0eb4b47970dc497246b1f71663796e446d2bfb76",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/scripts/build-archive.mjs"
+      ],
+      "archive_path": "versions/f75fee1a7ec8/projects/010-evidence-research-lab/web/scripts/build-archive.mjs",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "b45784851f198acf6bcec13f557525f3ba8ce0ef",
+      "bytes": 89,
+      "sha256": "0a26e01495ce81d4e1b18292acf536db50e5acbf1936a09d6f3205c7b310e22a",
+      "original_paths": [
+        "projects/011-ancient-rap-battle/experiments/004-performance-film/work/model-cache/.gitignore"
+      ],
+      "archive_path": "versions/b45784851f19/projects/011-ancient-rap-battle/experiments/004-performance-film/work/model-cache/.gitignore.txt",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "d1f41ef1368a68bb193294dbad20a8c07a6f7d69",
+      "bytes": 7629,
+      "sha256": "1f6d019f3bbe7f2523c89ad81f6fd61564a450f73d967ca5ec8e1b364ce52766",
+      "original_paths": [
+        "docs/DEPLOYMENT.md"
+      ],
+      "archive_path": "versions/d1f41ef1368a/docs/DEPLOYMENT.md",
+      "source_trees": [
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f"
+      ]
+    },
+    {
+      "git_blob": "2c11a4be2d7630a1ad556ddf245f1f41b6d53abd",
+      "bytes": 1433,
+      "sha256": "d7d65c0ccc16fcb5ad7a930e5b2fb493c17861178cdb681d4dbfc2c5409d2b91",
+      "original_paths": [
+        "projects/012-edgechat/assets/README.md"
+      ],
+      "archive_path": "versions/2c11a4be2d76/projects/012-edgechat/assets/README.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "170fa1fb03dce8fe441f687bf69954f97a266ab1",
+      "bytes": 3100,
+      "sha256": "b106a8f6ff6150ad0bee7ee2cdc9de0031b13d4f0cf97d1b3aaa6fa4c59953fb",
+      "original_paths": [
+        "projects/013-crawl-hive/web/README.md"
+      ],
+      "archive_path": "versions/170fa1fb03dc/projects/013-crawl-hive/web/README.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "41b57e040d59d1505ea4f3189eb9747c27c46b64",
+      "bytes": 25782,
+      "sha256": "2d149afcbc93009fb9894c4413b25820d36caa465089e6a52563df0724d34d3f",
+      "original_paths": [
+        "projects/012-edgechat/web/data.js"
+      ],
+      "archive_path": "versions/41b57e040d59/projects/012-edgechat/web/data.js",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "5620fc95b412a1fc3449999c7f7721c9647ae284",
+      "bytes": 800,
+      "sha256": "855de3432123eceed7a16616d468bfcca33f5855d057511dde31ceec724adc50",
+      "original_paths": [
+        "web/entries.json"
+      ],
+      "archive_path": "versions/5620fc95b412/web/entries.json",
+      "source_trees": [
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f"
+      ]
+    },
+    {
+      "git_blob": "531bbf0d8e35819fa5d5b8c1e50b32f148e00de9",
+      "bytes": 47685,
+      "sha256": "4f2443dd2681b9fae1d456af627d1db73e9bc069b47b63baee843e7818a934d5",
+      "original_paths": [
+        "projects/012-edgechat/web/styles.css"
+      ],
+      "archive_path": "versions/531bbf0d8e35/projects/012-edgechat/web/styles.css",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "99cdcd920d2998cc9c724f2ca739b58e06802842",
+      "bytes": 15426,
+      "sha256": "e417a0fa36a717b788bcc74de56cb98f86b5f2e8e2b60d42ca397d742105ebd3",
+      "original_paths": [
+        "projects/013-crawl-hive/web/app.js"
+      ],
+      "archive_path": "versions/99cdcd920d29/projects/013-crawl-hive/web/app.js",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "33b224e72362ba3e826b930900e62a665e3e2e51",
+      "bytes": 1288,
+      "sha256": "1314eb60bbc66c4efa598501868f9480c43e088cc5dc5ad35b2de094d63ac159",
+      "original_paths": [
+        "projects/013-crawl-hive/web/scripts/build.mjs"
+      ],
+      "archive_path": "versions/33b224e72362/projects/013-crawl-hive/web/scripts/build.mjs",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "9c128fa2b468432302ef89b458b8e8699646a0b5",
+      "bytes": 23027,
+      "sha256": "533031d296219877699616e2a30ca5679262a5907ec348707f53b0ac0f4b77a5",
+      "original_paths": [
+        "projects/013-crawl-hive/web/explore/app.js"
+      ],
+      "archive_path": "versions/9c128fa2b468/projects/013-crawl-hive/web/explore/app.js",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "2c7baca0fa76a5ea6476a48057c336c379fb5490",
+      "bytes": 43938,
+      "sha256": "2a04fe064623566c5cd4fb07a90210ab20dbe1eb1f3a69746a4df03c32eb2b3b",
+      "original_paths": [
+        "projects/013-crawl-hive/RESEARCH.md"
+      ],
+      "archive_path": "versions/2c7baca0fa76/projects/013-crawl-hive/RESEARCH.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "0c655011e982e264d64ba83935f26012adc3effc",
+      "bytes": 1711,
+      "sha256": "42991d4eda6ac796e7ccc8460dd10fda34295788fcbe3fbbb9a413757c0716d8",
+      "original_paths": [
+        "projects/012-edgechat/web/scripts/build.mjs"
+      ],
+      "archive_path": "versions/0c655011e982/projects/012-edgechat/web/scripts/build.mjs",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "36319fef232bca2c8a0aae8d496cfa3f44b06851",
+      "bytes": 5370,
+      "sha256": "f4134d85185f85c7b76858e0339caa3fbed5603f3b936d7c1ffbbf3e8a46f6c8",
+      "original_paths": [
+        "projects/010-evidence-research-lab/RESEARCH.md"
+      ],
+      "archive_path": "versions/36319fef232b/projects/010-evidence-research-lab/RESEARCH.md",
+      "source_trees": [
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "211090f287d861f9b12a47f15f3fb15fbab04056",
+      "bytes": 8677,
+      "sha256": "46c69f7875ba454059b9450a2fd1e36df1639ace9b2ec75ab2ddbecab467dffd",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/tests/archive.test.mjs"
+      ],
+      "archive_path": "versions/211090f287d8/projects/010-evidence-research-lab/web/tests/archive.test.mjs",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "749c6289d926857be5d7823188dff990205f935e",
+      "bytes": 6274,
+      "sha256": "df52195b8aa707ab40b6850ef144c8ac98d32f76d0fd55cba131fe8e6f423fdb",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/archive/app.js"
+      ],
+      "archive_path": "versions/749c6289d926/projects/010-evidence-research-lab/web/archive/app.js",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "a138fa2f36d1e814a903bdc0d9b17fb31b703f25",
+      "bytes": 3564,
+      "sha256": "8d1d2642052e13b6a175aa0bf5eed6ee019a6211c5f33f256b90050f7e3c0622",
+      "original_paths": [
+        "projects/013-crawl-hive/web/scripts/check.mjs"
+      ],
+      "archive_path": "versions/a138fa2f36d1/projects/013-crawl-hive/web/scripts/check.mjs",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "1e9928d61a0a29d43c419cc432aa33f54cdbe29f",
+      "bytes": 30067,
+      "sha256": "9738ee777f9862e871a6324d3b15835c76422293549a4d6b8e7e099883ddf25f",
+      "original_paths": [
+        "projects/011-ancient-rap-battle/web/scripts/check.mjs"
+      ],
+      "archive_path": "versions/1e9928d61a0a/projects/011-ancient-rap-battle/web/scripts/check.mjs",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "ec5575319f4814f19ad617ab9da5cf86b19d7a6b",
+      "bytes": 37134,
+      "sha256": "c081d234ce2b3e94efe2617126734f370e6b9c55a14916c54109e2d31479f51f",
+      "original_paths": [
+        "projects/011-ancient-rap-battle/RESEARCH.md"
+      ],
+      "archive_path": "versions/ec5575319f48/projects/011-ancient-rap-battle/RESEARCH.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "efc8a4fb675708f59a38b78ad16c149312c81f3f",
+      "bytes": 14762,
+      "sha256": "0147a2ff509eb53535f1732154be994f6855067cfd700b0b4d716556bd1258bb",
+      "original_paths": [
+        "projects/012-edgechat/RESEARCH.md"
+      ],
+      "archive_path": "versions/efc8a4fb6757/projects/012-edgechat/RESEARCH.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "d459d3ef6f16ee110a742b2042562c776145d6ff",
+      "bytes": 13627,
+      "sha256": "6d1b492753b19bd5854c081dd436ad47e869c7eb44dc3ec5d60a56b29babbbe5",
+      "original_paths": [
+        "projects/012-edgechat/web/app.js"
+      ],
+      "archive_path": "versions/d459d3ef6f16/projects/012-edgechat/web/app.js",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "07a8774c569fa10f6317cfb1e2d23cfd6b733a7a",
+      "bytes": 14768,
+      "sha256": "53e3a9fd33ade76afdf69aa40cd2e5b1a79158ace22e4896b0013bc79f423d25",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/archive/style.css"
+      ],
+      "archive_path": "versions/07a8774c569f/projects/010-evidence-research-lab/web/archive/style.css",
+      "source_trees": [
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "ad645de735cbfba88f169c469aa5c0ca66dd3bef",
+      "bytes": 8046,
+      "sha256": "f6e3ba378596376451643a29aafc2d37f3b375c4664b9fef2d7c2debd0d2f877",
+      "original_paths": [
+        "projects/010-evidence-research-lab/RESEARCH.md"
+      ],
+      "archive_path": "versions/ad645de735cb/projects/010-evidence-research-lab/RESEARCH.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "9f47ee7df1d4f6becc8d9cd40b4033609ae3bf61",
+      "bytes": 8411,
+      "sha256": "11a6a85381e86f08cfb64f14f2bfcb70933716a5d429c60ec5d7540d919b974a",
+      "original_paths": [
+        "projects/010-evidence-research-lab/VERIFICATION.md"
+      ],
+      "archive_path": "versions/9f47ee7df1d4/projects/010-evidence-research-lab/VERIFICATION.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    },
+    {
+      "git_blob": "9aae9382c4a53f116ecda0589c4d0de1fbfd6b1b",
+      "bytes": 13100,
+      "sha256": "b47e9a9630b5fe050915952833c7d5a9b5217fbe0d829a72a93846fe0848838e",
+      "original_paths": [
+        "projects/011-ancient-rap-battle/assets/README.md"
+      ],
+      "archive_path": "versions/9aae9382c4a5/projects/011-ancient-rap-battle/assets/README.md",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "d6b7ef32c8478a48c3994dcadc86837f4371184d",
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+      "original_paths": [
+        "projects/011-ancient-rap-battle/experiments/002-moon-and-earth/work/model-cache/.gitignore"
+      ],
+      "archive_path": "versions/d6b7ef32c847/projects/011-ancient-rap-battle/experiments/002-moon-and-earth/work/model-cache/.gitignore.txt",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5",
+        "bb08939d306fbf40a6b6c1aab4e280a21777f32f",
+        "a1bf79ddacf9c5cf1462f3448832c04b5ffdfac2"
+      ]
+    },
+    {
+      "git_blob": "943e1774fe3710f13598c6d5300ca028407a9569",
+      "bytes": 17106,
+      "sha256": "8f821aa29da201f7ac52e386396451721a7e8d1c7eff297edff2c6bd62f3d12f",
+      "original_paths": [
+        "projects/010-evidence-research-lab/web/archive/style.css"
+      ],
+      "archive_path": "versions/943e1774fe37/projects/010-evidence-research-lab/web/archive/style.css",
+      "source_trees": [
+        "91ca71eea35b28dfc5736fc0ac3ba4ec257a14e5"
+      ]
+    }
+  ],
+  "total_bytes": 1059467,
+  "scope": "保存61个真实历史文本版本，涉及48个原路径；排除与现存内容仅换行/BOM不同的副本，以及可重新获取的SyncNet模型。现有本地制作素材不移动、不删除。",
+  "snapshot_layouts": "snapshot-layouts.json"
+}

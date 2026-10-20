@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f8f4">
+  <meta name="description" content="知向 AI 探索工作台：选择研究方向，管理公开来源，用关键词筛选 AI 新闻、产品和开源项目，保留来源与研究线索。">
+  <title>知向 · AI 探索工作台</title>
+  <link rel="icon" href="./mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到信息工作台</a>
+  <aside class="workspace-nav" id="workspace-nav" aria-label="工作台导航">
+    <a class="brand" href="#discover" aria-label="知向，发现信息"><img src="./mark.svg" width="38" height="38" alt=""><span>知向<small>AI EXPLORER</small></span></a>
+    <div class="workspace-name"><span class="workspace-avatar">研</span><div><strong>我的 AI 研究空间</strong><small>公开信息 · 个人探索</small></div><span class="workspace-chevron" aria-hidden="true">⌄</span></div>
+    <p class="nav-label">工作台 <span>WORKSPACE</span></p>
+    <nav class="primary-nav" aria-label="工作区">
+      <button class="nav-item active" type="button" data-view="discover" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg><span>发现信息</span><span class="nav-arrow" aria-hidden="true">↗</span></button>
+      <button class="nav-item" type="button" data-view="directions"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h6v6H5zM15 5h4v4h-4zM5 15h4v4H5zM13 13h6v6h-6z"/></svg><span>我的方向</span></button>
+      <button class="nav-item" type="button" data-view="sources"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="17.5" r="2.5"/><circle cx="19" cy="17.5" r="2.5"/><path d="m10.7 7.2-4.4 8M13.3 7.2l4.4 8M7.5 17.5h9"/></svg><span>来源管理</span></button>
+      <button class="nav-item" type="button" data-view="saved"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5h12v16l-6-4-6 4v-16Z"/></svg><span>研究收藏</span></button>
+      <button class="nav-item" type="button" data-view="logs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h4"/></svg><span>采集记录</span></button>
+    </nav>
+    <div class="nav-note"><span class="note-symbol" aria-hidden="true">✳</span><strong>先选方向，再看信息。</strong><p>把分散的 AI 动态，整理成与你有关的研究线索。</p></div>
+    <div class="nav-bottom"><span class="prototype-label"><span></span> 探索原型 / 013</span><a href="../index.html"><span>返回 CrawlHive 研究</span><span aria-hidden="true">↗</span></a><a href="/1014_codex_project/"><span>全部项目 · 主入口</span><span aria-hidden="true">↗</span></a></div>
+  </aside>
+
+  <div class="workspace-shell">
+    <header class="workspace-topbar">
+      <div class="topbar-location"><button id="nav-toggle" class="icon-button menu-button" type="button" aria-label="打开工作台导航" aria-controls="workspace-nav" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><span>AI 信息探索</span><span class="breadcrumb-divider" aria-hidden="true">/</span><span class="topbar-caption">从关注到理解</span></div>
+      <div class="topbar-actions"><span class="data-state" id="data-state">载入中</span><button type="button" class="button button-refresh" id="refresh-button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6 7a7 7 0 0 1 11.5-1L20 9M4 15l2.5 3A7 7 0 0 0 18 17"/></svg><span id="refresh-label">获取最新</span></button></div>
+    </header>
+
+    <main id="main-content" class="main-content">
+      <div class="page-heading"><div><p class="eyebrow"><span></span> YOUR AI RESEARCH DESK</p><h1 id="view-title">发现值得研究的 AI</h1><p id="view-subtitle">选择你关心的方向，让新闻、产品与开源项目成为清晰的研究线索。</p></div><button type="button" class="button button-primary" id="open-profile-button"><span aria-hidden="true">＋</span> 创建关注方向</button></div>
+
+      <div class="snapshot-notice" id="snapshot-notice"><span class="notice-icon" aria-hidden="true">i</span><p>正在载入公开来源快照。加载后将标明采集时间与来源，快照不代表持续实时监控。</p><time id="last-updated">尚未载入</time></div>
+
+      <section id="view-discover" class="view-panel" aria-label="发现信息">
+        <section class="focus-panel" aria-label="探索范围与筛选">
+          <div class="focus-panel-heading"><div><span class="section-kicker">01 / 选定范围</span><h2>这次，想探索什么？</h2></div><span class="muted small-text">方向 × 目的 × 关键词</span></div>
+          <div class="direction-chips" id="direction-chips" role="group" aria-label="选择 AI 方向"><span class="loading-inline">正在准备方向…</span></div>
+          <div class="focus-panel-bottom"><div class="goal-tabs" id="goal-tabs" role="group" aria-label="选择信息类型"></div><div class="active-profile-summary" id="active-profile-summary">未应用已保存方向</div></div>
+        </section>
+
+        <div class="search-toolbar"><label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4.5 4.5"/></svg><input id="global-search" type="search" placeholder="搜索标题、摘要或项目名称" autocomplete="off" aria-label="搜索信息"><span class="search-hint" aria-hidden="true">搜索</span></label><label class="select-field"><span class="sr-only">发布时间</span><select id="time-filter"><option value="all">全部时间</option><option value="7">近 7 天</option><option value="30">近 30 天</option><option value="90">近 90 天</option></select></label><label class="select-field"><span class="sr-only">排序方式</span><select id="sort-filter"><option value="relevance">相关度优先</option><option value="newest">最新发布</option></select></label></div>
+
+        <details class="filter-details" id="filter-details">
+          <summary><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/><circle cx="8" cy="6" r="2"/><circle cx="15" cy="12" r="2"/></svg>关键词与排除规则</span><span class="details-hint">精确控制信息范围 <b aria-hidden="true">＋</b></span></summary>
+          <div class="filter-content"><div class="filter-fields"><label><span>包含关键词 <small>用逗号分隔</small></span><input type="text" id="include-keywords" placeholder="例如：agent, 开源, 本地运行" autocomplete="off"></label><label><span>排除关键词 <small>命中任一词即排除</small></span><input type="text" id="exclude-keywords" placeholder="例如：招聘, 促销" autocomplete="off"></label><label class="match-mode-field"><span>包含词关系</span><select id="match-mode"><option value="any">任意一个命中</option><option value="all">全部词都命中</option></select></label></div><div class="filter-footnote"><p>对标题、摘要和标签进行不区分大小写的字面匹配；这是规则筛选，不是 AI 语义判断。</p><button class="text-button" id="clear-filters" type="button">重置筛选 <span aria-hidden="true">↺</span></button></div></div>
+        </details>
+
+        <div class="stats-strip" id="stats-strip" aria-label="当前信息统计"><div class="loading-inline">正在读取来源和信息数量…</div></div>
+        <div class="results-heading"><div><span class="section-kicker">02 / 阅读与判断</span><h2>你的探索信息流<span class="heading-dot" aria-hidden="true"></span></h2></div><p id="result-summary" aria-live="polite">正在载入公开来源快照</p></div>
+        <div class="result-list" id="result-list"><div class="loading-panel"><span class="loading-orbit" aria-hidden="true"></span><div><strong>正在整理公开信息</strong><p>即将展示来源、匹配原因与可追溯的原文。</p></div></div></div>
+        <div class="empty-panel" id="empty-state" hidden></div>
+        <section class="process-panel" aria-label="信息处理流程"><div class="process-panel-heading"><span class="section-kicker">这批信息如何来到这里</span><span class="muted small-text">范围可控 · 过程可看 · 原文可查</span></div><div class="process-strip" id="process-strip"><div class="loading-inline">载入后展示来源、搜索、过滤与呈现状态。</div></div></section>
+      </section>
+
+      <section id="view-directions" class="view-panel" aria-label="我的关注方向" hidden><div class="section-intro"><div><h2>让每个方向，有自己的判断标准。</h2><p>保存方向、探索目的与关键词，下次可以直接接着研究。方向配置仅保存在当前浏览器。</p></div><button class="button button-secondary" type="button" id="create-profile-secondary">＋ 新建方向</button></div><div class="profile-list" id="profile-list"></div></section>
+
+      <section id="view-sources" class="view-panel" aria-label="来源管理" hidden><div class="section-intro"><div><h2>先知道信息从哪里来。</h2><p>开启或关闭来源，会改变当前信息流的覆盖范围。各平台的公开接口和可获取内容不同。</p></div></div><div class="source-explainer"><span class="notice-icon" aria-hidden="true">i</span><p><strong>来源身份与信息性质分开判断。</strong>官方来源能确认“作者发布了什么”，不意味着产品效果已实测。当前仅接入页面列出的公开来源，不覆盖私有群组或付费内容；获取最新是一次主动刷新。</p></div><div class="source-list" id="source-list"></div></section>
+
+      <section id="view-saved" class="view-panel" aria-label="研究收藏" hidden><div class="section-intro"><div><h2>留住值得再看一眼的线索。</h2><p>收藏保存在当前浏览器，便于回到原文继续核实，也可以导出自己的研究清单。</p></div><button class="button button-secondary" type="button" id="export-saved-button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 15v5h14v-5"/></svg>导出收藏</button></div><div class="saved-list" id="saved-list"></div></section>
+
+      <section id="view-logs" class="view-panel" aria-label="采集记录" hidden><div class="section-intro"><div><h2>每次获取，都留下记录。</h2><p>查看来源是否成功、用了哪些规则、最后留下多少信息。页面关闭后不会继续定时采集。</p></div></div><div class="run-list" id="run-list"></div></section>
+
+      <footer class="workspace-footer"><span><span class="footer-mark" aria-hidden="true">↗</span> 知向 · 从信息到研究线索</span><p>公开来源有覆盖边界，规则匹配不等于事实核查；作者陈述不等于实测结论。</p></footer>
+    </main>
+  </div>
+
+  <dialog class="item-dialog" id="item-dialog" aria-labelledby="item-detail-title"><div class="drawer-topbar"><span>研究线索 <span class="drawer-slash">/</span> 阅读详情</span><button type="button" class="icon-button" id="close-item-dialog" aria-label="关闭阅读详情"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div id="item-detail" class="item-detail"></div></dialog>
+
+  <dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-dialog-title"><form id="profile-form"><div class="profile-dialog-header"><p class="eyebrow">A NEW RESEARCH DIRECTION</p><h2 id="profile-dialog-title">创建你的关注方向</h2><p>将探索目标与筛选规则保存在一起。</p></div><div class="profile-form-fields"><label><span>方向名称</span><input type="text" id="profile-name" placeholder="例如：值得研究的开源 Agent" required maxlength="40" autocomplete="off"></label><div class="form-columns"><label><span>关注领域</span><select id="profile-direction"><option value="coding">AI 编程</option><option value="agents">智能体 / Agent</option><option value="multimodal">多模态</option><option value="models">模型与研究</option><option value="tools">应用与工具</option><option value="all">全部 AI 方向</option></select></label><label><span>探索目的</span><select id="profile-goal"><option value="all">综合探索</option><option value="news">跟进 AI 新闻</option><option value="product">发现 AI 产品</option><option value="repo">研究开源项目</option></select></label></div><label><span>包含关键词 <small>可选，用逗号分隔</small></span><input type="text" id="profile-include" placeholder="例如：开源, 本地运行" autocomplete="off"></label><label><span>排除关键词 <small>可选</small></span><input type="text" id="profile-exclude" placeholder="例如：招聘, 促销" autocomplete="off"></label><p class="form-note">配置保存在此浏览器。创建方向不会在后台开启自动监控。</p></div><div class="profile-dialog-actions"><button type="button" id="cancel-profile" class="button button-secondary">取消</button><button type="submit" class="button button-primary">保存并应用方向 <span aria-hidden="true">↗</span></button></div></form></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
