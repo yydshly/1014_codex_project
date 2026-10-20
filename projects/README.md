@@ -1,6 +1,6 @@
 # 子项目目录
 
-每个真实研究项目占用一个编号目录，例如 `001-project-name/`、`002-another-project/`。本次初始化暂未添加研究对象，第一个项目将从 `001` 开始。
+每个研究项目占用一个固定编号目录，例如 `001-archify/`、`002-rainy-ghost/`。完整清单见根 README 的[一句话速览](../README.md#一句话速览)与[详细索引](../README.md#详细索引)，按编号查找能力、原理、价值与当前进展。
 
 使用根目录的 `scripts/project_catalog.py add` 创建项目，命令会复制统一模板，并更新 [总索引](../README.md)。完整约定见 [研究与目录约定](../docs/CONVENTIONS.md)。
 

@@ -20,7 +20,11 @@ FIELDS = {
     "id", "slug", "title", "repository", "summary", "status",
     "preview", "preview_caption", "demo_url",
 }
-OPTIONAL_FIELDS = {"source_url"}
+OPTIONAL_FIELDS = {"source_url", "source_name", "repository_role", "summary_details"}
+SUMMARY_LABELS = {
+    "capability": "能力", "principle": "原理", "value": "意义", "progress": "进展",
+}
+REPOSITORY_ROLES = ("原仓库", "技术依赖", "独立参考", "早期参考")
 REQUIRED_FILES = ("README.md", "RESEARCH.md", "assets/README.md", "web/README.md")
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
 
@@ -65,7 +69,7 @@ def validate(data, check_files=True):
     ids, slugs, directories = set(), set(), set()
     for project in data["projects"]:
         require(isinstance(project, dict) and FIELDS <= set(project) <= FIELDS | OPTIONAL_FIELDS,
-                "每个项目必须包含九个基础字段，可另含 source_url。")
+                "每个项目必须包含九个基础字段，仅支持约定的可选字段。")
         project_id = project["id"]
         require(isinstance(project_id, str) and re.fullmatch(r"[0-9]{3}", project_id)
                 and project_id != "000", "id 必须是 001 至 999 的三位编号。")
@@ -83,6 +87,20 @@ def validate(data, check_files=True):
             repository_url(project["repository"])
         if project.get("source_url") is not None:
             source_url(project["source_url"])
+        if "source_name" in project:
+            single_line(project["source_name"], f"{project_id}.source_name")
+            require(project.get("source_url") is not None,
+                    f"{project_id} 的 source_name 需要同时提供 source_url。")
+        if "repository_role" in project:
+            require(project["repository"] is not None
+                    and project["repository_role"] in REPOSITORY_ROLES,
+                    f"{project_id} 的 repository_role 需要仓库地址及有效的来源关系。")
+        if "summary_details" in project:
+            details = project["summary_details"]
+            require(isinstance(details, dict) and set(details) == set(SUMMARY_LABELS),
+                    f"{project_id} 的 summary_details 必须包含 capability、principle、value、progress。")
+            for field, value in details.items():
+                single_line(value, f"{project_id}.summary_details.{field}")
         require(project["repository"] is not None or project.get("source_url") is not None,
                 f"{project_id} 必须提供原仓库 repository 或原始来源 source_url。")
         require(project["status"] in STATUSES, f"{project_id} 的 status 不在允许列表中。")
@@ -139,25 +157,58 @@ def link(label, url):
     return f"[{markdown_text(label)}]({quote(url, safe='/:#?=&%+@,;~.-_')})"
 
 
+def render_summary(project):
+    details = project.get("summary_details")
+    if details is None:
+        return markdown_text(project["summary"])
+    return "<br>".join(
+        f"**{label}：**{markdown_text(details[field])}"
+        for field, label in SUMMARY_LABELS.items()
+    )
+
+
+def render_sources(project):
+    sources = []
+    if project["repository"]:
+        name = urlsplit(project["repository"]).path.strip("/")
+        role = project.get("repository_role", "原仓库")
+        sources.append(f"{role}：{link(name, project['repository'])}")
+    if project.get("source_url"):
+        origin = project["source_url"]
+        fallback = "原帖" if urlsplit(origin).hostname in ("x.com", "twitter.com") else "来源"
+        sources.append(link(project.get("source_name", fallback), origin))
+    return "<br>".join(sources)
+
+
 def render_catalog(data):
     projects = sorted(data["projects"], key=lambda project: int(project["id"]))
     if not projects:
         return "尚未收录研究项目。首个项目将从 **001** 开始，添加后会自动生成有序索引与配图区域。\n"
     lines = [
-        "| 编号 | 项目 | 摘要 | 状态 | 研究记录 | 来源链接 | Web 演示 |",
-        "| --- | --- | --- | --- | --- | --- | --- |",
+        "### 一句话速览", "",
+        "先找想回顾的能力与价值，点击项目名查看完整说明；实现原理、验证进展和来源见下方详细索引。",
+        "",
     ]
     for project in projects:
         base = f"projects/{project_directory(project).name}"
+        name = f"{project['id']} · {project['title']}"
+        lines.append(f"- **{link(name, f'{base}/README.md')}**：{markdown_text(project['summary'])}")
+    lines.extend([
+        "", "### 详细索引", "",
+        "摘要按 **能力 → 原理 → 意义 → 进展** 阅读；能力与原理区分来源项目和我们的扩展，进展保留已验证结果与待确认边界。",
+        "",
+        "来源显示真实仓库名称；技术依赖、独立参考与早期参考单独标明，原帖或产品页保留为补充入口。",
+        "",
+        "| 编号 | 项目 | 摘要 | 状态 | 研究记录 | 源库 / 来源 | Web 演示 |",
+        "| --- | --- | --- | --- | --- | --- | --- |",
+    ])
+    for project in projects:
+        base = f"projects/{project_directory(project).name}"
         demo = link("演示", project["demo_url"]) if project["demo_url"] else "—"
-        origin = project.get("source_url") or project["repository"]
-        origin_label = "来源" if project.get("source_url") else "GitHub"
-        if urlsplit(origin).hostname in ("x.com", "twitter.com"):
-            origin_label = "原帖"
         cells = [
             project["id"], link(project["title"], f"{base}/README.md"),
-            markdown_text(project["summary"]), project["status"],
-            link("研究笔记", f"{base}/RESEARCH.md"), link(origin_label, origin), demo,
+            render_summary(project), project["status"],
+            link("研究笔记", f"{base}/RESEARCH.md"), render_sources(project), demo,
         ]
         lines.append("| " + " | ".join(cells) + " |")
     lines.extend(["", "### 项目配图", ""])

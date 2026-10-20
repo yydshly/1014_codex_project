@@ -41,7 +41,13 @@ python scripts/project_catalog.py add --slug video-study --title "原视频研�
       "slug": "project-name",
       "title": "项目名称",
       "repository": "https://github.com/owner/repository",
-      "summary": "项目用途与研究重点",
+      "summary": "一句话说明项目能力及其价值",
+      "summary_details": {
+        "capability": "能做什么，区分来源项目与我们的扩展",
+        "principle": "通过什么机制实现",
+        "value": "解决什么问题，对后续研究有什么意义",
+        "progress": "已经验证什么，还有哪些边界或待确认事项"
+      },
       "status": "待研究",
       "preview": null,
       "preview_caption": "",
@@ -56,9 +62,12 @@ python scripts/project_catalog.py add --slug video-study --title "原视频研�
 | `id` | 固定编号，例如 `001` |
 | `slug` | 目录名的英文部分，与编号共同组成项目路径 |
 | `title` | 对外展示的项目名称 |
-| `repository` | 已确认的原 GitHub 仓库 HTTPS 地址；未确认时为`null`，并填写`source_url` |
-| `source_url` | 可选，原视频帖、文章或项目页面的HTTPS来源链接；填写时优先用于总索引与网页的来源入口 |
-| `summary` | 一句话概述项目用途与研究重点 |
+| `repository` | 已确认的 GitHub 仓库 HTTPS 地址，默认指原仓库；仅为依赖或参考时必须用 `repository_role` 标明。未确认时为 `null`，并填写 `source_url`；不得用本研究归档仓库冒充原仓库 |
+| `repository_role` | 可选：`原仓库`（默认）/ `技术依赖` / `独立参考` / `早期参考`；用于说明仓库与研究对象的关系 |
+| `source_url` | 可选，原视频帖、文章或项目页面的 HTTPS 链接；README 与仓库链接同时展示，网页来源入口仍优先使用它 |
+| `source_name` | 可选，`source_url` 的可读名称，例如 `赛博小雅 · 原帖`、`Fotor Agent · 产品页`；仓库链接名称直接从地址提取 `owner/repository` |
+| `summary` | 一句话说明能力与价值，用于 README 速览及网页项目卡片；使用纯文本 |
+| `summary_details` | 可选对象，必须同时包含 `capability`（能力）、`principle`（原理）、`value`（意义）、`progress`（进展）；各项为单行纯文本，生成器负责加粗标签和表格内换行 |
 | `status` | 待研究 / 研究中 / 已复现 / 已完成 / 已归档 |
 | `preview` | 实际图片相对于子项目的路径，例如 `assets/preview.png`；无图片时为 `null` |
 | `preview_caption` | 图片展示内容的简短说明；有配图时必填 |
